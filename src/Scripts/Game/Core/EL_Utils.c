@@ -1,7 +1,7 @@
 class EL_Utils
 {
 	//------------------------------------------------------------------------------------------------
-	static IEntity SpawnEntityPrefab(ResourceName prefab, vector origin, vector orientation = "0 0 0")
+	static IEntity SpawnEntityPrefab(ResourceName prefab, vector origin, vector orientation = "0 0 0", IEntity parent = null)
 	{
 		EntitySpawnParams spawnParams();
 		
@@ -9,6 +9,7 @@ class EL_Utils
 		
 		Math3D.AnglesToMatrix(orientation, spawnParams.Transform);
 		spawnParams.Transform[3] = origin;
+		spawnParams.Parent = parent;
 		
 		return GetGame().SpawnEntityPrefab(Resource.Load(prefab), GetGame().GetWorld(), spawnParams);
 	}
