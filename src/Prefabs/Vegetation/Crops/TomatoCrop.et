@@ -1,20 +1,11 @@
 EL_PositionCrop {
  ID "597C8E361AFDA740"
  components {
-  InventoryItemComponent "{597C8E36D7B84F6B}" {
-   Attributes SCR_ItemAttributeCollection "{597C8E36E9253873}" {
-    ItemDisplayName UIInfo "{597C8E36ED2BE8A8}" {
-     Name "Tomato"
-    }
-    ItemPhysAttributes ItemPhysicalAttributes "{597C8E36F1965A99}" {
-     Weight 0.01
-     SizeSetupStrategy Size
-     ItemDimensions 7.5 7.5 7.5
-    }
-    CommonItemType ""
-    m_Size SLOT_1x1
-    m_SlotType SLOT_LOOT_STORAGE
-   }
+  EL_AreaSpawnerComponent "{5990F8C6BAD1B358}" {
+   m_BoxSize 0.1 0.6 0.1
+   m_BoxOffset 0 0.75 0
+   m_PrefabToSpawn "{0815D91FDF997A0A}Prefabs/Items/Food/Tomato.et"
+   m_AmountToSpawn 5
   }
   MeshObject "{597C689DC240295E}" {
    Object "{B89423573D7244D4}Assets/Vegetation/Vegetables/TomatoCrop_01.xob"
@@ -25,27 +16,22 @@ EL_PositionCrop {
    ModelGeometry 1
    Static 1
   }
-  ActionsManagerComponent "{597C8E3627A8D5BF}" {
-   Enabled 1
+  ActionsManagerComponent "{5990F8DDA3F99008}" {
    ActionContexts {
-    UserActionContext "{597C8E36397FCAFC}" {
+    UserActionContext "{5990F8DDA439F4F4}" {
      ContextName "default"
-     Position PointInfo "{597C8E363AD6AFAF}" {
-      Offset 0 0.75 0
+     Position PointInfo "{5990F8DDB900F4F6}" {
+      Offset 0 0.85 0
      }
-     Radius 4.311
     }
    }
    additionalActions {
-    EL_GatherAction "{597C8E2B2F01DF3A}" {
+    EL_DeleteAction "{5990F8DDC0D61F9F}" {
      ParentContextList {
       "default"
      }
-     Duration 1
-     m_GatherItemDisplayName "Tomato"
-     m_GatherItemPrefab "{0815D91FDF997A0A}Prefabs/Items/Food/Tomato.et"
-     m_DeleteAfterUse 1
-     m_AlwaysActive 0
+     Duration 3
+     "Sort Priority" 100
     }
    }
   }
@@ -54,6 +40,7 @@ EL_PositionCrop {
  }
  coords 92.95 0.001 130.527
  m_buildingType CROP
+ m_UseAreaSpawner 1
  growTime 10
  totalYIncrease 1.465
 }

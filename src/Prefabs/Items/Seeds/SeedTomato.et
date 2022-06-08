@@ -1,10 +1,6 @@
 GenericEntity {
  ID "59752C6F3883AB8D"
  components {
-  EL_BuildingPerformerComponent "{597C8E37150EA9DC}" {
-   m_eAnimVariable ADRIANOV
-   m_BuildingPrefab "{F8A57337BD45B783}Prefabs/Vegetation/Vegetables/TomatoCrop_01.et"
-  }
   InventoryItemComponent "{59752C6F42BE630E}" {
    Attributes SCR_ItemAttributeCollection "{59752C6F5A5C85AC}" {
     ItemDisplayName UIInfo "{59752C6F5D8BC37C}" {
@@ -41,11 +37,11 @@ GenericEntity {
    }
   }
   MeshObject "{59752C6D8F32A642}" {
-   Object "{3B0F9D6E5236E09E}Assets/Items/Seeds/tomato_seed.xob"
+   Object "{3B0F9D6E5236E09E}Assets/Items/Seeds/Tomato/tomato_seed.xob"
    Materials {
     MaterialAssignClass "{59752C6F16C2140B}" {
      SourceMaterial "TomatoUVTexture"
-     AssignedMaterial "{1034A71EFE71F158}Assets/Items/Seeds/data/TomatoUVTexture.emat"
+     AssignedMaterial "{1034A71EFE71F158}Assets/Items/Seeds/Tomato/data/TomatoUVTexture.emat"
     }
    }
   }
@@ -75,6 +71,10 @@ GenericEntity {
    }
   }
   RplComponent "{59752C6FE489D4C5}" {
+  }
+  EL_BuildingPerformerComponent "{5990F8C8019C98C8}" {
+   m_eAnimVariable ADRIANOV
+   m_BuildingPrefab "{28EAA2BC76483922}Prefabs/Vegetation/Crops/TomatoCrop.et"
   }
  }
  coords 9593.622 25.027 1634.316

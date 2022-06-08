@@ -10,6 +10,6 @@ enum EBuildingType
 
 class EL_BaseBuilding : GenericEntity 
 {
-	[Attribute("", UIWidgets.ComboBox, enums: ParamEnumArray.FromEnum(EBuildingType), desc: "Placeable Type")]
+	[Attribute("", UIWidgets.ComboBox, enums: ParamEnumArray.FromEnum(EBuildingType), desc: "Placeable Type", category: "Building")]
 	EBuildingType m_buildingType;
 };

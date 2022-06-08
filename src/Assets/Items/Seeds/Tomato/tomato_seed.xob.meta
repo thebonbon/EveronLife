@@ -1,11 +1,11 @@
 MetaFileClass {
- Name "{3B0F9D6E5236E09E}Assets/Items/Seeds/Seed_Tomato.xob"
+ Name "{3B0F9D6E5236E09E}Assets/Items/Seeds/Tomato/tomato_seed.xob"
  Configurations {
   FBXResourceClass PC {
    MaterialAssigns {
     MaterialAssignClass "{597B49526A8B5028}" {
      SourceMaterial "TomatoUVTexture"
-     AssignedMaterial "{1034A71EFE71F158}Assets/Items/Seeds/data/TomatoUVTexture.emat"
+     AssignedMaterial "{1034A71EFE71F158}Assets/Items/Seeds/Tomato/data/TomatoUVTexture.emat"
     }
    }
    Common TXOCommonClass "{597B49526A8F1F61}" : "{0877E7C4BB2B2C9A}Configs/System/ResourceTypes/PC/MeshObjectCommon.conf" {

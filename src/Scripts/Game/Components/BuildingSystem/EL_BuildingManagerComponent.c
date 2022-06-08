@@ -18,7 +18,7 @@ class EL_BuildingManagerComponent : ScriptComponent
 	private vector m_PosInWorld;
 	private InputManager m_InputManager;
 	
-	private bool canBuild = false;
+	private bool m_CanBuild = false;
 	private EL_BuildingPerformerComponent m_BuildingPerformer;
 	private EL_BuildingPerformerComponent m_LastBuildingPerformer;
 
@@ -26,7 +26,7 @@ class EL_BuildingManagerComponent : ScriptComponent
 	//------------------------------------------------------------------------------------------------
 	void OnMouseLeftDown()
 	{
-		if (canBuild)
+		if (m_CanBuild)
 			EL_Utils.SpawnEntityPrefab(m_BuildingPerformer.m_BuildingPrefab, m_PosInWorld);
 	}
 	
@@ -49,7 +49,6 @@ class EL_BuildingManagerComponent : ScriptComponent
 		EL_BuildingPerformerComponent buildingPerformer = EL_BuildingPerformerComponent.Cast(gadgetManager.GetHeldGadgetComponent());
 		if (!buildingPerformer)
 			return null;
-		
 		return buildingPerformer;
 	}
 
@@ -89,9 +88,10 @@ class EL_BuildingManagerComponent : ScriptComponent
 	//------------------------------------------------------------------------------------------------
 	override void EOnFrame(IEntity owner, float timeSlice)
 	{
-		canBuild = false;
-		m_Cam = GetGame().GetCameraManager().CurrentCamera();
-		if (!m_PreviewEntity || !m_Cam)
+		m_CanBuild = false;
+		if(!m_Cam)
+			m_Cam = GetGame().GetCameraManager().CurrentCamera();
+		if (!m_PreviewEntity)
 			return;
 		
 		if (!UpdateHandBuildingPerformer(owner))
@@ -104,7 +104,7 @@ class EL_BuildingManagerComponent : ScriptComponent
 			m_LastBuildingPerformer = m_BuildingPerformer;
 		}
 		
-		canBuild = UpdatePreviewOrigin();
+		m_CanBuild = UpdatePreviewOrigin();
 	}
 		
 	//------------------------------------------------------------------------------------------------
@@ -115,17 +115,22 @@ class EL_BuildingManagerComponent : ScriptComponent
 		
 		m_InputManager = GetGame().GetInputManager();
 		m_InputManager.AddActionListener("MouseLeft", EActionTrigger.DOWN, OnMouseLeftDown);
-		
 	}
 	
 	//------------------------------------------------------------------------------------------------
 	override void EOnInit(IEntity owner)
 	{
+		//Spawn base preview and set invisible
 		m_PreviewEntity = EL_Utils.SpawnEntityPrefab(m_BasePreviewPrefab, owner.GetOrigin());
 		EL_Utils.ChangeEntityMaterial(m_PreviewEntity, m_PreviewMaterial);
-		m_PreviewEntity.ClearFlags(EntityFlags.VISIBLE, true);
+		m_PreviewEntity.ClearFlags(EntityFlags.VISIBLE, true);		
 	}
 		
+	void EL_BuildingManagerComponent(IEntitySource src, IEntity parent)
+	{
+		
+	}
+	
 	//------------------------------------------------------------------------------------------------
 	//! Destructor -> Remove ActionListener
 	void ~EL_BuildingManagerComponent()
