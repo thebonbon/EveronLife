@@ -13,8 +13,6 @@ Layer Spawnconfig {
 Layer AppleChain {
  Index 4
 }
-Layer FarmingChain {
- Index 20
 Layer PlumChain {
  Index 3
 }

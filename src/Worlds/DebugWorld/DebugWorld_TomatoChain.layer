@@ -517,3 +517,17 @@ $grp GenericEntity {
   }
  }
 }
+GenericEntity : "{97F71E1D9830AE26}Prefabs/Items/Seeds/SeedTomato.et" {
+ components {
+  EL_BuildingPerformerComponent "{5990F8C8019C98C8}" {
+   m_eAnimVariable ADRIANOV
+   m_BuildingPrefab "{28EAA2BC76483922}Prefabs/Vegetation/Crops/TomatoCrop.et"
+  }
+  MeshObject "{59752C6D8F32A642}" {
+   Object "{3B0F9D6E5236E09E}Assets/Items/Seeds/Tomato/tomato_seed.xob"
+  }
+ }
+ coords 104.728 0.917 134.095
+ angleY 165
+ angleZ -90
+}
