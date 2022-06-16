@@ -517,6 +517,9 @@ $grp GenericEntity {
   }
  }
 }
+GenericEntity : "{0815D91FDF997A0A}Prefabs/Items/Food/Tomato.et" {
+ coords 107.019 0.001 132.785
+}
 $grp EL_BaseCrop : "{28EAA2BC76483922}Prefabs/Vegetation/Crops/TomatoCrop.et" {
  {
   coords 107.047 0.276 135.732
@@ -541,13 +544,34 @@ $grp GenericEntity : "{97F71E1D9830AE26}Prefabs/Items/Seeds/SeedTomato.et" {
   angleY 165
   angleZ -90
  }
+ {
+  components {
+   EL_BuildingPerformerComponent "{5990F8C8019C98C8}" {
+    m_BuildingPrefab "{C4B2301E5D989B42}Prefabs/Vegetation/Crops/CabbageCrop.et"
+    m_GroundType ANY
+   }
+  }
+  coords 103.107 0.917 134.05
+  angleY 165
+  angleZ -90
+ }
+ {
+  components {
+   EL_BuildingPerformerComponent "{5990F8C8019C98C8}" {
+    m_BuildingPrefab "{C4B2301E5D989B42}Prefabs/Vegetation/Crops/CabbageCrop.et"
+    m_GroundType ANY
+   }
+  }
+  coords 103.238 0.917 134.062
+  angleY 165
+  angleZ -90
+ }
+}
+Tree : "{9FEBBF75B1D525EE}Prefabs/Items/Food/Cabbage.et" {
+ coords 106.383 0.001 132.582
 }
 $grp EL_BaseCrop : "{C4B2301E5D989B42}Prefabs/Vegetation/Crops/CabbageCrop.et" {
  {
-  components {
-   MeshObject "{59A07C47007ED2EA}" {
-   }
-  }
   coords 105.994 0.233 134.642
  }
  {

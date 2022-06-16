@@ -26,7 +26,7 @@ EL_BaseCrop {
      }
      Duration 1
      m_GatherItemDisplayName "Cabbage"
-     m_GatherItemPrefab "{0815D91FDF997A0A}Prefabs/Items/Food/Tomato.et"
+     m_GatherItemPrefab "{9FEBBF75B1D525EE}Prefabs/Items/Food/Cabbage.et"
      m_bDeleteAfterUse 1
     }
     EL_DeleteAction "{59A0A7C059F8390F}" {
