@@ -1,6 +1,6 @@
 $grp GenericEntity {
  TomatoTrader {
-  coords 106.183 -0.001 134.916
+  coords 104.612 -0.001 134.678
   {
    GenericEntity AppleTradeContainer2 {
     components {
@@ -486,7 +486,7 @@ $grp GenericEntity {
   }
  }
  TomatoTraderTestItems {
-  coords 105.185 0.963 134.246
+  coords 103.614 0.963 134.008
   {
    $grp GenericEntity : "{0815D91FDF997A0A}Prefabs/Items/Food/Tomato.et" {
     {
@@ -519,25 +519,25 @@ $grp GenericEntity {
 }
 $grp EL_BaseCrop : "{28EAA2BC76483922}Prefabs/Vegetation/Crops/TomatoCrop.et" {
  {
-  coords 108.618 0.276 135.97
+  coords 107.047 0.276 135.732
  }
  {
-  coords 107.511 0.276 135.775
+  coords 105.94 0.276 135.537
   m_bSpawnItemsAtStage 3
  }
 }
 StaticModelEntity : "{63C2AE154637AC71}PrefabLibrary/Props/Civilian/Garden/VegetableBed_01_small.et" {
- coords 108.14 0.001 135.337
+ coords 106.569 0.001 135.099
  angleY -7.378
 }
 $grp GenericEntity : "{97F71E1D9830AE26}Prefabs/Items/Seeds/SeedTomato.et" {
  {
-  coords 104.728 0.917 134.095
+  coords 103.157 0.917 133.857
   angleY 165
   angleZ -90
  }
  {
-  coords 104.86 0.917 134.13
+  coords 103.289 0.917 133.892
   angleY 165
   angleZ -90
  }
@@ -548,9 +548,9 @@ $grp EL_BaseCrop : "{C4B2301E5D989B42}Prefabs/Vegetation/Crops/CabbageCrop.et" {
    MeshObject "{59A07C47007ED2EA}" {
    }
   }
-  coords 107.565 0.233 134.88
+  coords 105.994 0.233 134.642
  }
  {
-  coords 108.698 0.259 135.003
+  coords 107.127 0.259 134.765
  }
 }
