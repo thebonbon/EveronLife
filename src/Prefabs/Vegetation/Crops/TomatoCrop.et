@@ -21,6 +21,7 @@ EL_BaseCrop {
     UserActionContext "{59A0838C81ECACB9}" {
      ContextName "default"
      Position PointInfo "{59A0838C81ECACBF}" {
+      Offset 0 1.0532 0
      }
      Radius 12.21
     }
@@ -31,6 +32,7 @@ EL_BaseCrop {
       "default"
      }
      Duration 2
+     "Sort Priority" 100
     }
    }
   }

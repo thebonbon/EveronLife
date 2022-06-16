@@ -21,9 +21,6 @@ class EL_GatherAction : ScriptedUserAction
 	[Attribute("false", UIWidgets.ResourceNamePicker, desc: "Delete the object after gathering?")]
 	private bool m_bDeleteAfterUse;
 
-	[Attribute("true", UIWidgets.ResourceNamePicker, desc: "Gather Action always active?")]
-	private bool m_bAlwaysActive;
-
 	private SCR_InventoryStorageManagerComponent m_InventoryManager;
 	private bool m_CanBePerformed = true;
 	private float m_EndOfDelay;
@@ -74,11 +71,6 @@ class EL_GatherAction : ScriptedUserAction
 	//! If so, check if its in the users inventory/hands depending on settings set
 	override bool CanBePerformedScript(IEntity user)
  	{
-		//Check if target is a crop
-		EL_BaseCrop baseCrop = EL_BaseCrop.Cast(GetOwner());
-		if (baseCrop)
-			return baseCrop.CanGather();
-
 		if (!m_CanBePerformed)
 		{
 			float timeLeft = (m_EndOfDelay - GetGame().GetWorld().GetWorldTime()) / 1000;
@@ -87,6 +79,11 @@ class EL_GatherAction : ScriptedUserAction
 		}
 		
 		m_InventoryManager = SCR_InventoryStorageManagerComponent.Cast(user.FindComponent(SCR_InventoryStorageManagerComponent));
+		
+		//Check if target is a crop
+		EL_BaseCrop baseCrop = EL_BaseCrop.Cast(GetOwner());
+		if (baseCrop)
+			return baseCrop.CanGather();
 		
 		if (!m_RequiredItemPrefab) // If not required we dont need to check anything
 			return true;
@@ -121,16 +118,9 @@ class EL_GatherAction : ScriptedUserAction
 				return true;
 		}
 		
-		return m_bAlwaysActive;
+		return false;
  	}
 	
-	//------------------------------------------------------------------------------------------------
-	//! Hide action until CanBePerformed to not show "Action [Unavailable]"
-	override bool CanBeShownScript(IEntity user)
-	{
-		return CanBePerformedScript(user);
-	}
-
 	//------------------------------------------------------------------------------------------------
 	// Called after delay timer runs out
 	protected void ToggleCanBePerformed()

@@ -29,6 +29,13 @@ EL_BaseCrop {
      m_GatherItemPrefab "{0815D91FDF997A0A}Prefabs/Items/Food/Tomato.et"
      m_bDeleteAfterUse 1
     }
+    EL_DeleteAction "{59A0A7C059F8390F}" {
+     ParentContextList {
+      "default"
+     }
+     Duration 2
+     "Sort Priority" 100
+    }
    }
   }
   RplComponent "{59A07C473867D06F}" {
