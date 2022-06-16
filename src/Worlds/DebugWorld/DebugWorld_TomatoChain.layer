@@ -530,10 +530,17 @@ StaticModelEntity : "{63C2AE154637AC71}PrefabLibrary/Props/Civilian/Garden/Veget
  coords 108.14 0.001 135.337
  angleY -7.378
 }
-GenericEntity : "{97F71E1D9830AE26}Prefabs/Items/Seeds/SeedTomato.et" {
- coords 104.728 0.917 134.095
- angleY 165
- angleZ -90
+$grp GenericEntity : "{97F71E1D9830AE26}Prefabs/Items/Seeds/SeedTomato.et" {
+ {
+  coords 104.728 0.917 134.095
+  angleY 165
+  angleZ -90
+ }
+ {
+  coords 104.86 0.917 134.13
+  angleY 165
+  angleZ -90
+ }
 }
 $grp EL_BaseCrop : "{C4B2301E5D989B42}Prefabs/Vegetation/Crops/CabbageCrop.et" {
  {
