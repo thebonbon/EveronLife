@@ -42,7 +42,7 @@ class EL_Utils
 	//! Workaround for missing FindComponent("MeshObject")
 	static BaseContainer GetPrefabMeshComponent(ResourceName prefab) 
 	{			
-		BaseContainer meshComponent = null;
+		BaseContainer meshComponent;
 		IEntitySource prefabSource = Resource.Load(prefab).GetResource().ToEntitySource();
 		int count = prefabSource.GetComponentCount();
 		
@@ -56,10 +56,7 @@ class EL_Utils
 				break;
 			}
 		}
-		
-		if (!meshComponent)
-			return null;
-		
 		return meshComponent;
 	}
+	
 }

@@ -1,0 +1,58 @@
+EL_BaseCrop {
+ ID "59A07C470BE83ADC"
+ components {
+  MeshObject "{59A07C47007ED2EA}" {
+   Object "{159B0B361CA57753}Assets/Vegetation/Vegetables/CabbageCrop_01.xob"
+  }
+  Hierarchy "{59A07C473BD325CF}" {
+  }
+  RigidBody "{59A07C473DB86630}" {
+   ModelGeometry 1
+   Static 1
+  }
+  ActionsManagerComponent "{59A07C472658C81C}" {
+   ActionContexts {
+    UserActionContext "{59A07C4730B45523}" {
+     ContextName "default"
+     Position PointInfo "{59A07C4734813BFB}" {
+     }
+     Radius 12.21
+    }
+   }
+   additionalActions {
+    EL_GatherAction "{59A0838DA129119D}" {
+     ParentContextList {
+      "default"
+     }
+     Duration 1
+     m_GatherItemDisplayName "Cabbage"
+     m_GatherItemPrefab "{0815D91FDF997A0A}Prefabs/Items/Food/Tomato.et"
+     m_bDeleteAfterUse 1
+    }
+   }
+  }
+  RplComponent "{59A07C473867D06F}" {
+  }
+ }
+ coords 107.555 0.238 134.825
+ m_buildingType CROP
+ m_bDeleteAfterFinalStage 1
+ m_aCropStages {
+  EL_CropStage "{59A07C4704334DEA}" {
+   m_fStageTime 0.2
+   m_sStageName "Seed"
+   m_fStageScale 0.25
+  }
+  EL_CropStage "{59A07C470719DF36}" {
+   m_fStageTime 0.2
+   m_sStageName "Growing"
+   m_fStageScale 0.5
+  }
+  EL_CropStage "{59A07C4707323A49}" {
+   m_fStageTime 1
+   m_sStageName "Ripe"
+   m_fStageScale 1
+   m_bCanGather 1
+  }
+ }
+}

@@ -5,7 +5,6 @@ class EL_BuildingManagerComponentClass : ScriptComponentClass
 
 class EL_BuildingManagerComponent : ScriptComponent 
 {
-
 	[Attribute("", UIWidgets.ResourcePickerThumbnail, "Preview entity material", "emat", category: "Building Preview")]
 	private ResourceName m_PreviewMaterial;
 	
@@ -13,21 +12,29 @@ class EL_BuildingManagerComponent : ScriptComponent
 	private ResourceName m_BasePreviewPrefab;	
 	
 	private IEntity m_PreviewEntity;
-	
 	private CameraBase m_Cam;
 	private vector m_PosInWorld;
 	private InputManager m_InputManager;
-	
-	private bool m_CanBuild = false;
+	private bool m_IsInit;
+	private bool m_CanBuild;
 	private EL_BuildingPerformerComponent m_BuildingPerformer;
 	private EL_BuildingPerformerComponent m_LastBuildingPerformer;
+	
 
+	//------------------------------------------------------------------------------------------------
+	[RplRpc(RplChannel.Reliable, RplRcver.Server)]
+	void RPC_DoSpawnEntityPrefab(ResourceName resource, vector pos)
+	{
+		//SpawnEntityPrefab already spawns via Broadcast + Authority
+		EL_Utils.SpawnEntityPrefab(resource, pos);
+	}
 	
 	//------------------------------------------------------------------------------------------------
 	void OnMouseLeftDown()
 	{
+		//Ask the server to spawn the prefab
 		if (m_CanBuild)
-			EL_Utils.SpawnEntityPrefab(m_BuildingPerformer.m_BuildingPrefab, m_PosInWorld);
+			Rpc(RPC_DoSpawnEntityPrefab, m_BuildingPerformer.m_BuildingPrefab, m_PosInWorld);
 	}
 	
 	//------------------------------------------------------------------------------------------------
@@ -47,8 +54,7 @@ class EL_BuildingManagerComponent : ScriptComponent
 			return null;
 		
 		EL_BuildingPerformerComponent buildingPerformer = EL_BuildingPerformerComponent.Cast(gadgetManager.GetHeldGadgetComponent());
-		if (!buildingPerformer)
-			return null;
+		
 		return buildingPerformer;
 	}
 
@@ -86,11 +92,44 @@ class EL_BuildingManagerComponent : ScriptComponent
 	}
 	
 	//------------------------------------------------------------------------------------------------
+	void InitComponent(IEntity owner) 
+	{
+		RplComponent rplComponent = RplComponent.Cast(owner.FindComponent(RplComponent));
+		//Remove frame mask on other proxys
+		if (rplComponent && !rplComponent.IsOwner())
+		{
+			ClearEventMask(owner, EntityEvent.FRAME);
+			return;
+		}
+		//Authority specific behavior 
+		
+		m_Cam = GetGame().GetCameraManager().CurrentCamera();
+		m_InputManager = GetGame().GetInputManager();
+		
+		if (!m_InputManager || !m_Cam)
+			return;
+		
+		m_InputManager.AddActionListener("MouseLeft", EActionTrigger.DOWN, OnMouseLeftDown);
+		
+		//Spawn base preview and set invisible
+		m_PreviewEntity = EL_Utils.SpawnEntityPrefab(m_BasePreviewPrefab, owner.GetOrigin());
+		EL_Utils.ChangeEntityMaterial(m_PreviewEntity, m_PreviewMaterial);
+		m_PreviewEntity.ClearFlags(EntityFlags.VISIBLE, true);
+		
+		m_IsInit = true;	
+	}
+	
+	//------------------------------------------------------------------------------------------------
 	override void EOnFrame(IEntity owner, float timeSlice)
 	{
+		if (!m_IsInit)
+		{
+			InitComponent(owner);
+			return;
+		}	
+		//Authority specific behavior 
 		m_CanBuild = false;
-		if(!m_Cam)
-			m_Cam = GetGame().GetCameraManager().CurrentCamera();
+		
 		if (!m_PreviewEntity)
 			return;
 		
@@ -110,31 +149,14 @@ class EL_BuildingManagerComponent : ScriptComponent
 	//------------------------------------------------------------------------------------------------
 	override void OnPostInit(IEntity owner)
 	{
-		SetEventMask(owner, EntityEvent.INIT | EntityEvent.FRAME);
-		GetOwner().SetFlags(EntityFlags.ACTIVE, true);
-		
-		m_InputManager = GetGame().GetInputManager();
-		m_InputManager.AddActionListener("MouseLeft", EActionTrigger.DOWN, OnMouseLeftDown);
+		SetEventMask(owner, EntityEvent.FRAME);
 	}
-	
+
 	//------------------------------------------------------------------------------------------------
-	override void EOnInit(IEntity owner)
-	{
-		//Spawn base preview and set invisible
-		m_PreviewEntity = EL_Utils.SpawnEntityPrefab(m_BasePreviewPrefab, owner.GetOrigin());
-		EL_Utils.ChangeEntityMaterial(m_PreviewEntity, m_PreviewMaterial);
-		m_PreviewEntity.ClearFlags(EntityFlags.VISIBLE, true);		
-	}
-		
-	void EL_BuildingManagerComponent(IEntitySource src, IEntity parent)
-	{
-		
-	}
-	
-	//------------------------------------------------------------------------------------------------
-	//! Destructor -> Remove ActionListener
+	//! Destructor -> remove ActionListener
 	void ~EL_BuildingManagerComponent()
 	{
-		m_InputManager.RemoveActionListener("MouseLeft", EActionTrigger.DOWN, OnMouseLeftDown);	
+		if (m_InputManager)
+			m_InputManager.RemoveActionListener("MouseLeft", EActionTrigger.DOWN, OnMouseLeftDown);	
 	}
 };

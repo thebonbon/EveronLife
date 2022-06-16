@@ -1,46 +1,69 @@
-EL_PositionCrop {
- ID "597C8E361AFDA740"
+EL_BaseCrop {
+ ID "59A0838C9F218F85"
  components {
-  EL_AreaSpawnerComponent "{5990F8C6BAD1B358}" {
-   m_BoxSize 0.1 0.6 0.1
+  EL_AreaSpawnerComponent "{59A0838CBFEAA856}" {
+   m_BoxSize 0.1 0.5 0.1
    m_BoxOffset 0 0.75 0
    m_PrefabToSpawn "{0815D91FDF997A0A}Prefabs/Items/Food/Tomato.et"
    m_AmountToSpawn 5
   }
-  MeshObject "{597C689DC240295E}" {
+  MeshObject "{59A0838C81ECAC07}" {
    Object "{B89423573D7244D4}Assets/Vegetation/Vegetables/TomatoCrop_01.xob"
   }
-  Hierarchy "{597C689FCD8C04BF}" {
+  Hierarchy "{59A0838C81ECAC7E}" {
   }
-  RigidBody "{597C7BAC22BEB579}" {
+  RigidBody "{59A0838C81ECAC73}" {
    ModelGeometry 1
    Static 1
   }
-  ActionsManagerComponent "{5990F8DDA3F99008}" {
+  ActionsManagerComponent "{59A0838C81ECACBB}" {
    ActionContexts {
-    UserActionContext "{5990F8DDA439F4F4}" {
+    UserActionContext "{59A0838C81ECACB9}" {
      ContextName "default"
-     Position PointInfo "{5990F8DDB900F4F6}" {
-      Offset 0 0.85 0
+     Position PointInfo "{59A0838C81ECACBF}" {
      }
+     Radius 12.21
     }
    }
    additionalActions {
-    EL_DeleteAction "{5990F8DDC0D61F9F}" {
+    EL_DeleteAction "{59A0838DB7914114}" {
      ParentContextList {
       "default"
      }
-     Duration 3
-     "Sort Priority" 100
+     Duration 2
     }
    }
   }
-  RplComponent "{597C689FB6C7BF08}" {
+  RplComponent "{59A0838C81ECACB7}" {
   }
  }
- coords 92.95 0.001 130.527
+ coords 107.531 0.233 135.708
  m_buildingType CROP
- m_UseAreaSpawner 1
- growTime 10
- totalYIncrease 1.465
+ m_bSpawnItemsAtStage 3
+ m_aCropStages {
+  EL_CropStage "{59A0838C81ECAC9F}" {
+   m_fStageTime 0.2
+   m_sStageName "Seed"
+   m_StageOffset 0 -1.465 0
+   m_fStageScale 1
+  }
+  EL_CropStage "{59A0838C81ECAC95}" {
+   m_fStageTime 0.2
+   m_sStageName "Growing"
+   m_StageOffset 0 0.465 0
+   m_fStageScale 1
+  }
+  EL_CropStage "{59A0838C81ECAC90}" {
+   m_fStageTime 0.2
+   m_sStageName "Grown"
+   m_StageOffset 0 0.5 0
+   m_fStageScale 1
+  }
+  EL_CropStage "{59A0838C81ECAC8C}" {
+   m_fStageTime 10
+   m_sStageName "Ripe"
+   m_StageOffset 0 0.5 0
+   m_bCanGather 1
+  }
+ }
 }

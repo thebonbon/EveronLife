@@ -1,4 +1,4 @@
-[ComponentEditorProps(category: "EveronLife/Game/Building")]
+[EntityEditorProps(category: "EveronLife/Building", description:"Basic staged crop entity")]
 class EL_BaseBuildingClass : GenericEntityClass 
 {
 };	

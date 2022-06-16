@@ -459,6 +459,10 @@ $grp GenericEntity {
    }
    $grp GenericEntity : "{622F9989DDC4865B}PrefabLibrary/Props/Civilian/Recreation/TableRecreation_01.et" {
     {
+     components {
+      SCR_DestructionMultiPhaseComponent "{5624A88D86EFE8BA}" {
+      }
+     }
      coords 0.147 0.019 -0.144
      angleY 82.104
     }
@@ -517,4 +521,9 @@ $grp GenericEntity {
 Tree AppleGatherTree : "{1C6F9AD2669C17F9}Prefabs/Vegetation/Tree/t_malus_domestica_2s.et" {
  coords 112.51 0.002 135.664
  angleY 86.566
+}
+GenericEntity : "{97F71E1D9830AE26}Prefabs/Items/Seeds/SeedTomato.et" {
+ coords 104.86 0.917 134.13
+ angleY 165
+ angleZ -90
 }

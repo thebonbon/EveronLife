@@ -517,25 +517,33 @@ $grp GenericEntity {
   }
  }
 }
-$grp EL_PositionCrop : "{28EAA2BC76483922}Prefabs/Vegetation/Crops/TomatoCrop.et" {
+$grp EL_BaseCrop : "{28EAA2BC76483922}Prefabs/Vegetation/Crops/TomatoCrop.et" {
  {
-  coords 107.381 0 135
+  coords 108.618 0.276 135.97
  }
  {
-  components {
-   ActionsManagerComponent "{5990F8DDA3F99008}" {
-    additionalActions {
-     EL_DeleteAction "{5990F8DDC0D61F9F}" {
-      Duration 2
-     }
-    }
-   }
-  }
-  coords 107.962 0.001 135.048
+  coords 107.511 0.276 135.775
+  m_bSpawnItemsAtStage 3
  }
+}
+StaticModelEntity : "{63C2AE154637AC71}PrefabLibrary/Props/Civilian/Garden/VegetableBed_01_small.et" {
+ coords 108.14 0.001 135.337
+ angleY -7.378
 }
 GenericEntity : "{97F71E1D9830AE26}Prefabs/Items/Seeds/SeedTomato.et" {
  coords 104.728 0.917 134.095
  angleY 165
  angleZ -90
+}
+$grp EL_BaseCrop : "{C4B2301E5D989B42}Prefabs/Vegetation/Crops/CabbageCrop.et" {
+ {
+  components {
+   MeshObject "{59A07C47007ED2EA}" {
+   }
+  }
+  coords 107.565 0.233 134.88
+ }
+ {
+  coords 108.698 0.259 135.003
+ }
 }
