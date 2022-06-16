@@ -554,7 +554,6 @@ $grp GenericEntity : "{97F71E1D9830AE26}Prefabs/Items/Seeds/SeedTomato.et" {
  {
   components {
    EL_BuildingPerformerComponent "{5990F8C8019C98C8}" {
-    m_GroundType ANY
    }
    InventoryItemComponent "{59752C6F42BE630E}" {
     Attributes SCR_ItemAttributeCollection "{59752C6F5A5C85AC}" {
@@ -634,7 +633,6 @@ $grp GenericEntity : "{97F71E1D9830AE26}Prefabs/Items/Seeds/SeedTomato.et" {
  {
   components {
    EL_BuildingPerformerComponent "{5990F8C8019C98C8}" {
-    m_GroundType ANY
    }
    InventoryItemComponent "{59752C6F42BE630E}" {
     Attributes SCR_ItemAttributeCollection "{59752C6F5A5C85AC}" {
