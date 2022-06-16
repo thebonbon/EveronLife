@@ -31,7 +31,8 @@ class EL_GatherAction : ScriptedUserAction
 	override void PerformAction(IEntity pOwnerEntity, IEntity pUserEntity)
 	{
 		RplComponent replication = RplComponent.Cast(pOwnerEntity.FindComponent(RplComponent));
-		
+		if (!replication || !m_InventoryManager)
+			return;
 		m_InventoryManager.PlayItemSound(replication.Id(), "SOUND_PICK_UP");
 		
 		//Play grab animation
@@ -52,12 +53,12 @@ class EL_GatherAction : ScriptedUserAction
 			GetGame().GetCallqueue().CallLater(ToggleCanBePerformed, m_DelayTimeMilliseconds);	
 			m_EndOfDelay = GetGame().GetWorld().GetWorldTime() + m_DelayTimeMilliseconds;
 		}
-
+		
 		//Delete entity after use?
 		if (m_bDeleteAfterUse)
-			delete(pOwnerEntity);
+			replication.DeleteRplEntity(pOwnerEntity, false);
 	}
-	
+		
 	//------------------------------------------------------------------------------------------------
 	//! Formats name for action when hovering
 	override bool GetActionNameScript(out string outName)

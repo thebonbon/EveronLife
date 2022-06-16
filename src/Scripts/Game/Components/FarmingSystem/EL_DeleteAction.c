@@ -4,7 +4,9 @@ class EL_DeleteAction : ScriptedUserAction
 	//------------------------------------------------------------------------------------------------
 	override void PerformAction(IEntity pOwnerEntity, IEntity pUserEntity)
 	{
-		delete pOwnerEntity;		
+		RplComponent replication = RplComponent.Cast(pOwnerEntity.FindComponent(RplComponent));
+		if (replication)
+			replication.DeleteRplEntity(pOwnerEntity, false);	
 	}		
 	
 	//------------------------------------------------------------------------------------------------
