@@ -11,19 +11,24 @@ EL_BaseCrop : "{1B8698AD990A09F3}Prefabs/Vegetation/Crops/BaseCropArea.et" {
  }
  coords 107.531 0.233 135.708
  m_buildingType CROP
- m_bSpawnItemsAtStage 1
+ m_bSpawnItemsAtStage 3
  m_aCropStages {
-  EL_CropStage "{59A0838C81ECAC9F}" {
+  EL_CropStage "{59A13193B7CC82CF}" {
    m_fStageTime 0.2
    m_sStageName "Seed"
    m_StageOffset 0 -1.465 0
-   m_fStageScale 1
   }
-  EL_CropStage "{59A0838C81ECAC95}" {
-   m_fStageTime 0.2
+  EL_CropStage "{59A13193B675E0BB}" {
    m_sStageName "Growing"
-   m_StageOffset 0 1.465 0
-   m_fStageScale 1
+   m_StageOffset 0 0.465 0
+  }
+  EL_CropStage "{59A13193DE9FB1B1}" {
+   m_sStageName "Grown"
+   m_StageOffset 0 0.5 0
+  }
+  EL_CropStage "{59A13193B698A315}" {
+   m_sStageName "Ripe"
+   m_StageOffset 0 0.5 0
    m_bCanGather 1
   }
  }
