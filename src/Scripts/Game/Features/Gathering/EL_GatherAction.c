@@ -31,8 +31,7 @@ class EL_GatherAction : ScriptedUserAction
 	override void PerformAction(IEntity pOwnerEntity, IEntity pUserEntity)
 	{
 		RplComponent replication = RplComponent.Cast(pOwnerEntity.FindComponent(RplComponent));
-		if (!replication || !m_InventoryManager)
-			return;
+		
 		m_InventoryManager.PlayItemSound(replication.Id(), "SOUND_PICK_UP");
 		
 		//Play grab animation

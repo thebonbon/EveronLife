@@ -67,7 +67,10 @@ class EL_BaseCrop : EL_BaseBuilding
 		if (m_iCropStage > m_aCropStages.Count() - 1)
 		{
 			if (m_bDeleteAfterFinalStage)
-				delete(this);
+			{
+				RplComponent rplComponent = RplComponent.Cast(FindComponent(RplComponent));
+				rplComponent.DeleteRplEntity(this, false);
+			}
 			return;
 		}
 
@@ -126,7 +129,8 @@ class EL_BaseCrop : EL_BaseBuilding
 			return;
 		}
 		// Authority specific behavior
-
+		if (!m_aCropStages.Count())
+			return; 
 		//Time*60000 for replication time in minutes
 		float stageEndTime = m_fStageStartTime + m_aCropStages[m_iCropStage].m_fStageTime * 60000;
 		if (Replication.Time() >= stageEndTime)
