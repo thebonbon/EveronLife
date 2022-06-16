@@ -519,24 +519,194 @@ $grp GenericEntity {
 }
 $grp EL_BaseCrop : "{28EAA2BC76483922}Prefabs/Vegetation/Crops/TomatoCrop.et" {
  {
-  coords 107.047 0.276 135.732
+  components {
+   EL_AreaSpawnerComponent "{59A12C31B22C4F7D}" {
+    m_PrefabToSpawn "{0815D91FDF997A0A}Prefabs/Items/Food/Tomato.et"
+    m_AmountToSpawn 5
+   }
+   MeshObject "{59A0BBAE906EB9AC}" {
+    Object "{B89423573D7244D4}Assets/Vegetation/Vegetables/TomatoCrop_01.xob"
+   }
+  }
+  coords 105.988 0 134.814
  }
  {
-  coords 105.94 0.276 135.537
-  m_bSpawnItemsAtStage 3
+  coords 106.074 0 134.11
  }
 }
 StaticModelEntity : "{63C2AE154637AC71}PrefabLibrary/Props/Civilian/Garden/VegetableBed_01_small.et" {
- coords 106.569 0.001 135.099
+ coords 106.548 0.001 136.649
  angleY -7.378
+ {
+  $grp EL_BaseCrop : "{C4B2301E5D989B42}Prefabs/Vegetation/Crops/CabbageCrop.et" {
+   {
+    coords -0.476 0.232 0.012
+    angleY 7.378
+   }
+   {
+    coords 0.498 0.258 -0.019
+    angleY 7.378
+   }
+  }
+ }
 }
 $grp GenericEntity : "{97F71E1D9830AE26}Prefabs/Items/Seeds/SeedTomato.et" {
  {
+  components {
+   EL_BuildingPerformerComponent "{5990F8C8019C98C8}" {
+    m_GroundType ANY
+   }
+   InventoryItemComponent "{59752C6F42BE630E}" {
+    Attributes SCR_ItemAttributeCollection "{59752C6F5A5C85AC}" {
+     ItemDisplayName UIInfo "{59752C6F5D8BC37C}" {
+      Name "Tomato Seed"
+      Description "Plant this"
+     }
+     ItemPhysAttributes ItemPhysicalAttributes "{59752C6F7F053682}" {
+      Weight 0.01
+      DimensionScaler 0.1
+     }
+     ItemAnimationAttributes ItemAnimationAttributes "{59752C6F773C76A7}" {
+      AnimationInstance "{4FCBEA45CAEBC9C0}anims/workspaces/player/player_main_1h.asi"
+      AnimationIKPose "{3E5C93E85F05C6B5}Assets/Weapons/Grenades/RGD5/anims/anm/p_rgd5_ik.anm"
+      AnimationAttachments {
+       AnimationAttachmentInfo "{59752C6FC860AAD1}" {
+        AnimGraph "{883777E45A6C4DA1}Assets/Items/Medicine/Workspaces/Gauze_01.agr"
+        AnimInstance "{79BD98038DD60F88}Assets/Items/Medicine/Workspaces/Gauze_01_player.asi"
+        BindingName "Gadget"
+       }
+      }
+      HandAdditiveRotation 0 90 0
+      HandAdditiveTranslation 0 0.025 0
+     }
+     CustomAttributes {
+      PreviewRenderAttributes "{59752C69D36BC395}" {
+       CameraPreset Right
+       CameraDistanceToItem 0.5
+       CameraOffset 0 0 0
+       FOV 10
+      }
+     }
+     m_Size SLOT_1x1
+     m_SlotType SLOT_ANY
+    }
+   }
+   MeshObject "{59752C6D8F32A642}" {
+    Object "{3B0F9D6E5236E09E}Assets/Items/Seeds/Tomato/tomato_seed.xob"
+    Materials {
+     MaterialAssignClass "{59752C6F16C2140B}" {
+      SourceMaterial "TomatoUVTexture"
+      AssignedMaterial "{1034A71EFE71F158}Assets/Items/Seeds/Tomato/data/TomatoUVTexture.emat"
+     }
+    }
+   }
+   Hierarchy "{59752C6EEB124832}" {
+   }
+   RigidBody "{59752C6EA112145E}" {
+    ModelGeometry 1
+   }
+   ActionsManagerComponent "{59752C6FFA269B37}" {
+    ActionContexts {
+     UserActionContext "{59752C6FFD17A8F4}" {
+      ContextName "default"
+      Position PointInfo "{59752C6FF328EC65}" {
+      }
+      Radius 8.719
+     }
+    }
+    additionalActions {
+     SCR_PickUpItemAction "{59752C6E0815F4B7}" {
+      ParentContextList +{
+      }
+      UIInfo UIInfo "{59752C6E0D086B65}" {
+       Name "#AR-Inventory_PickUp"
+      }
+     }
+    }
+   }
+   RplComponent "{59752C6FE489D4C5}" {
+   }
+  }
   coords 103.157 0.917 133.857
   angleY 165
   angleZ -90
  }
  {
+  components {
+   EL_BuildingPerformerComponent "{5990F8C8019C98C8}" {
+    m_GroundType ANY
+   }
+   InventoryItemComponent "{59752C6F42BE630E}" {
+    Attributes SCR_ItemAttributeCollection "{59752C6F5A5C85AC}" {
+     ItemDisplayName UIInfo "{59752C6F5D8BC37C}" {
+      Name "Tomato Seed"
+      Description "Plant this"
+     }
+     ItemPhysAttributes ItemPhysicalAttributes "{59752C6F7F053682}" {
+      Weight 0.01
+      DimensionScaler 0.1
+     }
+     ItemAnimationAttributes ItemAnimationAttributes "{59752C6F773C76A7}" {
+      AnimationInstance "{4FCBEA45CAEBC9C0}anims/workspaces/player/player_main_1h.asi"
+      AnimationIKPose "{3E5C93E85F05C6B5}Assets/Weapons/Grenades/RGD5/anims/anm/p_rgd5_ik.anm"
+      AnimationAttachments {
+       AnimationAttachmentInfo "{59752C6FC860AAD1}" {
+        AnimGraph "{883777E45A6C4DA1}Assets/Items/Medicine/Workspaces/Gauze_01.agr"
+        AnimInstance "{79BD98038DD60F88}Assets/Items/Medicine/Workspaces/Gauze_01_player.asi"
+        BindingName "Gadget"
+       }
+      }
+      HandAdditiveRotation 0 90 0
+      HandAdditiveTranslation 0 0.025 0
+     }
+     CustomAttributes {
+      PreviewRenderAttributes "{59752C69D36BC395}" {
+       CameraPreset Right
+       CameraDistanceToItem 0.5
+       CameraOffset 0 0 0
+       FOV 10
+      }
+     }
+     m_Size SLOT_1x1
+     m_SlotType SLOT_ANY
+    }
+   }
+   MeshObject "{59752C6D8F32A642}" {
+    Object "{3B0F9D6E5236E09E}Assets/Items/Seeds/Tomato/tomato_seed.xob"
+    Materials {
+     MaterialAssignClass "{59752C6F16C2140B}" {
+      SourceMaterial "TomatoUVTexture"
+      AssignedMaterial "{1034A71EFE71F158}Assets/Items/Seeds/Tomato/data/TomatoUVTexture.emat"
+     }
+    }
+   }
+   Hierarchy "{59752C6EEB124832}" {
+   }
+   RigidBody "{59752C6EA112145E}" {
+    ModelGeometry 1
+   }
+   ActionsManagerComponent "{59752C6FFA269B37}" {
+    ActionContexts {
+     UserActionContext "{59752C6FFD17A8F4}" {
+      ContextName "default"
+      Position PointInfo "{59752C6FF328EC65}" {
+      }
+      Radius 8.719
+     }
+    }
+    additionalActions {
+     SCR_PickUpItemAction "{59752C6E0815F4B7}" {
+      ParentContextList +{
+      }
+      UIInfo UIInfo "{59752C6E0D086B65}" {
+       Name "#AR-Inventory_PickUp"
+      }
+     }
+    }
+   }
+   RplComponent "{59752C6FE489D4C5}" {
+   }
+  }
   coords 103.289 0.917 133.892
   angleY 165
   angleZ -90
@@ -546,6 +716,76 @@ $grp GenericEntity : "{97F71E1D9830AE26}Prefabs/Items/Seeds/SeedTomato.et" {
    EL_BuildingPerformerComponent "{5990F8C8019C98C8}" {
     m_BuildingPrefab "{C4B2301E5D989B42}Prefabs/Vegetation/Crops/CabbageCrop.et"
     m_GroundType ANY
+   }
+   InventoryItemComponent "{59752C6F42BE630E}" {
+    Attributes SCR_ItemAttributeCollection "{59752C6F5A5C85AC}" {
+     ItemDisplayName UIInfo "{59752C6F5D8BC37C}" {
+      Name "Tomato Seed"
+      Description "Plant this"
+     }
+     ItemPhysAttributes ItemPhysicalAttributes "{59752C6F7F053682}" {
+      Weight 0.01
+      DimensionScaler 0.1
+     }
+     ItemAnimationAttributes ItemAnimationAttributes "{59752C6F773C76A7}" {
+      AnimationInstance "{4FCBEA45CAEBC9C0}anims/workspaces/player/player_main_1h.asi"
+      AnimationIKPose "{3E5C93E85F05C6B5}Assets/Weapons/Grenades/RGD5/anims/anm/p_rgd5_ik.anm"
+      AnimationAttachments {
+       AnimationAttachmentInfo "{59752C6FC860AAD1}" {
+        AnimGraph "{883777E45A6C4DA1}Assets/Items/Medicine/Workspaces/Gauze_01.agr"
+        AnimInstance "{79BD98038DD60F88}Assets/Items/Medicine/Workspaces/Gauze_01_player.asi"
+        BindingName "Gadget"
+       }
+      }
+      HandAdditiveRotation 0 90 0
+      HandAdditiveTranslation 0 0.025 0
+     }
+     CustomAttributes {
+      PreviewRenderAttributes "{59752C69D36BC395}" {
+       CameraPreset Right
+       CameraDistanceToItem 0.5
+       CameraOffset 0 0 0
+       FOV 10
+      }
+     }
+     m_Size SLOT_1x1
+     m_SlotType SLOT_ANY
+    }
+   }
+   MeshObject "{59752C6D8F32A642}" {
+    Object "{3B0F9D6E5236E09E}Assets/Items/Seeds/Tomato/tomato_seed.xob"
+    Materials {
+     MaterialAssignClass "{59752C6F16C2140B}" {
+      SourceMaterial "TomatoUVTexture"
+      AssignedMaterial "{1034A71EFE71F158}Assets/Items/Seeds/Tomato/data/TomatoUVTexture.emat"
+     }
+    }
+   }
+   Hierarchy "{59752C6EEB124832}" {
+   }
+   RigidBody "{59752C6EA112145E}" {
+    ModelGeometry 1
+   }
+   ActionsManagerComponent "{59752C6FFA269B37}" {
+    ActionContexts {
+     UserActionContext "{59752C6FFD17A8F4}" {
+      ContextName "default"
+      Position PointInfo "{59752C6FF328EC65}" {
+      }
+      Radius 8.719
+     }
+    }
+    additionalActions {
+     SCR_PickUpItemAction "{59752C6E0815F4B7}" {
+      ParentContextList +{
+      }
+      UIInfo UIInfo "{59752C6E0D086B65}" {
+       Name "#AR-Inventory_PickUp"
+      }
+     }
+    }
+   }
+   RplComponent "{59752C6FE489D4C5}" {
    }
   }
   coords 103.107 0.917 134.05
@@ -558,17 +798,79 @@ $grp GenericEntity : "{97F71E1D9830AE26}Prefabs/Items/Seeds/SeedTomato.et" {
     m_BuildingPrefab "{C4B2301E5D989B42}Prefabs/Vegetation/Crops/CabbageCrop.et"
     m_GroundType ANY
    }
+   InventoryItemComponent "{59752C6F42BE630E}" {
+    Attributes SCR_ItemAttributeCollection "{59752C6F5A5C85AC}" {
+     ItemDisplayName UIInfo "{59752C6F5D8BC37C}" {
+      Name "Tomato Seed"
+      Description "Plant this"
+     }
+     ItemPhysAttributes ItemPhysicalAttributes "{59752C6F7F053682}" {
+      Weight 0.01
+      DimensionScaler 0.1
+     }
+     ItemAnimationAttributes ItemAnimationAttributes "{59752C6F773C76A7}" {
+      AnimationInstance "{4FCBEA45CAEBC9C0}anims/workspaces/player/player_main_1h.asi"
+      AnimationIKPose "{3E5C93E85F05C6B5}Assets/Weapons/Grenades/RGD5/anims/anm/p_rgd5_ik.anm"
+      AnimationAttachments {
+       AnimationAttachmentInfo "{59752C6FC860AAD1}" {
+        AnimGraph "{883777E45A6C4DA1}Assets/Items/Medicine/Workspaces/Gauze_01.agr"
+        AnimInstance "{79BD98038DD60F88}Assets/Items/Medicine/Workspaces/Gauze_01_player.asi"
+        BindingName "Gadget"
+       }
+      }
+      HandAdditiveRotation 0 90 0
+      HandAdditiveTranslation 0 0.025 0
+     }
+     CustomAttributes {
+      PreviewRenderAttributes "{59752C69D36BC395}" {
+       CameraPreset Right
+       CameraDistanceToItem 0.5
+       CameraOffset 0 0 0
+       FOV 10
+      }
+     }
+     m_Size SLOT_1x1
+     m_SlotType SLOT_ANY
+    }
+   }
+   MeshObject "{59752C6D8F32A642}" {
+    Object "{3B0F9D6E5236E09E}Assets/Items/Seeds/Tomato/tomato_seed.xob"
+    Materials {
+     MaterialAssignClass "{59752C6F16C2140B}" {
+      SourceMaterial "TomatoUVTexture"
+      AssignedMaterial "{1034A71EFE71F158}Assets/Items/Seeds/Tomato/data/TomatoUVTexture.emat"
+     }
+    }
+   }
+   Hierarchy "{59752C6EEB124832}" {
+   }
+   RigidBody "{59752C6EA112145E}" {
+    ModelGeometry 1
+   }
+   ActionsManagerComponent "{59752C6FFA269B37}" {
+    ActionContexts {
+     UserActionContext "{59752C6FFD17A8F4}" {
+      ContextName "default"
+      Position PointInfo "{59752C6FF328EC65}" {
+      }
+      Radius 8.719
+     }
+    }
+    additionalActions {
+     SCR_PickUpItemAction "{59752C6E0815F4B7}" {
+      ParentContextList +{
+      }
+      UIInfo UIInfo "{59752C6E0D086B65}" {
+       Name "#AR-Inventory_PickUp"
+      }
+     }
+    }
+   }
+   RplComponent "{59752C6FE489D4C5}" {
+   }
   }
   coords 103.238 0.917 134.062
   angleY 165
   angleZ -90
- }
-}
-$grp EL_BaseCrop : "{C4B2301E5D989B42}Prefabs/Vegetation/Crops/CabbageCrop.et" {
- {
-  coords 105.994 0.233 134.642
- }
- {
-  coords 107.127 0.259 134.765
  }
 }

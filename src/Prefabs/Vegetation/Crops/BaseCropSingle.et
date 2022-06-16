@@ -1,0 +1,35 @@
+EL_BaseCrop : "{64DFA805B1BF7F7D}Prefabs/Vegetation/Crops/BaseCrop.et" {
+ ID "59A12C31CAEC6145"
+ components {
+  ActionsManagerComponent "{59A0BBAE906EB838}" {
+   additionalActions {
+    EL_GatherAction "{59A12C3059847C59}" {
+     m_bDeleteAfterUse 1
+    }
+   }
+  }
+ }
+ coords 106.074 0.233 136.6
+ angleY 7.378
+ m_buildingType CROP
+ m_aCropStages {
+  EL_CropStage "{59A12C31C884E150}" {
+   m_fStageTime 0.2
+   m_sStageName "Seed"
+   m_fStageScale 0.25
+   m_bCanGather 0
+  }
+  EL_CropStage "{59A12C31C884E148}" {
+   m_fStageTime 0.2
+   m_sStageName "Growing"
+   m_fStageScale 0.5
+   m_bCanGather 0
+  }
+  EL_CropStage "{59A12C31C884E146}" {
+   m_fStageTime 1
+   m_sStageName "Ripe"
+   m_fStageScale 1
+   m_bCanGather 1
+  }
+ }
+}

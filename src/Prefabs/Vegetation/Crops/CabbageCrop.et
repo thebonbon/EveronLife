@@ -1,44 +1,16 @@
-EL_BaseCrop {
+EL_BaseCrop : "{F1F4F4FDA1E652E3}Prefabs/Vegetation/Crops/BaseCropSingle.et" {
  ID "59A07C470BE83ADC"
  components {
-  MeshObject "{59A07C47007ED2EA}" {
+  MeshObject "{59A0BBAE906EB9AC}" {
    Object "{159B0B361CA57753}Assets/Vegetation/Vegetables/CabbageCrop_01.xob"
   }
-  Hierarchy "{59A07C473BD325CF}" {
-  }
-  RigidBody "{59A07C473DB86630}" {
-   ModelGeometry 1
-   Static 1
-  }
-  ActionsManagerComponent "{59A07C472658C81C}" {
-   ActionContexts {
-    UserActionContext "{59A07C4730B45523}" {
-     ContextName "default"
-     Position PointInfo "{59A07C4734813BFB}" {
-     }
-     Radius 12.21
-    }
-   }
+  ActionsManagerComponent "{59A0BBAE906EB838}" {
    additionalActions {
-    EL_GatherAction "{59A0838DA129119D}" {
-     ParentContextList {
-      "default"
-     }
-     Duration 1
+    EL_GatherAction "{59A12C3059847C59}" {
      m_GatherItemDisplayName "Cabbage"
      m_GatherItemPrefab "{9FEBBF75B1D525EE}Prefabs/Items/Food/Cabbage.et"
-     m_bDeleteAfterUse 1
-    }
-    EL_DeleteAction "{59A0A7C059F8390F}" {
-     ParentContextList {
-      "default"
-     }
-     Duration 2
-     "Sort Priority" 100
     }
    }
-  }
-  RplComponent "{59A07C473867D06F}" {
   }
  }
  coords 107.555 0.238 134.825

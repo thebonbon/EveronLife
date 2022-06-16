@@ -36,7 +36,7 @@ class EL_CropStage
 	[Attribute("1", UIWidgets.Auto, "Scale change in this stage")]
 	float m_fStageScale;
 	
-	[Attribute("0", UIWidgets.Auto, "Can crop be gathered in this stage? (Directly)")]
+	[Attribute("0", UIWidgets.Auto, "Can crop be gathered in this stage?")]
 	bool m_bCanGather;
 }
 
@@ -53,18 +53,38 @@ class EL_BaseCrop : EL_BaseBuilding
 	ref array<ref EL_CropStage> m_aCropStages;
 	
 	[RplProp(onRplName: "OnCropStageChanged")]
-	protected int m_iCropStage = -1;
+	protected int m_iCropStage = 0;
  
-	
 	protected bool m_IsInit = false;
 	private float m_fStageStartTime = 0;
-
+	private bool m_bNeedsCatchingUp = true;
+	
+	//------------------------------------------------------------------------------------------------	
+	private void CatchUp() 
+	{
+		vector totalStageOffset = vector.Zero;
+		for (int i = 0; i < m_iCropStage; i++)
+		{
+			Print("Missing stage: " + i + " .. catching up!");
+			totalStageOffset += m_aCropStages[i].m_StageOffset;
+		}
+		//Add all previous offsets
+		SetOrigin(GetOrigin() + totalStageOffset);
+		m_bNeedsCatchingUp = false;
+	}
+	
 	//------------------------------------------------------------------------------------------------
 	//! Change model, size etc..
 	protected void OnCropStageChanged()
 	{
-		//End of last stage
-		if (m_iCropStage > m_aCropStages.Count() - 1)
+		//We were here at stage 0 no catchup needed
+		if (m_iCropStage == 0)
+			m_bNeedsCatchingUp = false;
+		if (m_bNeedsCatchingUp)
+			CatchUp();
+		
+		//Check if end of last stage
+		if (m_iCropStage >= m_aCropStages.Count())
 		{
 			if (m_bDeleteAfterFinalStage)
 			{
@@ -73,16 +93,18 @@ class EL_BaseCrop : EL_BaseBuilding
 			}
 			return;
 		}
-
+		
+		//New stage
 		SetOrigin(GetOrigin() + m_aCropStages[m_iCropStage].m_StageOffset);
 		SetScale(m_aCropStages[m_iCropStage].m_fStageScale);
 		
+		//Set new model
 		if (m_aCropStages[m_iCropStage].m_NewStageModel)
 			SetObject(Resource.Load(m_aCropStages[m_iCropStage].m_NewStageModel).GetResource().ToVObject(), "");
 		
+		//Start area spawner on Server
 		if (m_bSpawnItemsAtStage == m_iCropStage)
 		{	
-			//Only start area spawner on Server
 			RplComponent rplComponent = RplComponent.Cast(FindComponent(RplComponent));
 			EL_AreaSpawnerComponent areaSpawner = EL_AreaSpawnerComponent.Cast(FindComponent(EL_AreaSpawnerComponent));
 			if (areaSpawner && rplComponent && rplComponent.IsMaster())
@@ -99,20 +121,18 @@ class EL_BaseCrop : EL_BaseBuilding
 	//------------------------------------------------------------------------------------------------
 	protected void InitCrop(IEntity owner) 
 	{
+		m_IsInit = true;
 		RplComponent rplComponent = RplComponent.Cast(FindComponent(RplComponent));
 		//Remove frame mask on other proxys
 		if (rplComponent && !rplComponent.IsOwner())
 		{
 			ClearEventMask(EntityEvent.FRAME);
+			ClearFlags(EntityFlags.ACTIVE, true);
+			
 			return;
 		}
-		m_IsInit = true;
 		//Authority specific behavior 
 
-		//Set crop stage to first stage (0)
-		m_iCropStage ++;
-		Replication.BumpMe();
-		
 		//Dont grow on gui only server
 		if (!System.IsConsoleApp())
 			OnCropStageChanged();
@@ -129,8 +149,10 @@ class EL_BaseCrop : EL_BaseBuilding
 			return;
 		}
 		// Authority specific behavior
-		if (!m_aCropStages.Count())
+		
+		if (m_iCropStage >= m_aCropStages.Count())
 			return; 
+		
 		//Time*60000 for replication time in minutes
 		float stageEndTime = m_fStageStartTime + m_aCropStages[m_iCropStage].m_fStageTime * 60000;
 		if (Replication.Time() >= stageEndTime)
@@ -146,6 +168,7 @@ class EL_BaseCrop : EL_BaseBuilding
 		}
 	}
 
+	//------------------------------------------------------------------------------------------------
 	void EL_BaseCrop(IEntitySource src, IEntity parent)
 	{
 		SetEventMask(EntityEvent.INIT | EntityEvent.FRAME);
