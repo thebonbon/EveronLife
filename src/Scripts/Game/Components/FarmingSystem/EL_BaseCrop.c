@@ -30,7 +30,7 @@ class EL_CropStage
 	[Attribute("", UIWidgets.Auto, "Name of this stage")]
 	string m_sStageName;
 	
-	[Attribute("0 0 0", UIWidgets.Auto, "Offset in this stage")]
+	[Attribute("0 0 0", UIWidgets.Auto, "Total offset in this stage")]
 	vector m_StageOffset;
 	
 	[Attribute("1", UIWidgets.Auto, "Scale change in this stage")]
@@ -43,7 +43,7 @@ class EL_CropStage
 //------------------------------------------------------------------------------------------------
 class EL_BaseCrop : EL_BaseBuilding 
 {
-	[Attribute("-1", UIWidgets.CheckBox, "Spawn items afer last stage with area spawner? -1 to disable", category: "Crop")]
+	[Attribute("-1", UIWidgets.CheckBox, "Spawn items at this stage with area spawner. -1 to disable", category: "Crop")]
 	protected int m_bSpawnItemsAtStage;
 	
 	[Attribute("0", UIWidgets.CheckBox, "Delete the crop after final stage?", category: "Crop")]
@@ -53,36 +53,18 @@ class EL_BaseCrop : EL_BaseBuilding
 	ref array<ref EL_CropStage> m_aCropStages;
 	
 	[RplProp(onRplName: "OnCropStageChanged")]
-	protected int m_iCropStage = 0;
+	protected int m_iCropStage = -1;
  
 	protected bool m_IsInit = false;
 	private float m_fStageStartTime = 0;
-	private bool m_bNeedsCatchingUp = true;
-	
-	//------------------------------------------------------------------------------------------------	
-	private void CatchUp() 
-	{
-		vector totalStageOffset = vector.Zero;
-		for (int i = 0; i < m_iCropStage; i++)
-		{
-			Print("Missing stage: " + i + " .. catching up!");
-			totalStageOffset += m_aCropStages[i].m_StageOffset;
-		}
-		//Add all previous offsets
-		SetOrigin(GetOrigin() + totalStageOffset);
-		m_bNeedsCatchingUp = false;
-	}
+	private vector m_vStartPos;
+
 	
 	//------------------------------------------------------------------------------------------------
 	//! Change model, size etc..
 	protected void OnCropStageChanged()
 	{
-		//We were here at stage 0 no catchup needed
-		if (m_iCropStage == 0)
-			m_bNeedsCatchingUp = false;
-		if (m_bNeedsCatchingUp)
-			CatchUp();
-		
+		Print("New stage: " + m_iCropStage + " - " + this);
 		//Check if end of last stage
 		if (m_iCropStage >= m_aCropStages.Count())
 		{
@@ -95,7 +77,7 @@ class EL_BaseCrop : EL_BaseBuilding
 		}
 		
 		//New stage
-		SetOrigin(GetOrigin() + m_aCropStages[m_iCropStage].m_StageOffset);
+		SetOrigin(m_vStartPos + m_aCropStages[m_iCropStage].m_StageOffset);
 		SetScale(m_aCropStages[m_iCropStage].m_fStageScale);
 		
 		//Set new model
@@ -121,22 +103,21 @@ class EL_BaseCrop : EL_BaseBuilding
 	//------------------------------------------------------------------------------------------------
 	protected void InitCrop(IEntity owner) 
 	{
-		m_IsInit = true;
+		
 		RplComponent rplComponent = RplComponent.Cast(FindComponent(RplComponent));
-		//Remove frame mask on other proxys
-		if (rplComponent && !rplComponent.IsOwner())
+		m_IsInit = true;
+		//Clear frame for anything but Server
+		if (!rplComponent.IsOwner())
 		{
 			ClearEventMask(EntityEvent.FRAME);
 			ClearFlags(EntityFlags.ACTIVE, true);
-			
 			return;
 		}
-		//Authority specific behavior 
-
-		//Dont grow on gui only server
-		if (!System.IsConsoleApp())
-			OnCropStageChanged();
-
+		
+		//Set to stage 0
+		m_iCropStage ++;
+		Replication.BumpMe();
+		 
 		m_fStageStartTime = Replication.Time();
 	}	
 	
@@ -154,15 +135,11 @@ class EL_BaseCrop : EL_BaseBuilding
 			return; 
 		
 		//Time*60000 for replication time in minutes
-		float stageEndTime = m_fStageStartTime + m_aCropStages[m_iCropStage].m_fStageTime * 60000;
-		if (Replication.Time() >= stageEndTime)
+		float nextStageStartTime = m_fStageStartTime + m_aCropStages[m_iCropStage].m_fStageTime * 60000;
+		if (Replication.Time() >= nextStageStartTime)
 		{
 			m_iCropStage ++;
 			Replication.BumpMe();
-
-			//Dont grow on gui only server
-			if (!System.IsConsoleApp())
-				OnCropStageChanged();
 			
 			m_fStageStartTime = Replication.Time();
 		}
@@ -173,6 +150,7 @@ class EL_BaseCrop : EL_BaseBuilding
 	{
 		SetEventMask(EntityEvent.INIT | EntityEvent.FRAME);
 		SetFlags(EntityFlags.ACTIVE, true);
+		m_vStartPos = GetOrigin();
     }
 	
 };

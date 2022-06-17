@@ -8,6 +8,11 @@ EL_BaseCrop : "{1B8698AD990A09F3}Prefabs/Vegetation/Crops/BaseCropArea.et" {
   MeshObject "{59A0BBAE906EB9AC}" {
    Object "{B89423573D7244D4}Assets/Vegetation/Vegetables/TomatoCrop_01.xob"
   }
+  RplComponent "{59A0BBAE906EB837}" {
+   "Self Insert" 1
+   "Rpl State Override" None
+   Streamable Enabled
+  }
  }
  coords 107.531 0.233 135.708
  m_buildingType CROP
@@ -19,16 +24,18 @@ EL_BaseCrop : "{1B8698AD990A09F3}Prefabs/Vegetation/Crops/BaseCropArea.et" {
    m_StageOffset 0 -1.465 0
   }
   EL_CropStage "{59A13193B675E0BB}" {
+   m_fStageTime 0.2
    m_sStageName "Growing"
-   m_StageOffset 0 0.465 0
+   m_StageOffset 0 -1 0
   }
   EL_CropStage "{59A13193DE9FB1B1}" {
+   m_fStageTime 0.2
    m_sStageName "Grown"
-   m_StageOffset 0 0.5 0
+   m_StageOffset 0 -0.5 0
   }
   EL_CropStage "{59A13193B698A315}" {
    m_sStageName "Ripe"
-   m_StageOffset 0 0.5 0
+   m_StageOffset 0 0 0
    m_bCanGather 1
   }
  }

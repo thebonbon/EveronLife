@@ -519,19 +519,10 @@ $grp GenericEntity {
 }
 $grp EL_BaseCrop : "{28EAA2BC76483922}Prefabs/Vegetation/Crops/TomatoCrop.et" {
  {
-  components {
-   EL_AreaSpawnerComponent "{59A12C31B22C4F7D}" {
-    m_PrefabToSpawn "{0815D91FDF997A0A}Prefabs/Items/Food/Tomato.et"
-    m_AmountToSpawn 5
-   }
-   MeshObject "{59A0BBAE906EB9AC}" {
-    Object "{B89423573D7244D4}Assets/Vegetation/Vegetables/TomatoCrop_01.xob"
-   }
-  }
   coords 105.988 0 134.814
  }
  {
-  coords 106.074 0 134.11
+  coords 106.05 0 134.043
  }
 }
 StaticModelEntity : "{63C2AE154637AC71}PrefabLibrary/Props/Civilian/Garden/VegetableBed_01_small.et" {
@@ -540,6 +531,14 @@ StaticModelEntity : "{63C2AE154637AC71}PrefabLibrary/Props/Civilian/Garden/Veget
  {
   $grp EL_BaseCrop : "{C4B2301E5D989B42}Prefabs/Vegetation/Crops/CabbageCrop.et" {
    {
+    components {
+     ActionsManagerComponent "{59A0BBAE906EB838}" {
+      additionalActions {
+       EL_GatherAction "{59A12C3059847C59}" {
+       }
+      }
+     }
+    }
     coords -0.476 0.232 0.012
     angleY 7.378
    }

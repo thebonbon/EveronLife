@@ -11,6 +11,9 @@ EL_BaseCrop : "{64DFA805B1BF7F7D}Prefabs/Vegetation/Crops/BaseCrop.et" {
    }
    additionalActions {
     EL_GatherAction "{59A12C3059847C59}" {
+     ParentContextList {
+      "default"
+     }
      m_bDeleteAfterUse 1
     }
    }
