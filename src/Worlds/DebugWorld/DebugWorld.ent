@@ -19,3 +19,9 @@ Layer PlumChain {
 Layer TomatoChain {
  Index 6
 }
+Layer LoggingChain {
+ Index 7
+}
+Layer DebugWorldActions {
+ Index 8
+}
