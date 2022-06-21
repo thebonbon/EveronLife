@@ -219,6 +219,155 @@ GenericEntity TomatoTrader {
       }
      }
     }
+    SCR_CharacterDamageManagerComponent "{59AAF0FF15E35A5C}" {
+     "Additional hit zones" {
+      HitZone UTM_Arm_L {
+       ColliderNames {
+       }
+      }
+      HitZone UTM_Arm_R {
+       ColliderNames {
+       }
+      }
+      HitZone UTM_Belly {
+       ColliderNames {
+       }
+      }
+      HitZone UTM_ButtockArea_L {
+       ColliderNames {
+       }
+      }
+      HitZone UTM_ButtockArea_R {
+       ColliderNames {
+       }
+      }
+      HitZone UTM_Buttocks_L {
+       ColliderNames {
+       }
+      }
+      HitZone UTM_Buttocks_R {
+       ColliderNames {
+       }
+      }
+      HitZone UTM_Calf_L {
+       ColliderNames {
+       }
+      }
+      HitZone UTM_Calf_R {
+       ColliderNames {
+       }
+      }
+      HitZone UTM_Chest {
+       ColliderNames {
+       }
+      }
+      HitZone UTM_Foot_L {
+       ColliderNames {
+       }
+      }
+      HitZone UTM_Foot_R {
+       ColliderNames {
+       }
+      }
+      HitZone UTM_Forearm_L {
+       ColliderNames {
+       }
+      }
+      HitZone UTM_Forearm_R {
+       ColliderNames {
+       }
+      }
+      HitZone UTM_Hand_L {
+       ColliderNames {
+       }
+      }
+      HitZone UTM_Hand_R {
+       ColliderNames {
+       }
+      }
+      HitZone UTM_Head {
+       ColliderNames {
+       }
+      }
+      HitZone UTM_Hips {
+       ColliderNames {
+       }
+      }
+      HitZone UTM_Knee_L {
+       ColliderNames {
+       }
+      }
+      HitZone UTM_Knee_R {
+       ColliderNames {
+       }
+      }
+      HitZone UTM_Neck {
+       ColliderNames {
+       }
+      }
+      HitZone UTM_NeckArea_L {
+       ColliderNames {
+       }
+      }
+      HitZone UTM_NeckArea_R {
+       ColliderNames {
+       }
+      }
+      HitZone UTM_Ribcage {
+       ColliderNames {
+       }
+      }
+      HitZone UTM_Shin_L {
+       ColliderNames {
+       }
+      }
+      HitZone UTM_Shin_R {
+       ColliderNames {
+       }
+      }
+      HitZone UTM_Shoulder_L {
+       ColliderNames {
+       }
+      }
+      HitZone UTM_Shoulder_R {
+       ColliderNames {
+       }
+      }
+      HitZone UTM_ShoulderArea_L {
+       ColliderNames {
+       }
+      }
+      HitZone UTM_ShoulderArea_R {
+       ColliderNames {
+       }
+      }
+      HitZone UTM_Thigh_L {
+       ColliderNames {
+       }
+      }
+      HitZone UTM_Thigh_R {
+       ColliderNames {
+       }
+      }
+      HitZone UTM_Toe_L {
+       ColliderNames {
+       }
+      }
+      HitZone UTM_Toe_R {
+       ColliderNames {
+       }
+      }
+      HitZone UTM_Waist {
+       ColliderNames {
+       }
+      }
+     }
+     "Fall damage min height" 4
+     "Fall damage max height" 6.5
+     CollisionVelocityThreshold 1.2
+     "Heavy damage threshold" 130
+     m_sBleedingParticle "{486BD20FE5257A33}Particles/Enviroment/Bleeding_01_Continuous.ptc"
+    }
     SCR_CompartmentAccessComponent "{59670CC3FB68C011}" {
      CompartmentLayerPreset "CharNoCollide"
     }
@@ -507,6 +656,130 @@ GenericEntity TomatoTrader {
     }
    }
    coords -1.23 0.902 -0.182
+  }
+ }
+}
+Vehicle POLICE1 : "{6AD92B2938D37745}Prefabs/Vehicles/POLICE.et" {
+ components {
+  SCR_VehicleDamageManagerComponent "{141326E9FD94FE40}" {
+   m_fVehicleDestroyDamage 11880.1
+  }
+  ActionsManagerComponent "{C97BE5489221AE18}" {
+   additionalActions {
+    EL_LightBarAction "{59AAF0FC209710D3}" {
+     ParentContextList {
+      "light_switch"
+     }
+     UIInfo UIInfo "{59AAF0FC392EFAB2}" {
+      Name "LightBar:"
+     }
+    }
+   }
+  }
+ }
+ coords 95.275 0.001 139.162
+ {
+  GenericEntity {
+   ID "59A8DEC8F0463294"
+   {
+    LightEntity {
+     ID "59A8DEC8F0463297"
+     Radius 15
+     Visualization Disabled
+    }
+    LightEntity {
+     ID "59A8DEC8F046694A"
+     Radius 15
+     Visualization Disabled
+    }
+   }
+  }
+ }
+}
+GenericEntity : "{8C82BBBDEE9CBA3A}Prefabs/Props/Military/Camps/WeaponRackStand_01.et" {
+ coords 102.386 0.001 134.756
+ {
+  $grp GenericEntity : "{BC5061EBB3284158}Prefabs/Weapons/Handguns/M9/Handgun_M9_empty.et" {
+   {
+    components {
+     MeshObject "{CFBAA4B701F95D69}" {
+      Object "{59291944C11949D6}Assets/Props/light/LightSaber_FBX2.xob"
+      Materials {
+       MaterialAssignClass "{59AAF0F9C7FC6E16}" {
+        SourceMaterial "lights"
+        AssignedMaterial "{560C0E82B3A744F0}Assets/Props/light/data/lightsblue.emat"
+       }
+      }
+     }
+    }
+    coords 0.756 0.233 0.293
+    angleX 13.615
+    angleZ 0
+   }
+   {
+    components {
+     MeshObject "{CFBAA4B701F95D69}" {
+      Object "{59291944C11949D6}Assets/Props/light/LightSaber_FBX2.xob"
+      Materials {
+       MaterialAssignClass "{59AAF0FE010BCEBB}" {
+        SourceMaterial "lights"
+        AssignedMaterial "{3A414B0581F1E343}Assets/Props/light/data/lights.emat"
+       }
+      }
+     }
+    }
+    coords 0.42 0.233 0.293
+    angleX 13.615
+    angleZ 0
+   }
+   {
+    components {
+     MeshObject "{CFBAA4B701F95D69}" {
+      Object "{59291944C11949D6}Assets/Props/light/LightSaber_FBX2.xob"
+      Materials {
+       MaterialAssignClass "{59AAF0FE00698D27}" {
+        SourceMaterial "lights"
+        AssignedMaterial "{7BC01719C2900D98}Assets/Props/light/data/lightsgreen.emat"
+       }
+      }
+     }
+    }
+    coords 0.09 0.233 0.293
+    angleX 13.615
+    angleZ 0
+   }
+   {
+    components {
+     MeshObject "{CFBAA4B701F95D69}" {
+      Object "{59291944C11949D6}Assets/Props/light/LightSaber_FBX2.xob"
+      Materials {
+       MaterialAssignClass "{59AAF0FE227525B9}" {
+        SourceMaterial "lights"
+        AssignedMaterial "{CFA0580F8122FDB4}Assets/Props/light/data/lightspurple.emat"
+       }
+      }
+     }
+    }
+    coords -0.266 0.233 0.293
+    angleX 13.615
+    angleZ 0
+   }
+   {
+    components {
+     MeshObject "{CFBAA4B701F95D69}" {
+      Object "{59291944C11949D6}Assets/Props/light/LightSaber_FBX2.xob"
+      Materials {
+       MaterialAssignClass "{59AAF0FE259B90B2}" {
+        SourceMaterial "lights"
+        AssignedMaterial "{13EACF877F9B325E}Assets/Props/light/data/lightsyellow.emat"
+       }
+      }
+     }
+    }
+    coords -0.605 0.233 0.293
+    angleX 13.615
+    angleZ 0
+   }
   }
  }
 }

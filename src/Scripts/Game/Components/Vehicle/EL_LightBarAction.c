@@ -5,10 +5,7 @@ class EL_LightBarAction : ScriptedUserAction
 	
 	//------------------------------------------------------------------------------------------------
 	override void PerformAction(IEntity pOwnerEntity, IEntity pUserEntity)
-	{
-		if (!pOwnerEntity || !pUserEntity)
-			return;
-		
+	{		
 		IEntity child = pOwnerEntity.GetChildren();
 		while(child)
 		{

@@ -1,0 +1,15 @@
+MetaFileClass {
+ Name "{7BC01719C2900D98}Assets/Props/light/data/lightsgreen.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

@@ -1,0 +1,15 @@
+MetaFileClass {
+ Name "{CFA0580F8122FDB4}Assets/Props/light/data/lightspurple.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}
