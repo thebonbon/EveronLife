@@ -1,2 +1,5 @@
 EL_GameModeRoleplay GameMode_Roleplay1 : "{03913608C59017A3}Prefabs/MP/Modes/Roleplay/GameMode_Roleplay.et" {
 }
+GenericEntity : "{6849C3CF9DF49762}Assets/Props/light/Saber.et" {
+ coords 4448.97 19.845 10561.338
+}

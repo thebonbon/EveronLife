@@ -1,0 +1,39 @@
+AnimSetInstanceSource "{D01958BBC8FE6598}anims/workspaces/player/arma_4_player/player_main_pistol_beretta.asi" {
+ Template "{CD0E6C3490BF0847}anims/workspaces/player/arma_4_player/player_main.ast"
+ ParentTemplates {
+  "{41AABAE44257A657}anims/workspaces/player/arma_4_player/player_main_pistol.asi"
+ }
+ IkPose "{E8E2308AB43CB0E6}Assets/Weapons/Handguns/Makarov/anims/anm/p_makarov_ik.anm"
+ Lines {
+  AnimSetInstanceSource_Line "WeaponActions.ErcRas.Fire" {
+   Resource "{5E58EDF90722F46B}Assets/Weapons/Handguns/M9/anims/anm/p_pst_erc_beretta_trigger.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponActions.ErcRas.ReloadActionBolt" {
+   Resource "{74ACC39F801E8617}Assets/Weapons/Handguns/M9/anims/anm/p_pst_erc_beretta_reloadAction_Closed_cocked.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponActions.ErcRas.ReloadActionSlideRelease" {
+   Resource "{08AE4F31D9E7D2F7}Assets/Weapons/Handguns/M9/anims/anm/p_pst_erc_beretta_reloadAction_Open.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponActions.ErcRas.ReloadInsertMag" {
+   Resource "{430EB433A8CB9A4D}Assets/Weapons/Handguns/M9/anims/anm/p_pst_erc_beretta_insert_mag.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponActions.ErcRas.ReloadRemoveMag" {
+   Resource "{886ACBC76EBDA827}Assets/Weapons/Handguns/M9/anims/anm/p_pst_erc_beretta_remove_mag.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponActions.PneRas.Fire" {
+   Resource "{5E58EDF90722F46B}Assets/Weapons/Handguns/M9/anims/anm/p_pst_erc_beretta_trigger.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponActions.PneRas.ReloadActionBolt" {
+   Resource "{CB1D0B95BA1AAD9E}Assets/Weapons/Handguns/M9/anims/anm/p_pst_pne_beretta_reloadAction_Closed_cocked.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponActions.PneRas.ReloadActionSlideRelease" {
+   Resource "{DBACFCBB13572CA8}Assets/Weapons/Handguns/M9/anims/anm/p_pst_pne_beretta_reloadAction_Open.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponActions.PneRas.ReloadInsertMag" {
+   Resource "{E4E507BD4B218BCA}Assets/Weapons/Handguns/M9/anims/anm/p_pst_pne_beretta_insert_mag.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponActions.PneRas.ReloadRemoveMag" {
+   Resource "{2F8178498D57B9A0}Assets/Weapons/Handguns/M9/anims/anm/p_pst_pne_beretta_remove_mag.anm"
+  }
+ }
+}

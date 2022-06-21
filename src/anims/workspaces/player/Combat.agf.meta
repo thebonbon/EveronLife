@@ -1,0 +1,15 @@
+MetaFileClass {
+ Name "{2DA6C4A3A8335553}anims/workspaces/player/Combat.agf"
+ Configurations {
+  AnimGraphFileResourceClass PC {
+  }
+  AnimGraphFileResourceClass XBOX_ONE : PC {
+  }
+  AnimGraphFileResourceClass XBOX_SERIES : PC {
+  }
+  AnimGraphFileResourceClass PS4 : PC {
+  }
+  AnimGraphFileResourceClass HEADLESS : PC {
+  }
+ }
+}

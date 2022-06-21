@@ -1,0 +1,55 @@
+MetaFileClass {
+ Name "{59291944C11949D6}Assets/Props/light/LightSaber_FBX2.xob"
+ Configurations {
+  FBXResourceClass PC {
+   MaterialAssigns {
+    MaterialAssignClass "{59A927D0C2C08A16}" {
+     SourceMaterial "lights"
+     AssignedMaterial "{3A414B0581F1E343}Assets/Props/light/data/lights.emat"
+    }
+    MaterialAssignClass "{59A927D0C2C08A6C}" {
+     SourceMaterial "Boca"
+     AssignedMaterial "{27923C3433D905EF}Assets/Props/light/data/Boca.emat"
+    }
+    MaterialAssignClass "{59A927D0C2C08A6B}" {
+     SourceMaterial "ORO"
+     AssignedMaterial "{685921886DDCEE0F}Assets/Props/light/data/ORO.emat"
+    }
+    MaterialAssignClass "{59A927D0C2C08A65}" {
+     SourceMaterial "Base_Opaca"
+     AssignedMaterial "{576D2039DB9F76B5}Assets/Props/light/data/Base_Opaca.emat"
+    }
+    MaterialAssignClass "{59A927D0C2C08A62}" {
+     SourceMaterial "Base"
+     AssignedMaterial "{051817B0FEAE847D}Assets/Props/light/data/Base.emat"
+    }
+    MaterialAssignClass "{59A927D0C2C08A59}" {
+     SourceMaterial "Bolas"
+     AssignedMaterial "{3F6C3A46165E1A50}Assets/Props/light/data/Bolas.emat"
+    }
+    MaterialAssignClass "{59A927D0C2C08A5A}" {
+     SourceMaterial "Boca2"
+     AssignedMaterial "{BF7D318E7E77A111}Assets/Props/light/data/Boca2.emat"
+    }
+   }
+   Common TXOCommonClass "{59A927D0C0D0D571}" : "{0877E7C4BB2B2C9A}Configs/System/ResourceTypes/PC/MeshObjectCommon.conf" {
+   }
+  }
+  FBXResourceClass XBOX_ONE : PC {
+   Common TXOCommonClass "{59A927D0C0D0D5D1}" : "{9D5B6207F7628CE2}Configs/System/ResourceTypes/XBOX_ONE/MeshObjectCommon.conf" {
+   }
+  }
+  FBXResourceClass XBOX_SERIES : PC {
+   Common TXOCommonClass "{59A927D0C0D0D41B}" : "{DD9F02115C764647}Configs/System/ResourceTypes/XBOX_SERIES/MeshObjectCommon.conf" {
+   }
+  }
+  FBXResourceClass PS4 : PC {
+   Common TXOCommonClass "{59A927D0C0D0D476}" : "{53EC476BC921D99A}Configs/System/ResourceTypes/PS4/MeshObjectCommon.conf" {
+   }
+  }
+  FBXResourceClass HEADLESS : PC {
+   Common TXOCommonClass "{59A927D0C0D0D44F}" : "{3A5B3356978039E8}Configs/System/ResourceTypes/HEADLESS/MeshObjectCommon.conf" {
+   }
+  }
+ }
+}

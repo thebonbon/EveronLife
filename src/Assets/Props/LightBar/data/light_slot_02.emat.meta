@@ -1,0 +1,15 @@
+MetaFileClass {
+ Name "{C65D2F0A2213A1B8}Assets/Props/LightBar/data/light_slot_02.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

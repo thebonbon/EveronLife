@@ -1,0 +1,1506 @@
+AnimSetInstanceSource {
+ Template "{CD0E6C3490BF0847}anims/workspaces/player/player_main.ast"
+ ParentTemplates {
+  "{0350283642830782}anims/workspaces/player/player_main_rifle.asi"
+ }
+ IkPose "{FABEC48FCB1E085A}Assets/Weapons/MachineGuns/PKM/anims/anm/p_pkm_ik.anm"
+ Lines {
+  AnimSetInstanceSource_Line "Falling.ErcRas.Forward" {
+   Resource "{707975C48B47CA32}anims/anm/player/locomotion/machineguns/falling/p_lmg_fall.anm"
+  }
+  AnimSetInstanceSource_Line "Falling.ErcRas.LandHeavy" {
+   Resource "{D641D04FCB55F9ED}anims/anm/player/locomotion/machineguns/falling/p_lmg_land_high.anm"
+  }
+  AnimSetInstanceSource_Line "Falling.ErcRas.LandLight" {
+   Resource "{B35DEE56D9404F7A}anims/anm/player/locomotion/machineguns/falling/p_lmg_land_low.anm"
+  }
+  AnimSetInstanceSource_Line "Falling.ErcRas.LandMedium" {
+   Resource "{978B1DC6A7646F3D}anims/anm/player/locomotion/machineguns/falling/p_lmg_land_med.anm"
+  }
+  AnimSetInstanceSource_Line "Falling.PneRas.Forward" {
+   Resource "{8F00D00F0CAD43CA}anims/anm/player/locomotion/machineguns/falling/p_lmg_pne_fall.anm"
+  }
+  AnimSetInstanceSource_Line "Falling.PneRas.LandHeavy" {
+   Resource "{9A60A1782535FF07}anims/anm/player/locomotion/machineguns/falling/p_lmg_pne_land_heavy.anm"
+  }
+  AnimSetInstanceSource_Line "Falling.PneRas.LandMedium" {
+   Resource "{461AF33C6DEC5473}anims/anm/player/locomotion/machineguns/falling/p_lmg_pne_land_medium.anm"
+  }
+  AnimSetInstanceSource_Line "Jumping.IdleL.JumpSpotIn" {
+   Resource "{2E3AC5E91160F757}anims/anm/player/locomotion/machineguns/jump/p_lmg_erc_jump_idle_in.anm"
+  }
+  AnimSetInstanceSource_Line "Jumping.IdleL.JumpSpotOut" {
+   Resource "{2C5B19AC7E7E3B47}anims/anm/player/locomotion/machineguns/jump/p_lmg_erc_jump_idle_out.anm"
+  }
+  AnimSetInstanceSource_Line "Jumping.LFoot.JumpBRIn" {
+   Resource "{FFA2A245E8BE8FD9}anims/anm/player/locomotion/machineguns/jump/p_lmg_erc_run_jumpR_R_50_in.anm"
+  }
+  AnimSetInstanceSource_Line "Jumping.LFoot.JumpBROut" {
+   Resource "{BC0ECB940E5353D9}anims/anm/player/locomotion/machineguns/jump/p_lmg_erc_run_jumpR_R_50_out.anm"
+  }
+  AnimSetInstanceSource_Line "Jumping.LFoot.JumpBackIn" {
+   Resource "{C1456658724A3BBC}anims/anm/player/locomotion/machineguns/jump/p_lmg_erc_run_jumpB_R_50_in.anm"
+  }
+  AnimSetInstanceSource_Line "Jumping.LFoot.JumpBackOut" {
+   Resource "{AF3936160AD6E0AF}anims/anm/player/locomotion/machineguns/jump/p_lmg_erc_run_jumpB_R_50_out.anm"
+  }
+  AnimSetInstanceSource_Line "Jumping.LFoot.JumpFLIn" {
+   Resource "{B994025CECAB577C}anims/anm/player/locomotion/machineguns/jump/p_lmg_erc_run_jumpL_L_50_in.anm"
+  }
+  AnimSetInstanceSource_Line "Jumping.LFoot.JumpFLOut" {
+   Resource "{9C797517AC71560F}anims/anm/player/locomotion/machineguns/jump/p_lmg_erc_run_jumpL_L_50_out.anm"
+  }
+  AnimSetInstanceSource_Line "Jumping.LFoot.JumpForwardIn" {
+   Resource "{3F38DFD02A788048}anims/anm/player/locomotion/machineguns/jump/p_lmg_erc_run_jumpF_R_50_in.anm"
+  }
+  AnimSetInstanceSource_Line "Jumping.LFoot.JumpForwardOut" {
+   Resource "{0A8CB9835F02973B}anims/anm/player/locomotion/machineguns/jump/p_lmg_erc_run_jumpF_R_50_out.anm"
+  }
+  AnimSetInstanceSource_Line "Jumping.LFoot.JumpSprintIn" {
+   Resource "{249F5775D89ED82E}anims/anm/player/locomotion/machineguns/jump/p_lmg_erc_sprint_jumpF_L_50_in.anm"
+  }
+  AnimSetInstanceSource_Line "Jumping.LFoot.JumpSprintOut" {
+   Resource "{9E4E8A38CF00F6DF}anims/anm/player/locomotion/machineguns/jump/p_lmg_erc_sprint_jumpF_L_50_out.anm"
+  }
+  AnimSetInstanceSource_Line "Jumping.RFoot.JumpBLIn" {
+   Resource "{B994025CECAB577C}anims/anm/player/locomotion/machineguns/jump/p_lmg_erc_run_jumpL_L_50_in.anm"
+  }
+  AnimSetInstanceSource_Line "Jumping.RFoot.JumpBLOut" {
+   Resource "{9C797517AC71560F}anims/anm/player/locomotion/machineguns/jump/p_lmg_erc_run_jumpL_L_50_out.anm"
+  }
+  AnimSetInstanceSource_Line "Jumping.RFoot.JumpBackIn" {
+   Resource "{C1456658724A3BBC}anims/anm/player/locomotion/machineguns/jump/p_lmg_erc_run_jumpB_R_50_in.anm"
+  }
+  AnimSetInstanceSource_Line "Jumping.RFoot.JumpBackOut" {
+   Resource "{AF3936160AD6E0AF}anims/anm/player/locomotion/machineguns/jump/p_lmg_erc_run_jumpB_R_50_out.anm"
+  }
+  AnimSetInstanceSource_Line "Jumping.RFoot.JumpFRIn" {
+   Resource "{FFA2A245E8BE8FD9}anims/anm/player/locomotion/machineguns/jump/p_lmg_erc_run_jumpR_R_50_in.anm"
+  }
+  AnimSetInstanceSource_Line "Jumping.RFoot.JumpFROut" {
+   Resource "{BC0ECB940E5353D9}anims/anm/player/locomotion/machineguns/jump/p_lmg_erc_run_jumpR_R_50_out.anm"
+  }
+  AnimSetInstanceSource_Line "Jumping.RFoot.JumpForwardIn" {
+   Resource "{3F38DFD02A788048}anims/anm/player/locomotion/machineguns/jump/p_lmg_erc_run_jumpF_R_50_in.anm"
+  }
+  AnimSetInstanceSource_Line "Jumping.RFoot.JumpForwardOut" {
+   Resource "{0A8CB9835F02973B}anims/anm/player/locomotion/machineguns/jump/p_lmg_erc_run_jumpF_R_50_out.anm"
+  }
+  AnimSetInstanceSource_Line "Jumping.RFoot.JumpSprintIn" {
+   Resource "{249F5775D89ED82E}anims/anm/player/locomotion/machineguns/jump/p_lmg_erc_sprint_jumpF_L_50_in.anm"
+  }
+  AnimSetInstanceSource_Line "Jumping.RFoot.JumpSprintOut" {
+   Resource "{9E4E8A38CF00F6DF}anims/anm/player/locomotion/machineguns/jump/p_lmg_erc_sprint_jumpF_L_50_out.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.BackPneADS.AimSpace" {
+   Resource "{A21464030C37A937}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_pne_onback_to_aim.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.BackPneADS.GoCrouch" {
+   Resource "{58C9C2C14C9F345F}anims/anm/player/locomotion/machineguns/transitions/p_lmg_pne_onBack_trans_cro_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.BackPneADS.GoErect" {
+   Resource "{34F89CA6569FC769}anims/anm/player/locomotion/machineguns/transitions/p_lmg_pne_onBack_trans_erc_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.BackPneADS.Idle" {
+   Resource "{E0E98775A5612D87}anims/anm/player/locomotion/machineguns/p_lmg_pne_onBack_idle_low.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponSwitching.PneRas.Show01" {
+   Resource "{59797DDDD4C01E07}anims/anm/player/weaponswitch/lmg/p_lmg_pne_slot_backL_show.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.WalkBR" {
+   Resource "{D932E67F20E8D426}anims/anm/player/locomotion/machineguns/p_lmg_pne_walkBR_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.WalkF" {
+   Resource "{AE790560285CDB12}anims/anm/player/locomotion/machineguns/p_lmg_pne_walkF_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.WalkFL" {
+   Resource "{8AEC6F859BC95FC7}anims/anm/player/locomotion/machineguns/p_lmg_pne_walkFL_low.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponActions.ErcRas.ReloadActionBolt" {
+   Resource "{06F74C5C6169F6FB}Assets/Weapons/MachineGuns/PKM/anims/anm/p_lmg_pkm_erc_rack_bolt.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.BackPneADS.WalkB" {
+   Resource "{11BCB60BC1483D66}anims/anm/player/locomotion/machineguns/p_lmg_pne_onback_walkB_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.BackPneADS.WalkF" {
+   Resource "{066BB9146C03D7BE}anims/anm/player/locomotion/machineguns/p_lmg_pne_onback_walkF_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.BackPneADS.WalkL" {
+   Resource "{222E20A4E031F762}anims/anm/player/locomotion/machineguns/p_lmg_pne_onback_walkL_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.BackPneADS.WalkR" {
+   Resource "{4EE08A7574679606}anims/anm/player/locomotion/machineguns/p_lmg_pne_onback_walkR_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.BackPneRas.GoCrouch" {
+   Resource "{15C089C10ED42CEE}anims/anm/player/locomotion/machineguns/transitions/p_lmg_pne_onBack_trans_cro_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.BackPneRas.GoErect" {
+   Resource "{79F1D7A614D4DFD8}anims/anm/player/locomotion/machineguns/transitions/p_lmg_pne_onBack_trans_erc_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.BackPneRas.Idle" {
+   Resource "{2A67AF3495DB779E}anims/anm/player/locomotion/machineguns/p_lmg_pne_onBack_ras_aim.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroADS.AimRunSpace" {
+   Resource "{C577BFCF61AAD7E0}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_cro_run_aimspace_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroADS.AimSpace" {
+   Resource "{3960E29023E2F212}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_cro_aimspace_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroADS.AimWalkSpace" {
+   Resource "{64461769489415D1}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_cro_walk_aimspace_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroADS.GoErect" {
+   Resource "{BB76763E754020E8}anims/anm/player/locomotion/machineguns/transitions/p_lmg_cro_trans_erc_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroADS.GoProne" {
+   Resource "{7937173C32CAFA04}anims/anm/player/locomotion/machineguns/transitions/p_lmg_cro_trans_pne_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroADS.Idle" {
+   Resource "{64F10FFC839077CA}anims/anm/player/locomotion/machineguns/p_lmg_cro_idle_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroADS.Lean" {
+   Resource "{AECBECFECBB3556B}anims/anm/player/locomotion/machineguns/layered/p_lmg_cro_lean_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroADS.LeanLAimspace" {
+   Resource "{F2A377AAE45614B7}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_cro_leanL_aimspace_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroADS.LeanLWalkAimspace" {
+   Resource "{F2A377AAE45614B7}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_cro_leanL_aimspace_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroADS.LeanRAimspace" {
+   Resource "{CEA4B5BD9F558721}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_cro_leanR_aimspace_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroADS.LeanRWalkAimspace" {
+   Resource "{CEA4B5BD9F558721}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_cro_leanR_aimspace_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroADS.LeanWalk" {
+   Resource "{AECBECFECBB3556B}anims/anm/player/locomotion/machineguns/layered/p_lmg_cro_lean_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroADS.RunB" {
+   Resource "{89CFFCDDFD5CECF9}anims/anm/player/locomotion/machineguns/p_lmg_cro_runB_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroADS.RunBL" {
+   Resource "{B2971F00A96DA940}anims/anm/player/locomotion/machineguns/p_lmg_cro_runBL_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroADS.RunBR" {
+   Resource "{DE59B5D13D3BC824}anims/anm/player/locomotion/machineguns/p_lmg_cro_runBR_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroADS.RunF" {
+   Resource "{9E18F3C250170621}anims/anm/player/locomotion/machineguns/p_lmg_cro_runF_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroADS.RunFL" {
+   Resource "{8D873C2B861A43C5}anims/anm/player/locomotion/machineguns/p_lmg_cro_runFL_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroADS.RunFR" {
+   Resource "{E14996FA124C22A1}anims/anm/player/locomotion/machineguns/p_lmg_cro_runFR_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroADS.SprintF" {
+   Resource "{FA0CF4E65500C824}anims/anm/player/locomotion/machineguns/p_lmg_cro_sprintF_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroADS.SprintFL" {
+   Resource "{0DF4F724EB07AAB4}anims/anm/player/locomotion/machineguns/p_lmg_cro_sprintFL_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroADS.SprintFR" {
+   Resource "{613A5DF57F51CBD0}anims/anm/player/locomotion/machineguns/p_lmg_cro_sprintFR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroADS.StopPoseRun" {
+   Resource "{5C42BA3DEBAD1C1C}anims/anm/player/locomotion/machineguns/stopposes/p_lmg_cro_run_ras_stop_poses.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponSwitching.PneRas.Hide01" {
+   Resource "{D10373425680CC50}anims/anm/player/weaponswitch/lmg/p_lmg_pne_slot_backL_hide.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.WalkBL" {
+   Resource "{B5FC4CAEB4BEB542}anims/anm/player/locomotion/machineguns/p_lmg_pne_walkBL_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.WalkB" {
+   Resource "{B9AE0A7F851731CA}anims/anm/player/locomotion/machineguns/p_lmg_pne_walkB_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.WalkFR" {
+   Resource "{E622C5540F9F3EA3}anims/anm/player/locomotion/machineguns/p_lmg_pne_walkFR_low.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponActions.ErcRas.Fire" {
+   Resource "{6602FEF1BF7CCF81}Assets/Weapons/MachineGuns/PKM/anims/anm/p_lmg_pkm_erc_fire.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroADS.WalkB" {
+   Resource "{7A27C47EA44E4947}anims/anm/player/locomotion/machineguns/p_lmg_cro_walkB_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroADS.WalkBL" {
+   Resource "{1B06F0B0678A9726}anims/anm/player/locomotion/machineguns/p_lmg_cro_walkBL_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroADS.WalkBR" {
+   Resource "{77C85A61F3DCF642}anims/anm/player/locomotion/machineguns/p_lmg_cro_walkBR_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroADS.WalkF" {
+   Resource "{6DF0CB610905A39F}anims/anm/player/locomotion/machineguns/p_lmg_cro_walkF_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroADS.WalkFL" {
+   Resource "{2416D39B48FD7DA3}anims/anm/player/locomotion/machineguns/p_lmg_cro_walkFL_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroADS.WalkFR" {
+   Resource "{48D8794ADCAB1CC7}anims/anm/player/locomotion/machineguns/p_lmg_cro_walkFR_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroRas.AimRunSpace" {
+   Resource "{8B763756508FB3D7}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_cro_run_aimspace_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroRas.AimSpace" {
+   Resource "{77616A0912C79625}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_cro_aimspace_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroRas.AimWalkSpace" {
+   Resource "{2A479FF079B171E6}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_cro_walk_aimspace_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroRas.GoErect" {
+   Resource "{F577FEA7446544DF}anims/anm/player/locomotion/machineguns/transitions/p_lmg_cro_trans_erc_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroRas.GoProne" {
+   Resource "{37369FA503EF9E33}anims/anm/player/locomotion/machineguns/transitions/p_lmg_cro_trans_pne_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroRas.GoProneMove" {
+   Resource "{5B133B24FCAC00C6}anims/anm/player/locomotion/machineguns/transitions/p_lmg_cro_transMove_pne_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroRas.Idle" {
+   Resource "{2AF08765B2B513FD}anims/anm/player/locomotion/machineguns/p_lmg_cro_idle_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroRas.Lean" {
+   Resource "{E0CA6467FA96315C}anims/anm/player/locomotion/machineguns/layered/p_lmg_cro_lean_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroRas.LeanLAimspace" {
+   Resource "{BCA2FF33D5737080}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_cro_leanL_aimspace_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroRas.LeanLWalkAimspace" {
+   Resource "{BCA2FF33D5737080}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_cro_leanL_aimspace_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroRas.LeanRAimspace" {
+   Resource "{80A53D24AE70E316}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_cro_leanR_aimspace_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroRas.LeanRWalkAimspace" {
+   Resource "{80A53D24AE70E316}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_cro_leanR_aimspace_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroRas.LeanWalk" {
+   Resource "{E0CA6467FA96315C}anims/anm/player/locomotion/machineguns/layered/p_lmg_cro_lean_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroRas.LookFullbody" {
+   Resource "{E80F15E4F89E2618}anims/anm/player/locomotion/machineguns/layered/look/p_lmg_cro_look.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroRas.RunB" {
+   Resource "{C7CE7444CC7988CE}anims/anm/player/locomotion/machineguns/p_lmg_cro_runB_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroRas.RunBL" {
+   Resource "{FC9697999848CD77}anims/anm/player/locomotion/machineguns/p_lmg_cro_runBL_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroRas.RunBR" {
+   Resource "{90583D480C1EAC13}anims/anm/player/locomotion/machineguns/p_lmg_cro_runBR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroRas.RunF" {
+   Resource "{D0197B5B61326216}anims/anm/player/locomotion/machineguns/p_lmg_cro_runF_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroRas.RunFL" {
+   Resource "{C386B4B2B73F27F2}anims/anm/player/locomotion/machineguns/p_lmg_cro_runFL_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroRas.RunFR" {
+   Resource "{AF481E6323694696}anims/anm/player/locomotion/machineguns/p_lmg_cro_runFR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroRas.SprintF" {
+   Resource "{FA0CF4E65500C824}anims/anm/player/locomotion/machineguns/p_lmg_cro_sprintF_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroRas.SprintFL" {
+   Resource "{0DF4F724EB07AAB4}anims/anm/player/locomotion/machineguns/p_lmg_cro_sprintFL_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroRas.SprintFR" {
+   Resource "{613A5DF57F51CBD0}anims/anm/player/locomotion/machineguns/p_lmg_cro_sprintFR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroRas.StopPoseRun" {
+   Resource "{5C42BA3DEBAD1C1C}anims/anm/player/locomotion/machineguns/stopposes/p_lmg_cro_run_ras_stop_poses.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponSwitching.ErcRas.Show01" {
+   Resource "{D44F1098002DB24A}anims/anm/player/weaponswitch/lmg/p_lmg_erc_slot_backL_show.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.RunBL" {
+   Resource "{711ED1018834D1CD}anims/anm/player/locomotion/machineguns/p_lmg_pne_runBL_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.RunB" {
+   Resource "{8152C9A7A0861CF9}anims/anm/player/locomotion/machineguns/p_lmg_pne_runB_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.LookFullbody" {
+   Resource "{FC040D9E6F55DB4C}anims/anm/player/locomotion/machineguns/layered/look/p_lmg_pne_look.anm"
+  }
+  AnimSetInstanceSource_Line "MeleeAttacks.ErcLow.MeleeAttack01" {
+   Resource "{4800285B06233FC3}anims/anm/player/attacks/lmg/p_lmg_erc_attack_slash_melee_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroRas.WalkB" {
+   Resource "{34264CE7956B2D70}anims/anm/player/locomotion/machineguns/p_lmg_cro_walkB_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroRas.WalkBL" {
+   Resource "{5507782956AFF311}anims/anm/player/locomotion/machineguns/p_lmg_cro_walkBL_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroRas.WalkBR" {
+   Resource "{39C9D2F8C2F99275}anims/anm/player/locomotion/machineguns/p_lmg_cro_walkBR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroRas.WalkF" {
+   Resource "{23F143F83820C7A8}anims/anm/player/locomotion/machineguns/p_lmg_cro_walkF_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroRas.WalkFL" {
+   Resource "{6A175B0279D81994}anims/anm/player/locomotion/machineguns/p_lmg_cro_walkFL_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroRas.WalkFR" {
+   Resource "{06D9F1D3ED8E78F0}anims/anm/player/locomotion/machineguns/p_lmg_cro_walkFR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcADS.AimRunSpace" {
+   Resource "{18058131819451D8}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_erc_run_aimspace_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcADS.AimSpace" {
+   Resource "{7DD82E5A2A4FBBAA}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_erc_aimspace_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcADS.AimWalkSpace" {
+   Resource "{C51F3D87CA80FE2E}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_erc_walk_aimspace_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcADS.GoCrouch" {
+   Resource "{FCBD86002627A62E}anims/anm/player/locomotion/machineguns/transitions/p_lmg_erc_trans_cro_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcADS.GoProne" {
+   Resource "{52CDB9657BAD8FF4}anims/anm/player/locomotion/machineguns/transitions/p_lmg_erc_trans_pne_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcADS.Idle" {
+   Resource "{82F79AD7A7E7FD7E}anims/anm/player/locomotion/machineguns/p_lmg_erc_idle_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcADS.Lean" {
+   Resource "{48CD79D5EFC4DFDF}anims/anm/player/locomotion/machineguns/layered/p_lmg_erc_lean_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcADS.LeanLAimspace" {
+   Resource "{D3F96CFC05A6A237}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_erc_leanL_aimspace_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcADS.LeanLWalkAimspace" {
+   Resource "{D3F96CFC05A6A237}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_erc_leanL_aimspace_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcADS.LeanRAimspace" {
+   Resource "{EFFEAEEB7EA531A1}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_erc_leanR_aimspace_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcADS.LeanRWalkAimspace" {
+   Resource "{EFFEAEEB7EA531A1}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_erc_leanR_aimspace_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcADS.LeanWalk" {
+   Resource "{48CD79D5EFC4DFDF}anims/anm/player/locomotion/machineguns/layered/p_lmg_erc_lean_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcADS.RunB" {
+   Resource "{6FC969F6D92B664D}anims/anm/player/locomotion/machineguns/p_lmg_erc_runB_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcADS.RunBL" {
+   Resource "{9855879C35ECC285}anims/anm/player/locomotion/machineguns/p_lmg_erc_runBL_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcADS.RunBR" {
+   Resource "{F49B2D4DA1BAA3E1}anims/anm/player/locomotion/machineguns/p_lmg_erc_runBR_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcADS.RunF" {
+   Resource "{781E66E974608C95}anims/anm/player/locomotion/machineguns/p_lmg_erc_runF_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcADS.RunFL" {
+   Resource "{A745A4B71A9B2800}anims/anm/player/locomotion/machineguns/p_lmg_erc_runFL_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcADS.RunFR" {
+   Resource "{CB8B0E668ECD4964}anims/anm/player/locomotion/machineguns/p_lmg_erc_runFR_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcADS.SprintF" {
+   Resource "{29C59F9789F4E4E6}anims/anm/player/locomotion/machineguns/p_lmg_erc_sprintF_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcADS.SprintFL" {
+   Resource "{494C3BEEE2AAE30C}anims/anm/player/locomotion/machineguns/p_lmg_erc_sprintFL_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcADS.SprintFR" {
+   Resource "{2582913F76FC8268}anims/anm/player/locomotion/machineguns/p_lmg_erc_sprintFR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcADS.StopPoseRun" {
+   Resource "{7D18A16B0A5DAA9C}anims/anm/player/locomotion/machineguns/stopposes/p_lmg_erc_run_ras_stop_poses.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcADS.StopPoseWalk" {
+   Resource "{E88F4D4669C4A080}anims/anm/player/locomotion/machineguns/stopposes/p_lmg_erc_walk_ras_stop_poses.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponActions.PneRas.ReloadRemoveMag" {
+   Resource "{A2857760F191AF08}Assets/Weapons/MachineGuns/PKM/anims/anm/p_lmg_pkm_pne_remove_box.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.IdleAdditive" {
+   Resource "{BDBD3A8E410F195E}anims/anm/player/locomotion/machineguns/p_lmg_pne_idle_add_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.RunR" {
+   Resource "{DE0EF5D915A9B799}anims/anm/player/locomotion/machineguns/p_lmg_pne_runR_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.SprintF" {
+   Resource "{E65F675DAAC94E74}anims/anm/player/locomotion/machineguns/p_lmg_pne_sprintF_low.anm"
+  }
+  AnimSetInstanceSource_Line "MeleeAttacks.CroRas.MeleeAttack01" {
+   Resource "{9021CA4D3D033147}anims/anm/player/attacks/lmg/p_lmg_cro_attack_slash_melee_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcADS.WalkB" {
+   Resource "{50E55CE238CF2282}anims/anm/player/locomotion/machineguns/p_lmg_erc_walkB_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcADS.WalkBL" {
+   Resource "{0263928E8873ED60}anims/anm/player/locomotion/machineguns/p_lmg_erc_walkBL_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcADS.WalkBR" {
+   Resource "{6EAD385F1C258C04}anims/anm/player/locomotion/machineguns/p_lmg_erc_walkBR_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcADS.WalkF" {
+   Resource "{473253FD9584C85A}anims/anm/player/locomotion/machineguns/p_lmg_erc_walkF_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcADS.WalkFL" {
+   Resource "{3D73B1A5A70407E5}anims/anm/player/locomotion/machineguns/p_lmg_erc_walkFL_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcADS.WalkFR" {
+   Resource "{51BD1B7433526681}anims/anm/player/locomotion/machineguns/p_lmg_erc_walkFR_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcAdj.AimRunSpace" {
+   Resource "{18058131819451D8}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_erc_run_aimspace_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcAdj.AimSpace" {
+   Resource "{EFB46710ABF2DB9E}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_adj_aimspace.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcAdj.GoProne" {
+   Resource "{58C70BD0A37F82E5}anims/anm/player/locomotion/machineguns/transitions/p_lmg_adj_trans_pne_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcAdj.Idle" {
+   Resource "{20CDEDCDAEB164D1}anims/anm/player/locomotion/machineguns/p_lmg_adj_idle_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcAdj.RunB" {
+   Resource "{CDF31EECD07DFFE2}anims/anm/player/locomotion/machineguns/p_lmg_adj_runB_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcAdj.RunBL" {
+   Resource "{1D434A7D6C507FB0}anims/anm/player/locomotion/machineguns/p_lmg_adj_runBL_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcAdj.RunBR" {
+   Resource "{718DE0ACF8061ED4}anims/anm/player/locomotion/machineguns/p_lmg_adj_runBR_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcAdj.RunF" {
+   Resource "{DA2411F37D36153A}anims/anm/player/locomotion/machineguns/p_lmg_adj_runF_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcAdj.RunFL" {
+   Resource "{2253695643279535}anims/anm/player/locomotion/machineguns/p_lmg_adj_runFL_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcAdj.RunFR" {
+   Resource "{4E9DC387D771F451}anims/anm/player/locomotion/machineguns/p_lmg_adj_runFR_ads.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponSwitching.ErcRas.Hide01" {
+   Resource "{5C351E07826D601D}anims/anm/player/weaponswitch/lmg/p_lmg_erc_slot_backL_hide.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponActions.PneRas.Fire" {
+   Resource "{6602FEF1BF7CCF81}Assets/Weapons/MachineGuns/PKM/anims/anm/p_lmg_pkm_erc_fire.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.SprintFR" {
+   Resource "{882336496CE3A032}anims/anm/player/locomotion/machineguns/p_lmg_pne_sprintFR_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.SprintFL" {
+   Resource "{E4ED9C98F8B5C156}anims/anm/player/locomotion/machineguns/p_lmg_pne_sprintFL_low.anm"
+  }
+  AnimSetInstanceSource_Line "MeleeAttacks.ErcRas.MeleeAttack01" {
+   Resource "{0509635B44682772}anims/anm/player/attacks/lmg/p_lmg_erc_attack_slash_melee_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcAdj.WalkB" {
+   Resource "{D5F3910361739FB7}anims/anm/player/locomotion/machineguns/p_lmg_adj_walkB_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcAdj.WalkBL" {
+   Resource "{E99711B9EE5476E1}anims/anm/player/locomotion/machineguns/p_lmg_adj_walkBL_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcAdj.WalkBR" {
+   Resource "{8559BB687A021785}anims/anm/player/locomotion/machineguns/p_lmg_adj_walkBR_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcAdj.WalkF" {
+   Resource "{C2249E1CCC38756F}anims/anm/player/locomotion/machineguns/p_lmg_adj_walkF_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcAdj.WalkFL" {
+   Resource "{D6873292C1239C64}anims/anm/player/locomotion/machineguns/p_lmg_adj_walkFL_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcAdj.WalkFR" {
+   Resource "{BA4998435575FD00}anims/anm/player/locomotion/machineguns/p_lmg_adj_walkFR_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.AimObstruction" {
+   Resource "{5C536791797A84AF}anims/anm/player/locomotion/machineguns/obstruction/p_lmg_obstruct_erc_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.AimRunSpace" {
+   Resource "{560409A8B0B135EF}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_erc_run_aimspace_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.AimSpace" {
+   Resource "{33D9A6C31B6ADF9D}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_erc_aimspace_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.AimWalkSpace" {
+   Resource "{8B1EB51EFBA59A19}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_erc_walk_aimspace_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.GoCrouch" {
+   Resource "{B2BC0E991702C219}anims/anm/player/locomotion/machineguns/transitions/p_lmg_erc_trans_cro_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.GoProne" {
+   Resource "{1CCC31FC4A88EBC3}anims/anm/player/locomotion/machineguns/transitions/p_lmg_erc_trans_pne_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.GoProneMove" {
+   Resource "{FA4A11CA7EB8EB39}anims/anm/player/locomotion/machineguns/transitions/p_lmg_erc_transMove_pne_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.Idle" {
+   Resource "{CCF6124E96C29949}anims/anm/player/locomotion/machineguns/p_lmg_erc_idle_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.Lean" {
+   Resource "{06CCF14CDEE1BBE8}anims/anm/player/locomotion/machineguns/layered/p_lmg_erc_lean_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.LeanLAimspace" {
+   Resource "{9DF8E4653483C600}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_erc_leanL_aimspace_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.LeanLWalkAimspace" {
+   Resource "{9DF8E4653483C600}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_erc_leanL_aimspace_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.LeanRAimspace" {
+   Resource "{A1FF26724F805596}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_erc_leanR_aimspace_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.LeanRWalkAimspace" {
+   Resource "{A1FF26724F805596}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_erc_leanR_aimspace_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.LeanWalk" {
+   Resource "{06CCF14CDEE1BBE8}anims/anm/player/locomotion/machineguns/layered/p_lmg_erc_lean_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.LookFullbody" {
+   Resource "{147B2BDB21050F88}anims/anm/player/locomotion/machineguns/layered/look/p_lmg_erc_look.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.RunB" {
+   Resource "{21C8E16FE80E027A}anims/anm/player/locomotion/machineguns/p_lmg_erc_runB_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.RunBL" {
+   Resource "{D6540F0504C9A6B2}anims/anm/player/locomotion/machineguns/p_lmg_erc_runBL_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.RunBR" {
+   Resource "{BA9AA5D4909FC7D6}anims/anm/player/locomotion/machineguns/p_lmg_erc_runBR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.RunF" {
+   Resource "{361FEE704545E8A2}anims/anm/player/locomotion/machineguns/p_lmg_erc_runF_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.RunFL" {
+   Resource "{E9442C2E2BBE4C37}anims/anm/player/locomotion/machineguns/p_lmg_erc_runFL_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.RunFR" {
+   Resource "{858A86FFBFE82D53}anims/anm/player/locomotion/machineguns/p_lmg_erc_runFR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.SprintF" {
+   Resource "{29C59F9789F4E4E6}anims/anm/player/locomotion/machineguns/p_lmg_erc_sprintF_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.SprintFL" {
+   Resource "{494C3BEEE2AAE30C}anims/anm/player/locomotion/machineguns/p_lmg_erc_sprintFL_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.SprintFR" {
+   Resource "{2582913F76FC8268}anims/anm/player/locomotion/machineguns/p_lmg_erc_sprintFR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.StopPoseRun" {
+   Resource "{7D18A16B0A5DAA9C}anims/anm/player/locomotion/machineguns/stopposes/p_lmg_erc_run_ras_stop_poses.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.StopPoseWalk" {
+   Resource "{E88F4D4669C4A080}anims/anm/player/locomotion/machineguns/stopposes/p_lmg_erc_walk_ras_stop_poses.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponActions.PneRas.ReloadInsertMag" {
+   Resource "{69E1089437E79D62}Assets/Weapons/MachineGuns/PKM/anims/anm/p_lmg_pkm_pne_insert_box.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.RunL" {
+   Resource "{B2C05F0881FFD6FD}anims/anm/player/locomotion/machineguns/p_lmg_pne_runL_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.RunFR" {
+   Resource "{22C058FB33155A2C}anims/anm/player/locomotion/machineguns/p_lmg_pne_runFR_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.RunFL" {
+   Resource "{4E0EF22AA7433B48}anims/anm/player/locomotion/machineguns/p_lmg_pne_runFL_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.WalkR" {
+   Resource "{E6F2360130389AAA}anims/anm/player/locomotion/machineguns/p_lmg_pne_walkR_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.WalkB" {
+   Resource "{1EE4D47B09EA46B5}anims/anm/player/locomotion/machineguns/p_lmg_erc_walkB_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.WalkBL" {
+   Resource "{4C621A17B9568957}anims/anm/player/locomotion/machineguns/p_lmg_erc_walkBL_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.WalkBR" {
+   Resource "{20ACB0C62D00E833}anims/anm/player/locomotion/machineguns/p_lmg_erc_walkBR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.WalkF" {
+   Resource "{0933DB64A4A1AC6D}anims/anm/player/locomotion/machineguns/p_lmg_erc_walkF_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.WalkFL" {
+   Resource "{7372393C962163D2}anims/anm/player/locomotion/machineguns/p_lmg_erc_walkFL_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.WalkFR" {
+   Resource "{1FBC93ED027702B6}anims/anm/player/locomotion/machineguns/p_lmg_erc_walkFR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneADS.AimSpace" {
+   Resource "{0D124B8BF464F916}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_pne_ads_aimspace.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneADS.GoCrouch" {
+   Resource "{B4D4E672C4801312}anims/anm/player/locomotion/machineguns/transitions/p_lmg_pne_trans_cro_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneADS.GoErect" {
+   Resource "{D8E5B815DE80E024}anims/anm/player/locomotion/machineguns/transitions/p_lmg_pne_trans_erc_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneADS.Idle" {
+   Resource "{6F64F91FAD24FB4C}anims/anm/player/locomotion/machineguns/p_lmg_pne_idle_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneADS.IdleAdditive" {
+   Resource "{BDBD3A8E410F195E}anims/anm/player/locomotion/machineguns/p_lmg_pne_idle_add_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponActions.PneRas.ReloadActionBolt" {
+   Resource "{ECB4D958AFDF9935}Assets/Weapons/MachineGuns/PKM/anims/anm/p_lmg_pkm_pne_rack_bolt.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponActions.ErcRas.ReloadInsertMag" {
+   Resource "{DD76152D7844B9C6}Assets/Weapons/MachineGuns/PKM/anims/anm/p_lmg_pkm_erc_insert_box.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponActions.ErcRas.ReloadRemoveMag" {
+   Resource "{16126AD9BE328BAC}Assets/Weapons/MachineGuns/PKM/anims/anm/p_lmg_pkm_erc_remove_box.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.Idle" {
+   Resource "{6C6C3A86DE4A87CA}anims/anm/player/locomotion/machineguns/p_lmg_pne_idle_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.RunBR" {
+   Resource "{1DD07BD01C62B0A9}anims/anm/player/locomotion/machineguns/p_lmg_pne_runBR_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.RunF" {
+   Resource "{9685C6B80DCDF621}anims/anm/player/locomotion/machineguns/p_lmg_pne_runF_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.WalkL" {
+   Resource "{8A3C9CD0A46EFBCE}anims/anm/player/locomotion/machineguns/p_lmg_pne_walkL_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneAdj.GoErect" {
+   Resource "{293E81D69092045D}anims/anm/player/locomotion/machineguns/transitions/p_lmg_pne_trans_adj_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.AimObstruction" {
+   Resource "{9E1206933EF05E43}anims/anm/player/locomotion/machineguns/obstruction/p_lmg_obstruct_pne_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.AimSpace" {
+   Resource "{0D124B8BF464F916}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_pne_ads_aimspace.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.GoCrouch" {
+   Resource "{FAD56EEBF5A57725}anims/anm/player/locomotion/machineguns/transitions/p_lmg_pne_trans_cro_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.GoCrouchMove" {
+   Resource "{0A7F490F5FEAB60E}anims/anm/player/locomotion/machineguns/transitions/p_lmg_pne_transMove_cro_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.GoErect" {
+   Resource "{96E4308CEFA58413}anims/anm/player/locomotion/machineguns/transitions/p_lmg_pne_trans_erc_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.GoErectMove" {
+   Resource "{664E176845EA4538}anims/anm/player/locomotion/machineguns/transitions/p_lmg_pne_transMove_erc_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroRas.IdleBreathADD" {
+   Resource "{C9C5D251368EE7D1}anims/anm/player/locomotion/machineguns/p_lmg_cro_idle_ras_breath_ADD.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.IdleBreathADD" {
+   Resource "{1D5494A44E115A9C}anims/anm/player/locomotion/machineguns/p_lmg_erc_idle_ras_breath_ADD.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.IdleBreathADD" {
+   Resource "{42454A010C8D15E5}anims/anm/player/locomotion/machineguns/p_lmg_pne_idle_ras_breath_ADD.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroRas.IdleAimspace" {
+   Resource "{3994BEE2ACB25888}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_cro_aimspace_body_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.IdleAimspace" {
+   Resource "{98CD940C2EA6B377}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_erc_aimspace_body_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.IdleAimspace" {
+   Resource "{C688F3AC527EC79A}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_pne_aimspace_body_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroRas.TurnL_Aimspace" {
+   Resource "{6DDD476AD076EF3B}anims/anm/player/locomotion/machineguns/turns/p_lmg_cro_turnL_aimspace.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroRas.TurnRAimspace" {
+   Resource "{801E0C76298FC9A8}anims/anm/player/locomotion/machineguns/turns/p_lmg_cro_turnR_aimspace.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroRas.TurnL" {
+   Resource "{39B1067DF159CB08}anims/anm/player/locomotion/machineguns/turns/p_lmg_cro_turnL_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroRas.TurnR" {
+   Resource "{557FACAC650FAA6C}anims/anm/player/locomotion/machineguns/turns/p_lmg_cro_turnR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.TurnL_Aimspace" {
+   Resource "{0E7E016A707B96EE}anims/anm/player/locomotion/machineguns/turns/p_lmg_erc_turnL_aimspace.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.TurnRAimspace" {
+   Resource "{E3BD4A768982B07D}anims/anm/player/locomotion/machineguns/turns/p_lmg_erc_turnR_aimspace.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.TurnL" {
+   Resource "{13739EE16DD8A0CD}anims/anm/player/locomotion/machineguns/turns/p_lmg_erc_turnL_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.TurnR" {
+   Resource "{7FBD3430F98EC1A9}anims/anm/player/locomotion/machineguns/turns/p_lmg_erc_turnR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.TurnL_Aimspace" {
+   Resource "{2F7DBD172127527F}anims/anm/player/locomotion/machineguns/turns/p_lmg_pne_turnL_aimspace.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.TurnRAimspace" {
+   Resource "{C2BEF60BD8DE74EC}anims/anm/player/locomotion/machineguns/turns/p_lmg_pne_turnR_aimspace.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.TurnL" {
+   Resource "{F9300BE5A36ECF03}anims/anm/player/locomotion/machineguns/turns/p_lmg_pne_turnL_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.TurnR" {
+   Resource "{95FEA1343738AE67}anims/anm/player/locomotion/machineguns/turns/p_lmg_pne_turnR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroLow.RunB" {
+   Resource "{8AC73F448E32907F}anims/anm/player/locomotion/machineguns/p_lmg_cro_runB_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroLow.RunBL" {
+   Resource "{B19FDC99DA03D5C6}anims/anm/player/locomotion/machineguns/p_lmg_cro_runBL_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroLow.RunBR" {
+   Resource "{DD5176484E55B4A2}anims/anm/player/locomotion/machineguns/p_lmg_cro_runBR_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroLow.RunF" {
+   Resource "{9D10305B23797AA7}anims/anm/player/locomotion/machineguns/p_lmg_cro_runF_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroLow.RunFL" {
+   Resource "{8E8FFFB2F5743F43}anims/anm/player/locomotion/machineguns/p_lmg_cro_runFL_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroLow.RunFR" {
+   Resource "{E241556361225E27}anims/anm/player/locomotion/machineguns/p_lmg_cro_runFR_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcLow.RunB" {
+   Resource "{6CC1AA6FAA451ACB}anims/anm/player/locomotion/machineguns/p_lmg_erc_runB_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcLow.RunBL" {
+   Resource "{9B5D44054682BE03}anims/anm/player/locomotion/machineguns/p_lmg_erc_runBL_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcLow.RunBR" {
+   Resource "{F793EED4D2D4DF67}anims/anm/player/locomotion/machineguns/p_lmg_erc_runBR_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcLow.RunF" {
+   Resource "{7B16A570070EF013}anims/anm/player/locomotion/machineguns/p_lmg_erc_runF_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcLow.RunFL" {
+   Resource "{A44D672E69F55486}anims/anm/player/locomotion/machineguns/p_lmg_erc_runFL_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcLow.RunFR" {
+   Resource "{C883CDFFFDA335E2}anims/anm/player/locomotion/machineguns/p_lmg_erc_runFR_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcLow.WalkB" {
+   Resource "{53ED9F7B4BA15E04}anims/anm/player/locomotion/machineguns/p_lmg_erc_walkB_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcLow.WalkBL" {
+   Resource "{016B5117FB1D91E6}anims/anm/player/locomotion/machineguns/p_lmg_erc_walkBL_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcLow.WalkBR" {
+   Resource "{6DA5FBC66F4BF082}anims/anm/player/locomotion/machineguns/p_lmg_erc_walkBR_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcLow.WalkF" {
+   Resource "{443A9064E6EAB4DC}anims/anm/player/locomotion/machineguns/p_lmg_erc_walkF_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcLow.WalkFL" {
+   Resource "{3E7B723CD46A7B63}anims/anm/player/locomotion/machineguns/p_lmg_erc_walkFL_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcLow.WalkFR" {
+   Resource "{52B5D8ED403C1A07}anims/anm/player/locomotion/machineguns/p_lmg_erc_walkFR_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroLow.WalkB" {
+   Resource "{792F07E7D72035C1}anims/anm/player/locomotion/machineguns/p_lmg_cro_walkB_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroLow.WalkBL" {
+   Resource "{180E332914E4EBA0}anims/anm/player/locomotion/machineguns/p_lmg_cro_walkBL_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroLow.WalkBR" {
+   Resource "{74C099F880B28AC4}anims/anm/player/locomotion/machineguns/p_lmg_cro_walkBR_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroLow.WalkF" {
+   Resource "{6EF808F87A6BDF19}anims/anm/player/locomotion/machineguns/p_lmg_cro_walkF_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroLow.WalkFL" {
+   Resource "{271E10023B930125}anims/anm/player/locomotion/machineguns/p_lmg_cro_walkFL_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroLow.WalkFR" {
+   Resource "{4BD0BAD3AFC56041}anims/anm/player/locomotion/machineguns/p_lmg_cro_walkFR_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroLow.IdleBreathADD" {
+   Resource "{9343233E95BA70B4}anims/anm/player/locomotion/machineguns/p_lmg_cro_idle_low_breath_ADD.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroLow.IdleAimspace" {
+   Resource "{749DF5E2EEF94039}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_cro_aimspace_body_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroLow.TurnL_Aimspace" {
+   Resource "{97E2AEAA8760D945}anims/anm/player/locomotion/machineguns/turns/p_lmg_cro_turnL_aimspace_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroLow.TurnRAimspace" {
+   Resource "{ABE56CBDFC634AD3}anims/anm/player/locomotion/machineguns/turns/p_lmg_cro_turnR_aimspace_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroLow.TurnL" {
+   Resource "{74B84D7DB312D3B9}anims/anm/player/locomotion/machineguns/turns/p_lmg_cro_turnL_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroLow.TurnR" {
+   Resource "{1876E7AC2744B2DD}anims/anm/player/locomotion/machineguns/turns/p_lmg_cro_turnR_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcLow.IdleBreathADD" {
+   Resource "{47D265CBED25CDF9}anims/anm/player/locomotion/machineguns/p_lmg_erc_idle_low_breath_ADD.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcLow.IdleAimspace" {
+   Resource "{D5C4DF0C6CEDABC6}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_erc_aimspace_body_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcLow.TurnL_Aimspace" {
+   Resource "{B6B8B5FC66906FC5}anims/anm/player/locomotion/machineguns/turns/p_lmg_erc_turnL_aimspace_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcLow.TurnRAimspace" {
+   Resource "{8ABF77EB1D93FC53}anims/anm/player/locomotion/machineguns/turns/p_lmg_erc_turnR_aimspace_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcLow.TurnL" {
+   Resource "{5E7AD5E12F93B87C}anims/anm/player/locomotion/machineguns/turns/p_lmg_erc_turnL_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcLow.TurnR" {
+   Resource "{32B47F30BBC5D918}anims/anm/player/locomotion/machineguns/turns/p_lmg_erc_turnR_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneLow.IdleBreathADD" {
+   Resource "{18C3BB6EAFB98280}anims/anm/player/locomotion/machineguns/p_lmg_pne_idle_low_breath_ADD.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneLow.IdleAimspace" {
+   Resource "{8B81B8AC1035DF2B}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_pne_aimspace_body_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneLow.TurnL_Aimspace" {
+   Resource "{11530672857A7E42}anims/anm/player/locomotion/machineguns/turns/p_lmg_pne_turnL_aimspace_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneLow.TurnRAimspace" {
+   Resource "{2D54C465FE79EDD4}anims/anm/player/locomotion/machineguns/turns/p_lmg_pne_turnR_aimspace_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneLow.TurnL" {
+   Resource "{B43940E5E125D7B2}anims/anm/player/locomotion/machineguns/turns/p_lmg_pne_turnL_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneLow.TurnR" {
+   Resource "{D8F7EA347573B6D6}anims/anm/player/locomotion/machineguns/turns/p_lmg_pne_turnR_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcLow.GoCrouch" {
+   Resource "{FFB545995549DAA8}anims/anm/player/locomotion/machineguns/transitions/p_lmg_erc_trans_cro_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneLow.GoCrouch" {
+   Resource "{B7DC25EBB7EE6F94}anims/anm/player/locomotion/machineguns/transitions/p_lmg_pne_trans_cro_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroLow.GoErect" {
+   Resource "{B87EB5A7062E5C6E}anims/anm/player/locomotion/machineguns/transitions/p_lmg_cro_trans_erc_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneLow.GoErect" {
+   Resource "{DBED7B8CADEE9CA2}anims/anm/player/locomotion/machineguns/transitions/p_lmg_pne_trans_erc_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroLow.GoProne" {
+   Resource "{7A3FD4A541A48682}anims/anm/player/locomotion/machineguns/transitions/p_lmg_cro_trans_pne_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcLow.GoProne" {
+   Resource "{51C57AFC08C3F372}anims/anm/player/locomotion/machineguns/transitions/p_lmg_erc_trans_pne_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.LeanLFullBody" {
+   Resource "{C1A9B71889203136}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_erc_leanL_aimspace_fullbody_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.LeanLTurnL" {
+   Resource "{56CD958F0D19DD04}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_erc_leanL_aimspace_turnL_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.LeanLTurnR" {
+   Resource "{3A033F5E994FBC60}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_erc_leanL_aimspace_turnR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.LeanRFullBody" {
+   Resource "{2D4A8B5409048DBF}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_erc_leanR_aimspace_fullbody_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.LeanRTurnL" {
+   Resource "{D44965F84793B3D1}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_erc_leanR_aimspace_turnL_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.LeanRTurnR" {
+   Resource "{B887CF29D3C5D2B5}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_erc_leanR_aimspace_turnR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroRas.LeanLFullBody" {
+   Resource "{90F191BFFABDA18E}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_cro_leanL_aimspace_fullbody_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroRas.LeanLTurnL" {
+   Resource "{606D33525629124D}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_cro_leanL_aimspace_turnL_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroRas.LeanLTurnR" {
+   Resource "{0CA39983C27F7329}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_cro_leanL_aimspace_turnR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroRas.LeanRFullBody" {
+   Resource "{7C12ADF37A991D07}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_cro_leanR_aimspace_fullbody_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroRas.LeanRTurnL" {
+   Resource "{E2E9C3251CA37C98}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_cro_leanR_aimspace_turnL_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroRas.LeanRTurnR" {
+   Resource "{8E2769F488F51DFC}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_cro_leanR_aimspace_turnR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroLow.SprintF" {
+   Resource "{FA0CF4E65500C824}anims/anm/player/locomotion/machineguns/p_lmg_cro_sprintF_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroLow.SprintFL" {
+   Resource "{0DF4F724EB07AAB4}anims/anm/player/locomotion/machineguns/p_lmg_cro_sprintFL_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroLow.SprintFR" {
+   Resource "{613A5DF57F51CBD0}anims/anm/player/locomotion/machineguns/p_lmg_cro_sprintFR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcLow.SprintF" {
+   Resource "{29C59F9789F4E4E6}anims/anm/player/locomotion/machineguns/p_lmg_erc_sprintF_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcLow.SprintFL" {
+   Resource "{494C3BEEE2AAE30C}anims/anm/player/locomotion/machineguns/p_lmg_erc_sprintFL_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcLow.SprintFR" {
+   Resource "{2582913F76FC8268}anims/anm/player/locomotion/machineguns/p_lmg_erc_sprintFR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneLow.SprintF" {
+   Resource "{E65F675DAAC94E74}anims/anm/player/locomotion/machineguns/p_lmg_pne_sprintF_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneLow.SprintFL" {
+   Resource "{E4ED9C98F8B5C156}anims/anm/player/locomotion/machineguns/p_lmg_pne_sprintFL_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneLow.SprintFR" {
+   Resource "{882336496CE3A032}anims/anm/player/locomotion/machineguns/p_lmg_pne_sprintFR_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroADS.IdleAimspace" {
+   Resource "{7795367B9D973CBF}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_cro_aimspace_body_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroADS.IdleBreathADD" {
+   Resource "{A67F53213AFAC1F9}anims/anm/player/locomotion/machineguns/p_lmg_cro_idle_ads_breath_ADD.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcADS.IdleAimspace" {
+   Resource "{D6CC1C951F83D740}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_erc_aimspace_body_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcADS.IdleBreathADD" {
+   Resource "{72EE15D442657CB4}anims/anm/player/locomotion/machineguns/p_lmg_erc_idle_ads_breath_ADD.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneADS.IdleAimspace" {
+   Resource "{88897B35635BA3AD}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_pne_aimspace_body_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneADS.IdleBreathADD" {
+   Resource "{2DFFCB7100F933CD}anims/anm/player/locomotion/machineguns/p_lmg_pne_idle_ads_breath_ADD.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroADS.TurnL" {
+   Resource "{77B08EE4C07CAF3F}anims/anm/player/locomotion/machineguns/turns/p_lmg_cro_turnL_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroADS.TurnL_Aimspace" {
+   Resource "{94EA6D33F40EA5C3}anims/anm/player/locomotion/machineguns/turns/p_lmg_cro_turnL_aimspace_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroADS.TurnR" {
+   Resource "{1B7E2435542ACE5B}anims/anm/player/locomotion/machineguns/turns/p_lmg_cro_turnR_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroADS.TurnRAimspace" {
+   Resource "{A8EDAF248F0D3655}anims/anm/player/locomotion/machineguns/turns/p_lmg_cro_turnR_aimspace_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcADS.TurnL" {
+   Resource "{5D7216785CFDC4FA}anims/anm/player/locomotion/machineguns/turns/p_lmg_erc_turnL_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcADS.TurnL_Aimspace" {
+   Resource "{B5B0766515FE1343}anims/anm/player/locomotion/machineguns/turns/p_lmg_erc_turnL_aimspace_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcADS.TurnR" {
+   Resource "{31BCBCA9C8ABA59E}anims/anm/player/locomotion/machineguns/turns/p_lmg_erc_turnR_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcADS.TurnRAimspace" {
+   Resource "{89B7B4726EFD80D5}anims/anm/player/locomotion/machineguns/turns/p_lmg_erc_turnR_aimspace_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneADS.TurnL" {
+   Resource "{B731837C924BAB34}anims/anm/player/locomotion/machineguns/turns/p_lmg_pne_turnL_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneADS.TurnL_Aimspace" {
+   Resource "{125BC5EBF61402C4}anims/anm/player/locomotion/machineguns/turns/p_lmg_pne_turnL_aimspace_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneADS.TurnR" {
+   Resource "{DBFF29AD061DCA50}anims/anm/player/locomotion/machineguns/turns/p_lmg_pne_turnR_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneADS.TurnRAimspace" {
+   Resource "{2E5C07FC8D179152}anims/anm/player/locomotion/machineguns/turns/p_lmg_pne_turnR_aimspace_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroADS.LeanLFullBody" {
+   Resource "{DEF01926CB98C5BA}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_cro_leanL_aimspace_fullbody_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroADS.LeanLTurnL" {
+   Resource "{2E6CBBCB670C767B}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_cro_leanL_aimspace_turnL_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroADS.LeanLTurnR" {
+   Resource "{42A2111AF35A171F}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_cro_leanL_aimspace_turnR_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcADS.LeanLFullBody" {
+   Resource "{8FA83F81B8055502}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_erc_leanL_aimspace_fullbody_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcADS.LeanLTurnL" {
+   Resource "{18CC1D163C3CB934}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_erc_leanL_aimspace_turnL_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcADS.LeanLTurnR" {
+   Resource "{7402B7C7A86AD858}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_erc_leanL_aimspace_turnR_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroADS.LeanRFullBody" {
+   Resource "{3213256A4BBC7931}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_cro_leanR_aimspace_fullbody_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroADS.LeanRTurnL" {
+   Resource "{ACE84BBC2D8618B0}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_cro_leanR_aimspace_turnL_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroADS.LeanRTurnR" {
+   Resource "{C026E16DB9D079CC}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_cro_leanR_aimspace_turnR_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcADS.LeanRFullBody" {
+   Resource "{634B03CD3821E989}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_erc_leanR_aimspace_fullbody_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcADS.LeanRTurnL" {
+   Resource "{9A48ED6176B6D7E7}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_erc_leanR_aimspace_turnL_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcADS.LeanRTurnR" {
+   Resource "{F68647B0E2E0B683}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_erc_leanR_aimspace_turnR_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcAdj.IdleAimspace" {
+   Resource "{AEC9B6BA2BF1C783}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_adj_aimspace_body_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcAdj.IdleBreathADD" {
+   Resource "{9221ECB2DB3035E3}anims/anm/player/locomotion/machineguns/p_lmg_adj_idle_ads_breath_ADD.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcAdj.TurnL" {
+   Resource "{D864DB99054179D0}anims/anm/player/locomotion/machineguns/turns/p_lmg_adj_turnL_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcAdj.TurnL_Aimspace" {
+   Resource "{523E1ECE2025A7E4}anims/anm/player/locomotion/machineguns/turns/p_lmg_adj_turnL_aimspace_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcAdj.TurnR" {
+   Resource "{B4AA7148911718AC}anims/anm/player/locomotion/machineguns/turns/p_lmg_adj_turnR_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcAdj.TurnRAimspace" {
+   Resource "{6E39DCD95B263476}anims/anm/player/locomotion/machineguns/turns/p_lmg_adj_turnR_aimspace_ads.anm"
+  }
+  AnimSetInstanceSource_Line "VerticalMovement.ErcLow.Climb20" {
+   Resource "{08459CBC5C127C0F}anims/anm/player/locomotion/machineguns/climb/p_lmg_erc_run_climb_20_low.anm"
+  }
+  AnimSetInstanceSource_Line "VerticalMovement.ErcLow.Climb80" {
+   Resource "{C895BB8A41B3470E}anims/anm/player/locomotion/machineguns/climb/p_lmg_erc_run_climb_80_low.anm"
+  }
+  AnimSetInstanceSource_Line "VerticalMovement.ErcLow.ClimbOver20In" {
+   Resource "{4A195A0F8AB353F3}anims/anm/player/locomotion/machineguns/climb/p_lmg_erc_run_climb_20_over_in_low.anm"
+  }
+  AnimSetInstanceSource_Line "VerticalMovement.ErcLow.ClimbOver20Out" {
+   Resource "{A52FF6919BD643F3}anims/anm/player/locomotion/machineguns/climb/p_lmg_erc_run_climb_20_over_out_low.anm"
+  }
+  AnimSetInstanceSource_Line "VerticalMovement.ErcLow.ClimbOver80In" {
+   Resource "{9FB444A43B1430F0}anims/anm/player/locomotion/machineguns/climb/p_lmg_erc_run_climb_80_over_in_low.anm"
+  }
+  AnimSetInstanceSource_Line "VerticalMovement.ErcLow.ClimbOver80Out" {
+   Resource "{493045A49CA24AB2}anims/anm/player/locomotion/machineguns/climb/p_lmg_erc_run_climb_80_over_out_low.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponSwitching.ErcLow.Hide01" {
+   Resource "{165459B581CDDAB2}anims/anm/player/weaponswitch/lmg/p_lmg_erc_slot_backL_hide_low.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponSwitching.ErcLow.Hide02" {
+   Resource "{FB9712A97834FC21}anims/anm/player/weaponswitch/lmg/p_lmg_erc_slot_backR_hide_low.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponSwitching.ErcRas.Hide02" {
+   Resource "{5FB596B60D641B8D}anims/anm/player/weaponswitch/lmg/p_lmg_erc_slot_backR_hide.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponSwitching.ErcLow.Show01" {
+   Resource "{2B5534864C9BB97B}anims/anm/player/weaponswitch/lmg/p_lmg_erc_slot_backL_show_low.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponSwitching.ErcLow.Show02" {
+   Resource "{C6967F9AB5629FE8}anims/anm/player/weaponswitch/lmg/p_lmg_erc_slot_backR_show_low.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponSwitching.ErcRas.Show02" {
+   Resource "{D7CF98298F24C9DA}anims/anm/player/weaponswitch/lmg/p_lmg_erc_slot_backR_show.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.ErcRas.Aimspace" {
+   Resource "{B1499B0585317C11}anims/anm/player/locomotion/machineguns/IdleTurns/p_lmg_erc_aimspace_body_ras.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.ErcRas.Idle" {
+   Resource "{7B45CEC07B0B6906}anims/anm/player/locomotion/machineguns/IdleTurns/p_lmg_erc_idle_ras_breath.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.ErcRas.Turn0" {
+   Resource "{B103C9F781E12895}anims/anm/player/locomotion/machineguns/IdleTurns/p_lmg_erc_turn_0_ras.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.ErcRas.TurnL180" {
+   Resource "{DA87EC09FB33F85F}anims/anm/player/locomotion/machineguns/IdleTurns/p_lmg_erc_turnL_180_ras.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.ErcRas.TurnL90" {
+   Resource "{BF9CCCCF74A3A7FC}anims/anm/player/locomotion/machineguns/IdleTurns/p_lmg_erc_turnL_90_ras.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.ErcRas.TurnR180" {
+   Resource "{DB28DFA30C63EB4F}anims/anm/player/locomotion/machineguns/IdleTurns/p_lmg_erc_turnR_180_ras.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.ErcRas.TurnR90" {
+   Resource "{722839502F7884B9}anims/anm/player/locomotion/machineguns/IdleTurns/p_lmg_erc_turnR_90_ras.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.AdjRas.Aimspace" {
+   Resource "{C94C312AB1436CD3}anims/anm/player/locomotion/machineguns/IdleTurns/p_lmg_adj_aimspace_body_ras.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.AdjRas.Idle" {
+   Resource "{B16778860C62771B}anims/anm/player/locomotion/machineguns/IdleTurns/p_lmg_adj_idle_ras_breath.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.AdjRas.Turn0" {
+   Resource "{5AF74AC0E7C6B314}anims/anm/player/locomotion/machineguns/IdleTurns/p_lmg_adj_turn_0_ras.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.AdjRas.TurnL180" {
+   Resource "{D08D5EBC23E1F54E}anims/anm/player/locomotion/machineguns/IdleTurns/p_lmg_adj_turnL_180_ras.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.AdjRas.TurnL90" {
+   Resource "{56A6D5468A788740}anims/anm/player/locomotion/machineguns/IdleTurns/p_lmg_adj_turnL_90_ras.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.AdjRas.TurnR180" {
+   Resource "{D1226D16D4B1E65E}anims/anm/player/locomotion/machineguns/IdleTurns/p_lmg_adj_turnR_180_ras.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.AdjRas.TurnR90" {
+   Resource "{9B1220D9D1A3A405}anims/anm/player/locomotion/machineguns/IdleTurns/p_lmg_adj_turnR_90_ras.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.CroRas.Aimspace" {
+   Resource "{1010B1EB072597EE}anims/anm/player/locomotion/machineguns/IdleTurns/p_lmg_cro_aimspace_body_ras.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.CroRas.Idle" {
+   Resource "{096D1FB647E3CD42}anims/anm/player/locomotion/machineguns/IdleTurns/p_lmg_cro_idle_ras_breath.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.CroRas.Turn0" {
+   Resource "{A866ABC96E1852D3}anims/anm/player/locomotion/machineguns/IdleTurns/p_lmg_cro_turn_0_ras.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.CroRas.TurnL180" {
+   Resource "{F17D4250B2548DAF}anims/anm/player/locomotion/machineguns/IdleTurns/p_lmg_cro_turnL_180_ras.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.CroRas.TurnL90" {
+   Resource "{FB2400057D0EEE44}anims/anm/player/locomotion/machineguns/IdleTurns/p_lmg_cro_turnL_90_ras.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.CroRas.TurnR180" {
+   Resource "{F0D271FA45049EBF}anims/anm/player/locomotion/machineguns/IdleTurns/p_lmg_cro_turnR_180_ras.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.CroRas.TurnR90" {
+   Resource "{3690F59A26D5CD01}anims/anm/player/locomotion/machineguns/IdleTurns/p_lmg_cro_turnR_90_ras.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.ErcLow.Idle" {
+   Resource "{7FB61FE8DF54F30A}anims/anm/player/locomotion/machineguns/IdleTurns/p_lmg_erc_idle_low_breath.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.ErcLow.Turn0" {
+   Resource "{F61DB5B4E76B084A}anims/anm/player/locomotion/machineguns/IdleTurns/p_lmgl_erc_turn_0_low.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.ErcLow.TurnL180" {
+   Resource "{978EA709B978E0EE}anims/anm/player/locomotion/machineguns/IdleTurns/p_lmg_erc_turnL_180_low.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.ErcLow.TurnL90" {
+   Resource "{F29587CF36E8BF4D}anims/anm/player/locomotion/machineguns/IdleTurns/p_lmg_erc_turnL_90_low.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.ErcLow.TurnR180" {
+   Resource "{962194A34E28F3FE}anims/anm/player/locomotion/machineguns/IdleTurns/p_lmg_erc_turnR_180_low.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.ErcLow.TurnR90" {
+   Resource "{3F2172506D339C08}anims/anm/player/locomotion/machineguns/IdleTurns/p_lmg_erc_turnR_90_low.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.CroLow.Idle" {
+   Resource "{E343FA02E0AC2544}anims/anm/player/locomotion/machineguns/IdleTurns/p_lmg_cro_idle_low_breath_ADD.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.CroLow.Turn0" {
+   Resource "{E56FE0C92C534A62}anims/anm/player/locomotion/machineguns/IdleTurns/p_lmg_cro_turn_0_low.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.CroLow.TurnL180" {
+   Resource "{BC740950F01F951E}anims/anm/player/locomotion/machineguns/IdleTurns/p_lmg_cro_turnL_180_low.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.CroLow.TurnL90" {
+   Resource "{B62D4B053F45F6F5}anims/anm/player/locomotion/machineguns/IdleTurns/p_lmg_cro_turnL_90_low.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.CroLow.TurnR180" {
+   Resource "{BDDB3AFA074F860E}anims/anm/player/locomotion/machineguns/IdleTurns/p_lmg_cro_turnR_180_low.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.CroLow.TurnR90" {
+   Resource "{7B99BE9A649ED5B0}anims/anm/player/locomotion/machineguns/IdleTurns/p_lmg_cro_turnR_90_low.anm"
+  }
+  AnimSetInstanceSource_Line "VerticalMovement.ErcLow.ClimbOver110In" {
+   Resource "{C8B468DD39796FE0}anims/anm/player/locomotion/machineguns/climb/p_lmg_erc_run_jump_110_over_in.anm"
+  }
+  AnimSetInstanceSource_Line "VerticalMovement.ErcLow.ClimbOver110Out" {
+   Resource "{8EA19E3C8CED5382}anims/anm/player/locomotion/machineguns/climb/p_lmg_erc_run_jump_110_over_out.anm"
+  }
+  AnimSetInstanceSource_Line "VerticalMovement.ErcLow.ClimbOver150In" {
+   Resource "{2E19955AB585E30B}anims/anm/player/locomotion/machineguns/climb/p_lmg_erc_run_climb_150_over_in.anm"
+  }
+  AnimSetInstanceSource_Line "VerticalMovement.ErcLow.ClimbOver150Out" {
+   Resource "{0F0BAA089B6A6747}anims/anm/player/locomotion/machineguns/climb/p_lmg_erc_run_climb_150_over_out.anm"
+  }
+  AnimSetInstanceSource_Line "VerticalMovement.ErcLow.ClimbOver190In" {
+   Resource "{8237E40EE2134D24}anims/anm/player/locomotion/machineguns/climb/p_lmg_erc_run_climb_190_over_in.anm"
+  }
+  AnimSetInstanceSource_Line "VerticalMovement.ErcLow.ClimbOver190Out" {
+   Resource "{C0AF40AF43F20235}anims/anm/player/locomotion/machineguns/climb/p_lmg_erc_run_climb_190_over_out.anm"
+  }
+  AnimSetInstanceSource_Line "VerticalMovement.ErcLow.Climb110" {
+   Resource "{721E2008824DEF95}anims/anm/player/locomotion/machineguns/climb/p_lmg_erc_run_climb_110_low.anm"
+  }
+  AnimSetInstanceSource_Line "VerticalMovement.ErcLow.Climb150" {
+   Resource "{4D0E0323AD3A0510}anims/anm/player/locomotion/machineguns/climb/p_lmg_erc_run_climb_150_low.anm"
+  }
+  AnimSetInstanceSource_Line "VerticalMovement.ErcLow.Climb190" {
+   Resource "{0C3E665EDCA23A9F}anims/anm/player/locomotion/machineguns/climb/p_lmg_erc_run_climb_190_low.anm"
+  }
+  AnimSetInstanceSource_Line "MeleeAttacks.CroLow.MeleeAttack01" {
+   Resource "{DD28814D7F4829F6}anims/anm/player/attacks/lmg/p_lmg_cro_attack_slash_melee_low.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponSwitching.PneLow.Hide02" {
+   Resource "{A486CC0C3AA8B358}anims/anm/player/weaponswitch/lmg/p_lmg_pne_slot_backR_hide_low.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponSwitching.PneRas.Hide02" {
+   Resource "{D283FBF3D989B7C0}anims/anm/player/weaponswitch/lmg/p_lmg_pne_slot_backR_hide.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponSwitching.PneLow.Show02" {
+   Resource "{9987A13FF7FED091}anims/anm/player/weaponswitch/lmg/p_lmg_pne_slot_backR_show_low.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponSwitching.PneRas.Show02" {
+   Resource "{5AF9F56C5BC96597}anims/anm/player/weaponswitch/lmg/p_lmg_pne_slot_backR_show.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.AdjRas.Aimspace LeanL" {
+   Resource "{4A7B6C1BD5E2E74E}anims/anm/player/locomotion/machineguns/IdleTurns/p_lmg_adj_aimspace_body_LeanL_ras.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.AdjRas.Aimspace LeanR" {
+   Resource "{26B5C6CA41B4862A}anims/anm/player/locomotion/machineguns/IdleTurns/p_lmg_adj_aimspace_body_LeanR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.CroRas.Aimspace LeanL" {
+   Resource "{C04311432FC79AE7}anims/anm/player/locomotion/machineguns/IdleTurns/p_lmg_cro_aimspace_body_LeanL_ras.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.CroRas.Aimspace LeanR" {
+   Resource "{AC8DBB92BB91FB83}anims/anm/player/locomotion/machineguns/IdleTurns/p_lmg_cro_aimspace_body_LeanR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.ErcRas.Aimspace LeanL" {
+   Resource "{73EE1DAB0EAA8489}anims/anm/player/locomotion/machineguns/IdleTurns/p_lmg_erc_aimspace_body_LeanL_ras.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.ErcRas.Aimspace LeanR" {
+   Resource "{1F20B77A9AFCE5ED}anims/anm/player/locomotion/machineguns/IdleTurns/p_lmg_erc_aimspace_body_LeanR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.PneRas.Aimspace" {
+   Resource "{EF0CFCA5F9E908FC}anims/anm/player/locomotion/machineguns/IdleTurns/p_lmg_pne_aimspace_body_ras.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.PneLow.Idle" {
+   Resource "{F28072AD0BB95F47}anims/anm/player/locomotion/machineguns/IdleTurns/p_lmg_pne_idle_low_breath.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.PneRas.Idle" {
+   Resource "{F673A385AFE6C54B}anims/anm/player/locomotion/machineguns/IdleTurns/p_lmg_pne_idle_ras_breath.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.PneLow.Turn0" {
+   Resource "{489D9F4E8C091480}anims/anm/player/locomotion/machineguns/IdleTurns/p_lmg_pne_turn_0_low.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.PneRas.Turn0" {
+   Resource "{489D9F4E8C091480}anims/anm/player/locomotion/machineguns/IdleTurns/p_lmg_pne_turn_0_low.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.PneLow.TurnL180" {
+   Resource "{DFE7C77B5BDF55D2}anims/anm/player/locomotion/machineguns/IdleTurns/p_lmg_pne_turnL_180_low.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.PneRas.TurnL180" {
+   Resource "{DFE7C77B5BDF55D2}anims/anm/player/locomotion/machineguns/IdleTurns/p_lmg_pne_turnL_180_low.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.PneLow.TurnL90" {
+   Resource "{123D6BB96EBC85A6}anims/anm/player/locomotion/machineguns/IdleTurns/p_lmg_pne_turnL_90_low.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.PneRas.TurnL90" {
+   Resource "{123D6BB96EBC85A6}anims/anm/player/locomotion/machineguns/IdleTurns/p_lmg_pne_turnL_90_low.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.PneLow.TurnR180" {
+   Resource "{DE48F4D1AC8F46C2}anims/anm/player/locomotion/machineguns/IdleTurns/p_lmg_pne_turnR_180_low.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.PneRas.TurnR180" {
+   Resource "{DE48F4D1AC8F46C2}anims/anm/player/locomotion/machineguns/IdleTurns/p_lmg_pne_turnR_180_low.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.PneLow.TurnR90" {
+   Resource "{DF899E263567A6E3}anims/anm/player/locomotion/machineguns/IdleTurns/p_lmg_pne_turnR_90_low.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.PneRas.TurnR90" {
+   Resource "{DF899E263567A6E3}anims/anm/player/locomotion/machineguns/IdleTurns/p_lmg_pne_turnR_90_low.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.AdjRas.ADS" {
+   Resource "{67523E78CE58A070}anims/anm/player/locomotion/machineguns/IdleTurns/p_lmg_adj_ads_add.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.CroRas.ADS" {
+   Resource "{A1F62FD8B8BF49B7}anims/anm/player/locomotion/machineguns/IdleTurns/p_lmg_cro_ads_add.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.ErcRas.ADS" {
+   Resource "{865271F8154E8181}anims/anm/player/locomotion/machineguns/IdleTurns/p_lmg_erc_ads_add.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.PneRas.ADS" {
+   Resource "{DB9A7FAA1385E220}anims/anm/player/locomotion/machineguns/IdleTurns/p_lmg_pne_ads_add.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.ErcLow.IdleVar01" {
+   Resource "{AD6A9418C0808E00}anims/anm/player/locomotion/machineguns/IdleTurns/IdleVar/p_lmg_erc_idle_low_var01.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.ErcLow.IdleVar02" {
+   Resource "{34742D81DD67BF90}anims/anm/player/locomotion/machineguns/IdleTurns/IdleVar/p_lmg_erc_idle_low_var02.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.ErcLow.IdleVar03" {
+   Resource "{437E450929C550E0}anims/anm/player/locomotion/machineguns/IdleTurns/IdleVar/p_lmg_erc_idle_low_var03.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.ErcLow.IdleVar04" {
+   Resource "{44B9BF584F43EA23}anims/anm/player/locomotion/machineguns/IdleTurns/IdleVar/p_lmg_erc_idle_low_var04.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.ErcLow.IdleVar05" {
+   Resource "{33B3D7D0BBE10553}anims/anm/player/locomotion/machineguns/IdleTurns/IdleVar/p_lmg_erc_idle_low_var05.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponSwitching.PneLow.Hide01" {
+   Resource "{49458710C35195CB}anims/anm/player/weaponswitch/lmg/p_lmg_pne_slot_backL_hide_low.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponSwitching.PneLow.Show01" {
+   Resource "{7444EA230E07F602}anims/anm/player/weaponswitch/lmg/p_lmg_pne_slot_backL_show_low.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.AdjLow.Idle" {
+   Resource "{D71D45910166D15F}anims/anm/player/locomotion/machineguns/IdleTurns/p_lmg_adj_idle_low_breath_ADD.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.AdjLow.Turn0" {
+   Resource "{17FE01C0A58DABA5}anims/anm/player/locomotion/machineguns/IdleTurns/p_lmg_adj_turn_0_low.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.AdjLow.TurnL180" {
+   Resource "{9D8415BC61AAEDFF}anims/anm/player/locomotion/machineguns/IdleTurns/p_lmg_adj_turnL_180_low.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.AdjLow.TurnL90" {
+   Resource "{1BAF9E46C8339FF1}anims/anm/player/locomotion/machineguns/IdleTurns/p_lmg_adj_turnL_90_low.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.AdjLow.TurnR180" {
+   Resource "{9C2B261696FAFEEF}anims/anm/player/locomotion/machineguns/IdleTurns/p_lmg_adj_turnR_180_low.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.AdjLow.TurnR90" {
+   Resource "{D61B6BD993E8BCB4}anims/anm/player/locomotion/machineguns/IdleTurns/p_lmg_adj_turnR_90_low.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.CroLow.LightB" {
+   Resource "{47BD25049933C13F}anims/anm/player/hits/light/p_lmg_cro_hit_light_low_B_01.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.CroLow.LightF" {
+   Resource "{BC793D8BE55E4D8C}anims/anm/player/hits/light/p_lmg_cro_hit_light_low_F_01.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.CroLow.LightL" {
+   Resource "{D59B91CCDEACBF69}anims/anm/player/hits/light/p_lmg_cro_hit_light_low_L_01.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.CroLow.LightR" {
+   Resource "{6FBC650592BBA846}anims/anm/player/hits/light/p_lmg_cro_hit_light_low_R_01.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.ErcLow.LightB" {
+   Resource "{66E73E5278C377BF}anims/anm/player/hits/light/p_lmg_erc_hit_light_low_B_01.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.ErcLow.LightF" {
+   Resource "{9D2326DD04AEFB0C}anims/anm/player/hits/light/p_lmg_erc_hit_light_low_F_01.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.ErcLow.LightL" {
+   Resource "{F4C18A9A3F5C09E9}anims/anm/player/hits/light/p_lmg_erc_hit_light_low_L_01.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.ErcLow.LightR" {
+   Resource "{4EE67E53734B1EC6}anims/anm/player/hits/light/p_lmg_erc_hit_light_low_R_01.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.PneLow.LightB" {
+   Resource "{C10C8DDC9B296638}anims/anm/player/hits/light/p_lmg_pne_hit_light_low_B_01.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.PneLow.LightF" {
+   Resource "{3AC89553E744EA8B}anims/anm/player/hits/light/p_lmg_pne_hit_light_low_F_01.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.PneLow.LightL" {
+   Resource "{532A3914DCB6186E}anims/anm/player/hits/light/p_lmg_pne_hit_light_low_L_01.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.PneLow.LightR" {
+   Resource "{E90DCDDD90A10F41}anims/anm/player/hits/light/p_lmg_pne_hit_light_low_R_01.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.CroRas.LightB" {
+   Resource "{EFE108A4F5CB39F8}anims/anm/player/hits/light/p_lmg_cro_hit_light_ras_B_01.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.CroRas.LightF" {
+   Resource "{1425102B89A6B54B}anims/anm/player/hits/light/p_lmg_cro_hit_light_ras_F_01.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.CroRas.LightL" {
+   Resource "{7DC7BC6CB25447AE}anims/anm/player/hits/light/p_lmg_cro_hit_light_ras_L_01.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.CroRas.LightR" {
+   Resource "{C7E048A5FE435081}anims/anm/player/hits/light/p_lmg_cro_hit_light_ras_R_01.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.ErcRas.LightB" {
+   Resource "{CEBB13F2143B8F78}anims/anm/player/hits/light/p_lmg_erc_hit_light_ras_B_01.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.ErcRas.LightF" {
+   Resource "{357F0B7D685603CB}anims/anm/player/hits/light/p_lmg_erc_hit_light_ras_F_01.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.ErcRas.LightL" {
+   Resource "{5C9DA73A53A4F12E}anims/anm/player/hits/light/p_lmg_erc_hit_light_ras_L_01.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.ErcRas.LightR" {
+   Resource "{E6BA53F31FB3E601}anims/anm/player/hits/light/p_lmg_erc_hit_light_ras_R_01.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.PneRas.LightB" {
+   Resource "{6950A07CF7D19EFF}anims/anm/player/hits/light/p_lmg_pne_hit_light_ras_B_01.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.PneRas.LightF" {
+   Resource "{9294B8F38BBC124C}anims/anm/player/hits/light/p_lmg_pne_hit_light_ras_F_01.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.PneRas.LightL" {
+   Resource "{FB7614B4B04EE0A9}anims/anm/player/hits/light/p_lmg_pne_hit_light_ras_L_01.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.PneRas.LightR" {
+   Resource "{4151E07DFC59F786}anims/anm/player/hits/light/p_lmg_pne_hit_light_ras_R_01.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.GoCrouchAdj" {
+   Resource "{F6B734B5FEF5AB3F}anims/anm/player/locomotion/machineguns/transitions/p_lmg_adj_trans_cro_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.GoProneAdj" {
+   Resource "{58C70BD0A37F82E5}anims/anm/player/locomotion/machineguns/transitions/p_lmg_adj_trans_pne_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroRas.GoErectAdj" {
+   Resource "{4AAD4FFD3B52C491}anims/anm/player/locomotion/machineguns/transitions/p_lmg_cro_trans_adj_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.GoErectAdj" {
+   Resource "{293E81D69092045D}anims/anm/player/locomotion/machineguns/transitions/p_lmg_pne_trans_adj_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcLow.GoCrouchAdj" {
+   Resource "{F5BFF72C8D9BD7B9}anims/anm/player/locomotion/machineguns/transitions/p_lmg_adj_trans_cro_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcLow.GoProneAdj" {
+   Resource "{5BCFC849D011FE63}anims/anm/player/locomotion/machineguns/transitions/p_lmg_adj_trans_pne_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroLow.GoErectAdj" {
+   Resource "{49A58C64483CB817}anims/anm/player/locomotion/machineguns/transitions/p_lmg_cro_trans_adj_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneLow.GoErectAdj" {
+   Resource "{2A36424FE3FC78DB}anims/anm/player/locomotion/machineguns/transitions/p_lmg_pne_trans_adj_low.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.CroLow.HeavyB" {
+   Resource "{28CE0F54C1F99238}anims/anm/player/hits/heavy/p_lmg_cro_hit_heavy_low_B_01.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.CroLow.HeavyF" {
+   Resource "{D30A17DBBD941E8B}anims/anm/player/hits/heavy/p_lmg_cro_hit_heavy_low_F_01.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.CroLow.HeavyL" {
+   Resource "{BAE8BB9C8666EC6E}anims/anm/player/hits/heavy/p_lmg_cro_hit_heavy_low_L_01.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.CroLow.HeavyR" {
+   Resource "{00CF4F55CA71FB41}anims/anm/player/hits/heavy/p_lmg_cro_hit_heavy_low_R_01.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.CroRas.HeavyB" {
+   Resource "{809222F4AD016AFF}anims/anm/player/hits/heavy/p_lmg_cro_hit_heavy_ras_B_01.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.CroRas.HeavyF" {
+   Resource "{7B563A7BD16CE64C}anims/anm/player/hits/heavy/p_lmg_cro_hit_heavy_ras_F_01.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.CroRas.HeavyL" {
+   Resource "{12B4963CEA9E14A9}anims/anm/player/hits/heavy/p_lmg_cro_hit_heavy_ras_L_01.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.CroRas.HeavyR" {
+   Resource "{A89362F5A6890386}anims/anm/player/hits/heavy/p_lmg_cro_hit_heavy_ras_R_01.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.ErcLow.HeavyB" {
+   Resource "{09941402200924B8}anims/anm/player/hits/heavy/p_lmg_erc_hit_heavy_low_B_01.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.ErcLow.HeavyF" {
+   Resource "{F2500C8D5C64A80B}anims/anm/player/hits/heavy/p_lmg_erc_hit_heavy_low_F_01.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.ErcLow.HeavyL" {
+   Resource "{9BB2A0CA67965AEE}anims/anm/player/hits/heavy/p_lmg_erc_hit_heavy_low_L_01.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.ErcLow.HeavyR" {
+   Resource "{219554032B814DC1}anims/anm/player/hits/heavy/p_lmg_erc_hit_heavy_low_R_01.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.ErcRas.HeavyB" {
+   Resource "{A1C839A24CF1DC7F}anims/anm/player/hits/heavy/p_lmg_erc_hit_heavy_ras_B_01.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.ErcRas.HeavyF" {
+   Resource "{5A0C212D309C50CC}anims/anm/player/hits/heavy/p_lmg_erc_hit_heavy_ras_F_01.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.ErcRas.HeavyL" {
+   Resource "{33EE8D6A0B6EA229}anims/anm/player/hits/heavy/p_lmg_erc_hit_heavy_ras_L_01.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.ErcRas.HeavyR" {
+   Resource "{89C979A34779B506}anims/anm/player/hits/heavy/p_lmg_erc_hit_heavy_ras_R_01.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.PneLow.HeavyB" {
+   Resource "{AE7FA78CC3E3353F}anims/anm/player/hits/heavy/p_lmg_pne_hit_heavy_low_B_01.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.PneLow.HeavyF" {
+   Resource "{55BBBF03BF8EB98C}anims/anm/player/hits/heavy/p_lmg_pne_hit_heavy_low_F_01.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.PneLow.HeavyL" {
+   Resource "{3C591344847C4B69}anims/anm/player/hits/heavy/p_lmg_pne_hit_heavy_low_L_01.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.PneLow.HeavyR" {
+   Resource "{867EE78DC86B5C46}anims/anm/player/hits/heavy/p_lmg_pne_hit_heavy_low_R_01.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.PneRas.HeavyB" {
+   Resource "{06238A2CAF1BCDF8}anims/anm/player/hits/heavy/p_lmg_pne_hit_heavy_ras_B_01.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.PneRas.HeavyF" {
+   Resource "{FDE792A3D376414B}anims/anm/player/hits/heavy/p_lmg_pne_hit_heavy_ras_F_01.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.PneRas.HeavyL" {
+   Resource "{94053EE4E884B3AE}anims/anm/player/hits/heavy/p_lmg_pne_hit_heavy_ras_L_01.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.PneRas.HeavyR" {
+   Resource "{2E22CA2DA493A481}anims/anm/player/hits/heavy/p_lmg_pne_hit_heavy_ras_R_01.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.CroLow.Aimspace" {
+   Resource "{5D19FAEB456E8F5F}anims/anm/player/locomotion/machineguns/IdleTurns/p_lmg_cro_aimspace_body_low.anm"
+  }
+ }
+}

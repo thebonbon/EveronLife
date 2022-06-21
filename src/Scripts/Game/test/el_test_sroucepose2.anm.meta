@@ -1,0 +1,15 @@
+MetaFileClass {
+ Name "{18CBB0FC2A95BA37}Scripts/Game/test/el_test_sroucepose2.anm"
+ Configurations {
+  TXAResourceClass PC {
+  }
+  TXAResourceClass XBOX_ONE : PC {
+  }
+  TXAResourceClass XBOX_SERIES : PC {
+  }
+  TXAResourceClass PS4 : PC {
+  }
+  TXAResourceClass HEADLESS : PC {
+  }
+ }
+}

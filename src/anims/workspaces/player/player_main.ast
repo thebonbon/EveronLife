@@ -1,0 +1,415 @@
+AnimSetTemplateSource {
+ Groups {
+  AnimSetTemplateSource_AnimationGroup "{50B4AD9D80313A8F}" {
+   Name "Damage"
+   Animations {
+    "HeavyB"
+    "HeavyF"
+    "HeavyL"
+    "HeavyR"
+    "LightB"
+    "LightF"
+    "LightL"
+    "LightR"
+   }
+   Columns {
+    "CroLow"
+    "CroRas"
+    "ErcLow"
+    "ErcRas"
+    "PneLow"
+    "PneRas"
+   }
+  }
+  AnimSetTemplateSource_AnimationGroup "{50B4AD9D80313AE4}" {
+   Name "Death"
+   Animations {
+    "BodyBack"
+    "BodyFront"
+    "BodyLeft"
+    "BodyRight"
+   }
+   Columns {
+    "Cro"
+    "Erc"
+    "Pne"
+   }
+  }
+  AnimSetTemplateSource_AnimationGroup "{50B4AD9D80313A1B}" {
+   Name "Falling"
+   Animations {
+    "Forward"
+    "LandHeavy"
+    "LandLight"
+    "LandMedium"
+   }
+   Columns {
+    "ErcRas"
+    "PneRas"
+   }
+  }
+  AnimSetTemplateSource_AnimationGroup "{58ACF5B6B8042DCD}" {
+   Name "Gestures"
+   Animations {
+    "FingerPointing"
+    "FingerPointingOffset"
+   }
+   Columns {
+    "CroLow"
+    "CroRas"
+    "ErcLow"
+    "ErcRas"
+    "PneLow"
+    "PneRas"
+   }
+  }
+  AnimSetTemplateSource_AnimationGroup "{58B8E6B6E177B1C7}" {
+   Name "IdleEyes"
+   Animations {
+    "EyeAimspace"
+   }
+   Columns {
+    "Erc"
+   }
+  }
+  AnimSetTemplateSource_AnimationGroup "{565AC9D4B2334E9A}" {
+   Name "IdleTurn"
+   Animations {
+    "ADS"
+    "Aimspace"
+    "Aimspace LeanL"
+    "Aimspace LeanR"
+    "Idle"
+    "IdleVar01"
+    "IdleVar02"
+    "IdleVar03"
+    "IdleVar04"
+    "IdleVar05"
+    "Lean Low"
+    "Turn0"
+    "TurnL180"
+    "TurnL90"
+    "TurnR180"
+    "TurnR90"
+   }
+   Columns {
+    "AdjLow"
+    "AdjRas"
+    "CroLow"
+    "CroRas"
+    "ErcLow"
+    "ErcRas"
+    "PneLow"
+    "PneRas"
+   }
+  }
+  AnimSetTemplateSource_AnimationGroup "{50B4AD9D80313A0F}" {
+   Name "Jumping"
+   Animations {
+    "JumpBackIn"
+    "JumpBackOut"
+    "JumpBLIn"
+    "JumpBLOut"
+    "JumpBRIn"
+    "JumpBROut"
+    "JumpFLIn"
+    "JumpFLOut"
+    "JumpForwardIn"
+    "JumpForwardOut"
+    "JumpFRIn"
+    "JumpFROut"
+    "JumpSpotIn"
+    "JumpSpotOut"
+    "JumpSprintIn"
+    "JumpSprintOut"
+   }
+   Columns {
+    "IdleL"
+    "IdleR"
+    "LFoot"
+    "RFoot"
+   }
+  }
+  AnimSetTemplateSource_AnimationGroup "{50B4AD9D80313A5E}" {
+   Name "Ladder"
+   Animations {
+    "Down"
+    "DownFast"
+    "EnterGround"
+    "EnterRoof"
+    "EnterRoofFlat"
+    "EnterWater"
+    "ExitGround"
+    "ExitLeft"
+    "ExitRight"
+    "ExitRoof"
+    "ExitRoofFlat"
+    "ExitUnconscious"
+    "ExitWater"
+    "Idle"
+    "Look"
+    "Up"
+    "UpFast"
+   }
+   Columns {
+    "LeftFoot"
+    "RightFoot"
+   }
+  }
+  AnimSetTemplateSource_AnimationGroup "{51AE785CAE87B88B}" {
+   Name "LeftHandGadgets"
+   Animations {
+    "Hide"
+    "Show"
+   }
+   Columns {
+    "CroLow"
+    "CroRas"
+    "ErcLow"
+    "ErcRas"
+    "PneLow"
+    "PneRas"
+   }
+  }
+  AnimSetTemplateSource_AnimationGroup "{50B4AD9D80313A62}" {
+   Name "Locomotion"
+   Animations {
+    "ADS"
+    "AimObstruction"
+    "AimRunSpace"
+    "AimSpace"
+    "AimWalkSpace"
+    "EvadeL"
+    "EvadeR"
+    "GoCrouch"
+    "GoCrouchAdj"
+    "GoCrouchMove"
+    "GoErect"
+    "GoErectAdj"
+    "GoErectMove"
+    "GoLow"
+    "GoLowLeft"
+    "GoLowRight"
+    "GoProne"
+    "GoProneAdj"
+    "GoProneMove"
+    "GoRas"
+    "GoRasLeft"
+    "GoRasRight"
+    "Idle"
+    "IdleAdditive"
+    "IdleAimspace"
+    "IdleBreathADD"
+    "Lean"
+    "LeanLAimspace"
+    "LeanLFullBody"
+    "LeanLTurnL"
+    "LeanLTurnR"
+    "LeanLWalkAimspace"
+    "LeanRAimspace"
+    "LeanRFullBody"
+    "LeanRTurnL"
+    "LeanRTurnR"
+    "LeanRWalkAimspace"
+    "LeanWalk"
+    "LookFullbody"
+    "LookHead"
+    "LookHeadMove"
+    "LookUpperbody"
+    "RunB"
+    "RunBL"
+    "RunBR"
+    "RunF"
+    "RunFL"
+    "RunFR"
+    "RunL"
+    "RunR"
+    "SprintF"
+    "SprintFL"
+    "SprintFR"
+    "StopPoseRun"
+    "StopPoseWalk"
+    "TurnL"
+    "TurnL_Aimspace"
+    "TurnR"
+    "TurnRAimspace"
+    "WalkB"
+    "WalkBL"
+    "WalkBR"
+    "WalkF"
+    "WalkFL"
+    "WalkFR"
+    "WalkL"
+    "WalkR"
+   }
+   Columns {
+    "BackPneADS"
+    "BackPneRas"
+    "CroAdj"
+    "CroADS"
+    "CroLow"
+    "CroRas"
+    "ErcAdj"
+    "ErcADS"
+    "ErcLow"
+    "ErcRas"
+    "PneAdj"
+    "PneADS"
+    "PneLow"
+    "PneRas"
+   }
+  }
+  AnimSetTemplateSource_AnimationGroup "{50B4AD9D80313BCF}" {
+   Name "MeleeAttacks"
+   Animations {
+    "MeleeAttack01"
+   }
+   Columns {
+    "CroLow"
+    "CroRas"
+    "ErcLow"
+    "ErcRas"
+    "PneLow"
+    "PneRas"
+   }
+  }
+  AnimSetTemplateSource_AnimationGroup "{55DEF0D2B1DED122}" {
+   Name "PickUp"
+   Animations {
+    "PickInv_High"
+    "PickInv_Low"
+    "PickInv_Mid"
+    "PickUp_High"
+    "PickUp_Low"
+    "PickUp_Mid"
+   }
+   Columns {
+    "CroLow"
+    "CroRas"
+    "ErcLow"
+    "ErcRas"
+    "PneLow"
+    "PneRas"
+   }
+  }
+  AnimSetTemplateSource_AnimationGroup "{50B4AD9D80313BFA}" {
+   Name "Swim"
+   Animations {
+    "Fast"
+    "Idle"
+    "IdleDeath"
+    "Slow"
+    "StrafeB"
+    "StrafeF"
+    "StrafeL"
+    "StrafeR"
+    "UnconDeath"
+   }
+   Columns {
+    "Normal"
+   }
+  }
+  AnimSetTemplateSource_AnimationGroup "{566CABF755EC2B94}" {
+   Name "Test"
+   Animations {
+    "PickLow"
+    "PickRAS"
+   }
+   Columns {
+    "Default"
+   }
+  }
+  AnimSetTemplateSource_AnimationGroup "{50B4AD9D80313B17}" {
+   Name "ThrowOverhand"
+   Animations {
+    "Aimspace"
+    "Idle"
+    "Out"
+    "OutDown"
+    "OutUp"
+    "OutUpper"
+    "OutUpperDown"
+    "OutUpperUp"
+    "ToCrouch"
+    "ToErect"
+    "ToProne"
+    "Turn0"
+    "TurnL180"
+    "TurnL90"
+    "TurnR180"
+    "TurnR90"
+   }
+   Columns {
+    "Cro"
+    "Erc"
+    "Pne"
+   }
+  }
+  AnimSetTemplateSource_AnimationGroup "{50B4AD9D80313B2B}" {
+   Name "Unconscious"
+   Animations {
+    "InSlow"
+    "Loop"
+    "Out"
+   }
+   Columns {
+    "Water"
+   }
+  }
+  AnimSetTemplateSource_AnimationGroup "{50B4AD9D803138D5}" {
+   Name "VerticalMovement"
+   Animations {
+    "Climb110"
+    "Climb150"
+    "Climb190"
+    "Climb20"
+    "Climb80"
+    "ClimbOver110In"
+    "ClimbOver110Out"
+    "ClimbOver150In"
+    "ClimbOver150Out"
+    "ClimbOver190In"
+    "ClimbOver190Out"
+    "ClimbOver20In"
+    "ClimbOver20Out"
+    "ClimbOver80In"
+    "ClimbOver80Out"
+   }
+   Columns {
+    "ErcLow"
+   }
+  }
+  AnimSetTemplateSource_AnimationGroup "{50B4AD9D803138CB}" {
+   Name "WeaponActions"
+   Animations {
+    "Fire"
+    "ReloadActionBolt"
+    "ReloadActionSlideRelease"
+    "ReloadInsertMag"
+    "ReloadRemoveMag"
+   }
+   Columns {
+    "CroRas"
+    "ErcRas"
+    "PneRas"
+   }
+  }
+  AnimSetTemplateSource_AnimationGroup "{50B4AD9D803138FC}" {
+   Name "WeaponSwitching"
+   Animations {
+    "Hide01"
+    "Hide02"
+    "HideSling"
+    "Show01"
+    "Show02"
+    "ShowSling"
+   }
+   Columns {
+    "ErcLow"
+    "ErcRas"
+    "PneLow"
+    "PneRas"
+   }
+  }
+ }
+}

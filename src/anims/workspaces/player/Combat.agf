@@ -1,0 +1,502 @@
+AnimSrcGraphFile {
+ Sheets {
+  AnimSrcGraphSheet Damage {
+   Nodes {
+    AnimSrcNodeSource DamageHeavyBAnim {
+     EditorPos 5.9 7.9
+     Source "Damage.HeavyB"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeGroupSelect DamageHeavyCroG {
+     EditorPos 5.9 1.2
+     Child "HeavyDamageDirSTM"
+     Group "Damage"
+     Column "CroRas"
+    }
+    AnimSrcNodeGroupSelect DamageHeavyErcG {
+     EditorPos 3.5 1.2
+     Child "HeavyDamageDirSTM"
+     Group "Damage"
+     Column "ErcRas"
+    }
+    AnimSrcNodeSource DamageHeavyFAnim {
+     EditorPos 5.9 7.1
+     Source "Damage.HeavyF"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource DamageHeavyLAnim {
+     EditorPos 3.6 7.5
+     Source "Damage.HeavyL"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeStateMachine DamageHeavyMaster {
+     Tags {
+      "TagDamageHeavy"
+     }
+     EditorPos 3.1 -1.9
+     states {
+      AnimSrcNodeState Erc {
+       EditorPos 3.5 -0.7
+       Child "DamageHeavyErcG"
+       StartCondition "Stance == 0"
+       TimeStorage Inherit
+       IsExit 1
+      }
+      AnimSrcNodeState Cro {
+       EditorPos 5.9 -0.7
+       Child "DamageHeavyCroG"
+       StartCondition "Stance == 1"
+       TimeStorage Inherit
+       IsExit 1
+      }
+      AnimSrcNodeState Pne {
+       EditorPos 8.3 -0.7
+       Child "DamageHeavyPneG"
+       StartCondition "Stance == 2"
+       TimeStorage Inherit
+       IsExit 1
+      }
+     }
+    }
+    AnimSrcNodeGroupSelect DamageHeavyPneG {
+     EditorPos 8.3 1.2
+     Child "HeavyDamageDirSTM"
+     Group "Damage"
+     Column "PneRas"
+    }
+    AnimSrcNodeSource DamageHeavyRAnim {
+     EditorPos 8.2 7.5
+     Source "Damage.HeavyR"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource DamageLightBAnim {
+     EditorPos -3.4 4.4
+     Source "Damage.LightB"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeGroupSelect DamageLightCroG {
+     EditorPos -3.4 1.1
+     Child "DamageLightN"
+     Group "Damage"
+     Column "CroRas"
+    }
+    AnimSrcNodeGroupSelect DamageLightErcG {
+     EditorPos -5.7 1.1
+     Child "DamageLightN"
+     Group "Damage"
+     Column "ErcRas"
+    }
+    AnimSrcNodeSource DamageLightFAnim {
+     EditorPos -3.4 3.2
+     Source "Damage.LightF"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource DamageLightLAnim {
+     EditorPos -4.4 3.8
+     Source "Damage.LightL"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeStateMachine DamageLightMaster {
+     Tags {
+      "TagDamageLight"
+     }
+     EditorPos -6.1 -1.9
+     states {
+      AnimSrcNodeState Erc {
+       EditorPos -5.7 -0.7
+       Child "DamageLightErcG"
+       StartCondition "Stance == 0"
+       TimeStorage Inherit
+       IsExit 1
+      }
+      AnimSrcNodeState Cro {
+       EditorPos -3.4 -0.7
+       Child "DamageLightCroG"
+       StartCondition "Stance == 1"
+       TimeStorage Inherit
+       IsExit 1
+      }
+      AnimSrcNodeState Pne {
+       EditorPos -1.1 -0.7
+       Child "DamageLightPneG"
+       StartCondition "Stance == 2"
+       TimeStorage Inherit
+       IsExit 1
+      }
+     }
+    }
+    AnimSrcNodeBlendN DamageLightN {
+     EditorPos -3.4 2.4
+     BlendWeight "DamageDirection"
+     BlendFn S
+     Thresholds {
+      -180 -90 0 90 180
+     }
+     Children {
+      "DamageLightBAnim" "DamageLightLAnim" "DamageLightFAnim" "DamageLightRAnim"
+     }
+     IsCyclic 1
+    }
+    AnimSrcNodeGroupSelect DamageLightPneG {
+     EditorPos -1.1 1.1
+     Child "DamageLightN"
+     Group "Damage"
+     Column "PneRas"
+    }
+    AnimSrcNodeSource DamageLightRAnim {
+     EditorPos -2.3 3.8
+     Source "Damage.LightR"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeStateMachine HeavyDamageDirSTM {
+     EditorPos 5.9 3.1
+     states {
+      AnimSrcNodeState FromRight {
+       EditorPos 8.2 4.8
+       Child "DamageHeavyRAnim"
+       StartCondition "inRange(DamageDirection, 45.0, 135.0)"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState FromLeft {
+       EditorPos 3.6 4.8
+       Child "DamageHeavyLAnim"
+       StartCondition "inRange(DamageDirection, -135.0, -45.0)"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState FromBack {
+       EditorPos 5.9 5.3
+       Child "DamageHeavyBAnim"
+       StartCondition "inRange(DamageDirection, -180.0, -135.0) || inRange(DamageDirection, 135.0, 180.0)"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState FromFront {
+       EditorPos 5.9 4.3
+       Child "DamageHeavyFAnim"
+       StartCondition "inRange(DamageDirection, -45.0, 45.0)"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+     }
+    }
+    AnimSrcNodeWeaponIk HeavyDamageWeaponIK {
+     EditorPos 3.1 -3.3
+     Child "DamageHeavyMaster"
+     IkconfigName "WeaponIKTest"
+     Ikconfig "// ik pose anim"\
+     "// (root - means RightHand - but right hand is not exported)"\
+     "//   |- RightHand_Dummy (where Weapon is)"\
+     "//   |                |-  LeftHandIKTarget  (where left hand is on weapon)"\
+     "//   |- RightHandOrigin ( inverse transform where hand originally was)"\
+     ""\
+     "// basic setup - "\
+     "// hand - bone which represents hand holding weapon"\
+     "// weapon - bone which represents weapon node in hand"\
+     "// weaponrotator - bone - around which weapon rotates"\
+     "hand = RightHand"\
+     "weapon = RightHandProp"\
+     "weaponrotator = RightArm "\
+     "weaponaxis= +z"\
+     ""\
+     "//! "\
+     "chain = rightarm, rightarmtwist, rightforearm, rightforearmtwist, righthand"\
+     "chainaxis=-y"\
+     "secchain = leftarm, leftarmtwist, leftforearm, leftforearmtwist, lefthand"\
+     "secchainaxis=+y"\
+     ""\
+     "ikpose_chainoffset = RightHandOrigin              						// bone in ikpose specifying where was "\
+     "ikpose_weaponoffset = RightHandProp      								// weapon offset from RHand "\
+     "ikpose_secchainoffset = LeftHandIKTarget      							// secondary chain ik target offset (relative to weapon)"\
+     "ikpose_chainmiddledir = RightForeArmDirection							// hand to elbow direction (from hand)"\
+     "ikpose_chainmiddlediro = RightHandOrigin,RightForeArmDirectionOrigin	// original hand to elbow direction (from hand)"\
+     "ikpose_secchainmiddledir = LeftForeArmDirection							// sec hand to elbow direction (from ikpose_secchainoffset)"\
+     "ikpose_secchainmiddlediro = LeftHandOrigin,LeftForeArmDirectionOrigin	// original sec hand to elbow direction (from ikpose_secchainoffset)"\
+     ""\
+     ""
+     BlendInTime 0.3
+     BlendOutTime 0.2
+     WeightAim "false"
+     WeightPrimaryChain "false"
+     WeightSecondaryChain "false"
+     WeaponDirLr "AimIKX"
+     WeaponDirUd "AimY"
+     WeaponRoll "AimIKZ"
+     WeaponTransX "AimTransX"
+     WeaponTransY "AimTransY"
+     WeaponTransZ "AimTransZ"
+    }
+    AnimSrcNodeWeaponIk LightDamageWeaponIK {
+     EditorPos -6.2 -4.9
+     Child "Blend 12"
+     IkconfigName "WeaponIKTest"
+     Ikconfig "// ik pose anim"\
+     "// (root - means RightHand - but right hand is not exported)"\
+     "//   |- RightHandProp (where Weapon is)"\
+     "//   |                |-  LeftHandIKTarget  (where left hand is on weapon)"\
+     "//   |- RightHandOrigin ( inverse transform where hand originally was)"\
+     ""\
+     "// basic setup - "\
+     "// hand - bone which represents hand holding weapon"\
+     "// weapon - bone which represents weapon node in hand"\
+     "// weaponrotator - bone - around which weapon rotates"\
+     "hand = RightHand"\
+     "weapon = RightHandProp"\
+     "weaponrotator = RightArm"\
+     "weaponaxis = +z"\
+     ""\
+     "chain = rightarm, rightarmtwist, rightforearm, rightforearmtwist, righthand"\
+     "chainaxis = -y"\
+     "secchain = leftarm, leftarmtwist, leftforearm, leftforearmtwist, lefthand"\
+     "secchainaxis = +y"\
+     ""\
+     "ikpose_chainoffset = RightHandOrigin              			// bone in ikpose specifying where was "\
+     "ikpose_weaponoffset = RightHandProp      			// weapon offset from RHand "\
+     "ikpose_secchainoffset = LeftHandIKTarget      			// secondary chain ik target offset (relative to weapon)"\
+     "ikpose_chainmiddledir = RightForeArmDirection			// hand to elbow direction (from hand)"\
+     "ikpose_chainmiddlediro = RightHandOrigin,RightForeArmDirectionOrigin	// original hand to elbow direction (from hand)"\
+     "ikpose_secchainmiddledir = LeftForeArmDirection			// sec hand to elbow direction (from ikpose_secchainoffset)"\
+     "ikpose_secchainmiddlediro = LeftHandOrigin,LeftForeArmDirectionOrigin	// original sec hand to elbow direction (from ikpose_secchainoffset)"\
+     ""\
+     ""
+     BlendInTime 0
+     BlendOutTime 0
+     WeightAim "0"
+     WeightPrimaryChain "isbitset(ArmIK, 1) && !IsTag(\"TagWeaponAction\")"
+     WeightSecondaryChain "isbitset(ArmIK, 2) && !IsTag(\"TagProneTransition\") && !IsTag(\"TagMelee\") && !IsEvent(\"IK_Release_L\") && !IsTag(\"TagWeaponAction\") "
+     WeaponDirLr "AimIKX"
+     WeaponDirUd "AimIKY"
+     WeaponRoll "AimIKZ"
+     WeaponTransX "AimTransX"
+     WeaponTransY "AimTransY"
+     WeaponTransZ "AimTransZ"
+    }
+    AnimSrcNodeBufferUse "Buffer Use 3" {
+     EditorPos -4.6 -2.8
+     BufferName "FullbodyGadget"
+    }
+    AnimSrcNodeBlend "Blend 12" {
+     EditorPos -6.2 -3.8
+     BlendWeight "0"
+     Child0 "DamageLightMaster"
+     Child1 "Buffer Use 3"
+    }
+   }
+  }
+  AnimSrcGraphSheet Melee {
+   Nodes {
+    AnimSrcNodeSource MeleeAttack01Src {
+     EditorPos 4.2 11.4
+     Source "MeleeAttacks.MeleeAttack01"
+     Looptype "No Loop"
+     BonesInterpolatedInModelSpace {
+      "RightHandProp"
+     }
+    }
+    AnimSrcNodeGroupSelect MeleeAttack01_CroRasG {
+     EditorPos 2.9 7.8
+     Child "MeleeAttack01Src"
+     Group "MeleeAttacks"
+     Column "CroRas"
+    }
+    AnimSrcNodeGroupSelect MeleeAttack01_ErcRasG {
+     EditorPos -1.9 7.8
+     Child "MeleeAttack01Src"
+     Group "MeleeAttacks"
+     Column "ErcRas"
+    }
+    AnimSrcNodeGroupSelect MeleeAttack01_PneRasG {
+     EditorPos 7.6 7.8
+     Child "MeleeAttack01Src"
+     Group "MeleeAttacks"
+     Column "PneRas"
+    }
+    AnimSrcNodeStateMachine MeleeAttacksSTM {
+     Tags {
+      "TagMelee"
+     }
+     EditorPos -2.3 3.9
+     states {
+      AnimSrcNodeState MeleeAttack01_ErcRas {
+       EditorPos -1.9 5.3
+       Child "MeleeAttack01_ErcRasG"
+       StartCondition "Stance == 0 && !Low"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState MeleeAttack01_CroRas {
+       EditorPos 2.9 5.3
+       Child "MeleeAttack01_CroRasG"
+       StartCondition "Stance == 1 && !Low"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState MeleeAttack01_PneRas {
+       EditorPos 7.6 5.3
+       Child "MeleeAttack01_PneRasG"
+       StartCondition "Stance == 2 && !Low"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState MeleeAttack01_ErcLow {
+       EditorPos 0.5 5.3
+       Child "MeleeAttack01_ErcLowG"
+       StartCondition "Stance == 0 && Low"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState MeleeAttack01_CroLow {
+       EditorPos 5.3 5.3
+       Child "MeleeAttack01_CroLowG"
+       StartCondition "Stance == 1 && Low"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState MeleeAttack01_PneLow {
+       EditorPos 9.9 5.3
+       Child "MeleeAttack01_PneLowG"
+       StartCondition "Stance == 2 && Low"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+     }
+    }
+    AnimSrcNodeQueue MeleeMasterQ {
+     EditorPos -2.3 -9.9
+     Child "MeleeNodeRot"
+     QueueItems {
+      AnimSrcNodeQueueItem "{5190AC4BE1BCCE48}" {
+       Child "LightDamageWeaponIK"
+       StartExpr ""
+       InterruptExpr ""
+       StartTime ""
+       BlendInTime 0.3
+       BlendOutTime 0.3
+       InterruptOthers 0
+       IsReentrant 1
+      }
+     }
+    }
+    AnimSrcNodeProcTransform MeleeNodeRot {
+     EditorPos -2.5 -8.2
+     Child "MeleeWeaponIK"
+     Expression "LeanForward * 0.01745329251994329576923690768489"
+     Bones {
+      AnimSrcNodeProcTrBoneItem "{5190AC4BE1BCCE6E}" {
+       Bone "spine1"
+       Axis X
+       Space Model
+       Op Rotate
+       Amount 0.3
+      }
+      AnimSrcNodeProcTrBoneItem "{5190AC4BE1BCCF99}" {
+       Bone "spine2"
+       Axis X
+       Space Model
+       Op Rotate
+       Amount 0.2
+      }
+      AnimSrcNodeProcTrBoneItem "{5190AC4BE1BCCF9F}" {
+       Bone "spine3"
+       Axis X
+       Space Model
+       Op Rotate
+       Amount 0.1
+      }
+      AnimSrcNodeProcTrBoneItem "{5190AC4BE1BCCF82}" {
+       Bone "spine4"
+       Axis X
+       Space Model
+       Op Rotate
+       Amount 0.1
+      }
+      AnimSrcNodeProcTrBoneItem "{5190AC4BE1BCCF89}" {
+       Bone "spine5"
+       Axis X
+       Space Model
+       Op Rotate
+       Amount 0.1
+      }
+      AnimSrcNodeProcTrBoneItem "{5190AC4BE1BCCF8D}" {
+       Bone "rightshoulder"
+       Axis X
+       Space Model
+       Op Rotate
+       Amount 0.3
+      }
+      AnimSrcNodeProcTrBoneItem "{5190AC4BE1BCCFB5}" {
+       Bone "leftshoulder"
+       Axis X
+       Space Model
+       Op Rotate
+       Amount 0.3
+      }
+     }
+    }
+    AnimSrcNodeWeaponIk MeleeWeaponIK {
+     EditorPos -1.9 -6.2
+     Child "MeleeAttacksSTM"
+     IkconfigName "WeaponIKTest"
+     Ikconfig "// ik pose anim"\
+     "// (root - means RightHand - but right hand is not exported)"\
+     "//   |- RightHandProp     (where Weapon is)"\
+     "//   |                |-  LeftHandIKTarget  (where left hand is on weapon)"\
+     "//   |- RightHandOrigin ( inverse transform where hand originally was)"\
+     ""\
+     "// basic setup - "\
+     "// hand - bone which represents hand holding weapon"\
+     "// weapon - bone which represents weapon node in hand"\
+     "// weaponrotator - bone - around which weapon rotates"\
+     "hand = RightHand"\
+     "weapon = RightHandProp"\
+     "weaponrotator = RightArm "\
+     "weaponaxis= -x"\
+     ""\
+     ""\
+     "chain = RightArm, RightArmTwist, RightForeArm, RightForeArmTwist, RightHand"\
+     "chainaxis=-x"\
+     "secchain = LeftArm, LeftArmTwist, LeftForeArm, LeftForeArmTwist, LeftHand"\
+     "secchainaxis=+x"\
+     ""\
+     "ikpose_chainoffset = RightHandOrigin              			// bone in ikpose specifying where was "\
+     "ikpose_weaponoffset = RightHandProp     			// weapon offset from RHand "\
+     "ikpose_secchainoffset = LeftHandIKTarget      			// secondary chain ik target offset (relative to weapon)"\
+     "ikpose_chainmiddledir = RightForeArmDirection			// hand to elbow direction (from hand)"\
+     "ikpose_chainmiddlediro = RightHandOrigin,RightForeArmDirectionOrigin	// original hand to elbow direction (from hand)"\
+     "ikpose_secchainmiddledir = LeftForeArmDirection			// sec hand to elbow direction (from ikpose_secchainoffset)"\
+     "ikpose_secchainmiddlediro = LeftHandOrigin,LeftForeArmDirectionOrigin	// original sec hand to elbow direction (from ikpose_secchainoffset)"
+     BlendInTime 0.3
+     BlendOutTime 0
+     WeightAim "false"
+     WeightPrimaryChain "isbitset(ArmIK, 1) && WeaponType != 6 && WeaponType != 4"
+     WeightSecondaryChain "isbitset(ArmIK, 2) && WeaponType != 4 && !IsEvent(\"IK_Release_L\")"
+     WeaponDirLr "0.0"
+     WeaponDirUd "0.0"
+     WeaponRoll "0.0"
+     WeaponTransX "0.0"
+     WeaponTransY "0.0"
+     WeaponTransZ "0.0"
+    }
+    AnimSrcNodeGroupSelect MeleeAttack01_ErcLowG {
+     EditorPos 0.5 7.8
+     Child "MeleeAttack01Src"
+     Group "MeleeAttacks"
+     Column "ErcLow"
+    }
+    AnimSrcNodeGroupSelect MeleeAttack01_CroLowG {
+     EditorPos 5.3 7.8
+     Child "MeleeAttack01Src"
+     Group "MeleeAttacks"
+     Column "CroLow"
+    }
+    AnimSrcNodeGroupSelect MeleeAttack01_PneLowG {
+     EditorPos 9.9 7.8
+     Child "MeleeAttack01Src"
+     Group "MeleeAttacks"
+     Column "PneLow"
+    }
+   }
+  }
+ }
+}

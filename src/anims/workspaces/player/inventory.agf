@@ -1,0 +1,81 @@
+AnimSrcGraphFile {
+ Sheets {
+  AnimSrcGraphSheet Master {
+   Nodes {
+    AnimSrcNodeWeaponIk WeaponIK {
+     EditorPos -61.2 75
+     Child "Idle"
+     IkconfigName "WeaponIKTest"
+     Ikconfig "// ik pose anim"\
+     "// (root - means RightHand - but right hand is not exported)"\
+     "//   |- RightHandProp (where Weapon is)"\
+     "//   |                |-  LeftHandIKTarget  (where left hand is on weapon)"\
+     "//   |- RightHandOrigin ( inverse transform where hand originally was)"\
+     ""\
+     "// basic setup - "\
+     "// hand - bone which represents hand holding weapon"\
+     "// weapon - bone which represents weapon node in hand"\
+     "// weaponrotator - bone - around which weapon rotates"\
+     "hand = RightHand"\
+     "weapon = RightHandProp"\
+     "weaponrotator = RightArm"\
+     "weaponaxis = +z"\
+     ""\
+     "chain = rightarm, rightarmtwist, rightforearm, rightforearmtwist, righthand"\
+     "chainaxis = -y"\
+     "secchain = leftarm, leftarmtwist, leftforearm, leftforearmtwist, lefthand"\
+     "secchainaxis = +y"\
+     ""\
+     "ikpose_chainoffset = RightHandOrigin              			// bone in ikpose specifying where was "\
+     "ikpose_weaponoffset = RightHandProp      			// weapon offset from RHand "\
+     "ikpose_secchainoffset = LeftHandIKTarget      			// secondary chain ik target offset (relative to weapon)"\
+     "ikpose_chainmiddledir = RightForeArmDirection			// hand to elbow direction (from hand)"\
+     "ikpose_chainmiddlediro = RightHandOrigin,RightForeArmDirectionOrigin	// original hand to elbow direction (from hand)"\
+     "ikpose_secchainmiddledir = LeftForeArmDirection			// sec hand to elbow direction (from ikpose_secchainoffset)"\
+     "ikpose_secchainmiddlediro = LeftHandOrigin,LeftForeArmDirectionOrigin	// original sec hand to elbow direction (from ikpose_secchainoffset)"\
+     ""\
+     ""
+     BlendInTime 0.36
+     BlendOutTime 0.15
+     WeightAim ""
+     WeightPrimaryChain "isbitset(ArmIK, 1)"
+     WeightSecondaryChain "isbitset(ArmIK, 2) && !IsTag(\"TagErcToPneMove\") && !IsTag(\"TagPneToErcMove\") && !IsTag(\"TagPneToErc\") && !IsTag(\"TagErcToPne\") && !IsTag(\"TagCroToPne\")  && !IsTag(\"TagPneToCro\")  && !IsTag(\"TagCroToPneMove\")  && !IsTag(\"TagPneToCroMove\")  "
+     WeaponDirLr "AimIKX"
+     WeaponDirUd "AimY"
+     WeaponRoll "AimIKZ"
+     WeaponTransX "AimTransX"
+     WeaponTransY "AimTransY"
+     WeaponTransZ "AimTransZ"
+    }
+    AnimSrcNodeBufferSave "Buffer Save 1" {
+     EditorPos -61.2 73.8
+     Child "WeaponIK"
+     BufferName "FullbodyGadget"
+    }
+    AnimSrcNodeBlendT MasterControl {
+     EditorPos -61.2 71.9
+     BlendTime "0.2"
+     TriggerOn ""
+     TriggerOff ""
+     Condition "IsAttachment (\"Gadget\") && !IsTag(\"TagProneTransition\")"
+     Child0 "Buffer Save 1"
+     Child1 "Gadget"
+     OptimizeMin 0
+     OptimizeMax 0
+     PostEval 1
+    }
+    AnimSrcNodeAttachment Gadget {
+     Tags {
+     }
+     EditorPos -60 72.8
+     Binding "Gadget"
+    }
+    AnimSrcNodeSource Idle {
+     EditorPos -61.4 76.8
+     Source "Idles.Low.Idle"
+     Looptype Loop
+    }
+   }
+  }
+ }
+}

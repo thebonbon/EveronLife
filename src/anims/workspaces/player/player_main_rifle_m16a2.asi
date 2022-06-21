@@ -1,0 +1,38 @@
+AnimSetInstanceSource "{21158E82688907CC}anims/workspaces/player/arma_4_player/player_main_rifle_m16a2.asi" {
+ Template "{CD0E6C3490BF0847}anims/workspaces/player/arma_4_player/player_main.ast"
+ ParentTemplates {
+  "{0350283642830782}anims/workspaces/player/arma_4_player/player_main_rifle.asi"
+ }
+ Lines {
+  AnimSetInstanceSource_Line "WeaponActions.ErcRas.Fire" {
+   Resource "{8FA419B49E84DC1F}Assets/Weapons/Rifles/M16A2/anims/anm/p_rfl_m16_erc_fire.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponActions.ErcRas.ReloadActionBolt" {
+   Resource "{0BDFF022ED120701}Assets/Weapons/Rifles/M16A2/anims/anm/p_rfl_m16_erc_reload_action_Closed.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponActions.ErcRas.ReloadActionSlideRelease" {
+   Resource "{45B32798903E6D26}Assets/Weapons/Rifles/M16A2/anims/anm/p_rfl_m16_erc_reload_action_Open.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponActions.ErcRas.ReloadInsertMag" {
+   Resource "{9939F8EE34A5F7F7}Assets/Weapons/Rifles/M16A2/anims/anm/p_rfl_m16_erc_insert_mag.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponActions.ErcRas.ReloadRemoveMag" {
+   Resource "{525D871AF2D3C59D}Assets/Weapons/Rifles/M16A2/anims/anm/p_rfl_m16_erc_remove_mag.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponActions.PneRas.Fire" {
+   Resource "{8FA419B49E84DC1F}Assets/Weapons/Rifles/M16A2/anims/anm/p_rfl_m16_erc_fire.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponActions.PneRas.ReloadActionBolt" {
+   Resource "{BA7DA779E329B415}Assets/Weapons/Rifles/M16A2/anims/anm/p_rfl_m16_pne_reload_action_Closed.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponActions.PneRas.ReloadActionSlideRelease" {
+   Resource "{E258941673D47CA1}Assets/Weapons/Rifles/M16A2/anims/anm/p_rfl_m16_pne_reload_action_Open.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponActions.PneRas.ReloadInsertMag" {
+   Resource "{2DAEE5577B06D353}Assets/Weapons/Rifles/M16A2/anims/anm/p_rfl_m16_pne_insert_mag.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponActions.PneRas.ReloadRemoveMag" {
+   Resource "{E6CA9AA3BD70E139}Assets/Weapons/Rifles/M16A2/anims/anm/p_rfl_m16_pne_remove_mag.anm"
+  }
+ }
+}

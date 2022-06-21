@@ -560,3 +560,11 @@ $grp GenericEntity {
   }
  }
 }
+Vehicle POLICE1 : "{6AD92B2938D37745}Prefabs/Vehicles/POLICE.et" {
+ components {
+  SCR_VehicleDamageManagerComponent "{141326E9FD94FE40}" {
+   m_fVehicleDestroyDamage 11880.1
+  }
+ }
+ coords 4451.551 19.979 10561.592
+}

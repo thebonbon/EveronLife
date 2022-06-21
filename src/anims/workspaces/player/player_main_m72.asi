@@ -1,0 +1,846 @@
+AnimSetInstanceSource {
+ Template "{CD0E6C3490BF0847}anims/workspaces/player/player_main.ast"
+ ParentTemplates {
+  "{81E91C367B2A22D6}anims/workspaces/player/player_main_rpg.asi"
+ }
+ IkPose "{5FBD2FEFF92ABBF9}Assets/Weapons/Launchers/M72/anims/anm/p_M72_ik.anm"
+ Lines {
+  AnimSetInstanceSource_Line "WeaponSwitching.ErcRas.Hide01" {
+   Resource "{C0E77CFA951F7152}anims/anm/player/weaponswitch/M72/p_M72_erc_slot_backL_hide_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponSwitching.ErcRas.Show01" {
+   Resource "{FDE611C95849129B}anims/anm/player/weaponswitch/M72/p_M72_erc_slot_backL_show_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponSwitching.ErcLow.Hide01" {
+   Resource "{8DEE37FAD75469E3}anims/anm/player/weaponswitch/M72/p_M72_erc_slot_backL_hide_low.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponSwitching.ErcLow.Show01" {
+   Resource "{B0EF5AC91A020A2A}anims/anm/player/weaponswitch/M72/p_M72_erc_slot_backL_show_low.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponSwitching.ErcLow.Hide02" {
+   Resource "{602D7CE62EAD4F70}anims/anm/player/weaponswitch/M72/p_M72_erc_slot_backR_hide_low.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponSwitching.ErcLow.Show02" {
+   Resource "{5D2C11D5E3FB2CB9}anims/anm/player/weaponswitch/M72/p_M72_erc_slot_backR_show_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.RunB" {
+   Resource "{6FF58D87F42EA562}anims/anm/player/locomotion/M72/p_M72_pne_runB_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.RunBL" {
+   Resource "{686B8E67D7034CB6}anims/anm/player/locomotion/M72/p_M72_pne_runBL_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.RunBR" {
+   Resource "{04A524B643552DD2}anims/anm/player/locomotion/M72/p_M72_pne_runBR_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.RunF" {
+   Resource "{7822829859654FBA}anims/anm/player/locomotion/M72/p_M72_pne_runF_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.RunFL" {
+   Resource "{577BAD4CF874A633}anims/anm/player/locomotion/M72/p_M72_pne_runFL_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.RunFR" {
+   Resource "{3BB5079D6C22C757}anims/anm/player/locomotion/M72/p_M72_pne_runFR_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.RunL" {
+   Resource "{5C671B28D5576F66}anims/anm/player/locomotion/M72/p_M72_pne_runL_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.RunR" {
+   Resource "{30A9B1F941010E02}anims/anm/player/locomotion/M72/p_M72_pne_runR_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.SprintF" {
+   Resource "{F98263A6D4B88223}anims/anm/player/locomotion/M72/p_M72_pne_sprintF_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.SprintFL" {
+   Resource "{439097EAF1617D6D}anims/anm/player/locomotion/M72/p_M72_pne_sprintFL_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.SprintFR" {
+   Resource "{2F5E3D3B65371C09}anims/anm/player/locomotion/M72/p_M72_pne_sprintFR_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.WalkB" {
+   Resource "{A0DB5519DA20ACB1}anims/anm/player/locomotion/M72/p_M72_pne_walkB_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.WalkBL" {
+   Resource "{76087F6FA6ADA480}anims/anm/player/locomotion/M72/p_M72_pne_walkBL_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.WalkBR" {
+   Resource "{1AC6D5BE32FBC5E4}anims/anm/player/locomotion/M72/p_M72_pne_walkBR_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.WalkF" {
+   Resource "{B70C5A06776B4669}anims/anm/player/locomotion/M72/p_M72_pne_walkF_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.WalkFL" {
+   Resource "{49185C4489DA4E05}anims/anm/player/locomotion/M72/p_M72_pne_walkFL_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.WalkFR" {
+   Resource "{25D6F6951D8C2F61}anims/anm/player/locomotion/M72/p_M72_pne_walkFR_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.WalkL" {
+   Resource "{9349C3B6FB5966B5}anims/anm/player/locomotion/M72/p_M72_pne_walkL_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.WalkR" {
+   Resource "{FF8769676F0F07D1}anims/anm/player/locomotion/M72/p_M72_pne_walkR_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneLow.WalkB" {
+   Resource "{A0DB5519DA20ACB1}anims/anm/player/locomotion/M72/p_M72_pne_walkB_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneLow.WalkBL" {
+   Resource "{76087F6FA6ADA480}anims/anm/player/locomotion/M72/p_M72_pne_walkBL_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneLow.WalkBR" {
+   Resource "{1AC6D5BE32FBC5E4}anims/anm/player/locomotion/M72/p_M72_pne_walkBR_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneLow.WalkF" {
+   Resource "{B70C5A06776B4669}anims/anm/player/locomotion/M72/p_M72_pne_walkF_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneLow.WalkFL" {
+   Resource "{49185C4489DA4E05}anims/anm/player/locomotion/M72/p_M72_pne_walkFL_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneLow.WalkFR" {
+   Resource "{25D6F6951D8C2F61}anims/anm/player/locomotion/M72/p_M72_pne_walkFR_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneLow.WalkL" {
+   Resource "{9349C3B6FB5966B5}anims/anm/player/locomotion/M72/p_M72_pne_walkL_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneLow.WalkR" {
+   Resource "{FF8769676F0F07D1}anims/anm/player/locomotion/M72/p_M72_pne_walkR_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneLow.RunB" {
+   Resource "{6FF58D87F42EA562}anims/anm/player/locomotion/M72/p_M72_pne_runB_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneLow.RunBL" {
+   Resource "{686B8E67D7034CB6}anims/anm/player/locomotion/M72/p_M72_pne_runBL_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneLow.RunBR" {
+   Resource "{04A524B643552DD2}anims/anm/player/locomotion/M72/p_M72_pne_runBR_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneLow.RunF" {
+   Resource "{7822829859654FBA}anims/anm/player/locomotion/M72/p_M72_pne_runF_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneLow.RunFL" {
+   Resource "{577BAD4CF874A633}anims/anm/player/locomotion/M72/p_M72_pne_runFL_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneLow.RunFR" {
+   Resource "{3BB5079D6C22C757}anims/anm/player/locomotion/M72/p_M72_pne_runFR_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneLow.RunL" {
+   Resource "{5C671B28D5576F66}anims/anm/player/locomotion/M72/p_M72_pne_runL_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneLow.RunR" {
+   Resource "{30A9B1F941010E02}anims/anm/player/locomotion/M72/p_M72_pne_runR_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneLow.SprintF" {
+   Resource "{F98263A6D4B88223}anims/anm/player/locomotion/M72/p_M72_pne_sprintF_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneLow.SprintFL" {
+   Resource "{439097EAF1617D6D}anims/anm/player/locomotion/M72/p_M72_pne_sprintFL_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneLow.SprintFR" {
+   Resource "{2F5E3D3B65371C09}anims/anm/player/locomotion/M72/p_M72_pne_sprintFR_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroLow.RunB" {
+   Resource "{64607B64DA9A29E4}anims/anm/player/locomotion/M72/p_M72_cro_runB_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroLow.RunBL" {
+   Resource "{A8EA83FF853448BD}anims/anm/player/locomotion/M72/p_M72_cro_runBL_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroLow.RunBR" {
+   Resource "{C424292E116229D9}anims/anm/player/locomotion/M72/p_M72_cro_runBR_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroLow.RunF" {
+   Resource "{73B7747B77D1C33C}anims/anm/player/locomotion/M72/p_M72_cro_runF_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroLow.RunFL" {
+   Resource "{97FAA0D4AA43A238}anims/anm/player/locomotion/M72/p_M72_cro_runFL_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroLow.RunFR" {
+   Resource "{FB340A053E15C35C}anims/anm/player/locomotion/M72/p_M72_cro_runFR_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroLow.WalkB" {
+   Resource "{605A58818817A8BA}anims/anm/player/locomotion/M72/p_M72_cro_walkB_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroLow.WalkBL" {
+   Resource "{DBFA00E806F7FA62}anims/anm/player/locomotion/M72/p_M72_cro_walkBL_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroLow.WalkBR" {
+   Resource "{B734AA3992A19B06}anims/anm/player/locomotion/M72/p_M72_cro_walkBR_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroLow.WalkF" {
+   Resource "{778D579E255C4262}anims/anm/player/locomotion/M72/p_M72_cro_walkF_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroLow.WalkFL" {
+   Resource "{E4EA23C3298010E7}anims/anm/player/locomotion/M72/p_M72_cro_walkFL_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroLow.WalkFR" {
+   Resource "{88248912BDD67183}anims/anm/player/locomotion/M72/p_M72_cro_walkFR_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcLow.RunB" {
+   Resource "{8266EE4FFEEDA350}anims/anm/player/locomotion/M72/p_M72_erc_runB_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcLow.RunBL" {
+   Resource "{82281B6319B52378}anims/anm/player/locomotion/M72/p_M72_erc_runBL_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcLow.RunBR" {
+   Resource "{EEE6B1B28DE3421C}anims/anm/player/locomotion/M72/p_M72_erc_runBR_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcLow.RunF" {
+   Resource "{95B1E15053A64988}anims/anm/player/locomotion/M72/p_M72_erc_runF_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcLow.RunFL" {
+   Resource "{BD38384836C2C9FD}anims/anm/player/locomotion/M72/p_M72_erc_runFL_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcLow.RunFR" {
+   Resource "{D1F69299A294A899}anims/anm/player/locomotion/M72/p_M72_erc_runFR_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcLow.WalkB" {
+   Resource "{4A98C01D1496C37F}anims/anm/player/locomotion/M72/p_M72_erc_walkB_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcLow.WalkBL" {
+   Resource "{C29F62D6E90E8024}anims/anm/player/locomotion/M72/p_M72_erc_walkBL_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcLow.WalkBR" {
+   Resource "{AE51C8077D58E140}anims/anm/player/locomotion/M72/p_M72_erc_walkBR_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcLow.WalkF" {
+   Resource "{5D4FCF02B9DD29A7}anims/anm/player/locomotion/M72/p_M72_erc_walkF_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcLow.WalkFL" {
+   Resource "{FD8F41FDC6796AA1}anims/anm/player/locomotion/M72/p_M72_erc_walkFL_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcLow.WalkFR" {
+   Resource "{9141EB2C522F0BC5}anims/anm/player/locomotion/M72/p_M72_erc_walkFR_low.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.AdjRas.Aimspace" {
+   Resource "{FDFCABC9751FC13A}anims/anm/player/locomotion/M72/IdleTurns/p_M72_adj_aimspace_body_ras.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.AdjRas.Idle" {
+   Resource "{E976841EC7BB3431}anims/anm/player/locomotion/M72/IdleTurns/p_M72_adj_idle_ras_breath_.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.AdjRas.Turn0" {
+   Resource "{1562E363E7D6D42C}anims/anm/player/locomotion/M72/IdleTurns/p_M72_adj_turn_0_ras.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.AdjRas.TurnL180" {
+   Resource "{87E525CDF0082AD9}anims/anm/player/locomotion/M72/IdleTurns/p_M72_adj_turnL_180_ras.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.AdjRas.TurnL90" {
+   Resource "{C5A66B82F8BC8335}anims/anm/player/locomotion/M72/IdleTurns/p_M72_adj_turnL_90_ras.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.AdjRas.TurnR180" {
+   Resource "{864A1667075839C9}anims/anm/player/locomotion/M72/IdleTurns/p_M72_adj_turnR_180_ras.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.AdjRas.TurnR90" {
+   Resource "{08129E1DA367A070}anims/anm/player/locomotion/M72/IdleTurns/p_M72_adj_turnR_90_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroRas.WalkFR" {
+   Resource "{C52DC212FF9D6932}anims/anm/player/locomotion/M72/p_M72_cro_walkFR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.CroRas.Aimspace" {
+   Resource "{24A02B08C3793A07}anims/anm/player/locomotion/M72/IdleTurns/p_M72_cro_aimspace_body_ras.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.CroLow.Idle" {
+   Resource "{C76EFB4EF8E4ED16}anims/anm/player/locomotion/M72/IdleTurns/p_M72_cro_idle_low_breath.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.CroRas.Idle" {
+   Resource "{C39D2A665CBB771A}anims/anm/player/locomotion/M72/IdleTurns/p_M72_cro_idle_ras_breath.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.CroLow.Turn0" {
+   Resource "{AAFA496A2C432D5A}anims/anm/player/locomotion/M72/IdleTurns/p_M72_cro_turn_0_low.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.CroRas.Turn0" {
+   Resource "{E7F3026A6E0835EB}anims/anm/player/locomotion/M72/IdleTurns/p_M72_cro_turn_0_ras.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.CroLow.TurnL180" {
+   Resource "{EB1C722123F64A89}anims/anm/player/locomotion/M72/IdleTurns/p_M72_cro_turnL_180_low.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.CroRas.TurnL180" {
+   Resource "{A615392161BD5238}anims/anm/player/locomotion/M72/IdleTurns/p_M72_cro_turnL_180_ras.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.CroLow.TurnL90" {
+   Resource "{252DF5C14D81F280}anims/anm/player/locomotion/M72/IdleTurns/p_M72_cro_turnL_90_low.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.CroRas.TurnL90" {
+   Resource "{6824BEC10FCAEA31}anims/anm/player/locomotion/M72/IdleTurns/p_M72_cro_turnL_90_ras.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.CroLow.TurnR180" {
+   Resource "{EAB3418BD4A65999}anims/anm/player/locomotion/M72/IdleTurns/p_M72_cro_turnR_180_low.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.CroRas.TurnR180" {
+   Resource "{A7BA0A8B96ED4128}anims/anm/player/locomotion/M72/IdleTurns/p_M72_cro_turnR_180_ras.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.CroLow.TurnR90" {
+   Resource "{E899005E165AD1C5}anims/anm/player/locomotion/M72/IdleTurns/p_M72_cro_turnR_90_low.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.CroRas.TurnR90" {
+   Resource "{A5904B5E5411C974}anims/anm/player/locomotion/M72/IdleTurns/p_M72_cro_turnR_90_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroRas.WalkFL" {
+   Resource "{A9E368C36BCB0856}anims/anm/player/locomotion/M72/p_M72_cro_walkFL_ras.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.ErcRas.Aimspace" {
+   Resource "{85F901E6416DD1F8}anims/anm/player/locomotion/M72/IdleTurns/p_M72_erc_aimspace_body_ras.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.ErcLow.Idle" {
+   Resource "{B5462A38C40C4952}anims/anm/player/locomotion/M72/IdleTurns/p_M72_erc_idle_low_breath.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.ErcRas.Idle" {
+   Resource "{B1B5FB106053D35E}anims/anm/player/locomotion/M72/IdleTurns/p_M72_erc_idle_ras_breath.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.ErcLow.Turn0" {
+   Resource "{B39F2B54C3BA571C}anims/anm/player/locomotion/M72/IdleTurns/p_M72_erc_turn_0_low.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.ErcRas.Turn0" {
+   Resource "{FE96605481F14FAD}anims/anm/player/locomotion/M72/IdleTurns/p_M72_erc_turn_0_ras.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.ErcLow.TurnL180" {
+   Resource "{C0E6DC786A913F79}anims/anm/player/locomotion/M72/IdleTurns/p_M72_erc_turnL_180_low.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.ErcRas.TurnL180" {
+   Resource "{8DEF977828DA27C8}anims/anm/player/locomotion/M72/IdleTurns/p_M72_erc_turnL_180_ras.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.ErcLow.TurnL90" {
+   Resource "{6195390B442CBB38}anims/anm/player/locomotion/M72/IdleTurns/p_M72_erc_turnL_90_low.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.ErcRas.TurnL90" {
+   Resource "{2C9C720B0667A389}anims/anm/player/locomotion/M72/IdleTurns/p_M72_erc_turnL_90_ras.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.ErcLow.TurnR180" {
+   Resource "{C149EFD29DC12C69}anims/anm/player/locomotion/M72/IdleTurns/p_M72_erc_turnR_180_low.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.ErcRas.TurnR180" {
+   Resource "{8C40A4D2DF8A34D8}anims/anm/player/locomotion/M72/IdleTurns/p_M72_erc_turnR_180_ras.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.ErcLow.TurnR90" {
+   Resource "{AC21CC941FF7987D}anims/anm/player/locomotion/M72/IdleTurns/p_M72_erc_turnR_90_low.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.ErcRas.TurnR90" {
+   Resource "{E12887945DBC80CC}anims/anm/player/locomotion/M72/IdleTurns/p_M72_erc_turnR_90_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.GoCrouch" {
+   Resource "{06F3A0BEAF0F31E8}anims/anm/player/locomotion/M72/transitions/p_M72_erc_trans_cro_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcLow.GoCrouch" {
+   Resource "{4BFAEBBEED442959}anims/anm/player/locomotion/M72/transitions/p_M72_erc_trans_cro_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcAdj.GoCrouch" {
+   Resource "{42F89A9246F858CE}anims/anm/player/locomotion/M72/transitions/p_M72_adj_trans_cro_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneADS.GoCrouch" {
+   Resource "{03938BCC0FE39C65}anims/anm/player/locomotion/M72/transitions/p_M72_pne_trans_cro_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneLow.GoCrouch" {
+   Resource "{03938BCC0FE39C65}anims/anm/player/locomotion/M72/transitions/p_M72_pne_trans_cro_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.GoCrouch" {
+   Resource "{4E9AC0CC4DA884D4}anims/anm/player/locomotion/M72/transitions/p_M72_pne_trans_cro_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.GoCrouchMove" {
+   Resource "{27BBC344FD8CC8AC}anims/anm/player/locomotion/M72/transitions/p_M72_pne_transMove_cro_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroLow.GoErect" {
+   Resource "{0C311B80BE23AF9F}anims/anm/player/locomotion/M72/transitions/p_M72_cro_trans_erc_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroRas.GoErect" {
+   Resource "{41385080FC68B72E}anims/anm/player/locomotion/M72/transitions/p_M72_cro_trans_erc_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneADS.GoErect" {
+   Resource "{6FA2D5AB15E36F53}anims/anm/player/locomotion/M72/transitions/p_M72_pne_trans_erc_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneLow.GoErect" {
+   Resource "{6FA2D5AB15E36F53}anims/anm/player/locomotion/M72/transitions/p_M72_pne_trans_erc_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.GoErect" {
+   Resource "{22AB9EAB57A877E2}anims/anm/player/locomotion/M72/transitions/p_M72_pne_trans_erc_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.GoErectMove" {
+   Resource "{6FA2D5AB15E36F53}anims/anm/player/locomotion/M72/transitions/p_M72_pne_trans_erc_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroLow.GoProne" {
+   Resource "{CE707A82F9A97573}anims/anm/player/locomotion/M72/transitions/p_M72_cro_trans_pne_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroRas.GoProne" {
+   Resource "{83793182BBE26DC2}anims/anm/player/locomotion/M72/transitions/p_M72_cro_trans_pne_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcAdj.GoProne" {
+   Resource "{EC88A5F71B727114}anims/anm/player/locomotion/M72/transitions/p_M72_adj_trans_pne_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroADS.GoProne" {
+   Resource "{83793182BBE26DC2}anims/anm/player/locomotion/M72/transitions/p_M72_cro_trans_pne_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcADS.GoProne" {
+   Resource "{A8839FDBF2851832}anims/anm/player/locomotion/M72/transitions/p_M72_erc_trans_pne_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcLow.GoProne" {
+   Resource "{E58AD4DBB0CE0083}anims/anm/player/locomotion/M72/transitions/p_M72_erc_trans_pne_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.GoProne" {
+   Resource "{A8839FDBF2851832}anims/anm/player/locomotion/M72/transitions/p_M72_erc_trans_pne_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.GoProneMove" {
+   Resource "{D78E9B81DCDE959B}anims/anm/player/locomotion/M72/transitions/p_M72_erc_transMove_pne_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcAdj.AimObstruction" {
+   Resource "{CD2A6E0FFA1BC20F}anims/anm/player/locomotion/M72/obstruction/p_M72_obstruct_adj_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroRas.AimObstruction" {
+   Resource "{50C009ABAE09D540}anims/anm/player/locomotion/M72/obstruction/p_M72_obstruct_cro_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.AimObstruction" {
+   Resource "{3CF157CCB4092676}anims/anm/player/locomotion/M72/obstruction/p_M72_obstruct_erc_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.AimObstruction" {
+   Resource "{FEB036CEF383FC9A}anims/anm/player/locomotion/M72/obstruction/p_M72_obstruct_pne_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroRas.RunB" {
+   Resource "{2969306498D13155}anims/anm/player/locomotion/M72/p_M72_cro_runB_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroRas.RunBL" {
+   Resource "{E5E3C8FFC77F500C}anims/anm/player/locomotion/M72/p_M72_cro_runBL_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroRas.RunBR" {
+   Resource "{892D622E53293168}anims/anm/player/locomotion/M72/p_M72_cro_runBR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroRas.RunF" {
+   Resource "{3EBE3F7B359ADB8D}anims/anm/player/locomotion/M72/p_M72_cro_runF_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroRas.RunFL" {
+   Resource "{DAF3EBD4E808BA89}anims/anm/player/locomotion/M72/p_M72_cro_runFL_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroRas.RunFR" {
+   Resource "{B63D41057C5EDBED}anims/anm/player/locomotion/M72/p_M72_cro_runFR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.RunB" {
+   Resource "{CF6FA54FBCA6BBE1}anims/anm/player/locomotion/M72/p_M72_erc_runB_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.RunBL" {
+   Resource "{CF2150635BFE3BC9}anims/anm/player/locomotion/M72/p_M72_erc_runBL_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.RunBR" {
+   Resource "{A3EFFAB2CFA85AAD}anims/anm/player/locomotion/M72/p_M72_erc_runBR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.RunF" {
+   Resource "{D8B8AA5011ED5139}anims/anm/player/locomotion/M72/p_M72_erc_runF_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.RunFL" {
+   Resource "{F03173487489D14C}anims/anm/player/locomotion/M72/p_M72_erc_runFL_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.RunFR" {
+   Resource "{9CFFD999E0DFB028}anims/anm/player/locomotion/M72/p_M72_erc_runFR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.WalkB" {
+   Resource "{07918B1D56DDDBCE}anims/anm/player/locomotion/M72/p_M72_erc_walkB_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.WalkBL" {
+   Resource "{8F9629D6AB459895}anims/anm/player/locomotion/M72/p_M72_erc_walkBL_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.WalkBR" {
+   Resource "{E35883073F13F9F1}anims/anm/player/locomotion/M72/p_M72_erc_walkBR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.WalkF" {
+   Resource "{10468402FB963116}anims/anm/player/locomotion/M72/p_M72_erc_walkF_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.WalkFL" {
+   Resource "{B0860AFD84327210}anims/anm/player/locomotion/M72/p_M72_erc_walkFL_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.WalkFR" {
+   Resource "{DC48A02C10641374}anims/anm/player/locomotion/M72/p_M72_erc_walkFR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroRas.WalkB" {
+   Resource "{2D531381CA5CB00B}anims/anm/player/locomotion/M72/p_M72_cro_walkB_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroRas.WalkBL" {
+   Resource "{96F34BE844BCE2D3}anims/anm/player/locomotion/M72/p_M72_cro_walkBL_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroRas.WalkBR" {
+   Resource "{FA3DE139D0EA83B7}anims/anm/player/locomotion/M72/p_M72_cro_walkBR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroRas.WalkF" {
+   Resource "{3A841C9E67175AD3}anims/anm/player/locomotion/M72/p_M72_cro_walkF_ras.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.AdjRas.Aimspace LeanL" {
+   Resource "{6584D9BC04A99150}anims/anm/player/locomotion/M72/IdleTurns/p_M72_adj_aimspace_body_LeanL_ras.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.AdjRas.Aimspace LeanR" {
+   Resource "{094A736D90FFF034}anims/anm/player/locomotion/M72/IdleTurns/p_M72_adj_aimspace_body_LeanR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.CroRas.Aimspace LeanL" {
+   Resource "{EFBCA4E4FE8CECF9}anims/anm/player/locomotion/M72/IdleTurns/p_M72_cro_aimspace_body_LeanL_ras.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.CroRas.Aimspace LeanR" {
+   Resource "{83720E356ADA8D9D}anims/anm/player/locomotion/M72/IdleTurns/p_M72_cro_aimspace_body_LeanR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.ErcRas.Aimspace LeanL" {
+   Resource "{5C11A80CDFE1F297}anims/anm/player/locomotion/M72/IdleTurns/p_M72_erc_aimspace_body_LeanL_ras.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.ErcRas.Aimspace LeanR" {
+   Resource "{30DF02DD4BB793F3}anims/anm/player/locomotion/M72/IdleTurns/p_M72_erc_aimspace_body_LeanR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.PneRas.Aimspace" {
+   Resource "{DBBC66463DB5A515}anims/anm/player/locomotion/M72/IdleTurns/p_M72_pne_aimspace_body_ras.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.PneLow.Idle" {
+   Resource "{B7F3783931756EC4}anims/anm/player/locomotion/M72/IdleTurns/p_M72_pne_idle_breath.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.PneRas.Idle" {
+   Resource "{3C839655B4BE7F13}anims/anm/player/locomotion/M72/IdleTurns/p_M72_pne_idle_ras_breath.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.PneLow.Turn0" {
+   Resource "{070836ED8C1973B8}anims/anm/player/locomotion/M72/IdleTurns/p_M72_pne_turn_0_low.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.PneRas.Turn0" {
+   Resource "{070836ED8C1973B8}anims/anm/player/locomotion/M72/IdleTurns/p_M72_pne_turn_0_low.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.PneLow.TurnL180" {
+   Resource "{888FBC0A88368A45}anims/anm/player/locomotion/M72/IdleTurns/p_M72_pne_turnL_180_low.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.PneRas.TurnL180" {
+   Resource "{888FBC0A88368A45}anims/anm/player/locomotion/M72/IdleTurns/p_M72_pne_turnL_180_low.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.PneLow.TurnL90" {
+   Resource "{813DD57D1C7881D3}anims/anm/player/locomotion/M72/IdleTurns/p_M72_pne_turnL_90_low.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.PneRas.TurnL90" {
+   Resource "{813DD57D1C7881D3}anims/anm/player/locomotion/M72/IdleTurns/p_M72_pne_turnL_90_low.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.PneLow.TurnR180" {
+   Resource "{89208FA07F669955}anims/anm/player/locomotion/M72/IdleTurns/p_M72_pne_turnR_180_low.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.PneRas.TurnR180" {
+   Resource "{89208FA07F669955}anims/anm/player/locomotion/M72/IdleTurns/p_M72_pne_turnR_180_low.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.PneLow.TurnR90" {
+   Resource "{4C8920E247A3A296}anims/anm/player/locomotion/M72/IdleTurns/p_M72_pne_turnR_90_low.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.PneRas.TurnR90" {
+   Resource "{4C8920E247A3A296}anims/anm/player/locomotion/M72/IdleTurns/p_M72_pne_turnR_90_low.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.AdjRas.ADS" {
+   Resource "{397EB29A844F89C9}anims/anm/player/locomotion/M72/IdleTurns/p_M72_adj_ads_add.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.CroRas.ADS" {
+   Resource "{FFDAA33AF2A8600E}anims/anm/player/locomotion/M72/IdleTurns/p_M72_cro_ads_add.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.ErcRas.ADS" {
+   Resource "{D87EFD1A5F59A838}anims/anm/player/locomotion/M72/IdleTurns/p_M72_erc_ads_add.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.PneRas.ADS" {
+   Resource "{85B6F3485992CB99}anims/anm/player/locomotion/M72/IdleTurns/p_M72_pne_ads_add.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.CroLow.Lean Low" {
+   Resource "{96697DA5C3D672EE}anims/anm/player/locomotion/M72/IdleTurns/p_M72_cro_aimspace_body_Lean_low.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.ErcLow.Lean Low" {
+   Resource "{0341D4B3BABD64DB}anims/anm/player/locomotion/M72/IdleTurns/p_M72_erc_aimspace_body_Lean_low.anm"
+  }
+  AnimSetInstanceSource_Line "MeleeAttacks.CroLow.MeleeAttack01" {
+   Resource "{3EA85A327564742C}anims/anm/player/attacks/M72/p_m72_cro_attack_slash_melee_low.anm"
+  }
+  AnimSetInstanceSource_Line "MeleeAttacks.CroRas.MeleeAttack01" {
+   Resource "{73A11132372F6C9D}anims/anm/player/attacks/M72/p_m72_cro_attack_slash_melee_ras.anm"
+  }
+  AnimSetInstanceSource_Line "MeleeAttacks.ErcLow.MeleeAttack01" {
+   Resource "{AB80F3240C0F6219}anims/anm/player/attacks/M72/p_m72_erc_attack_slash_melee_low.anm"
+  }
+  AnimSetInstanceSource_Line "MeleeAttacks.ErcRas.MeleeAttack01" {
+   Resource "{E689B8244E447AA8}anims/anm/player/attacks/M72/p_m72_erc_attack_slash_melee_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Jumping.IdleL.JumpSpotIn" {
+   Resource "{F05E32CE6EBF74D4}anims/anm/player/locomotion/M72/jump/p_M72_erc_jump_idle_in.anm"
+  }
+  AnimSetInstanceSource_Line "Jumping.IdleL.JumpSpotOut" {
+   Resource "{5CDAC8E1E751300D}anims/anm/player/locomotion/M72/jump/p_M72_erc_jump_idle_out.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponSwitching.PneLow.Hide01" {
+   Resource "{D2FFE95F95C8269A}anims/anm/player/weaponswitch/M72/p_M72_pne_slot_backL_hide_low.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponSwitching.PneRas.Hide01" {
+   Resource "{9FF6A25FD7833E2B}anims/anm/player/weaponswitch/M72/p_M72_pne_slot_backL_hide_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponSwitching.ErcRas.Hide02" {
+   Resource "{2D2437E66CE657C1}anims/anm/player/weaponswitch/M72/p_M72_erc_slot_backR_hide_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponSwitching.PneRas.Hide02" {
+   Resource "{7235E9432E7A18B8}anims/anm/player/weaponswitch/M72/p_M72_pne_slot_backR_hide_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponSwitching.PneLow.Hide02" {
+   Resource "{3F3CA2436C310009}anims/anm/player/weaponswitch/M72/p_M72_pne_slot_backR_hide_low.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponSwitching.PneRas.Show01" {
+   Resource "{A2F7CF6C1AD55DE2}anims/anm/player/weaponswitch/M72/p_M72_pne_slot_backL_show_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponSwitching.PneLow.Show01" {
+   Resource "{EFFE846C589E4553}anims/anm/player/weaponswitch/M72/p_M72_pne_slot_backL_show_low.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponSwitching.ErcRas.Show02" {
+   Resource "{10255AD5A1B03408}anims/anm/player/weaponswitch/M72/p_M72_erc_slot_backR_show_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponSwitching.PneLow.Show02" {
+   Resource "{023DCF70A16763C0}anims/anm/player/weaponswitch/M72/p_M72_pne_slot_backR_show_low.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponSwitching.PneRas.Show02" {
+   Resource "{4F348470E32C7B71}anims/anm/player/weaponswitch/M72/p_M72_pne_slot_backR_show_ras.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.ErcLow.IdleVar01" {
+   Resource "{CF79A91D58BC7394}anims/anm/player/locomotion/M72/IdleTurns/IdleVar/p_M72_erc_idle_low_var01.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.ErcLow.IdleVar02" {
+   Resource "{56671084455B4204}anims/anm/player/locomotion/M72/IdleTurns/IdleVar/p_M72_erc_idle_low_var02.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.ErcLow.IdleVar03" {
+   Resource "{216D780CB1F9AD74}anims/anm/player/locomotion/M72/IdleTurns/IdleVar/p_M72_erc_idle_low_var03.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.ErcLow.IdleVar04" {
+   Resource "{26AA825DD77F17B7}anims/anm/player/locomotion/M72/IdleTurns/IdleVar/p_M72_erc_idle_low_var04.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.ErcLow.IdleVar05" {
+   Resource "{51A0EAD523DDF8C7}anims/anm/player/locomotion/M72/IdleTurns/IdleVar/p_M72_erc_idle_low_var05.anm"
+  }
+  AnimSetInstanceSource_Line "VerticalMovement.ErcLow.Climb110" {
+   Resource "{3AB21FF46DCB6399}anims/anm/player/locomotion/M72/Climb/p_M72_erc_run_climb_110.anm"
+  }
+  AnimSetInstanceSource_Line "VerticalMovement.ErcLow.Climb150" {
+   Resource "{2D8223A8A08099FC}anims/anm/player/locomotion/M72/Climb/p_M72_erc_run_climb_150.anm"
+  }
+  AnimSetInstanceSource_Line "VerticalMovement.ErcLow.Climb190" {
+   Resource "{14D2674DF75C9753}anims/anm/player/locomotion/M72/Climb/p_M72_erc_run_climb_190.anm"
+  }
+  AnimSetInstanceSource_Line "VerticalMovement.ErcLow.Climb20" {
+   Resource "{30EB48CBCB9F0050}anims/anm/player/locomotion/M72/Climb/p_M72_erc_run_climb_20_low.anm"
+  }
+  AnimSetInstanceSource_Line "VerticalMovement.ErcLow.Climb80" {
+   Resource "{F03B6FFDD63E3B51}anims/anm/player/locomotion/M72/Climb/p_M72_erc_run_climb_80_low.anm"
+  }
+  AnimSetInstanceSource_Line "VerticalMovement.ErcLow.ClimbOver110In" {
+   Resource "{4E5AF188744107F0}anims/anm/player/locomotion/M72/Climb/p_M72_erc_run_jump_110_over_in.anm"
+  }
+  AnimSetInstanceSource_Line "VerticalMovement.ErcLow.ClimbOver110Out" {
+   Resource "{5A108B239421B6B6}anims/anm/player/locomotion/M72/Climb/p_M72_erc_run_jump_110_over_out.anm"
+  }
+  AnimSetInstanceSource_Line "VerticalMovement.ErcLow.ClimbOver150In" {
+   Resource "{FAA88045AD49063F}anims/anm/player/locomotion/M72/Climb/p_M72_erc_run_climb_150_over_in.anm"
+  }
+  AnimSetInstanceSource_Line "VerticalMovement.ErcLow.ClimbOver150Out" {
+   Resource "{BDEF4C7F5E726F95}anims/anm/player/locomotion/M72/Climb/p_M72_erc_run_climb_150_over_out.anm"
+  }
+  AnimSetInstanceSource_Line "VerticalMovement.ErcLow.ClimbOver190In" {
+   Resource "{5686F111FADFA810}anims/anm/player/locomotion/M72/Climb/p_M72_erc_run_climb_190_over_in.anm"
+  }
+  AnimSetInstanceSource_Line "VerticalMovement.ErcLow.ClimbOver190Out" {
+   Resource "{724BA6D886EA0AE7}anims/anm/player/locomotion/M72/Climb/p_M72_erc_run_climb_190_over_out.anm"
+  }
+  AnimSetInstanceSource_Line "VerticalMovement.ErcLow.ClimbOver20In" {
+   Resource "{C3234AAC4CF90430}anims/anm/player/locomotion/M72/Climb/p_M72_erc_run_climb_20_over_in_low.anm"
+  }
+  AnimSetInstanceSource_Line "VerticalMovement.ErcLow.ClimbOver20Out" {
+   Resource "{B9539DF619DC1B13}anims/anm/player/locomotion/M72/Climb/p_M72_erc_run_climb_20_over_out_low.anm"
+  }
+  AnimSetInstanceSource_Line "VerticalMovement.ErcLow.ClimbOver80In" {
+   Resource "{168E5407FD5E6733}anims/anm/player/locomotion/M72/Climb/p_M72_erc_run_climb_80_over_in_low.anm"
+  }
+  AnimSetInstanceSource_Line "VerticalMovement.ErcLow.ClimbOver80Out" {
+   Resource "{554C2EC31EA81252}anims/anm/player/locomotion/M72/Climb/p_M72_erc_run_climb_80_over_out_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcADS.SprintF" {
+   Resource "{7B11D06CB5CE3000}anims/anm/player/locomotion/M72/p_M72_erc_sprintF_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcLow.SprintF" {
+   Resource "{7B11D06CB5CE3000}anims/anm/player/locomotion/M72/p_M72_erc_sprintF_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.SprintF" {
+   Resource "{7B11D06CB5CE3000}anims/anm/player/locomotion/M72/p_M72_erc_sprintF_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroADS.SprintF" {
+   Resource "{A8D8BB1D693A1CC2}anims/anm/player/locomotion/M72/p_M72_cro_sprintF_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroLow.SprintF" {
+   Resource "{A8D8BB1D693A1CC2}anims/anm/player/locomotion/M72/p_M72_cro_sprintF_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroRas.SprintF" {
+   Resource "{A8D8BB1D693A1CC2}anims/anm/player/locomotion/M72/p_M72_cro_sprintF_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroADS.SprintFL" {
+   Resource "{E780B756A0980E3E}anims/anm/player/locomotion/M72/p_M72_cro_sprintFL_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroLow.SprintFL" {
+   Resource "{E780B756A0980E3E}anims/anm/player/locomotion/M72/p_M72_cro_sprintFL_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroRas.SprintFL" {
+   Resource "{E780B756A0980E3E}anims/anm/player/locomotion/M72/p_M72_cro_sprintFL_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroADS.SprintFR" {
+   Resource "{8B4E1D8734CE6F5A}anims/anm/player/locomotion/M72/p_M72_cro_sprintFR_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroLow.SprintFR" {
+   Resource "{8B4E1D8734CE6F5A}anims/anm/player/locomotion/M72/p_M72_cro_sprintFR_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroRas.SprintFR" {
+   Resource "{8B4E1D8734CE6F5A}anims/anm/player/locomotion/M72/p_M72_cro_sprintFR_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcADS.SprintFL" {
+   Resource "{A3387B9CA9354786}anims/anm/player/locomotion/M72/p_M72_erc_sprintFL_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcLow.SprintFL" {
+   Resource "{A3387B9CA9354786}anims/anm/player/locomotion/M72/p_M72_erc_sprintFL_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.SprintFL" {
+   Resource "{A3387B9CA9354786}anims/anm/player/locomotion/M72/p_M72_erc_sprintFL_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcADS.SprintFR" {
+   Resource "{CFF6D14D3D6326E2}anims/anm/player/locomotion/M72/p_M72_erc_sprintFR_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcLow.SprintFR" {
+   Resource "{CFF6D14D3D6326E2}anims/anm/player/locomotion/M72/p_M72_erc_sprintFR_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.SprintFR" {
+   Resource "{CFF6D14D3D6326E2}anims/anm/player/locomotion/M72/p_M72_erc_sprintFR_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.AimRunSpace" {
+   Resource "{F3A52CA1C7232995}anims/anm/player/locomotion/M72/layered/aimspaces/p_M72_erc_walk_aimspace_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.AimWalkSpace" {
+   Resource "{F3A52CA1C7232995}anims/anm/player/locomotion/M72/layered/aimspaces/p_M72_erc_walk_aimspace_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroRas.AimRunSpace" {
+   Resource "{52FC064F4537C26A}anims/anm/player/locomotion/M72/layered/aimspaces/p_M72_cro_walk_aimspace_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroRas.AimWalkSpace" {
+   Resource "{52FC064F4537C26A}anims/anm/player/locomotion/M72/layered/aimspaces/p_M72_cro_walk_aimspace_ras.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.AdjLow.Idle" {
+   Resource "{42389CA44C5EC02A}anims/anm/player/locomotion/M72/IdleTurns/p_M72_adj_idle_low_breath_ADD.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.AdjLow.Turn0" {
+   Resource "{586BA863A59DCC9D}anims/anm/player/locomotion/M72/IdleTurns/p_M72_adj_turn_0_low.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.AdjLow.TurnL180" {
+   Resource "{CAEC6ECDB2433268}anims/anm/player/locomotion/M72/IdleTurns/p_M72_adj_turnL_180_low.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.AdjLow.TurnL90" {
+   Resource "{88AF2082BAF79B84}anims/anm/player/locomotion/M72/IdleTurns/p_M72_adj_turnL_90_low.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.AdjLow.TurnR180" {
+   Resource "{CB435D6745132178}anims/anm/player/locomotion/M72/IdleTurns/p_M72_adj_turnR_180_low.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.AdjLow.TurnR90" {
+   Resource "{451BD51DE12CB8C1}anims/anm/player/locomotion/M72/IdleTurns/p_M72_adj_turnR_90_low.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.CroLow.LightB" {
+   Resource "{A38C5A6C06F3FEE1}anims/anm/player/hits/light/p_M72_cro_hit_light_low_B_01.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.CroLow.LightF" {
+   Resource "{584842E37A9E7252}anims/anm/player/hits/light/p_M72_cro_hit_light_low_F_01.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.CroLow.LightL" {
+   Resource "{31AAEEA4416C80B7}anims/anm/player/hits/light/p_M72_cro_hit_light_low_L_01.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.CroLow.LightR" {
+   Resource "{8B8D1A6D0D7B9798}anims/anm/player/hits/light/p_M72_cro_hit_light_low_R_01.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.ErcLow.LightB" {
+   Resource "{82D6413AE7034861}anims/anm/player/hits/light/p_M72_erc_hit_light_low_B_01.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.ErcLow.LightF" {
+   Resource "{791259B59B6EC4D2}anims/anm/player/hits/light/p_M72_erc_hit_light_low_F_01.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.ErcLow.LightL" {
+   Resource "{10F0F5F2A09C3637}anims/anm/player/hits/light/p_M72_erc_hit_light_low_L_01.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.ErcLow.LightR" {
+   Resource "{AAD7013BEC8B2118}anims/anm/player/hits/light/p_M72_erc_hit_light_low_R_01.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.PneLow.LightB" {
+   Resource "{253DF2B404E959E6}anims/anm/player/hits/light/p_M72_pne_hit_light_low_B_01.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.PneLow.LightF" {
+   Resource "{DEF9EA3B7884D555}anims/anm/player/hits/light/p_M72_pne_hit_light_low_F_01.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.PneLow.LightL" {
+   Resource "{B71B467C437627B0}anims/anm/player/hits/light/p_M72_pne_hit_light_low_L_01.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.PneLow.LightR" {
+   Resource "{0D3CB2B50F61309F}anims/anm/player/hits/light/p_M72_pne_hit_light_low_R_01.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.CroRas.LightB" {
+   Resource "{0BD077CC6A0B0626}anims/anm/player/hits/light/p_M72_cro_hit_light_ras_B_01.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.CroRas.LightF" {
+   Resource "{F0146F4316668A95}anims/anm/player/hits/light/p_M72_cro_hit_light_ras_F_01.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.CroRas.LightL" {
+   Resource "{99F6C3042D947870}anims/anm/player/hits/light/p_M72_cro_hit_light_ras_L_01.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.CroRas.LightR" {
+   Resource "{23D137CD61836F5F}anims/anm/player/hits/light/p_M72_cro_hit_light_ras_R_01.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.ErcRas.LightB" {
+   Resource "{2A8A6C9A8BFBB0A6}anims/anm/player/hits/light/p_M72_erc_hit_light_ras_B_01.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.ErcRas.LightF" {
+   Resource "{D14E7415F7963C15}anims/anm/player/hits/light/p_M72_erc_hit_light_ras_F_01.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.ErcRas.LightL" {
+   Resource "{B8ACD852CC64CEF0}anims/anm/player/hits/light/p_M72_erc_hit_light_ras_L_01.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.ErcRas.LightR" {
+   Resource "{028B2C9B8073D9DF}anims/anm/player/hits/light/p_M72_erc_hit_light_ras_R_01.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.PneRas.LightB" {
+   Resource "{8D61DF146811A121}anims/anm/player/hits/light/p_M72_pne_hit_light_ras_B_01.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.PneRas.LightF" {
+   Resource "{76A5C79B147C2D92}anims/anm/player/hits/light/p_M72_pne_hit_light_ras_F_01.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.PneRas.LightL" {
+   Resource "{1F476BDC2F8EDF77}anims/anm/player/hits/light/p_M72_pne_hit_light_ras_L_01.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.PneRas.LightR" {
+   Resource "{A5609F156399C858}anims/anm/player/hits/light/p_M72_pne_hit_light_ras_R_01.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.GoCrouchAdj" {
+   Resource "{42F89A9246F858CE}anims/anm/player/locomotion/M72/transitions/p_M72_adj_trans_cro_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.GoProneAdj" {
+   Resource "{EC88A5F71B727114}anims/anm/player/locomotion/M72/transitions/p_M72_adj_trans_pne_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroRas.GoErectAdj" {
+   Resource "{FEE2E1DA835F3760}anims/anm/player/locomotion/M72/transitions/p_M72_cro_trans_adj_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.GoErectAdj" {
+   Resource "{9D712FF1289FF7AC}anims/anm/player/locomotion/M72/transitions/p_M72_pne_trans_adj_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcLow.GoCrouchAdj" {
+   Resource "{41F0590B35962448}anims/anm/player/locomotion/M72/transitions/p_M72_adj_trans_cro_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcLow.GoProneAdj" {
+   Resource "{EF80666E681C0D92}anims/anm/player/locomotion/M72/transitions/p_M72_adj_trans_pne_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroLow.GoErectAdj" {
+   Resource "{FDEA2243F0314BE6}anims/anm/player/locomotion/M72/transitions/p_M72_cro_trans_adj_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneLow.GoErectAdj" {
+   Resource "{9E79EC685BF18B2A}anims/anm/player/locomotion/M72/transitions/p_M72_pne_trans_adj_low.anm"
+  }
+  AnimSetInstanceSource_Line "IdleTurn.CroLow.Aimspace" {
+   Resource "{69A96008813222B6}anims/anm/player/locomotion/M72/IdleTurns/p_M72_cro_aimspace_body_low.anm"
+  }
+  AnimSetInstanceSource_Line "Falling.ErcRas.Forward" {
+   Resource "{4AC0B52709F17884}anims/anm/player/locomotion/M72/falling/p_M72_fall.anm"
+  }
+  AnimSetInstanceSource_Line "Falling.PneRas.Forward" {
+   Resource "{C24FBBBB22F6D06B}anims/anm/player/locomotion/M72/falling/p_M72_pne_fall.anm"
+  }
+  AnimSetInstanceSource_Line "Falling.ErcRas.LandHeavy" {
+   Resource "{DA8A2D50C1877A30}anims/anm/player/locomotion/M72/falling/p_M72_land_high.anm"
+  }
+  AnimSetInstanceSource_Line "Falling.PneRas.LandHeavy" {
+   Resource "{8C45412BD52C299C}anims/anm/player/locomotion/M72/falling/p_M72_pne_land_heavy.anm"
+  }
+  AnimSetInstanceSource_Line "Falling.ErcRas.LandLight" {
+   Resource "{FE1285E2F71BDCDB}anims/anm/player/locomotion/M72/falling/p_M72_land_low.anm"
+  }
+  AnimSetInstanceSource_Line "Falling.ErcRas.LandMedium" {
+   Resource "{DAC47672893FFC9C}anims/anm/player/locomotion/M72/falling/p_M72_land_med.anm"
+  }
+  AnimSetInstanceSource_Line "Falling.PneRas.LandMedium" {
+   Resource "{C9157DA1B94DCB65}anims/anm/player/locomotion/M72/falling/p_M72_pne_land_medium.anm"
+  }
+ }
+}

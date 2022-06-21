@@ -1,0 +1,8 @@
+AnimSetInstanceSource {
+ Template "{27996C9FFB1A1D50}anims/workspaces/player/player_inventory.ast"
+ Lines {
+  AnimSetInstanceSource_Line "Idles.Low.Idle" {
+   Resource "{7FB61FE8DF54F30A}anims/anm/player/locomotion/machineguns/IdleTurns/p_lmg_erc_idle_low_breath.anm"
+  }
+ }
+}

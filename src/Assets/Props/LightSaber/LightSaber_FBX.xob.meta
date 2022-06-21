@@ -1,0 +1,55 @@
+MetaFileClass {
+ Name "{DD09A0E455ACCE42}Assets/Props/LightSaber/LightSaber_FBX.xob"
+ Configurations {
+  FBXResourceClass PC {
+   MaterialAssigns {
+    MaterialAssignClass "{59A927D0154D3E74}" {
+     SourceMaterial "lights"
+     AssignedMaterial "{505892C30D0FCDDF}Assets/Props/LightSaber/data/lights.emat"
+    }
+    MaterialAssignClass "{59A927D0154D3E4D}" {
+     SourceMaterial "Boca"
+     AssignedMaterial "{FC15E1FD274B7C15}Assets/Props/LightSaber/data/Boca.emat"
+    }
+    MaterialAssignClass "{59A927D0154D3E40}" {
+     SourceMaterial "ORO"
+     AssignedMaterial "{03C1AE48F8E568DE}Assets/Props/LightSaber/data/ORO.emat"
+    }
+    MaterialAssignClass "{59A927D0154D3EBC}" {
+     SourceMaterial "Base_Opaca"
+     AssignedMaterial "{15000900D8073C6B}Assets/Props/LightSaber/data/Base_Opaca.emat"
+    }
+    MaterialAssignClass "{59A927D0154D3EBB}" {
+     SourceMaterial "Base"
+     AssignedMaterial "{DE9FCA79EA3CFD87}Assets/Props/LightSaber/data/Base.emat"
+    }
+    MaterialAssignClass "{59A927D0154D3EB7}" {
+     SourceMaterial "Bolas"
+     AssignedMaterial "{A70482CE6523B256}Assets/Props/LightSaber/data/Bolas.emat"
+    }
+    MaterialAssignClass "{59A927D0154D3EB1}" {
+     SourceMaterial "Boca2"
+     AssignedMaterial "{271589060D0A0917}Assets/Props/LightSaber/data/Boca2.emat"
+    }
+   }
+   Common TXOCommonClass "{59A927D013F27E29}" : "{0877E7C4BB2B2C9A}Configs/System/ResourceTypes/PC/MeshObjectCommon.conf" {
+   }
+  }
+  FBXResourceClass XBOX_ONE : PC {
+   Common TXOCommonClass "{59A927D013F32C50}" : "{9D5B6207F7628CE2}Configs/System/ResourceTypes/XBOX_ONE/MeshObjectCommon.conf" {
+   }
+  }
+  FBXResourceClass XBOX_SERIES : PC {
+   Common TXOCommonClass "{59A927D013F32F14}" : "{DD9F02115C764647}Configs/System/ResourceTypes/XBOX_SERIES/MeshObjectCommon.conf" {
+   }
+  }
+  FBXResourceClass PS4 : PC {
+   Common TXOCommonClass "{59A927D013F32FBF}" : "{53EC476BC921D99A}Configs/System/ResourceTypes/PS4/MeshObjectCommon.conf" {
+   }
+  }
+  FBXResourceClass HEADLESS : PC {
+   Common TXOCommonClass "{59A927D013F32FE5}" : "{3A5B3356978039E8}Configs/System/ResourceTypes/HEADLESS/MeshObjectCommon.conf" {
+   }
+  }
+ }
+}

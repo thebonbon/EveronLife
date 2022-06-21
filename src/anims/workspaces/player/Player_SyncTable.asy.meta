@@ -1,0 +1,15 @@
+MetaFileClass {
+ Name "{D452A6E92D5CF3F1}anims/workspaces/player/Player_SyncTable.asy"
+ Configurations {
+  AnimSyncTableResourceClass PC {
+  }
+  AnimSyncTableResourceClass XBOX_ONE : PC {
+  }
+  AnimSyncTableResourceClass XBOX_SERIES : PC {
+  }
+  AnimSyncTableResourceClass PS4 : PC {
+  }
+  AnimSyncTableResourceClass HEADLESS : PC {
+  }
+ }
+}

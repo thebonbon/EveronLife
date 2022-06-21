@@ -1,0 +1,653 @@
+$animation "" {
+ #version 1.0
+ #fps 30
+ #numFrames 29
+ $node "Scene_Root" {
+  $keys t q s {
+   $frame 0 29 {
+   }
+  }
+  $node "EntityPosition" {
+   $keys t q s {
+    $frame 0 29 {
+    }
+   }
+   $node "Collision" {
+    $keys t q s {
+     $frame 0 29 {
+     }
+    }
+   }
+   $node "Hips" {
+    $keys t q s {
+     $frame 0 29 {
+     }
+    }
+    $node "LeftLeg" {
+     $keys t q s {
+      $frame 0 29 {
+      }
+     }
+     $node "LeftLegVolume" {
+      $keys t q s {
+       $frame 0 29 {
+       }
+      }
+     }
+     $node "LeftLegTwist" {
+      $keys t q s {
+       $frame 0 29 {
+       }
+      }
+      $node "LeftKnee" {
+       $keys t q s {
+        $frame 0 29 {
+        }
+       }
+       $node "LeftKneeVolume" {
+        $keys t q s {
+         $frame 0 29 {
+         }
+        }
+       }
+       $node "LeftKneeTwist" {
+        $keys t q s {
+         $frame 0 29 {
+         }
+        }
+        $node "LeftFoot" {
+         $keys t q s {
+          $frame 0 29 {
+          }
+         }
+         $node "LeftToe" {
+          $keys t q s {
+           $frame 0 29 {
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+    $node "RightLeg" {
+     $keys t q s {
+      $frame 0 29 {
+      }
+     }
+     $node "RightLegVolume" {
+      $keys t q s {
+       $frame 0 29 {
+       }
+      }
+     }
+     $node "RightLegTwist" {
+      $keys t q s {
+       $frame 0 29 {
+       }
+      }
+      $node "RightKnee" {
+       $keys t q s {
+        $frame 0 29 {
+        }
+       }
+       $node "RightKneeVolume" {
+        $keys t q s {
+         $frame 0 29 {
+         }
+        }
+       }
+       $node "RightKneeTwist" {
+        $keys t q s {
+         $frame 0 29 {
+         }
+        }
+        $node "RightFoot" {
+         $keys t q s {
+          $frame 0 29 {
+          }
+         }
+         $node "RightToe" {
+          $keys t q s {
+           $frame 0 29 {
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+    $node "RightLegClothF" {
+     $keys t q s {
+      $frame 0 29 {
+      }
+     }
+    }
+    $node "RightLegClothB" {
+     $keys t q s {
+      $frame 0 29 {
+      }
+     }
+    }
+    $node "LeftLegClothF" {
+     $keys t q s {
+      $frame 0 29 {
+      }
+     }
+    }
+    $node "LeftLegClothB" {
+     $keys t q s {
+      $frame 0 29 {
+      }
+     }
+    }
+    $node "Spine1" {
+     $keys t q s {
+      $frame 0 29 {
+      }
+     }
+     $node "Stomach1" {
+      $keys t q s {
+       $frame 0 29 {
+       }
+      }
+     }
+     $node "Spine2" {
+      $keys t q s {
+       $frame 0 29 {
+       }
+      }
+      $node "Spine3" {
+       $keys t q s {
+        $frame 0 29 {
+        }
+       }
+       $node "Stomach2" {
+        $keys t q s {
+         $frame 0 29 {
+         }
+        }
+       }
+       $node "Spine4" {
+        $keys t q s {
+         $frame 0 29 {
+         }
+        }
+        $node "Stomach3" {
+         $keys t q s {
+          $frame 0 29 {
+          }
+         }
+        }
+        $node "Spine5" {
+         $keys t q s {
+          $frame 0 29 {
+          }
+         }
+         $node "Neck1" {
+          $keys t q s {
+           $frame 0 29 {
+           }
+          }
+          $node "Neck2" {
+           $keys t q s {
+            $frame 0 29 {
+            }
+           }
+           $node "Neck3" {
+            $keys t q s {
+             $frame 0 29 {
+             }
+            }
+            $node "Head" {
+             $keys t q s {
+              $frame 0 29 {
+              }
+             }
+            }
+           }
+          }
+         }
+         $node "LeftShoulder" {
+          $keys t q s {
+           $frame 0 29 {
+           }
+          }
+          $node "LeftArm" {
+           $keys t q s {
+            $frame 0 29 {
+            }
+           }
+           $node "LeftArmVolume" {
+            $keys t q s {
+             $frame 0 29 {
+             }
+            }
+           }
+           $node "LeftArmTwist" {
+            $keys t q s {
+             $frame 0 29 {
+             }
+            }
+            $node "LeftForeArm" {
+             $keys t q s {
+              $frame 0 29 {
+              }
+             }
+             $node "LeftForeArmVolume" {
+              $keys t q s {
+               $frame 0 29 {
+               }
+              }
+             }
+             $node "LeftForeArmTwist" {
+              $keys t q s {
+               $frame 0 29 {
+               }
+              }
+              $node "LeftHandUpperVolume" {
+               $keys t q s {
+                $frame 0 29 {
+                }
+               }
+              }
+              $node "LeftHand" {
+               $keys t q s {
+                $frame 0 29 {
+                }
+               }
+              }
+             }
+            }
+           }
+          }
+         }
+         $node "RightShoulder" {
+          $keys t q s {
+           $frame 0 29 {
+           }
+          }
+          $node "RightArm" {
+           $keys t q s {
+            $frame 0 29 {
+            }
+           }
+           $node "RightArmVolume" {
+            $keys t q s {
+             $frame 0 29 {
+             }
+            }
+           }
+           $node "RightArmTwist" {
+            $keys t q s {
+             $frame 0 29 {
+             }
+            }
+            $node "RightForeArm" {
+             $keys t q s {
+              $frame 0 29 {
+              }
+             }
+             $node "RightForeArmVolume" {
+              $keys t q s {
+               $frame 0 29 {
+               }
+              }
+             }
+             $node "RightForeArmTwist" {
+              $keys t q s {
+               $frame 0 29 {
+               }
+              }
+              $node "RightHandUpperVolume" {
+               $keys t q s {
+                $frame 0 29 {
+                }
+               }
+              }
+              $node "RightHand" {
+               $keys t q s {
+                $frame 0 29 {
+                }
+               }
+              }
+             }
+            }
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+  $node "1:Scene_Root" {
+   $keys t q s {
+    $frame 0 29 {
+    }
+   }
+   $node "1:EntityPosition" {
+    $keys t q s {
+     $frame 0 29 {
+     }
+    }
+    $node "1:Collision" {
+     $keys t q s {
+      $frame 0 29 {
+      }
+     }
+    }
+    $node "1:Hips" {
+     $keys t q s {
+      $frame 0 29 {
+      }
+     }
+     $node "1:LeftLeg" {
+      $keys t q s {
+       $frame 0 29 {
+       }
+      }
+      $node "1:LeftLegVolume" {
+       $keys t q s {
+        $frame 0 29 {
+        }
+       }
+      }
+      $node "1:LeftLegTwist" {
+       $keys t q s {
+        $frame 0 29 {
+        }
+       }
+       $node "1:LeftKnee" {
+        $keys t q s {
+         $frame 0 29 {
+         }
+        }
+        $node "1:LeftKneeVolume" {
+         $keys t q s {
+          $frame 0 29 {
+          }
+         }
+        }
+        $node "1:LeftKneeTwist" {
+         $keys t q s {
+          $frame 0 29 {
+          }
+         }
+         $node "1:LeftFoot" {
+          $keys t q s {
+           $frame 0 29 {
+           }
+          }
+          $node "1:LeftToe" {
+           $keys t q s {
+            $frame 0 29 {
+            }
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+     $node "1:RightLeg" {
+      $keys t q s {
+       $frame 0 29 {
+       }
+      }
+      $node "1:RightLegVolume" {
+       $keys t q s {
+        $frame 0 29 {
+        }
+       }
+      }
+      $node "1:RightLegTwist" {
+       $keys t q s {
+        $frame 0 29 {
+        }
+       }
+       $node "1:RightKnee" {
+        $keys t q s {
+         $frame 0 29 {
+         }
+        }
+        $node "1:RightKneeVolume" {
+         $keys t q s {
+          $frame 0 29 {
+          }
+         }
+        }
+        $node "1:RightKneeTwist" {
+         $keys t q s {
+          $frame 0 29 {
+          }
+         }
+         $node "1:RightFoot" {
+          $keys t q s {
+           $frame 0 29 {
+           }
+          }
+          $node "1:RightToe" {
+           $keys t q s {
+            $frame 0 29 {
+            }
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+     $node "1:RightLegClothF" {
+      $keys t q s {
+       $frame 0 29 {
+       }
+      }
+     }
+     $node "1:RightLegClothB" {
+      $keys t q s {
+       $frame 0 29 {
+       }
+      }
+     }
+     $node "1:LeftLegClothF" {
+      $keys t q s {
+       $frame 0 29 {
+       }
+      }
+     }
+     $node "1:LeftLegClothB" {
+      $keys t q s {
+       $frame 0 29 {
+       }
+      }
+     }
+     $node "1:Spine1" {
+      $keys t q s {
+       $frame 0 29 {
+       }
+      }
+      $node "1:Stomach1" {
+       $keys t q s {
+        $frame 0 29 {
+        }
+       }
+      }
+      $node "1:Spine2" {
+       $keys t q s {
+        $frame 0 29 {
+        }
+       }
+       $node "1:Spine3" {
+        $keys t q s {
+         $frame 0 29 {
+         }
+        }
+        $node "1:Stomach2" {
+         $keys t q s {
+          $frame 0 29 {
+          }
+         }
+        }
+        $node "1:Spine4" {
+         $keys t q s {
+          $frame 0 29 {
+          }
+         }
+         $node "1:Stomach3" {
+          $keys t q s {
+           $frame 0 29 {
+           }
+          }
+         }
+         $node "1:Spine5" {
+          $keys t q s {
+           $frame 0 29 {
+           }
+          }
+          $node "1:Neck1" {
+           $keys t q s {
+            $frame 0 29 {
+            }
+           }
+           $node "1:Neck2" {
+            $keys t q s {
+             $frame 0 29 {
+             }
+            }
+            $node "1:Neck3" {
+             $keys t q s {
+              $frame 0 29 {
+              }
+             }
+             $node "1:Head" {
+              $keys t q s {
+               $frame 0 29 {
+               }
+              }
+             }
+            }
+           }
+          }
+          $node "1:LeftShoulder" {
+           $keys t q s {
+            $frame 0 29 {
+            }
+           }
+           $node "1:LeftArm" {
+            $keys t q s {
+             $frame 0 29 {
+             }
+            }
+            $node "1:LeftArmVolume" {
+             $keys t q s {
+              $frame 0 29 {
+              }
+             }
+            }
+            $node "1:LeftArmTwist" {
+             $keys t q s {
+              $frame 0 29 {
+              }
+             }
+             $node "1:LeftForeArm" {
+              $keys t q s {
+               $frame 0 29 {
+               }
+              }
+              $node "1:LeftForeArmVolume" {
+               $keys t q s {
+                $frame 0 29 {
+                }
+               }
+              }
+              $node "1:LeftForeArmTwist" {
+               $keys t q s {
+                $frame 0 29 {
+                }
+               }
+               $node "1:LeftHandUpperVolume" {
+                $keys t q s {
+                 $frame 0 29 {
+                 }
+                }
+               }
+               $node "1:LeftHand" {
+                $keys t q s {
+                 $frame 0 29 {
+                 }
+                }
+               }
+              }
+             }
+            }
+           }
+          }
+          $node "1:RightShoulder" {
+           $keys t q s {
+            $frame 0 29 {
+            }
+           }
+           $node "1:RightArm" {
+            $keys t q s {
+             $frame 0 29 {
+             }
+            }
+            $node "1:RightArmVolume" {
+             $keys t q s {
+              $frame 0 29 {
+              }
+             }
+            }
+            $node "1:RightArmTwist" {
+             $keys t q s {
+              $frame 0 29 {
+              }
+             }
+             $node "1:RightForeArm" {
+              $keys t q s {
+               $frame 0 29 {
+               }
+              }
+              $node "1:RightForeArmVolume" {
+               $keys t q s {
+                $frame 0 29 {
+                }
+               }
+              }
+              $node "1:RightForeArmTwist" {
+               $keys t q s {
+                $frame 0 29 {
+                }
+               }
+               $node "1:RightHandUpperVolume" {
+                $keys t q s {
+                 $frame 0 29 {
+                 }
+                }
+               }
+               $node "1:RightHand" {
+                $keys t q s {
+                 $frame 0 29 {
+                 }
+                }
+               }
+              }
+             }
+            }
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

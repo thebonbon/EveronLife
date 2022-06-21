@@ -1,0 +1,44 @@
+AnimSetInstanceSource {
+ Template "{CD0E6C3490BF0847}anims/workspaces/player/player_main.ast"
+ ParentTemplates {
+  "{0350283642830782}anims/workspaces/player/player_main_rifle.asi"
+ }
+ Lines {
+  AnimSetInstanceSource_Line "Locomotion.PneADS.IdleAdditive" {
+   Resource "{BDBD3A8E410F195E}anims/anm/player/locomotion/machineguns/p_lmg_pne_idle_add_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.IdleAdditive" {
+   Resource "{BDBD3A8E410F195E}anims/anm/player/locomotion/machineguns/p_lmg_pne_idle_add_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneADS.AimSpace" {
+   Resource "{0D124B8BF464F916}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_pne_ads_aimspace.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.AimSpace" {
+   Resource "{0D124B8BF464F916}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_pne_ads_aimspace.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneADS.IdleAimspace" {
+   Resource "{88897B35635BA3AD}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_pne_aimspace_body_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.IdleAimspace" {
+   Resource "{C688F3AC527EC79A}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_pne_aimspace_body_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneLow.IdleAimspace" {
+   Resource "{8B81B8AC1035DF2B}anims/anm/player/locomotion/machineguns/layered/aimspaces/p_lmg_pne_aimspace_body_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneADS.IdleBreathADD" {
+   Resource "{2DFFCB7100F933CD}anims/anm/player/locomotion/machineguns/p_lmg_pne_idle_ads_breath_ADD.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneLow.IdleBreathADD" {
+   Resource "{18C3BB6EAFB98280}anims/anm/player/locomotion/machineguns/p_lmg_pne_idle_low_breath_ADD.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.IdleBreathADD" {
+   Resource "{42454A010C8D15E5}anims/anm/player/locomotion/machineguns/p_lmg_pne_idle_ras_breath_ADD.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneADS.Idle" {
+   Resource "{6F64F91FAD24FB4C}anims/anm/player/locomotion/machineguns/p_lmg_pne_idle_ads.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.Idle" {
+   Resource "{6C6C3A86DE4A87CA}anims/anm/player/locomotion/machineguns/p_lmg_pne_idle_low.anm"
+  }
+ }
+}

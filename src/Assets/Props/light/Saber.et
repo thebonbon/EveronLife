@@ -1,0 +1,10 @@
+GenericEntity : "{809488C4984AC087}Prefabs/Weapons/Handguns/M9/Handgun_M9_base.et" {
+ ID "CFBAA4B725411E45"
+ components {
+  MeshObject "{CFBAA4B701F95D69}" {
+   Object "{59291944C11949D6}Assets/Props/light/LightSaber_FBX2.xob"
+  }
+ }
+ coords 114.708 0.853 131.225
+ angleZ 0
+}

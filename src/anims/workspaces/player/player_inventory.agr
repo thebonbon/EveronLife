@@ -1,0 +1,40 @@
+AnimSrcGraph {
+ AnimSetTemplate "{27996C9FFB1A1D50}anims/workspaces/player/player_inventory.ast"
+ ControlTemplate AnimSrcGCT "{52D2DD28DA9BEABD}" {
+  Variables {
+   AnimSrcGCTVarFloat AimY {
+    MinValue -90
+    MaxValue 90
+   }
+   AnimSrcGCTVarFloat AimIKX {
+    MinValue -180
+    MaxValue 180
+   }
+   AnimSrcGCTVarFloat AimIKZ {
+    MinValue -180
+    MaxValue 180
+   }
+   AnimSrcGCTVarFloat AimTransX {
+    MinValue -100
+    MaxValue 100
+   }
+   AnimSrcGCTVarFloat AimTransY {
+    MinValue -100
+    MaxValue 100
+   }
+   AnimSrcGCTVarFloat AimTransZ {
+    MinValue -100
+    MaxValue 100
+   }
+   AnimSrcGCTVarInt ArmIK {
+    MaxValue 7
+   }
+  }
+ }
+ Debug AnimSrcGD "{52D2DD28DA9BEAC9}" {
+ }
+ GraphFilesResourceNames {
+  "{4103408E4E5AB1F1}anims/workspaces/player/inventory.agf"
+ }
+ DefaultRunNode "MasterControl"
+}

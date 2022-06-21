@@ -1,0 +1,17 @@
+AnimEventTable {
+ EventNames {
+  "BlendIn"
+  "BlendOut"
+  "EndDamage"
+  "LFootDown"
+  "LFootUp"
+  "RFootDown"
+  "RFootUp"
+  "Sound"
+  "StartDamage"
+  "Weapon_AttachMagazine"
+  "Weapon_MagRelease"
+  "Weapon_SpawnMagazine"
+  "BlendOut2"
+ }
+}

@@ -1,0 +1,7 @@
+MatPBRBasic {
+ Color 0.071 0.192 0.561 1
+ DiffuseIBL 0 0.125 0.502 1
+ SpecularIBL 0 0.125 0.502 1
+ Diffuse 0 0.125 0.502 1
+ Specular 0 0.125 0.502 1
+}

@@ -1,0 +1,15 @@
+MetaFileClass {
+ Name "{6BEC82B356748306}anims/workspaces/player/player_EventTable.ae"
+ Configurations {
+  AnimEventListResourceClass PC {
+  }
+  AnimEventListResourceClass XBOX_ONE : PC {
+  }
+  AnimEventListResourceClass XBOX_SERIES : PC {
+  }
+  AnimEventListResourceClass PS4 : PC {
+  }
+  AnimEventListResourceClass HEADLESS : PC {
+  }
+ }
+}

@@ -1,0 +1,15 @@
+MetaFileClass {
+ Name "{505892C30D0FCDDF}Assets/Props/LightSaber/data/lights.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

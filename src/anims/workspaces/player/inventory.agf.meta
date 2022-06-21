@@ -1,0 +1,15 @@
+MetaFileClass {
+ Name "{4103408E4E5AB1F1}anims/workspaces/player/inventory.agf"
+ Configurations {
+  AnimGraphFileResourceClass PC {
+  }
+  AnimGraphFileResourceClass XBOX_ONE : PC {
+  }
+  AnimGraphFileResourceClass XBOX_SERIES : PC {
+  }
+  AnimGraphFileResourceClass PS4 : PC {
+  }
+  AnimGraphFileResourceClass HEADLESS : PC {
+  }
+ }
+}

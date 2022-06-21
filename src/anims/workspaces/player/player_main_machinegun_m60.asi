@@ -1,0 +1,32 @@
+AnimSetInstanceSource "{02625AA48D4E5A0D}anims/workspaces/player/arma_4_player/player_main_machinegun_m60.asi" {
+ Template "{CD0E6C3490BF0847}anims/workspaces/player/arma_4_player/player_main.ast"
+ ParentTemplates {
+  "{60945F10BF15FC09}anims/workspaces/player/arma_4_player/player_main_machinegun.asi"
+ }
+ Lines {
+  AnimSetInstanceSource_Line "WeaponActions.ErcRas.Fire" {
+   Resource "{5BC7AE55FF93E4F9}Assets/Weapons/MachineGuns/M60/anims/anm/p_lmg_M60_erc_fire.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponActions.ErcRas.ReloadActionBolt" {
+   Resource "{A07A7EDEF7C2097A}Assets/Weapons/MachineGuns/M60/anims/anm/p_lmg_M60_erc_rack_bolt.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponActions.ErcRas.ReloadInsertMag" {
+   Resource "{A6162616D2DCC62C}Assets/Weapons/MachineGuns/M60/anims/anm/p_lmg_M60_erc_insert_box.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponActions.ErcRas.ReloadRemoveMag" {
+   Resource "{6D7259E214AAF446}Assets/Weapons/MachineGuns/M60/anims/anm/p_lmg_M60_erc_remove_box.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponActions.PneRas.Fire" {
+   Resource "{5BC7AE55FF93E4F9}Assets/Weapons/MachineGuns/M60/anims/anm/p_lmg_M60_erc_fire.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponActions.PneRas.ReloadActionBolt" {
+   Resource "{4A39EBDA397466B4}Assets/Weapons/MachineGuns/M60/anims/anm/p_lmg_M60_pne_rack_bolt.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponActions.PneRas.ReloadInsertMag" {
+   Resource "{12813BAF9D7FE288}Assets/Weapons/MachineGuns/M60/anims/anm/p_lmg_M60_pne_insert_box.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponActions.PneRas.ReloadRemoveMag" {
+   Resource "{D9E5445B5B09D0E2}Assets/Weapons/MachineGuns/M60/anims/anm/p_lmg_M60_pne_remove_box.anm"
+  }
+ }
+}
