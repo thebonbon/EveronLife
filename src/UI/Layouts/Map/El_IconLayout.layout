@@ -5,17 +5,12 @@ FrameWidgetClass {
   OffsetLeft 0
   PositionY 0
   OffsetTop 0
-  SizeX 1
-  OffsetRight -1
-  SizeY 1
-  OffsetBottom -1
-  SizeToContent 1
+  SizeX 64
+  OffsetRight -64
+  SizeY 64
+  OffsetBottom -64
  }
  Clipping False
- Tooltip TextWidgetTooltip "{59BA676CE7320C8E}" {
-  Text "Apple Tree"
- }
- "Ignore Cursor" 0
  {
   ImageWidgetClass "{59B8B65867589EC8}" {
    Name "Icon"
@@ -32,10 +27,6 @@ FrameWidgetClass {
     SizeToContent 1
    }
    Clipping False
-   Tooltip TextWidgetTooltip "{59BA676C144B8FFE}" {
-    Text "Apple Trees"
-   }
-   "Ignore Cursor" 0
    "Left rule" Stop
    "Right rule" Stop
    "Up rule" Stop

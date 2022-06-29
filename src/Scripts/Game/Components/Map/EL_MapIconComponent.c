@@ -8,7 +8,12 @@ class EL_MapIconComponent : ScriptComponent
 	private ResourceName m_ImagePath;
 	
 	[Attribute("", UIWidgets.EditBox, "Image name if Image is imageset")]
-	private string m_sImageSetName;
+	private string m_sImageSetName;	
+	
+	[Attribute("0", UIWidgets.Slider, "Min Layer to show icon", "0 4 1")]
+	private int m_iMinLayer;
+	[Attribute("7", UIWidgets.Slider, "Max Layer to show icon", "0 4 1")]
+	private int m_iMaxLayer;
 	
 	[Attribute("1", UIWidgets.Auto, "")]
 	private float m_fMinScale;	
@@ -86,7 +91,15 @@ class EL_MapIconComponent : ScriptComponent
 	{
 		if (!m_MapEntity)
 			return;
+		
 		int curLayerIndex = m_MapEntity.GetLayerIndex();
+		
+		if (curLayerIndex < m_iMinLayer || curLayerIndex > m_iMaxLayer)
+			m_wIconWidget.SetVisible(false);
+		else 
+			if (!m_wIconWidget.IsVisible())
+				m_wIconWidget.SetVisible(true);
+		
 		float layerScale = curLayerIndex * 0.33;
 		layerScale = Math.Clamp(layerScale, m_fMinScale, m_fMaxScale);
 		m_wIconWidget.SetSize(m_vBaseIconSize[0] * layerScale, m_vBaseIconSize[1] * layerScale);
