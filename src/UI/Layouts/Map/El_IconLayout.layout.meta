@@ -1,0 +1,15 @@
+MetaFileClass {
+ Name "{E7F2D3A11AD40D97}UI/Layouts/Map/El_IconLayout.layout"
+ Configurations {
+  LayoutResourceClass PC {
+  }
+  LayoutResourceClass XBOX_ONE : PC {
+  }
+  LayoutResourceClass XBOX_SERIES : PC {
+  }
+  LayoutResourceClass PS4 : PC {
+  }
+  LayoutResourceClass HEADLESS : PC {
+  }
+ }
+}
