@@ -14,7 +14,7 @@ GenericEntity : "{C95E11C60810F432}Prefabs/Items/Core/Item_Base.et" {
      Description "Used for purchasing goods and services"
     }
     ItemPhysAttributes ItemPhysicalAttributes PhysicalAttributes {
-     Weight 0.1
+     Weight 0.01
      SizeSetupStrategy Volume
      ItemVolume 1
     }
@@ -34,6 +34,10 @@ GenericEntity : "{C95E11C60810F432}Prefabs/Items/Core/Item_Base.et" {
     CustomAttributes {
      ItemActionAnimAttributes "{59BC926AFC8EEB1F}" {
       ActionType Bandage
+     }
+     PreviewRenderAttributes "{59BC926D73E4B121}" {
+      CameraOrbitAngles 270 90 270
+      CameraDistanceToItem 0.35
      }
     }
    }
