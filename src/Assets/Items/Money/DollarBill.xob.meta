@@ -1,0 +1,31 @@
+MetaFileClass {
+ Name "{72F1AA5E0DB83990}Assets/Items/Money/Dollar Bill.xob"
+ Configurations {
+  FBXResourceClass PC {
+   MaterialAssigns {
+    MaterialAssignClass "{59BC92684C9CBE29}" {
+     SourceMaterial "Dollar_Bill_Texture"
+     AssignedMaterial "{D89738C31F74ADAA}Assets/Items/Money/Data/Dollar_Bill_Texture.emat"
+    }
+   }
+   Common TXOCommonClass "{59BC92684C91F42D}" : "{0877E7C4BB2B2C9A}Configs/System/ResourceTypes/PC/MeshObjectCommon.conf" {
+   }
+  }
+  FBXResourceClass XBOX_ONE : PC {
+   Common TXOCommonClass "{59BC92684C918C9E}" : "{9D5B6207F7628CE2}Configs/System/ResourceTypes/XBOX_ONE/MeshObjectCommon.conf" {
+   }
+  }
+  FBXResourceClass XBOX_SERIES : PC {
+   Common TXOCommonClass "{59BC92684C918D33}" : "{DD9F02115C764647}Configs/System/ResourceTypes/XBOX_SERIES/MeshObjectCommon.conf" {
+   }
+  }
+  FBXResourceClass PS4 : PC {
+   Common TXOCommonClass "{59BC92684C918D5C}" : "{53EC476BC921D99A}Configs/System/ResourceTypes/PS4/MeshObjectCommon.conf" {
+   }
+  }
+  FBXResourceClass HEADLESS : PC {
+   Common TXOCommonClass "{59BC92684C918D95}" : "{3A5B3356978039E8}Configs/System/ResourceTypes/HEADLESS/MeshObjectCommon.conf" {
+   }
+  }
+ }
+}
