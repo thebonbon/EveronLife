@@ -10,13 +10,13 @@ GenericEntity : "{C95E11C60810F432}Prefabs/Items/Core/Item_Base.et" {
   InventoryItemComponent "{5222EB4D0C73006B}" {
    Attributes SCR_ItemAttributeCollection "{5222EB4D0A2B466B}" {
     ItemDisplayName UIInfo "{5222EB4D07D865FA}" {
-     Name "Apple"
-     Description "This is an Apple from an Apple Tree"
+     Name "Dollar Bill"
+     Description "Used for purchasing goods and services"
     }
     ItemPhysAttributes ItemPhysicalAttributes PhysicalAttributes {
-     Weight 0.2
+     Weight 0.1
      SizeSetupStrategy Volume
-     ItemVolume 113
+     ItemVolume 1
     }
     ItemAnimationAttributes ItemAnimationAttributes "{59BC926AFC8EEB21}" {
      AnimationInstance "{4FCBEA45CAEBC9C0}anims/workspaces/player/player_main_1h.asi"
@@ -53,6 +53,8 @@ GenericEntity : "{C95E11C60810F432}Prefabs/Items/Core/Item_Base.et" {
   }
   ActionsManagerComponent "{508AB5952B584B2E}" {
    additionalActions {
+    SCR_PickUpItemAction "{51EC842E3A187379}" {
+    }
    }
   }
  }
