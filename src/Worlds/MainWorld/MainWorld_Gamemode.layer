@@ -1,5 +1,156 @@
 EL_GameModeRoleplay GameMode_Roleplay1 : "{03913608C59017A3}Prefabs/MP/Modes/Roleplay/GameMode_Roleplay.et" {
 }
-EL_SpawnPoint {
- coords 4471.854 21.689 10535.136
+GenericEntity Gun : "{1353C6EAD1DCFE43}Prefabs/Weapons/Handguns/M9/Handgun_M9.et" {
+ components {
+  SCR_WeaponAttachmentsStorageComponent "{51F080D5CE45A1A2}" {
+   Attributes SCR_ItemAttributeCollection "{51F080D5C64F12C5}" {
+    m_bDraggable 0
+   }
+  }
+  ActionsManagerComponent "{A29AE67FF4D82B0F}" {
+   additionalActions {
+    SCR_EquipWeaponAction "{51ECFC668352E6C8}" {
+     ParentContextList {
+      ""
+     }
+    }
+    SCR_EquipWeaponHolsterAction "{589291C195FC57CB}" {
+     ParentContextList {
+      ""
+     }
+    }
+    SCR_PickUpItemAction "{51EC842F84AD2146}" {
+     ParentContextList {
+      ""
+     }
+    }
+    EL_BuyAction "{59BAFBEACFBCF2B5}" {
+     ParentContextList {
+      "default"
+     }
+     Duration 1
+     m_PriceConfig EL_PriceConfig "{59BD1B25B87E2419}" : "{18A98641909A7F52}Configs/Shops/EL_ShopPrices.conf" {
+     }
+    }
+   }
+  }
+ }
+ coords 4687.172 161.578 6979.139
+ angleZ -90
+ Flags 3
+}
+Tree : "{1C6F9AD2669C17F9}Prefabs/Vegetation/Tree/t_malus_domestica_2s.et" {
+ components {
+  EL_MapIconComponent "{59C2ACEB05E0C8DD}" {
+   m_fMinScale 0.2
+   m_fMaxScale 1.2
+  }
+ }
+ coords 4699.942 0.067 6986.895
+}
+Vehicle UAZ1 : "{259EE7B78C51B624}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469.et" {
+ components {
+  SCR_VehicleDamageManagerComponent "{141326E9FD94FE40}" {
+   m_fVehicleDestroyDamage 11880.1
+  }
+  ActionsManagerComponent "{C97BE5489221AE18}" {
+   additionalActions {
+    EL_GatherAction "{59BD1B2036E1D9F4}" {
+    }
+   }
+  }
+ }
+ coords 4701.917 161.25 6982.24
+}
+SCR_ChimeraCharacter : "{854C04F0EA2129CC}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_Unarmed.et" {
+ coords 4682.596 161.151 6976.46
+ angleY 60
+}
+GenericEntity : "{9CAC68BA551417A4}Prefabs/Tools/Axe/Axe.et" {
+ components {
+  SignalsManagerComponent "{5990AD6FBA6EEF6D}" {
+  }
+  SCR_MeleeWeaponProperties "{599080951A5F84A5}" {
+  }
+  SCR_WeaponAttachmentsStorageComponent "{51F080D5CE45A1A2}" {
+   Attributes SCR_ItemAttributeCollection "{51F080D5C64F12C5}" {
+    m_bDraggable 0
+   }
+  }
+  SimpleSoundComponent "{59072B578A46AF84}" {
+   Enabled 1
+  }
+  WeaponComponent "{5990809682E12ADF}" {
+  }
+  ActionsManagerComponent "{A29AE67FF4D82B0F}" {
+   additionalActions {
+    SCR_PickUpItemAction "{5990AD6EEBCA9EAB}" {
+     ParentContextList {
+      ""
+     }
+     VisibilityRange 0
+    }
+    SCR_EquipWeaponHolsterAction "{5990AD67F23F879F}" {
+     ParentContextList {
+      ""
+     }
+     VisibilityRange 0
+    }
+    SCR_EquipWeaponAction "{59927B282708471D}" {
+     ParentContextList {
+      ""
+     }
+     VisibilityRange 0
+    }
+    EL_BuyAction "{59BAFBEC49F956C1}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo UIInfo "{59BAFBEC4339AC59}" {
+     }
+     Duration 1
+     m_PriceConfig EL_PriceConfig "{59BD1B25BDD11D3C}" : "{18A98641909A7F52}Configs/Shops/EL_ShopPrices.conf" {
+     }
+    }
+   }
+  }
+ }
+ coords 4687.395 161.969 6978.556
+ angleY 63.759
+ angleZ 90
+}
+$grp GenericEntity : "{FDEE11D818A4C675}Prefabs/Items/Money/DollarBill.et" {
+ {
+  coords 4689.17 161.162 6978.438
+ }
+ {
+  coords 4689.227 161.162 6978.407
+ }
+ {
+  coords 4689.26 161.162 6978.361
+ }
+ {
+  coords 4689.292 161.162 6978.317
+ }
+ {
+  coords 4689.34 161.162 6978.276
+ }
+ {
+  coords 4689.374 161.162 6978.235
+ }
+ {
+  coords 4689.406 161.162 6978.193
+ }
+ {
+  coords 4689.444 161.162 6978.166
+ }
+ {
+  coords 4689.486 161.162 6978.105
+ }
+ {
+  coords 4689.538 161.162 6978.059
+ }
+ {
+  coords 4689.585 161.162 6977.999
+ }
 }

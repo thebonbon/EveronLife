@@ -24,6 +24,7 @@ class EL_MapIconComponent : ScriptComponent
 	private Widget m_wIconFrame;
 	private ImageWidget m_wIconWidget
 	private vector m_vBaseIconSize;
+	
 	//------------------------------------------------------------------------------------------------
 	private void UpdateIcon()
 	{
@@ -87,6 +88,7 @@ class EL_MapIconComponent : ScriptComponent
 	}	
 	
 	//------------------------------------------------------------------------------------------------
+	//! Resize Icon based on layer
 	private void OnLayerChanged()
 	{
 		if (!m_MapEntity)
@@ -99,8 +101,8 @@ class EL_MapIconComponent : ScriptComponent
 		else 
 			if (!m_wIconWidget.IsVisible())
 				m_wIconWidget.SetVisible(true);
-		
-		float layerScale = curLayerIndex * 0.33;
+		float layerFactor = (m_fMaxScale - m_fMinScale) / m_MapEntity.LayerCount();
+		float layerScale = m_fMaxScale - curLayerIndex * layerFactor;
 		layerScale = Math.Clamp(layerScale, m_fMinScale, m_fMaxScale);
 		m_wIconWidget.SetSize(m_vBaseIconSize[0] * layerScale, m_vBaseIconSize[1] * layerScale);
 	}

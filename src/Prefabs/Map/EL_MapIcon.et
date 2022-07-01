@@ -2,7 +2,7 @@ GenericEntity {
  ID "59BAB3053E444721"
  components {
   EL_MapIconComponent "{59B92BF601AFAD06}" {
-   m_IconImage "{6BFB1D962D9E8786}UI/Icons/apple-icon.edds"
+   m_ImagePath "{6BFB1D962D9E8786}UI/Icons/apple-icon.edds"
    m_fMinScale 1
    m_fMaxScale 1
   }
