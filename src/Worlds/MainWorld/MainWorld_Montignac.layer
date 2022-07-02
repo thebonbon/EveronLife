@@ -1,0 +1,23 @@
+GenericEntity {
+ components {
+  EL_MapIconComponent "{59C4F486FF627796}" {
+   m_ImagePath "{E11489AF8F68E734}UI/Icons/weapon.edds"
+  }
+ }
+ coords 4685.771 161.151 6977.483
+}
+GenericEntity : "{DD994C1FCE7AD6E0}Prefabs/Shop/ShopItem.et" {
+ components {
+  ActionsManagerComponent "{59C4F487641A3025}" {
+   additionalActions {
+    EL_BuyAction "{59C4F4878D841445}" {
+     m_BuyablePrefab "{1DBD99E6347DE1AD}Prefabs/Items/Drinks/Apple_Juice.et"
+    }
+    EL_SellAction "{59C4F48B86953CE9}" {
+     m_SellablePrefab "{1DBD99E6347DE1AD}Prefabs/Items/Drinks/Apple_Juice.et"
+    }
+   }
+  }
+ }
+ coords 4713.291 164.864 6932.516
+}

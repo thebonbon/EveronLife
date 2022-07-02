@@ -1,52 +1,88 @@
 EL_GameModeRoleplay GameMode_Roleplay1 : "{03913608C59017A3}Prefabs/MP/Modes/Roleplay/GameMode_Roleplay.et" {
 }
-GenericEntity Gun : "{1353C6EAD1DCFE43}Prefabs/Weapons/Handguns/M9/Handgun_M9.et" {
- components {
-  SCR_WeaponAttachmentsStorageComponent "{51F080D5CE45A1A2}" {
-   Attributes SCR_ItemAttributeCollection "{51F080D5C64F12C5}" {
-    m_bDraggable 0
+$grp GenericEntity {
+ {
+  components {
+   EL_MapIconComponent "{59C4F483C48F78D8}" {
+    m_ImagePath "{A2249A10B4F27934}UI/Icons/police-badge.edds"
+    m_fMinScale 0.5
    }
   }
-  ActionsManagerComponent "{A29AE67FF4D82B0F}" {
-   additionalActions {
-    SCR_EquipWeaponAction "{51ECFC668352E6C8}" {
-     ParentContextList {
-      ""
-     }
-    }
-    SCR_EquipWeaponHolsterAction "{589291C195FC57CB}" {
-     ParentContextList {
-      ""
-     }
-    }
-    SCR_PickUpItemAction "{51EC842F84AD2146}" {
-     ParentContextList {
-      ""
-     }
-    }
-    EL_BuyAction "{59BAFBEACFBCF2B5}" {
-     ParentContextList {
-      "default"
-     }
-     Duration 1
-     m_PriceConfig EL_PriceConfig "{59BD1B25B87E2419}" : "{18A98641909A7F52}Configs/Shops/EL_ShopPrices.conf" {
-     }
-    }
-   }
-  }
+  coords 4816.526 167.918 7060.853
  }
- coords 4687.172 161.578 6979.139
- angleZ -90
- Flags 3
+ {
+  components {
+   EL_MapIconComponent "{59C4F4865F352156}" {
+    m_ImagePath "{C5BDEE592AA2B25E}UI/Icons/shopping-basket.edds"
+    m_fMinScale 0.5
+   }
+  }
+  coords 4711.821 163.825 6926.354
+ }
+ {
+  components {
+   EL_MapIconComponent "{59C4F4865F352156}" {
+    m_ImagePath "{AFAF4ABA90022A47}UI/Icons/support.edds"
+    m_fMinScale 0.5
+   }
+  }
+  coords 4637.128 153.33 7153.071
+ }
 }
 Tree : "{1C6F9AD2669C17F9}Prefabs/Vegetation/Tree/t_malus_domestica_2s.et" {
  components {
   EL_MapIconComponent "{59C2ACEB05E0C8DD}" {
+   m_ImagePath "{6BFB1D962D9E8786}UI/Icons/apple-icon.edds"
    m_fMinScale 0.2
    m_fMaxScale 1.2
   }
+  MeshObject "{02E2273E851D0152}" {
+   Object "{D1406291881F5A65}Assets/Vegetation/Tree/Malus_Domestica/t_malus_domestica_2s.xob"
+   LODFactors +{
+   }
+  }
+  RigidBody "{02E2273E84826082}" {
+   ModelGeometry 1
+   Static 1
+  }
+  SimpleSoundComponent "{5965409495EFF593}" {
+   Filenames +{
+   }
+  }
+  ActionsManagerComponent "{596540948BBDD481}" {
+   ActionContexts {
+    UserActionContext "{5965409488C45647}" {
+     UIInfo UIInfo "{5965409486D87028}" {
+     }
+     ContextName "Gather"
+     Position PointInfo "{596540933CA03C29}" {
+      Offset 0 1.25 0
+     }
+     Radius 0.5
+    }
+   }
+   additionalActions {
+    EL_GatherAction "{59654094806921B6}" {
+     ParentContextList +{
+     }
+     Duration 1
+     m_GatherItemDisplayName "Apples"
+     m_GatherItemPrefab "{C9D661E5B0714711}Prefabs/Items/Food/Apple.et"
+    }
+   }
+  }
+  RplComponent "{59654094AF0D4D1F}" {
+  }
  }
- coords 4699.942 0.067 6986.895
+ coords 4716.15 0.24 6960.142
+}
+GenericEntity : "{1DD3BF6A1A249CDE}Prefabs/Processor/Apple_Processor.et" {
+ components {
+  EL_MapIconComponent "{59C4F48311BE8031}" {
+   m_ImagePath "{E35899A673376422}UI/Icons/juice.edds"
+  }
+ }
+ coords 4713.441 163.182 6965.664
 }
 Vehicle UAZ1 : "{259EE7B78C51B624}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469.et" {
  components {
@@ -66,58 +102,13 @@ SCR_ChimeraCharacter : "{854C04F0EA2129CC}Prefabs/Characters/Factions/INDFOR/FIA
  coords 4682.596 161.151 6976.46
  angleY 60
 }
-GenericEntity : "{9CAC68BA551417A4}Prefabs/Tools/Axe/Axe.et" {
- components {
-  SignalsManagerComponent "{5990AD6FBA6EEF6D}" {
-  }
-  SCR_MeleeWeaponProperties "{599080951A5F84A5}" {
-  }
-  SCR_WeaponAttachmentsStorageComponent "{51F080D5CE45A1A2}" {
-   Attributes SCR_ItemAttributeCollection "{51F080D5C64F12C5}" {
-    m_bDraggable 0
-   }
-  }
-  SimpleSoundComponent "{59072B578A46AF84}" {
-   Enabled 1
-  }
-  WeaponComponent "{5990809682E12ADF}" {
-  }
-  ActionsManagerComponent "{A29AE67FF4D82B0F}" {
-   additionalActions {
-    SCR_PickUpItemAction "{5990AD6EEBCA9EAB}" {
-     ParentContextList {
-      ""
-     }
-     VisibilityRange 0
-    }
-    SCR_EquipWeaponHolsterAction "{5990AD67F23F879F}" {
-     ParentContextList {
-      ""
-     }
-     VisibilityRange 0
-    }
-    SCR_EquipWeaponAction "{59927B282708471D}" {
-     ParentContextList {
-      ""
-     }
-     VisibilityRange 0
-    }
-    EL_BuyAction "{59BAFBEC49F956C1}" {
-     ParentContextList {
-      "default"
-     }
-     UIInfo UIInfo "{59BAFBEC4339AC59}" {
-     }
-     Duration 1
-     m_PriceConfig EL_PriceConfig "{59BD1B25BDD11D3C}" : "{18A98641909A7F52}Configs/Shops/EL_ShopPrices.conf" {
-     }
-    }
-   }
-  }
+$grp GenericEntity : "{D8B83A318AE3611E}Prefabs/Props/Commercial/MarketStand_01.et" {
+ {
+  coords 4712.604 162.156 6965.529
  }
- coords 4687.395 161.969 6978.556
- angleY 63.759
- angleZ 90
+ {
+  coords 4715.772 162.156 6965.538
+ }
 }
 $grp GenericEntity : "{FDEE11D818A4C675}Prefabs/Items/Money/DollarBill.et" {
  {
