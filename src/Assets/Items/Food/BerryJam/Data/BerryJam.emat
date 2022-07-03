@@ -1,0 +1,5 @@
+MatPBRBasic {
+ Color 0.913 0.103 0.103 1
+ BCRMap "{77DAF84E0496B5F6}Assets/Structures/BuildingsParts/Industrial/ToolRack_01/Data/ToolRack_01_Tool_BCR.edds"
+ NMOMap "{4F0243DCDDE1E768}Assets/Structures/BuildingsParts/Industrial/ToolRack_01/Data/ToolRack_01_Tool_NMO.edds"
+}

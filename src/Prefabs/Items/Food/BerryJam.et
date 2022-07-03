@@ -1,0 +1,74 @@
+GenericEntity : "{C95E11C60810F432}Prefabs/Items/Core/Item_Base.et" {
+ ID "508AB2013EEE1E00"
+ components {
+  SoundComponent "{59C6B079DAFCE516}" {
+   Filenames {
+    "{12A94705DF2BFD25}Sounds/Items/_SharedData/PickUp/Items_PickUp_Generic.acp"
+   }
+   OnFrameUpdate 0
+  }
+  InventoryItemComponent "{5222EB4D0C73006B}" {
+   Attributes SCR_ItemAttributeCollection "{5222EB4D0A2B466B}" {
+    ItemDisplayName UIInfo "{5222EB4D07D865FA}" {
+     Name "Berry Jam"
+     Description "A Jar of tasty Berry Jam"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes PhysicalAttributes {
+     Weight 0.2
+     SizeSetupStrategy Volume
+     ItemVolume 113
+    }
+    ItemAnimationAttributes ItemAnimationAttributes "{59C6B079DAFCE509}" {
+     AnimationInstance "{4FCBEA45CAEBC9C0}anims/workspaces/player/player_main_1h.asi"
+     AnimationIKPose "{3E5C93E85F05C6B5}Assets/Weapons/Grenades/RGD5/anims/anm/p_rgd5_ik.anm"
+     AnimationAttachments {
+      AnimationAttachmentInfo "{59C6B079DAFCE504}" {
+       AnimGraph "{883777E45A6C4DA1}Assets/Items/Medicine/Workspaces/Gauze_01.agr"
+       AnimInstance "{79BD98038DD60F88}Assets/Items/Medicine/Workspaces/Gauze_01_player.asi"
+       BindingName "Gadget"
+      }
+     }
+     HandAdditiveRotation 90 0 -90
+     HandAdditiveTranslation 0 0.02 0
+    }
+    CustomAttributes {
+     ItemActionAnimAttributes "{59C6B079DAFCE507}" {
+      ActionType Bandage
+     }
+    }
+   }
+  }
+  MeshObject "{59C6B079DAFCE501}" {
+   Object "{B6DED7CEB7BC8CBB}Assets/Structures/BuildingsParts/Industrial/ToolRack_01/Dst/ToolRack_01_Tool_01_dst_02_09.xob"
+   Materials {
+    MaterialAssignClass "{59C6B07BE96D2975}" {
+     SourceMaterial "Assets/Structures/BuildingsParts/Industrial/ToolRack_01/Data/ToolRack_01_Tool_01"
+     AssignedMaterial "{8C153012D409D6B9}Assets/Items/Food/BerryJam/Data/BerryJam.emat"
+    }
+   }
+   LODScale 0.1
+   PixelSizeScale 10
+  }
+  RigidBody "{59C6B079DAFCE502}" {
+   LinearDamping 0.5
+   AngularDamping 0.5
+   AngularSleepingThreashold 1
+   ModelGeometry 1
+   CCDRadius 0.015
+  }
+  SCR_ConsumableItemComponent "{59C6B079DAFCE57C}" {
+   m_eAnimVariable ADRIANOV
+  }
+  ActionsManagerComponent "{508AB5952B584B2E}" {
+   ActionContexts {
+    UserActionContext "{508AC2ABEC97066C}" {
+     Position PointInfo "{508AC2ABEAC4A0F5}" {
+      Offset -1.9505 0.154 -0.0052
+     }
+    }
+   }
+   additionalActions {
+   }
+  }
+ }
+}
