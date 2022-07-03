@@ -1,0 +1,21 @@
+Tree : "{30549DAE871F6E7E}Prefabs/Vegetation/Bush/Coca_bush.et" {
+ coords 149.404 0.001 130.923
+ angleY 0
+}
+GenericEntity : "{D06287F32CEE1EE2}Prefabs/Items/Resources/Diesel_jerrycan.et" {
+ coords 150.614 0.001 130.852
+}
+$grp GenericEntity : "{DD593D31D4F3DFBF}Prefabs/Items/Drugs/Coca_leaves.et" {
+ {
+  coords 151.319 0.001 131.852
+ }
+ {
+  coords 151.102 0.001 131.569
+ }
+ {
+  coords 150.902 0.001 131.715
+ }
+ {
+  coords 151.087 0.001 131.878
+ }
+}
