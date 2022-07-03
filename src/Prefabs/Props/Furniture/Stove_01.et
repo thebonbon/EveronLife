@@ -1,0 +1,60 @@
+GenericEntity : "{4CC2C69DE1AEF103}Prefabs/Props/Core/Destructible_Props_Base.et" {
+ ID "6093E737D2748756"
+ components {
+  ActionsManagerComponent "{59C6B07DE0C49B9D}" {
+   ActionContexts {
+    UserActionContext "{59C6B07DE12AE916}" {
+     ContextName "default"
+     Position PointInfo "{59C6B07D6C64FDF0}" {
+      Offset -0.3104 0.9013 0.6916
+     }
+    }
+   }
+   additionalActions {
+    EL_ProcessAction "{59C6B07DD86B8A7F}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo UIInfo "{59C6B07DD181342C}" {
+      Name "Make Plum Jam"
+     }
+     Duration 10
+     m_aProcessingInputs {
+      EL_ProcessingInput "{59C6B07DD507FF64}" {
+       m_InputPrefab "{C3E35D690317B5BE}Prefabs/Items/Food/Plum.et"
+       m_iInputAmount 5
+      }
+     }
+     m_aProcessingOutputs {
+      EL_ProcessingOutput "{59C6B07DC2D14197}" {
+       m_OutputPrefab "{FD702B97C4E200EE}Prefabs/Items/Food/PlumJam.et"
+      }
+     }
+    }
+    EL_ProcessAction "{59C6B07DBDDF6CD6}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo UIInfo "{59C6B07DB6865CA9}" {
+      Name "Make Berry Jam"
+     }
+     Duration 10
+     m_aProcessingInputs {
+      EL_ProcessingInput "{59C6B07DAA6BC792}" {
+       m_InputPrefab "{73CF2BF72525F5D5}Prefabs/Items/Food/RowanBerries.et"
+       m_iInputAmount 5
+      }
+     }
+     m_aProcessingOutputs {
+      EL_ProcessingOutput "{59C6B07DA4B87506}" {
+       m_OutputPrefab "{CD44DE4529F22D17}Prefabs/Items/Food/BerryJam.et"
+      }
+     }
+    }
+   }
+  }
+  RplComponent "{5624A88DC2D9928D}" {
+   Enabled 1
+  }
+ }
+}
