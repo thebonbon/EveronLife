@@ -24,6 +24,7 @@ class EL_Price
 	int m_iBuyPrice;
 	[Attribute("0", UIWidgets.EditBox, "")]
 	int m_iSellPrice;
+
 }
 
 [BaseContainerProps(configRoot: true)]

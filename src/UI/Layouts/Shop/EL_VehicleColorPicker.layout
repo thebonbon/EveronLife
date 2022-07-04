@@ -1,0 +1,235 @@
+FrameWidgetClass {
+ Name "rootFrame"
+ Slot WidgetSlot "{59C6813091C46784}" {
+ }
+ {
+  PanelWidgetClass "{59C6EE3CDDA9E32D}" {
+   Name "BackgroundPanel"
+   Slot FrameWidgetSlot "{59C6EE3CDDA9E31A}" {
+    Anchor 0.5 0.5 0.5 0.5
+    PositionX -391.349
+    OffsetLeft -391.349
+    PositionY -148.256
+    OffsetTop -148.256
+    SizeX 771.898
+    OffsetRight -380.549
+    SizeY 290.007
+    OffsetBottom -141.751
+   }
+   {
+    ImageWidgetClass "{59C68131382D07F7}" {
+     Name "ColorImage"
+     Slot FrameWidgetSlot "{59C68131382D07D5}" {
+      PositionX 65.832
+      OffsetLeft 65.832
+      PositionY 60.976
+      OffsetTop 60.976
+      SizeX 121.365
+      OffsetRight -187.197
+      SizeY 112.408
+      OffsetBottom -173.384
+     }
+     Color 1 1 0 1
+    }
+    TextWidgetClass "{59C68130FA09024F}" {
+     Name "BlueIndex"
+     Slot FrameWidgetSlot "{59C68130FA0902AE}" {
+      PositionX 659.992
+      OffsetLeft 659.992
+      PositionY 139.392
+      OffsetTop 139.392
+      SizeX 64.3
+      OffsetRight -724.292
+      SizeY 30
+      OffsetBottom -169.392
+     }
+     Color 0.67 0.705 0.768 1
+     Text "255"
+    }
+    SliderWidgetClass "{59C68130F10622A4}" {
+     Name "BlueSlider"
+     Slot FrameWidgetSlot "{59C68130FA0902AE}" {
+      PositionX 235.185
+      OffsetLeft 235.185
+      PositionY 141.378
+      OffsetTop 141.378
+      SizeX 404.447
+      OffsetRight -639.632
+      SizeY 30
+      OffsetBottom -171.378
+     }
+     Color 0 0.002 1 1
+     maximum 255
+     current 125
+    }
+    TextWidgetClass "{59C6EE3F66CA67B6}" {
+     Name "BlueChar"
+     Slot FrameWidgetSlot "{59C6EE3F66CA6793}" {
+      PositionX 199.229
+      OffsetLeft 199.229
+      PositionY 139.273
+      OffsetTop 139.273
+      SizeX 27.516
+      OffsetRight -226.745
+      SizeY 30
+      OffsetBottom -169.273
+     }
+     Text "B"
+     "Horizontal Alignment" Center
+     "Vertical Alignment" Center
+    }
+    SliderWidgetClass "{59C681319AE3CDFE}" {
+     Name "RedSlider"
+     Slot FrameWidgetSlot "{59C68130FA0902AE}" {
+      PositionX 234.614
+      OffsetLeft 234.614
+      PositionY 62.239
+      OffsetTop 62.239
+      SizeX 404.458
+      OffsetRight -639.072
+      SizeY 30
+      OffsetBottom -92.239
+     }
+     Color 1 0.001 0 1
+     maximum 255
+     current 125
+    }
+    TextWidgetClass "{59C6EE3F8B8EB6B4}" {
+     Name "RedChar"
+     Slot FrameWidgetSlot "{59C6EE3F66CA6793}" {
+      PositionX 197.968
+      OffsetLeft 197.968
+      PositionY 61.731
+      OffsetTop 61.731
+      SizeX 27.516
+      OffsetRight -225.484
+      SizeY 30
+      OffsetBottom -91.731
+     }
+     Text "R"
+     "Horizontal Alignment" Center
+     "Vertical Alignment" Center
+    }
+    EditBoxWidgetClass "{59C6EE3FAD6C1DA4}" {
+     Name "RedIndex"
+     Slot FrameWidgetSlot "{59C68130FA0902AE}" {
+      PositionX 659.342
+      OffsetLeft 659.342
+      PositionY 59.359
+      OffsetTop 59.359
+      SizeX 64.3
+      OffsetRight -723.642
+      SizeY 30
+      OffsetBottom -89.359
+     }
+     Color 0.67 0.705 0.768 1
+     "no focus" 1
+     text "255"
+    }
+    TextWidgetClass "{59C6EE3F8ACB6746}" {
+     Name "GreenChar"
+     Slot FrameWidgetSlot "{59C6EE3F66CA6793}" {
+      PositionX 199.229
+      OffsetLeft 199.229
+      PositionY 100.81
+      OffsetTop 100.81
+      SizeX 27.516
+      OffsetRight -226.745
+      SizeY 30
+      OffsetBottom -130.81
+     }
+     Text "G"
+     "Horizontal Alignment" Center
+     "Vertical Alignment" Center
+    }
+    TextWidgetClass "{59C6EE3FAC558026}" {
+     Name "GreenIndex"
+     Slot FrameWidgetSlot "{59C68130FA0902AE}" {
+      PositionX 659.342
+      OffsetLeft 659.342
+      PositionY 96.794
+      OffsetTop 96.794
+      SizeX 64.3
+      OffsetRight -723.642
+      SizeY 30
+      OffsetBottom -126.794
+     }
+     Color 0.67 0.705 0.768 1
+     Text "255"
+    }
+    SliderWidgetClass "{59C6EE3FBF453CFA}" {
+     Name "GreenSlider"
+     Slot FrameWidgetSlot "{59C68130FA0902AE}" {
+      PositionX 233.969
+      OffsetLeft 233.969
+      PositionY 99.028
+      OffsetTop 99.028
+      SizeX 404.453
+      OffsetRight -638.422
+      SizeY 30
+      OffsetBottom -129.028
+     }
+     Color 0 1 0 1
+     maximum 255
+     current 125
+    }
+    ButtonWidgetClass "{59C6EE3C53EBDBD0}" {
+     Name "ButtonCancel"
+     Slot FrameWidgetSlot "{59C6EE3C53EBDA36}" {
+      PositionX 76.895
+      OffsetLeft 76.895
+      PositionY 204.682
+      OffsetTop 204.682
+      SizeX 100
+      OffsetRight -176.895
+      SizeY 30
+      OffsetBottom -234.682
+     }
+     components {
+      BasicButtonComponent "{59C6EE3CBB8CCF90}" {
+      }
+      SCR_ButtonTextComponent "{59C715947FDB1998}" {
+      }
+     }
+     {
+      TextWidgetClass "{59C7159753A201FE}" {
+       Name "Text0"
+       Slot ButtonWidgetSlot "{59C7159753A201E1}" {
+       }
+       Text "Cancel"
+      }
+     }
+    }
+    ButtonWidgetClass "{59C6EE3C50D91CA2}" {
+     Name "ButtonConfirm"
+     Slot FrameWidgetSlot "{59C6EE3C50D91C87}" {
+      PositionX 590.012
+      OffsetLeft 590.012
+      PositionY 204.037
+      OffsetTop 204.037
+      SizeX 100
+      OffsetRight -690.012
+      SizeY 30
+      OffsetBottom -234.037
+     }
+     components {
+      SCR_ButtonTextComponent "{59C6EE23B85EF2C0}" {
+       m_BackgroundDefault 0.502 0 0 1
+       m_BackgroundHovered 0.812 0.506 0.506 1
+      }
+      BasicButtonComponent "{59C71596F4C51040}" {
+      }
+     }
+     {
+      TextWidgetClass "{59C7159750E19E03}" {
+       Name "Text0"
+       Slot ButtonWidgetSlot "{59C7159750E19E64}" {
+       }
+       Text "Confirm"
+      }
+     }
+    }
+   }
+  }
+ }
+}

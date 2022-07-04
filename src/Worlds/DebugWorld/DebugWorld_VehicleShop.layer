@@ -1,0 +1,107 @@
+Vehicle UAZ1 : "{259EE7B78C51B624}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469.et" {
+ components {
+  BaseVehicleNodeComponent "{20FB66C5B2237133}" {
+   components {
+    SCR_CarControllerComponent "{20FB66C5BC92275B}" {
+    }
+   }
+  }
+  FuelManagerComponent "{5622A70CD78A9E2C}" {
+  }
+  SCR_VehicleDamageManagerComponent "{141326E9FD94FE40}" {
+   m_fVehicleDestroyDamage 11880.1
+  }
+  ActionsManagerComponent "{C97BE5489221AE18}" {
+   additionalActions {
+    EL_BuyAction "{59C68136336BDC31}" {
+     ParentContextList {
+      "door_l01"
+     }
+     Duration 1
+     m_BuyablePrefab "{259EE7B78C51B624}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469.et"
+     m_PriceConfig EL_PriceConfig "{59C68134EF1E1CDE}" : "{18A98641909A7F52}Configs/Shops/EL_ShopPrices.conf" {
+     }
+    }
+   }
+  }
+ }
+ coords 95.613 0.001 131.573
+}
+GenericEntity : "{622F9989DDC4865B}PrefabLibrary/Props/Civilian/Recreation/TableRecreation_01.et" {
+ coords 95.756 -0.001 135
+ {
+  GenericEntity : "{51D31AB07AE3C1C7}Prefabs/Props/Commercial/CashierShop_01.et" {
+   components {
+    Hierarchy "{59C6AB73A8871A71}" {
+    }
+    ActionsManagerComponent "{59C6813AE41BD09E}" {
+     ActionContexts {
+      UserActionContext "{59C6813AE4C08A6C}" {
+       ContextName "default"
+       Position PointInfo "{59C6813AF8381699}" {
+        Offset 0 0.2452 0
+       }
+       Radius 4.824
+      }
+     }
+     additionalActions {
+      EL_PayAction "{59C68126E30E4A52}" {
+       ParentContextList {
+        "default"
+       }
+      }
+      EL_EmptyCartAction "{59C89A29BBF47ECA}" {
+       ParentContextList {
+        "default"
+       }
+       "Sort Priority" 10
+      }
+     }
+    }
+    RplComponent "{5624A88DC2D9928D}" {
+     Enabled 1
+    }
+   }
+   coords -0.037 0.896 0.052
+   {
+    $grp BaseGameTriggerEntity : "{AB5C86C286A09CDA}Prefabs/Shop/EL_VehicleSpawnPoint.et" {
+     {
+      coords -12.981 -0.895 -3.446
+     }
+     {
+      coords -7.9 -0.895 -3.446
+     }
+     {
+      coords -3.9 -0.895 -3.446
+     }
+    }
+   }
+  }
+ }
+}
+$grp GenericEntity : "{FDEE11D818A4C675}Prefabs/Items/Money/DollarBill.et" {
+ {
+  coords 96.165 0.901 135.439
+ }
+ {
+  coords 96.165 0.901 135.439
+ }
+ {
+  coords 104.833 0.003 149.962
+ }
+ {
+  coords 104.833 0.003 149.962
+ }
+ {
+  coords 104.833 0.003 149.962
+ }
+ {
+  coords 104.833 0.003 149.962
+ }
+ {
+  coords 104.833 0.003 149.962
+ }
+ {
+  coords 104.833 0.003 149.962
+ }
+}

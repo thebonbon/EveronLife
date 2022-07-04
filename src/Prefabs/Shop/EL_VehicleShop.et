@@ -1,0 +1,42 @@
+GenericEntity : "{51D31AB07AE3C1C7}Prefabs/Props/Commercial/CashierShop_01.et" {
+ ID "F0DBA538AC2A0552"
+ components {
+  Hierarchy "{59C6AB73A8871A71}" {
+  }
+  ActionsManagerComponent "{59C6813AE41BD09E}" {
+   ActionContexts {
+    UserActionContext "{59C6813AE4C08A6C}" {
+     ContextName "default"
+     Position PointInfo "{59C6813AF8381699}" {
+      Offset 0 0.2452 0
+     }
+     Radius 4.824
+    }
+   }
+   additionalActions {
+    EL_PayAction "{59C68126E30E4A52}" {
+     ParentContextList {
+      "default"
+     }
+    }
+   }
+  }
+  RplComponent "{5624A88DC2D9928D}" {
+   Enabled 1
+  }
+ }
+ coords -0.037 0.896 0.052
+ {
+  BaseGameTriggerEntity : "{AB5C86C286A09CDA}Prefabs/Shop/EL_VehicleSpawnPoint.et" {
+   ID "59C6C5684765E535"
+   coords 3.434 -0.894 -1.405
+   TriggerShapeType "Oriented Bounding Box"
+   BoxMins -1 0 -2
+   BoxMaxs 0.5 2 2
+   DrawShape 1
+   ShapeColor 0.937 0.82 0.91 1
+   TriggerActivationType "All changes"
+   ClassFilter "Vehicle"
+  }
+ }
+}

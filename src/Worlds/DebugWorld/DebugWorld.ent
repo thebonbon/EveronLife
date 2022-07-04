@@ -31,3 +31,6 @@ Layer ConcreteChain {
 Layer CocaineChain {
  Index 10
 }
+Layer VehicleShop {
+ Index 11
+}
