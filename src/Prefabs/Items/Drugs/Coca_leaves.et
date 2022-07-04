@@ -34,18 +34,21 @@ GenericEntity {
     CustomAttributes {
      ItemActionAnimAttributes "{598C78D6C44E481D}" {
      }
+     PreviewRenderAttributes "{59C89AB366D526AD}" {
+     }
     }
     m_Size SLOT_1x1
     m_SlotType SLOT_LOADOUT_STORAGE
    }
   }
   MeshObject "{598C78D6C44E481F}" {
-   Object "{2E4F33AC0E35EC3D}Assets/Vegetation/Plant/Arctium_lappa/p_Arctium_lappa_0s.xob"
+   Object "{694B4DADA350F737}Assets/Vegetation/Cuttings/Rosa_canina_small_01.xob"
    LODScale 0.1
    PixelSizeScale 10
   }
+  Hierarchy "{59C881B1398B4F59}" {
+  }
   RigidBody "{598C78D6C44E4818}" {
-   Enabled 0
    LinearDamping 0.5
    AngularDamping 0.5
    AngularSleepingThreashold 1
@@ -57,7 +60,9 @@ GenericEntity {
     UserActionContext "{598C78D6C44E5FF3}" {
      ContextName "default"
      Position PointInfo "{598C78D6C44E5FF1}" {
+      Offset 0 0.053 0
      }
+     Radius 0.5
     }
    }
    additionalActions {
@@ -74,5 +79,5 @@ GenericEntity {
   RplComponent "{598C78D6C44FCF38}" {
   }
  }
- scale 0.1
+ scale 0.5
 }
