@@ -1,21 +1,134 @@
+GenericEntity : "{1EA06AA76191AE7A}Prefabs/Processor/Cocaine_Processor.et" {
+ components {
+  MeshObject "{598F21A867C4015C}" {
+   Object "{D73D5FE0EEFBCD9B}Assets/Props/Industrial/BarrelMetal_01/BarrelMetal_01.xob"
+  }
+  ActionsManagerComponent "{598F21A8710B89C1}" {
+   ActionContexts {
+    UserActionContext "{598F21A871DA7304}" {
+     Radius 3
+    }
+   }
+   additionalActions {
+    EL_ProcessAction "{598F21A877BE6DEE}" {
+     m_aProcessingInputs {
+      EL_ProcessingInput "{59C6B07C18596B11}" {
+       m_iInputAmount 1
+      }
+     }
+     m_aProcessingOutputs {
+      EL_ProcessingOutput "{59C6B07C18596B0C}" {
+       m_OutputPrefab "{B854F08E28254CB8}Prefabs/Items/Drugs/Cocaine.et"
+      }
+     }
+    }
+   }
+  }
+  RplComponent "{59C6B07C18596B0F}" {
+  }
+ }
+ coords 153.45 0.001 131.023
+}
 Tree : "{30549DAE871F6E7E}Prefabs/Vegetation/Bush/Coca_bush.et" {
- coords 149.404 0.001 130.923
+ coords 147.987 0.413 131.348
  angleY 0
 }
-GenericEntity : "{D06287F32CEE1EE2}Prefabs/Items/Resources/Diesel_jerrycan.et" {
- coords 150.614 0.001 130.852
+GenericEntity : "{5C5C6EE05EE2FF1A}Prefabs/Items/Equipment/Backpacks/Backpack_ALICE_Medium_assembled.et" {
+ coords 147.008 0.001 131.844
 }
-$grp GenericEntity : "{DD593D31D4F3DFBF}Prefabs/Items/Drugs/Coca_leaves.et" {
- {
-  coords 151.319 0.001 131.852
+GenericEntity : "{B854F08E28254CB8}Prefabs/Items/Drugs/Cocaine.et" {
+ components {
+  InventoryItemComponent "{59C6B0702D1E4E56}" {
+   Attributes SCR_ItemAttributeCollection "{59C6B0702D1E4E53}" {
+    CustomAttributes {
+     PreviewRenderAttributes "{59C88DEA0DC69CAC}" {
+      CameraOrbitAngles 90 0 90
+     }
+    }
+   }
+  }
  }
- {
-  coords 151.102 0.001 131.569
+ coords 154.453 0.001 131.07
+ scale 1
+}
+GenericEntity : "{D06287F32CEE1EE2}Prefabs/Items/Resources/Diesel_jerrycan.et" {
+ components {
+  SoundComponent "{598CB32764285B2E}" {
+   Filenames +{
+   }
+   OnFrameUpdate 0
+  }
+  InventoryItemComponent "{598CB32764285B25}" {
+   Attributes SCR_ItemAttributeCollection "{598CB32764285B20}" {
+    CustomAttributes {
+     ItemActionAnimAttributes "{598CB32764285B1B}" {
+     }
+     PreviewRenderAttributes "{59C88DEA21BC6D53}" {
+      CameraOrbitAngles 0 0 90
+      CameraDistanceToItem 1.5
+      CameraOffset 0 0.2 0
+      ItemRenderRotation 0 90 0
+     }
+    }
+   }
+  }
+  MeshObject "{598CB32764285B16}" {
+   Object "{FEC338E88366A268}Assets/Props/Civilian/Jerrycan_01/Jerrycan_01.xob"
+   LODScale 0.1
+   PixelSizeScale 10
+  }
+  Hierarchy "{59C881B120DB0B97}" {
+  }
+  RigidBody "{598CB32764285B17}" {
+   LinearDamping 0.5
+   AngularDamping 0.5
+   AngularSleepingThreashold 1
+   ModelGeometry 1
+   CCDRadius 0.015
+  }
+  ActionsManagerComponent "{598CB32764285B0D}" {
+   ActionContexts {
+    UserActionContext "{598CB32764285B0E}" {
+     ContextName "default"
+     Position PointInfo "{598CB32764285B0F}" {
+      Offset 0 0.5121 0.0401
+     }
+     Radius 0.5
+    }
+   }
+   additionalActions {
+    SCR_PickUpItemAction "{598CB32764285B0A}" {
+     ParentContextList +{
+     }
+     UIInfo UIInfo "{598CB32764285B0B}" {
+      Name "#AR-Inventory_PickUp"
+     }
+    }
+   }
+  }
+  RplComponent "{598CB32764285B05}" {
+  }
  }
- {
-  coords 150.902 0.001 131.715
+ coords 150.84 0.004 132.684
+}
+GenericEntity : "{D58674633332DC86}Prefabs/Items/Resources/CementBag.et" {
+ coords 149.637 -0.019 131.21
+}
+GenericEntity : "{DD593D31D4F3DFBF}Prefabs/Items/Drugs/Coca_leaves.et" {
+ components {
+  RigidBody "{598C78D6C44E4818}" {
+   ModelGeometry 0
+   CCDRadius 1
+  }
+  ActionsManagerComponent "{598C78D6C44E5FFD}" {
+   ActionContexts {
+    UserActionContext "{598C78D6C44E5FF3}" {
+     Position PointInfo "{598C78D6C44E5FF1}" {
+      Offset 0 0 0
+     }
+    }
+   }
+  }
  }
- {
-  coords 151.087 0.001 131.878
- }
+ coords 151.914 0.001 131.49
 }
