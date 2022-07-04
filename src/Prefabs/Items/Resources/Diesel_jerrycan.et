@@ -34,6 +34,9 @@ GenericEntity {
     CustomAttributes {
      ItemActionAnimAttributes "{598CB32764285B1B}" {
      }
+     PreviewRenderAttributes "{59C88DEA21BC6D53}" {
+      CameraDistanceToItem 0.5
+     }
     }
     m_Size SLOT_1x1
     m_SlotType SLOT_LOADOUT_STORAGE
@@ -44,8 +47,9 @@ GenericEntity {
    LODScale 0.1
    PixelSizeScale 10
   }
+  Hierarchy "{59C881B120DB0B97}" {
+  }
   RigidBody "{598CB32764285B17}" {
-   Enabled 0
    LinearDamping 0.5
    AngularDamping 0.5
    AngularSleepingThreashold 1
@@ -57,7 +61,9 @@ GenericEntity {
     UserActionContext "{598CB32764285B0E}" {
      ContextName "default"
      Position PointInfo "{598CB32764285B0F}" {
+      Offset 0 0.5121 0.0401
      }
+     Radius 0.5
     }
    }
    additionalActions {
