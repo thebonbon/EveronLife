@@ -88,21 +88,20 @@ class EL_ProcessAction : ScriptedUserAction
  	{
 		//Check player inventory
 		InventoryStorageManagerComponent inventoryManager = InventoryStorageManagerComponent.Cast(user.FindComponent(SCR_InventoryStorageManagerComponent));
-	
-		bool bCanPerform = true;
 		
 		foreach (EL_ProcessingInput processingInput : m_aProcessingInputs)
 		{
-			if (bCanPerform)
-			{
-				int inputPrefabsInInv = inventoryManager.GetDepositItemCountByResource(processingInput.m_InputPrefab);
-				
-				SetCannotPerformReason("Can't find items");
-				bCanPerform = inputPrefabsInInv >= processingInput.m_iInputAmount
-			}
+			int inputPrefabsInInv = inventoryManager.GetDepositItemCountByResource(processingInput.m_InputPrefab);
+			if (inputPrefabsInInv < processingInput.m_iInputAmount)
+				return false;
 		}
 
-		return (bCanPerform);
+		return true;
 	}	
+	
+	override void Init(IEntity pOwnerEntity, GenericComponent pManagerComponent)
+	{
+		SetCannotPerformReason("Can't find items");
+	}
 }
 

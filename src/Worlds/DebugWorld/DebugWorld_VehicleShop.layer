@@ -79,6 +79,12 @@ GenericEntity : "{622F9989DDC4865B}PrefabLibrary/Props/Civilian/Recreation/Table
   }
  }
 }
+GenericEntity : "{D06287F32CEE1EE2}Prefabs/Items/Resources/Diesel_jerrycan.et" {
+ coords 150.942 0.001 130.91
+}
+GenericEntity : "{DD593D31D4F3DFBF}Prefabs/Items/Drugs/Coca_leaves.et" {
+ coords 152.175 0.001 131.164
+}
 $grp GenericEntity : "{FDEE11D818A4C675}Prefabs/Items/Money/DollarBill.et" {
  {
   coords 96.165 0.901 135.439
