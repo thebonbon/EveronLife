@@ -99,6 +99,7 @@ class EL_ProcessAction : ScriptedUserAction
 		return true;
 	}	
 	
+	//------------------------------------------------------------------------------------------------
 	override void Init(IEntity pOwnerEntity, GenericComponent pManagerComponent)
 	{
 		SetCannotPerformReason("Can't find items");
