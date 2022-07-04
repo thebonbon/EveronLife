@@ -1,0 +1,33 @@
+Tree : "{388AE316D09D0680}Prefabs/Vegetation/Core/Tree_Base.et" {
+ ID "0F2AA6B42CA78628"
+ components {
+  SimpleSoundComponent "{59C960B247F66F3E}" {
+   Filenames {
+    "{12A94705DF2BFD25}Sounds/Items/_SharedData/PickUp/Items_PickUp_Generic.acp"
+   }
+  }
+  ActionsManagerComponent "{59C960B195C7708B}" {
+   ActionContexts {
+    UserActionContext "{59C960B188F323C2}" {
+     ContextName "default"
+     Position PointInfo "{59C960B1608C2441}" {
+      Offset 0 1.25 0
+     }
+     Radius 0.5
+    }
+   }
+   additionalActions {
+    EL_GatherAction "{59C960B17134E29F}" {
+     ParentContextList {
+      "default"
+     }
+     Duration 1
+     m_GatherItemDisplayName "Rowan Berries"
+     m_GatherItemPrefab "{73CF2BF72525F5D5}Prefabs/Items/Food/RowanBerries.et"
+    }
+   }
+  }
+  RplComponent "{59C960B1A6F9D9DA}" {
+  }
+ }
+}

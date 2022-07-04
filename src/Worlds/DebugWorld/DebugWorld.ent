@@ -34,3 +34,6 @@ Layer CocaineChain {
 Layer VehicleShop {
  Index 11
 }
+Layer BerryChain {
+ Index 12
+}

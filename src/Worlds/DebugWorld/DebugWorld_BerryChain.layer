@@ -1,0 +1,33 @@
+Tree : "{04592C849978A51C}Prefabs/Vegetation/Tree/t_sorbus_aucuparia_2f.et" {
+ components {
+  ActionsManagerComponent "{59C960B195C7708B}" {
+   ActionContexts {
+    UserActionContext "{59C960B188F323C2}" {
+     UIInfo UIInfo "{59C960B204CD1621}" {
+     }
+    }
+   }
+  }
+ }
+ coords 118.522 0.001 134.994
+}
+$grp GenericEntity : "{73CF2BF72525F5D5}Prefabs/Items/Food/RowanBerries.et" {
+ {
+  coords 114.498 0.898 135.417
+ }
+ {
+  coords 114.407 0.898 135.416
+ }
+ {
+  coords 114.303 0.898 135.413
+ }
+ {
+  coords 114.487 0.898 135.254
+ }
+ {
+  coords 114.386 0.898 135.254
+ }
+ {
+  coords 114.29 0.898 135.255
+ }
+}
