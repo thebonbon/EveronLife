@@ -7,6 +7,175 @@ $grp GenericEntity {
   }
   coords 4685.771 161.151 6977.483
   {
+   $grp GenericEntity {
+    {
+     components {
+      MeshObject "{59CAAA195957154E}" {
+       Object "{1E38513800383D64}Assets/Weapons/Handguns/M9/M9_body.xob"
+      }
+     }
+     coords 0.758 0.442 1.501
+     angleZ 90
+    }
+    {
+     components {
+      MeshObject "{59CAAA195CE3C33C}" {
+       Object "{6F3FF53AF2AB04B3}Assets/Weapons/Handguns/PM/PM_body.xob"
+      }
+     }
+     coords -0.479 0.442 3.72
+     angleZ 90
+    }
+    {
+     components {
+      MeshObject "{59CAAA19296CB304}" {
+       Object "{BA5449C606206A19}Assets/Weapons/Rifles/AK74/ak74_body.xob"
+      }
+     }
+     coords -0.217 0.847 3.326
+     angleY -32.529
+     angleZ 90.079
+    }
+    {
+     components {
+      MeshObject "{59CAAA191F64F0A0}" {
+       Object "{C88615A558BF012C}Assets/Weapons/Rifles/M16A2/M16A2_body.xob"
+      }
+     }
+     coords 0.99 0.852 1.12
+     angleY -29.685
+     angleZ 90
+    }
+    {
+     components {
+      MeshObject "{59CAAA18EBCC38C3}" {
+       Object "{F70651096E49F939}Assets/Weapons/Rifles/M14/M21_body.xob"
+      }
+     }
+     coords 1.008 1.19 1.223
+     angleY -32.212
+     angleZ 90
+    }
+    {
+     components {
+      MeshObject "{59CAAA18C2DD1B4F}" {
+       Object "{DBB4CBF206BDFB3C}Assets/Weapons/Rifles/SVD/SVD_body.xob"
+      }
+     }
+     coords -0.003 1.195 3.133
+     angleY -32.497
+     angleZ 90
+    }
+    {
+     components {
+      MeshObject "{59CAAA18AC1EB34B}" {
+       Object "{10D7B743E0A06735}Assets/Weapons/Magazines/SVD/Magazine_10rd_SVD.xob"
+      }
+     }
+     coords 0.383 1.19 2.453
+     angleZ 90.652
+    }
+    {
+     components {
+      MeshObject "{59CAAA1892262BFB}" {
+       Object "{317726F73A3CA775}Assets/Weapons/Magazines/M9_Beretta/Magazine_15rnd_M9.xob"
+      }
+     }
+     coords 0.888 0.44 1.184
+     angleZ 90.477
+    }
+    {
+     components {
+      MeshObject "{59CAAA1880269CFF}" {
+       Object "{8AE043F1A5E268F4}Assets/Weapons/Magazines/AK74/Magazine_30rnd_AK74.xob"
+      }
+     }
+     coords 0.196 0.831 2.599
+     angleZ 86.331
+    }
+    {
+     components {
+      MeshObject "{59CAAA18722DFD37}" {
+       Object "{4DEA4332E3ED5CE7}Assets/Weapons/Magazines/STANAG/Magazine_30rnd_STANAG.xob"
+      }
+     }
+     coords 1.551 0.822 0.221
+     angleZ 93.298
+    }
+    {
+     components {
+      MeshObject "{59CAAA186FDC22F3}" {
+       Object "{9FB96EBAC79195C6}Assets/Weapons/Magazines/M14/Magazine_M14_20rnd.xob"
+      }
+     }
+     coords 1.665 1.187 0.22
+     angleZ 90.366
+    }
+    {
+     components {
+      MeshObject "{59CAAA185CEE60F9}" {
+       Object "{2482E01261AB2FB5}Assets/Weapons/Magazines/PM/Magazine_8rnd_PM.xob"
+      }
+     }
+     coords -0.265 0.433 3.381
+     angleZ 90.499
+    }
+    {
+     components {
+      MeshObject "{59CAAA182E675E63}" {
+       Object "{75AADA242B52AE25}Assets/Weapons/MachineGuns/M249/M249_body.xob"
+      }
+     }
+     coords 5.143 0.82 -0.694
+     angleX 12.631
+     angleY 60.631
+    }
+    {
+     components {
+      MeshObject "{59CAAA1802C88DDD}" {
+       Object "{6225F32E5CAC127C}Assets/Weapons/MachineGuns/PKM/PKM_body.xob"
+      }
+     }
+     coords 3.742 0.741 -1.404
+     angleX 9.193
+     angleY 61.577
+    }
+    {
+     components {
+      MeshObject "{59CAAA1BE31DE4DC}" {
+       Object "{1E10E549B0646CE1}Assets/Weapons/MachineGuns/RPK74/RPK74_body.xob"
+      }
+     }
+     coords 4.85 1.266 -0.925
+     angleX 12.687
+     angleY 60.025
+    }
+    {
+     components {
+      MeshObject "{59CAAA1B9344ABCD}" {
+       Object "{843BF40278070328}Assets/Weapons/Magazines/PKM/Magazine_100rnd_PKM_item.xob"
+      }
+     }
+     coords 4.017 0.218 -1.308
+    }
+    {
+     components {
+      MeshObject "{59CAAA1B8C645225}" {
+       Object "{1A51E4023458231D}Assets/Weapons/Magazines/M249/Magazine_200rnd_M249_item.xob"
+      }
+     }
+     coords 4.459 0.801 -0.869
+    }
+    {
+     components {
+      MeshObject "{59CAAA1B734C0FC3}" {
+       Object "{49EAB2EE6A0BBECA}Assets/Weapons/Magazines/RPK74/Magazine_45rnd_RPK74.xob"
+      }
+     }
+     coords 4.485 1.181 -0.908
+     angleZ 90.388
+    }
+   }
    SCR_ChimeraCharacter : "{854C04F0EA2129CC}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_Unarmed.et" {
     coords -3.175 0 -1.023
     angleY 60
@@ -57,6 +226,65 @@ $grp GenericEntity {
      }
      coords 3.117 1.406 5.561
      angleY 61.886
+    }
+   }
+   $grp GenericEntity : "{DD994C1FCE7AD6E0}Prefabs/Shop/ShopItem.et" {
+    {
+     components {
+      MeshObject "{59C4F48745893DBF}" {
+       Object "{79E09D2DFCA471A5}Assets/Items/Equipment/Backpacks/Backpack_Veshmeshok/Backpack_Veshmeshok_item.xob"
+      }
+      ActionsManagerComponent "{59C4F487641A3025}" {
+       additionalActions {
+        EL_BuyAction "{59C4F4878D841445}" {
+         m_BuyablePrefab "{3DE0155EC9767B98}Prefabs/Items/Equipment/Backpacks/Backpack_Veshmeshok.et"
+        }
+        EL_SellAction "{59C4F48B86953CE9}" {
+        }
+       }
+      }
+      RplComponent "{59C4F4898DA2E09B}" {
+      }
+     }
+     coords 2.122 0.818 0.293
+    }
+    {
+     components {
+      MeshObject "{59C4F48745893DBF}" {
+       Object "{F63FB77CF5C853D7}Assets/Items/Equipment/Backpacks/Backpack_Kolobok/Backpack_Kolobok_item.xob"
+      }
+      ActionsManagerComponent "{59C4F487641A3025}" {
+       additionalActions {
+        EL_BuyAction "{59C4F4878D841445}" {
+         m_BuyablePrefab "{41A9C55B61F375F0}Prefabs/Items/Equipment/Backpacks/Backpack_Kolobok.et"
+        }
+        EL_SellAction "{59C4F48B86953CE9}" {
+        }
+       }
+      }
+      RplComponent "{59C4F4898DA2E09B}" {
+      }
+     }
+     coords 1.747 0.818 0.972
+    }
+    {
+     components {
+      MeshObject "{59C4F48745893DBF}" {
+       Object "{B982CAE1F85001D0}Assets/Items/Equipment/Backpacks/Backpack_ALICE_Medium/Backpack_ALICE_Medium_item.xob"
+      }
+      ActionsManagerComponent "{59C4F487641A3025}" {
+       additionalActions {
+        EL_BuyAction "{59C4F4878D841445}" {
+         m_BuyablePrefab "{06B68C58B72EAAC6}Prefabs/Items/Equipment/Backpacks/Backpack_ALICE_Medium.et"
+        }
+        EL_SellAction "{59C4F48B86953CE9}" {
+        }
+       }
+      }
+      RplComponent "{59C4F4898DA2E09B}" {
+      }
+     }
+     coords 1.346 0.818 1.69
     }
    }
   }
@@ -319,63 +547,6 @@ $grp GenericEntity {
      }
      coords -0.622 0.551 4.834
     }
-    {
-     components {
-      MeshObject "{59C4F48745893DBF}" {
-       Object "{79E09D2DFCA471A5}Assets/Items/Equipment/Backpacks/Backpack_Veshmeshok/Backpack_Veshmeshok_item.xob"
-      }
-      ActionsManagerComponent "{59C4F487641A3025}" {
-       additionalActions {
-        EL_BuyAction "{59C4F4878D841445}" {
-         m_BuyablePrefab "{3DE0155EC9767B98}Prefabs/Items/Equipment/Backpacks/Backpack_Veshmeshok.et"
-        }
-        EL_SellAction "{59C4F48B86953CE9}" {
-        }
-       }
-      }
-      RplComponent "{59C4F4898DA2E09B}" {
-      }
-     }
-     coords -23.928 -1.856 51.422
-    }
-    {
-     components {
-      MeshObject "{59C4F48745893DBF}" {
-       Object "{F63FB77CF5C853D7}Assets/Items/Equipment/Backpacks/Backpack_Kolobok/Backpack_Kolobok_item.xob"
-      }
-      ActionsManagerComponent "{59C4F487641A3025}" {
-       additionalActions {
-        EL_BuyAction "{59C4F4878D841445}" {
-         m_BuyablePrefab "{41A9C55B61F375F0}Prefabs/Items/Equipment/Backpacks/Backpack_Kolobok.et"
-        }
-        EL_SellAction "{59C4F48B86953CE9}" {
-        }
-       }
-      }
-      RplComponent "{59C4F4898DA2E09B}" {
-      }
-     }
-     coords -24.303 -1.856 52.101
-    }
-    {
-     components {
-      MeshObject "{59C4F48745893DBF}" {
-       Object "{B982CAE1F85001D0}Assets/Items/Equipment/Backpacks/Backpack_ALICE_Medium/Backpack_ALICE_Medium_item.xob"
-      }
-      ActionsManagerComponent "{59C4F487641A3025}" {
-       additionalActions {
-        EL_BuyAction "{59C4F4878D841445}" {
-         m_BuyablePrefab "{06B68C58B72EAAC6}Prefabs/Items/Equipment/Backpacks/Backpack_ALICE_Medium.et"
-        }
-        EL_SellAction "{59C4F48B86953CE9}" {
-        }
-       }
-      }
-      RplComponent "{59C4F4898DA2E09B}" {
-      }
-     }
-     coords -24.704 -1.856 52.819
-    }
    }
   }
  }
@@ -387,6 +558,36 @@ $grp GenericEntity {
   }
   coords 4715.747 161.77 6978.792
   {
+   $grp GenericEntity {
+    {
+     components {
+      MeshObject "{59CA664972283469}" {
+       Object "{1F30E792C1637B27}Assets/Props/Commercial/MarketStand_01/MarketStand_Umbrella_01.xob"
+      }
+     }
+     coords 6.626 0.34 -8.951
+     angleY -7.714
+    }
+    {
+     components {
+      MeshObject "{59CA664972283469}" {
+       Object "{1F30E792C1637B27}Assets/Props/Commercial/MarketStand_01/MarketStand_Umbrella_01.xob"
+      }
+     }
+     coords 4.495 0.471 -11.605
+     angleY -7.714
+    }
+   }
+   $grp GenericEntity : "{1501A1A4DF77EE38}PrefabsEditable/Auto/Props/Commercial/E_SignPub_01.et" {
+    {
+     coords 6.046 0.275 -6.235
+     angleY -53.824
+    }
+    {
+     coords 3.936 0.324 -8.878
+     angleY -53.824
+    }
+   }
    Tree : "{1C6F9AD2669C17F9}Prefabs/Vegetation/Tree/t_malus_domestica_2s.et" {
     components {
      EL_MapIconComponent "{59C2ACEB05E0C8DD}" {
@@ -443,6 +644,10 @@ $grp GenericEntity {
     coords 4.086 1.456 -9.872
     angleY 127.37
    }
+   GenericEntity : "{9E6BB1D7AA5D0FEB}Prefabs/Props/Furniture/Stove_01.et" {
+    coords 6.568 0.31 -7.285
+    angleY -144.702
+   }
    $grp GenericEntity : "{D8B83A318AE3611E}Prefabs/Props/Commercial/MarketStand_01.et" {
     {
      coords 2.995 0.427 -10.463
@@ -457,26 +662,4 @@ $grp GenericEntity {
    }
   }
  }
- {
-  components {
-   MeshObject "{59CA664972283469}" {
-    Object "{1F30E792C1637B27}Assets/Props/Commercial/MarketStand_01/MarketStand_Umbrella_01.xob"
-   }
-  }
-  coords 4722.373 162.11 6969.84
-  angleY -7.714
- }
- {
-  components {
-   MeshObject "{59CA664972283469}" {
-    Object "{1F30E792C1637B27}Assets/Props/Commercial/MarketStand_01/MarketStand_Umbrella_01.xob"
-   }
-  }
-  coords 4720.241 162.241 6967.186
-  angleY -7.714
- }
-}
-GenericEntity : "{9E6BB1D7AA5D0FEB}Prefabs/Props/Furniture/Stove_01.et" {
- coords 4722.315 162.08 6971.506
- angleY -144.702
 }
