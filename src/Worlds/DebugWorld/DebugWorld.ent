@@ -52,3 +52,6 @@ Layer BeerChain {
 Layer FactoryProcessor {
  Index 17
 }
+Layer MiningChain {
+ Index 18
+}
