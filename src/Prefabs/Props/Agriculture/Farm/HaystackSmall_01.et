@@ -1,0 +1,26 @@
+StaticModelEntity : "{A52C6DE05FE53B3B}Prefabs/Structures/Core/StaticObject_base.et" {
+ ID "F0DBA538AC2A0552"
+ components {
+  ActionsManagerComponent "{59CA6659848332FD}" {
+   ActionContexts {
+    UserActionContext "{59CA665985BE55F9}" {
+     ContextName "default"
+     Position PointInfo "{59CA66597C0E3C8F}" {
+      Offset 0 1.3 0
+     }
+     Radius 1.3
+    }
+   }
+   additionalActions {
+    EL_GatherAction "{59CA66596E17D1CB}" {
+     ParentContextList {
+      "default"
+     }
+     Duration 5
+     m_GatherItemDisplayName "Hay"
+     m_GatherItemPrefab "{36445C0F0BEE2DE8}Prefabs/Items/Resources/HayBag.et"
+    }
+   }
+  }
+ }
+}

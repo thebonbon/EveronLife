@@ -1,14 +1,6 @@
 $grp GenericEntity {
  {
   components {
-   MeshObject "{59C960BED4AFFBFE}" {
-    Object "{CDD87CE690B56F4E}Assets/Props/Agricultural/Hay/HaystackSmall_01.xob"
-   }
-  }
-  coords 137.107 0.003 133.768
- }
- {
-  components {
    MeshObject "{59C960BEC15E5025}" {
     Object "{BD2B5F74C9CA3E0C}Assets/Props/Agricultural/Hay/dst/HaystackSmall_01_dst.xob"
    }
@@ -51,4 +43,7 @@ $grp GenericEntity : "{5A87BE461FCE3006}Prefabs/Items/Resources/HayBale.et" {
  {
   coords 141.428 0.001 134.735
  }
+}
+StaticModelEntity : "{6BEDCCDEE119AC7C}Prefabs/Props/Agriculture/Farm/HaystackSmall_01.et" {
+ coords 137.534 0.001 133.474
 }
