@@ -2,10 +2,10 @@ GenericEntity : "{1881C4F2BD43E3E1}Prefabs/Resources/Mining/CopperNugget.et" {
  coords 110.24 0.88 143.377
 }
 GenericEntity : "{2C571D6F7C05E095}Prefabs/Resources/Mining/IronOre.et" {
- coords 112.508 0.212 143.21
+ coords 112.508 0.212 143.546
 }
 GenericEntity : "{3C4F54AD0CB24525}Prefabs/Resources/Mining/GoldOre.et" {
- coords 114.619 0.185 142.741
+ coords 114.619 0.185 143.603
 }
 GenericEntity : "{577A665F1662E7AD}Prefabs/Resources/Mining/CopperBar.et" {
  coords 110.204 0.88 143.685
@@ -26,5 +26,5 @@ GenericEntity : "{BCD1E8CD7F975074}Prefabs/Resources/Mining/IronBar.et" {
  coords 110.422 0.879 143.154
 }
 GenericEntity : "{C7FC93FD15F0574C}Prefabs/Resources/Mining/CopperOre.et" {
- coords 116.926 0.137 142.336
+ coords 116.926 0.137 143.505
 }
