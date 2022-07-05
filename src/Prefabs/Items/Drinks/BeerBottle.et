@@ -1,0 +1,39 @@
+GenericEntity : "{C95E11C60810F432}Prefabs/Items/Core/Item_Base.et" {
+ ID "508AB2013EEE1E00"
+ components {
+  InventoryItemComponent "{5222EB4D0C73006B}" {
+   Attributes SCR_ItemAttributeCollection "{5222EB4D0A2B466B}" {
+    ItemDisplayName UIInfo "{5222EB4D07D865FA}" {
+     Name "Beer"
+     Description "Bottle full of Beer"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes PhysicalAttributes {
+     DimensionScaler 0.01
+    }
+    CustomAttributes {
+     PreviewRenderAttributes "{59CA3499FF461257}" {
+      CameraOrbitAngles -90 -90 0
+      CameraDistanceToItem 0.9
+     }
+    }
+   }
+  }
+  MeshObject "{59CA3482512EEEA2}" {
+   Object "{240D853DBB045D05}Assets/Props/Civilian/BeerBottle_01/BeerBottle_01.xob"
+   Materials {
+    MaterialAssignClass "{59CA349E8C7755A5}" {
+     SourceMaterial "BeerBottle_01"
+     AssignedMaterial "{B50471C262C2EE1A}Assets/Props/Civilian/BeerBottle_01/Data/BeerBottle_01_slava.emat"
+    }
+   }
+  }
+  RigidBody "{59CA349E29379D1D}" {
+  }
+  SimpleSoundComponent "{59CA349E2D7DBA5C}" {
+   Filenames {
+    "{12A94705DF2BFD25}Sounds/Items/_SharedData/PickUp/Items_PickUp_Generic.acp"
+   }
+  }
+ }
+ coords 110.025 0.917 134.781
+}
