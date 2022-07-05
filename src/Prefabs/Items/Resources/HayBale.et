@@ -1,0 +1,73 @@
+GenericEntity : "{C95E11C60810F432}Prefabs/Items/Core/Item_Base.et" {
+ ID "508AB2013EEE1E00"
+ components {
+  SoundComponent "{59CA349DF918B964}" {
+   Filenames {
+    "{12A94705DF2BFD25}Sounds/Items/_SharedData/PickUp/Items_PickUp_Generic.acp"
+   }
+   OnFrameUpdate 0
+  }
+  InventoryItemComponent "{5222EB4D0C73006B}" {
+   Attributes SCR_ItemAttributeCollection "{5222EB4D0A2B466B}" {
+    ItemDisplayName UIInfo "{5222EB4D07D865FA}" {
+     Name "Bale of Hay"
+     Description "A Bale full of Hay"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes PhysicalAttributes {
+     Weight 2
+     SizeSetupStrategy Volume
+     ItemVolume 3000
+    }
+    ItemAnimationAttributes ItemAnimationAttributes "{59CA349DF918B95F}" {
+     AnimationInstance "{81E91C367B2A22D6}anims/workspaces/player/player_main_rpg.asi"
+     AnimationIKPose "{3E5C93E85F05C6B5}Assets/Weapons/Grenades/RGD5/anims/anm/p_rgd5_ik.anm"
+     HandAdditiveRotation 90 0 -90
+     HandAdditiveTranslation 0 0.02 0
+    }
+    CustomAttributes {
+     PreviewRenderAttributes "{59CA349DF918B95B}" {
+      CameraOrbitAngles -90 -90 0
+      CameraDistanceToItem 0.9
+      CameraOffset 0 0 0
+     }
+    }
+    m_Size SLOT_2x1
+    m_SlotType SLOT_ANY
+   }
+  }
+  MeshObject "{59CA349DF918B955}" {
+   Object "{C05C5478A927A0EE}Assets/Props/Agricultural/Hay/HayBale_01_square_small.xob"
+   Materials {
+    MaterialAssignClass "{59CA349DF918B950}" {
+     SourceMaterial "Sandbags_01_End"
+     AssignedMaterial "{2392C281DF136B3B}Assets/Props/Military/Sandbags/Data/Sandbags_01_end_Burlap.emat"
+    }
+    MaterialAssignClass "{59CA349DF918B951}" {
+     SourceMaterial "Sandbags_01_MLOD"
+     AssignedMaterial "{2169E8EB73E1C127}Assets/Props/Military/Sandbags/Data/Sandbags_01_Burlap_MLOD.emat"
+    }
+   }
+   LODScale 0.1
+   PixelSizeScale 10
+  }
+  RigidBody "{59CA349DF918B953}" {
+   LinearDamping 0.5
+   AngularDamping 0.5
+   AngularSleepingThreashold 1
+   ModelGeometry 1
+   CCDRadius 0.015
+  }
+  ActionsManagerComponent "{508AB5952B584B2E}" {
+   ActionContexts {
+    UserActionContext "{508AC2ABEC97066C}" {
+     Position PointInfo "{508AC2ABEAC4A0F5}" {
+      Offset -0.1 0.2 0
+     }
+     Radius 0.5
+    }
+   }
+   additionalActions {
+   }
+  }
+ }
+}
