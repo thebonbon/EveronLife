@@ -1,0 +1,7 @@
+SCR_ChimeraCharacter : "{836E7E39AAC5888B}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_Base.et" {
+ ID "52092032B0E62200"
+ components {
+  EL_ShopCartManager "{59CA6D28B2038995}" {
+  }
+ }
+}

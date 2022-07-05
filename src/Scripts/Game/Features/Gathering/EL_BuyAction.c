@@ -41,7 +41,7 @@ class EL_BuyAction : ScriptedUserAction
 	//------------------------------------------------------------------------------------------------
 	void ConfirmAddToCart()
 	{
-		m_ShopCartManager.AddToCart(m_ItemPriceConfig, m_ColorPicker.m_NewColor);
+		m_ShopCartManager.AddToCart(m_ItemPriceConfig, Vehicle, m_ColorPicker.m_NewColor);
 	}
 	
 	
@@ -84,7 +84,7 @@ class EL_BuyAction : ScriptedUserAction
 		m_ShopCartManager = EL_ShopCartManager.Cast(pUserEntity.FindComponent(EL_ShopCartManager));
 		if (!m_ShopCartManager)
 		{
-			Print("No EL_ShopCartManager found on player " + pOwnerEntity, LogLevel.WARNING);
+			Print("No EL_ShopCartManager found on player " + pUserEntity, LogLevel.WARNING);
 			return;
 		}
 		OpenColorPicker();
@@ -93,14 +93,13 @@ class EL_BuyAction : ScriptedUserAction
 	//------------------------------------------------------------------------------------------------
 	private void PerformActionItem(IEntity pOwnerEntity, IEntity pUserEntity)
 	{
-		SCR_InventoryStorageManagerComponent inventoryManager = SCR_InventoryStorageManagerComponent.Cast(pUserEntity.FindComponent(SCR_InventoryStorageManagerComponent));
-		array<IEntity> moneyItems = new array<IEntity>;
-		inventoryManager.FindItems(moneyItems, m_pPrefabNamePredicate);
-		for (int i=0; i < m_ItemPriceConfig.m_iBuyPrice; i++)
+		m_ShopCartManager = EL_ShopCartManager.Cast(pUserEntity.FindComponent(EL_ShopCartManager));
+		if (!m_ShopCartManager)
 		{
-			inventoryManager.TryDeleteItem(moneyItems[i]);
+			Print("No EL_ShopCartManager found on player " + pOwnerEntity, LogLevel.WARNING);
+			return;
 		}
-		inventoryManager.TrySpawnPrefabToStorage(m_BuyablePrefab);	
+		m_ShopCartManager.AddToCart(m_ItemPriceConfig, GenericEntity);
 	}
 	
 	//------------------------------------------------------------------------------------------------
@@ -134,7 +133,7 @@ class EL_BuyAction : ScriptedUserAction
 	//------------------------------------------------------------------------------------------------
 	override bool CanBePerformedScript(IEntity user)
  	{
-		if (!m_bIsPrefabInCofig)
+		if (!m_bIsPrefabInCofig || !m_BuyablePrefab)
 			return false;
 		
 		//Only one cart item?
@@ -156,6 +155,12 @@ class EL_BuyAction : ScriptedUserAction
 		
 
 		return true;
+	}
+	
+	//------------------------------------------------------------------------------------------------
+	override bool CanBeShownScript(IEntity user)
+ 	{
+		return (m_BuyablePrefab);
 	}
 	
 	//------------------------------------------------------------------------------------------------	

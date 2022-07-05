@@ -2,7 +2,6 @@ GenericEntity {
  ID "59C4F485BE70DBE7"
  components {
   MeshObject "{59C4F48745893DBF}" {
-   Object "{240D853DBB045D05}Assets/Props/Civilian/BeerBottle_01/BeerBottle_01.xob"
   }
   ActionsManagerComponent "{59C4F487641A3025}" {
    ActionContexts {

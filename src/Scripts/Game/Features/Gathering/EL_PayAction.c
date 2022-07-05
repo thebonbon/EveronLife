@@ -53,7 +53,10 @@ class EL_PayAction : ScriptedUserAction
 		
 		foreach (EL_ShopCartItem cartItem : shopCartManager.m_aShopCartItems)
 		{
-			SpawnVehicle(cartItem.prefab, cartItem.color);
+			if (cartItem.type == Vehicle)
+				SpawnVehicle(cartItem.prefab, cartItem.color);
+			if (cartItem.type == GenericEntity)
+				inventoryManager.TrySpawnPrefabToStorage(cartItem.prefab);
 		}
 		shopCartManager.EmptyCart();
 	}
@@ -61,7 +64,11 @@ class EL_PayAction : ScriptedUserAction
 	//------------------------------------------------------------------------------------------------
 	override bool GetActionNameScript(out string outName)
 	{
-		outName = string.Format("Pay $%1", m_ShopCartManager.GetTotalCartCost());
+		outName = string.Format("Pay $%1\n", m_ShopCartManager.GetTotalCartCost());
+		foreach (EL_ShopCartItem cartItem : m_ShopCartManager.m_aShopCartItems)
+		{
+			outName += string.Format("%1: $%2\n", cartItem.name, cartItem.buyPrice);
+		}
 		return true;
 	}
 	
@@ -76,7 +83,7 @@ class EL_PayAction : ScriptedUserAction
 		int moneyCount = inventoryManager.FindItems(moneyItems, m_pPrefabNamePredicate);
 		
 		//Check if spawnpoint is empty..
-		if (!FindFreeSpawnPoint())
+		if (m_ShopCartManager.GetCartType() == Vehicle && !FindFreeSpawnPoint())
 		{
 			SetCannotPerformReason("No free spawn points");
 			return false;

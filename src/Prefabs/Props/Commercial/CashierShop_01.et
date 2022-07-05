@@ -1,0 +1,31 @@
+GenericEntity : "{4CC2C69DE1AEF103}Prefabs/Props/Core/Destructible_Props_Base.et" {
+ ID "F0DBA538AC2A0552"
+ components {
+  ActionsManagerComponent "{59CA650D7157C0AB}" {
+   ActionContexts {
+    UserActionContext "{59CA650D707BA8F6}" {
+     ContextName "default"
+     Position PointInfo "{59CA650D75740B23}" {
+      Offset 0 0.25 0
+     }
+    }
+   }
+   additionalActions {
+    EL_PayAction "{59CA650D8BF87268}" {
+     ParentContextList {
+      "default"
+     }
+    }
+    EL_EmptyCartAction "{59CA6D2DBA6C0475}" {
+     ParentContextList {
+      "default"
+     }
+     "Sort Priority" 5
+    }
+   }
+  }
+  RplComponent "{5624A88DC2D9928D}" {
+   Enabled 1
+  }
+ }
+}

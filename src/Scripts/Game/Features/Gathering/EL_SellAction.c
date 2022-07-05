@@ -44,7 +44,8 @@ class EL_SellAction : ScriptedUserAction
 	//------------------------------------------------------------------------------------------------
 	override bool GetActionNameScript(out string outName)
 	{
-		outName = string.Format("Sell %1 ($%2)", m_ItemPriceConfig.m_sName, m_ItemPriceConfig.m_iSellPrice);
+		if (m_ItemPriceConfig)
+			outName = string.Format("Sell %1 ($%2)", m_ItemPriceConfig.m_sName, m_ItemPriceConfig.m_iSellPrice);
 		return true;
 	}
 	
@@ -52,7 +53,13 @@ class EL_SellAction : ScriptedUserAction
 	override bool CanBePerformedScript(IEntity user)
  	{
 		SCR_InventoryStorageManagerComponent inventoryManager = SCR_InventoryStorageManagerComponent.Cast(user.FindComponent(SCR_InventoryStorageManagerComponent));
-		return (m_bIsPrefabInCofig && inventoryManager.FindItem(m_pPrefabNamePredicate));
+		return (m_SellablePrefab && m_bIsPrefabInCofig && inventoryManager.FindItem(m_pPrefabNamePredicate));
+	}	
+	
+	//------------------------------------------------------------------------------------------------
+	override bool CanBeShownScript(IEntity user)
+ 	{
+		return (m_SellablePrefab);
 	}
 	
 	//------------------------------------------------------------------------------------------------	

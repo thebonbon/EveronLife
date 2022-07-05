@@ -28,6 +28,94 @@ $grp GenericEntity {
   }
   coords 4637.128 153.33 7153.071
  }
+ {
+  components {
+   MeshObject "{59C916965E09708C}" {
+    Object "{D0566D3CAE967F4D}Assets/Items/Food/Apple/Apple.xob"
+   }
+  }
+  coords 4711.437 164.361 6931.705
+ }
+ {
+  components {
+   MeshObject "{59C916965E09708C}" {
+    Object "{D0566D3CAE967F4D}Assets/Items/Food/Apple/Apple.xob"
+   }
+  }
+  coords 4711.499 164.361 6931.633
+ }
+ {
+  components {
+   MeshObject "{59C916965E09708C}" {
+    Object "{D0566D3CAE967F4D}Assets/Items/Food/Apple/Apple.xob"
+   }
+  }
+  coords 4711.596 164.361 6931.41
+ }
+ {
+  components {
+   MeshObject "{59C916965E09708C}" {
+    Object "{D0566D3CAE967F4D}Assets/Items/Food/Apple/Apple.xob"
+   }
+  }
+  coords 4711.57 164.361 6931.515
+ }
+ {
+  components {
+   MeshObject "{59C916965E09708C}" {
+    Object "{D0566D3CAE967F4D}Assets/Items/Food/Apple/Apple.xob"
+   }
+  }
+  coords 4711.365 164.361 6931.602
+ }
+ {
+  components {
+   MeshObject "{59C916965E09708C}" {
+    Object "{D0566D3CAE967F4D}Assets/Items/Food/Apple/Apple.xob"
+   }
+  }
+  coords 4711.487 164.361 6931.396
+ }
+ {
+  components {
+   MeshObject "{59C916967B03D601}" {
+    Object "{22BC72961D6E7163}Assets/Items/Food/Tomato/Tomato.xob"
+   }
+  }
+  coords 4711.14 164.376 6931.396
+ }
+ {
+  components {
+   MeshObject "{59C916967A1E5CBD}" {
+    Object "{22BC72961D6E7163}Assets/Items/Food/Tomato/Tomato.xob"
+   }
+  }
+  coords 4711.231 164.376 6931.276
+ }
+ {
+  components {
+   MeshObject "{59C916967D0FCC4D}" {
+    Object "{22BC72961D6E7163}Assets/Items/Food/Tomato/Tomato.xob"
+   }
+  }
+  coords 4711.058 164.376 6931.22
+ }
+ {
+  components {
+   MeshObject "{59C916967A1E5CBD}" {
+    Object "{22BC72961D6E7163}Assets/Items/Food/Tomato/Tomato.xob"
+   }
+  }
+  coords 4711.291 164.376 6931.067
+ }
+ {
+  components {
+   MeshObject "{59C916967D0FCC4D}" {
+    Object "{22BC72961D6E7163}Assets/Items/Food/Tomato/Tomato.xob"
+   }
+  }
+  coords 4711.117 164.376 6931.011
+ }
 }
 Tree : "{1C6F9AD2669C17F9}Prefabs/Vegetation/Tree/t_malus_domestica_2s.et" {
  components {
@@ -90,17 +178,112 @@ Vehicle UAZ1 : "{259EE7B78C51B624}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469.et" {
    m_fVehicleDestroyDamage 11880.1
   }
   ActionsManagerComponent "{C97BE5489221AE18}" {
+   ActionContexts {
+    UserActionContext "{59CA6D2861EC5BEF}" {
+     ContextName "default"
+     Position PointInfo "{59CA6D2866DFC484}" {
+      Offset 0 0.7771 0
+     }
+     Radius 5
+    }
+   }
    additionalActions {
-    EL_GatherAction "{59BD1B2036E1D9F4}" {
+    EL_BuyAction "{59CA6D286A5E5798}" {
+     ParentContextList {
+      "default"
+     }
+     Duration 1
+     "Sort Priority" -1
+     m_BuyablePrefab "{259EE7B78C51B624}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469.et"
+     m_PriceConfig EL_PriceConfig "{59CA6D2877DE3D9C}" : "{18A98641909A7F52}Configs/Shops/EL_ShopPrices.conf" {
+     }
     }
    }
   }
  }
- coords 4701.917 161.25 6982.24
+ coords 4849.554 163.841 7115.761
 }
 SCR_ChimeraCharacter : "{854C04F0EA2129CC}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_Unarmed.et" {
  coords 4682.596 161.151 6976.46
  angleY 60
+}
+GenericEntity : "{B99FF1BDF60F951E}Prefabs/Shop/EL_VehicleShop.et" {
+ components {
+  MeshObject "{5872F0EB7FA40561}" {
+  }
+ }
+ coords 4846.195 163.799 7119.144
+ angleY -129.921
+ {
+  BaseGameTriggerEntity {
+   ID "59C6C5684765E535"
+   coords 3.432 0.221 -1.404
+  }
+ }
+}
+$grp GenericEntity : "{C260F0E07274ACA1}Prefabs/Props/Furniture/Boiler_01.et" {
+ MoneySpawner {
+  components {
+   MeshObject "{5872F0EB7FA40561}" {
+    Object "{54F28786FA027CCE}Assets/Structures/BuildingsParts/Mail/Mailbox_01.xob"
+   }
+   ActionsManagerComponent "{59CA6D297AAC3ABA}" {
+    ActionContexts {
+     UserActionContext "{59CA6D297D8226B4}" {
+      ContextName "default"
+      Position PointInfo "{59CA6D2986B8B69C}" {
+       Offset 0 0.1999 0
+      }
+      Radius 5
+     }
+    }
+    additionalActions {
+     EL_WithdrawAction "{59CA6D298D0A9F41}" {
+      ParentContextList {
+       "default"
+      }
+      m_iMoneyAmount 50
+     }
+    }
+   }
+   RplComponent "{5624A88DC2D9928D}" {
+    Enabled 1
+   }
+  }
+  coords 4688.888 162.557 6983.044
+  angleY 61.886
+ }
+ MoneySpawner2 {
+  components {
+   MeshObject "{5872F0EB7FA40561}" {
+    Object "{54F28786FA027CCE}Assets/Structures/BuildingsParts/Mail/Mailbox_01.xob"
+   }
+   ActionsManagerComponent "{59CA6D297AAC3ABA}" {
+    ActionContexts {
+     UserActionContext "{59CA6D297D8226B4}" {
+      ContextName "default"
+      Position PointInfo "{59CA6D2986B8B69C}" {
+       Offset 0 0.1999 0
+      }
+      Radius 5
+     }
+    }
+    additionalActions {
+     EL_WithdrawAction "{59CA6D298D0A9F41}" {
+      ParentContextList {
+       "default"
+      }
+      m_iMoneyAmount 50
+     }
+    }
+   }
+   RplComponent "{5624A88DC2D9928D}" {
+    Enabled 1
+   }
+  }
+  coords 4850.398 163.857 7119.83
+  angleY 61.886
+ }
 }
 $grp GenericEntity : "{D8B83A318AE3611E}Prefabs/Props/Commercial/MarketStand_01.et" {
  {
@@ -110,38 +293,182 @@ $grp GenericEntity : "{D8B83A318AE3611E}Prefabs/Props/Commercial/MarketStand_01.
   coords 4715.772 162.156 6965.538
  }
 }
-$grp GenericEntity : "{FDEE11D818A4C675}Prefabs/Items/Money/DollarBill.et" {
+$grp GenericEntity : "{DD994C1FCE7AD6E0}Prefabs/Shop/ShopItem.et" {
  {
-  coords 4689.17 161.162 6978.438
+  components {
+   MeshObject "{59C4F48745893DBF}" {
+    Object "{1F941A15AF4D93BF}Assets/Items/Drinks/WaterBottle/Bottle.xob"
+   }
+   ActionsManagerComponent "{59C4F487641A3025}" {
+    additionalActions {
+     EL_BuyAction "{59C4F4878D841445}" {
+      m_BuyablePrefab "{A231A5F8D479B5DC}Prefabs/Items/Drinks/WaterBottle.et"
+     }
+     EL_SellAction "{59C4F48B86953CE9}" {
+      m_SellablePrefab "{A231A5F8D479B5DC}Prefabs/Items/Drinks/WaterBottle.et"
+     }
+    }
+   }
+   RplComponent "{59C4F4898DA2E09B}" {
+   }
+  }
+  coords 4716.674 164.911 6931.188
  }
  {
-  coords 4689.227 161.162 6978.407
+  components {
+   MeshObject "{59C4F48745893DBF}" {
+    Object "{B6DED7CEB7BC8CBB}Assets/Structures/BuildingsParts/Industrial/ToolRack_01/Dst/ToolRack_01_Tool_01_dst_02_09.xob"
+   }
+   ActionsManagerComponent "{59C4F487641A3025}" {
+    ActionContexts {
+     UserActionContext "{59C4F4877FC8DC6C}" {
+      Position PointInfo "{59C4F487736AF3DB}" {
+       Offset -1.9502 0.1483 -0.0283
+      }
+     }
+    }
+    additionalActions {
+     EL_BuyAction "{59C4F4878D841445}" {
+      m_BuyablePrefab "{FD702B97C4E200EE}Prefabs/Items/Food/PlumJam.et"
+     }
+     EL_SellAction "{59C4F48B86953CE9}" {
+      m_SellablePrefab "{FD702B97C4E200EE}Prefabs/Items/Food/PlumJam.et"
+     }
+    }
+   }
+   RplComponent "{59C4F4898DA2E09B}" {
+   }
+  }
+  coords 4718.784 164.793 6930.979
  }
  {
-  coords 4689.26 161.162 6978.361
+  components {
+   MeshObject "{59C4F48745893DBF}" {
+    Object "{B6DED7CEB7BC8CBB}Assets/Structures/BuildingsParts/Industrial/ToolRack_01/Dst/ToolRack_01_Tool_01_dst_02_09.xob"
+    Materials {
+     MaterialAssignClass "{59C91691769C43C3}" {
+      SourceMaterial "Assets/Structures/BuildingsParts/Industrial/ToolRack_01/Data/ToolRack_01_Tool_01"
+      AssignedMaterial "{8C153012D409D6B9}Assets/Items/Food/BerryJam/Data/BerryJam.emat"
+     }
+    }
+   }
+   ActionsManagerComponent "{59C4F487641A3025}" {
+    ActionContexts {
+     UserActionContext "{59C4F4877FC8DC6C}" {
+      Position PointInfo "{59C4F487736AF3DB}" {
+       Offset -1.9502 0.1483 -0.0283
+      }
+     }
+    }
+    additionalActions {
+     EL_BuyAction "{59C4F4878D841445}" {
+      m_BuyablePrefab "{CD44DE4529F22D17}Prefabs/Items/Food/BerryJam.et"
+     }
+     EL_SellAction "{59C4F48B86953CE9}" {
+      m_SellablePrefab "{CD44DE4529F22D17}Prefabs/Items/Food/BerryJam.et"
+     }
+    }
+   }
+   RplComponent "{59C4F4898DA2E09B}" {
+   }
+  }
+  coords 4718.975 164.793 6930.788
  }
  {
-  coords 4689.292 161.162 6978.317
+  components {
+   MeshObject "{59C4F48745893DBF}" {
+    Object "{D0566D3CAE967F4D}Assets/Items/Food/Apple/Apple.xob"
+   }
+   ActionsManagerComponent "{59C4F487641A3025}" {
+    additionalActions {
+     EL_BuyAction "{59C4F4878D841445}" {
+      m_BuyablePrefab "{C9D661E5B0714711}Prefabs/Items/Food/Apple.et"
+     }
+     EL_SellAction "{59C4F48B86953CE9}" {
+      m_SellablePrefab "{C9D661E5B0714711}Prefabs/Items/Food/Apple.et"
+     }
+    }
+   }
+   RplComponent "{59C4F4898DA2E09B}" {
+   }
+  }
+  coords 4711.464 164.361 6931.49
  }
  {
-  coords 4689.34 161.162 6978.276
+  components {
+   MeshObject "{59C4F48745893DBF}" {
+    Object "{22BC72961D6E7163}Assets/Items/Food/Tomato/Tomato.xob"
+   }
+   ActionsManagerComponent "{59C4F487641A3025}" {
+    additionalActions {
+     EL_BuyAction "{59C4F4878D841445}" {
+      m_BuyablePrefab "{0815D91FDF997A0A}Prefabs/Items/Food/Tomato.et"
+     }
+     EL_SellAction "{59C4F48B86953CE9}" {
+      m_SellablePrefab "{0815D91FDF997A0A}Prefabs/Items/Food/Tomato.et"
+     }
+    }
+   }
+   RplComponent "{59C4F4898DA2E09B}" {
+   }
+  }
+  coords 4711.199 164.376 6931.188
  }
  {
-  coords 4689.374 161.162 6978.235
+  components {
+   MeshObject "{59C4F48745893DBF}" {
+    Object "{79E09D2DFCA471A5}Assets/Items/Equipment/Backpacks/Backpack_Veshmeshok/Backpack_Veshmeshok_item.xob"
+   }
+   ActionsManagerComponent "{59C4F487641A3025}" {
+    additionalActions {
+     EL_BuyAction "{59C4F4878D841445}" {
+      m_BuyablePrefab "{3DE0155EC9767B98}Prefabs/Items/Equipment/Backpacks/Backpack_Veshmeshok.et"
+     }
+     EL_SellAction "{59C4F48B86953CE9}" {
+     }
+    }
+   }
+   RplComponent "{59C4F4898DA2E09B}" {
+   }
+  }
+  coords 4687.893 161.969 6977.776
  }
  {
-  coords 4689.406 161.162 6978.193
+  components {
+   MeshObject "{59C4F48745893DBF}" {
+    Object "{F63FB77CF5C853D7}Assets/Items/Equipment/Backpacks/Backpack_Kolobok/Backpack_Kolobok_item.xob"
+   }
+   ActionsManagerComponent "{59C4F487641A3025}" {
+    additionalActions {
+     EL_BuyAction "{59C4F4878D841445}" {
+      m_BuyablePrefab "{41A9C55B61F375F0}Prefabs/Items/Equipment/Backpacks/Backpack_Kolobok.et"
+     }
+     EL_SellAction "{59C4F48B86953CE9}" {
+     }
+    }
+   }
+   RplComponent "{59C4F4898DA2E09B}" {
+   }
+  }
+  coords 4687.518 161.969 6978.455
  }
  {
-  coords 4689.444 161.162 6978.166
- }
- {
-  coords 4689.486 161.162 6978.105
- }
- {
-  coords 4689.538 161.162 6978.059
- }
- {
-  coords 4689.585 161.162 6977.999
+  components {
+   MeshObject "{59C4F48745893DBF}" {
+    Object "{B982CAE1F85001D0}Assets/Items/Equipment/Backpacks/Backpack_ALICE_Medium/Backpack_ALICE_Medium_item.xob"
+   }
+   ActionsManagerComponent "{59C4F487641A3025}" {
+    additionalActions {
+     EL_BuyAction "{59C4F4878D841445}" {
+      m_BuyablePrefab "{06B68C58B72EAAC6}Prefabs/Items/Equipment/Backpacks/Backpack_ALICE_Medium.et"
+     }
+     EL_SellAction "{59C4F48B86953CE9}" {
+     }
+    }
+   }
+   RplComponent "{59C4F4898DA2E09B}" {
+   }
+  }
+  coords 4687.117 161.969 6979.173
  }
 }

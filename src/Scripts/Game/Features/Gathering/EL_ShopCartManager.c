@@ -14,20 +14,27 @@ class EL_ShopCartItem
 	int sellPrice;
 	[Attribute()]
 	ref Color color;
+	[Attribute()]
+	typename type;
+	[Attribute()]
+	string name;
 }
 
 class EL_ShopCartManager : ScriptComponent
 {
     ref array<ref EL_ShopCartItem> m_aShopCartItems = new ref array<ref EL_ShopCartItem>();
-	
+
 	//------------------------------------------------------------------------------------------------
-	void AddToCart(EL_Price priceConfig, Color newColor)
+	void AddToCart(EL_Price priceConfig, typename type, Color newColor = null)
 	{
 		EL_ShopCartItem newShopCartItem = new EL_ShopCartItem();
 		newShopCartItem.prefab = priceConfig.m_Prefab;
 		newShopCartItem.buyPrice = priceConfig.m_iBuyPrice;
 		newShopCartItem.sellPrice = priceConfig.m_iSellPrice;
-		newShopCartItem.color = newColor;
+		newShopCartItem.type = type;
+		newShopCartItem.name = priceConfig.m_sName;
+		if (newColor)
+			newShopCartItem.color = newColor;
 		
 		m_aShopCartItems.Insert(newShopCartItem);
 	}
@@ -53,5 +60,15 @@ class EL_ShopCartManager : ScriptComponent
 	int GetCartCount()
 	{
 		return m_aShopCartItems.Count();
+	}	
+	//------------------------------------------------------------------------------------------------
+	typename GetCartType()
+	{
+		if (GetCartCount() > 0)
+		{
+			EL_ShopCartItem shopCartItem = m_aShopCartItems[0];
+			return shopCartItem.type;
+		}
+		return typename.Empty;
 	}
 }

@@ -3,24 +3,6 @@ GenericEntity : "{51D31AB07AE3C1C7}Prefabs/Props/Commercial/CashierShop_01.et" {
  components {
   Hierarchy "{59C6AB73A8871A71}" {
   }
-  ActionsManagerComponent "{59C6813AE41BD09E}" {
-   ActionContexts {
-    UserActionContext "{59C6813AE4C08A6C}" {
-     ContextName "default"
-     Position PointInfo "{59C6813AF8381699}" {
-      Offset 0 0.2452 0
-     }
-     Radius 4.824
-    }
-   }
-   additionalActions {
-    EL_PayAction "{59C68126E30E4A52}" {
-     ParentContextList {
-      "default"
-     }
-    }
-   }
-  }
   RplComponent "{5624A88DC2D9928D}" {
    Enabled 1
   }
