@@ -1,0 +1,35 @@
+$grp GenericEntity : "{18982CB5D0D29247}Prefabs/Props/Civilian/BeerBottle_01_empty_brown.et" {
+ {
+  coords 130.835 0.005 134.331
+ }
+ {
+  coords 130.73 0.001 134.334
+ }
+ {
+  coords 130.604 0.001 134.334
+ }
+ {
+  coords 130.482 0.001 134.339
+ }
+ {
+  coords 130.369 0.001 134.337
+ }
+ {
+  coords 130.257 0.003 134.34
+ }
+ {
+  coords 130.733 0.001 134.454
+ }
+ {
+  coords 130.614 0.001 134.449
+ }
+ {
+  coords 130.5 0.001 134.454
+ }
+ {
+  coords 130.381 0.004 134.444
+ }
+}
+GenericEntity : "{ADFEF306D1C22E5F}Prefabs/Items/Resources/Sandbag.et" {
+ coords 130.6 0.001 134.85
+}

@@ -1,21 +1,21 @@
 GenericEntity : "{086E85DB687EA38F}Prefabs/Props/Construction/GravelPile_01_medium.et" {
- coords 135.756 0.001 130.87
+ coords 124.938 0.007 131.4
 }
 GenericEntity : "{344090890C63F4CA}Prefabs/Items/Resources/GravelBag.et" {
- coords 135.528 0.001 135.019
+ coords 125.555 0.003 134.805
 }
 StaticModelEntity : "{81CB1B2631584427}Prefabs/Props/Construction/CementPile.et" {
- coords 144.063 0.91 131.293
+ coords 130.348 0.913 127.849
 }
 SCR_DestructibleBuildingEntity : "{A92A5F3B79FF56BE}Prefabs/Structures/Industrial/Houses/ConcretePlant_E_01.et" {
- coords 137.93 0.001 117.135
+ coords 127.162 0.005 118.717
 }
 GenericEntity : "{ADFEF306D1C22E5F}Prefabs/Items/Resources/Sandbag.et" {
- coords 127.583 0.001 136.206
+ coords 123.064 0.003 134.841
 }
 GenericEntity : "{D58674633332DC86}Prefabs/Items/Resources/CementBag.et" {
- coords 143.783 0.001 134.607
+ coords 127.743 0.003 134.77
 }
 GenericEntity : "{DEB57429CD49782D}Prefabs/Props/Construction/SandPile_01.et" {
- coords 127.134 0.001 131.385
+ coords 118.879 0.003 126.528
 }

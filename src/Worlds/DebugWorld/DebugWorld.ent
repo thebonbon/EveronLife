@@ -37,3 +37,18 @@ Layer VehicleShop {
 Layer BerryChain {
  Index 12
 }
+Layer MushroomChain {
+ Index 13
+}
+Layer WheatChain {
+ Index 14
+}
+Layer GlassChain {
+ Index 15
+}
+Layer BeerChain {
+ Index 16
+}
+Layer FactoryProcessor {
+ Index 17
+}

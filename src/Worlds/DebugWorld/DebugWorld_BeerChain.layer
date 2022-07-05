@@ -1,0 +1,13 @@
+GenericEntity : "{2B0213949BE91F38}Prefabs/Items/Resources/EmptyBeerBottle.et" {
+ coords 141.422 0.001 130.081
+}
+GenericEntity : "{98DD643927F87912}Prefabs/Props/Commercial/BeerKegMetal_01_big_lines.et" {
+ coords 141.334 0.003 131.261
+}
+GenericEntity : "{B50434DBAD3214D0}PrefabLibrary/Props/Commercial/BeerKegMetal_01_big.et" {
+ coords 141.421 0.003 132.55
+ angleY -104.604
+}
+GenericEntity : "{C3B9A61B460BE287}Prefabs/Items/Drinks/BeerBottle.et" {
+ coords 141.204 0.001 130.094
+}

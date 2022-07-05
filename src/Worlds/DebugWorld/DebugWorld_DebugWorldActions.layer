@@ -80,6 +80,9 @@ GenericEntity : "{33882C61BA9F0F90}Prefabs/Props/Civilian/Globe_01.et" {
  }
  coords 100.028 0.898 135.126
 }
+GenericEntity : "{5C5C6EE05EE2FF1A}Prefabs/Items/Equipment/Backpacks/Backpack_ALICE_Medium_assembled.et" {
+ coords 101.007 0.886 135.394
+}
 GenericEntity : "{8F05D427252644F8}Prefabs/Props/Civilian/Suitcase_01.et" {
  coords 98.349 0 134.854
  angleY 60

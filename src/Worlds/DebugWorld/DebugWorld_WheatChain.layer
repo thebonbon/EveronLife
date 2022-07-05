@@ -1,0 +1,54 @@
+$grp GenericEntity {
+ {
+  components {
+   MeshObject "{59C960BED4AFFBFE}" {
+    Object "{CDD87CE690B56F4E}Assets/Props/Agricultural/Hay/HaystackSmall_01.xob"
+   }
+  }
+  coords 137.107 0.003 133.768
+ }
+ {
+  components {
+   MeshObject "{59C960BEC15E5025}" {
+    Object "{BD2B5F74C9CA3E0C}Assets/Props/Agricultural/Hay/dst/HaystackSmall_01_dst.xob"
+   }
+  }
+  coords 136.788 0.003 126.26
+ }
+ {
+  components {
+   MeshObject "{59C960BEA2AB4005}" {
+    Object "{3FC4E1CF8836C01E}Assets/Props/Agricultural/Hay/HaystackDryer_01_folded.xob"
+   }
+  }
+  coords 137.034 0.009 130.123
+ }
+}
+$grp GenericEntity : "{36445C0F0BEE2DE8}Prefabs/Items/Resources/HayBag.et" {
+ {
+  coords 134.314 0.009 133.877
+ }
+ {
+  coords 134.602 0.052 130.083
+ }
+}
+$grp GenericEntity : "{5A87BE461FCE3006}Prefabs/Items/Resources/HayBale.et" {
+ {
+  coords 135.592 0.001 123.175
+ }
+ {
+  coords 136.351 0.001 123.215
+ }
+ {
+  coords 137.243 0.002 123.229
+ }
+ {
+  coords 138.007 0.001 123.27
+ }
+ {
+  coords 138.824 0.001 123.27
+ }
+ {
+  coords 141.428 0.001 134.735
+ }
+}

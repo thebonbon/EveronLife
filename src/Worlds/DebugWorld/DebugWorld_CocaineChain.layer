@@ -22,30 +22,150 @@ GenericEntity : "{1EA06AA76191AE7A}Prefabs/Processor/Cocaine_Processor.et" {
   RplComponent "{59C6B07C18596B0F}" {
   }
  }
- coords 153.45 0.001 131.023
+ coords 106.758 0.008 143.648
 }
 Tree : "{30549DAE871F6E7E}Prefabs/Vegetation/Bush/Coca_bush.et" {
- coords 147.987 0.413 131.348
+ coords 103.773 0.416 143.714
  angleY 0
 }
-GenericEntity : "{5C5C6EE05EE2FF1A}Prefabs/Items/Equipment/Backpacks/Backpack_ALICE_Medium_assembled.et" {
- coords 147.008 0.001 131.844
+$grp GenericEntity : "{622F9989DDC4865B}PrefabLibrary/Props/Civilian/Recreation/TableRecreation_01.et" {
+ {
+  coords 105.458 0.004 143.69
+ }
+ {
+  coords 108.173 0 143.662
+ }
 }
-GenericEntity : "{B854F08E28254CB8}Prefabs/Items/Drugs/Cocaine.et" {
- components {
-  InventoryItemComponent "{59C6B0702D1E4E56}" {
-   Attributes SCR_ItemAttributeCollection "{59C6B0702D1E4E53}" {
-    CustomAttributes {
-     PreviewRenderAttributes "{59C88DEA0DC69CAC}" {
-      CameraOrbitAngles 90 0 90
+$grp GenericEntity : "{B854F08E28254CB8}Prefabs/Items/Drugs/Cocaine.et" {
+ {
+  components {
+   InventoryItemComponent "{59C6B0702D1E4E56}" {
+    Attributes SCR_ItemAttributeCollection "{59C6B0702D1E4E53}" {
+     CustomAttributes {
+      PreviewRenderAttributes "{59C88DEA0DC69CAC}" {
+       CameraOrbitAngles 90 0 90
+      }
      }
     }
    }
   }
+  coords 107.816 0.902 143.42
+  scale 1
  }
- coords 154.453 0.001 131.07
- scale 1
+ {
+  components {
+   InventoryItemComponent "{59C6B0702D1E4E56}" {
+    Attributes SCR_ItemAttributeCollection "{59C6B0702D1E4E53}" {
+     CustomAttributes {
+      PreviewRenderAttributes "{59C88DEA0DC69CAC}" {
+       CameraOrbitAngles 90 0 90
+      }
+     }
+    }
+   }
+  }
+  coords 108.012 0.902 143.422
+  scale 1
+ }
+ {
+  components {
+   InventoryItemComponent "{59C6B0702D1E4E56}" {
+    Attributes SCR_ItemAttributeCollection "{59C6B0702D1E4E53}" {
+     CustomAttributes {
+      PreviewRenderAttributes "{59C88DEA0DC69CAC}" {
+       CameraOrbitAngles 90 0 90
+      }
+     }
+    }
+   }
+  }
+  coords 108.206 0.899 143.429
+  scale 1
+ }
+ {
+  components {
+   InventoryItemComponent "{59C6B0702D1E4E56}" {
+    Attributes SCR_ItemAttributeCollection "{59C6B0702D1E4E53}" {
+     CustomAttributes {
+      PreviewRenderAttributes "{59C88DEA0DC69CAC}" {
+       CameraOrbitAngles 90 0 90
+      }
+     }
+    }
+   }
+  }
+  coords 108.409 0.899 143.432
+  scale 1
+ }
+ {
+  components {
+   InventoryItemComponent "{59C6B0702D1E4E56}" {
+    Attributes SCR_ItemAttributeCollection "{59C6B0702D1E4E53}" {
+     CustomAttributes {
+      PreviewRenderAttributes "{59C88DEA0DC69CAC}" {
+       CameraOrbitAngles 90 0 90
+      }
+     }
+    }
+   }
+  }
+  coords 108.404 0.899 143.813
+  scale 1
+ }
+ {
+  components {
+   InventoryItemComponent "{59C6B0702D1E4E56}" {
+    Attributes SCR_ItemAttributeCollection "{59C6B0702D1E4E53}" {
+     CustomAttributes {
+      PreviewRenderAttributes "{59C88DEA0DC69CAC}" {
+       CameraOrbitAngles 90 0 90
+      }
+     }
+    }
+   }
+  }
+  coords 108.223 0.899 143.798
+  scale 1
+ }
+ {
+  components {
+   InventoryItemComponent "{59C6B0702D1E4E56}" {
+    Attributes SCR_ItemAttributeCollection "{59C6B0702D1E4E53}" {
+     CustomAttributes {
+      PreviewRenderAttributes "{59C88DEA0DC69CAC}" {
+       CameraOrbitAngles 90 0 90
+      }
+     }
+    }
+   }
+  }
+  coords 108.012 0.899 143.787
+  scale 1
+ }
+ {
+  components {
+   InventoryItemComponent "{59C6B0702D1E4E56}" {
+    Attributes SCR_ItemAttributeCollection "{59C6B0702D1E4E53}" {
+     CustomAttributes {
+      PreviewRenderAttributes "{59C88DEA0DC69CAC}" {
+       CameraOrbitAngles 90 0 90
+      }
+     }
+    }
+   }
+  }
+  coords 107.83 0.897 143.755
+  scale 1
+ }
+}
+GenericEntity : "{D06287F32CEE1EE2}Prefabs/Items/Resources/Diesel_jerrycan.et" {
+ coords 105.04 0.9 143.347
 }
 GenericEntity : "{D58674633332DC86}Prefabs/Items/Resources/CementBag.et" {
- coords 149.514 0.001 130.943
+ coords 105.788 0.872 143.484
+ angleY -90.472
+}
+GenericEntity : "{DD593D31D4F3DFBF}Prefabs/Items/Drugs/Coca_leaves.et" {
+ coords 105.423 0.932 143.164
+ angleX -60.451
 }
