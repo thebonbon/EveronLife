@@ -7,175 +7,6 @@ $grp GenericEntity {
   }
   coords 4685.771 161.151 6977.483
   {
-   $grp GenericEntity {
-    {
-     components {
-      MeshObject "{59CAAA195957154E}" {
-       Object "{1E38513800383D64}Assets/Weapons/Handguns/M9/M9_body.xob"
-      }
-     }
-     coords 0.758 0.442 1.501
-     angleZ 90
-    }
-    {
-     components {
-      MeshObject "{59CAAA195CE3C33C}" {
-       Object "{6F3FF53AF2AB04B3}Assets/Weapons/Handguns/PM/PM_body.xob"
-      }
-     }
-     coords -0.479 0.442 3.72
-     angleZ 90
-    }
-    {
-     components {
-      MeshObject "{59CAAA19296CB304}" {
-       Object "{BA5449C606206A19}Assets/Weapons/Rifles/AK74/ak74_body.xob"
-      }
-     }
-     coords -0.217 0.847 3.326
-     angleY -32.529
-     angleZ 90.079
-    }
-    {
-     components {
-      MeshObject "{59CAAA191F64F0A0}" {
-       Object "{C88615A558BF012C}Assets/Weapons/Rifles/M16A2/M16A2_body.xob"
-      }
-     }
-     coords 0.99 0.852 1.12
-     angleY -29.685
-     angleZ 90
-    }
-    {
-     components {
-      MeshObject "{59CAAA18EBCC38C3}" {
-       Object "{F70651096E49F939}Assets/Weapons/Rifles/M14/M21_body.xob"
-      }
-     }
-     coords 1.008 1.19 1.223
-     angleY -32.212
-     angleZ 90
-    }
-    {
-     components {
-      MeshObject "{59CAAA18C2DD1B4F}" {
-       Object "{DBB4CBF206BDFB3C}Assets/Weapons/Rifles/SVD/SVD_body.xob"
-      }
-     }
-     coords -0.003 1.195 3.133
-     angleY -32.497
-     angleZ 90
-    }
-    {
-     components {
-      MeshObject "{59CAAA18AC1EB34B}" {
-       Object "{10D7B743E0A06735}Assets/Weapons/Magazines/SVD/Magazine_10rd_SVD.xob"
-      }
-     }
-     coords 0.383 1.19 2.453
-     angleZ 90.652
-    }
-    {
-     components {
-      MeshObject "{59CAAA1892262BFB}" {
-       Object "{317726F73A3CA775}Assets/Weapons/Magazines/M9_Beretta/Magazine_15rnd_M9.xob"
-      }
-     }
-     coords 0.888 0.44 1.184
-     angleZ 90.477
-    }
-    {
-     components {
-      MeshObject "{59CAAA1880269CFF}" {
-       Object "{8AE043F1A5E268F4}Assets/Weapons/Magazines/AK74/Magazine_30rnd_AK74.xob"
-      }
-     }
-     coords 0.196 0.831 2.599
-     angleZ 86.331
-    }
-    {
-     components {
-      MeshObject "{59CAAA18722DFD37}" {
-       Object "{4DEA4332E3ED5CE7}Assets/Weapons/Magazines/STANAG/Magazine_30rnd_STANAG.xob"
-      }
-     }
-     coords 1.551 0.822 0.221
-     angleZ 93.298
-    }
-    {
-     components {
-      MeshObject "{59CAAA186FDC22F3}" {
-       Object "{9FB96EBAC79195C6}Assets/Weapons/Magazines/M14/Magazine_M14_20rnd.xob"
-      }
-     }
-     coords 1.665 1.187 0.22
-     angleZ 90.366
-    }
-    {
-     components {
-      MeshObject "{59CAAA185CEE60F9}" {
-       Object "{2482E01261AB2FB5}Assets/Weapons/Magazines/PM/Magazine_8rnd_PM.xob"
-      }
-     }
-     coords -0.265 0.433 3.381
-     angleZ 90.499
-    }
-    {
-     components {
-      MeshObject "{59CAAA182E675E63}" {
-       Object "{75AADA242B52AE25}Assets/Weapons/MachineGuns/M249/M249_body.xob"
-      }
-     }
-     coords 5.143 0.82 -0.694
-     angleX 12.631
-     angleY 60.631
-    }
-    {
-     components {
-      MeshObject "{59CAAA1802C88DDD}" {
-       Object "{6225F32E5CAC127C}Assets/Weapons/MachineGuns/PKM/PKM_body.xob"
-      }
-     }
-     coords 3.742 0.741 -1.404
-     angleX 9.193
-     angleY 61.577
-    }
-    {
-     components {
-      MeshObject "{59CAAA1BE31DE4DC}" {
-       Object "{1E10E549B0646CE1}Assets/Weapons/MachineGuns/RPK74/RPK74_body.xob"
-      }
-     }
-     coords 4.85 1.266 -0.925
-     angleX 12.687
-     angleY 60.025
-    }
-    {
-     components {
-      MeshObject "{59CAAA1B9344ABCD}" {
-       Object "{843BF40278070328}Assets/Weapons/Magazines/PKM/Magazine_100rnd_PKM_item.xob"
-      }
-     }
-     coords 4.017 0.218 -1.308
-    }
-    {
-     components {
-      MeshObject "{59CAAA1B8C645225}" {
-       Object "{1A51E4023458231D}Assets/Weapons/Magazines/M249/Magazine_200rnd_M249_item.xob"
-      }
-     }
-     coords 4.459 0.801 -0.869
-    }
-    {
-     components {
-      MeshObject "{59CAAA1B734C0FC3}" {
-       Object "{49EAB2EE6A0BBECA}Assets/Weapons/Magazines/RPK74/Magazine_45rnd_RPK74.xob"
-      }
-     }
-     coords 4.485 1.181 -0.908
-     angleZ 90.388
-    }
-   }
    SCR_ChimeraCharacter : "{854C04F0EA2129CC}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_Unarmed.et" {
     coords -3.175 0 -1.023
     angleY 60
@@ -285,6 +116,673 @@ $grp GenericEntity {
       }
      }
      coords 1.346 0.818 1.69
+    }
+    {
+     components {
+      MeshObject "{59C4F48745893DBF}" {
+       Object "{1E38513800383D64}Assets/Weapons/Handguns/M9/M9_body.xob"
+      }
+      ActionsManagerComponent "{59C4F487641A3025}" {
+       additionalActions {
+        EL_SellAction "{59C4F48B86953CE9}" {
+         ParentContextList +{
+         }
+         Duration 1
+         "Sort Priority" 5
+         m_SellablePrefab "{9C05543A503DB80E}Prefabs/Weapons/Magazines/Magazine_9x19_M9_15rnd_Ball.et"
+        }
+        EL_BuyAction "{59C4F4878D841445}" {
+         m_BuyablePrefab "{1353C6EAD1DCFE43}Prefabs/Weapons/Handguns/M9/Handgun_M9.et"
+        }
+       }
+      }
+      RplComponent "{59C4F4898DA2E09B}" {
+      }
+     }
+     coords 0.758 0.442 1.501
+     angleZ 90
+    }
+    {
+     components {
+      MeshObject "{59C4F48745893DBF}" {
+       Object "{317726F73A3CA775}Assets/Weapons/Magazines/M9_Beretta/Magazine_15rnd_M9.xob"
+      }
+      ActionsManagerComponent "{59C4F487641A3025}" {
+       additionalActions {
+        EL_SellAction "{59C4F48B86953CE9}" {
+         ParentContextList +{
+         }
+         Duration 1
+         "Sort Priority" 5
+         m_SellablePrefab "{9C05543A503DB80E}Prefabs/Weapons/Magazines/Magazine_9x19_M9_15rnd_Ball.et"
+        }
+        EL_BuyAction "{59C4F4878D841445}" {
+         m_BuyablePrefab "{9C05543A503DB80E}Prefabs/Weapons/Magazines/Magazine_9x19_M9_15rnd_Ball.et"
+         m_PriceConfig EL_PriceConfig "{59C4F4849412E4CC}" {
+          m_aPriceConfigs {
+           EL_Price "{59CC76EED9D9CA08}" {
+            m_Prefab "{3EB02CDAD5F23C82}Prefabs/Weapons/Rifles/SVD/Rifle_SVD.et"
+            m_sName "SVD"
+            m_iBuyPrice 140
+            m_iSellPrice 70
+           }
+           EL_Price "{59CC76EEA7325CD6}" {
+            m_Prefab "{9CCB46C6EE632C1A}Prefabs/Weapons/Magazines/Magazine_762x54_SVD_10rnd_Sniper.et"
+            m_sName "SVD 10rnd Magazine"
+            m_iBuyPrice 32
+            m_iSellPrice 16
+           }
+           EL_Price "{59CC76EEA5A14002}" {
+            m_Prefab "{FA5C25BF66A53DCF}Prefabs/Weapons/Rifles/AK74/Rifle_AK74.et"
+            m_sName "AK47"
+            m_iBuyPrice 100
+            m_iSellPrice 50
+           }
+           EL_Price "{59CC76EEA5BAE141}" {
+            m_Prefab "{BBB50A815A2F916B}Prefabs/Weapons/Magazines/Magazine_545x39_AK_30rnd_Ball.et"
+            m_sName "AK 30rnd Magazine"
+            m_iBuyPrice 25
+            m_iSellPrice 12
+           }
+           EL_Price "{59CC76EEA5C9AE1C}" {
+            m_Prefab "{C0F7DD85A86B2900}Prefabs/Weapons/Handguns/PM/Handgun_PM.et"
+            m_sName "PM Handgun"
+            m_iBuyPrice 30
+            m_iSellPrice 15
+           }
+           EL_Price "{59CC76EEA5DC9818}" {
+            m_Prefab "{8B853CDD11BA916E}Prefabs/Weapons/Magazines/Magazine_9x18_PM_8rnd_Ball.et"
+            m_sName "PM 8rnd Magazine"
+            m_iBuyPrice 10
+            m_iSellPrice 5
+           }
+           EL_Price "{59CC76EE088DC7E7}" {
+            m_Prefab "{B31929F65F0D0279}Prefabs/Weapons/Rifles/M14/Rifle_M21.et"
+            m_sName "M21"
+            m_iBuyPrice 140
+            m_iSellPrice 70
+           }
+           EL_Price "{59CC76EE08CF3C03}" {
+            m_Prefab "{6D18CC33708EE712}Prefabs/Weapons/Magazines/Magazine_762x51_M14_20rnd_Base.et"
+            m_sName "M21 20rnd Magazine"
+            m_iBuyPrice 50
+            m_iSellPrice 25
+           }
+           EL_Price "{59CC76EE0818808D}" {
+            m_Prefab "{3E413771E1834D2F}Prefabs/Weapons/Rifles/M16/Rifle_M16A2.et"
+            m_sName "M16A2"
+            m_iBuyPrice 125
+            m_iSellPrice 60
+           }
+           EL_Price "{59CC76EE0844DE37}" {
+            m_Prefab "{2EBF60EF24B108FC}Prefabs/Weapons/Magazines/Magazine_556x45_STANAG_30rnd_Ball.et"
+            m_sName "M16A2 30rnd Magazine"
+            m_iBuyPrice 30
+            m_iSellPrice 15
+           }
+           EL_Price "{59CC76EE0E8CA871}" {
+           }
+           EL_Price "{59CC76EE0ED6A9B7}" {
+           }
+           EL_Price "{59BC6D842A07660C}" {
+            m_Prefab "{9CAC68BA551417A4}Prefabs/Tools/Axe/Axe.et"
+            m_sName "Axe"
+            m_iBuyPrice 16
+            m_iSellPrice 4
+           }
+           EL_Price "{59BC6D84DB04E452}" {
+            m_Prefab "{1353C6EAD1DCFE43}Prefabs/Weapons/Handguns/M9/Handgun_M9.et"
+            m_sName "M9 Pistol"
+            m_iBuyPrice 36
+            m_iSellPrice 18
+           }
+           EL_Price "{59C4F48A9A9CB9C1}" {
+            m_Prefab "{1DBD99E6347DE1AD}Prefabs/Items/Drinks/Apple_Juice.et"
+            m_sName "Apple Juice"
+            m_iBuyPrice 7
+            m_iSellPrice 4
+           }
+           EL_Price "{59C9169307D01B5E}" {
+            m_Prefab "{A231A5F8D479B5DC}Prefabs/Items/Drinks/WaterBottle.et"
+            m_sName "Water"
+            m_iBuyPrice 1
+           }
+           EL_Price "{59C681325019822B}" {
+            m_Prefab "{259EE7B78C51B624}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469.et"
+            m_sName "UAZ"
+            m_iBuyPrice 1
+           }
+           EL_Price "{59C91696B5C775C8}" {
+            m_Prefab "{0815D91FDF997A0A}Prefabs/Items/Food/Tomato.et"
+            m_sName "Tomato"
+            m_iBuyPrice 4
+            m_iSellPrice 2
+           }
+           EL_Price "{59C91696C0A45256}" {
+            m_Prefab "{C9D661E5B0714711}Prefabs/Items/Food/Apple.et"
+            m_sName "Apple"
+            m_iBuyPrice 4
+            m_iSellPrice 3
+           }
+           EL_Price "{59C916932949705F}" {
+            m_Prefab "{CD44DE4529F22D17}Prefabs/Items/Food/BerryJam.et"
+            m_sName "Berry Jam"
+            m_iBuyPrice 2
+            m_iSellPrice 2
+           }
+           EL_Price "{59C916932A7F6FEB}" {
+            m_Prefab "{FD702B97C4E200EE}Prefabs/Items/Food/PlumJam.et"
+            m_sName "Plum Jam"
+            m_iBuyPrice 2
+            m_iSellPrice 2
+           }
+           EL_Price "{59CA6D2F01596FB7}" {
+            m_Prefab "{06B68C58B72EAAC6}Prefabs/Items/Equipment/Backpacks/Backpack_ALICE_Medium.et"
+            m_sName "Backpack ALICE"
+            m_iBuyPrice 20
+           }
+           EL_Price "{59CA6D2F01F1AD6F}" {
+            m_Prefab "{41A9C55B61F375F0}Prefabs/Items/Equipment/Backpacks/Backpack_Kolobok.et"
+            m_sName "Backpack Kolobok"
+            m_iBuyPrice 15
+           }
+           EL_Price "{59CA6D2F002F8259}" {
+            m_Prefab "{3DE0155EC9767B98}Prefabs/Items/Equipment/Backpacks/Backpack_Veshmeshok.et"
+            m_sName "Backpack Veshmeshok"
+            m_iBuyPrice 10
+           }
+          }
+         }
+        }
+       }
+      }
+      RplComponent "{59C4F4898DA2E09B}" {
+      }
+     }
+     coords 0.888 0.44 1.184
+     angleZ 90.477
+    }
+    {
+     components {
+      MeshObject "{59C4F48745893DBF}" {
+       Object "{C88615A558BF012C}Assets/Weapons/Rifles/M16A2/M16A2_body.xob"
+      }
+      ActionsManagerComponent "{59C4F487641A3025}" {
+       additionalActions {
+        EL_BuyAction "{59C4F4878D841445}" {
+         m_BuyablePrefab "{3E413771E1834D2F}Prefabs/Weapons/Rifles/M16/Rifle_M16A2.et"
+         m_PriceConfig EL_PriceConfig "{59C4F4849412E4CC}" {
+          m_aPriceConfigs {
+           EL_Price "{59CC76EED9D9CA08}" {
+            m_Prefab "{3EB02CDAD5F23C82}Prefabs/Weapons/Rifles/SVD/Rifle_SVD.et"
+            m_sName "SVD"
+            m_iBuyPrice 140
+            m_iSellPrice 70
+           }
+           EL_Price "{59CC76EEA7325CD6}" {
+            m_Prefab "{9CCB46C6EE632C1A}Prefabs/Weapons/Magazines/Magazine_762x54_SVD_10rnd_Sniper.et"
+            m_sName "SVD 10rnd Magazine"
+            m_iBuyPrice 32
+            m_iSellPrice 16
+           }
+           EL_Price "{59CC76EEA5A14002}" {
+            m_Prefab "{FA5C25BF66A53DCF}Prefabs/Weapons/Rifles/AK74/Rifle_AK74.et"
+            m_sName "AK47"
+            m_iBuyPrice 100
+            m_iSellPrice 50
+           }
+           EL_Price "{59CC76EEA5BAE141}" {
+            m_Prefab "{BBB50A815A2F916B}Prefabs/Weapons/Magazines/Magazine_545x39_AK_30rnd_Ball.et"
+            m_sName "AK 30rnd Magazine"
+            m_iBuyPrice 25
+            m_iSellPrice 12
+           }
+           EL_Price "{59CC76EEA5C9AE1C}" {
+            m_Prefab "{C0F7DD85A86B2900}Prefabs/Weapons/Handguns/PM/Handgun_PM.et"
+            m_sName "PM Handgun"
+            m_iBuyPrice 30
+            m_iSellPrice 15
+           }
+           EL_Price "{59CC76EEA5DC9818}" {
+            m_Prefab "{8B853CDD11BA916E}Prefabs/Weapons/Magazines/Magazine_9x18_PM_8rnd_Ball.et"
+            m_sName "PM 8rnd Magazine"
+            m_iBuyPrice 10
+            m_iSellPrice 5
+           }
+           EL_Price "{59CC76EE088DC7E7}" {
+            m_Prefab "{B31929F65F0D0279}Prefabs/Weapons/Rifles/M14/Rifle_M21.et"
+            m_sName "M21"
+            m_iBuyPrice 140
+            m_iSellPrice 70
+           }
+           EL_Price "{59CC76EE08CF3C03}" {
+            m_Prefab "{6D18CC33708EE712}Prefabs/Weapons/Magazines/Magazine_762x51_M14_20rnd_Base.et"
+            m_sName "M21 20rnd Magazine"
+            m_iBuyPrice 50
+            m_iSellPrice 25
+           }
+           EL_Price "{59CC76EE0818808D}" {
+            m_Prefab "{3E413771E1834D2F}Prefabs/Weapons/Rifles/M16/Rifle_M16A2.et"
+            m_sName "M16A2"
+            m_iBuyPrice 125
+            m_iSellPrice 60
+           }
+           EL_Price "{59CC76EE0844DE37}" {
+            m_Prefab "{2EBF60EF24B108FC}Prefabs/Weapons/Magazines/Magazine_556x45_STANAG_30rnd_Ball.et"
+            m_sName "M16A2 30rnd Magazine"
+            m_iBuyPrice 30
+            m_iSellPrice 15
+           }
+           EL_Price "{59CC76EE0E8CA871}" {
+           }
+           EL_Price "{59CC76EE0ED6A9B7}" {
+           }
+           EL_Price "{59BC6D842A07660C}" {
+            m_Prefab "{9CAC68BA551417A4}Prefabs/Tools/Axe/Axe.et"
+            m_sName "Axe"
+            m_iBuyPrice 16
+            m_iSellPrice 4
+           }
+           EL_Price "{59BC6D84DB04E452}" {
+            m_Prefab "{1353C6EAD1DCFE43}Prefabs/Weapons/Handguns/M9/Handgun_M9.et"
+            m_sName "M9 Pistol"
+            m_iBuyPrice 36
+            m_iSellPrice 18
+           }
+           EL_Price "{59C4F48A9A9CB9C1}" {
+            m_Prefab "{1DBD99E6347DE1AD}Prefabs/Items/Drinks/Apple_Juice.et"
+            m_sName "Apple Juice"
+            m_iBuyPrice 7
+            m_iSellPrice 4
+           }
+           EL_Price "{59C9169307D01B5E}" {
+            m_Prefab "{A231A5F8D479B5DC}Prefabs/Items/Drinks/WaterBottle.et"
+            m_sName "Water"
+            m_iBuyPrice 1
+           }
+           EL_Price "{59C681325019822B}" {
+            m_Prefab "{259EE7B78C51B624}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469.et"
+            m_sName "UAZ"
+            m_iBuyPrice 1
+           }
+           EL_Price "{59C91696B5C775C8}" {
+            m_Prefab "{0815D91FDF997A0A}Prefabs/Items/Food/Tomato.et"
+            m_sName "Tomato"
+            m_iBuyPrice 4
+            m_iSellPrice 2
+           }
+           EL_Price "{59C91696C0A45256}" {
+            m_Prefab "{C9D661E5B0714711}Prefabs/Items/Food/Apple.et"
+            m_sName "Apple"
+            m_iBuyPrice 4
+            m_iSellPrice 3
+           }
+           EL_Price "{59C916932949705F}" {
+            m_Prefab "{CD44DE4529F22D17}Prefabs/Items/Food/BerryJam.et"
+            m_sName "Berry Jam"
+            m_iBuyPrice 2
+            m_iSellPrice 2
+           }
+           EL_Price "{59C916932A7F6FEB}" {
+            m_Prefab "{FD702B97C4E200EE}Prefabs/Items/Food/PlumJam.et"
+            m_sName "Plum Jam"
+            m_iBuyPrice 2
+            m_iSellPrice 2
+           }
+           EL_Price "{59CA6D2F01596FB7}" {
+            m_Prefab "{06B68C58B72EAAC6}Prefabs/Items/Equipment/Backpacks/Backpack_ALICE_Medium.et"
+            m_sName "Backpack ALICE"
+            m_iBuyPrice 20
+           }
+           EL_Price "{59CA6D2F01F1AD6F}" {
+            m_Prefab "{41A9C55B61F375F0}Prefabs/Items/Equipment/Backpacks/Backpack_Kolobok.et"
+            m_sName "Backpack Kolobok"
+            m_iBuyPrice 15
+           }
+           EL_Price "{59CA6D2F002F8259}" {
+            m_Prefab "{3DE0155EC9767B98}Prefabs/Items/Equipment/Backpacks/Backpack_Veshmeshok.et"
+            m_sName "Backpack Veshmeshok"
+            m_iBuyPrice 10
+           }
+           EL_Price "{59CC76E9BAEC2340}" {
+           }
+          }
+         }
+        }
+        EL_SellAction "{59C4F48B86953CE9}" {
+         m_SellablePrefab "{3E413771E1834D2F}Prefabs/Weapons/Rifles/M16/Rifle_M16A2.et"
+         m_PriceConfig EL_PriceConfig "{59C4F48B975D9547}" {
+          m_aPriceConfigs {
+           EL_Price "{59CC76EED9D9CA08}" {
+            m_Prefab "{3EB02CDAD5F23C82}Prefabs/Weapons/Rifles/SVD/Rifle_SVD.et"
+            m_sName "SVD"
+            m_iBuyPrice 140
+            m_iSellPrice 70
+           }
+           EL_Price "{59CC76EEA7325CD6}" {
+            m_Prefab "{9CCB46C6EE632C1A}Prefabs/Weapons/Magazines/Magazine_762x54_SVD_10rnd_Sniper.et"
+            m_sName "SVD 10rnd Magazine"
+            m_iBuyPrice 32
+            m_iSellPrice 16
+           }
+           EL_Price "{59CC76EEA5A14002}" {
+            m_Prefab "{FA5C25BF66A53DCF}Prefabs/Weapons/Rifles/AK74/Rifle_AK74.et"
+            m_sName "AK47"
+            m_iBuyPrice 100
+            m_iSellPrice 50
+           }
+           EL_Price "{59CC76EEA5BAE141}" {
+            m_Prefab "{BBB50A815A2F916B}Prefabs/Weapons/Magazines/Magazine_545x39_AK_30rnd_Ball.et"
+            m_sName "AK 30rnd Magazine"
+            m_iBuyPrice 25
+            m_iSellPrice 12
+           }
+           EL_Price "{59CC76EEA5C9AE1C}" {
+            m_Prefab "{C0F7DD85A86B2900}Prefabs/Weapons/Handguns/PM/Handgun_PM.et"
+            m_sName "PM Handgun"
+            m_iBuyPrice 30
+            m_iSellPrice 15
+           }
+           EL_Price "{59CC76EEA5DC9818}" {
+            m_Prefab "{8B853CDD11BA916E}Prefabs/Weapons/Magazines/Magazine_9x18_PM_8rnd_Ball.et"
+            m_sName "PM 8rnd Magazine"
+            m_iBuyPrice 10
+            m_iSellPrice 5
+           }
+           EL_Price "{59CC76EE088DC7E7}" {
+            m_Prefab "{B31929F65F0D0279}Prefabs/Weapons/Rifles/M14/Rifle_M21.et"
+            m_sName "M21"
+            m_iBuyPrice 140
+            m_iSellPrice 70
+           }
+           EL_Price "{59CC76EE08CF3C03}" {
+            m_Prefab "{6D18CC33708EE712}Prefabs/Weapons/Magazines/Magazine_762x51_M14_20rnd_Base.et"
+            m_sName "M21 20rnd Magazine"
+            m_iBuyPrice 50
+            m_iSellPrice 25
+           }
+           EL_Price "{59CC76EE0818808D}" {
+            m_Prefab "{3E413771E1834D2F}Prefabs/Weapons/Rifles/M16/Rifle_M16A2.et"
+            m_sName "M16A2"
+            m_iBuyPrice 125
+            m_iSellPrice 60
+           }
+           EL_Price "{59CC76EE0844DE37}" {
+            m_Prefab "{2EBF60EF24B108FC}Prefabs/Weapons/Magazines/Magazine_556x45_STANAG_30rnd_Ball.et"
+            m_sName "M16A2 30rnd Magazine"
+            m_iBuyPrice 30
+            m_iSellPrice 15
+           }
+           EL_Price "{59CC76EE0E8CA871}" {
+           }
+           EL_Price "{59CC76EE0ED6A9B7}" {
+           }
+           EL_Price "{59BC6D842A07660C}" {
+            m_Prefab "{9CAC68BA551417A4}Prefabs/Tools/Axe/Axe.et"
+            m_sName "Axe"
+            m_iBuyPrice 16
+            m_iSellPrice 4
+           }
+           EL_Price "{59BC6D84DB04E452}" {
+            m_Prefab "{1353C6EAD1DCFE43}Prefabs/Weapons/Handguns/M9/Handgun_M9.et"
+            m_sName "M9 Pistol"
+            m_iBuyPrice 36
+            m_iSellPrice 18
+           }
+           EL_Price "{59C4F48A9A9CB9C1}" {
+            m_Prefab "{1DBD99E6347DE1AD}Prefabs/Items/Drinks/Apple_Juice.et"
+            m_sName "Apple Juice"
+            m_iBuyPrice 7
+            m_iSellPrice 4
+           }
+           EL_Price "{59C9169307D01B5E}" {
+            m_Prefab "{A231A5F8D479B5DC}Prefabs/Items/Drinks/WaterBottle.et"
+            m_sName "Water"
+            m_iBuyPrice 1
+           }
+           EL_Price "{59C681325019822B}" {
+            m_Prefab "{259EE7B78C51B624}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469.et"
+            m_sName "UAZ"
+            m_iBuyPrice 1
+           }
+           EL_Price "{59C91696B5C775C8}" {
+            m_Prefab "{0815D91FDF997A0A}Prefabs/Items/Food/Tomato.et"
+            m_sName "Tomato"
+            m_iBuyPrice 4
+            m_iSellPrice 2
+           }
+           EL_Price "{59C91696C0A45256}" {
+            m_Prefab "{C9D661E5B0714711}Prefabs/Items/Food/Apple.et"
+            m_sName "Apple"
+            m_iBuyPrice 4
+            m_iSellPrice 3
+           }
+           EL_Price "{59C916932949705F}" {
+            m_Prefab "{CD44DE4529F22D17}Prefabs/Items/Food/BerryJam.et"
+            m_sName "Berry Jam"
+            m_iBuyPrice 2
+            m_iSellPrice 2
+           }
+           EL_Price "{59C916932A7F6FEB}" {
+            m_Prefab "{FD702B97C4E200EE}Prefabs/Items/Food/PlumJam.et"
+            m_sName "Plum Jam"
+            m_iBuyPrice 2
+            m_iSellPrice 2
+           }
+           EL_Price "{59CA6D2F01596FB7}" {
+            m_Prefab "{06B68C58B72EAAC6}Prefabs/Items/Equipment/Backpacks/Backpack_ALICE_Medium.et"
+            m_sName "Backpack ALICE"
+            m_iBuyPrice 20
+           }
+           EL_Price "{59CA6D2F01F1AD6F}" {
+            m_Prefab "{41A9C55B61F375F0}Prefabs/Items/Equipment/Backpacks/Backpack_Kolobok.et"
+            m_sName "Backpack Kolobok"
+            m_iBuyPrice 15
+           }
+           EL_Price "{59CA6D2F002F8259}" {
+            m_Prefab "{3DE0155EC9767B98}Prefabs/Items/Equipment/Backpacks/Backpack_Veshmeshok.et"
+            m_sName "Backpack Veshmeshok"
+            m_iBuyPrice 10
+           }
+           EL_Price "{59CC76E9BB38C31B}" {
+           }
+          }
+         }
+        }
+       }
+      }
+      RplComponent "{59C4F4898DA2E09B}" {
+      }
+     }
+     coords 0.99 0.852 1.12
+     angleY -29.685
+     angleZ 90
+    }
+    {
+     components {
+      MeshObject "{59C4F48745893DBF}" {
+       Object "{DBB4CBF206BDFB3C}Assets/Weapons/Rifles/SVD/SVD_body.xob"
+      }
+      ActionsManagerComponent "{59C4F487641A3025}" {
+       additionalActions {
+        EL_BuyAction "{59C4F4878D841445}" {
+         m_BuyablePrefab "{3EB02CDAD5F23C82}Prefabs/Weapons/Rifles/SVD/Rifle_SVD.et"
+        }
+        EL_SellAction "{59C4F48B86953CE9}" {
+         m_SellablePrefab "{3EB02CDAD5F23C82}Prefabs/Weapons/Rifles/SVD/Rifle_SVD.et"
+        }
+       }
+      }
+      RplComponent "{59C4F4898DA2E09B}" {
+      }
+     }
+     coords -0.003 1.195 3.133
+     angleY -32.497
+     angleZ 90
+    }
+    {
+     components {
+      MeshObject "{59C4F48745893DBF}" {
+       Object "{10D7B743E0A06735}Assets/Weapons/Magazines/SVD/Magazine_10rd_SVD.xob"
+      }
+      ActionsManagerComponent "{59C4F487641A3025}" {
+       additionalActions {
+        EL_BuyAction "{59C4F4878D841445}" {
+         m_BuyablePrefab "{9CCB46C6EE632C1A}Prefabs/Weapons/Magazines/Magazine_762x54_SVD_10rnd_Sniper.et"
+        }
+        EL_SellAction "{59C4F48B86953CE9}" {
+         m_SellablePrefab "{9CCB46C6EE632C1A}Prefabs/Weapons/Magazines/Magazine_762x54_SVD_10rnd_Sniper.et"
+        }
+       }
+      }
+      RplComponent "{59C4F4898DA2E09B}" {
+      }
+     }
+     coords 0.383 1.19 2.453
+     angleZ 90.652
+    }
+    {
+     components {
+      MeshObject "{59C4F48745893DBF}" {
+       Object "{BA5449C606206A19}Assets/Weapons/Rifles/AK74/ak74_body.xob"
+      }
+      ActionsManagerComponent "{59C4F487641A3025}" {
+       additionalActions {
+        EL_BuyAction "{59C4F4878D841445}" {
+         m_BuyablePrefab "{FA5C25BF66A53DCF}Prefabs/Weapons/Rifles/AK74/Rifle_AK74.et"
+        }
+        EL_SellAction "{59C4F48B86953CE9}" {
+         m_SellablePrefab "{FA5C25BF66A53DCF}Prefabs/Weapons/Rifles/AK74/Rifle_AK74.et"
+        }
+       }
+      }
+      RplComponent "{59C4F4898DA2E09B}" {
+      }
+     }
+     coords -0.217 0.847 3.326
+     angleY -32.529
+     angleZ 90.079
+    }
+    {
+     components {
+      MeshObject "{59C4F48745893DBF}" {
+       Object "{8AE043F1A5E268F4}Assets/Weapons/Magazines/AK74/Magazine_30rnd_AK74.xob"
+      }
+      ActionsManagerComponent "{59C4F487641A3025}" {
+       additionalActions {
+        EL_BuyAction "{59C4F4878D841445}" {
+         m_BuyablePrefab "{BBB50A815A2F916B}Prefabs/Weapons/Magazines/Magazine_545x39_AK_30rnd_Ball.et"
+        }
+        EL_SellAction "{59C4F48B86953CE9}" {
+         m_SellablePrefab "{BBB50A815A2F916B}Prefabs/Weapons/Magazines/Magazine_545x39_AK_30rnd_Ball.et"
+        }
+       }
+      }
+      RplComponent "{59C4F4898DA2E09B}" {
+      }
+     }
+     coords 0.196 0.831 2.599
+     angleZ 86.331
+    }
+    {
+     components {
+      MeshObject "{59C4F48745893DBF}" {
+       Object "{6F3FF53AF2AB04B3}Assets/Weapons/Handguns/PM/PM_body.xob"
+      }
+      ActionsManagerComponent "{59C4F487641A3025}" {
+       additionalActions {
+        EL_BuyAction "{59C4F4878D841445}" {
+         m_BuyablePrefab "{C0F7DD85A86B2900}Prefabs/Weapons/Handguns/PM/Handgun_PM.et"
+        }
+        EL_SellAction "{59C4F48B86953CE9}" {
+         m_SellablePrefab "{C0F7DD85A86B2900}Prefabs/Weapons/Handguns/PM/Handgun_PM.et"
+        }
+       }
+      }
+      RplComponent "{59C4F4898DA2E09B}" {
+      }
+     }
+     coords -0.479 0.442 3.72
+     angleZ 90
+    }
+    {
+     components {
+      MeshObject "{59C4F48745893DBF}" {
+       Object "{2482E01261AB2FB5}Assets/Weapons/Magazines/PM/Magazine_8rnd_PM.xob"
+      }
+      ActionsManagerComponent "{59C4F487641A3025}" {
+       additionalActions {
+        EL_BuyAction "{59C4F4878D841445}" {
+         m_BuyablePrefab "{8B853CDD11BA916E}Prefabs/Weapons/Magazines/Magazine_9x18_PM_8rnd_Ball.et"
+        }
+        EL_SellAction "{59C4F48B86953CE9}" {
+         m_SellablePrefab "{8B853CDD11BA916E}Prefabs/Weapons/Magazines/Magazine_9x18_PM_8rnd_Ball.et"
+        }
+       }
+      }
+      RplComponent "{59C4F4898DA2E09B}" {
+      }
+     }
+     coords -0.265 0.433 3.381
+     angleZ 90.499
+    }
+    {
+     components {
+      MeshObject "{59C4F48745893DBF}" {
+       Object "{4DEA4332E3ED5CE7}Assets/Weapons/Magazines/STANAG/Magazine_30rnd_STANAG.xob"
+      }
+      ActionsManagerComponent "{59C4F487641A3025}" {
+       additionalActions {
+        EL_BuyAction "{59C4F4878D841445}" {
+         m_BuyablePrefab "{2EBF60EF24B108FC}Prefabs/Weapons/Magazines/Magazine_556x45_STANAG_30rnd_Ball.et"
+        }
+        EL_SellAction "{59C4F48B86953CE9}" {
+         m_SellablePrefab "{2EBF60EF24B108FC}Prefabs/Weapons/Magazines/Magazine_556x45_STANAG_30rnd_Ball.et"
+        }
+       }
+      }
+     }
+     coords 1.551 0.822 0.221
+     angleZ 93.298
+    }
+    {
+     components {
+      MeshObject "{59C4F48745893DBF}" {
+       Object "{F70651096E49F939}Assets/Weapons/Rifles/M14/M21_body.xob"
+      }
+      ActionsManagerComponent "{59C4F487641A3025}" {
+       additionalActions {
+        EL_BuyAction "{59C4F4878D841445}" {
+         m_BuyablePrefab "{B31929F65F0D0279}Prefabs/Weapons/Rifles/M14/Rifle_M21.et"
+        }
+        EL_SellAction "{59C4F48B86953CE9}" {
+         m_SellablePrefab "{B31929F65F0D0279}Prefabs/Weapons/Rifles/M14/Rifle_M21.et"
+        }
+       }
+      }
+     }
+     coords 1.008 1.19 1.223
+     angleY -32.212
+     angleZ 90
+    }
+    {
+     components {
+      MeshObject "{59C4F48745893DBF}" {
+       Object "{9FB96EBAC79195C6}Assets/Weapons/Magazines/M14/Magazine_M14_20rnd.xob"
+      }
+      ActionsManagerComponent "{59C4F487641A3025}" {
+       additionalActions {
+        EL_BuyAction "{59C4F4878D841445}" {
+         m_BuyablePrefab "{6D18CC33708EE712}Prefabs/Weapons/Magazines/Magazine_762x51_M14_20rnd_Base.et"
+        }
+        EL_SellAction "{59C4F48B86953CE9}" {
+         m_SellablePrefab "{6D18CC33708EE712}Prefabs/Weapons/Magazines/Magazine_762x51_M14_20rnd_Base.et"
+        }
+       }
+      }
+     }
+     coords 1.665 1.187 0.22
+     angleZ 90.366
     }
    }
   }
@@ -661,5 +1159,52 @@ $grp GenericEntity {
     }
    }
   }
+ }
+ IndustrialStore {
+  components {
+   EL_MapIconComponent "{59C4F4865F352156}" {
+    m_ImagePath "{C5BDEE592AA2B25E}UI/Icons/shopping-basket.edds"
+    m_fMinScale 0.5
+   }
+  }
+  coords 4517.514 161.811 6824.126
+ }
+}
+$grp GenericEntity : "{FDEE11D818A4C675}Prefabs/Items/Money/DollarBill.et" {
+ {
+  coords 4684.856 161.196 6977.791
+ }
+ {
+  coords 4684.852 161.196 6977.681
+ }
+ {
+  coords 4684.773 161.196 6977.854
+ }
+ {
+  coords 4684.352 161.196 6977.88
+ }
+ {
+  coords 4684.258 161.196 6977.729
+ }
+ {
+  coords 4684.258 161.196 6977.729
+ }
+ {
+  coords 4684.776 161.152 6976.994
+ }
+ {
+  coords 4685.375 161.152 6977.056
+ }
+ {
+  coords 4685.37 161.152 6976.946
+ }
+ {
+  coords 4685.291 161.152 6977.12
+ }
+ {
+  coords 4684.87 161.152 6977.145
+ }
+ {
+  coords 4684.776 161.152 6976.994
  }
 }
