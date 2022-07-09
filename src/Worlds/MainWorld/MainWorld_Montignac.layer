@@ -11,53 +11,28 @@ $grp GenericEntity {
     coords -3.175 0 -1.023
     angleY 60
    }
-   $grp GenericEntity : "{C260F0E07274ACA1}Prefabs/Props/Furniture/Boiler_01.et" {
-    MoneySpawner2 {
-     components {
-      MeshObject "{5872F0EB7FA40561}" {
-       Object "{54F28786FA027CCE}Assets/Structures/BuildingsParts/Mail/Mailbox_01.xob"
-      }
-      ActionsManagerComponent "{59CA6D297AAC3ABA}" {
-       ActionContexts {
-        UserActionContext "{59CA6D297D8226B4}" {
-         ContextName "default"
-         Position PointInfo "{59CA6D2986B8B69C}" {
-          Offset 0 0.1999 0
-         }
-         Radius 5
+   GenericEntity MoneySpawner : "{C260F0E07274ACA1}Prefabs/Props/Furniture/Boiler_01.et" {
+    components {
+     MeshObject "{5872F0EB7FA40561}" {
+      Object "{54F28786FA027CCE}Assets/Structures/BuildingsParts/Mail/Mailbox_01.xob"
+     }
+     ActionsManagerComponent "{59CA6D297AAC3ABA}" {
+      ActionContexts {
+       UserActionContext "{59CA6D297D8226B4}" {
+        ContextName "default"
+        Position PointInfo "{59CA6D2986B8B69C}" {
+         Offset 0 0.1999 0
         }
+        Radius 5
        }
       }
-      RplComponent "{5624A88DC2D9928D}" {
-       Enabled 1
-      }
      }
-     coords 164.627 2.706 142.347
-     angleY 61.886
-    }
-    MoneySpawner {
-     components {
-      MeshObject "{5872F0EB7FA40561}" {
-       Object "{54F28786FA027CCE}Assets/Structures/BuildingsParts/Mail/Mailbox_01.xob"
-      }
-      ActionsManagerComponent "{59CA6D297AAC3ABA}" {
-       ActionContexts {
-        UserActionContext "{59CA6D297D8226B4}" {
-         ContextName "default"
-         Position PointInfo "{59CA6D2986B8B69C}" {
-          Offset 0 0.1999 0
-         }
-         Radius 5
-        }
-       }
-      }
-      RplComponent "{5624A88DC2D9928D}" {
-       Enabled 1
-      }
+     RplComponent "{5624A88DC2D9928D}" {
+      Enabled 1
      }
-     coords 3.117 1.406 5.561
-     angleY 61.886
     }
+    coords 3.117 1.406 5.561
+    angleY 61.886
    }
    $grp GenericEntity : "{DD994C1FCE7AD6E0}Prefabs/Shop/ShopItem.et" {
     {
@@ -794,7 +769,7 @@ $grp GenericEntity {
     m_fMinScale 0.5
    }
   }
-  coords 4711.821 163.825 6926.354
+  coords 4711.821 163.825 6926.353
   {
    $grp GenericEntity {
     {
@@ -1167,8 +1142,218 @@ $grp GenericEntity {
     m_fMinScale 0.5
    }
   }
-  coords 4517.514 161.811 6824.126
+  coords 4502.122 154.638 6880.177
+  {
+   $grp GenericEntity : "{01E47FD98CEA64D3}PrefabsEditable/Auto/Props/Agriculture/Farm/E_HayBale_01_square_small.et" {
+    {
+     coords -3.135 -0.885 23.684
+     angleY 0
+    }
+    {
+     coords -1.07 152.864 26.035
+     angleY 0
+    }
+    {
+     coords -3.162 -0.887 24.878
+     angleY 0
+    }
+    {
+     coords -2.197 -0.886 24.771
+     angleY 0
+    }
+    {
+     coords -4.184 -0.886 24.952
+     angleY 0
+    }
+    {
+     coords -4.216 -0.886 23.752
+     angleY 0
+    }
+   }
+   GenericEntity : "{51D31AB07AE3C1C7}Prefabs/Props/Commercial/CashierShop_01.et" {
+    components {
+     ActionsManagerComponent "{59CA650D7157C0AB}" {
+      ActionContexts {
+       UserActionContext "{59CA650D707BA8F6}" {
+        Radius 0.5
+       }
+      }
+     }
+    }
+    coords 15.461 0.14 12.963
+    angleY 89.919
+   }
+   GenericEntity : "{A0449C0B3458324C}PrefabsEditable/Auto/Props/Commercial/E_MarketStand_01_Umbrella.et" {
+    coords 16.93 -0.886 11.479
+   }
+   GenericEntity : "{D8B83A318AE3611E}Prefabs/Props/Commercial/MarketStand_01.et" {
+    coords 15.682 -0.887 13.571
+    angleY -90.686
+   }
+   $grp GenericEntity : "{DD994C1FCE7AD6E0}Prefabs/Shop/ShopItem.et" {
+    StoreItemBricks {
+     components {
+      MeshObject "{59C4F48745893DBF}" {
+       Object "{E68CDA735BC7F709}Assets/Props/Construction/BrickPile_01/BrickPile_01_Large.xob"
+      }
+      ActionsManagerComponent "{59C4F487641A3025}" {
+       additionalActions {
+        EL_BuyAction "{59C4F4878D841445}" {
+         m_BuyablePrefab "{0D5DA590E223A195}Prefabs/Items/Resources/Brick.et"
+        }
+        EL_SellAction "{59C4F48B86953CE9}" {
+         m_SellablePrefab "{0D5DA590E223A195}Prefabs/Items/Resources/Brick.et"
+        }
+       }
+      }
+     }
+     coords -3.911 -0.882 5.447
+    }
+    ShopItemGravelBag {
+     components {
+      MeshObject "{59C4F48745893DBF}" {
+       Object "{3FC9CD3D28FBA221}Assets/Props/Military/Sandbags/Sandbag_01_long.xob"
+      }
+      ActionsManagerComponent "{59C4F487641A3025}" {
+       additionalActions {
+        EL_BuyAction "{59C4F4878D841445}" {
+         m_BuyablePrefab "{344090890C63F4CA}Prefabs/Items/Resources/GravelBag.et"
+        }
+        EL_SellAction "{59C4F48B86953CE9}" {
+         m_SellablePrefab "{344090890C63F4CA}Prefabs/Items/Resources/GravelBag.et"
+        }
+       }
+      }
+     }
+     coords -3.468 -0.887 9.595
+    }
+    ShopItemSandbag {
+     components {
+      MeshObject "{59C4F48745893DBF}" {
+       Object "{3FC9CD3D28FBA221}Assets/Props/Military/Sandbags/Sandbag_01_long.xob"
+       Materials {
+        MaterialAssignClass "{59D2466785DA22F7}" {
+         SourceMaterial "Sandbags_01_Long"
+         AssignedMaterial "{D4919232635186D5}Assets/Props/Military/Sandbags/Data/Sandbags_01_long_Burlap.emat"
+        }
+       }
+      }
+      ActionsManagerComponent "{59C4F487641A3025}" {
+       additionalActions {
+        EL_BuyAction "{59C4F4878D841445}" {
+         m_BuyablePrefab "{ADFEF306D1C22E5F}Prefabs/Items/Resources/Sandbag.et"
+        }
+        EL_SellAction "{59C4F48B86953CE9}" {
+         m_SellablePrefab "{ADFEF306D1C22E5F}Prefabs/Items/Resources/Sandbag.et"
+        }
+       }
+      }
+     }
+     coords -2.96 -0.887 15.019
+    }
+    StoreItemHayBale {
+     components {
+      MeshObject "{59C4F48745893DBF}" {
+       Object "{C05C5478A927A0EE}Assets/Props/Agricultural/Hay/HayBale_01_square_small.xob"
+      }
+      ActionsManagerComponent "{59C4F487641A3025}" {
+       additionalActions {
+        EL_BuyAction "{59C4F4878D841445}" {
+         m_BuyablePrefab "{5A87BE461FCE3006}Prefabs/Items/Resources/HayBale.et"
+        }
+        EL_SellAction "{59C4F48B86953CE9}" {
+         m_SellablePrefab "{5A87BE461FCE3006}Prefabs/Items/Resources/HayBale.et"
+        }
+       }
+      }
+     }
+     coords -2.259 -0.886 23.677
+    }
+   }
+  }
  }
+ VehicleShop {
+  components {
+   EL_MapIconComponent "{59C4F4865F352156}" {
+    m_ImagePath "{C5BDEE592AA2B25E}UI/Icons/shopping-basket.edds"
+    m_fMinScale 0.5
+   }
+  }
+  coords 4844.531 163.118 7114.423
+  {
+   BaseGameTriggerEntity {
+    coords 0.539 0.901 8.254
+    angleY -129.921
+   }
+   Vehicle UAZ1 : "{259EE7B78C51B624}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469.et" {
+    components {
+     SCR_VehicleDamageManagerComponent "{141326E9FD94FE40}" {
+      m_fVehicleDestroyDamage 11880.1
+     }
+     ActionsManagerComponent "{C97BE5489221AE18}" {
+      ActionContexts {
+       UserActionContext "{59CA6D2861EC5BEF}" {
+        ContextName "default"
+        Position PointInfo "{59CA6D2866DFC484}" {
+         Offset 0 0.7771 0
+        }
+        Radius 5
+       }
+      }
+      additionalActions {
+       EL_BuyAction "{59CA6D286A5E5798}" {
+        ParentContextList {
+         "default"
+        }
+        Duration 1
+        "Sort Priority" -1
+        m_BuyablePrefab "{259EE7B78C51B624}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469.et"
+        m_PriceConfig EL_PriceConfig "{59CA6D2877DE3D9C}" : "{18A98641909A7F52}Configs/Shops/EL_ShopPrices.conf" {
+        }
+       }
+      }
+     }
+    }
+    coords 3.603 0.748 0.868
+    angleY -103.172
+   }
+   GenericEntity : "{B99FF1BDF60F951E}Prefabs/Shop/EL_VehicleShop.et" {
+    components {
+     MeshObject "{5872F0EB7FA40561}" {
+     }
+    }
+    coords 1.855 1.709 -2.996
+    angleY 115.44
+   }
+   GenericEntity MoneySpawner2 : "{C260F0E07274ACA1}Prefabs/Props/Furniture/Boiler_01.et" {
+    components {
+     MeshObject "{5872F0EB7FA40561}" {
+      Object "{54F28786FA027CCE}Assets/Structures/BuildingsParts/Mail/Mailbox_01.xob"
+     }
+     ActionsManagerComponent "{59CA6D297AAC3ABA}" {
+      ActionContexts {
+       UserActionContext "{59CA6D297D8226B4}" {
+        ContextName "default"
+        Position PointInfo "{59CA6D2986B8B69C}" {
+         Offset 0 0.1999 0
+        }
+        Radius 5
+       }
+      }
+     }
+     RplComponent "{5624A88DC2D9928D}" {
+      Enabled 1
+     }
+    }
+    coords 7.334 0.764 6.614
+    angleY 61.886
+   }
+  }
+ }
+}
+GenericEntity : "{D8B83A318AE3611E}Prefabs/Props/Commercial/MarketStand_01.et" {
+ coords 4846.047 163.803 7110.783
+ angleY -63.686
 }
 $grp GenericEntity : "{FDEE11D818A4C675}Prefabs/Items/Money/DollarBill.et" {
  {
