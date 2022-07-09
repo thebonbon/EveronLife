@@ -15,7 +15,6 @@ GenericEntity : "{51D31AB07AE3C1C7}Prefabs/Props/Commercial/CashierShop_01.et" {
    TriggerShapeType "Oriented Bounding Box"
    BoxMins -1 0 -2
    BoxMaxs 0.5 2 2
-   DrawShape 1
    ShapeColor 0.937 0.82 0.91 1
    TriggerActivationType "All changes"
    ClassFilter "Vehicle"
