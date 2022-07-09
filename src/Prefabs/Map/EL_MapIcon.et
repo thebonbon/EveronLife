@@ -3,7 +3,7 @@ GenericEntity {
  components {
   EL_MapIconComponent "{59B92BF601AFAD06}" {
    m_ImagePath "{6BFB1D962D9E8786}UI/Icons/apple-icon.edds"
-   m_fMinScale 1
+   m_fMinScale 0.4
    m_fMaxScale 1
   }
  }
