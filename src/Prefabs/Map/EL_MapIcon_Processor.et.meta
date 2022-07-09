@@ -1,0 +1,15 @@
+MetaFileClass {
+ Name "{BBB9B8D4E7BC9C8D}Prefabs/Map/EL_MapIcon_Processor.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

@@ -1,0 +1,8 @@
+GenericEntity : "{1392993DD6D41D47}Prefabs/Map/EL_MapIcon.et" {
+ ID "59BAB3053E444721"
+ components {
+  EL_MapIconComponent "{59B92BF601AFAD06}" {
+   m_ImagePath "{5BAD663DAB93FE23}UI/Icons/GoldOre.edds"
+  }
+ }
+}

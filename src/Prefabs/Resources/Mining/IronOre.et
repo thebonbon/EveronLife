@@ -17,6 +17,24 @@ GenericEntity {
    ModelGeometry 1
    Static 1
   }
+  ActionsManagerComponent "{59CAE1F43140E8A2}" {
+   ActionContexts {
+    UserActionContext "{59CAE1F430421FC1}" {
+     ContextName "default"
+     Position PointInfo "{59CAE1F4833DF683}" {
+     }
+    }
+   }
+   additionalActions {
+    EL_GatherAction "{59CAE1F4589CF791}" {
+     ParentContextList {
+      "default"
+     }
+     m_GatherItemDisplayName "Iron"
+     m_GatherItemPrefab "{6853E2E2AE878611}Prefabs/Resources/Mining/IronNugget.et"
+    }
+   }
+  }
   RplComponent "{59A73088D86C4A13}" {
   }
  }

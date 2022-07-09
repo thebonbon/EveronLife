@@ -1,5 +1,5 @@
 MetaFileClass {
- Name "{C7FC93FD15F0574C}Prefabs/Resources/Mining/CopperOre.et"
+ Name "{C6BD880459D96262}Prefabs/Map/EL_MapIcon_Special.et"
  Configurations {
   EntityTemplateResourceClass PC {
   }
