@@ -91,7 +91,7 @@ class EL_MapIconComponent : ScriptComponent
 	//! Resize Icon based on layer
 	private void OnLayerChanged()
 	{
-		if (!m_MapEntity)
+		if (!m_MapEntity || !m_wIconWidget)
 			return;
 		
 		int curLayerIndex = m_MapEntity.GetLayerIndex();
