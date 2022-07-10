@@ -1351,6 +1351,46 @@ $grp GenericEntity {
   }
  }
 }
+GenericEntity MetalTrader : "{1392993DD6D41D47}Prefabs/Map/EL_MapIcon.et" {
+ coords 4555.816 156.252 6891.983
+ {
+  $grp GenericEntity {
+   {
+    components {
+     MeshObject "{59D272AF8165DB4B}" {
+      Object "{0D628EB319605081}Assets/Props/Furniture/Table_02/Table_02.xob"
+     }
+    }
+    coords -0.807 -0 0.967
+   }
+   {
+    components {
+     MeshObject "{59D272AF8165DB4B}" {
+      Object "{0D628EB319605081}Assets/Props/Furniture/Table_02/Table_02.xob"
+     }
+    }
+    coords -0.778 -0 -0.296
+   }
+   {
+    components {
+     MeshObject "{59D272AF8165DB4B}" {
+      Object "{0D628EB319605081}Assets/Props/Furniture/Table_02/Table_02.xob"
+     }
+    }
+    coords -0.791 -0 -1.477
+   }
+  }
+  GenericEntity : "{577A665F1662E7AD}Prefabs/Resources/Mining/CopperBar.et" {
+   coords -0.504 0.907 0.977
+  }
+  GenericEntity : "{ACC9A10F0F20F5C4}Prefabs/Resources/Mining/GoldBar.et" {
+   coords -0.508 0.907 -1.427
+  }
+  GenericEntity : "{BCD1E8CD7F975074}Prefabs/Resources/Mining/IronBar.et" {
+   coords -0.518 0.907 -0.285
+  }
+ }
+}
 GenericEntity : "{D8B83A318AE3611E}Prefabs/Props/Commercial/MarketStand_01.et" {
  coords 4846.047 163.803 7110.783
  angleY -63.686
