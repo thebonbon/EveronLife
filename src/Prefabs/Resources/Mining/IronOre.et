@@ -10,6 +10,8 @@ GenericEntity {
     }
    }
   }
+  Hierarchy "{59D4ABCF5AB3DB10}" {
+  }
   RigidBody "{59A73088D86C4A1C}" {
    LayerPreset "RockFireView"
    Mass 1000
@@ -23,6 +25,7 @@ GenericEntity {
      ContextName "default"
      Position PointInfo "{59CAE1F4833DF683}" {
      }
+     Radius 1
     }
    }
    additionalActions {
@@ -30,8 +33,9 @@ GenericEntity {
      ParentContextList {
       "default"
      }
-     m_GatherItemDisplayName "Iron"
-     m_GatherItemPrefab "{6853E2E2AE878611}Prefabs/Resources/Mining/IronNugget.et"
+     m_GatherItemDisplayName "Iron Ore"
+     m_GatherItemPrefab "{6853E2E2AE878611}Prefabs/Items/Resources/IronNugget.et"
+     m_bDeleteAfterUse 1
     }
    }
   }

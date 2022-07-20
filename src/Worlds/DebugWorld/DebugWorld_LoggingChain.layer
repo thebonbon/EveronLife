@@ -1,5 +1,5 @@
 GenericEntity : "{622F9989DDC4865B}PrefabLibrary/Props/Civilian/Recreation/TableRecreation_01.et" {
- coords 119.994 -0.001 135
+ coords 92.74 -0.001 143.5
  {
   GenericEntity Axe : "{9CAC68BA551417A4}Prefabs/Tools/Axe/Axe.et" {
    coords -0.055 0.897 0.133

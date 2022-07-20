@@ -10,6 +10,8 @@ GenericEntity {
     }
    }
   }
+  Hierarchy "{59D4ABCF5E05337B}" {
+  }
   RigidBody "{59A73088DB3D50AF}" {
    LayerPreset "RockFireView"
    Mass 1000
@@ -17,22 +19,27 @@ GenericEntity {
    ModelGeometry 1
    Static 1
   }
-  RplComponent "{59A73088DB3D50A3}" {
-  }
   ActionsManagerComponent "{59D29D5673B5253E}" {
    ActionContexts {
     UserActionContext "{59D29D5672760F76}" {
      ContextName "default"
      Position PointInfo "{59D29D567727EE6E}" {
      }
+     Radius 1
     }
    }
    additionalActions {
     EL_GatherAction "{59D29D5676E42848}" {
-     m_GatherItemDisplayName "Gold"
-     m_GatherItemPrefab "{8F81BD0BF343CF49}Prefabs/Resources/Mining/GoldNugget.et"
+     ParentContextList {
+      "default"
+     }
+     m_GatherItemDisplayName "Gold Ore"
+     m_GatherItemPrefab "{8F81BD0BF343CF49}Prefabs/Items/Resources/GoldNugget.et"
+     m_bDeleteAfterUse 1
     }
    }
+  }
+  RplComponent "{59A73088DB3D50A3}" {
   }
  }
  coords 105.117 0.097 132.47
