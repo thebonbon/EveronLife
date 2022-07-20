@@ -33,9 +33,10 @@ GenericEntity {
      ParentContextList {
       "default"
      }
+     Duration 1
      m_GatherItemDisplayName "Iron Ore"
-     m_GatherItemPrefab "{6853E2E2AE878611}Prefabs/Items/Resources/IronNugget.et"
-     m_bDeleteAfterUse 1
+     m_GatherItemPrefab "{6853E2E2AE878611}Prefabs/Resources/Mining/IronNugget.et"
+     m_bDeleteAfterGather 1
     }
    }
   }

@@ -3,6 +3,7 @@ class EL_MiningAreaClass: GenericEntityClass
 {
 };
 
+
 [BaseContainerProps()]
 class EL_WeightedSpawn
 {
@@ -30,7 +31,8 @@ class EL_MiningArea : GenericEntity
 
 	private ref array<IEntity> m_aSpawnedOres;
 	private float m_fNextSpawnTime = 0;
-
+	private const int REPL_TO_MIN = 60000;
+	
 	//------------------------------------------------------------------------------------------------	
 	private vector GetRandomPoint()
 	{
@@ -65,12 +67,20 @@ class EL_MiningArea : GenericEntity
 			{
 				if (rndWeight < weightedSpawnObj.m_iChance)
 				{
-					IEntity nextOre = EL_Utils.SpawnEntityPrefab(weightedSpawnObj.m_Prefab, GetRandomPoint(), "0 0 0", this);
+					float rndRot = Math.RandomFloat(-180, 180);
+					IEntity nextOre = EL_Utils.SpawnEntityPrefab(weightedSpawnObj.m_Prefab, GetRandomPoint(), Vector(0, rndRot, 0), this);
+					if (!nextOre.GetParent())
+					{
+						Print(string.Format("Prefab %1 is missing Hierarchy component!", weightedSpawnObj.m_Prefab.GetPath()), LogLevel.ERROR);
+						delete nextOre;
+					}
+					
+					//Snap to ground
 					vector transform[4];
 					nextOre.GetWorldTransform(transform);
-					SCR_TerrainHelper.SnapAndOrientToTerrain(transform);
-					
-					
+					if(SCR_TerrainHelper.SnapAndOrientToTerrain(transform))
+						nextOre.SetOrigin(transform[3]);
+		
 					break;
 				}
 				rndWeight -= weightedSpawnObj.m_iChance;
@@ -84,8 +94,8 @@ class EL_MiningArea : GenericEntity
 	{
 		if (Replication.Time() >= m_fNextSpawnTime)
 		{
-			SpawnOres(m_iAmount - m_aSpawnedOres.Count());
-			m_fNextSpawnTime += Replication.Time() + m_fRespawnTime * 60000
+			SpawnOres(m_iAmount - SCR_EntityHelper.CountChildren(this));
+			m_fNextSpawnTime = Replication.Time() + m_fRespawnTime * REPL_TO_MIN;
 		}
 	}
 	
