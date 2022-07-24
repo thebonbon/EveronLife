@@ -1,0 +1,38 @@
+GenericEntity {
+ ID "59F07093BF56FFC2"
+ components {
+  MeshObject "{59F0709385A10D16}" {
+   Object "{6399C4DB701BF230}Assets/Resources/Mining/MetalOre.xob"
+  }
+  Hierarchy "{59F0709385A10D0D}" {
+  }
+  RigidBody "{59F0709385A10D79}" {
+   LayerPreset "Terrain"
+   Mass 1000
+   AngularSleepingThreashold 1
+   ModelGeometry 1
+  }
+  ActionsManagerComponent "{59F0709385A13EF5}" {
+   ActionContexts {
+    UserActionContext "{59F0709385A13EE2}" {
+     ContextName "default"
+     Position PointInfo "{59F0709385A10D55}" {
+     }
+     Radius 1
+    }
+   }
+   additionalActions {
+    EL_GatherAction "{59F0709385A13EF4}" {
+     ParentContextList {
+      "default"
+     }
+     Duration 1
+     m_bDeleteAfterGather 1
+    }
+   }
+  }
+  RplComponent "{59F0709385A13E0D}" {
+  }
+ }
+ coords 114.759 0.015 145.209
+}

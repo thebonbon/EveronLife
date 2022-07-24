@@ -1,43 +1,22 @@
-GenericEntity {
- ID "59A71ED8807E6DCD"
+GenericEntity : "{F36375B16DB07ABD}Prefabs/Resources/Mining/MinableOre.et" {
+ ID "59F07093BF56FFC2"
  components {
-  MeshObject "{59A71C4B89B195A5}" {
-   Object "{6399C4DB701BF230}Assets/Resources/Mining/MetalOre.xob"
+  MeshObject "{59F0709385A10D16}" {
    Materials {
-    MaterialAssignClass "{59A71C4BA45231D4}" {
+    MaterialAssignClass "{59F07093FF1469CC}" {
      SourceMaterial "Material"
      AssignedMaterial "{C20061C6145643B8}Assets/Resources/Mining/Data/Copper.emat"
     }
    }
   }
-  RigidBody "{59A71C4B89B1959D}" {
-   LayerPreset "RockFireView"
-   Mass 1000
-   AngularSleepingThreashold 1
-   ModelGeometry 1
-   Static 1
-  }
-  RplComponent "{59A71C4B89B19568}" {
-  }
-  Hierarchy "{59E8E156C639180F}" {
-  }
-  ActionsManagerComponent "{59E8E156D5F6206A}" {
-   ActionContexts {
-    UserActionContext "{59E8E156D4A6887A}" {
-     ContextName "default"
-     Position PointInfo "{59E8E156EB62F77E}" {
-     }
-    }
-   }
+  ActionsManagerComponent "{59F0709385A13EF5}" {
    additionalActions {
-    EL_GatherAction "{59E8E156EC66301E}" {
-     Duration 1
+    EL_GatherAction "{59F0709385A13EF4}" {
      m_GatherItemDisplayName "Copper Ore"
      m_GatherItemPrefab "{1881C4F2BD43E3E1}Prefabs/Resources/Mining/CopperNugget.et"
-     m_bDeleteAfterGather 1
     }
    }
   }
  }
- coords 106.953 0.513 132.615
+ coords 116.796 0.001 143.459
 }
