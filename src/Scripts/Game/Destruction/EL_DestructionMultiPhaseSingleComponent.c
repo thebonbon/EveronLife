@@ -16,23 +16,15 @@ class EL_DestructionMultiPhaseSingleComponent : SCR_DestructionMultiPhaseCompone
 	override void ApplyDamagePhaseData(SCR_DamagePhaseData pDamagePhaseData)
 	{
 		//--- Remap textures of the current mesh
+		ResourceName modelPath;
+		string remap;
+		ResourceName name = SCR_BaseContainerTools.GetPrefabResourceName(GetOwner().GetPrefabData().GetPrefab());
+		SCR_Global.GetModelAndRemapFromResource(name, modelPath, remap);
 		
+		super.ApplyDamagePhaseData(pDamagePhaseData);
 		VObject mesh = GetOwner().GetVObject();
-		if (mesh)
-		{
-			string remap;
-			string materials[256];
-			int numMats = mesh.GetMaterials(materials);
-			
-			super.ApplyDamagePhaseData(pDamagePhaseData);
-			
-			for (int i = 0; i < numMats; i++)
-			{
-				Print(materials[i]);
-				//remap += string.Format("$remap '%1' '%2';", materials[i], material);
-			}
-			GetOwner().SetObject(mesh, remap);
-		}
+		GetOwner().SetObject(mesh, remap);
+		
 	}
 #endif
 };

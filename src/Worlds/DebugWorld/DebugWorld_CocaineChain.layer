@@ -161,7 +161,7 @@ $grp GenericEntity : "{B854F08E28254CB8}Prefabs/Items/Drugs/Cocaine.et" {
 GenericEntity : "{D06287F32CEE1EE2}Prefabs/Items/Resources/Diesel_jerrycan.et" {
  coords 105.04 0.9 143.347
 }
-GenericEntity : "{D58674633332DC86}Prefabs/Items/Resources/CementBag.et" {
+GenericEntity CementBag_5A4E9B16234E2221 : "{D58674633332DC86}Prefabs/Items/Resources/CementBag.et" {
  coords 105.788 0.872 143.484
  angleY -90.472
 }

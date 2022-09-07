@@ -5,33 +5,33 @@ $grp GenericEntity {
  {
   coords 134.602 0.052 130.083
  }
+ {
+  coords 135.144 0.001 129.913
+ }
 }
-GenericEntity : "{34965F822792E88D}Prefabs/Items/Resources/DriedHayBag.et" {
- coords 135.144 0.001 129.913
-}
-GenericEntity : "{36445C0F0BEE2DE8}Prefabs/Items/Resources/FreshHayBag.et" {
+GenericEntity FreshHayBag_5A4E9B16234DBFDF : "{36445C0F0BEE2DE8}Prefabs/Items/Resources/FreshHayBag.et" {
  coords 134.801 0.002 133.797
 }
 GenericEntity : "{4D1BCE25DEFC8AA6}Prefabs/Processor/Hay_Processor.et" {
  coords 137.196 0.004 130.027
 }
 $grp GenericEntity : "{5A87BE461FCE3006}Prefabs/Items/Resources/HayBale.et" {
- {
+ HayBale_5A4E9B16234DBE1C {
   coords 135.676 0.001 127.28
  }
- {
+ HayBale_5A4E9B16234DBE5B {
   coords 136.435 0.001 127.32
  }
- {
+ HayBale_5A4E9B16234DBEAF {
   coords 137.327 0.003 127.334
  }
- {
+ HayBale_5A4E9B16234DBE85 {
   coords 138.091 0.004 127.375
  }
- {
+ HayBale_5A4E9B16234DBEE0 {
   coords 138.908 0.001 127.375
  }
- {
+ HayBale_5A4E9B16234DB93A {
   coords 141.428 0.001 134.735
  }
 }

@@ -56,28 +56,28 @@ GenericEntity : "{622F9989DDC4865B}PrefabLibrary/Props/Civilian/Recreation/Table
  }
 }
 $grp GenericEntity : "{FDEE11D818A4C675}Prefabs/Items/Money/DollarBill.et" {
- {
+ DollarBill_5A4E9B16234DBD14 {
   coords 96.165 0.901 135.439
  }
- {
+ DollarBill_5A4E9B16234DBD5F {
   coords 96.165 0.901 135.439
  }
- {
+ DollarBill_5A4E9B16234DBDB6 {
   coords 104.833 0.003 149.962
  }
- {
+ DollarBill_5A4E9B16234DBD8D {
   coords 104.833 0.003 149.962
  }
- {
+ DollarBill_5A4E9B16234DBDE8 {
   coords 104.833 0.003 149.962
  }
- {
+ DollarBill_5A4E9B16234DBC17 {
   coords 104.833 0.003 149.962
  }
- {
+ DollarBill_5A4E9B16234DBC73 {
   coords 104.833 0.003 149.962
  }
- {
+ DollarBill_5A4E9B16234DBC4F {
   coords 104.833 0.003 149.962
  }
 }

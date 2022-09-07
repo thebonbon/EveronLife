@@ -1,6 +1,52 @@
 GenericEntity {
  ID "59F07093BF56FFC2"
  components {
+  EL_DestructionMultiPhaseSingleComponent "{5A4E91862DCCD788}" {
+   "Additional hit zones" {
+    HitZone UTM_MetalOre {
+     ColliderNames {
+     }
+    }
+   }
+   "Fall damage min height" 5
+   "Fall damage max height" 10
+   CollisionVelocityThreshold 5
+   "Heavy damage threshold" 70
+   m_aDamagePhases {
+    SCR_DamagePhaseData "{5A4EAC801344D8C5}" {
+     m_PhaseModel "{6399C4DB701BF230}Assets/Resources/Mining/MetalOre.xob"
+     m_PhaseDestroySpawnObjects {
+      SCR_ParticleSpawnable "{5A4EAC8028F0BFE4}" {
+       m_vOffsetPosition 0 1 0
+       m_Particle "{4D770DEE0A5ABFED}VFX/Gather/IronOre.ptc"
+      }
+     }
+    }
+    SCR_DamagePhaseData "{5A4E91862FD91E7D}" {
+     m_fPhaseHealth 66
+     m_PhaseModel "{AEC8C40633FFE48E}Assets/Resources/Mining/ore_2.xob"
+     m_PhaseDestroySpawnObjects {
+      SCR_ParticleSpawnable "{5A4EAC81E1A480A8}" {
+       m_vOffsetPosition 0 0.5 0
+       m_Particle "{4D770DEE0A5ABFED}VFX/Gather/IronOre.ptc"
+       m_bAtCenter 0
+      }
+     }
+    }
+    SCR_DamagePhaseData "{5A4E9186265D5D98}" {
+     m_fPhaseHealth 33
+     m_PhaseModel "{D9C2AC8EC75D0BFE}Assets/Resources/Mining/ore_3.xob"
+     m_PhaseDestroySpawnObjects {
+      SCR_ParticleSpawnable "{5A4EAC800BFB59B6}" {
+       m_vOffsetPosition 0 0.25 0
+       m_Particle "{4D770DEE0A5ABFED}VFX/Gather/IronOre.ptc"
+       m_bAtCenter 0
+      }
+     }
+    }
+   }
+   m_eMaterialSoundType ROCK
+  }
   MeshObject "{59F0709385A10D16}" {
    Object "{6399C4DB701BF230}Assets/Resources/Mining/MetalOre.xob"
   }
@@ -11,28 +57,7 @@ GenericEntity {
    Mass 1000
    AngularSleepingThreashold 1
    ModelGeometry 1
-  }
-  ActionsManagerComponent "{59F0709385A13EF5}" {
-   ActionContexts {
-    UserActionContext "{59F0709385A13EE2}" {
-     ContextName "default"
-     Position PointInfo "{59F0709385A10D55}" {
-     }
-     Radius 1
-    }
-   }
-   additionalActions {
-    EL_GatherAction "{59F0709385A13EF4}" {
-     ParentContextList {
-      "default"
-     }
-     Duration 1
-     m_bDeleteAfterGather 1
-     m_bSpawnVFXAfterGather 1
-     m_vfxPrefab "{F3279D744368E450}Prefabs/Resources/Mining/GatherVFX.et"
-     m_vfxOffset 0 0.1 0
-    }
-   }
+   Static 1
   }
   RplComponent "{59F0709385A13E0D}" {
   }

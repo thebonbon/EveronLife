@@ -12,22 +12,22 @@ Tree : "{04592C849978A51C}Prefabs/Vegetation/Tree/t_sorbus_aucuparia_2f.et" {
  coords 118.522 0.001 134.994
 }
 $grp GenericEntity : "{73CF2BF72525F5D5}Prefabs/Items/Food/RowanBerries.et" {
- {
+ RowanBerries_5A4E9B16234DBC8E {
   coords 114.498 0.898 135.417
  }
- {
+ RowanBerries_5A4E9B16234DBCE2 {
   coords 114.407 0.898 135.416
  }
- {
+ RowanBerries_5A4E9B16234DBF1A {
   coords 114.303 0.898 135.413
  }
- {
+ RowanBerries_5A4E9B16234DBF70 {
   coords 114.487 0.898 135.254
  }
- {
+ RowanBerries_5A4E9B16234DBF49 {
   coords 114.386 0.898 135.254
  }
- {
+ RowanBerries_5A4E9B16234DBFA4 {
   coords 114.29 0.898 135.255
  }
 }

@@ -30,6 +30,6 @@ $grp GenericEntity : "{18982CB5D0D29247}Prefabs/Props/Civilian/BeerBottle_01_emp
   coords 130.381 0.004 134.444
  }
 }
-GenericEntity : "{ADFEF306D1C22E5F}Prefabs/Items/Resources/Sandbag.et" {
+GenericEntity Sandbag_5A4E9B16234DB95A : "{ADFEF306D1C22E5F}Prefabs/Items/Resources/Sandbag.et" {
  coords 130.6 0.001 134.85
 }

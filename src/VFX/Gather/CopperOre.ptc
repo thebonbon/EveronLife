@@ -1,0 +1,25 @@
+EffectDef {
+ Emitters {
+  EmitterDef Emitter_01 {
+   ShapeType Sphere
+   ShapeSize 2 0 2
+   ConeAngle 360 0 0
+   ConeAngleRndRange 135.529
+   MaxNum 5
+   BirthRate 100
+   Angles 180 0 0
+   ParticleType Prefab
+   Material "{00735D641EBFC529}system/wbdata/ParticleEditor/defaultMaterial.emat"
+   Prefab "{1881C4F2BD43E3E1}Prefabs/Resources/Mining/CopperNugget.et"
+   SizeMultiplier 1
+   SizeRND 0
+   RandomAngle 1
+   VelocityRND 1
+   Restitution 0.001
+   Spring 0
+   Lifetime 15
+   EmittingTime 1
+   Repeat 0
+  }
+ }
+}

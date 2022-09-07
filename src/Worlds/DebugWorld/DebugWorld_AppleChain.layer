@@ -119,11 +119,11 @@ GenericEntity AppleTrader {
       }
       m_fMaxWeight 1000
       m_TradablePrefabs {
-       "{1DBD99E6347DE1AD}Prefabs/Items/Drinks/Apple_Juice.et"
+       "{1DBD99E6347DE1AD}Prefabs/Items/Drinks/AppleJuice.et"
       }
      }
      EL_TraderManagerComponent "{59693C53B6A5EFC0}" {
-      m_ItemToReceive "{1DBD99E6347DE1AD}Prefabs/Items/Drinks/Apple_Juice.et"
+      m_ItemToReceive "{1DBD99E6347DE1AD}Prefabs/Items/Drinks/AppleJuice.et"
       m_ItemToGive "{9C05543A503DB80E}Prefabs/Weapons/Magazines/Magazine_9x19_M9_15rnd_Ball.et"
      }
      MeshObject "{59670CE9C98E5BAF}" {
@@ -205,10 +205,10 @@ GenericEntity AppleTrader {
   }
  }
 }
-GenericEntity : "{06B68C58B72EAAC6}Prefabs/Items/Equipment/Backpacks/Backpack_ALICE_Medium.et" {
+GenericEntity Backpack_ALICE_Medium_5A4E9B16234DB511 : "{06B68C58B72EAAC6}Prefabs/Items/Equipment/Backpacks/Backpack_ALICE_Medium.et" {
  coords 115.275 0.001 141.161
 }
-GenericEntity : "{1353C6EAD1DCFE43}Prefabs/Weapons/Handguns/M9/Handgun_M9.et" {
+GenericEntity Handgun_M9_5A4E9B16234DB5A9 : "{1353C6EAD1DCFE43}Prefabs/Weapons/Handguns/M9/Handgun_M9.et" {
  coords 109.05 0.001 140.662
  angleZ 0
 }
@@ -226,9 +226,4 @@ Tree AppleGatherTree : "{1C6F9AD2669C17F9}Prefabs/Vegetation/Tree/t_malus_domest
 }
 GenericEntity AppleProcessor : "{1DD3BF6A1A249CDE}Prefabs/Processor/Apple_Processor.et" {
  coords 108.516 0.899 135.363
-}
-SCR_ParticleEmitter : "{F3279D744368E450}Prefabs/Resources/Mining/GatherVFX.et" {
- coords 112.287 0.001 141.649
- m_PlayOnSpawn 1
- m_PlayInEditor 0
 }
