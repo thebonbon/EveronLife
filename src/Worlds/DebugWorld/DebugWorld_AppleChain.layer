@@ -205,6 +205,13 @@ GenericEntity AppleTrader {
   }
  }
 }
+GenericEntity : "{06B68C58B72EAAC6}Prefabs/Items/Equipment/Backpacks/Backpack_ALICE_Medium.et" {
+ coords 115.275 0.001 141.161
+}
+GenericEntity : "{1353C6EAD1DCFE43}Prefabs/Weapons/Handguns/M9/Handgun_M9.et" {
+ coords 109.05 0.001 140.662
+ angleZ 0
+}
 Tree AppleGatherTree : "{1C6F9AD2669C17F9}Prefabs/Vegetation/Tree/t_malus_domestica_2s.et" {
  components {
   ActionsManagerComponent "{596540948BBDD481}" {
@@ -219,4 +226,9 @@ Tree AppleGatherTree : "{1C6F9AD2669C17F9}Prefabs/Vegetation/Tree/t_malus_domest
 }
 GenericEntity AppleProcessor : "{1DD3BF6A1A249CDE}Prefabs/Processor/Apple_Processor.et" {
  coords 108.516 0.899 135.363
+}
+SCR_ParticleEmitter : "{F3279D744368E450}Prefabs/Resources/Mining/GatherVFX.et" {
+ coords 112.287 0.001 141.649
+ m_PlayOnSpawn 1
+ m_PlayInEditor 0
 }

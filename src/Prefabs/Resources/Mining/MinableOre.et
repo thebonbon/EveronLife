@@ -28,6 +28,9 @@ GenericEntity {
      }
      Duration 1
      m_bDeleteAfterGather 1
+     m_bSpawnVFXAfterGather 1
+     m_vfxPrefab "{F3279D744368E450}Prefabs/Resources/Mining/GatherVFX.et"
+     m_vfxOffset 0 0.1 0
     }
    }
   }

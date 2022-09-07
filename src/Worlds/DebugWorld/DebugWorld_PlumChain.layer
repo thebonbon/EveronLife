@@ -142,6 +142,14 @@ GenericEntity : "{9E6BB1D7AA5D0FEB}Prefabs/Props/Furniture/Stove_01.et" {
  coords 117.076 0.001 134.816
 }
 Tree PlumGatherTree : "{CEFEBF266E7040A9}Prefabs/Vegetation/Tree/t_prunus_domestica_2s.et" {
+ components {
+  SCR_HitZoneContainerComponent "{5A153CB22426621C}" {
+   "Additional hit zones" {
+    ScriptedHitZone kkk {
+    }
+   }
+  }
+ }
  coords 113.025 0.003 134.831
  angleY -31.425
 }

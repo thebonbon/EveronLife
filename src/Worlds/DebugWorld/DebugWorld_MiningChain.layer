@@ -1,11 +1,96 @@
+$grp GenericEntity {
+ {
+  components {
+   MeshObject "{5A4E84B3CA62F458}" {
+    Object "{AEC8C40633FFE48E}Assets/Resources/Mining/ore_2.xob"
+    Materials {
+     MaterialAssignClass "{5A4E9183AA0B64FF}" {
+      SourceMaterial "Material"
+      AssignedMaterial "{29473C87C35726A4}Assets/Resources/Mining/Data/Iron.emat"
+     }
+    }
+   }
+  }
+  coords 112.701 0.208 142.54
+  scale 0.66
+ }
+ {
+  components {
+   MeshObject "{5A4E84B3C30687C5}" {
+    Object "{6399C4DB701BF230}Assets/Resources/Mining/MetalOre.xob"
+   }
+  }
+  coords 113.162 0.001 145.921
+ }
+ {
+  components {
+   MeshObject "{5A4E91836B390645}" {
+    Object "{D9C2AC8EC75D0BFE}Assets/Resources/Mining/ore_3.xob"
+    Materials {
+     MaterialAssignClass "{5A4E91836DD74E42}" {
+      SourceMaterial "Material"
+      AssignedMaterial "{29473C87C35726A4}Assets/Resources/Mining/Data/Iron.emat"
+     }
+    }
+   }
+  }
+  coords 112.77 0.161 141.675
+ }
+}
 GenericEntity : "{1881C4F2BD43E3E1}Prefabs/Resources/Mining/CopperNugget.et" {
  coords 110.206 0.88 143.377
 }
 GenericEntity : "{2C571D6F7C05E095}Prefabs/Resources/Mining/IronOre.et" {
- coords 112.508 0 143.546
+ components {
+  RigidBody "{59F0709385A10D79}" {
+   Static 1
+  }
+  SCR_DestructionMultiPhaseComponent "{5A4E84B015DAE67B}" {
+   Enabled 0
+   m_aDamagePhases {
+    SCR_DamagePhaseData "{5A4E84B02BADFE2C}" {
+     m_fPhaseHealth 66
+     m_PhaseModel "{AEC8C40633FFE48E}Assets/Resources/Mining/ore_2.xob"
+     m_PhaseDestroySpawnObjects {
+      SCR_ParticleSpawnable "{5A4E84B3E590D2FF}" {
+       m_vOffsetPosition 0 1.5 0
+       m_Particle "{4D770DEE0A5ABFED}VFX/Gather/Ore.ptc"
+      }
+     }
+    }
+    SCR_DamagePhaseData "{5A4E84B04E7E00BE}" {
+     m_fPhaseHealth 33
+     m_PhaseModel "{D9C2AC8EC75D0BFE}Assets/Resources/Mining/ore_3.xob"
+    }
+   }
+  }
+ }
+ coords 112.509 0.298 143.542
 }
 GenericEntity : "{3C4F54AD0CB24525}Prefabs/Resources/Mining/GoldOre.et" {
- coords 114.619 0 143.603
+ components {
+  EL_DestructionMultiPhaseSingleComponent "{5A4E91862DCCD788}" {
+   "Fall damage min height" 5
+   "Fall damage max height" 10
+   CollisionVelocityThreshold 5
+   "Heavy damage threshold" 70
+   m_aDamagePhases {
+    SCR_DamagePhaseData "{5A4E91862FD91E7D}" {
+     m_fPhaseHealth 66
+     m_PhaseModel "{AEC8C40633FFE48E}Assets/Resources/Mining/ore_2.xob"
+    }
+    SCR_DamagePhaseData "{5A4E9186265D5D98}" {
+     m_fPhaseHealth 33
+     m_PhaseModel "{D9C2AC8EC75D0BFE}Assets/Resources/Mining/ore_3.xob"
+    }
+   }
+   m_eMaterialSoundType ROCK
+  }
+  RigidBody "{59F0709385A10D79}" {
+   Static 1
+  }
+ }
+ coords 115.734 0.874 145.028
 }
 EL_MiningArea : "{530D05E39B25A8C8}Prefabs/Resources/Mining/MiningArea.et" {
  coords 100.506 0.001 157.28
@@ -42,5 +127,24 @@ GenericEntity : "{BCD1E8CD7F975074}Prefabs/Resources/Mining/IronBar.et" {
  coords 110.613 0.879 143.678
 }
 GenericEntity : "{C7FC93FD15F0574C}Prefabs/Resources/Mining/CopperOre.et" {
- coords 116.796 0 143.459
+ components {
+  RigidBody "{59F0709385A10D79}" {
+   Static 1
+  }
+  SCR_DestructionFractalComponent "{5A4E918189310C76}" {
+   m_ParticleDestroyFragment "{4D770DEE0A5ABFED}VFX/Gather/Ore.ptc"
+   m_DebrisDestroyFragment SCR_FragmentDebris "{5A4E91818DB75AB3}" {
+   }
+   m_FractalVariants {
+    SCR_FractalVariation "{5A4E91819F580A0D}" {
+     m_ModelNormal "{D9C2AC8EC75D0BFE}Assets/Resources/Mining/ore_3.xob"
+     m_ModelDestroyed "{D9C2AC8EC75D0BFE}Assets/Resources/Mining/ore_3.xob"
+     m_aModelFragments {
+      "{6E7678CE6CD95DFD}Assets/Resources/Mining/MetalNugget.xob"
+     }
+    }
+   }
+  }
+ }
+ coords 117.142 0.53 142.84
 }

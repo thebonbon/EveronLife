@@ -1,0 +1,808 @@
+GenericEntity {
+ ID "5A14667015983ECB"
+ coords 114.27 0.001 147.051
+ {
+  $grp GenericEntity {
+   {
+    ID "5A1466701590521C"
+    components {
+     MeshObject "{5A146671EB447130}" {
+      Object "{DC5A5024CDC9EE59}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_039.xob"
+     }
+    }
+   }
+   {
+    ID "5A1466701590521D"
+    components {
+     MeshObject "{5A146671EB447155}" {
+      Object "{9DCA4BC814845576}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_040.xob"
+     }
+    }
+   }
+   {
+    ID "5A14667015909A12"
+    components {
+     MeshObject "{5A146671EB44730B}" {
+      Object "{031308006FE5DE25}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_044.xob"
+     }
+    }
+   }
+   {
+    ID "5A14667015909A15"
+    components {
+     MeshObject "{5A146671EB4473AF}" {
+      Object "{741960889B473155}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_045.xob"
+     }
+    }
+   }
+   {
+    ID "5A1466701590A182"
+    components {
+     MeshObject "{5A146671EB4470EF}" {
+      Object "{04D4F251096364E6}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_043.xob"
+     }
+    }
+   }
+   {
+    ID "5A1466701590ACF5"
+    components {
+     MeshObject "{5A146671EB44705E}" {
+      Object "{73DE9AD9FDC18B96}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_042.xob"
+     }
+    }
+   }
+   {
+    ID "5A1466701590BAA5"
+    components {
+     MeshObject "{5A146671EB4471C8}" {
+      Object "{EAC02340E026BA06}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_041.xob"
+     }
+    }
+   }
+   {
+    ID "5A1466701590EA20"
+    components {
+     MeshObject "{5A146671EB4473C2}" {
+      Object "{ED07D91186A000C5}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_046.xob"
+     }
+    }
+   }
+   {
+    ID "5A14667015912DEF"
+    components {
+     MeshObject "{5A146671EB447264}" {
+      Object "{9A0DB1997202EFB5}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_047.xob"
+     }
+    }
+   }
+   {
+    ID "5A1466701591590F"
+    components {
+     MeshObject "{5A146671EB447288}" {
+      Object "{E2882DB34BAD7543}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_048.xob"
+     }
+    }
+   }
+   {
+    ID "5A14667015918330"
+    components {
+     MeshObject "{5A146671EB447D2D}" {
+      Object "{9582453BBF0F9A33}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_049.xob"
+     }
+    }
+   }
+   {
+    ID "5A14667015918331"
+    components {
+     MeshObject "{5A146671EB447D52}" {
+      Object "{69C20C5019593D02}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_050.xob"
+     }
+    }
+   }
+   {
+    ID "5A1466701591DBBD"
+    components {
+     MeshObject "{5A146671EB447DEE}" {
+      Object "{1EC864D8EDFBD272}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_051.xob"
+     }
+    }
+   }
+   {
+    ID "5A146670159251D0"
+    components {
+     MeshObject "{5A146671EB447CC5}" {
+      Object "{F71B4F986238B651}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_054.xob"
+     }
+    }
+   }
+   {
+    ID "5A146670159251D3"
+    components {
+     MeshObject "{5A146671EB447CAF}" {
+      Object "{F0DCB5C904BE0C92}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_053.xob"
+     }
+    }
+   }
+   {
+    ID "5A146670159266B2"
+    components {
+     MeshObject "{5A146671EB447C13}" {
+      Object "{87D6DD41F01CE3E2}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_052.xob"
+     }
+    }
+   }
+   {
+    ID "5A1466701592AF36"
+    components {
+     MeshObject "{5A146671EB447F93}" {
+      Object "{190F9E898B7D68B1}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_056.xob"
+     }
+    }
+   }
+   {
+    ID "5A1466701592BD54"
+    components {
+     MeshObject "{5A146671EB447F6E}" {
+      Object "{80112710969A5921}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_055.xob"
+     }
+    }
+   }
+   {
+    ID "5A14667015933A6F"
+    components {
+     MeshObject "{5A146671EB447E2C}" {
+      Object "{6E05F6017FDF87C1}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_057.xob"
+     }
+    }
+   }
+   {
+    ID "5A1466701593533C"
+    components {
+     MeshObject "{5A146671EB447E50}" {
+      Object "{16806A2B46701D37}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_058.xob"
+     }
+    }
+   }
+   {
+    ID "5A1466701593533D"
+    components {
+     MeshObject "{5A146671EB447EF1}" {
+      Object "{618A02A3B2D2F247}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_059.xob"
+     }
+    }
+   }
+   {
+    ID "5A1466701593E0B1"
+    components {
+     MeshObject "{5A146671EB44791E}" {
+      Object "{372A2513A6D4B30D}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_060.xob"
+     }
+    }
+   }
+   {
+    ID "5A14667015940882"
+    components {
+     MeshObject "{5A146671EB44690C}" {
+      Object "{571071C79F3DA618}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_021.xob"
+     }
+    }
+   }
+   {
+    ID "5A14667015940883"
+    components {
+     MeshObject "{5A146671EB4469B3}" {
+      Object "{CE0EC85E82DA9788}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_022.xob"
+     }
+    }
+   }
+   {
+    ID "5A14667015944FCD"
+    components {
+     MeshObject "{5A146671EB446B0E}" {
+      Object "{B904A0D6767878F8}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_023.xob"
+     }
+    }
+   }
+   {
+    ID "5A1466701594AA9C"
+    components {
+     MeshObject "{5A146671EB446BAC}" {
+      Object "{BEC35A8710FEC23B}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_024.xob"
+     }
+    }
+   }
+   {
+    ID "5A1466701594D8D0"
+    components {
+     MeshObject "{5A146671EB446BD4}" {
+      Object "{C9C9320FE45C2D4B}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_025.xob"
+     }
+    }
+   }
+   {
+    ID "5A14667015957A0B"
+    components {
+     MeshObject "{5A146671EB446A6E}" {
+      Object "{50D78B96F9BB1CDB}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_026.xob"
+     }
+    }
+   }
+   {
+    ID "5A14667015957DF4"
+    components {
+     MeshObject "{5A146671EB446A8E}" {
+      Object "{27DDE31E0D19F3AB}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_027.xob"
+     }
+    }
+   }
+   {
+    ID "5A1466701595A2A6"
+    components {
+     MeshObject "{5A146671EB447534}" {
+      Object "{5F587F3434B6695D}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_028.xob"
+     }
+    }
+   }
+   {
+    ID "5A1466701595DF74"
+    components {
+     MeshObject "{5A146671EB447557}" {
+      Object "{285217BCC014862D}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_029.xob"
+     }
+    }
+   }
+   {
+    ID "5A146670159624F2"
+    components {
+     MeshObject "{5A146671EB447411}" {
+      Object "{A318365F92E0CE6C}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_031.xob"
+     }
+    }
+   }
+   {
+    ID "5A146670159624F3"
+    components {
+     MeshObject "{5A146671EB4475FA}" {
+      Object "{D4125ED76642211C}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_030.xob"
+     }
+    }
+   }
+   {
+    ID "5A14667015966940"
+    components {
+     MeshObject "{5A146671EB4474B4}" {
+      Object "{3A068FC68F07FFFC}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_032.xob"
+     }
+    }
+   }
+   {
+    ID "5A14667015968AA9"
+    components {
+     MeshObject "{5A146671EB4474E2}" {
+      Object "{4D0CE74E7BA5108C}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_033.xob"
+     }
+    }
+   }
+   {
+    ID "5A1466701596D3A3"
+    components {
+     MeshObject "{5A146671EB44770B}" {
+      Object "{4ACB1D1F1D23AA4F}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_034.xob"
+     }
+    }
+   }
+   {
+    ID "5A14667015970EF8"
+    components {
+     MeshObject "{5A146671EB4477D3}" {
+      Object "{A4DFCC0EF46674AF}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_036.xob"
+     }
+    }
+   }
+   {
+    ID "5A14667015970EFB"
+    components {
+     MeshObject "{5A146671EB4477AF}" {
+      Object "{3DC17597E981453F}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_035.xob"
+     }
+    }
+   }
+   {
+    ID "5A14667015978EE1"
+    components {
+     MeshObject "{5A146671EB44766C}" {
+      Object "{D3D5A48600C49BDF}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_037.xob"
+     }
+    }
+   }
+   {
+    ID "5A1466701597C14A"
+    components {
+     MeshObject "{5A146671EB447692}" {
+      Object "{AB5038AC396B0129}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_038.xob"
+     }
+    }
+   }
+   {
+    ID "5A14667015981771"
+    components {
+     MeshObject "{5A146671EB446131}" {
+      Object "{FDF01F1C2D6D4063}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_001.xob"
+     }
+    }
+   }
+   {
+    ID "5A14667015981772"
+    components {
+     MeshObject "{5A146671EB4461BD}" {
+      Object "{64EEA685308A71F3}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_002.xob"
+     }
+    }
+   }
+   {
+    ID "5A1466701598177E"
+    components {
+     MeshObject "{5A146671EB44676D}" {
+      Object "{6380737E2D5C4E5A}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell.xob"
+     }
+    }
+   }
+   {
+    ID "5A14667015984253"
+    components {
+     MeshObject "{5A146671EB4461DB}" {
+      Object "{13E4CE0DC4289E83}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_003.xob"
+     }
+    }
+   }
+   {
+    ID "5A1466701598F868"
+    components {
+     MeshObject "{5A146671EB44608E}" {
+      Object "{63295CD4560CCB30}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_005.xob"
+     }
+    }
+   }
+   {
+    ID "5A1466701598F869"
+    components {
+     MeshObject "{5A146671EB446067}" {
+      Object "{1423345CA2AE2440}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_004.xob"
+     }
+    }
+   }
+   {
+    ID "5A146670159932C9"
+    components {
+     MeshObject "{5A146671EB446330}" {
+      Object "{FA37E54D4BEBFAA0}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_006.xob"
+     }
+    }
+   }
+   {
+    ID "5A14667015993549"
+    components {
+     MeshObject "{5A146671EB446354}" {
+      Object "{8D3D8DC5BF4915D0}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_007.xob"
+     }
+    }
+   }
+   {
+    ID "5A146670159945CC"
+    components {
+     MeshObject "{5A146671EB4462AC}" {
+      Object "{7EF2300CD412C767}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_010.xob"
+     }
+    }
+   }
+   {
+    ID "5A14667015995BF9"
+    components {
+     MeshObject "{5A146671EB446216}" {
+      Object "{82B2796772446056}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_009.xob"
+     }
+    }
+   }
+   {
+    ID "5A14667015995BFE"
+    components {
+     MeshObject "{5A146671EB4463F7}" {
+      Object "{F5B811EF86E68F26}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_008.xob"
+     }
+    }
+   }
+   {
+    ID "5A1466701599D733"
+    components {
+     MeshObject "{5A146671EB4462D5}" {
+      Object "{09F8588420B02817}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_011.xob"
+     }
+    }
+   }
+   {
+    ID "5A146670159A0E11"
+    components {
+     MeshObject "{5A146671EB446DCE}" {
+      Object "{E02B73C4AF734C34}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_014.xob"
+     }
+    }
+   }
+   {
+    ID "5A146670159A16B0"
+    components {
+     MeshObject "{5A146671EB446DAC}" {
+      Object "{E7EC8995C9F5F6F7}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_013.xob"
+     }
+    }
+   }
+   {
+    ID "5A146670159A16B1"
+    components {
+     MeshObject "{5A146671EB446D0A}" {
+      Object "{90E6E11D3D571987}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_012.xob"
+     }
+    }
+   }
+   {
+    ID "5A146670159A6D66"
+    components {
+     MeshObject "{5A146671EB446C5E}" {
+      Object "{97211B4C5BD1A344}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_015.xob"
+     }
+    }
+   }
+   {
+    ID "5A146670159A9B50"
+    components {
+     MeshObject "{5A146671EB446F6A}" {
+      Object "{0E3FA2D5463692D4}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_016.xob"
+     }
+    }
+   }
+   {
+    ID "5A146670159B2AF4"
+    components {
+     MeshObject "{5A146671EB446E1F}" {
+      Object "{01B056778B3BE752}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_018.xob"
+     }
+    }
+   }
+   {
+    ID "5A146670159B2AF7"
+    components {
+     MeshObject "{5A146671EB446F80}" {
+      Object "{7935CA5DB2947DA4}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_017.xob"
+     }
+    }
+   }
+   {
+    ID "5A146670159BBA65"
+    components {
+     MeshObject "{5A146671EB446E41}" {
+      Object "{76BA3EFF7F990822}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_019.xob"
+     }
+    }
+   }
+   {
+    ID "5A146670159BF2FA"
+    components {
+     MeshObject "{5A146671EB446EE7}" {
+      Object "{201A194F6B9F4968}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_020.xob"
+     }
+    }
+   }
+   {
+    ID "5A14667015A819CC"
+    components {
+     MeshObject "{5A146671EB4481B3}" {
+      Object "{3D84B6B45EBF6A49}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_083.xob"
+     }
+    }
+   }
+   {
+    ID "5A14667015A8574B"
+    components {
+     MeshObject "{5A146671EB4480FE}" {
+      Object "{4D49246DCC9B3FFA}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_085.xob"
+     }
+    }
+   }
+   {
+    ID "5A14667015A860C1"
+    components {
+     MeshObject "{5A146671EB4481C1}" {
+      Object "{3A434CE53839D08A}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_084.xob"
+     }
+    }
+   }
+   {
+    ID "5A14667015A8C01B"
+    components {
+     MeshObject "{5A146671EB4483F8}" {
+      Object "{DBD869561C717BEC}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_088.xob"
+     }
+    }
+   }
+   {
+    ID "5A14667015A8EF5C"
+    components {
+     MeshObject "{5A146671EB44834C}" {
+      Object "{A35DF57C25DEE11A}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_087.xob"
+     }
+    }
+   }
+   {
+    ID "5A14667015A8EF5D"
+    components {
+     MeshObject "{5A146671EB448327}" {
+      Object "{D4579DF4D17C0E6A}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_086.xob"
+     }
+    }
+   }
+   {
+    ID "5A14667015A94F99"
+    components {
+     MeshObject "{5A146671EB448226}" {
+      Object "{ACD201DEE8D3949C}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_089.xob"
+     }
+    }
+   }
+   {
+    ID "5A14667015A99C95"
+    components {
+     MeshObject "{5A146671EB448248}" {
+      Object "{509248B54E8533AD}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_090.xob"
+     }
+    }
+   }
+   {
+    ID "5A14667015A99C96"
+    components {
+     MeshObject "{5A146671EB4482DE}" {
+      Object "{2798203DBA27DCDD}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_091.xob"
+     }
+    }
+   }
+   {
+    ID "5A14667015AA20A3"
+    components {
+     MeshObject "{5A146671EB448D90}" {
+      Object "{C98CF12C5362023D}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_093.xob"
+     }
+    }
+   }
+   {
+    ID "5A14667015AA36A6"
+    components {
+     MeshObject "{5A146671EB448D03}" {
+      Object "{BE8699A4A7C0ED4D}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_092.xob"
+     }
+    }
+   }
+   {
+    ID "5A14667015AA4DB6"
+    components {
+     MeshObject "{5A146671EB448C3F}" {
+      Object "{CE4B0B7D35E4B8FE}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_094.xob"
+     }
+    }
+   }
+   {
+    ID "5A14667015AAB860"
+    components {
+     MeshObject "{5A146671EB448C60}" {
+      Object "{B94163F5C146578E}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_095.xob"
+     }
+    }
+   }
+   {
+    ID "5A14667015AAB861"
+    components {
+     MeshObject "{5A146671EB448C8A}" {
+      Object "{205FDA6CDCA1661E}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_096.xob"
+     }
+    }
+   }
+   {
+    ID "5A14667015AADFAC"
+    components {
+     MeshObject "{5A146671EB448F34}" {
+      Object "{5755B2E42803896E}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_097.xob"
+     }
+    }
+   }
+   {
+    ID "5A14667015AB03C4"
+    components {
+     MeshObject "{5A146671EB448F65}" {
+      Object "{2FD02ECE11AC1398}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_098.xob"
+     }
+    }
+   }
+   {
+    ID "5A14667015AB58F6"
+    components {
+     MeshObject "{5A146671EB448F8B}" {
+      Object "{58DA4646E50EFCE8}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_099.xob"
+     }
+    }
+   }
+   {
+    ID "5A14667015AC088C"
+    components {
+     MeshObject "{5A146671EB447940}" {
+      Object "{40204D9B52765C7D}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_061.xob"
+     }
+    }
+   }
+   {
+    ID "5A14667015AC9631"
+    components {
+     MeshObject "{5A146671EB44780D}" {
+      Object "{AE349C8ABB33829D}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_063.xob"
+     }
+    }
+   }
+   {
+    ID "5A14667015AC963E"
+    components {
+     MeshObject "{5A146671EB4479F1}" {
+      Object "{D93EF4024F916DED}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_062.xob"
+     }
+    }
+   }
+   {
+    ID "5A14667015AD21D2"
+    components {
+     MeshObject "{5A146671EB447889}" {
+      Object "{A9F366DBDDB5385E}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_064.xob"
+     }
+    }
+   }
+   {
+    ID "5A14667015AD9EDD"
+    components {
+     MeshObject "{5A146671EB447B56}" {
+      Object "{47E7B7CA34F0E6BE}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_066.xob"
+     }
+    }
+   }
+   {
+    ID "5A14667015ADBA9F"
+    components {
+     MeshObject "{5A146671EB447B2D}" {
+      Object "{DEF90E532917D72E}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_065.xob"
+     }
+    }
+   }
+   {
+    ID "5A14667015AE0D38"
+    components {
+     MeshObject "{5A146671EB447A43}" {
+      Object "{3F622BE00D5F7C48}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_069.xob"
+     }
+    }
+   }
+   {
+    ID "5A14667015AE310C"
+    components {
+     MeshObject "{5A146671EB447BF5}" {
+      Object "{30EDDF42C05209CE}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_067.xob"
+     }
+    }
+   }
+   {
+    ID "5A14667015AE310D"
+    components {
+     MeshObject "{5A146671EB447A1A}" {
+      Object "{48684368F9FD9338}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_068.xob"
+     }
+    }
+   }
+   {
+    ID "5A14667015AE4625"
+    components {
+     MeshObject "{5A146671EB448515}" {
+      Object "{B4280A035FAB3409}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_071.xob"
+     }
+    }
+   }
+   {
+    ID "5A14667015AE586E"
+    components {
+     MeshObject "{5A146671EB447AEB}" {
+      Object "{C322628BAB09DB79}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_070.xob"
+     }
+    }
+   }
+   {
+    ID "5A14667015AE993C"
+    components {
+     MeshObject "{5A146671EB4485BC}" {
+      Object "{2D36B39A424C0599}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_072.xob"
+     }
+    }
+   }
+   {
+    ID "5A14667015AE993F"
+    components {
+     MeshObject "{5A146671EB4485DD}" {
+      Object "{5A3CDB12B6EEEAE9}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_073.xob"
+     }
+    }
+   }
+   {
+    ID "5A14667015AECD19"
+    components {
+     MeshObject "{5A146671EB4484A3}" {
+      Object "{2AF149CB24CABF5A}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_075.xob"
+     }
+    }
+   }
+   {
+    ID "5A14667015AEE9C4"
+    components {
+     MeshObject "{5A146671EB448400}" {
+      Object "{5DFB2143D068502A}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_074.xob"
+     }
+    }
+   }
+   {
+    ID "5A14667015AF0BFA"
+    components {
+     MeshObject "{5A146671EB448763}" {
+      Object "{C4E598DACD8F61BA}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_077.xob"
+     }
+    }
+   }
+   {
+    ID "5A14667015AF0BFB"
+    components {
+     MeshObject "{5A146671EB44873D}" {
+      Object "{B3EFF052392D8ECA}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_076.xob"
+     }
+    }
+   }
+   {
+    ID "5A14667015AF5C17"
+    components {
+     MeshObject "{5A146671EB448781}" {
+      Object "{BC6004F0F420FB4C}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_078.xob"
+     }
+    }
+   }
+   {
+    ID "5A14667015AF8B3C"
+    components {
+     MeshObject "{5A146671EB448642}" {
+      Object "{A49A0F2D43585BD9}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_080.xob"
+     }
+    }
+   }
+   {
+    ID "5A14667015AFBF4F"
+    components {
+     MeshObject "{5A146671EB44861E}" {
+      Object "{CB6A6C780082143C}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_079.xob"
+     }
+    }
+   }
+   {
+    ID "5A14667015AFE439"
+    components {
+     MeshObject "{5A146671EB44810F}" {
+      Object "{4A8EDE3CAA1D8539}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_082.xob"
+     }
+    }
+   }
+   {
+    ID "5A14667015AFE43E"
+    components {
+     MeshObject "{5A146671EB4486E8}" {
+      Object "{D39067A5B7FAB4A9}Assets/Resources/Mining/MetalOreCell/MetalOre_LOD0_cell_081.xob"
+     }
+    }
+   }
+  }
+ }
+}

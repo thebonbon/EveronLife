@@ -1,0 +1,17 @@
+GenericEntity : "{2C571D6F7C05E095}Prefabs/Resources/Mining/IronOre.et" {
+ ID "59F07093BF56FFC2"
+ components {
+  MeshObject "{59F0709385A10D16}" {
+   Materials {
+    MaterialAssignClass "{59F07093D709B83D}" {
+     SourceMaterial "Material"
+     AssignedMaterial "{890FEAC13A34E2E2}Assets/Resources/Mining/Data/Stone.emat"
+    }
+   }
+  }
+  ActionsManagerComponent "{59F0709385A13EF5}" {
+   Enabled 0
+  }
+ }
+ coords 112.463 0 141.669
+}
