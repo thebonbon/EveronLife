@@ -7,10 +7,10 @@ $grp GenericEntity : "{1881C4F2BD43E3E1}Prefabs/Resources/Mining/CopperNugget.et
  }
 }
 GenericEntity : "{2C571D6F7C05E095}Prefabs/Resources/Mining/IronOre.et" {
- coords 112.509 0.298 143.542
+ coords 112.509 0 143.542
 }
 GenericEntity : "{3C4F54AD0CB24525}Prefabs/Resources/Mining/GoldOre.et" {
- coords 114.406 0.286 143.369
+ coords 114.406 0 143.369
 }
 EL_MiningArea : "{530D05E39B25A8C8}Prefabs/Resources/Mining/MiningArea.et" {
  coords 100.506 0.001 157.28
@@ -60,5 +60,5 @@ GenericEntity : "{C7FC93FD15F0574C}Prefabs/Resources/Mining/CopperOre.et" {
    }
   }
  }
- coords 116.425 0.236 143.187
+ coords 116.397 0 143.476
 }
