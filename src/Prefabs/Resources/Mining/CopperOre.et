@@ -2,14 +2,12 @@ GenericEntity : "{F36375B16DB07ABD}Prefabs/Resources/Mining/MinableOre.et" {
  ID "59F07093BF56FFC2"
  components {
   EL_DestructionMultiPhaseSingleComponent "{5A4E91862DCCD788}" {
-   m_aDamagePhases {
-    SCR_DamagePhaseData "{5A4EAC801344D8C5}" {
-     m_PhaseDestroySpawnObjects {
-      SCR_ParticleSpawnable "{5A4EAC8028F0BFE4}" {
-       m_Particle "{7D88FE34768DD1F7}VFX/Gather/CopperOre.ptc"
-      }
-     }
+   m_DestroySpawnObjects {
+    SCR_ParticleSpawnable "{5A6F15D68E85693F}" {
+     m_Particle "{7D88FE34768DD1F7}VFX/Gather/CopperOre.ptc"
     }
+   }
+   m_aDamagePhases {
     SCR_DamagePhaseData "{5A4E91862FD91E7D}" {
      m_PhaseDestroySpawnObjects {
       SCR_ParticleSpawnable "{5A4EAC81E1A480A8}" {

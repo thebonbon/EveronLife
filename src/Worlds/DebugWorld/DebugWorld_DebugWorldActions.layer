@@ -91,6 +91,12 @@ GenericEntity : "{9ABAFFCBC76D824B}Prefabs/Props/Civilian/NoticeBoardCork_01.et"
  coords 100.02 0.898 134.46
  {
   GenericEntity : "{83E6FF1C73E92AA3}Prefabs/Props/Civilian/NoticeBoardCork_01_posters.et" {
+   components {
+    RigidBody "{5872F0EB7DFB5A9D}" {
+     Enabled 0
+     ModelGeometry 0
+    }
+   }
   }
  }
 }

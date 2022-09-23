@@ -1,22 +1,20 @@
 EffectDef {
  Emitters {
   EmitterDef Emitter_01 {
-   ShapeType Sphere
-   ShapeSize 2 0 2
-   ConeAngle 360 0 0
-   ConeAngleRndRange 135.529
+   ShapeSize 0.5 0 0
+   ConeAngle 360 0 90
    MaxNum 5
    BirthRate 100
-   Angles 180 0 0
    ParticleType Prefab
    Material "{00735D641EBFC529}system/wbdata/ParticleEditor/defaultMaterial.emat"
    Prefab "{6853E2E2AE878611}Prefabs/Resources/Mining/IronNugget.et"
    SizeMultiplier 1
-   SizeRND 0
+   SizeRND 1
    RandomAngle 1
+   Velocity 2
    VelocityRND 1
-   Restitution 0.001
-   Spring 0
+   AirResistance 1
+   GravityMultiply 1
    Lifetime 15
    EmittingTime 1
    Repeat 0

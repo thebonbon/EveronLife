@@ -206,7 +206,7 @@ GenericEntity AppleTrader {
  }
 }
 GenericEntity Backpack_ALICE_Medium_5A4E9B16234DB511 : "{06B68C58B72EAAC6}Prefabs/Items/Equipment/Backpacks/Backpack_ALICE_Medium.et" {
- coords 115.275 0.001 141.161
+ coords 115.321 0.001 141.58
 }
 GenericEntity Handgun_M9_5A4E9B16234DB5A9 : "{1353C6EAD1DCFE43}Prefabs/Weapons/Handguns/M9/Handgun_M9.et" {
  coords 109.05 0.001 140.662

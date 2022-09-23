@@ -17,7 +17,7 @@ class EL_WeightedSpawn
 class EL_MiningArea : GenericEntity
 {
 	
-	[Attribute("10 10 10", desc: "Logging area size", category: "Mining Area")]
+	[Attribute("10 10 10", desc: "Area to spawn ores in", category: "Mining Area")]
 	private vector m_vSize;
 	
 	[Attribute("5", UIWidgets.EditBox, desc: "Amount of ores to spawn", category: "Mining Area")]
