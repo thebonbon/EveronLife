@@ -1,0 +1,36 @@
+GenericEntity {
+ ID "5A728042FB4D8DA0"
+ components {
+  MeshObject "{5A728042F4C27DA3}" {
+  }
+  RigidBody "{5A728BF96850D9C6}" {
+   ResponseIndex "MediumDestructible"
+   ModelGeometry 1
+   Static 1
+  }
+  SCR_DestructionMultiPhaseComponent "{5A72804176782230}" {
+   "Additional hit zones" {
+    EL_ToolHitZone Pickxae {
+     HZDefault 1
+     "Collision multiplier" 0
+     "Melee multiplier" 0.01
+     "Kinetic multiplier" 0
+     "Fragmentation multiplier" 0
+     "Explosive multiplier" 0
+     "Incendiary multiplier" 0
+     m_fEffectiveDamage 20.23
+    }
+   }
+   m_fBaseHealth 40
+   m_DestroySpawnObjects {
+    SCR_ParticleSpawnable "{5A72A6168EA4F71E}" {
+     m_Particle "{4D770DEE0A5ABFED}VFX/Gather/IronOre.ptc"
+     m_bAtCenter 0
+     m_bDirectional 0
+    }
+   }
+   m_eMaterialSoundType ROCK
+  }
+ }
+ coords 112.972 0.001 142.482
+}

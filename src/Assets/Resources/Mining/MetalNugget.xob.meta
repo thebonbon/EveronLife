@@ -3,11 +3,17 @@ MetaFileClass {
  Configurations {
   FBXResourceClass PC {
    Scale 0.5 0.5 0.5
+   MaterialAssigns {
+    MaterialAssignClass "{5A7151ADDFFCFE29}" {
+     SourceMaterial "Material"
+     AssignedMaterial "{8B402F2084937724}Assets/Resources/Mining/Data/Material.emat"
+    }
+   }
    GeometryParams {
-    GeometryParam UTM_MetalNugget {
-     LayerPreset "ItemFireView"
+    GeometryParam UCX_MetalNugget {
+     LayerPreset "PropFireView"
      SurfaceProperties {
-      "{039AB05DD92E078A}Material.gamemat"
+      "{D745FD8FC67DB26A}Common/Materials/Game/stone.gamemat"
      }
      Mass 0
      Margin 0

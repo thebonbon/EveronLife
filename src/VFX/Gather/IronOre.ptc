@@ -5,17 +5,21 @@ EffectDef {
    ConeAngle 360 0 90
    MaxNum 5
    BirthRate 100
+   Offset 0 0.25 0
    ParticleType Prefab
    Material "{00735D641EBFC529}system/wbdata/ParticleEditor/defaultMaterial.emat"
-   Prefab "{6853E2E2AE878611}Prefabs/Resources/Mining/IronNugget.et"
-   SizeMultiplier 1
-   SizeRND 1
+   Prefab "{2C571D6F7C05E095}Prefabs/Resources/Mining/IronOre.et"
+   SizeMultiplier 0.1
+   SizeRND 0.1
    RandomAngle 1
-   Velocity 2
+   Velocity 4
    VelocityRND 1
    AirResistance 1
    GravityMultiply 1
-   Lifetime 15
+   Lifetime 1
+   Size {
+    0 1 1 0.018
+   }
    EmittingTime 1
    Repeat 0
   }

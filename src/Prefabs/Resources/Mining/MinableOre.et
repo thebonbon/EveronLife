@@ -22,33 +22,37 @@ GenericEntity {
    "Fall damage max height" 10
    CollisionVelocityThreshold 5
    "Heavy damage threshold" 70
+   m_fBaseHealth 40
    m_DestroySpawnObjects {
-    SCR_ParticleSpawnable "{5A6F15D68E85693F}" {
-     m_vOffsetPosition 0 1 0
-     m_Particle "{4D770DEE0A5ABFED}VFX/Gather/IronOre.ptc"
-     m_bAtCenter 0
+    EL_RandomPrefabSpawnable "{5A727D9D18DFD3CF}" {
+     m_Prefabs {
+      ""
+     }
+     m_iCount 2
+     m_vRandomOffsetPosition 0.5 0 0.25
     }
    }
    m_aDamagePhases {
     SCR_DamagePhaseData "{5A4E91862FD91E7D}" {
-     m_fPhaseHealth 66
+     m_fPhaseHealth 40
      m_PhaseModel "{AEC8C40633FFE48E}Assets/Resources/Mining/ore_2.xob"
      m_PhaseDestroySpawnObjects {
-      SCR_ParticleSpawnable "{5A4EAC81E1A480A8}" {
-       m_vOffsetPosition 0 0.5 0
-       m_Particle "{4D770DEE0A5ABFED}VFX/Gather/IronOre.ptc"
-       m_bAtCenter 0
+      EL_RandomPrefabSpawnable "{5A727D9D2B9C1C0D}" {
+       m_Prefabs {
+        ""
+       }
+       m_vRandomOffsetPosition 0.25 0 0.1
       }
      }
     }
     SCR_DamagePhaseData "{5A4E9186265D5D98}" {
-     m_fPhaseHealth 33
+     m_fPhaseHealth 40
      m_PhaseModel "{D9C2AC8EC75D0BFE}Assets/Resources/Mining/ore_3.xob"
      m_PhaseDestroySpawnObjects {
-      SCR_ParticleSpawnable "{5A4EAC800BFB59B6}" {
-       m_vOffsetPosition 0 0.25 0
-       m_Particle "{4D770DEE0A5ABFED}VFX/Gather/IronOre.ptc"
-       m_bAtCenter 0
+      EL_RandomPrefabSpawnable "{5A727D9D28A92C30}" {
+       m_Prefabs {
+        ""
+       }
       }
      }
     }

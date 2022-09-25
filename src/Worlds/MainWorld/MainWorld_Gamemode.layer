@@ -1,2 +1,49 @@
 EL_GameModeRoleplay GameMode_Roleplay1 : "{03913608C59017A3}Prefabs/MP/Modes/Roleplay/GameMode_Roleplay.et" {
 }
+EL_SpawnPoint {
+ coords 4471.854 21.689 10535.136
+}
+$grp GenericEntity : "{6853E2E2AE878611}Prefabs/Resources/Mining/IronNugget.et" {
+ IronNugget_5A71369945D923BA4 {
+  components {
+   EL_PersistenceComponent "{5A0D2D213B33ECD8}" {
+    Enabled 0
+   }
+   MeshObject "{5A4ACD10B8DA304F}" {
+    Object "{724FDE21C2B4B348}Assets/Resources/Mining/MetalOre_Prop.xob"
+   }
+   RigidBody "{5A4ACBB1A0084DA1}" {
+    LayerPreset "FireGeo"
+   }
+  }
+  coords 4442.364 20.96 10566.226
+ }
+ IronNugget_5A71369945D923BA5 {
+  components {
+   EL_PersistenceComponent "{5A0D2D213B33ECD8}" {
+    Enabled 0
+   }
+   MeshObject "{5A4ACD10B8DA304F}" {
+    Object "{FC448C94C897F495}Assets/Resources/Mining/MetalOre_ItemFireView.xob"
+   }
+   RigidBody "{5A4ACBB1A0084DA1}" {
+    LayerPreset "FireGeo"
+   }
+  }
+  coords 4442.101 20.96 10566.226
+ }
+ IronNugget_5A71369945D923BA6 {
+  components {
+   EL_PersistenceComponent "{5A0D2D213B33ECD8}" {
+    Enabled 0
+   }
+   RigidBody "{5A4ACBB1A0084DA1}" {
+    LayerPreset "FireGeo"
+   }
+  }
+  coords 4441.905 20.96 10566.226
+ }
+}
+GenericEntity Grenade_Base_5A71369E1B4F39B2 : "{D7EB24176E5CEAA6}Prefabs/Weapons/Core/Grenade_Base.et" {
+ coords 4444.167 19.565 10565.925
+}

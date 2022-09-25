@@ -3,6 +3,12 @@ MetaFileClass {
  Configurations {
   FBXResourceClass PC {
    Scale 0.5 0.5 0.5
+   MaterialAssigns {
+    MaterialAssignClass "{5A71369931F41F20}" {
+     SourceMaterial "Material"
+     AssignedMaterial "{8B402F2084937724}Assets/Resources/Mining/Data/Material.emat"
+    }
+   }
    GeometryParams {
     GeometryParam UTM_MetalOre {
      LayerPreset "RockFireView"

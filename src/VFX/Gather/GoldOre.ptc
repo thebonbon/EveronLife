@@ -1,23 +1,25 @@
 EffectDef {
  Emitters {
   EmitterDef Emitter_01 {
-   ShapeType Sphere
-   ShapeSize 2 0 2
-   ConeAngle 360 0 0
-   ConeAngleRndRange 135.529
+   ShapeSize 0.5 0 0
+   ConeAngle 360 0 90
    MaxNum 5
    BirthRate 100
-   Angles 180 0 0
+   Offset 0 0.25 0
    ParticleType Prefab
    Material "{00735D641EBFC529}system/wbdata/ParticleEditor/defaultMaterial.emat"
-   Prefab "{8F81BD0BF343CF49}Prefabs/Resources/Mining/GoldNugget.et"
-   SizeMultiplier 1
-   SizeRND 0
+   Prefab "{3C4F54AD0CB24525}Prefabs/Resources/Mining/GoldOre.et"
+   SizeMultiplier 0.1
+   SizeRND 0.1
    RandomAngle 1
+   Velocity 4
    VelocityRND 1
-   Restitution 0.001
-   Spring 0
-   Lifetime 15
+   AirResistance 1
+   GravityMultiply 1
+   Lifetime 1
+   Size {
+    0 1 1 0.018
+   }
    EmittingTime 1
    Repeat 0
   }

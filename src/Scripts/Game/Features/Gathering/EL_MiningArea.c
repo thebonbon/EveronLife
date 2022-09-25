@@ -3,7 +3,6 @@ class EL_MiningAreaClass: GenericEntityClass
 {
 };
 
-
 [BaseContainerProps()]
 class EL_WeightedSpawn
 {

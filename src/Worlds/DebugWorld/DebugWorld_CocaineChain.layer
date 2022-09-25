@@ -162,7 +162,15 @@ GenericEntity : "{D06287F32CEE1EE2}Prefabs/Items/Resources/Diesel_jerrycan.et" {
  coords 105.04 0.9 143.347
 }
 GenericEntity CementBag_5A4E9B16234E2221 : "{D58674633332DC86}Prefabs/Items/Resources/CementBag.et" {
- coords 105.788 0.872 143.484
+ components {
+  EL_PersistenceComponent "{5A0D2D213B33ECD8}" {
+   Enabled 0
+  }
+  RigidBody "{5A4ACBB1A0084DA1}" {
+   Active Active
+  }
+ }
+ coords 105.908 0.901 143.517
  angleY -90.472
 }
 GenericEntity : "{DD593D31D4F3DFBF}Prefabs/Items/Drugs/Coca_leaves.et" {

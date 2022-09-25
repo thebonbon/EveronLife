@@ -10,6 +10,7 @@ class EL_ToolHitZone : ScriptedHitZone
 	override void OnDamage(EDamageType type, float damage, HitZone pOriginalHitzone, IEntity instigator, inout vector hitTransform[3], float speed, int colliderID, int nodeID)
 	{
 		//Melee damage reduction is 0.01
+		Print(GetHealth());
 		if (damage == m_fEffectiveDamage * 0.01)
 			HandleDamage(damage * 100, EDamageType.TRUE, instigator);
 	}

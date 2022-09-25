@@ -1,0 +1,15 @@
+MetaFileClass {
+ Name "{DB0D1F5DEE6A39C2}Prefabs/Resources/Mining/MineableOreCell004.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}
