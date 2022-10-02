@@ -1,5 +1,8 @@
 MatPBRBasic {
  Color 0.738 0.447 0.005 1
+ Emissive 0.06 0.054 0 0
+ EmissiveLV 1.568
+ ApplyAlbedoToEmissive 1
  BCRMap "{AA6169804543EE28}Assets/Resources/Mining/Data/Gold_BCR.edds"
  NMOMap "{92B9D2129C34BCB6}Assets/Resources/Mining/Data/Gold_NMO.edds"
 }

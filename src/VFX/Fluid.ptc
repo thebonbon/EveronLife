@@ -1,0 +1,32 @@
+EffectDef {
+ Emitters {
+  EmitterDef MainFluid {
+   ConeAngle 360 0 5
+   MaxNum 1000
+   BirthRate 500
+   Angles 0 0 135
+   ParticleType Prefab
+   Material "{00735D641EBFC529}system/wbdata/ParticleEditor/defaultMaterial.emat"
+   Prefab "{3EA472D743EFF55F}Prefabs/Misc/FluidOrb.et"
+   SizeMultiplier 0.05
+   SizeRND 0.1
+   Velocity 0.4
+   VelocityRND 0.1
+   GravityMultiply 0.05
+  }
+  EmitterDef Splashes {
+   ConeAngle 360 0 90
+   MaxNum 22
+   BirthRate 36.7
+   Angles 0 0 135
+   ParticleType Prefab
+   Material "{00735D641EBFC529}system/wbdata/ParticleEditor/defaultMaterial.emat"
+   Prefab "{3EA472D743EFF55F}Prefabs/Misc/FluidOrb.et"
+   SizeMultiplier 0.01
+   SizeRND 0.05
+   Velocity 0.4
+   VelocityRND 0.1
+   GravityMultiply 0.05
+  }
+ }
+}

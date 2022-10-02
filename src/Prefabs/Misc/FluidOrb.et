@@ -1,0 +1,9 @@
+GenericEntity {
+ ID "5A76C6308AC4A4B4"
+ components {
+  MeshObject "{5A76C6307C083564}" {
+   Object "{85BF991252248ADC}Assets/Misc/Fluid/Fluid.xob"
+  }
+ }
+ coords 112.862 0.001 142.139
+}

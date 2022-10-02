@@ -1,158 +1,137 @@
-$grp GenericEntity {
- {
-  components {
-   MeshObject "{5A6F094919EA5F03}" {
-    Object "{6399C4DB701BF230}Assets/Resources/Mining/MetalOre.xob"
+GenericEntity Axe_5A6F09488B18BB1F {
+ components {
+  SignalsManagerComponent "{5A72804701BFE660}" {
+  }
+  WeaponSoundComponent "{5A72804701BFE646}" {
+   Filenames {
+    "{430CD8162D17C2FF}Sounds/Weapons/_SharedData/Melee/Weapons_Melee_Pistol.acp" "{8D040E18DFEC29AF}Sounds/Weapons/_SharedData/PickUp/Weapons_PickUp_HandGun.acp"
    }
   }
-  coords 112.708 0.001 145.696
- }
- {
-  components {
-   MeshObject "{5A6F09491B4DA320}" {
-    Object "{D9C2AC8EC75D0BFE}Assets/Resources/Mining/ore_3.xob"
+  EL_PersistenceComponent "{5A72804701BFE6F5}" {
+   Enabled 0
+   m_pSaveData EL_ItemSaveData "{5A72804701BFE689}" {
+    m_aComponents {
+     EL_TransformationSaveData "{5A72804701BFE68F}" {
+     }
+    }
    }
   }
-  coords 116.869 0.001 145.376
- }
- {
-  components {
-   MeshObject "{5A6F094918D3771E}" {
-    Object "{AEC8C40633FFE48E}Assets/Resources/Mining/ore_2.xob"
+  MeshObject "{5A72804701BFE6CF}" {
+   Object "{8044C9C7C55120AC}Assets/Tools/Pickaxe/Pickaxe_Final.xob"
+  }
+  Hierarchy "{5A72804701BFE6CA}" {
+  }
+  RigidBody "{5A72804701BFE11D}" {
+   ModelGeometry 1
+  }
+  SCR_MeleeWeaponProperties "{5A72804701BFE187}" {
+   m_fDamage 20.23
+   m_aCollisionProbesPos {
+    0 -0.05 0 0 -0.025 0.05
    }
   }
-  coords 115.102 0.001 145.421
- }
- Axe_5A6F09488B18BB1F {
-  components {
-   SignalsManagerComponent "{5A72804701BFE660}" {
-   }
-   WeaponSoundComponent "{5A72804701BFE646}" {
-    Filenames {
-     "{430CD8162D17C2FF}Sounds/Weapons/_SharedData/Melee/Weapons_Melee_Pistol.acp" "{8D040E18DFEC29AF}Sounds/Weapons/_SharedData/PickUp/Weapons_PickUp_HandGun.acp"
-    }
-   }
-   EL_PersistenceComponent "{5A72804701BFE6F5}" {
-    Enabled 0
-    m_pSaveData EL_ItemSaveData "{5A72804701BFE689}" {
-     m_aComponents {
-      EL_TransformationSaveData "{5A72804701BFE68F}" {
-      }
-     }
-    }
-   }
-   MeshObject "{5A72804701BFE6CF}" {
-    Object "{B24B07C19FECA100}Assets/Tools/Axe/Axe.xob"
-   }
-   Hierarchy "{5A72804701BFE6CA}" {
-   }
-   RigidBody "{5A72804701BFE11D}" {
-    ModelGeometry 1
-   }
-   SCR_MeleeWeaponProperties "{5A72804701BFE187}" {
-    m_fDamage 20.23
-    m_fRange 2
-    m_fExecutionTime 2
-    m_aCollisionProbesPos {
-     0 -0.05 0 0 -0.025 0.05
-    }
-   }
-   SCR_WeaponAttachmentsStorageComponent "{5A72804701BFE06E}" {
-    Attributes SCR_ItemAttributeCollection "{5A72804701BFE006}" {
-     ItemDisplayName UIInfo "{5A72804701BFE1DB}" {
-      Name "Axe"
-      Description "Axe for wood cutting "
-     }
-     ItemPhysAttributes ItemPhysicalAttributes "{5A72804701BFE1C9}" {
-      Weight 3
-      SizeSetupStrategy Volume
-      ItemVolume 50
-      RestingUP Forward
-      RestingAdditiveRotationLS 0 90 0
-     }
-     ItemAnimationAttributes ItemAnimationAttributes "{5A72804701BFE015}" {
-      IkSettings {
-       ItemIKSettings "{5A72804701BFE029}" {
-        Jumping 1
-        Lowered 1
-        ProneTurn 1
-        IkSettingsStand 4
-       }
-      }
-      AnimationInstance "{D01958BBC8FE6598}anims/workspaces/player/player_main_pistol_beretta.asi"
-      AnimationIKPose "{6AAD163C7072AF0F}Assets/Weapons/Handguns/M9/anims/anm/p_m9_ik.anm"
-     }
-     CustomAttributes {
-      PreviewRenderAttributes "{5A72804701BFE00E}" {
-       CameraDistanceToItem 0.42
-       CameraOffset 0.17 0 0
-       ItemRenderRotation -90 90 0
-      }
-     }
-     m_SlotType SLOT_WEAPONS_STORAGE
-    }
-   }
-   SimpleSoundComponent "{5A72804701BFE04D}" {
-    Enabled 0
-    Filenames {
-     "{12A94705DF2BFD25}Sounds/Items/_SharedData/PickUp/Items_PickUp_Generic.acp" ""
-    }
-    DistanceManagement 0
-   }
-   WeaponComponent "{5A72804701BFE084}" {
-    SignalsSourceAccess SignalsSourceAccessClass "{5A72804701BFE0BA}" {
-    }
-    useAimingType None
-    WeaponType Handgun
-    SoundInt 1010200
-    UIInfo WeaponUIInfo "{5A72804701BFE0A7}" {
+  SCR_WeaponAttachmentsStorageComponent "{5A72804701BFE06E}" {
+   Attributes SCR_ItemAttributeCollection "{5A72804701BFE006}" {
+    ItemDisplayName UIInfo "{5A72804701BFE1DB}" {
      Name "Axe"
-     Description "Axe for wood cutting"
+     Description "Axe for wood cutting "
     }
-    WeaponSlotType "secondary"
-   }
-   ActionsManagerComponent "{5A72804701BFE314}" {
-    ActionContexts {
-     UserActionContext "{5A72804701BFE0CD}" {
-      ContextName "default"
-      Position PointInfo "{5A72804701BFE0E7}" {
-       Offset 0 0.16 0
-      }
-      Radius 0.6
-     }
+    ItemPhysAttributes ItemPhysicalAttributes "{5A72804701BFE1C9}" {
+     Weight 3
+     SizeSetupStrategy Volume
+     ItemVolume 50
+     RestingUP Forward
+     RestingAdditiveRotationLS 0 90 0
     }
-    additionalActions {
-     SCR_PickUpItemAction "{5A72804701BFE334}" {
-      ParentContextList {
-       "default"
-      }
-      UIInfo UIInfo "{5A72804701BFE33B}" {
-       Name "#AR-Inventory_PickUp"
-      }
-      "Sort Priority" 2
-     }
-     SCR_EquipWeaponHolsterAction "{5A72804701BFE32A}" {
-      ParentContextList {
-       "default"
-      }
-      UIInfo UIInfo "{5A72804701BFE328}" {
+    ItemAnimationAttributes ItemAnimationAttributes "{5A72804701BFE015}" {
+     IkSettings {
+      ItemIKSettings "{5A72804701BFE029}" {
+       Jumping 1
+       Lowered 1
+       ProneTurn 1
+       IkSettingsStand 4
       }
      }
-     SCR_EquipWeaponAction "{5A72804701BFE319}" {
-      ParentContextList {
-       "default"
-      }
-      UIInfo UIInfo "{5A72804701BFE31E}" {
-       Name "#AR-Inventory_Equip"
-      }
+     AnimationInstance "{D01958BBC8FE6598}anims/workspaces/player/player_main_pistol_beretta.asi"
+     AnimationIKPose "{6AAD163C7072AF0F}Assets/Weapons/Handguns/M9/anims/anm/p_m9_ik.anm"
+    }
+    CustomAttributes {
+     PreviewRenderAttributes "{5A72804701BFE00E}" {
+      CameraDistanceToItem 0.42
+      CameraOffset 0.17 0 0
+      ItemRenderRotation -90 90 0
      }
     }
-   }
-   RplComponent "{5A72804701BFE310}" {
+    m_SlotType SLOT_WEAPONS_STORAGE
    }
   }
-  coords 113.664 0.062 140.92
+  SimpleSoundComponent "{5A72804701BFE04D}" {
+   Enabled 0
+   Filenames {
+    "{12A94705DF2BFD25}Sounds/Items/_SharedData/PickUp/Items_PickUp_Generic.acp" ""
+   }
+   DistanceManagement 0
+  }
+  WeaponComponent "{5A72804701BFE084}" {
+   SignalsSourceAccess SignalsSourceAccessClass "{5A72804701BFE0BA}" {
+   }
+   useAimingType None
+   WeaponType Handgun
+   SoundInt 1010200
+   UIInfo WeaponUIInfo "{5A72804701BFE0A7}" {
+    Name "Axe"
+    Description "Axe for wood cutting"
+   }
+   WeaponSlotType "secondary"
+  }
+  ActionsManagerComponent "{5A72804701BFE314}" {
+   ActionContexts {
+    UserActionContext "{5A72804701BFE0CD}" {
+     ContextName "default"
+     Position PointInfo "{5A72804701BFE0E7}" {
+      Offset 0 0.16 0
+     }
+     Radius 0.6
+    }
+   }
+   additionalActions {
+    SCR_PickUpItemAction "{5A72804701BFE334}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo UIInfo "{5A72804701BFE33B}" {
+      Name "#AR-Inventory_PickUp"
+     }
+     "Sort Priority" 2
+    }
+    SCR_EquipWeaponHolsterAction "{5A72804701BFE32A}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo UIInfo "{5A72804701BFE328}" {
+     }
+    }
+    SCR_EquipWeaponAction "{5A72804701BFE319}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo UIInfo "{5A72804701BFE31E}" {
+      Name "#AR-Inventory_Equip"
+     }
+    }
+   }
+  }
+  RplComponent "{5A72804701BFE310}" {
+  }
  }
+ coords 113.664 0 140.92
+}
+SCR_ParticleEmitter {
+ coords 115.274 1.374 149.101
+ m_EffectPath "{B4400D21DBADCCF2}VFX/Fluid.ptc"
+ m_PlayOnSpawn 0
+ m_DeleteOnFinish 0
+ m_PlayInEditor 0
 }
 GenericEntity CopperNugget_5A4E9B16234E2773 : "{1881C4F2BD43E3E1}Prefabs/Resources/Mining/CopperNugget.et" {
  coords 110.206 0.88 143.377
@@ -163,18 +142,36 @@ GenericEntity : "{2C571D6F7C05E095}Prefabs/Resources/Mining/IronOre.et" {
    "Additional hit zones" {
     EL_ToolHitZone UTM_MetalOre {
      "Melee multiplier" 0.01
+     m_HitVFX "{1FAA1339FE4492AF}VFX/Gather/OreHitVFX.et"
     }
    }
    m_fBaseHealth 40
    m_DestroySpawnObjects {
+    EL_SizeChange "{5A74C7AB19FB351A}" {
+     m_fScale 0.5
+    }
     EL_RandomPrefabSpawnable "{5A727D9D18DFD3CF}" {
      m_vOffsetPosition 0 0.5 0
+    }
+    SCR_ParticleSpawnable "{5A72D897E7094DA0}" {
+     m_vOffsetPosition 0 0.5 0
+     m_Particle "{4D770DEE0A5ABFED}VFX/Gather/IronOre.ptc"
+     m_bDirectional 0
     }
    }
    m_aDamagePhases {
     SCR_DamagePhaseData "{5A4E91862FD91E7D}" {
      m_fPhaseHealth 40
+     m_PhaseModel ""
      m_PhaseDestroySpawnObjects {
+      EL_SizeChange "{5A74C7AA8F71CAC2}" {
+       m_fScale 0.25
+      }
+      SCR_ParticleSpawnable "{5A72D8964A8AA502}" {
+       m_vOffsetPosition 0 0.25 0
+       m_Particle "{4D770DEE0A5ABFED}VFX/Gather/IronOre.ptc"
+       m_bDirectional 0
+      }
       EL_RandomPrefabSpawnable "{5A727D9D2B9C1C0D}" {
        m_vOffsetPosition 0 0.25 0
       }
@@ -182,11 +179,17 @@ GenericEntity : "{2C571D6F7C05E095}Prefabs/Resources/Mining/IronOre.et" {
     }
     SCR_DamagePhaseData "{5A4E9186265D5D98}" {
      m_fPhaseHealth 40
+     m_PhaseModel ""
     }
    }
   }
  }
- coords 112.509 0 143.542
+ coords 112.36 0 143.53
+}
+SCR_DestructibleBuildingEntity : "{31CAD6AEE7E7E4CF}Prefabs/Structures/Cultural/Castles/Castle_01_Stairs_01.et" {
+ coords 112.796 0.415 149.58
+ angleY 90
+ scale 0.25
 }
 EL_MiningArea : "{530D05E39B25A8C8}Prefabs/Resources/Mining/MiningArea.et" {
  coords 100.506 0.001 157.28
@@ -212,6 +215,54 @@ GenericEntity : "{622F9989DDC4865B}PrefabLibrary/Props/Civilian/Recreation/Table
 }
 GenericEntity : "{71AD3D0821C99242}Prefabs/Resources/Mining/MinableOreCell_Base.et" {
  coords 116.151 0.001 147.913
+}
+GenericEntity : "{8243CC3B73B19449}Prefabs/Props/Civilian/Fireplace_01_hot_decal.et" {
+ coords 114.122 0.038 148.882
+ {
+  SCR_ParticleEmitter : "{899360C930DA3EE3}Prefabs/Particles/Campfire_burning.et" {
+   coords 0 0 0
+   m_PlayInEditor 0
+  }
+ }
+}
+GenericEntity : "{8594DC1E8A135607}Prefabs/Processor/EL_Processor_Base.et" {
+ components {
+  MeshObject "{598F21A867C4015C}" {
+   Object "{E9F08C2BF2CEE749}Assets/Resources/Forge/Forge.xob"
+   Materials {
+    MaterialAssignClass "{5A7510CC0B11C513}" {
+     SourceMaterial "Material"
+     AssignedMaterial "{273053CA9C745B16}Assets/Rocks/Granite/Data/Granite_Cluster_04.emat"
+    }
+   }
+  }
+  ActionsManagerComponent "{598F21A8710B89C1}" {
+   ActionContexts {
+    UserActionContext "{598F21A871DA7304}" {
+     Position PointInfo "{598F21A875320722}" {
+      Offset 0 2.9155 0.187
+     }
+     Radius 0.895
+    }
+   }
+   additionalActions {
+    EL_ProcessAction "{598F21A877BE6DEE}" {
+     UIInfo UIInfo "{5A7510CB31F86DEA}" {
+      Name "Input Iron Ore"
+     }
+     m_aProcessingInputs {
+      EL_ProcessingInput "{5A7510CB415DFC54}" {
+       m_InputPrefab "{6853E2E2AE878611}Prefabs/Resources/Mining/IronNugget.et"
+      }
+     }
+    }
+   }
+  }
+  RplComponent "{5A7510CB617A945C}" {
+  }
+ }
+ coords 113.995 0.001 149.09
+ angleY 90
 }
 GenericEntity : "{85DDB61EB2072EFB}Prefabs/Resources/Mining/GOLD TEST.et" {
  components {
@@ -269,162 +320,86 @@ GenericEntity : "{88F43FF542BB6767}Prefabs/Resources/Mining/Stone.et" {
  }
  coords 118.527 0 143.157
 }
-$grp GenericEntity : "{8F81BD0BF343CF49}Prefabs/Resources/Mining/GoldNugget.et" {
- GoldNugget_5A4E9B16234E2651 {
-  components {
-   SoundComponent "{5A4ADB24952425BA}" {
-    Filenames +{
+GenericEntity GoldNugget_5A4E9B16234E2651 : "{8F81BD0BF343CF49}Prefabs/Resources/Mining/GoldNugget.et" {
+ components {
+  SoundComponent "{5A4ADB24952425BA}" {
+   Filenames +{
+   }
+  }
+  EL_PersistenceComponent "{5A0D2D213B33ECD8}" {
+   Enabled 0
+  }
+  InventoryItemComponent "{5222EB4D0C73006B}" {
+   Attributes SCR_ItemAttributeCollection "{5222EB4D0A2B466B}" {
+    ItemDisplayName UIInfo "{5222EB4D07D865FA}" {
+     Name "Gold Nugget"
+     Description "A piece of gold ore"
     }
-   }
-   EL_PersistenceComponent "{5A0D2D213B33ECD8}" {
-    Enabled 0
-   }
-   InventoryItemComponent "{5222EB4D0C73006B}" {
-    Attributes SCR_ItemAttributeCollection "{5222EB4D0A2B466B}" {
-     ItemDisplayName UIInfo "{5222EB4D07D865FA}" {
-      Name "Gold Nugget"
-      Description "A piece of gold ore"
-     }
-     ItemPhysAttributes ItemPhysicalAttributes PhysicalAttributes {
-      Weight 1
-      SizeSetupStrategy Scaler
-      ItemDimensions 0.01 0.01 0.01
-      ItemVolume 0.01
-     }
-     ItemAnimationAttributes ItemAnimationAttributes "{59A730880E261BD3}" {
-      AnimationInstance "{4FCBEA45CAEBC9C0}anims/workspaces/player/player_main_1h.asi"
-      AnimationIKPose "{3E5C93E85F05C6B5}Assets/Weapons/Grenades/RGD5/anims/anm/p_rgd5_ik.anm"
-      AnimationAttachments {
-       AnimationAttachmentInfo "{59A730880E261BD0}" {
-        AnimGraph "{883777E45A6C4DA1}Assets/Items/Medicine/Workspaces/Gauze_01.agr"
-        AnimInstance "{79BD98038DD60F88}Assets/Items/Medicine/Workspaces/Gauze_01_player.asi"
-        BindingName "Gadget"
-       }
-      }
-      HandAdditiveRotation 0 90 180
-      HandAdditiveTranslation 0 0.01 -0.015
-     }
-     CustomAttributes {
-      PreviewRenderAttributes "{59A730880E261BD6}" {
-       CameraPreset Top
-       CameraOrbitAngles 0 0 0
-       CameraDistanceToItem 0.19
-       CameraOffset 0 -0.01 0
-       ItemRenderRotation 0 0 0
+    ItemPhysAttributes ItemPhysicalAttributes PhysicalAttributes {
+     Weight 1
+     SizeSetupStrategy Scaler
+     ItemDimensions 0.01 0.01 0.01
+     ItemVolume 0.01
+    }
+    ItemAnimationAttributes ItemAnimationAttributes "{59A730880E261BD3}" {
+     AnimationInstance "{4FCBEA45CAEBC9C0}anims/workspaces/player/player_main_1h.asi"
+     AnimationIKPose "{3E5C93E85F05C6B5}Assets/Weapons/Grenades/RGD5/anims/anm/p_rgd5_ik.anm"
+     AnimationAttachments {
+      AnimationAttachmentInfo "{59A730880E261BD0}" {
+       AnimGraph "{883777E45A6C4DA1}Assets/Items/Medicine/Workspaces/Gauze_01.agr"
+       AnimInstance "{79BD98038DD60F88}Assets/Items/Medicine/Workspaces/Gauze_01_player.asi"
+       BindingName "Gadget"
       }
      }
+     HandAdditiveRotation 0 90 180
+     HandAdditiveTranslation 0 0.01 -0.015
     }
-   }
-   MeshObject "{5A4ACD10B8DA304F}" {
-    Object "{6E7678CE6CD95DFD}Assets/Resources/Mining/MetalNugget.xob"
-    Materials {
-     MaterialAssignClass "{59A73088024D4BEA}" {
-      SourceMaterial "Material"
-      AssignedMaterial "{9C005A256F4C2921}Assets/Resources/Mining/Data/Gold.emat"
+    CustomAttributes {
+     PreviewRenderAttributes "{59A730880E261BD6}" {
+      CameraPreset Top
+      CameraOrbitAngles 0 0 0
+      CameraDistanceToItem 0.19
+      CameraOffset 0 -0.01 0
+      ItemRenderRotation 0 0 0
      }
     }
    }
-   RigidBody "{5A4ACBB1A0084DA1}" {
-    Active Inactive
-   }
-   SCR_ConsumableItemComponent "{59A730880E261BBD}" {
-    m_eAnimVariable ADRIANOV
-   }
   }
-  coords 111.024 0.88 143.395
- }
- GoldNugget_5A728BF8B21C4BB8 {
-  components {
-   EL_PersistenceComponent "{5A0D2D213B33ECD8}" {
-    Enabled 0
-   }
-   MeshObject "{5A4ACD10B8DA304F}" {
-    Materials {
-     MaterialAssignClass "{59A73088024D4BEA}" {
-      SourceMaterial "Material"
-      AssignedMaterial "{24D1A2A4C1F017E6}Assets/Resources/Mining/Data/Gold2.emat"
-     }
+  MeshObject "{5A4ACD10B8DA304F}" {
+   Object "{6E7678CE6CD95DFD}Assets/Resources/Mining/MetalNugget.xob"
+   Materials {
+    MaterialAssignClass "{59A73088024D4BEA}" {
+     SourceMaterial "Material"
+     AssignedMaterial "{9C005A256F4C2921}Assets/Resources/Mining/Data/Gold.emat"
     }
    }
-   RigidBody "{5A4ACBB1A0084DA1}" {
-    Active Inactive
-   }
   }
-  coords 114.426 0.28 147.94
-  angleX -49.709
-  angleY 78.155
-  angleZ -79.774
- }
- GoldNugget_5A728BF8B260EB92 {
-  components {
-   EL_PersistenceComponent "{5A0D2D213B33ECD8}" {
-    Enabled 0
-   }
-   MeshObject "{5A4ACD10B8DA304F}" {
-    Materials {
-     MaterialAssignClass "{59A73088024D4BEA}" {
-      SourceMaterial "Material"
-      AssignedMaterial "{24D1A2A4C1F017E6}Assets/Resources/Mining/Data/Gold2.emat"
-     }
-    }
-   }
-   RigidBody "{5A4ACBB1A0084DA1}" {
-    Active Inactive
-   }
+  RigidBody "{5A4ACBB1A0084DA1}" {
+   Active Inactive
   }
-  coords 113.858 0.723 147.979
-  angleY -87.451
- }
- GoldNugget_5A728BF8B2C3304F {
-  components {
-   EL_PersistenceComponent "{5A0D2D213B33ECD8}" {
-    Enabled 0
-   }
-   MeshObject "{5A4ACD10B8DA304F}" {
-    Materials {
-     MaterialAssignClass "{59A73088024D4BEA}" {
-      SourceMaterial "Material"
-      AssignedMaterial "{24D1A2A4C1F017E6}Assets/Resources/Mining/Data/Gold2.emat"
-     }
-    }
-   }
-   RigidBody "{5A4ACBB1A0084DA1}" {
-    Active Inactive
-   }
+  SCR_ConsumableItemComponent "{59A730880E261BBD}" {
+   m_eAnimVariable ADRIANOV
   }
-  coords 114.689 0.327 147.452
-  angleX -56.582
-  angleY -180
-  angleZ -180
  }
- GoldNugget_5A728BF8B5350895 {
-  components {
-   EL_PersistenceComponent "{5A0D2D213B33ECD8}" {
-    Enabled 0
-   }
-   MeshObject "{5A4ACD10B8DA304F}" {
-    Materials {
-     MaterialAssignClass "{59A73088024D4BEA}" {
-      SourceMaterial "Material"
-      AssignedMaterial "{24D1A2A4C1F017E6}Assets/Resources/Mining/Data/Gold2.emat"
-     }
-    }
-   }
-   RigidBody "{5A4ACBB1A0084DA1}" {
-    Active Inactive
-   }
-  }
-  coords 113.678 0.149 147.906
-  angleX -33.384
-  angleY -41.433
-  angleZ 25.904
- }
+ coords 111.024 0.88 143.395
 }
 GenericEntity GoldBar_5A4E9B16234E26A7 : "{ACC9A10F0F20F5C4}Prefabs/Resources/Mining/GoldBar.et" {
  coords 111.009 0.878 143.665
 }
-GenericEntity IronBar_5A4E9B16234E26FC : "{BCD1E8CD7F975074}Prefabs/Resources/Mining/IronBar.et" {
- coords 110.613 0.879 143.678
+$grp GenericEntity : "{BCD1E8CD7F975074}Prefabs/Resources/Mining/IronBar.et" {
+ IronBar_5A4E9B16234E26FC {
+  coords 110.613 0.879 143.678
+ }
+ IronBar_5A7510CB061876B7 {
+  components {
+   EL_PersistenceComponent "{5A0D2D213B33ECD8}" {
+    Enabled 0
+   }
+  }
+  coords 115.434 1.171 149.092
+  angleY -90
+  scale 2
+ }
 }
 GenericEntity : "{C7FC93FD15F0574C}Prefabs/Resources/Mining/CopperOre.et" {
  components {
@@ -471,102 +446,4 @@ GenericEntity : "{C7FC93FD15F0574C}Prefabs/Resources/Mining/CopperOre.et" {
   }
  }
  coords 116.397 0 143.476
-}
-GenericEntity : "{D0C0BDD8B2173868}Prefabs/Resources/Mining/MineableOreCellAll.et" {
- coords 115.188 0.196 140.351
- {
-  GenericEntity {
-   ID "5A728041791CE4DD"
-   components {
-    MeshObject "{5A728042F4C27DA3}" {
-     Materials {
-      MaterialAssignClass "{5A728BFB22D046EA}" {
-       SourceMaterial "Material"
-       AssignedMaterial "{9C005A256F4C2921}Assets/Resources/Mining/Data/Gold.emat"
-      }
-     }
-    }
-    SCR_DestructionMultiPhaseComponent "{5A72804176782230}" {
-     m_DestroySpawnObjects {
-      SCR_ParticleSpawnable "{5A72A6168EA4F71E}" {
-       m_bAtCenter 1
-      }
-     }
-    }
-   }
-  }
-  GenericEntity {
-   ID "5A728041791CB822"
-   components {
-    MeshObject "{5A728042F4C27DA3}" {
-     Materials {
-      MaterialAssignClass "{5A728BFB22D04C7F}" {
-       SourceMaterial "Material"
-       AssignedMaterial "{9C005A256F4C2921}Assets/Resources/Mining/Data/Gold.emat"
-      }
-     }
-    }
-   }
-  }
-  GenericEntity {
-   ID "5A728041791CB823"
-   components {
-    MeshObject "{5A728042F4C27DA3}" {
-     Materials {
-      MaterialAssignClass "{5A728BFB22D04FBB}" {
-       SourceMaterial "Material"
-       AssignedMaterial "{9C005A256F4C2921}Assets/Resources/Mining/Data/Gold.emat"
-      }
-     }
-    }
-   }
-  }
-  GenericEntity {
-   ID "5A728041791CE4DE"
-   components {
-    MeshObject "{5A728042F4C27DA3}" {
-     Materials {
-      MaterialAssignClass "{5A728BFB22D04EAB}" {
-       SourceMaterial "Material"
-       AssignedMaterial "{9C005A256F4C2921}Assets/Resources/Mining/Data/Gold.emat"
-      }
-     }
-    }
-   }
-  }
-  GenericEntity {
-   ID "5A728041791CB82C"
-   components {
-    MeshObject "{5A728042F4C27DA3}" {
-     Materials {
-      MaterialAssignClass "{5A728BFB22D049C7}" {
-       SourceMaterial "Material"
-       AssignedMaterial "{9C005A256F4C2921}Assets/Resources/Mining/Data/Gold.emat"
-      }
-     }
-    }
-   }
-  }
-  GenericEntity {
-   ID "5A728041791CB82D"
-   components {
-    MeshObject "{5A728042F4C27DA3}" {
-     Materials {
-      MaterialAssignClass "{5A728BFB22D04B3C}" {
-       SourceMaterial "Material"
-       AssignedMaterial "{9C005A256F4C2921}Assets/Resources/Mining/Data/Gold.emat"
-      }
-     }
-    }
-    SCR_DestructionMultiPhaseComponent "{5A72804176782230}" {
-     m_DestroySpawnObjects {
-      SCR_ParticleSpawnable "{5A72A6168EA4F71E}" {
-       m_Particle "{0C26C483A43623C4}VFX/Gather/GoldOre.ptc"
-       m_bDirectional 1
-      }
-     }
-    }
-   }
-  }
- }
 }

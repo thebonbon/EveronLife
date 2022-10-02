@@ -5,34 +5,22 @@ class EL_DestructionMultiPhaseSingleComponentClass: SCR_DestructionMultiPhaseCom
 
 class EL_DestructionMultiPhaseSingleComponent : SCR_DestructionMultiPhaseComponent
 {
-	string m_sRemap;
-	
-	//------------------------------------------------------------------------------------------------
-	override void InitDestruction()
-	{
-		/*
-		//Save main materials
-		ResourceName name = SCR_BaseContainerTools.GetPrefabResourceName(GetOwner().GetPrefabData().GetPrefab());
-		ResourceName modelPath;
-		SCR_Global.GetModelAndRemapFromResource(name, modelPath, m_sRemap);
-		Print(m_sRemap);
-		*/
-	}
-	
 	//------------------------------------------------------------------------------------------------
 	override void ApplyDamagePhaseData(SCR_DamagePhaseData pDamagePhaseData)
 	{
+		if (!pDamagePhaseData)
+		{
+			SetHitZoneHealth(m_iOriginalHealth);
+			GetDestructionBaseData().SetPreviousHealth(GetHealth());
+			SetModel(GetOriginalResourceName());
+			return;
+		}
 		
-		ResourceName name = SCR_BaseContainerTools.GetPrefabResourceName(GetOwner().GetPrefabData().GetPrefab());
-		ResourceName modelPath;
-		SCR_Global.GetModelAndRemapFromResource(name, modelPath, m_sRemap);
-		
-		super.ApplyDamagePhaseData(pDamagePhaseData);
-		
-		//Apply saved material
-		VObject mesh = GetOwner().GetVObject();
-		GetOwner().SetObject(mesh, m_sRemap);
-		Print(m_sRemap);
+		GetDestructionBaseData().SetPreviousHealth(pDamagePhaseData.m_fPhaseHealth);
+		SetHitZoneHealth(pDamagePhaseData.m_fPhaseHealth);
+		//Don't set model if none specified
+		if (pDamagePhaseData.m_PhaseModel)
+			SetModel(pDamagePhaseData.m_PhaseModel);	
 	}
 };
 
@@ -101,5 +89,72 @@ class EL_RandomPrefabSpawnable : SCR_BaseSpawnable
 				}
 			}
 		}
+	}
+};
+
+//------------------------------------------------------------------------------------------------
+class EL_Spawnable_HitParticleTitle : BaseContainerCustomTitle
+{
+	override bool _WB_GetCustomTitle(BaseContainer source, out string title)
+	{
+		title = "Hit Particle Effect";
+		return true;
+	}
+};
+
+//------------------------------------------------------------------------------------------------
+[BaseContainerProps(), EL_Spawnable_HitParticleTitle()]
+class EL_HitParticleSpawnable : SCR_BaseSpawnable
+{
+	[Attribute(ResourceName.Empty, UIWidgets.ResourceNamePicker, "Particle effect to spawn", "ptc")]
+	ResourceName m_Particle;
+	
+	//------------------------------------------------------------------------------------------------
+	//! Spawns the object
+	override void Spawn(IEntity owner, Physics parentPhysics, SCR_HitInfo hitInfo)
+	{
+		if (!hitInfo || m_Particle == ResourceName.Empty)
+			return;
+		
+		vector spawnMat[4];
+		GetSpawnTransform(owner, spawnMat);
+
+		vector newRight, newUp, newForward;
+			
+		newUp = -hitInfo.m_HitDirection;
+		newRight = newUp * spawnMat[2];
+		newForward = newUp * newRight;
+			
+		spawnMat[0] = newRight;
+		spawnMat[1] = newUp;
+		spawnMat[2] = newForward;
+		spawnMat[3] = hitInfo.m_HitPosition;
+		
+		
+		SCR_DestructionCommon.PlayParticleEffect_Transform(m_Particle, hitInfo.m_DamageType, spawnMat);
+	}
+};
+
+//------------------------------------------------------------------------------------------------
+class EL_ChangeSizeTitle : BaseContainerCustomTitle
+{
+	override bool _WB_GetCustomTitle(BaseContainer source, out string title)
+	{
+		title = "Size Change";
+		return true;
+	}
+};
+
+//------------------------------------------------------------------------------------------------
+[BaseContainerProps(), EL_ChangeSizeTitle()]
+class EL_SizeChange : SCR_BaseSpawnable
+{
+	[Attribute("1", UIWidgets.EditBox, desc: "New size")]
+	protected float m_fScale;
+	
+	//------------------------------------------------------------------------------------------------
+	override void Spawn(IEntity owner, Physics parentPhysics, SCR_HitInfo hitInfo)
+	{
+		owner.SetScale(m_fScale);
 	}
 };
