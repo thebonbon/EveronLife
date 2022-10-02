@@ -1,5 +1,5 @@
 MetaFileClass {
- Name "{E6393A659B06B0F5}Prefabs/Resources/Mining/MineableOreCell003.et"
+ Name "{23341E2840F5ACB4}Prefabs/Tools/Pickaxe.et"
  Configurations {
   EntityTemplateResourceClass PC {
   }

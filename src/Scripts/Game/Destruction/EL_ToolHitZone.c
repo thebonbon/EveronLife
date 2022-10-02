@@ -7,18 +7,18 @@ class EL_ToolHitZone : ScriptedHitZone
 	float m_fEffectiveDamage;
 
 	//------------------------------------------------------------------------------------------------
-	override void OnDamage(EDamageType type, float damage, HitZone pOriginalHitzone, IEntity instigator, inout vector hitTransform[3], float speed, int colliderID, int nodeID)
+	override float ComputeEffectiveDamage(EDamageType damageType, float rawDamage, IEntity hitEntity, HitZone struckHitZone, IEntity damageSource, IEntity damageSourceGunner, IEntity damageSourceParent, const GameMaterial hitMaterial, int colliderID, const inout vector hitTransform[3], const vector impactVelocity, int nodeID, bool isDOT)
 	{
-		//Melee damage reduction is 0.01
-		Print(GetHealth());
-		if (damage == m_fEffectiveDamage * 0.01)
-			HandleDamage(damage * 100, EDamageType.TRUE, instigator);
+		//Wrong Tool
+		if (rawDamage !=  m_fEffectiveDamage) return 0;
+		
+		return super.ComputeEffectiveDamage(damageType, rawDamage, hitEntity, struckHitZone, damageSource, damageSourceGunner, damageSourceParent, hitMaterial, colliderID, hitTransform, impactVelocity, nodeID, isDOT);
 	}
+
 	//------------------------------------------------------------------------------------------------
 	override void OnLocalDamage(EDamageType type, float damage, HitZone pOriginalHitzone, IEntity damageSource, IEntity instigator, inout vector hitTransform[3], float speed, int colliderID, int nodeID)
 	{
-		if (m_HitVFX && damage == m_fEffectiveDamage * 0.01)
-			EL_Utils.SpawnEntityPrefab(m_HitVFX, hitTransform[0], hitTransform[1]);
+		EL_Utils.SpawnEntityPrefab(m_HitVFX, hitTransform[0], hitTransform[1]);
 	}
 
 };

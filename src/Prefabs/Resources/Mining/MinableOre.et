@@ -15,6 +15,7 @@ GenericEntity {
      "Fragmentation multiplier" 0
      "Explosive multiplier" 0
      "Incendiary multiplier" 0
+     m_HitVFX "{1FAA1339FE4492AF}Prefabs/Particles/OreHit.et"
      m_fEffectiveDamage 20.23
     }
    }
@@ -24,35 +25,55 @@ GenericEntity {
    "Heavy damage threshold" 70
    m_fBaseHealth 40
    m_DestroySpawnObjects {
+    EL_SizeChange "{5A84ED2053680967}" {
+     m_fScale 0.75
+    }
     EL_RandomPrefabSpawnable "{5A727D9D18DFD3CF}" {
+     m_vOffsetPosition 0 0.75 0
      m_Prefabs {
       ""
      }
      m_iCount 2
      m_vRandomOffsetPosition 0.5 0 0.25
     }
+    SCR_ParticleSpawnable "{5A84F4E25F9011CA}" {
+     m_vOffsetPosition 0 0.75 0
+     m_Particle "{4D770DEE0A5ABFED}Particles/Gather/OreBreak.ptc"
+     m_bDirectional 0
+    }
    }
    m_aDamagePhases {
     SCR_DamagePhaseData "{5A4E91862FD91E7D}" {
      m_fPhaseHealth 40
-     m_PhaseModel "{AEC8C40633FFE48E}Assets/Resources/Mining/ore_2.xob"
      m_PhaseDestroySpawnObjects {
+      EL_SizeChange "{5A84ED2067E4605B}" {
+       m_fScale 0.5
+      }
       EL_RandomPrefabSpawnable "{5A727D9D2B9C1C0D}" {
+       m_vOffsetPosition 0 0.5 0
        m_Prefabs {
         ""
        }
        m_vRandomOffsetPosition 0.25 0 0.1
       }
+      SCR_ParticleSpawnable "{5A84F4E273B3C1EB}" {
+       m_vOffsetPosition 0 0.5 0
+       m_Particle "{4D770DEE0A5ABFED}Particles/Gather/OreBreak.ptc"
+       m_bDirectional 0
+      }
      }
     }
     SCR_DamagePhaseData "{5A4E9186265D5D98}" {
      m_fPhaseHealth 40
-     m_PhaseModel "{D9C2AC8EC75D0BFE}Assets/Resources/Mining/ore_3.xob"
      m_PhaseDestroySpawnObjects {
-      EL_RandomPrefabSpawnable "{5A727D9D28A92C30}" {
-       m_Prefabs {
-        ""
-       }
+      EL_RandomPrefabSpawnable "{5A84ED20BF80D2CE}" {
+       m_vOffsetPosition 0 0.25 0
+       m_vRandomOffsetPosition 0.1 0 0.1
+      }
+      SCR_ParticleSpawnable "{5A84F4E28AB86073}" {
+       m_vOffsetPosition 0 0.25 0
+       m_Particle "{4D770DEE0A5ABFED}Particles/Gather/OreBreak.ptc"
+       m_bDirectional 0
       }
      }
     }
@@ -61,6 +82,12 @@ GenericEntity {
   }
   MeshObject "{59F0709385A10D16}" {
    Object "{6399C4DB701BF230}Assets/Resources/Mining/MetalOre.xob"
+   Materials {
+    MaterialAssignClass "{5A84ED20391C6E7C}" {
+     SourceMaterial "Material"
+     AssignedMaterial ""
+    }
+   }
   }
   Hierarchy "{59F0709385A10D0D}" {
   }

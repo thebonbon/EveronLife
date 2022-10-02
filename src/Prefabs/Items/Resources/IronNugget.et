@@ -51,6 +51,12 @@ GenericEntity : "{6A40DF87E1E4E960}Prefabs/Items/Core/ItemInteractable_Base.et" 
     }
    }
   }
+  RigidBody "{5A4ACBB1A0084DA1}" {
+   Active Active
+   LinearDamping 0.25
+   AngularDamping 0.25
+   LinearSleepingThreashold 1
+  }
   SCR_ConsumableItemComponent "{59A730880E261EA1}" {
    m_eAnimVariable ADRIANOV
   }

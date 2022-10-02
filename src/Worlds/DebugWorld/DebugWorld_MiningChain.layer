@@ -1,195 +1,26 @@
-GenericEntity Axe_5A6F09488B18BB1F {
- components {
-  SignalsManagerComponent "{5A72804701BFE660}" {
-  }
-  WeaponSoundComponent "{5A72804701BFE646}" {
-   Filenames {
-    "{430CD8162D17C2FF}Sounds/Weapons/_SharedData/Melee/Weapons_Melee_Pistol.acp" "{8D040E18DFEC29AF}Sounds/Weapons/_SharedData/PickUp/Weapons_PickUp_HandGun.acp"
-   }
-  }
-  EL_PersistenceComponent "{5A72804701BFE6F5}" {
-   Enabled 0
-   m_pSaveData EL_ItemSaveData "{5A72804701BFE689}" {
-    m_aComponents {
-     EL_TransformationSaveData "{5A72804701BFE68F}" {
-     }
-    }
-   }
-  }
-  MeshObject "{5A72804701BFE6CF}" {
-   Object "{8044C9C7C55120AC}Assets/Tools/Pickaxe/Pickaxe_Final.xob"
-  }
-  Hierarchy "{5A72804701BFE6CA}" {
-  }
-  RigidBody "{5A72804701BFE11D}" {
-   ModelGeometry 1
-  }
-  SCR_MeleeWeaponProperties "{5A72804701BFE187}" {
-   m_fDamage 20.23
-   m_aCollisionProbesPos {
-    0 -0.05 0 0 -0.025 0.05
-   }
-  }
-  SCR_WeaponAttachmentsStorageComponent "{5A72804701BFE06E}" {
-   Attributes SCR_ItemAttributeCollection "{5A72804701BFE006}" {
-    ItemDisplayName UIInfo "{5A72804701BFE1DB}" {
-     Name "Axe"
-     Description "Axe for wood cutting "
-    }
-    ItemPhysAttributes ItemPhysicalAttributes "{5A72804701BFE1C9}" {
-     Weight 3
-     SizeSetupStrategy Volume
-     ItemVolume 50
-     RestingUP Forward
-     RestingAdditiveRotationLS 0 90 0
-    }
-    ItemAnimationAttributes ItemAnimationAttributes "{5A72804701BFE015}" {
-     IkSettings {
-      ItemIKSettings "{5A72804701BFE029}" {
-       Jumping 1
-       Lowered 1
-       ProneTurn 1
-       IkSettingsStand 4
-      }
-     }
-     AnimationInstance "{D01958BBC8FE6598}anims/workspaces/player/player_main_pistol_beretta.asi"
-     AnimationIKPose "{6AAD163C7072AF0F}Assets/Weapons/Handguns/M9/anims/anm/p_m9_ik.anm"
-    }
-    CustomAttributes {
-     PreviewRenderAttributes "{5A72804701BFE00E}" {
-      CameraDistanceToItem 0.42
-      CameraOffset 0.17 0 0
-      ItemRenderRotation -90 90 0
-     }
-    }
-    m_SlotType SLOT_WEAPONS_STORAGE
-   }
-  }
-  SimpleSoundComponent "{5A72804701BFE04D}" {
-   Enabled 0
-   Filenames {
-    "{12A94705DF2BFD25}Sounds/Items/_SharedData/PickUp/Items_PickUp_Generic.acp" ""
-   }
-   DistanceManagement 0
-  }
-  WeaponComponent "{5A72804701BFE084}" {
-   SignalsSourceAccess SignalsSourceAccessClass "{5A72804701BFE0BA}" {
-   }
-   useAimingType None
-   WeaponType Handgun
-   SoundInt 1010200
-   UIInfo WeaponUIInfo "{5A72804701BFE0A7}" {
-    Name "Axe"
-    Description "Axe for wood cutting"
-   }
-   WeaponSlotType "secondary"
-  }
-  ActionsManagerComponent "{5A72804701BFE314}" {
-   ActionContexts {
-    UserActionContext "{5A72804701BFE0CD}" {
-     ContextName "default"
-     Position PointInfo "{5A72804701BFE0E7}" {
-      Offset 0 0.16 0
-     }
-     Radius 0.6
-    }
-   }
-   additionalActions {
-    SCR_PickUpItemAction "{5A72804701BFE334}" {
-     ParentContextList {
-      "default"
-     }
-     UIInfo UIInfo "{5A72804701BFE33B}" {
-      Name "#AR-Inventory_PickUp"
-     }
-     "Sort Priority" 2
-    }
-    SCR_EquipWeaponHolsterAction "{5A72804701BFE32A}" {
-     ParentContextList {
-      "default"
-     }
-     UIInfo UIInfo "{5A72804701BFE328}" {
-     }
-    }
-    SCR_EquipWeaponAction "{5A72804701BFE319}" {
-     ParentContextList {
-      "default"
-     }
-     UIInfo UIInfo "{5A72804701BFE31E}" {
-      Name "#AR-Inventory_Equip"
-     }
-    }
-   }
-  }
-  RplComponent "{5A72804701BFE310}" {
-  }
- }
- coords 113.664 0 140.92
-}
 SCR_ParticleEmitter {
  coords 115.274 1.374 149.101
- m_EffectPath "{B4400D21DBADCCF2}VFX/Fluid.ptc"
+ m_EffectPath "{B4400D21DBADCCF2}Particles/Fluid.ptc"
  m_PlayOnSpawn 0
  m_DeleteOnFinish 0
  m_PlayInEditor 0
 }
-GenericEntity CopperNugget_5A4E9B16234E2773 : "{1881C4F2BD43E3E1}Prefabs/Resources/Mining/CopperNugget.et" {
+GenericEntity CopperNugget_5A4E9B16234E2773 : "{1881C4F2BD43E3E1}Prefabs/Items/Resources/CopperNugget.et" {
  coords 110.206 0.88 143.377
 }
+GenericEntity : "{23341E2840F5ACB4}Prefabs/Tools/Pickaxe.et" {
+ coords 113.41 0.001 141.611
+}
 GenericEntity : "{2C571D6F7C05E095}Prefabs/Resources/Mining/IronOre.et" {
- components {
-  EL_DestructionMultiPhaseSingleComponent "{5A4E91862DCCD788}" {
-   "Additional hit zones" {
-    EL_ToolHitZone UTM_MetalOre {
-     "Melee multiplier" 0.01
-     m_HitVFX "{1FAA1339FE4492AF}VFX/Gather/OreHitVFX.et"
-    }
-   }
-   m_fBaseHealth 40
-   m_DestroySpawnObjects {
-    EL_SizeChange "{5A74C7AB19FB351A}" {
-     m_fScale 0.5
-    }
-    EL_RandomPrefabSpawnable "{5A727D9D18DFD3CF}" {
-     m_vOffsetPosition 0 0.5 0
-    }
-    SCR_ParticleSpawnable "{5A72D897E7094DA0}" {
-     m_vOffsetPosition 0 0.5 0
-     m_Particle "{4D770DEE0A5ABFED}VFX/Gather/IronOre.ptc"
-     m_bDirectional 0
-    }
-   }
-   m_aDamagePhases {
-    SCR_DamagePhaseData "{5A4E91862FD91E7D}" {
-     m_fPhaseHealth 40
-     m_PhaseModel ""
-     m_PhaseDestroySpawnObjects {
-      EL_SizeChange "{5A74C7AA8F71CAC2}" {
-       m_fScale 0.25
-      }
-      SCR_ParticleSpawnable "{5A72D8964A8AA502}" {
-       m_vOffsetPosition 0 0.25 0
-       m_Particle "{4D770DEE0A5ABFED}VFX/Gather/IronOre.ptc"
-       m_bDirectional 0
-      }
-      EL_RandomPrefabSpawnable "{5A727D9D2B9C1C0D}" {
-       m_vOffsetPosition 0 0.25 0
-      }
-     }
-    }
-    SCR_DamagePhaseData "{5A4E9186265D5D98}" {
-     m_fPhaseHealth 40
-     m_PhaseModel ""
-    }
-   }
-  }
- }
- coords 112.36 0 143.53
+ coords 112.45 0.001 143.64
 }
 SCR_DestructibleBuildingEntity : "{31CAD6AEE7E7E4CF}Prefabs/Structures/Cultural/Castles/Castle_01_Stairs_01.et" {
  coords 112.796 0.415 149.58
  angleY 90
  scale 0.25
+}
+GenericEntity : "{3C4F54AD0CB24525}Prefabs/Resources/Mining/GoldOre.et" {
+ coords 114.594 0.001 143.487
 }
 EL_MiningArea : "{530D05E39B25A8C8}Prefabs/Resources/Mining/MiningArea.et" {
  coords 100.506 0.001 157.28
@@ -207,14 +38,11 @@ EL_MiningArea : "{530D05E39B25A8C8}Prefabs/Resources/Mining/MiningArea.et" {
   }
  }
 }
-GenericEntity CopperBar_5A4E9B16234E2793 : "{577A665F1662E7AD}Prefabs/Resources/Mining/CopperBar.et" {
+GenericEntity CopperBar_5A4E9B16234E2793 : "{577A665F1662E7AD}Prefabs/Items/Resources/CopperBar.et" {
  coords 110.204 0.88 143.685
 }
-GenericEntity : "{622F9989DDC4865B}PrefabLibrary/Props/Civilian/Recreation/TableRecreation_01.et" {
+SCR_DestructibleEntity : "{622F9989DDC4865B}PrefabLibrary/Props/Civilian/Recreation/TableRecreation_01/TableRecreation_01.et" {
  coords 110.616 -0.019 143.642
-}
-GenericEntity : "{71AD3D0821C99242}Prefabs/Resources/Mining/MinableOreCell_Base.et" {
- coords 116.151 0.001 147.913
 }
 GenericEntity : "{8243CC3B73B19449}Prefabs/Props/Civilian/Fireplace_01_hot_decal.et" {
  coords 114.122 0.038 148.882
@@ -252,7 +80,7 @@ GenericEntity : "{8594DC1E8A135607}Prefabs/Processor/EL_Processor_Base.et" {
      }
      m_aProcessingInputs {
       EL_ProcessingInput "{5A7510CB415DFC54}" {
-       m_InputPrefab "{6853E2E2AE878611}Prefabs/Resources/Mining/IronNugget.et"
+       m_InputPrefab "{6853E2E2AE878611}Prefabs/Items/Resources/IronNugget.et"
       }
      }
     }
@@ -261,15 +89,6 @@ GenericEntity : "{8594DC1E8A135607}Prefabs/Processor/EL_Processor_Base.et" {
  }
  coords 113.995 0.001 149.09
  angleY 90
-}
-GenericEntity : "{85DDB61EB2072EFB}Prefabs/Resources/Mining/GOLD TEST.et" {
- components {
-  EL_DestructionMultiPhaseSingleComponent "{5A728BF9CE2405EB}" {
-   m_DestroySpawnObjects {
-   }
-  }
- }
- coords 114.5 0 143.493
 }
 GenericEntity : "{88F43FF542BB6767}Prefabs/Resources/Mining/Stone.et" {
  components {
@@ -285,8 +104,19 @@ GenericEntity : "{88F43FF542BB6767}Prefabs/Resources/Mining/Stone.et" {
      m_PhaseDestroySpawnObjects {
       SCR_ParticleSpawnable "{5A4EAC81E1A480A8}" {
        m_vOffsetPosition 0 0.5 0
-       m_Particle "{4D770DEE0A5ABFED}VFX/Gather/IronOre.ptc"
+       m_Particle "{4D770DEE0A5ABFED}Particles/Gather/IronOre.ptc"
        m_bAtCenter 0
+      }
+      EL_SizeChange "{5A74C7AA8F71CAC2}" {
+       m_fScale 0.25
+      }
+      SCR_ParticleSpawnable "{5A72D8964A8AA502}" {
+       m_vOffsetPosition 0 0.25 0
+       m_Particle "{4D770DEE0A5ABFED}Particles/Gather/IronOre.ptc"
+       m_bDirectional 0
+      }
+      EL_RandomPrefabSpawnable "{5A727D9D2B9C1C0D}" {
+       m_vOffsetPosition 0 0.25 0
       }
      }
     }
@@ -296,7 +126,7 @@ GenericEntity : "{88F43FF542BB6767}Prefabs/Resources/Mining/Stone.et" {
      m_PhaseDestroySpawnObjects {
       SCR_ParticleSpawnable "{5A4EAC800BFB59B6}" {
        m_vOffsetPosition 0 0.25 0
-       m_Particle "{4D770DEE0A5ABFED}VFX/Gather/IronOre.ptc"
+       m_Particle "{4D770DEE0A5ABFED}Particles/Gather/IronOre.ptc"
        m_bAtCenter 0
       }
      }
@@ -304,21 +134,60 @@ GenericEntity : "{88F43FF542BB6767}Prefabs/Resources/Mining/Stone.et" {
    }
    m_eMaterialSoundType ROCK
   }
+  MeshObject "{59A73088D86C4A23}" {
+   Object "{6399C4DB701BF230}Assets/Resources/Mining/MetalOre.xob"
+   Materials {
+    MaterialAssignClass "{59A73088CE0292A6}" {
+     SourceMaterial "Material"
+     AssignedMaterial "{29473C87C35726A4}Assets/Resources/Mining/Data/Iron.emat"
+    }
+   }
+  }
   MeshObject "{59F0709385A10D16}" {
+  }
+  Hierarchy "{59D4ABCF5AB3DB10}" {
   }
   Hierarchy "{59F0709385A10D0D}" {
   }
+  RigidBody "{59A73088D86C4A1C}" {
+   LayerPreset "RockFireView"
+   Mass 1000
+   AngularSleepingThreashold 1
+   ModelGeometry 1
+   Static 1
+  }
   RigidBody "{59F0709385A10D79}" {
+  }
+  ActionsManagerComponent "{59CAE1F43140E8A2}" {
+   ActionContexts {
+    UserActionContext "{59CAE1F430421FC1}" {
+     ContextName "default"
+     Position PointInfo "{59CAE1F4833DF683}" {
+     }
+     Radius 1
+    }
+   }
+   additionalActions {
+    EL_GatherAction "{59CAE1F4589CF791}" {
+     ParentContextList {
+      "default"
+     }
+     Duration 1
+     m_GatherItemPrefab "{6853E2E2AE878611}Prefabs/Items/Resources/IronNugget.et"
+    }
+   }
   }
   ActionsManagerComponent "{59F0709385A13EF5}" {
    Enabled 0
+  }
+  RplComponent "{59A73088D86C4A13}" {
   }
   RplComponent "{59F0709385A13E0D}" {
   }
  }
  coords 118.527 0 143.157
 }
-GenericEntity GoldNugget_5A4E9B16234E2651 : "{8F81BD0BF343CF49}Prefabs/Resources/Mining/GoldNugget.et" {
+GenericEntity GoldNugget_5A4E9B16234E2651 : "{8F81BD0BF343CF49}Prefabs/Items/Resources/GoldNugget.et" {
  components {
   SoundComponent "{5A4ADB24952425BA}" {
    Filenames +{
@@ -381,10 +250,10 @@ GenericEntity GoldNugget_5A4E9B16234E2651 : "{8F81BD0BF343CF49}Prefabs/Resources
  }
  coords 111.024 0.88 143.395
 }
-GenericEntity GoldBar_5A4E9B16234E26A7 : "{ACC9A10F0F20F5C4}Prefabs/Resources/Mining/GoldBar.et" {
+GenericEntity GoldBar_5A4E9B16234E26A7 : "{ACC9A10F0F20F5C4}Prefabs/Items/Resources/GoldBar.et" {
  coords 111.009 0.878 143.665
 }
-$grp GenericEntity : "{BCD1E8CD7F975074}Prefabs/Resources/Mining/IronBar.et" {
+$grp GenericEntity : "{BCD1E8CD7F975074}Prefabs/Items/Resources/IronBar.et" {
  IronBar_5A4E9B16234E26FC {
   coords 110.613 0.879 143.678
  }
@@ -400,48 +269,5 @@ $grp GenericEntity : "{BCD1E8CD7F975074}Prefabs/Resources/Mining/IronBar.et" {
  }
 }
 GenericEntity : "{C7FC93FD15F0574C}Prefabs/Resources/Mining/CopperOre.et" {
- components {
-  EL_DestructionMultiPhaseSingleComponent "{5A4E91862DCCD788}" {
-   m_aDamagePhases {
-    SCR_DamagePhaseData "{5A4E91862FD91E7D}" {
-     m_PhaseDestroySpawnObjects {
-      SCR_ParticleSpawnable "{5A4EAC81E1A480A8}" {
-       m_Particle "{7D88FE34768DD1F7}VFX/Gather/CopperOre.ptc"
-      }
-     }
-    }
-    SCR_DamagePhaseData "{5A4E9186265D5D98}" {
-     m_fPhaseHealth 33
-     m_PhaseModel "{D9C2AC8EC75D0BFE}Assets/Resources/Mining/ore_3.xob"
-     m_PhaseDestroySpawnObjects {
-      SCR_ParticleSpawnable "{5A4EAC800BFB59B6}" {
-       m_vOffsetPosition 0 0.25 0
-       m_Particle "{4D770DEE0A5ABFED}VFX/Gather/IronOre.ptc"
-       m_bAtCenter 0
-      }
-     }
-    }
-   }
-  }
-  MeshObject "{59F0709385A10D16}" {
-   Materials {
-    MaterialAssignClass "{59F07093FF1469CC}" {
-     SourceMaterial "Material"
-     AssignedMaterial "{C20061C6145643B8}Assets/Resources/Mining/Data/Copper.emat"
-    }
-   }
-  }
-  Hierarchy "{59F0709385A10D0D}" {
-  }
-  RigidBody "{59F0709385A10D79}" {
-   LayerPreset "Terrain"
-   Mass 1000
-   AngularSleepingThreashold 1
-   ModelGeometry 1
-   Static 1
-  }
-  RplComponent "{59F0709385A13E0D}" {
-  }
- }
- coords 116.397 0 143.476
+ coords 116.988 0.001 143.467
 }

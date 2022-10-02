@@ -1,47 +1,43 @@
-GenericEntity {
- ID "59A73088C02F1385"
+GenericEntity : "{F36375B16DB07ABD}Prefabs/Resources/Mining/MinableOre.et" {
+ ID "59F07093BF56FFC2"
  components {
-  MeshObject "{59A73088DB3D50B3}" {
-   Object "{6399C4DB701BF230}Assets/Resources/Mining/MetalOre.xob"
+  EL_DestructionMultiPhaseSingleComponent "{5A4E91862DCCD788}" {
+   m_DestroySpawnObjects {
+    EL_RandomPrefabSpawnable "{5A727D9D18DFD3CF}" {
+     m_Prefabs {
+      "{8F81BD0BF343CF49}Prefabs/Items/Resources/GoldNugget.et"
+     }
+    }
+   }
+   m_aDamagePhases {
+    SCR_DamagePhaseData "{5A4E91862FD91E7D}" {
+     m_PhaseDestroySpawnObjects {
+      EL_RandomPrefabSpawnable "{5A727D9D2B9C1C0D}" {
+       m_Prefabs {
+        "{8F81BD0BF343CF49}Prefabs/Items/Resources/GoldNugget.et"
+       }
+      }
+     }
+    }
+    SCR_DamagePhaseData "{5A4E9186265D5D98}" {
+     m_PhaseDestroySpawnObjects {
+      EL_RandomPrefabSpawnable "{5A84ED20BF80D2CE}" {
+       m_Prefabs {
+        "{8F81BD0BF343CF49}Prefabs/Items/Resources/GoldNugget.et"
+       }
+      }
+     }
+    }
+   }
+  }
+  MeshObject "{59F0709385A10D16}" {
    Materials {
-    MaterialAssignClass "{59A73088D2C4BAC0}" {
+    MaterialAssignClass "{5A84ED20391C6E7C}" {
      SourceMaterial "Material"
      AssignedMaterial "{9C005A256F4C2921}Assets/Resources/Mining/Data/Gold.emat"
     }
    }
   }
-  Hierarchy "{59D4ABCF5E05337B}" {
-  }
-  RigidBody "{59A73088DB3D50AF}" {
-   LayerPreset "RockFireView"
-   Mass 1000
-   AngularSleepingThreashold 1
-   ModelGeometry 1
-   Static 1
-  }
-  ActionsManagerComponent "{59D29D5673B5253E}" {
-   ActionContexts {
-    UserActionContext "{59D29D5672760F76}" {
-     ContextName "default"
-     Position PointInfo "{59D29D567727EE6E}" {
-     }
-     Radius 1
-    }
-   }
-   additionalActions {
-    EL_GatherAction "{59D29D5676E42848}" {
-     ParentContextList {
-      "default"
-     }
-     Duration 1
-     m_GatherItemDisplayName "Gold Ore"
-     m_GatherItemPrefab "{8F81BD0BF343CF49}Prefabs/Resources/Mining/GoldNugget.et"
-     m_bDeleteAfterGather 1
-    }
-   }
-  }
-  RplComponent "{59A73088DB3D50A3}" {
-  }
  }
- coords 105.117 0.097 132.47
+ coords 114.25 0 141.503
 }

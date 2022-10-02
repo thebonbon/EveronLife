@@ -3,22 +3,28 @@ GenericEntity : "{F36375B16DB07ABD}Prefabs/Resources/Mining/MinableOre.et" {
  components {
   EL_DestructionMultiPhaseSingleComponent "{5A4E91862DCCD788}" {
    m_DestroySpawnObjects {
-    SCR_ParticleSpawnable "{5A6F15D68E85693F}" {
-     m_Particle "{7D88FE34768DD1F7}VFX/Gather/CopperOre.ptc"
+    EL_RandomPrefabSpawnable "{5A727D9D18DFD3CF}" {
+     m_Prefabs {
+      "{1881C4F2BD43E3E1}Prefabs/Items/Resources/CopperNugget.et"
+     }
     }
    }
    m_aDamagePhases {
     SCR_DamagePhaseData "{5A4E91862FD91E7D}" {
      m_PhaseDestroySpawnObjects {
-      SCR_ParticleSpawnable "{5A4EAC81E1A480A8}" {
-       m_Particle "{7D88FE34768DD1F7}VFX/Gather/CopperOre.ptc"
+      EL_RandomPrefabSpawnable "{5A727D9D2B9C1C0D}" {
+       m_Prefabs {
+        "{1881C4F2BD43E3E1}Prefabs/Items/Resources/CopperNugget.et"
+       }
       }
      }
     }
     SCR_DamagePhaseData "{5A4E9186265D5D98}" {
      m_PhaseDestroySpawnObjects {
-      SCR_ParticleSpawnable "{5A4EAC800BFB59B6}" {
-       m_Particle "{7D88FE34768DD1F7}VFX/Gather/CopperOre.ptc"
+      EL_RandomPrefabSpawnable "{5A84ED20BF80D2CE}" {
+       m_Prefabs {
+        "{1881C4F2BD43E3E1}Prefabs/Items/Resources/CopperNugget.et"
+       }
       }
      }
     }
@@ -26,12 +32,12 @@ GenericEntity : "{F36375B16DB07ABD}Prefabs/Resources/Mining/MinableOre.et" {
   }
   MeshObject "{59F0709385A10D16}" {
    Materials {
-    MaterialAssignClass "{59F07093FF1469CC}" {
+    MaterialAssignClass "{5A84ED20391C6E7C}" {
      SourceMaterial "Material"
      AssignedMaterial "{C20061C6145643B8}Assets/Resources/Mining/Data/Copper.emat"
     }
    }
   }
  }
- coords 116.796 0.001 143.459
+ coords 116.475 0 141.761
 }

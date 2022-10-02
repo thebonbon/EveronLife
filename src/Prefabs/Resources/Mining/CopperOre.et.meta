@@ -1,5 +1,5 @@
 MetaFileClass {
- Name "{8FAD0900C1EE1050}Prefabs/Resources/Mining/IronOreCells.et"
+ Name "{C7FC93FD15F0574C}Prefabs/Resources/Mining/CopperOre.et"
  Configurations {
   EntityTemplateResourceClass PC {
   }

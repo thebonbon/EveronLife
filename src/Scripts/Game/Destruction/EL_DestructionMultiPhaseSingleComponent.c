@@ -140,7 +140,9 @@ class EL_ChangeSizeTitle : BaseContainerCustomTitle
 {
 	override bool _WB_GetCustomTitle(BaseContainer source, out string title)
 	{
-		title = "Size Change";
+		float f_Scale;
+		source.Get("m_fScale", f_Scale);
+		title = "Size Change: " + f_Scale;
 		return true;
 	}
 };
