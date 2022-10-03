@@ -1,10 +1,3 @@
-SCR_ParticleEmitter {
- coords 115.274 1.374 149.101
- m_EffectPath "{B4400D21DBADCCF2}Particles/Fluid.ptc"
- m_PlayOnSpawn 0
- m_DeleteOnFinish 0
- m_PlayInEditor 0
-}
 GenericEntity CopperNugget_5A4E9B16234E2773 : "{1881C4F2BD43E3E1}Prefabs/Items/Resources/CopperNugget.et" {
  coords 110.206 0.88 143.377
 }
@@ -70,7 +63,7 @@ GenericEntity : "{8594DC1E8A135607}Prefabs/Processor/EL_Processor_Base.et" {
      Position PointInfo "{598F21A875320722}" {
       Offset 0 2.9155 0.187
      }
-     Radius 0.895
+     Radius 9.012
     }
    }
    additionalActions {
@@ -78,11 +71,24 @@ GenericEntity : "{8594DC1E8A135607}Prefabs/Processor/EL_Processor_Base.et" {
      UIInfo UIInfo "{5A7510CB31F86DEA}" {
       Name "Input Iron Ore"
      }
+     Duration 1
      m_aProcessingInputs {
       EL_ProcessingInput "{5A7510CB415DFC54}" {
        m_InputPrefab "{6853E2E2AE878611}Prefabs/Items/Resources/IronNugget.et"
       }
      }
+     m_aProcessingOutputs {
+      EL_ProcessingOutput "{5A871A81787769A2}" {
+       m_OutputPrefab "{BCD1E8CD7F975074}Prefabs/Items/Resources/IronBar.et"
+      }
+     }
+     m_ProcessParticle "{B4400D21DBADCCF2}Particles/Fluid.ptc"
+     m_vParticleOffset -0.011 1.373 1.279
+     m_vParticleRotation 0 -90 0
+     m_fProcessTime 5
+     m_bForceDropOutput 1
+     m_vDropOffset 0 1.17 1.439
+     m_vRotation 90 0 0
     }
    }
   }
@@ -156,20 +162,8 @@ GenericEntity GoldNugget_5A4E9B16234E2651 : "{8F81BD0BF343CF49}Prefabs/Items/Res
 GenericEntity GoldBar_5A4E9B16234E26A7 : "{ACC9A10F0F20F5C4}Prefabs/Items/Resources/GoldBar.et" {
  coords 111.009 0.878 143.665
 }
-$grp GenericEntity : "{BCD1E8CD7F975074}Prefabs/Items/Resources/IronBar.et" {
- IronBar_5A4E9B16234E26FC {
-  coords 110.613 0.879 143.678
- }
- IronBar_5A7510CB061876B7 {
-  components {
-   EL_PersistenceComponent "{5A0D2D213B33ECD8}" {
-    Enabled 0
-   }
-  }
-  coords 115.434 1.171 149.092
-  angleY -90
-  scale 2
- }
+GenericEntity IronBar_5A4E9B16234E26FC : "{BCD1E8CD7F975074}Prefabs/Items/Resources/IronBar.et" {
+ coords 110.613 0.879 143.678
 }
 GenericEntity : "{C7FC93FD15F0574C}Prefabs/Resources/Mining/CopperOre.et" {
  coords 116.988 0.001 143.467

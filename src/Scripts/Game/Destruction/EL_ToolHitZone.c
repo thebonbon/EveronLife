@@ -26,7 +26,6 @@ class EL_ToolHitZone : ScriptedHitZone
 		
 		return super.ComputeEffectiveDamage(damageType, rawDamage, hitEntity, struckHitZone, damageSource, damageSourceGunner, damageSourceParent, hitMaterial, colliderID, hitTransform, impactVelocity, nodeID, isDOT);
 
-			
 	}
 	
 	//------------------------------------------------------------------------------------------------

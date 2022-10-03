@@ -2,7 +2,17 @@ MetaFileClass {
  Name "{75ABFBE70F78E212}Assets/Resources/Mining/MetalBar.xob"
  Configurations {
   FBXResourceClass PC {
-   Scale 0.5 0.5 0.5
+   Scale 1 1 1
+   MaterialAssigns {
+    MaterialAssignClass "{5A87229436FFC92D}" {
+     SourceMaterial "Material"
+     AssignedMaterial "{8B402F2084937723}Assets/Resources/Mining/Data/Material.emat"
+    }
+   }
+   MeshParams {
+    MeshParam MetalBar {
+    }
+   }
    GeometryParams {
     GeometryParam UCX_MetalBar {
      LayerPreset "ItemFireView"

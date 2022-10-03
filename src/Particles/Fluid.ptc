@@ -2,7 +2,7 @@ EffectDef {
  Emitters {
   EmitterDef MainFluid {
    ConeAngle 360 0 5
-   MaxNum 1000
+   MaxNum 500
    BirthRate 500
    Angles 0 0 135
    ParticleType Prefab
@@ -13,10 +13,12 @@ EffectDef {
    Velocity 0.4
    VelocityRND 0.1
    GravityMultiply 0.05
+   Lifetime 1
+   EmittingTime 1
   }
   EmitterDef Splashes {
    ConeAngle 360 0 90
-   MaxNum 22
+   MaxNum 20
    BirthRate 36.7
    Angles 0 0 135
    ParticleType Prefab
@@ -27,6 +29,7 @@ EffectDef {
    Velocity 0.4
    VelocityRND 0.1
    GravityMultiply 0.05
+   Lifetime 1
   }
  }
 }
