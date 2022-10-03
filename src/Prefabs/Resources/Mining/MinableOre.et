@@ -15,8 +15,10 @@ GenericEntity {
      "Fragmentation multiplier" 0
      "Explosive multiplier" 0
      "Incendiary multiplier" 0
-     m_HitVFX "{1FAA1339FE4492AF}Prefabs/Particles/OreHit.et"
+     m_HitParticle "{FCBF6633BE03CA37}Particles/Gather/OreHit.ptc"
      m_fEffectiveDamage 20.23
+     m_fShakeIntensity 0.01
+     m_iShakeAmount 4
     }
    }
    "Fall damage min height" 5

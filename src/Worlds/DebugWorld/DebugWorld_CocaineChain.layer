@@ -19,8 +19,6 @@ GenericEntity : "{1EA06AA76191AE7A}Prefabs/Processor/Cocaine_Processor.et" {
     }
    }
   }
-  RplComponent "{59C6B07C18596B0F}" {
-  }
  }
  coords 106.758 0.008 143.648
 }
@@ -28,7 +26,7 @@ Tree : "{30549DAE871F6E7E}Prefabs/Vegetation/Bush/Coca_bush.et" {
  coords 103.773 0.416 143.714
  angleY 0
 }
-$grp GenericEntity : "{622F9989DDC4865B}PrefabLibrary/Props/Civilian/Recreation/TableRecreation_01.et" {
+$grp SCR_DestructibleEntity : "{622F9989DDC4865B}PrefabLibrary/Props/Civilian/Recreation/TableRecreation_01/TableRecreation_01.et" {
  {
   coords 105.458 0.004 143.69
  }
@@ -165,9 +163,6 @@ GenericEntity CementBag_5A4E9B16234E2221 : "{D58674633332DC86}Prefabs/Items/Reso
  components {
   EL_PersistenceComponent "{5A0D2D213B33ECD8}" {
    Enabled 0
-  }
-  RigidBody "{5A4ACBB1A0084DA1}" {
-   Active Active
   }
  }
  coords 105.908 0.901 143.517

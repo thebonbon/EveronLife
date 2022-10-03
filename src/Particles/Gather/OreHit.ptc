@@ -10,9 +10,7 @@ EffectDef {
    SizeRND 3
    ScaleX 0.5
    ScaleY 0.5
-   RotMultiplier 15
    RandomRotDir 1
-   RandomAngle 1
    Velocity 2
    VelAffect 0
    AirResistance 1
