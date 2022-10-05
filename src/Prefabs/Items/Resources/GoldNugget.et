@@ -6,6 +6,9 @@ GenericEntity : "{6A40DF87E1E4E960}Prefabs/Items/Core/ItemInteractable_Base.et" 
     "{0026043E3CD828D0}Sounds/Items/_SharedData/PickUp/Items_PickUp_Generic_Metallic.acp"
    }
   }
+  EL_PersistenceComponent "{5A0D2D213B33ECD8}" {
+   Enabled 0
+  }
   InventoryItemComponent "{5222EB4D0C73006B}" {
    Attributes SCR_ItemAttributeCollection "{5222EB4D0A2B466B}" {
     ItemDisplayName UIInfo "{5222EB4D07D865FA}" {
@@ -50,6 +53,9 @@ GenericEntity : "{6A40DF87E1E4E960}Prefabs/Items/Core/ItemInteractable_Base.et" 
      AssignedMaterial "{9C005A256F4C2921}Assets/Resources/Mining/Data/Gold.emat"
     }
    }
+  }
+  RigidBody "{5A4ACBB1A0084DA1}" {
+   Active Active
   }
   SCR_ConsumableItemComponent "{59A730880E261BBD}" {
    m_eAnimVariable ADRIANOV

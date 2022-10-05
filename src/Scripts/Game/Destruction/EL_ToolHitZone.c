@@ -17,7 +17,7 @@ class EL_ToolHitZone : ScriptedHitZone
 	{
 		//Check for tool
 		if (rawDamage != m_fEffectiveDamage) return 0;
-		
+
 		SCR_ParticleEmitter.Create(m_HitParticle, hitTransform[0], hitTransform[1]);
 		
 		//Shake "Animation"
