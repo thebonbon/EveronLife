@@ -1,3 +1,69 @@
+$grp CommentEntity {
+ {
+  coords 119.486 0.001 143.246
+  angleX -90
+  angleY -180
+  angleZ -180
+  m_Comment "-->"
+  m_Size 1
+  m_Color 0.071 0.192 0.561
+  m_VisibleIngame 1
+ }
+ {
+  coords 125.767 0.001 143.246
+  angleX -90
+  angleY -180
+  angleZ -180
+  m_Comment "-->"
+  m_Size 1
+  m_Color 0.071 0.192 0.561
+  m_VisibleIngame 1
+ }
+ {
+  coords 129.99 0.001 144.961
+  angleX -90
+  angleY 180
+  angleZ 135
+  m_Comment "-->"
+  m_Size 1
+  m_Color 0.071 0.192 0.561
+  m_VisibleIngame 1
+ }
+ {
+  coords 132.684 0.001 148.311
+  angleX -90
+  angleZ -90
+  m_Comment "-->"
+  m_Size 1
+  m_Color 0.071 0.192 0.561
+  m_VisibleIngame 1
+ }
+ {
+  coords 134.428 0.121 152.601
+  angleX -90
+  angleY 180
+  angleZ 150
+  m_Comment "-->"
+  m_Size 1
+  m_Color 0.071 0.192 0.561
+  m_VisibleIngame 1
+ }
+}
+GenericEntity : "{01E19508701473A6}Prefabs/Processor/Ore_Processor.et" {
+ components {
+  MeshObject "{598F21A867C4015C}" {
+   Materials {
+    MaterialAssignClass "{5A7510CC0B11C513}" {
+     SourceMaterial "Material"
+     AssignedMaterial "{4A8694FF26DA3078}Assets/Props/Industrial/BarrelMetal_01/Data/BarrelMetal_01_rust.emat"
+    }
+   }
+  }
+ }
+ coords 138.028 0.108 154.338
+ angleY -90
+ scale 0.5
+}
 GenericEntity CopperNugget_5A4E9B16234E2773 : "{1881C4F2BD43E3E1}Prefabs/Items/Resources/CopperNugget.et" {
  coords 110.206 0.88 143.377
 }
@@ -6,11 +72,6 @@ GenericEntity : "{23341E2840F5ACB4}Prefabs/Tools/Pickaxe.et" {
 }
 GenericEntity : "{2C571D6F7C05E095}Prefabs/Resources/Mining/IronOre.et" {
  coords 112.45 0.001 143.64
-}
-SCR_DestructibleBuildingEntity : "{31CAD6AEE7E7E4CF}Prefabs/Structures/Cultural/Castles/Castle_01_Stairs_01.et" {
- coords 112.796 0.415 149.58
- angleY 90
- scale 0.25
 }
 GenericEntity : "{3C4F54AD0CB24525}Prefabs/Resources/Mining/GoldOre.et" {
  coords 114.594 0.001 143.487
@@ -37,64 +98,17 @@ GenericEntity CopperBar_5A4E9B16234E2793 : "{577A665F1662E7AD}Prefabs/Items/Reso
 SCR_DestructibleEntity : "{622F9989DDC4865B}PrefabLibrary/Props/Civilian/Recreation/TableRecreation_01/TableRecreation_01.et" {
  coords 110.616 -0.019 143.642
 }
+GenericEntity IronNugget_5A8AC256B4B84857 : "{6853E2E2AE878611}Prefabs/Items/Resources/IronNugget.et" {
+ coords 110.581 0.88 143.344
+}
 GenericEntity : "{8243CC3B73B19449}Prefabs/Props/Civilian/Fireplace_01_hot_decal.et" {
- coords 114.122 0.038 148.882
+ coords 137.883 0.038 154.251
  {
   SCR_ParticleEmitter : "{899360C930DA3EE3}Prefabs/Particles/Campfire_burning.et" {
    coords 0 0 0
    m_PlayInEditor 0
   }
  }
-}
-GenericEntity : "{8594DC1E8A135607}Prefabs/Processor/EL_Processor_Base.et" {
- components {
-  MeshObject "{598F21A867C4015C}" {
-   Object "{E9F08C2BF2CEE749}Assets/Resources/Forge/Forge.xob"
-   Materials {
-    MaterialAssignClass "{5A7510CC0B11C513}" {
-     SourceMaterial "Material"
-     AssignedMaterial "{273053CA9C745B16}Assets/Rocks/Granite/Data/Granite_Cluster_04.emat"
-    }
-   }
-  }
-  ActionsManagerComponent "{598F21A8710B89C1}" {
-   ActionContexts {
-    UserActionContext "{598F21A871DA7304}" {
-     Position PointInfo "{598F21A875320722}" {
-      Offset 0 2.9155 0.187
-     }
-     Radius 9.012
-    }
-   }
-   additionalActions {
-    EL_ProcessAction "{598F21A877BE6DEE}" {
-     UIInfo UIInfo "{5A7510CB31F86DEA}" {
-      Name "Input Iron Ore"
-     }
-     Duration 1
-     m_aProcessingInputs {
-      EL_ProcessingInput "{5A7510CB415DFC54}" {
-       m_InputPrefab "{6853E2E2AE878611}Prefabs/Items/Resources/IronNugget.et"
-      }
-     }
-     m_aProcessingOutputs {
-      EL_ProcessingOutput "{5A871A81787769A2}" {
-       m_OutputPrefab "{BCD1E8CD7F975074}Prefabs/Items/Resources/IronBar.et"
-      }
-     }
-     m_ProcessParticle "{B4400D21DBADCCF2}Particles/Fluid.ptc"
-     m_vParticleOffset -0.011 1.373 1.279
-     m_vParticleRotation 0 -90 0
-     m_fProcessTime 5
-     m_bForceDropOutput 1
-     m_vDropOffset 0 1.17 1.439
-     m_vRotation 90 0 0
-    }
-   }
-  }
- }
- coords 113.995 0.001 149.09
- angleY 90
 }
 GenericEntity GoldNugget_5A4E9B16234E2651 : "{8F81BD0BF343CF49}Prefabs/Items/Resources/GoldNugget.et" {
  coords 111.012 0.88 143.343

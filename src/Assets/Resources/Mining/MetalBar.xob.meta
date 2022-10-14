@@ -2,9 +2,9 @@ MetaFileClass {
  Name "{75ABFBE70F78E212}Assets/Resources/Mining/MetalBar.xob"
  Configurations {
   FBXResourceClass PC {
-   Scale 1 1 1
+   Scale 0.5 0.5 0.5
    MaterialAssigns {
-    MaterialAssignClass "{5A87229436FFC92D}" {
+    MaterialAssignClass "{5A9C64EBB877C7B1}" {
      SourceMaterial "Material"
      AssignedMaterial "{8B402F2084937723}Assets/Resources/Mining/Data/Material.emat"
     }

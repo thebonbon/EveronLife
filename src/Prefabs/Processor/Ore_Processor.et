@@ -1,0 +1,51 @@
+GenericEntity : "{8594DC1E8A135607}Prefabs/Processor/EL_Processor_Base.et" {
+ ID "598F21A86EB5B48E"
+ components {
+  MeshObject "{598F21A867C4015C}" {
+   Object "{E9F08C2BF2CEE749}Assets/Resources/Forge/Forge.xob"
+   Materials {
+    MaterialAssignClass "{5A7510CC0B11C513}" {
+     SourceMaterial "Material"
+     AssignedMaterial "{273053CA9C745B16}Assets/Rocks/Granite/Data/Granite_Cluster_04.emat"
+    }
+   }
+  }
+  ActionsManagerComponent "{598F21A8710B89C1}" {
+   ActionContexts {
+    UserActionContext "{598F21A871DA7304}" {
+     Position PointInfo "{598F21A875320722}" {
+      Offset 0 2.9155 0.187
+     }
+     Radius 9.012
+    }
+   }
+   additionalActions {
+    EL_ProcessAction "{598F21A877BE6DEE}" {
+     UIInfo UIInfo "{5A7510CB31F86DEA}" {
+      Name "Input Iron Ore"
+     }
+     Duration 1
+     m_aProcessingInputs {
+      EL_ProcessingInput "{5A7510CB415DFC54}" {
+       m_InputPrefab "{6853E2E2AE878611}Prefabs/Items/Resources/IronNugget.et"
+      }
+     }
+     m_aProcessingOutputs {
+      EL_ProcessingOutput "{5A871A81787769A2}" {
+       m_OutputPrefab "{BCD1E8CD7F975074}Prefabs/Items/Resources/IronBar.et"
+      }
+     }
+     m_ProcessParticle "{B4400D21DBADCCF2}Particles/Fluid.ptc"
+     m_vParticleOffset -0.011 1.373 1.279
+     m_vParticleRotation 0 -90 0
+     m_fProcessTime 5
+     m_bForceDropOutput 1
+     m_vDropOffset 0 1.17 1.439
+     m_vRotation 90 0 0
+    }
+   }
+  }
+ }
+ coords 113.995 0.001 149.09
+ angleY 90
+}
