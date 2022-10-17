@@ -9,5 +9,7 @@ SCR_ChimeraCharacter : "{37578B1666981FCE}Prefabs/Characters/Core/Character_Base
     Surname ""
    }
   }
+  EL_ShopCartManager "{5AA3459AF5D2741D}" {
+  }
  }
 }

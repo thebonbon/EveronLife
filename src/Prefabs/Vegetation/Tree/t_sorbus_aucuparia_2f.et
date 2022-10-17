@@ -22,7 +22,6 @@ Tree : "{388AE316D09D0680}Prefabs/Vegetation/Core/Tree_Base.et" {
       "default"
      }
      Duration 1
-     m_GatherItemDisplayName "Rowan Berries"
      m_GatherItemPrefab "{73CF2BF72525F5D5}Prefabs/Items/Food/RowanBerries.et"
     }
    }

@@ -12,7 +12,17 @@ Vehicle UAZ1 : "{259EE7B78C51B624}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469.et" {
    m_fVehicleDestroyDamage 11880.1
   }
   ActionsManagerComponent "{C97BE5489221AE18}" {
+   ActionContexts {
+    UserActionContext "{5AA345996A72CAD0}" {
+     Radius 0.3
+    }
+   }
    additionalActions {
+    EL_ParkVehicleAction "{5AA345998B57C946}" {
+     ParentContextList {
+      ""
+     }
+    }
     EL_BuyAction "{59C68136336BDC31}" {
      ParentContextList {
       "door_l01"
@@ -25,14 +35,16 @@ Vehicle UAZ1 : "{259EE7B78C51B624}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469.et" {
    }
   }
  }
- coords 95.613 0.001 131.573
+ coords 92.912 0.001 134.939
 }
-GenericEntity : "{622F9989DDC4865B}PrefabLibrary/Props/Civilian/Recreation/TableRecreation_01.et" {
+SCR_DestructibleEntity : "{622F9989DDC4865B}PrefabLibrary/Props/Civilian/Recreation/TableRecreation_01/TableRecreation_01.et" {
  coords 95.756 -0.001 135
  {
   GenericEntity : "{51D31AB07AE3C1C7}Prefabs/Props/Commercial/CashierShop_01.et" {
    components {
     Hierarchy "{59C6AB73A8871A71}" {
+    }
+    ActionsManagerComponent "{59CA650D7157C0AB}" {
     }
     RplComponent "{5624A88DC2D9928D}" {
      Enabled 1

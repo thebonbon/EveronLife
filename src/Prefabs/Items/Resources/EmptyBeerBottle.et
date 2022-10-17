@@ -45,7 +45,6 @@ GenericEntity : "{C95E11C60810F432}Prefabs/Items/Core/Item_Base.et" {
      AssignedMaterial "{222875EE231A7EE5}Assets/Props/Civilian/BeerBottle_01/Data/BeerBottle_01_empty_brown_Palete.emat"
     }
    }
-   LODScale 0.1
    PixelSizeScale 10
   }
   RigidBody "{59CA34829BF8A9DE}" {

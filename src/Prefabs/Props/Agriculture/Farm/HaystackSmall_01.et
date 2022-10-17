@@ -1,4 +1,4 @@
-StaticModelEntity : "{A52C6DE05FE53B3B}Prefabs/Structures/Core/StaticObject_base.et" {
+StaticModelEntity {
  ID "F0DBA538AC2A0552"
  components {
   ActionsManagerComponent "{59CA6659848332FD}" {
@@ -17,8 +17,7 @@ StaticModelEntity : "{A52C6DE05FE53B3B}Prefabs/Structures/Core/StaticObject_base
       "default"
      }
      Duration 5
-     m_GatherItemDisplayName "Hay"
-     m_GatherItemPrefab "{36445C0F0BEE2DE8}Prefabs/Items/Resources/HayBag.et"
+     m_GatherItemPrefab "{36445C0F0BEE2DE8}Prefabs/Items/Resources/FreshHayBag.et"
     }
    }
   }

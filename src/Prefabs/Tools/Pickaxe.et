@@ -18,7 +18,7 @@ GenericEntity {
    }
   }
   MeshObject "{5A72804701BFE6CF}" {
-   Object "{8044C9C7C55120AC}Assets/Tools/Pickaxe/Pickaxe_Final.xob"
+   Object "{8044C9C7C55120AC}Assets/Tools/Pickaxe/Pickaxe.xob"
   }
   Hierarchy "{5A72804701BFE6CA}" {
   }

@@ -44,7 +44,6 @@ GenericEntity {
   }
   MeshObject "{598CB32764285B16}" {
    Object "{FEC338E88366A268}Assets/Props/Civilian/Jerrycan_01/Jerrycan_01.xob"
-   LODScale 0.1
    PixelSizeScale 10
   }
   Hierarchy "{59C881B120DB0B97}" {

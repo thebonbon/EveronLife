@@ -33,7 +33,6 @@ GenericEntity : "{C95E11C60810F432}Prefabs/Items/Core/Item_Base.et" {
     }
     CustomAttributes {
      ItemActionAnimAttributes "{59BC926AFC8EEB1F}" {
-      ActionType Bandage
      }
      PreviewRenderAttributes "{59BC926D73E4B121}" {
       CameraOrbitAngles 270 90 270
@@ -44,7 +43,6 @@ GenericEntity : "{C95E11C60810F432}Prefabs/Items/Core/Item_Base.et" {
   }
   MeshObject "{59BC926AFC8EEB19}" {
    Object "{72F1AA5E0DB83990}Assets/Items/Money/DollarBill.xob"
-   LODScale 0.1
    PixelSizeScale 10
   }
   RigidBody "{59BC926AFC8EEB1B}" {

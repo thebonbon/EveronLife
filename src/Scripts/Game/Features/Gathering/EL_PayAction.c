@@ -64,6 +64,8 @@ class EL_PayAction : ScriptedUserAction
 	//------------------------------------------------------------------------------------------------
 	override bool GetActionNameScript(out string outName)
 	{
+		if (!m_ShopCartManager)
+			return false;
 		outName = string.Format("Pay $%1\n", m_ShopCartManager.GetTotalCartCost());
 		foreach (EL_ShopCartItem cartItem : m_ShopCartManager.m_aShopCartItems)
 		{

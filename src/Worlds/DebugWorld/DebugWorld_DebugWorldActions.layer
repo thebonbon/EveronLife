@@ -1,7 +1,14 @@
+CommentEntity {
+ coords 90.693 0.778 135.143
+ m_Comment "Garage"
+ m_Color 0.071 0.192 0.561
+ m_FaceCamera 1
+ m_VisibleIngame 1
+}
 GenericEntity {
  coords 100.455 -0.001 135
  {
-  $grp GenericEntity : "{622F9989DDC4865B}PrefabLibrary/Props/Civilian/Recreation/TableRecreation_01.et" {
+  $grp SCR_DestructibleEntity : "{622F9989DDC4865B}PrefabLibrary/Props/Civilian/Recreation/TableRecreation_01/TableRecreation_01.et" {
    {
     coords 0.147 0 0
    }
@@ -83,9 +90,47 @@ GenericEntity : "{33882C61BA9F0F90}Prefabs/Props/Civilian/Globe_01.et" {
 GenericEntity Backpack_ALICE_Medium_assembled_5A4E9B16234DA870 : "{5C5C6EE05EE2FF1A}Prefabs/Items/Equipment/Backpacks/Backpack_ALICE_Medium_assembled.et" {
  coords 101.007 0.886 135.394
 }
-GenericEntity : "{8F05D427252644F8}Prefabs/Props/Civilian/Suitcase_01.et" {
- coords 98.349 0 134.854
+GenericEntity Suitcase_01_5AA330B045928F9E : "{8F05D427252644F8}Prefabs/Props/Civilian/Suitcase_01.et" {
+ components {
+  EL_GarageManagerComponent "{5AA330B04D64DC0F}" {
+  }
+  EL_PersistenceComponent "{5AA330B0459281D6}" {
+   m_pSaveData EL_EntitySaveDataBase "{5AA330BA03CE99E0}" {
+    m_aComponents {
+     EL_GarageSaveData "{5AA330BA05267909}" {
+     }
+    }
+   }
+  }
+  ActionsManagerComponent "{5AA330B116B25452}" {
+   ActionContexts {
+    UserActionContext "{5AA330B129AE95BB}" {
+     ContextName "default"
+     Position PointInfo "{5AA330B12A32D838}" {
+     }
+    }
+   }
+   additionalActions {
+    EL_GarageWithdrawAction "{5AA34A280C5E6D6F}" {
+     ParentContextList {
+      "default"
+     }
+     Duration 0.5
+    }
+   }
+  }
+  RplComponent "{5624A88DC2D9928D}" {
+   Enabled 1
+  }
+ }
+ coords 90.693 0 135.143
  angleY 60
+ {
+  BaseGameTriggerEntity : "{AB5C86C286A09CDA}Prefabs/Shop/EL_VehicleSpawnPoint.et" {
+   coords 6.659 0.001 -4.673
+   angleY -60
+  }
+ }
 }
 GenericEntity : "{9ABAFFCBC76D824B}Prefabs/Props/Civilian/NoticeBoardCork_01.et" {
  coords 100.02 0.898 134.46

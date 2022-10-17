@@ -43,7 +43,6 @@ GenericEntity : "{C95E11C60810F432}Prefabs/Items/Core/Item_Base.et" {
      AssignedMaterial "{F0C36633F38101EF}Assets/Items/Resources/GravelBag/GravelBag.emat"
     }
    }
-   LODScale 0.1
    PixelSizeScale 10
   }
   RigidBody "{598A6878445EB14D}" {

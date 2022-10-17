@@ -1,4 +1,4 @@
-SCR_DestructibleBuildingEntity : "{B1F1B1BEB21102A7}Prefabs/Structures/Industrial/Houses/FactoryHall_E_01.et" {
+SCR_DestructibleBuildingEntity : "{B1F1B1BEB21102A7}Prefabs/Structures/Industrial/Houses/FactoryHall_E_01/FactoryHall_E_01.et" {
  coords 130.561 0.008 167.357
  angleY 179.937
 }

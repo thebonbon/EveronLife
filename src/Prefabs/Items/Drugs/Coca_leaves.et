@@ -43,7 +43,6 @@ GenericEntity {
   }
   MeshObject "{598C78D6C44E481F}" {
    Object "{694B4DADA350F737}Assets/Vegetation/Cuttings/Rosa_canina_small_01.xob"
-   LODScale 0.1
    PixelSizeScale 10
   }
   Hierarchy "{59C881B1398B4F59}" {

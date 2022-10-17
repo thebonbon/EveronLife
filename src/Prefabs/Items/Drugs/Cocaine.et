@@ -47,7 +47,6 @@ GenericEntity {
      AssignedMaterial "{230D1A596DBC9DCA}Assets/Items/Drugs/CocainePackage/Data/Cocaine_Package.emat"
     }
    }
-   LODScale 0.1
    PixelSizeScale 10
   }
   Hierarchy "{59C881B1307B550C}" {

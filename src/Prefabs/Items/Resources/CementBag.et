@@ -37,7 +37,6 @@ GenericEntity : "{C95E11C60810F432}Prefabs/Items/Core/Item_Base.et" {
   }
   MeshObject "{598A687937BB7C2C}" {
    Object "{F4A6B9CC408CD0F4}Assets/Props/Military/Sandbags/Sandbag_01_single.xob"
-   LODScale 0.1
    PixelSizeScale 10
   }
   RigidBody "{598A687937BB7C2D}" {

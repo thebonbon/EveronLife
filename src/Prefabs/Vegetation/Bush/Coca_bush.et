@@ -36,11 +36,7 @@ Tree : "{D7163D1B571F4C0C}Prefabs/Vegetation/Core/Bush_Base.et" {
       Name "Gather Coca Leaves"
      }
      Duration 2
-     m_GatherItemDisplayName "Coca Leaves"
      m_GatherItemPrefab "{DD593D31D4F3DFBF}Prefabs/Items/Drugs/Coca_leaves.et"
-     m_AmountGathered 2
-     m_DelayTimeMilliseconds 60000
-     m_DelayGatherQuantity 20
     }
    }
   }
