@@ -1,4 +1,4 @@
-class EL_GarageAction : ScriptedUserAction
+class EL_OpenGarageAction : ScriptedUserAction
 {	
 	EL_GarageManagerComponent m_GarageManager;
 	

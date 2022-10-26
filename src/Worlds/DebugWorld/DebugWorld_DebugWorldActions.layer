@@ -130,14 +130,13 @@ GenericEntity Suitcase_01_5AA330B045928F9E : "{8F05D427252644F8}Prefabs/Props/Ci
     }
    }
    additionalActions {
-    EL_GarageAction "{5AAAC6EB42EF07D5}" {
+    EL_OpenGarageAction "{5AB546D5F637D140}" {
      ParentContextList {
       "default"
      }
-     UIInfo UIInfo "{5AAAC6EB448CDA59}" {
+     UIInfo UIInfo "{5AB546D6084DE230}" {
       Name "Open Garage"
      }
-     Duration 0
     }
    }
   }

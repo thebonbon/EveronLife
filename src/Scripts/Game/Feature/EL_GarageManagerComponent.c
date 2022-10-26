@@ -4,14 +4,14 @@ class EL_GarageManagerComponentClass : ScriptComponentClass
 };
 
 class EL_GarageManagerComponent : ScriptComponent
-{	
+{
 	// Point info?
 	[Attribute("0.777 3.069 12.971", UIWidgets.EditBox, "Camera offset used for this PIP")]
 	protected vector m_vCameraPoint;
 
 	[Attribute("0 0 0", UIWidgets.EditBox, "Camera offset used for this PIP")]
 	protected vector m_vCameraAngels;
-	
+
 	[Attribute("0 0 0", UIWidgets.EditBox, "Preview spawnpoint", params: "inf inf 0 purposeCoords spaceEntity")]
 	protected vector m_vPreviewSpawnPoint;
 
@@ -67,7 +67,7 @@ class EL_GarageManagerComponent : ScriptComponent
 		string ownerId = EL_Utils.GetPlayerUID(m_UserEntity);
 
 		array<string> storedVehicleIds = m_mSavedVehicles.Get(ownerId);
-		
+
 
 		string withdrawnVehicleId = storedVehicleIds.Get(m_iCurPreviewVehicleIndex);
 		storedVehicleIds.Remove(m_iCurPreviewVehicleIndex);
@@ -97,37 +97,37 @@ class EL_GarageManagerComponent : ScriptComponent
 	{
 		Rpc(Rpc_AskWithdrawVehicle);
 	}
-	
-	//------------------------------------------------------------------------------------------------	
+
+	//------------------------------------------------------------------------------------------------
 	void NextPreviewVehicle()
 	{
 		int lastPreviewVehicleIndex = m_iCurPreviewVehicleIndex;
 		m_iCurPreviewVehicleIndex ++;
-		
+
 		if (m_iCurPreviewVehicleIndex > (m_aGarageSaveDataList.Count() - 1))
 			m_iCurPreviewVehicleIndex = 0;
-		
+
 		if (lastPreviewVehicleIndex == m_iCurPreviewVehicleIndex)
 			return;
-		
+
 		SpawnParkedVehiclePreview(m_iCurPreviewVehicleIndex);
 	}
-	
+
 	//------------------------------------------------------------------------------------------------
 	void PreviousPreviewVehicle()
 	{
 		int lastPreviewVehicleIndex = m_iCurPreviewVehicleIndex;
 		m_iCurPreviewVehicleIndex --;
-		
+
 		if (m_iCurPreviewVehicleIndex < 0)
 			m_iCurPreviewVehicleIndex = m_aGarageSaveDataList.Count() - 1;
-		
+
 		if (lastPreviewVehicleIndex == m_iCurPreviewVehicleIndex)
 			return;
-		
+
 		SpawnParkedVehiclePreview(m_iCurPreviewVehicleIndex);
 	}
-	
+
 	//------------------------------------------------------------------------------------------------
 	void EnableGarageCamera(bool enabled)
 	{
@@ -154,7 +154,7 @@ class EL_GarageManagerComponent : ScriptComponent
 			m_InputManager.RemoveActionListener("ManualCameraSnapRight", EActionTrigger.DOWN, NextPreviewVehicle);
 
 			delete m_aPreviewVehicle;
-			
+
 			EL_CameraUtils.DestroyCamera(m_GarageCamera);
 			m_bIsEnabled = false;
 			return;
@@ -180,10 +180,10 @@ class EL_GarageManagerComponent : ScriptComponent
 			return;
 
 		Print("Client Recieved Data: " + garageSaveData);
-		
+
 		//Cache saved vehicles
 		m_aGarageSaveDataList = garageSaveData;
-		
+
 		//Spawn first vehicle
 		SpawnParkedVehiclePreview(m_iCurPreviewVehicleIndex);
 
@@ -192,6 +192,8 @@ class EL_GarageManagerComponent : ScriptComponent
 	//------------------------------------------------------------------------------------------------
 	void SpawnParkedVehiclePreview(int vehicleIndex)
 	{
+		if (m_aGarageSaveDataList.Count() == 0)
+			return;
 		EntitySpawnParams params();
 		params.TransformMode = ETransformMode.WORLD;
 
@@ -201,7 +203,7 @@ class EL_GarageManagerComponent : ScriptComponent
 			delete m_aPreviewVehicle;
 		m_aPreviewVehicle = GetGame().SpawnEntityPrefabLocal(Resource.Load(m_aGarageSaveDataList[vehicleIndex].m_rPrefab), GetGame().GetWorld(), params);
 		ApplyVehicleSaveData(m_aPreviewVehicle, m_aGarageSaveDataList[vehicleIndex].m_iVehicleColor);
-		
+
 	}
 
 	//------------------------------------------------------------------------------------------------
@@ -244,7 +246,7 @@ class EL_GarageManagerComponent : ScriptComponent
 	void PopulateLocalGarage(IEntity pUserEntity, bool isHostAndPlay = false)
 	{
 		m_iCurPreviewVehicleIndex = 0;
-		
+
 		Print("Server spawning preview Vehicle..");
 		RplComponent rplC = RplComponent.Cast(pUserEntity.FindComponent(RplComponent));
 		m_aGarageSaveDataList = GetGarageSaveDataList(pUserEntity);
