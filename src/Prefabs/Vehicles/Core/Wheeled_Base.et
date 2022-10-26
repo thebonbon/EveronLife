@@ -10,6 +10,8 @@ Vehicle : "{4085446E2B406849}Prefabs/Vehicles/Core/Vehicle_Base.et" {
      }
      EL_CharacterOwnerSaveData "{5AA4CB4FD9712319}" {
      }
+     EL_TransformationSaveData "{5AB4F07B1A910EA4}" {
+     }
     }
    }
   }

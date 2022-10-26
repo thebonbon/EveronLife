@@ -89,7 +89,8 @@ class EL_GarageManagerComponent : ScriptComponent
 	
 	//------------------------------------------------------------------------------------------------
 	//! Do this on server
-	void WithdrawVehicle()
+	[RplRpc(RplChannel.Reliable, RplRcver.Server)]
+	void Rpc_AskWithdrawVehicle()
 	{
 		IEntity freeSpawnPoint = FindFreeSpawnPoint(m_RealGarageEntity);
 		if (!freeSpawnPoint)
@@ -109,12 +110,21 @@ class EL_GarageManagerComponent : ScriptComponent
 		//Teleport to free spawn point
 		withdrawnVehicle.SetOrigin(freeSpawnPoint.GetOrigin());
 		withdrawnVehicle.SetAngles(freeSpawnPoint.GetAngles());
+		
+		EL_PersistenceComponent persistence = EL_PersistenceComponent.Cast(withdrawnVehicle.FindComponent(EL_PersistenceComponent));
+		persistence.Save();
+		
 		DisableCam();
 	}
 	
 	void SetUserEntity(IEntity user)
 	{
 		m_UserEntity = user;
+	}
+	
+	void WithdrawVehicle()
+	{
+		Rpc(Rpc_AskWithdrawVehicle);
 	}
 	
 	//------------------------------------------------------------------------------------------------
