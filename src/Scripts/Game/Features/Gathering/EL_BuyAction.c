@@ -157,6 +157,11 @@ class EL_BuyAction : ScriptedUserAction
 		return true;
 	}
 	
+	override bool HasLocalEffectOnlyScript()
+	{
+		return true;
+	}
+	
 	//------------------------------------------------------------------------------------------------
 	override bool CanBeShownScript(IEntity user)
  	{

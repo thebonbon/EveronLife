@@ -14,7 +14,7 @@ class EL_PersistentWorldEntityLoader
 		if (!findResults || findResults.Count() != 1) return null;
 		return persistenceManager.SpawnWorldEntity(EL_EntitySaveDataBase.Cast(findResults.Get(0)));
 	}
-
+	
 	//------------------------------------------------------------------------------------------------
 	//! Load and spawn an entity by prefab and persistent id
 	//! \param prefab Prefab resource name

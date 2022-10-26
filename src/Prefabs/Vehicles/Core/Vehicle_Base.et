@@ -1,6 +1,8 @@
 Vehicle {
  ID "BBCBA43A9778AE21"
  components {
+  EL_CharacterOwnerComponent "{5AA4CB4F58D091F2}" {
+  }
   EL_LicensePlateManagerComponent "{5984C85FA25812F2}" {
   }
   ParametricMaterialInstanceComponent "{59C68133D3FBF1B8}" {
@@ -23,6 +25,7 @@ Vehicle {
      UIInfo UIInfo "{5AA345998F0C58B5}" {
       Name "Park"
      }
+     m_fGarageSearchRadius 50
     }
    }
   }

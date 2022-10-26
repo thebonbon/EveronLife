@@ -10,7 +10,7 @@ $grp GenericEntity {
  }
 }
 GenericEntity FreshHayBag_5A4E9B16234DBFDF : "{36445C0F0BEE2DE8}Prefabs/Items/Resources/FreshHayBag.et" {
- coords 134.801 0.002 133.797
+ coords 134.846 0.002 133.786
 }
 GenericEntity : "{4D1BCE25DEFC8AA6}Prefabs/Processor/Hay_Processor.et" {
  coords 137.196 0.004 130.027

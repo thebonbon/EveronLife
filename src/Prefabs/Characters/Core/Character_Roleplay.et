@@ -1,6 +1,8 @@
 SCR_ChimeraCharacter : "{37578B1666981FCE}Prefabs/Characters/Core/Character_Base.et" {
  ID "520EC961A090B1EE"
  components {
+  EL_ShopCartManager "{5AA3459AF5D2741D}" {
+  }
   CharacterIdentityComponent "{5584CBC63E092DBC}" {
    Override 1
    Identity Identity "{5584CBC6363C648B}" {
@@ -8,8 +10,6 @@ SCR_ChimeraCharacter : "{37578B1666981FCE}Prefabs/Characters/Core/Character_Base
     Alias ""
     Surname ""
    }
-  }
-  EL_ShopCartManager "{5AA3459AF5D2741D}" {
   }
  }
 }

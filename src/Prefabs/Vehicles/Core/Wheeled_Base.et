@@ -6,6 +6,10 @@ Vehicle : "{4085446E2B406849}Prefabs/Vehicles/Core/Vehicle_Base.et" {
     m_aComponents {
      EL_CarControllerSaveData "{5A308829FFA1BEC6}" {
      }
+     EL_CarColorSaveData "{5AA873DE2952025D}" {
+     }
+     EL_CharacterOwnerSaveData "{5AA4CB4FD9712319}" {
+     }
     }
    }
   }

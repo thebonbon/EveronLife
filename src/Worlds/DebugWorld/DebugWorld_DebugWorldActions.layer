@@ -1,10 +1,3 @@
-CommentEntity {
- coords 90.693 0.778 135.143
- m_Comment "Garage"
- m_Color 0.071 0.192 0.561
- m_FaceCamera 1
- m_VisibleIngame 1
-}
 GenericEntity {
  coords 100.455 -0.001 135
  {
@@ -90,16 +83,48 @@ GenericEntity : "{33882C61BA9F0F90}Prefabs/Props/Civilian/Globe_01.et" {
 GenericEntity Backpack_ALICE_Medium_assembled_5A4E9B16234DA870 : "{5C5C6EE05EE2FF1A}Prefabs/Items/Equipment/Backpacks/Backpack_ALICE_Medium_assembled.et" {
  coords 101.007 0.886 135.394
 }
+$grp SCR_DestructibleBuildingEntity : "{80A5B37A1472B084}Prefabs/Structures/Industrial/Garages/Garage_E_02/Garage_E_02.et" {
+ REAL_GARAGE {
+  coords 72.166 0.001 124.289
+  {
+   $grp BaseGameTriggerEntity : "{AB5C86C286A09CDA}Prefabs/Shop/EL_VehicleSpawnPoint.et" {
+    {
+     coords 3.654 0.073 0.262
+    }
+    {
+     coords -3.285 0.073 0.067
+    }
+    {
+     coords -9.753 0.073 0.292
+    }
+   }
+  }
+ }
+ PREVIEW_GARAGE {
+  coords 72.166 0.001 98.698
+  {
+   $grp BaseGameTriggerEntity : "{AB5C86C286A09CDA}Prefabs/Shop/EL_VehicleSpawnPoint.et" {
+    {
+     coords -3.285 0.073 -0.167
+    }
+    {
+     coords -9.753 0.073 0.058
+    }
+    {
+     coords 3.118 0.073 -0.167
+    }
+   }
+  }
+ }
+}
 GenericEntity Suitcase_01_5AA330B045928F9E : "{8F05D427252644F8}Prefabs/Props/Civilian/Suitcase_01.et" {
  components {
   EL_GarageManagerComponent "{5AA330B04D64DC0F}" {
+   m_vCameraPoint 3.5 1.668 5.56
+   m_vCameraAngels 0 180 0
   }
   EL_PersistenceComponent "{5AA330B0459281D6}" {
-   m_pSaveData EL_EntitySaveDataBase "{5AA330BA03CE99E0}" {
-    m_aComponents {
-     EL_GarageSaveData "{5AA330BA05267909}" {
-     }
-    }
+   m_pSaveData EL_GarageSaveData "{5AA518DA659FB6D0}" {
    }
   }
   ActionsManagerComponent "{5AA330B116B25452}" {
@@ -107,15 +132,20 @@ GenericEntity Suitcase_01_5AA330B045928F9E : "{8F05D427252644F8}Prefabs/Props/Ci
     UserActionContext "{5AA330B129AE95BB}" {
      ContextName "default"
      Position PointInfo "{5AA330B12A32D838}" {
+      Offset 0 0.1891 0
      }
+     Radius 1
     }
    }
    additionalActions {
-    EL_GarageWithdrawAction "{5AA34A280C5E6D6F}" {
+    EL_GarageAction "{5AAAC6EB42EF07D5}" {
      ParentContextList {
       "default"
      }
-     Duration 0.5
+     UIInfo UIInfo "{5AAAC6EB448CDA59}" {
+      Name "Open Garage"
+     }
+     Duration 0
     }
    }
   }
@@ -123,14 +153,8 @@ GenericEntity Suitcase_01_5AA330B045928F9E : "{8F05D427252644F8}Prefabs/Props/Ci
    Enabled 1
   }
  }
- coords 90.693 0 135.143
- angleY 60
- {
-  BaseGameTriggerEntity : "{AB5C86C286A09CDA}Prefabs/Shop/EL_VehicleSpawnPoint.et" {
-   coords 6.659 0.001 -4.673
-   angleY -60
-  }
- }
+ coords 82.639 0.074 126.061
+ angleY 0
 }
 GenericEntity : "{9ABAFFCBC76D824B}Prefabs/Props/Civilian/NoticeBoardCork_01.et" {
  coords 100.02 0.898 134.46

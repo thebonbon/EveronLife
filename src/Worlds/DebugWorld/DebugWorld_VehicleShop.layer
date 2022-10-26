@@ -22,6 +22,7 @@ Vehicle UAZ1 : "{259EE7B78C51B624}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469.et" {
      ParentContextList {
       ""
      }
+     m_fGarageSearchRadius 50
     }
     EL_BuyAction "{59C68136336BDC31}" {
      ParentContextList {
@@ -35,13 +36,16 @@ Vehicle UAZ1 : "{259EE7B78C51B624}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469.et" {
    }
   }
  }
- coords 92.912 0.001 134.939
+ coords 91.141 0 134.939
+ angleY 90
 }
 SCR_DestructibleEntity : "{622F9989DDC4865B}PrefabLibrary/Props/Civilian/Recreation/TableRecreation_01/TableRecreation_01.et" {
  coords 95.756 -0.001 135
  {
   GenericEntity : "{51D31AB07AE3C1C7}Prefabs/Props/Commercial/CashierShop_01.et" {
    components {
+    MeshObject "{5872F0EB7FA40561}" {
+    }
     Hierarchy "{59C6AB73A8871A71}" {
     }
     ActionsManagerComponent "{59CA650D7157C0AB}" {
@@ -52,16 +56,9 @@ SCR_DestructibleEntity : "{622F9989DDC4865B}PrefabLibrary/Props/Civilian/Recreat
    }
    coords -0.037 0.896 0.052
    {
-    $grp BaseGameTriggerEntity : "{AB5C86C286A09CDA}Prefabs/Shop/EL_VehicleSpawnPoint.et" {
-     {
-      coords -12.981 -0.895 -3.446
-     }
-     {
-      coords -7.9 -0.895 -3.446
-     }
-     {
-      coords -3.9 -0.895 -3.446
-     }
+    BaseGameTriggerEntity : "{AB5C86C286A09CDA}Prefabs/Shop/EL_VehicleSpawnPoint.et" {
+     coords -13.443 -0.895 4.412
+     angleY -180
     }
    }
   }

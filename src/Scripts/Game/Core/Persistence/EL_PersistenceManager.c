@@ -313,6 +313,7 @@ class EL_PersistenceManager
 		return worldEntity;
 	}
 
+
 	//------------------------------------------------------------------------------------------------
 	//! Used to instantiate and correctly register a scripted state from save-data
 	//! \param saveData Save-data to instantiate from

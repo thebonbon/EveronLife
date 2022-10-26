@@ -6,6 +6,8 @@ class EL_PayAction : ScriptedUserAction
 	IEntity m_SpawnPoint;
 	ref array<EL_VehicleSpawnPoint> m_aVehicleSpawnPoints = new ref array<EL_VehicleSpawnPoint>();
 	EL_ShopCartManager m_ShopCartManager;
+	
+	
 	//------------------------------------------------------------------------------------------------
 	IEntity FindFreeSpawnPoint()
 	{
@@ -23,7 +25,7 @@ class EL_PayAction : ScriptedUserAction
 	}
 	
 	//------------------------------------------------------------------------------------------------
-	void SpawnVehicle(ResourceName prefabToSpawn, Color color)
+	void SpawnVehicle(IEntity userEntity, ResourceName prefabToSpawn, Color color)
 	{
 		IEntity freeSpawnPoint = FindFreeSpawnPoint();
 		IEntity newCar = EL_Utils.SpawnEntityPrefab(prefabToSpawn, freeSpawnPoint.GetOrigin(), freeSpawnPoint.GetYawPitchRoll());
@@ -36,6 +38,12 @@ class EL_PayAction : ScriptedUserAction
 		}
 		materialOverride.SetColor(ARGB(color.A() * COLOR_1_TO_255, color.R() * COLOR_1_TO_255, color.G() * COLOR_1_TO_255, color.B() * COLOR_1_TO_255));
 		
+		EL_CharacterOwnerComponent charOwnerComp = EL_CharacterOwnerComponent.Cast(newCar.FindComponent(EL_CharacterOwnerComponent));
+		
+		//Account ID for now. Later characterID
+		string vehOwnerId = EL_Utils.GetPlayerUID(userEntity);
+		charOwnerComp.SetCharacterOwner(vehOwnerId);
+		Print("User with ID: " + vehOwnerId + " bought vehicle: " + newCar);
 	}
 	
 	//------------------------------------------------------------------------------------------------
@@ -54,7 +62,7 @@ class EL_PayAction : ScriptedUserAction
 		foreach (EL_ShopCartItem cartItem : shopCartManager.m_aShopCartItems)
 		{
 			if (cartItem.type == Vehicle)
-				SpawnVehicle(cartItem.prefab, cartItem.color);
+				SpawnVehicle(pUserEntity, cartItem.prefab, cartItem.color);
 			if (cartItem.type == GenericEntity)
 				inventoryManager.TrySpawnPrefabToStorage(cartItem.prefab);
 		}
