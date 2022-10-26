@@ -57,7 +57,6 @@ class EL_GarageManagerComponent : ScriptComponent
 	}
 
 	//------------------------------------------------------------------------------------------------
-	//! Do this on server
 	[RplRpc(RplChannel.Reliable, RplRcver.Server)]
 	void Rpc_AskWithdrawVehicle()
 	{
@@ -203,7 +202,10 @@ class EL_GarageManagerComponent : ScriptComponent
 			delete m_aPreviewVehicle;
 		m_aPreviewVehicle = GetGame().SpawnEntityPrefabLocal(Resource.Load(m_aGarageSaveDataList[vehicleIndex].m_rPrefab), GetGame().GetWorld(), params);
 		ApplyVehicleSaveData(m_aPreviewVehicle, m_aGarageSaveDataList[vehicleIndex].m_iVehicleColor);
-
+		
+		//Detach to not save preview on host&play
+		EL_PersistenceComponent persistenceComp = EL_PersistenceComponent.Cast(m_aPreviewVehicle.FindComponent(EL_PersistenceComponent));
+		persistenceComp.Detach();
 	}
 
 	//------------------------------------------------------------------------------------------------

@@ -10,7 +10,6 @@ class EL_OpenGarageAction : ScriptedUserAction
 		{
 			bool isHostAndPlay = pUserEntity == SCR_PlayerController.GetLocalControlledEntity();
 			m_GarageManager.PopulateLocalGarage(pUserEntity, isHostAndPlay);
-			//Check if host & play
 		}
 		
 		RplComponent rplC = RplComponent.Cast(pUserEntity.FindComponent(RplComponent));
@@ -18,12 +17,11 @@ class EL_OpenGarageAction : ScriptedUserAction
 		//Only on the local player that used the action
 		if (pUserEntity == SCR_PlayerController.GetLocalControlledEntity())
 		{
-			Print("My client garage cam activated!");
 			m_GarageManager.EnableGarageCamera(true);
 			m_GarageManager.SetUserEntity(pUserEntity);
 		}
 	}
-		
+
 	//------------------------------------------------------------------------------------------------	
 	override void Init(IEntity pOwnerEntity, GenericComponent pManagerComponent)
 	{
