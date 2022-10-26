@@ -3,10 +3,4 @@ SCR_ManualCamera {
  coords 79.516 0.001 141.366
  cameraFlags 2
  m_DefaultFlags 0
- m_aComponents {
-  EL_SnapManualCameraComponent "{5AB2A7BBDA99E59A}" {
-   m_FlagsWhitelist 0
-   m_iPriority 99
-  }
- }
 }

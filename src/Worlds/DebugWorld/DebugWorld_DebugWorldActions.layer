@@ -103,16 +103,8 @@ $grp SCR_DestructibleBuildingEntity : "{80A5B37A1472B084}Prefabs/Structures/Indu
  PREVIEW_GARAGE {
   coords 72.166 0.001 98.698
   {
-   $grp BaseGameTriggerEntity : "{AB5C86C286A09CDA}Prefabs/Shop/EL_VehicleSpawnPoint.et" {
-    {
-     coords -3.285 0.073 -0.167
-    }
-    {
-     coords -9.753 0.073 0.058
-    }
-    {
-     coords 3.118 0.073 -0.167
-    }
+   BaseGameTriggerEntity : "{AB5C86C286A09CDA}Prefabs/Shop/EL_VehicleSpawnPoint.et" {
+    coords 3.649 0.073 -0.167
    }
   }
  }
