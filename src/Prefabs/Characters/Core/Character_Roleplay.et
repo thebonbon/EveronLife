@@ -11,5 +11,18 @@ SCR_ChimeraCharacter : "{37578B1666981FCE}Prefabs/Characters/Core/Character_Base
     Surname ""
    }
   }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Jacket {
+     Prefab "{3CCA7A9BB4FD3197}Prefabs/Characters/Uniforms/Jacket_US_BDU_rolledup.et"
+    }
+    LoadoutSlotInfo Pants {
+     Prefab "{27DABFBB719485AA}Prefabs/Characters/Uniforms/Pants_US_BDU_base.et"
+    }
+    LoadoutSlotInfo Boots {
+     Prefab "{DAAFD15478BDE1C3}Prefabs/Characters/Footwear/CombatBoots_US_01.et"
+    }
+   }
+  }
  }
 }

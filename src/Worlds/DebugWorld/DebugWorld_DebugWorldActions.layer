@@ -1,26 +1,360 @@
-GenericEntity {
- coords 100.455 -0.001 135
+$grp GenericEntity {
  {
-  $grp SCR_DestructibleEntity : "{622F9989DDC4865B}PrefabLibrary/Props/Civilian/Recreation/TableRecreation_01/TableRecreation_01.et" {
-   {
-    coords 0.147 0 0
-   }
-   {
-    coords -1.065 0 0
-   }
-  }
-  GenericEntity WaterBottle_5A4C5C558992CAD2 : "{A231A5F8D479B5DC}Prefabs/Items/Drinks/WaterBottle.et" {
-   coords 0.299 0.9 -0.186
-  }
-  GameEntity : "{EC645B2E2123131F}Prefabs/Props/Civilian/LampKerosene_01/LampKerosene_01_blue.et" {
-   components {
-    SCR_BaseInteractiveLightComponent "{58C4C3C542898CFB}" {
-     m_bGradualLightning 0
-     m_fLV 2.6
-     m_eInitialLightState LIT
+  coords 100.455 -0.001 135
+  {
+   $grp SCR_DestructibleEntity : "{622F9989DDC4865B}PrefabLibrary/Props/Civilian/Recreation/TableRecreation_01/TableRecreation_01.et" {
+    {
+     coords 0.147 0 0
+    }
+    {
+     coords -1.065 0 0
     }
    }
-   coords -1.333 0.902 -0.055
+   GenericEntity WaterBottle_5A4C5C558992CAD2 : "{A231A5F8D479B5DC}Prefabs/Items/Drinks/WaterBottle.et" {
+    coords 0.299 0.9 -0.186
+   }
+   GameEntity : "{EC645B2E2123131F}Prefabs/Props/Civilian/LampKerosene_01/LampKerosene_01_blue.et" {
+    components {
+     SCR_BaseInteractiveLightComponent "{58C4C3C542898CFB}" {
+      m_bGradualLightning 0
+      m_fLV 2.6
+      m_eInitialLightState LIT
+     }
+    }
+    coords -1.333 0.902 -0.055
+   }
+  }
+ }
+ {
+  components {
+   MeshObject "{5ABAC94F9028EAC9}" {
+   }
+  }
+  coords 93.164 0.001 140.676
+ }
+}
+SCR_DestructibleBuildingEntity REAL_GARAGE {
+ components {
+  MeshObject "{5AB6CD06B55A2300}" {
+   Object "{39BB919FFAB4C9CB}Assets/Structures/Industrial/Garages/Garage_E_02/Garage_E_02.xob"
+   LODFactors {
+    20 15 10 1 1
+   }
+   ClutterOccluder 1
+  }
+  Hierarchy "{5AB6CD06B55A2374}" {
+  }
+  RigidBody "{5AB6CD06B55A234F}" {
+   ModelGeometry 1
+   Static 1
+  }
+  RplComponent "{5AB6CD06B55A2345}" {
+  }
+ }
+ coords 72.166 0.001 124.289
+ Flags 525315
+ SlotBoneMappings {
+  SlotBoneMappingObject "{5AB6CD06B55A23B1}" {
+   BonePrefix "socket_door_frame_gate_001"
+   Prefab "{9A8B7C26A60F8CE0}Prefabs/Structures/BuildingParts/Doors/DoorSet_Garage_E_02_EXT_02.et"
+  }
+  SlotBoneMappingObject "{5AB6CD06B55A23AF}" {
+   BonePrefix "socket_door_frame_gate_002"
+   Prefab "{65FBBAE477AD3969}Prefabs/Structures/BuildingParts/Doors/DoorSet_Garage_E_02_EXT.et"
+  }
+  SlotBoneMappingObject "{5AB6CD06B55A23A5}" {
+   BonePrefix "socket_door_frame_gate_003"
+   Prefab "{7F1730DFAAEA1B8B}Prefabs/Structures/BuildingParts/Doors/DoorSet_Garage_E_02_EXT_03.et"
+  }
+  SlotBoneMappingObject "{5AB6CD06B55A23A3}" {
+   BonePrefix "socket_door_frame_gate_004"
+   Prefab "{65FBBAE477AD3969}Prefabs/Structures/BuildingParts/Doors/DoorSet_Garage_E_02_EXT.et"
+  }
+  SlotBoneMappingObject "{5AB6CD06B55A239A}" {
+   BonePrefix "socket_win_1400x1300"
+   Prefab "{E68D2802A8DB8DB2}Prefabs/Structures/BuildingParts/Windows/win_garage_e_02_1300x1400_444_B.et"
+  }
+  SlotBoneMappingObject "{5AB6CD06B55A2390}" {
+   BonePrefix "socket_win_4400x1100_0"
+   Prefab "{FA6DE318CF32058F}Prefabs/Structures/BuildingParts/Windows/Win_Garage_E/win_garage_e_02_4400x1100_0_B_base.et"
+  }
+  SlotBoneMappingObject "{5AB6CD06B55A238F}" {
+   BonePrefix "socket_win_4400x1100_88"
+   Prefab "{14111FDDF1FC616E}Prefabs/Structures/BuildingParts/Windows/Win_Garage_E/win_garage_e_02_4400x1100_88_B_base.et"
+  }
+  SlotBoneMappingObject "{5AB6CD06B55A238A}" {
+   BonePrefix "socket_entry_narrow"
+   Prefab "{FA188839C5E6DAD3}Prefabs/Structures/BuildingParts/Entry/Entry_Direct_01_narrow.et"
+  }
+  SlotBoneMappingObject "{5AB6CD06B55A2386}" {
+   BonePrefix "socket_entry_wide"
+   Prefab "{18E3F1942F2C8509}Prefabs/Structures/BuildingParts/Entry/Entry_Slope_Platform_01.et"
+  }
+  SlotBoneMappingObject "{5AB6CD06B55A2382}" {
+   BonePrefix "socket_door_frame_ext"
+   Prefab "{CC6B92AEE60F0AAC}Prefabs/Structures/BuildingParts/Doors/DoorSet_Village_E_01_R_EXT_COV_B_brown.et"
+  }
+ }
+ {
+  Building : "{14111FDDF1FC616E}Prefabs/Structures/BuildingParts/Windows/Win_Garage_E/win_garage_e_02_4400x1100_88_B_base.et" {
+   components {
+    Hierarchy "{5586E729EC5B6F27}" {
+     Enabled 1
+     PivotID "socket_win_4400x1100_88_001"
+     AutoTransform 1
+    }
+   }
+   coords 0 0 0
+  }
+  $grp GenericEntity : "{18E3F1942F2C8509}Prefabs/Structures/BuildingParts/Entry/Entry_Slope_Platform_01.et" {
+   {
+    components {
+     Hierarchy "{5488F0388A297CDE}" {
+      Enabled 1
+      PivotID "socket_entry_wide_002"
+      AutoTransform 1
+     }
+    }
+    coords 0 0 0
+   }
+   {
+    components {
+     Hierarchy "{5488F0388A297CDE}" {
+      Enabled 1
+      PivotID "socket_entry_wide_001"
+      AutoTransform 1
+     }
+    }
+    coords 0 0 0
+   }
+   {
+    components {
+     Hierarchy "{5488F0388A297CDE}" {
+      Enabled 1
+      PivotID "socket_entry_wide_004"
+      AutoTransform 1
+     }
+    }
+    coords 0 0 0
+   }
+   {
+    components {
+     Hierarchy "{5488F0388A297CDE}" {
+      Enabled 1
+      PivotID "socket_entry_wide_003"
+      AutoTransform 1
+     }
+    }
+    coords 0 0 0
+   }
+  }
+  EnvironmentProbeEntity : "{565470F7BA530E0D}Prefabs/Structures/Core/ProbeHouse_Base.et" {
+   coords -1.941 3.84 0.4
+   LVReflectionBrightness -3.5
+   LVDiffuseBrightness -3.5
+   DiffuseColor 1 0.853 0.768 1
+  }
+  GenericEntity : "{65FBBAE477AD3969}Prefabs/Structures/BuildingParts/Doors/DoorSet_Garage_E_02_EXT.et" {
+   components {
+    Hierarchy "{612AE78C85563E26}" {
+     Enabled 1
+     PivotID "socket_door_frame_gate_004"
+     AutoTransform 1
+    }
+   }
+   coords 0 0 0
+   {
+    GenericEntity {
+     ID "58689E1BBDDF09AD"
+     {
+      GenericEntity {
+       ID "58689E1B767FC979"
+       components {
+        EL_RealGarageManagerComponent "{5AB6CD06F304F054}" {
+        }
+        ActionsManagerComponent "{F32B667C3C823800}" {
+         additionalActions {
+          EL_EnterGarageAction "{5AB6CD06F8D97C7D}" {
+           ParentContextList {
+            "SCR_DoorUserAction"
+           }
+           UIInfo UIInfo "{5AB6CD06FAB5B88D}" {
+            Name "Entere Garage"
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+  GenericEntity : "{8BDEAB5E86E4F021}Prefabs/Structures/Industrial/Garages/Garage_E_02/Garage_E_02_furniture_01.et" {
+   coords 0 0 0
+  }
+  GenericEntity Suitcase_01_5AA330B045928F9E : "{8F05D427252644F8}Prefabs/Props/Civilian/Suitcase_01.et" {
+   components {
+    EL_GarageManagerComponent "{5AA330B04D64DC0F}" {
+     m_vCameraPoint 6.523 2.912 9.511
+     m_vCameraAngels 0 180 0
+     m_vRotationSpeed 0 10 0
+    }
+    EL_PersistenceComponent "{5AA330B0459281D6}" {
+     m_pSaveData EL_GarageSaveData "{5AA518DA659FB6D0}" {
+     }
+    }
+    ActionsManagerComponent "{5AA330B116B25452}" {
+     ActionContexts {
+      UserActionContext "{5AA330B129AE95BB}" {
+       ContextName "default"
+       Position PointInfo "{5AA330B12A32D838}" {
+        Offset 0 0.1891 0
+       }
+       Radius 1
+      }
+     }
+     additionalActions {
+      EL_OpenGarageAction "{5AB546D5F637D140}" {
+       ParentContextList {
+        "default"
+       }
+       UIInfo UIInfo "{5AB546D6084DE230}" {
+        Name "Open Garage"
+       }
+      }
+     }
+    }
+    RplComponent "{5624A88DC2D9928D}" {
+     Enabled 1
+    }
+   }
+   coords 10.473 0.073 1.772
+   angleY 0
+  }
+  $grp BaseGameTriggerEntity : "{AB5C86C286A09CDA}Prefabs/Shop/EL_VehicleSpawnPoint.et" {
+   {
+    coords 3.654 0.073 0.262
+   }
+   {
+    coords -3.285 0.073 0.067
+   }
+   {
+    coords -9.753 -0.037 0.292
+   }
+  }
+  $grp GenericEntity : "{CC6B92AEE60F0AAC}Prefabs/Structures/BuildingParts/Doors/DoorSet_Village_E_01_R_EXT_COV_B_brown.et" {
+   {
+    components {
+     Hierarchy "{612AE78C85563E26}" {
+      Enabled 1
+      PivotID "socket_door_frame_ext_001"
+      AutoTransform 1
+     }
+    }
+    coords 0 0 0
+   }
+   {
+    components {
+     Hierarchy "{612AE78C85563E26}" {
+      Enabled 1
+      PivotID "socket_door_frame_ext_002"
+      AutoTransform 1
+     }
+    }
+    coords 0 0 0
+   }
+  }
+  $grp Building : "{E68D2802A8DB8DB2}Prefabs/Structures/BuildingParts/Windows/win_garage_e_02_1300x1400_444_B.et" {
+   {
+    components {
+     Hierarchy "{5586E729EC5BA302}" {
+      Enabled 1
+      PivotID "socket_win_1400x1300_002"
+      AutoTransform 1
+     }
+    }
+    coords 0 0 0
+   }
+   {
+    components {
+     Hierarchy "{5586E729EC5BD163}" {
+      Enabled 1
+      PivotID "socket_win_1400x1300_001"
+      AutoTransform 1
+     }
+    }
+    coords 0 0 0
+   }
+  }
+  $grp GenericEntity : "{FA188839C5E6DAD3}Prefabs/Structures/BuildingParts/Entry/Entry_Direct_01_narrow.et" {
+   {
+    components {
+     Hierarchy "{5488F0388A297CDE}" {
+      Enabled 1
+      PivotID "socket_entry_narrow_001"
+      AutoTransform 1
+     }
+    }
+    coords 0 0 0
+   }
+   {
+    components {
+     Hierarchy "{5488F0388A297CDE}" {
+      Enabled 1
+      PivotID "socket_entry_narrow_002"
+      AutoTransform 1
+     }
+    }
+    coords 0 0 0
+   }
+  }
+  $grp Building : "{FA6DE318CF32058F}Prefabs/Structures/BuildingParts/Windows/Win_Garage_E/win_garage_e_02_4400x1100_0_B_base.et" {
+   {
+    components {
+     Hierarchy "{5586E729EC5BB60E}" {
+      Enabled 1
+      PivotID "socket_win_4400x1100_0_001"
+      AutoTransform 1
+     }
+    }
+    coords 0 0 0
+   }
+   {
+    components {
+     Hierarchy "{5586E729EC5B86F4}" {
+      Enabled 1
+      PivotID "socket_win_4400x1100_0_002"
+      AutoTransform 1
+     }
+    }
+    coords 0 0 0
+   }
+  }
+ }
+}
+SCR_DestructibleBuildingEntity PREVIEW_GARAGE : "{1E7AC996BD3B73A7}Prefabs/Structures/Military/Houses/GarageMilitary_E_01/GarageMilitary_E_01_base.et" {
+ coords 0 50 0
+ {
+  $grp StaticModelEntity : "{987B35F6140166E9}Prefabs/Structures/Infrastructure/Pavements/AsphaltPavement_01/AsphaltPavement_01_Narrow_4m_90.et" {
+   {
+    coords 6.481 0.312 1.116
+   }
+   {
+    coords 5.574 0.312 2.127
+    angleY 90
+   }
+   {
+    coords 7.468 0.312 2.107
+    angleY -90
+   }
+   {
+    coords 6.561 0.312 3.118
+    angleY -180
+   }
+  }
+  BaseGameTriggerEntity : "{AB5C86C286A09CDA}Prefabs/Shop/EL_VehicleSpawnPoint.et" {
+   coords 6.523 0.439 2.219
   }
  }
 }
@@ -83,69 +417,11 @@ GenericEntity : "{33882C61BA9F0F90}Prefabs/Props/Civilian/Globe_01.et" {
 GenericEntity Backpack_ALICE_Medium_assembled_5A4E9B16234DA870 : "{5C5C6EE05EE2FF1A}Prefabs/Items/Equipment/Backpacks/Backpack_ALICE_Medium_assembled.et" {
  coords 101.007 0.886 135.394
 }
-$grp SCR_DestructibleBuildingEntity : "{80A5B37A1472B084}Prefabs/Structures/Industrial/Garages/Garage_E_02/Garage_E_02.et" {
- REAL_GARAGE {
-  coords 72.166 0.001 124.289
-  {
-   $grp BaseGameTriggerEntity : "{AB5C86C286A09CDA}Prefabs/Shop/EL_VehicleSpawnPoint.et" {
-    {
-     coords 3.654 0.073 0.262
-    }
-    {
-     coords -3.285 0.073 0.067
-    }
-    {
-     coords -9.753 0.073 0.292
-    }
-   }
-  }
- }
- PREVIEW_GARAGE {
-  coords 72.166 0.001 98.698
-  {
-   BaseGameTriggerEntity : "{AB5C86C286A09CDA}Prefabs/Shop/EL_VehicleSpawnPoint.et" {
-    coords 3.649 0.073 -0.167
-   }
-  }
- }
-}
-GenericEntity Suitcase_01_5AA330B045928F9E : "{8F05D427252644F8}Prefabs/Props/Civilian/Suitcase_01.et" {
- components {
-  EL_GarageManagerComponent "{5AA330B04D64DC0F}" {
-   m_vCameraPoint 3.5 1.668 5.56
-   m_vCameraAngels 0 180 0
-  }
-  EL_PersistenceComponent "{5AA330B0459281D6}" {
-   m_pSaveData EL_GarageSaveData "{5AA518DA659FB6D0}" {
-   }
-  }
-  ActionsManagerComponent "{5AA330B116B25452}" {
-   ActionContexts {
-    UserActionContext "{5AA330B129AE95BB}" {
-     ContextName "default"
-     Position PointInfo "{5AA330B12A32D838}" {
-      Offset 0 0.1891 0
-     }
-     Radius 1
-    }
-   }
-   additionalActions {
-    EL_OpenGarageAction "{5AB546D5F637D140}" {
-     ParentContextList {
-      "default"
-     }
-     UIInfo UIInfo "{5AB546D6084DE230}" {
-      Name "Open Garage"
-     }
-    }
-   }
-  }
-  RplComponent "{5624A88DC2D9928D}" {
-   Enabled 1
-  }
- }
- coords 82.639 0.074 126.061
- angleY 0
+LightEntity : "{8CAD466D49510CDF}Prefabs/Structures/Infrastructure/Lamps/LampStreet_E_03/LampStreet_E_03_light.et" {
+ coords -2.885 25.144 -0.093
+ angleX -90
+ angleY -180
+ angleZ -180
 }
 GenericEntity : "{9ABAFFCBC76D824B}Prefabs/Props/Civilian/NoticeBoardCork_01.et" {
  coords 100.02 0.898 134.46
@@ -158,5 +434,62 @@ GenericEntity : "{9ABAFFCBC76D824B}Prefabs/Props/Civilian/NoticeBoardCork_01.et"
     }
    }
   }
+ }
+}
+Vehicle M151A1 : "{F649585ABB3706C4}Prefabs/Vehicles/Wheeled/M151A2/M151A2.et" {
+ components {
+  SCR_VehicleDamageManagerComponent "{141326E9FD94FE40}" {
+   m_fVehicleDestroyDamage 10408.7
+  }
+  ActionsManagerComponent "{C97BE5489221AE18}" {
+   additionalActions {
+    EL_BuyAction "{5ABAF5DC2963B517}" {
+     ParentContextList {
+      "door_l01"
+     }
+     m_BuyablePrefab "{F649585ABB3706C4}Prefabs/Vehicles/Wheeled/M151A2/M151A2.et"
+     m_PriceConfig EL_PriceConfig "{5ABAF5DC45854485}" : "{18A98641909A7F52}Configs/Shops/EL_ShopPrices.conf" {
+      m_aPriceConfigs {
+       EL_Price "{5ABAF5DC464BD23E}" {
+        m_Prefab "{F649585ABB3706C4}Prefabs/Vehicles/Wheeled/M151A2/M151A2.et"
+        m_sName "M151A2"
+        m_iBuyPrice 1
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+ coords 97.599 0.001 131.527
+ angleY 45
+}
+$grp GenericEntity : "{FDEE11D818A4C675}Prefabs/Items/Money/DollarBill.et" {
+ DollarBill_5A4E9B16234DBD2 {
+  coords 96.165 0.901 135.439
+ }
+ DollarBill_5A4E9B16234DBD3 {
+  coords 96.165 0.901 135.439
+ }
+ DollarBill_5A4E9B16234DBD4 {
+  coords 96.165 0.901 135.439
+ }
+ DollarBill_5A4E9B16234DBD5 {
+  coords 96.165 0.901 135.439
+ }
+ DollarBill_5A4E9B16234DBD6 {
+  coords 96.165 0.901 135.439
+ }
+ DollarBill_5A4E9B16234DBD7 {
+  coords 96.165 0.901 135.439
+ }
+ DollarBill_5A4E9B16234DBD8 {
+  coords 96.165 0.901 135.439
+ }
+ DollarBill_5A4E9B16234DBD9 {
+  coords 96.165 0.901 135.439
+ }
+ DollarBill_5A4E9B16234DBD10 {
+  coords 96.165 0.901 135.439
  }
 }

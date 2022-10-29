@@ -1,6 +1,68 @@
 class EL_Utils
 {
 	//------------------------------------------------------------------------------------------------
+	//! Remap material. Breaks attached objs on Player
+	static void SetColor(IEntity entity, int color)
+	{
+		if (!entity)
+			return;
+		VObject mesh = entity.GetVObject();
+		if (!mesh)
+			return;
+		
+		Material newColorMaterial = Material.Create("DynamicColorMaterial", "MatPBRMulti");
+		Color newColor = Color.FromInt(color);
+		float materialColorRGBA[] = { newColor.R(), newColor.G(), newColor.B(), newColor.A() };
+		newColorMaterial.SetParamByIndex(0, materialColorRGBA);
+		//0.000000 0.000000 0.000000 1.000000
+		string matName;
+		newColorMaterial.GetName(matName);
+
+		string remap;
+		string materials[256];
+		int numMats = mesh.GetMaterials(materials);
+		if (numMats == 0)
+			return;
+		
+		for (int i = 0; i < numMats; i++)
+		{
+			string originalMatName = materials[i];
+			if (originalMatName.Contains("Body"))
+			{
+				remap += string.Format("$remap '%1' '%2';", materials[i], matName);
+			}
+		}
+		
+		entity.SetObject(mesh, remap);
+		
+		newColorMaterial.Release();
+		newColorMaterial = null;	
+	}
+	
+	//------------------------------------------------------------------------------------------------
+	//! Workaround for missing FindComponent("MeshObject")
+	static VObject GetPrefabVObject(ResourceName prefab) 
+	{			
+		BaseContainer meshComponent;
+		IEntitySource prefabSource = Resource.Load(prefab).GetResource().ToEntitySource();
+		int count = prefabSource.GetComponentCount();
+		
+		for(int i = 0; i < count; i++) 
+		{
+			IEntityComponentSource comp = prefabSource.GetComponent(i);
+			
+			if(comp.GetClassName() == "MeshObject")
+			{
+				meshComponent = comp;
+				break;
+			}
+		}
+		ResourceName prefabObject;
+		meshComponent.Get("Object", prefabObject);
+		return Resource.Load(prefabObject).GetResource().ToVObject();
+	}
+	
+	//------------------------------------------------------------------------------------------------
 	//! Gets the Bohemia UID
 	//! \param playerId Index of the player inside player manager
 	//! \return the uid as string

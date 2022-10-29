@@ -1,0 +1,20 @@
+SCR_DestructibleBuildingEntity : "{80A5B37A1472B084}Prefabs/Structures/Industrial/Garages/Garage_E_02/Garage_E_02.et" {
+ ID "F0DBA538AC2A0552"
+ coords 115.317 0.001 65.825
+ {
+  $grp BaseGameTriggerEntity : "{AB5C86C286A09CDA}Prefabs/Shop/EL_VehicleSpawnPoint.et" {
+   {
+    ID "5AB691177839CEC8"
+    coords -9.892 0.073 -0.167
+   }
+   {
+    ID "5AB691177839CECB"
+    coords -3.223 0.073 -0.167
+   }
+   {
+    ID "5AB691177839CEEB"
+    coords 3.649 0.073 -0.167
+   }
+  }
+ }
+}

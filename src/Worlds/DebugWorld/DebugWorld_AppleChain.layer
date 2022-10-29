@@ -83,6 +83,10 @@ GenericEntity AppleTrader {
        coords 0.168 -0.036 0.057
       }
       Apple_5A0E821DC5FD1220 {
+       components {
+        MeshObject "{5A4ACD10B8DA304F}" {
+        }
+       }
        coords -0.002 -0.036 0.074
       }
       Apple_5A0E821DC5FD1706 {

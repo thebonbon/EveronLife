@@ -5,23 +5,14 @@ class EL_OpenGarageAction : ScriptedUserAction
 	//------------------------------------------------------------------------------------------------
 	override void PerformAction(IEntity pOwnerEntity, IEntity pUserEntity)
 	{
-
-		if (Replication.IsServer())
-		{
-			bool isHostAndPlay = pUserEntity == SCR_PlayerController.GetLocalControlledEntity();
-			m_GarageManager.PopulateLocalGarage(pUserEntity, isHostAndPlay);
-		}
-		
-		RplComponent rplC = RplComponent.Cast(pUserEntity.FindComponent(RplComponent));
-		
-		//Only on the local player that used the action
-		if (pUserEntity == SCR_PlayerController.GetLocalControlledEntity())
-		{
-			m_GarageManager.EnableGarageCamera(true);
-			m_GarageManager.SetUserEntity(pUserEntity);
-		}
+		m_GarageManager.OpenGarage(pUserEntity);
 	}
 
+	//------------------------------------------------------------------------------------------------	
+	override bool HasLocalEffectOnlyScript()
+	{
+		return true;
+	}
 	//------------------------------------------------------------------------------------------------	
 	override void Init(IEntity pOwnerEntity, GenericComponent pManagerComponent)
 	{

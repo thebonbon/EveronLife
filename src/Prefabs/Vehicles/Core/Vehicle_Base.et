@@ -27,6 +27,14 @@ Vehicle {
      }
      m_fGarageSearchRadius 50
     }
+    EL_LiveParkVehicleAction "{5AB69112394157AB}" {
+     ParentContextList {
+      "EL_default"
+     }
+     UIInfo UIInfo "{5AB691123B0DE86C}" {
+      Name "Park in Real Garage"
+     }
+    }
    }
   }
  }

@@ -6,6 +6,14 @@ Vehicle UAZ1 : "{259EE7B78C51B624}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469.et" {
     }
    }
   }
+  EL_PersistenceComponent "{5A0D2D215F2F2559}" {
+   m_pSaveData EL_VehicleSaveData "{5A0D2D215C6BFA59}" {
+    m_aComponents {
+     EL_VehicleControllerSaveData "{5AB6CD0F66331916}" {
+     }
+    }
+   }
+  }
   FuelManagerComponent "{5622A70CD78A9E2C}" {
   }
   ParametricMaterialInstanceComponent "{59C68133D3FBF1B8}" {
@@ -39,8 +47,8 @@ Vehicle UAZ1 : "{259EE7B78C51B624}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469.et" {
    }
   }
  }
- coords 91.141 0 134.939
- angleY 90
+ coords 92.372 0 131.783
+ angleY 60
 }
 SCR_DestructibleEntity : "{622F9989DDC4865B}PrefabLibrary/Props/Civilian/Recreation/TableRecreation_01/TableRecreation_01.et" {
  coords 95.756 -0.001 135

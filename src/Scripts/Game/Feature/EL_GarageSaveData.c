@@ -2,7 +2,7 @@
 class EL_GarageSaveData : EL_EntitySaveDataBase
 {
 	protected ref map<string, ref array<string>> m_mSavedVehicles = new ref map<string, ref array<string>>;
-	
+
 	//------------------------------------------------------------------------------------------------
 	override bool ReadFrom(notnull IEntity worldEntity)
 	{
@@ -14,16 +14,16 @@ class EL_GarageSaveData : EL_EntitySaveDataBase
 		//Actual Data
 		EL_GarageManagerComponent garage = EL_GarageManagerComponent.Cast(worldEntity.FindComponent(EL_GarageManagerComponent));
 		m_mSavedVehicles = garage.GetAllVehicles();
-		
+
 		return true;
 	}
 
 	//------------------------------------------------------------------------------------------------
 	override bool ApplyTo(notnull IEntity worldEntity)
 	{
-		EL_GarageManagerComponent garage = EL_GarageManagerComponent.Cast(worldEntity.FindComponent(EL_GarageManagerComponent));	
+		EL_GarageManagerComponent garage = EL_GarageManagerComponent.Cast(worldEntity.FindComponent(EL_GarageManagerComponent));
 		garage.SetVehicles(m_mSavedVehicles);
-		
+
 		return true;
 	}
 

@@ -16,7 +16,7 @@ GenericEntity : "{C95E11C60810F432}Prefabs/Items/Core/Item_Base.et" {
     ItemPhysAttributes ItemPhysicalAttributes PhysicalAttributes {
      Weight 0.01
      SizeSetupStrategy Volume
-     ItemVolume 1
+     ItemVolume 0
     }
     ItemAnimationAttributes ItemAnimationAttributes "{59BC926AFC8EEB21}" {
      AnimationInstance "{4FCBEA45CAEBC9C0}anims/workspaces/player/player_main_1h.asi"
