@@ -10,3 +10,9 @@ Layer Gamemode {
 Layer Area_StPhillipe_AppleFarm {
  Index 2
 }
+Layer Montignac {
+ Index 3
+}
+Layer Managers {
+ Index 4
+}
