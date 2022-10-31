@@ -9,7 +9,6 @@ EL_SpawnZone {
  coords 81.14 0.001 150.597
  m_fSpawnRadius 1
  m_PrefabToSpawn "{743CFB1C822E7895}FrogItem.et"
- m_iAmount 100
  m_fRespawnTime 5
 }
 PolylineShapeEntity {
