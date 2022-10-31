@@ -1,34 +1,16 @@
-$grp GenericEntity {
- {
-  coords 100.455 -0.001 135
-  {
-   $grp SCR_DestructibleEntity : "{622F9989DDC4865B}PrefabLibrary/Props/Civilian/Recreation/TableRecreation_01/TableRecreation_01.et" {
-    {
-     coords 0.147 0 0
-    }
-    {
-     coords -1.065 0 0
-    }
-   }
-   GameEntity : "{EC645B2E2123131F}Prefabs/Props/Civilian/LampKerosene_01/LampKerosene_01_blue.et" {
-    components {
-     SCR_BaseInteractiveLightComponent "{58C4C3C542898CFB}" {
-      m_bGradualLightning 0
-      m_fLV 2.6
-      m_eInitialLightState LIT
-     }
-    }
-    coords -1.333 0.902 -0.055
-   }
+EL_SpawnZone {
+ components {
+  SCR_CustomAreaMeshComponent "{5ABE88E8487DEBE6}" {
+   m_fHeight 2
+   m_Material "{0A8FAD171DB3DC49}Assets/Editor/VirtualArea/VirtualArea_01_Focused.emat"
+   m_fRadius 6
   }
  }
- {
-  components {
-   MeshObject "{5ABAC94F9028EAC9}" {
-   }
-  }
-  coords 93.164 0.001 140.676
- }
+ coords 81.14 0.001 150.597
+ m_fSpawnRadius 1
+ m_PrefabToSpawn "{743CFB1C822E7895}FrogItem.et"
+ m_iAmount 100
+ m_fRespawnTime 5
 }
 PolylineShapeEntity {
  coords 85.494 0.001 144.204
@@ -59,6 +41,34 @@ PolylineShapeEntity {
   }
  }
  IsClosed 1
+}
+SCR_BaseTriggerEntity {
+ components {
+  EL_SpikeTriggerComponent "{5ABE9EE4243085BD}" {
+   m_vMins -2 -2 -0.5
+   m_vMaxs 2 2 0.5
+  }
+ }
+ coords 95.323 0.5 145.758
+ TriggerShapeType "Oriented Bounding Box"
+ BoxMins -2 -2 -0.5
+ BoxMaxs 2 2 0.5
+ DrawShape 1
+ ShapeColor 1 0 0 0.518
+ TriggerActivationType "Every query"
+ PeriodicQueries 1
+ UpdatePeriod 0.1
+ ClassFilter "Vehicle"
+ {
+  CommentEntity {
+   coords 0 0.989 0
+   m_Comment "Spikes"
+   m_Size 0.7
+   m_Color 0 0.952 1
+   m_FaceCamera 1
+   m_VisibleIngame 1
+  }
+ }
 }
 SCR_DestructibleBuildingEntity REAL_GARAGE {
  components {
@@ -385,6 +395,20 @@ SCR_DestructibleBuildingEntity PREVIEW_GARAGE : "{1E7AC996BD3B73A7}Prefabs/Struc
   }
  }
 }
+Vehicle UAZ2 : "{259EE7B78C51B624}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469.et" {
+ components {
+  SCR_VehicleDamageManagerComponent "{141326E9FD94FE40}" {
+   m_fVehicleDestroyDamage 11880.1
+  }
+  SlotManagerComponent "{55BCE45E438E4CFF}" {
+   Slots {
+    RegisteringComponentSlotInfo window_lr_02 {
+    }
+   }
+  }
+ }
+ coords 97.05 0 141.274
+}
 GenericEntity : "{33882C61BA9F0F90}Prefabs/Props/Civilian/Globe_01.et" {
  components {
   ActionsManagerComponent "{59AA8B5EDA806A4B}" {
@@ -462,9 +486,6 @@ GenericEntity : "{9ABAFFCBC76D824B}Prefabs/Props/Civilian/NoticeBoardCork_01.et"
    }
   }
  }
-}
-GenericEntity WaterBottle_5ABE7A6B1F707A91 : "{A231A5F8D479B5DC}Prefabs/Items/Drinks/WaterBottle.et" {
- coords 92.882 0.001 143.071
 }
 Vehicle M151A1 : "{F649585ABB3706C4}Prefabs/Vehicles/Wheeled/M151A2/M151A2.et" {
  components {

@@ -10,7 +10,10 @@ class FrogJumpComponent : ScriptComponent
 	protected float m_fJumpVelocity;
 	
 	[Attribute("5", UIWidgets.EditBox, "JUMP")]
-	protected float m_fJumpHeight;
+	protected float m_fJumpHeight;	
+	
+	[Attribute("5", UIWidgets.EditBox, "JUMP")]
+	protected float m_fMaxJumpDistance;
 	
 	
 	[Attribute("5", UIWidgets.EditBox, "Sec to jump")]
@@ -22,6 +25,7 @@ class FrogJumpComponent : ScriptComponent
 	private ref RandomGenerator m_RandomGenerator = new RandomGenerator;
 	
 	float timer;
+	vector m_vStartPos;
 	
 	//------------------------------------------------------------------------------------------------
 	void Jump()
@@ -32,6 +36,17 @@ class FrogJumpComponent : ScriptComponent
 		vector rndVel = Vector(rndVelX, m_fJumpHeight, rndVelZ);
 		vector velRot = Vector(rndVelX, 0, rndVelZ);
 		
+		float nextJumpDistToCenter = (GetOwner().GetOrigin() + velRot - m_vStartPos).Length();
+		float curDistToCenter = (GetOwner().GetOrigin() - m_vStartPos).Length();
+		
+		if (nextJumpDistToCenter > curDistToCenter && nextJumpDistToCenter > m_fMaxJumpDistance)
+		{
+			//Jump would be outside or even further away from area, negate it
+			rndVel[0] = -rndVel[0];
+			rndVel[2] = -rndVel[2];
+			velRot *= -1;
+		}
+				
 		velRot = velRot.Normalized().VectorToAngles();
 		GetOwner().SetYawPitchRoll(velRot);
 		
@@ -55,13 +70,11 @@ class FrogJumpComponent : ScriptComponent
 	//------------------------------------------------------------------------------------------------
 	override void OnPostInit(IEntity owner)
 	{
+		m_vStartPos = owner.GetOrigin();
 		phys = owner.GetPhysics();
 		timer = m_RandomGenerator.RandFloatXY(m_fMinJumpDelay, m_fMaxJumpDelay);
 		
 		SetEventMask(owner, EntityEvent.FIXEDFRAME);
 		owner.SetFlags(EntityFlags.ACTIVE, true);
 	}
-
-	
-	
 };

@@ -1,0 +1,25 @@
+SCR_BaseTriggerEntity {
+ ID "5ABF0340C5A467F4"
+ components {
+  EL_SpikeTriggerComponent "{5ABE9EE4243085BD}" {
+   m_vMins -2 -2 -0.5
+   m_vMaxs 2 2 0.5
+  }
+ }
+ coords 95.323 0.5 145.758
+ TriggerShapeType "Oriented Bounding Box"
+ BoxMins -2 -2 -0.5
+ BoxMaxs 2 2 0.5
+ DrawShape 1
+ ShapeColor 1 0 0 0.518
+ TriggerActivationType "Every query"
+ PeriodicQueries 1
+ UpdatePeriod 0.1
+ ClassFilter "Vehicle"
+ {
+  CommentEntity {
+   ID "5ABF0340C5A448A8"
+   coords -0.101 -0.499 0.079
+  }
+ }
+}

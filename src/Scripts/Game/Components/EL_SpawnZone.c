@@ -32,12 +32,13 @@ class EL_SpawnZone : GenericEntity
 			InventoryItemComponent invComp = InventoryItemComponent.Cast(ent.FindComponent(InventoryItemComponent));
 			if (!invComp.GetParentSlot()) //Is on Ground?
 					continue;
-			Print("Removing ent..");
+			
 			m_aSpawnedEnts.RemoveItem(ent);
 			vector rndPoint = m_RandomGenerator.GenerateRandomPointInRadius(0, m_fSpawnRadius, GetOrigin());
 			
 			IEntity newEnt = EL_Utils.SpawnEntityPrefab(m_PrefabToSpawn, rndPoint);
-			Print("new ent" + newEnt);
+			
+			newEnt.SetScale(m_RandomGenerator.RandFloatXY(0.2, 1));
 			m_aSpawnedEnts.Insert(newEnt);
 		}
 		m_aSpawnedEntsCopy.Clear();
