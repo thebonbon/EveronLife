@@ -1,3 +1,8 @@
+EL_SpawnPoint Gobal_Spawn {
+ coords 4701.563 161.121 6982.369
+ angleY 180
+ m_fSpawnRadius 2
+}
 $grp GenericEntity {
  WeaponShop {
   components {
@@ -7,10 +12,6 @@ $grp GenericEntity {
   }
   coords 4685.771 161.151 6977.483
   {
-   SCR_ChimeraCharacter : "{854C04F0EA2129CC}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_Unarmed.et" {
-    coords -3.175 0 -1.023
-    angleY 60
-   }
    GenericEntity MoneySpawner : "{C260F0E07274ACA1}Prefabs/Props/Furniture/Boiler_01.et" {
     components {
      MeshObject "{5872F0EB7FA40561}" {
@@ -212,7 +213,7 @@ $grp GenericEntity {
             m_iSellPrice 18
            }
            EL_Price "{59C4F48A9A9CB9C1}" {
-            m_Prefab "{1DBD99E6347DE1AD}Prefabs/Items/Drinks/Apple_Juice.et"
+            m_Prefab "{1DBD99E6347DE1AD}Prefabs/Items/Drinks/AppleJuice.et"
             m_sName "Apple Juice"
             m_iBuyPrice 7
             m_iSellPrice 4
@@ -365,7 +366,7 @@ $grp GenericEntity {
             m_iSellPrice 18
            }
            EL_Price "{59C4F48A9A9CB9C1}" {
-            m_Prefab "{1DBD99E6347DE1AD}Prefabs/Items/Drinks/Apple_Juice.et"
+            m_Prefab "{1DBD99E6347DE1AD}Prefabs/Items/Drinks/AppleJuice.et"
             m_sName "Apple Juice"
             m_iBuyPrice 7
             m_iSellPrice 4
@@ -505,7 +506,7 @@ $grp GenericEntity {
             m_iSellPrice 18
            }
            EL_Price "{59C4F48A9A9CB9C1}" {
-            m_Prefab "{1DBD99E6347DE1AD}Prefabs/Items/Drinks/Apple_Juice.et"
+            m_Prefab "{1DBD99E6347DE1AD}Prefabs/Items/Drinks/AppleJuice.et"
             m_sName "Apple Juice"
             m_iBuyPrice 7
             m_iSellPrice 4
@@ -888,10 +889,10 @@ $grp GenericEntity {
       ActionsManagerComponent "{59C4F487641A3025}" {
        additionalActions {
         EL_BuyAction "{59C4F4878D841445}" {
-         m_BuyablePrefab "{1DBD99E6347DE1AD}Prefabs/Items/Drinks/Apple_Juice.et"
+         m_BuyablePrefab "{1DBD99E6347DE1AD}Prefabs/Items/Drinks/AppleJuice.et"
         }
         EL_SellAction "{59C4F48B86953CE9}" {
-         m_SellablePrefab "{1DBD99E6347DE1AD}Prefabs/Items/Drinks/Apple_Juice.et"
+         m_SellablePrefab "{1DBD99E6347DE1AD}Prefabs/Items/Drinks/AppleJuice.et"
         }
        }
       }
@@ -1051,7 +1052,7 @@ $grp GenericEntity {
      angleY -7.714
     }
    }
-   $grp GenericEntity : "{1501A1A4DF77EE38}PrefabsEditable/Auto/Props/Commercial/E_SignPub_01.et" {
+   $grp SCR_DestructibleEntity : "{1501A1A4DF77EE38}PrefabsEditable/Auto/Props/Commercial/E_SignPub_01.et" {
     {
      coords 6.046 0.275 -6.235
      angleY -53.824
@@ -1098,7 +1099,6 @@ $grp GenericEntity {
         ParentContextList +{
         }
         Duration 1
-        m_GatherItemDisplayName "Apples"
         m_GatherItemPrefab "{C9D661E5B0714711}Prefabs/Items/Food/Apple.et"
        }
       }
@@ -1121,7 +1121,7 @@ $grp GenericEntity {
     coords 6.568 0.31 -7.285
     angleY -144.702
    }
-   $grp GenericEntity : "{D8B83A318AE3611E}Prefabs/Props/Commercial/MarketStand_01.et" {
+   $grp SCR_DestructibleEntity : "{D8B83A318AE3611E}Prefabs/Props/Commercial/MarketStand_01.et" {
     {
      coords 2.995 0.427 -10.463
      angleY -55.556
@@ -1183,10 +1183,10 @@ $grp GenericEntity {
     coords 15.461 0.14 12.963
     angleY 89.919
    }
-   GenericEntity : "{A0449C0B3458324C}PrefabsEditable/Auto/Props/Commercial/E_MarketStand_01_Umbrella.et" {
+   SCR_DestructibleEntity : "{A0449C0B3458324C}PrefabsEditable/Auto/Props/Commercial/E_MarketStand_01_Umbrella.et" {
     coords 16.93 -0.886 11.479
    }
-   GenericEntity : "{D8B83A318AE3611E}Prefabs/Props/Commercial/MarketStand_01.et" {
+   SCR_DestructibleEntity : "{D8B83A318AE3611E}Prefabs/Props/Commercial/MarketStand_01.et" {
     coords 15.682 -0.887 13.571
     angleY -90.686
    }
@@ -1351,6 +1351,9 @@ $grp GenericEntity {
   }
  }
 }
+GenericEntity PaperMap_01_folded_5ABC96E212B42DAF : "{13772C903CB5E4F7}Prefabs/Items/Equipment/Maps/PaperMap_01_folded.et" {
+ coords 4691.83 161.115 6985.19
+}
 GenericEntity MetalTrader : "{1392993DD6D41D47}Prefabs/Map/EL_MapIcon.et" {
  coords 4555.816 156.252 6891.983
  {
@@ -1361,7 +1364,7 @@ GenericEntity MetalTrader : "{1392993DD6D41D47}Prefabs/Map/EL_MapIcon.et" {
       Object "{0D628EB319605081}Assets/Props/Furniture/Table_02/Table_02.xob"
      }
     }
-    coords -0.807 -0 0.967
+    coords -0.807 0 0.967
    }
    {
     components {
@@ -1369,7 +1372,7 @@ GenericEntity MetalTrader : "{1392993DD6D41D47}Prefabs/Map/EL_MapIcon.et" {
       Object "{0D628EB319605081}Assets/Props/Furniture/Table_02/Table_02.xob"
      }
     }
-    coords -0.778 -0 -0.296
+    coords -0.778 0 -0.296
    }
    {
     components {
@@ -1377,59 +1380,74 @@ GenericEntity MetalTrader : "{1392993DD6D41D47}Prefabs/Map/EL_MapIcon.et" {
       Object "{0D628EB319605081}Assets/Props/Furniture/Table_02/Table_02.xob"
      }
     }
-    coords -0.791 -0 -1.477
+    coords -0.791 0 -1.477
    }
   }
-  GenericEntity : "{577A665F1662E7AD}Prefabs/Resources/Mining/CopperBar.et" {
+  GenericEntity CopperBar_5ABC8E7706ABAC57 : "{577A665F1662E7AD}Prefabs/Items/Resources/CopperBar.et" {
    coords -0.504 0.907 0.977
   }
-  GenericEntity : "{ACC9A10F0F20F5C4}Prefabs/Resources/Mining/GoldBar.et" {
+  GenericEntity GoldBar_5ABC8E7706ABAC87 : "{ACC9A10F0F20F5C4}Prefabs/Items/Resources/GoldBar.et" {
    coords -0.508 0.907 -1.427
   }
-  GenericEntity : "{BCD1E8CD7F975074}Prefabs/Resources/Mining/IronBar.et" {
+  GenericEntity IronBar_5ABC8E7706ABACD2 : "{BCD1E8CD7F975074}Prefabs/Items/Resources/IronBar.et" {
    coords -0.518 0.907 -0.285
   }
  }
 }
-GenericEntity : "{D8B83A318AE3611E}Prefabs/Props/Commercial/MarketStand_01.et" {
+SCR_DestructibleEntity : "{D8B83A318AE3611E}Prefabs/Props/Commercial/MarketStand_01.et" {
  coords 4846.047 163.803 7110.783
  angleY -63.686
 }
 $grp GenericEntity : "{FDEE11D818A4C675}Prefabs/Items/Money/DollarBill.et" {
- {
-  coords 4684.856 161.196 6977.791
+ DollarBill_5ABC9531D82E28E6 {
+  coords 4691.725 161.159 6984.443
  }
- {
-  coords 4684.852 161.196 6977.681
+ DollarBill_5ABC9531D82E28E2 {
+  coords 4691.725 161.159 6984.443
  }
- {
-  coords 4684.773 161.196 6977.854
+ DollarBill_5ABC9531D82E28E3 {
+  coords 4691.725 161.159 6984.443
  }
- {
-  coords 4684.352 161.196 6977.88
+ DollarBill_5ABC9531D82E28E4 {
+  coords 4691.725 161.159 6984.443
  }
- {
-  coords 4684.258 161.196 6977.729
+ DollarBill_5ABC9531D82E28E5 {
+  coords 4691.725 161.159 6984.443
  }
- {
-  coords 4684.258 161.196 6977.729
+ DollarBill_5ABC9531D82E28E7 {
+  coords 4691.725 161.159 6984.443
  }
- {
-  coords 4684.776 161.152 6976.994
+ DollarBill_5ABC9531D82E28E8 {
+  coords 4691.725 161.159 6984.443
  }
- {
-  coords 4685.375 161.152 6977.056
+ DollarBill_5ABC9531D82E28E9 {
+  coords 4691.725 161.159 6984.443
  }
- {
-  coords 4685.37 161.152 6976.946
+ DollarBill_5ABC9531D82E28E10 {
+  coords 4691.725 161.159 6984.443
  }
- {
-  coords 4685.291 161.152 6977.12
+ DollarBill_5ABC9531D82E28E11 {
+  coords 4691.725 161.159 6984.443
  }
- {
-  coords 4684.87 161.152 6977.145
+ DollarBill_5ABC9531D82E28E12 {
+  coords 4691.725 161.159 6984.443
  }
- {
-  coords 4684.776 161.152 6976.994
+ DollarBill_5ABC9531D82E28E13 {
+  coords 4691.725 161.159 6984.443
+ }
+ DollarBill_5ABC9531D82E28E14 {
+  coords 4691.725 161.159 6984.443
+ }
+ DollarBill_5ABC9531D82E28E15 {
+  coords 4691.725 161.159 6984.443
+ }
+ DollarBill_5ABC9531D82E28E16 {
+  coords 4691.725 161.159 6984.443
+ }
+ DollarBill_5ABC9531D82E28E17 {
+  coords 4691.725 161.159 6984.443
+ }
+ DollarBill_5ABC9531D82E28E18 {
+  coords 4691.725 161.159 6984.443
  }
 }

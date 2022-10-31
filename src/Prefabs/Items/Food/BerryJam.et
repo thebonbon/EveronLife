@@ -33,7 +33,6 @@ GenericEntity : "{C95E11C60810F432}Prefabs/Items/Core/Item_Base.et" {
     }
     CustomAttributes {
      ItemActionAnimAttributes "{59C6B079DAFCE507}" {
-      ActionType Bandage
      }
     }
    }
@@ -46,7 +45,6 @@ GenericEntity : "{C95E11C60810F432}Prefabs/Items/Core/Item_Base.et" {
      AssignedMaterial "{8C153012D409D6B9}Assets/Items/Food/BerryJam/Data/BerryJam.emat"
     }
    }
-   LODScale 0.1
    PixelSizeScale 10
   }
   RigidBody "{59C6B079DAFCE502}" {

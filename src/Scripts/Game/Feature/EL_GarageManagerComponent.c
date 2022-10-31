@@ -12,6 +12,9 @@ class EL_GarageManagerComponent : ScriptComponent
 	[Attribute("0 0 0", UIWidgets.EditBox, "Camera offset used for this PIP")]
 	protected vector m_vCameraAngels;
 
+	[Attribute("0 0 0", UIWidgets.EditBox, "Rotation Speed, 0 to disable")]
+	protected vector m_vRotationSpeed;
+	
 	protected bool m_bIsEnabled;
 	protected SCR_ManualCamera m_GarageCamera;
 
@@ -104,13 +107,12 @@ class EL_GarageManagerComponent : ScriptComponent
 	//------------------------------------------------------------------------------------------------
 	void EnableGarageCamera(bool enabled)
 	{
-
 		if (enabled && !m_bIsEnabled)
 		{
-			m_InputManager.AddActionListener("MouseRight", EActionTrigger.DOWN, DisableCam);
-			m_InputManager.AddActionListener("MouseLeft", EActionTrigger.DOWN, WithdrawVehicle);
-			m_InputManager.AddActionListener("ManualCameraSnapLeft", EActionTrigger.DOWN, PreviousPreviewVehicle);
-			m_InputManager.AddActionListener("ManualCameraSnapRight", EActionTrigger.DOWN, NextPreviewVehicle);
+			m_InputManager.AddActionListener("GarageCameraExit", EActionTrigger.DOWN, DisableCam);
+			m_InputManager.AddActionListener("GarageCameraSelect", EActionTrigger.DOWN, WithdrawVehicle);
+			m_InputManager.AddActionListener("GarageCameraLeft", EActionTrigger.DOWN, PreviousPreviewVehicle);
+			m_InputManager.AddActionListener("GarageCameraRight", EActionTrigger.DOWN, NextPreviewVehicle);
 			// Create Garage camera
 			if (!m_GarageCamera)
 				m_GarageCamera = EL_CameraUtils.CreateAndSetCamera(m_GarageCameraPrefab, m_GarageEntity, m_vCameraPoint, m_vCameraAngels);
@@ -121,10 +123,10 @@ class EL_GarageManagerComponent : ScriptComponent
 
 		if (!enabled && m_bIsEnabled)
 		{
-			m_InputManager.RemoveActionListener("MouseRight", EActionTrigger.DOWN, DisableCam);
-			m_InputManager.RemoveActionListener("MouseLeft", EActionTrigger.DOWN, WithdrawVehicle);
-			m_InputManager.RemoveActionListener("ManualCameraSnapLeft", EActionTrigger.DOWN, PreviousPreviewVehicle);
-			m_InputManager.RemoveActionListener("ManualCameraSnapRight", EActionTrigger.DOWN, NextPreviewVehicle);
+			m_InputManager.RemoveActionListener("GarageCameraExit", EActionTrigger.DOWN, DisableCam);
+			m_InputManager.RemoveActionListener("GarageCameraSelect", EActionTrigger.DOWN, WithdrawVehicle);
+			m_InputManager.RemoveActionListener("GarageCameraLeft", EActionTrigger.DOWN, PreviousPreviewVehicle);
+			m_InputManager.RemoveActionListener("GarageCameraRight", EActionTrigger.DOWN, NextPreviewVehicle);
 
 			delete m_aPreviewVehicle;
 
@@ -273,9 +275,6 @@ class EL_GarageManagerComponent : ScriptComponent
 		return storedVehicleIds;
 	}
 
-	[Attribute("0 0 0", UIWidgets.EditBox, "Rotation Speed")]
-	protected vector m_vRotationSpeed;
-	
 	//------------------------------------------------------------------------------------------------
 	override void EOnFrame(IEntity owner, float timeSlice)
 	{
@@ -295,7 +294,12 @@ class EL_GarageManagerComponent : ScriptComponent
 	override void OnPostInit(IEntity owner)
 	{
 		SetEventMask(owner, EntityEvent.INIT | EntityEvent.FRAME);
-		owner.SetFlags(EntityFlags.ACTIVE, true);
+		owner.SetFlags(EntityFlags.ACTIVE, false);
+		//Only set FRAME Mask if needed
+		if (m_vRotationSpeed != vector.Zero) 
+		{
+			SetEventMask(owner, EntityEvent.FRAME);
+			owner.SetFlags(EntityFlags.ACTIVE, true);
+		}			
 	}
-
 };

@@ -1,29 +1,30 @@
 class EL_Utils
 {
 	//------------------------------------------------------------------------------------------------
-	//! Remap material. Breaks attached objs on Player
-	static void SetColor(IEntity entity, int color)
+	//! Creates and sets new material with given color to entity
+	//! \param entity Entity to set new color material
+	//! \param color Color for the new material
+	static void SetColor(notnull IEntity entity, int color)
 	{
-		if (!entity)
-			return;
 		VObject mesh = entity.GetVObject();
 		if (!mesh)
 			return;
-		
-		Material newColorMaterial = Material.Create("DynamicColorMaterial", "MatPBRMulti");
-		Color newColor = Color.FromInt(color);
-		float materialColorRGBA[] = { newColor.R(), newColor.G(), newColor.B(), newColor.A() };
-		newColorMaterial.SetParamByIndex(0, materialColorRGBA);
-		//0.000000 0.000000 0.000000 1.000000
+
+		Color materialColor = Color.FromInt(color);
+		float materialColorRGBA[] = { materialColor.R(), materialColor.G(), materialColor.B(), materialColor.A() };
+
+		Material dynamicColorMaterial = Material.Create("DynamicColorMaterial", "MatPBRMulti");
+		dynamicColorMaterial.SetParam("Color", materialColorRGBA);
+
 		string matName;
-		newColorMaterial.GetName(matName);
+		dynamicColorMaterial.GetName(matName);
 
 		string remap;
 		string materials[256];
 		int numMats = mesh.GetMaterials(materials);
 		if (numMats == 0)
 			return;
-		
+
 		for (int i = 0; i < numMats; i++)
 		{
 			string originalMatName = materials[i];
@@ -32,25 +33,25 @@ class EL_Utils
 				remap += string.Format("$remap '%1' '%2';", materials[i], matName);
 			}
 		}
-		
+
 		entity.SetObject(mesh, remap);
-		
-		newColorMaterial.Release();
-		newColorMaterial = null;	
+		dynamicColorMaterial.Release();
 	}
-	
+
 	//------------------------------------------------------------------------------------------------
-	//! Workaround for missing FindComponent("MeshObject")
-	static VObject GetPrefabVObject(ResourceName prefab) 
-	{			
+	//! Gets prefab VObject
+	//! \param prefab Prefab path
+	//! \return the VObject of the prefab
+	static VObject GetPrefabVObject(ResourceName prefab)
+	{
 		BaseContainer meshComponent;
 		IEntitySource prefabSource = Resource.Load(prefab).GetResource().ToEntitySource();
 		int count = prefabSource.GetComponentCount();
-		
-		for(int i = 0; i < count; i++) 
+
+		for(int i = 0; i < count; i++)
 		{
 			IEntityComponentSource comp = prefabSource.GetComponent(i);
-			
+
 			if(comp.GetClassName() == "MeshObject")
 			{
 				meshComponent = comp;
@@ -61,7 +62,7 @@ class EL_Utils
 		meshComponent.Get("Object", prefabObject);
 		return Resource.Load(prefabObject).GetResource().ToVObject();
 	}
-	
+
 	//------------------------------------------------------------------------------------------------
 	//! Gets the Bohemia UID
 	//! \param playerId Index of the player inside player manager
@@ -97,8 +98,11 @@ class EL_Utils
 		Math3D.AnglesToMatrix(orientation, spawnParams.Transform);
 		spawnParams.Transform[3] = origin;
 		spawnParams.Parent = parent;
-
-		return GetGame().SpawnEntityPrefab(Resource.Load(prefab), GetGame().GetWorld(), spawnParams);
+		
+		IEntity newEnt = GetGame().SpawnEntityPrefab(Resource.Load(prefab), GetGame().GetWorld(), spawnParams);
+		if (parent)
+			parent.AddChild(newEnt, -1);
+		return newEnt;
 	}
 
 	//------------------------------------------------------------------------------------------------

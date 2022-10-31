@@ -93,7 +93,7 @@ $grp GenericEntity {
      angleZ -3.54
     }
    }
-   $grp GenericEntity : "{622F9989DDC4865B}PrefabLibrary/Props/Civilian/Recreation/TableRecreation_01.et" {
+   $grp SCR_DestructibleEntity : "{622F9989DDC4865B}PrefabLibrary/Props/Civilian/Recreation/TableRecreation_01/TableRecreation_01.et" {
     {
      coords 0.147 0.019 -0.144
      angleY 82.104
@@ -125,7 +125,7 @@ $grp GenericEntity {
     coords -0.023 -0.143 0.87
     angleY 171.533
    }
-   GenericEntity : "{B80655BD24D2C162}PrefabLibrary/Props/Civilian/Recreation/ChairRecreation_01_white.et" {
+   SCR_DestructibleEntity : "{B80655BD24D2C162}PrefabLibrary/Props/Civilian/Recreation/ChairRecreation_01/ChairRecreation_01_white.et" {
     coords -1.331 -0.243 0.668
     angleX 3.15
     angleY 151.694

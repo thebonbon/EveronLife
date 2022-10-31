@@ -1,0 +1,17 @@
+EL_SpawnZone {
+ ID "5ABD37AB29A1070A"
+ components {
+  Hierarchy "{5ABD37AA93CCD82C}" {
+  }
+  SCR_CustomAreaMeshComponent "{5ABD37AA2A25FBF8}" {
+   m_fHeight 10
+   m_Material "{0A8FAD171DB3DC49}Assets/Editor/VirtualArea/VirtualArea_01_Focused.emat"
+   m_fRadius 10
+  }
+  RplComponent "{5ABD37AA9E088D24}" {
+  }
+ }
+ coords 74.756 0.001 146.518
+ m_PrefabToSpawn "{A231A5F8D479B5DC}Prefabs/Items/Drinks/WaterBottle.et"
+ m_fRespawnTime 0.001
+}

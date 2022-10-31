@@ -77,7 +77,7 @@ GenericEntity : "{3C4F54AD0CB24525}Prefabs/Resources/Mining/GoldOre.et" {
  coords 114.594 0.001 143.487
 }
 EL_MiningArea : "{530D05E39B25A8C8}Prefabs/Resources/Mining/MiningArea.et" {
- coords 100.506 0.001 157.28
+ coords 98.613 0.001 157.28
  m_iAmount 0
  m_fRespawnTime 60
  m_PrefabsToSpawn {
