@@ -32,6 +32,8 @@ class EL_ShopItemComponent : ScriptComponent
 	//------------------------------------------------------------------------------------------------
 	IEntity GetShopItemEntity()
 	{
+		if (!m_ShopItemEntity)
+			m_ShopItemEntity = GetGame().SpawnEntityPrefab(Resource.Load(m_ShopItemPrefab));
 		return m_ShopItemEntity;
 	}	
 	

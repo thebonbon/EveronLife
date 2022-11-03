@@ -75,7 +75,7 @@ class EL_BuyItemAction : ScriptedUserAction
 		m_BuyableEntity = shopItemComponent.GetShopItemEntity();
 		m_ItemPriceConfig = shopItemComponent.GetShopItempriceConfig();
 		
-		m_pPrefabNamePredicate.prefabName = m_BuyablePrefab;
+		m_pPrefabNamePredicate.prefabName = MONEY_PREFAB;
 
 	}
 
