@@ -19,3 +19,4 @@ class EL_CharacterOwnerComponent: ScriptComponent
 		return m_sCharacterId;
 	}
 };
+

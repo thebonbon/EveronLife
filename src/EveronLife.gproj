@@ -7,6 +7,11 @@ GameProject {
  }
  Configurations {
   GameProjectConfig PC {
+   DefaultSettings EngineUserSettings "{5702F087A781A9FC}" {
+    VideoUserSettings VideoUserSettings "{B272A67DB18E04F9}" {
+     MaxFps "120"
+    }
+   }
   }
   GameProjectConfig XBOX_ONE {
   }

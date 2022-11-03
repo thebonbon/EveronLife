@@ -115,6 +115,10 @@ $grp GenericEntity {
    }
    EL_NpcBaseEntity TomatoNpc : "{850859F356F5058E}Prefabs/Characters/Npcs/Npc_Default_01.et" {
     components {
+     SignalsManagerComponent "{5ABF03452A94D9AA}" {
+     }
+     CharacterWeaponSlotComponent "{5ABF034515BEC357}" {
+     }
      CharacterIdentityComponent "{5A4B0B84AEEDE9BA}" {
       Identity Identity "{5A4B0B84AF44A913}" {
        Name "Tomato"

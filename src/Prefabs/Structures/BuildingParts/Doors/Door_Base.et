@@ -1,0 +1,21 @@
+GenericEntity {
+ ID "0000000000000001"
+ components {
+  DoorComponent "{221C667A9F7D4B69}" {
+  }
+  EL_LockComponent "{5AC29970429B33BB}" {
+  }
+  ActionsManagerComponent "{F32B667C3C823800}" {
+   ActionContexts {
+   }
+   additionalActions {
+    EL_HouseBuyAction "{5ABF1E9E56466526}" {
+     ParentContextList {
+      "SCR_DoorUserAction"
+     }
+     "Sort Priority" 10
+    }
+   }
+  }
+ }
+}

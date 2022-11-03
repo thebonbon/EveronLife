@@ -1,0 +1,24 @@
+SCR_BaseTriggerEntity {
+ ID "5AC2E3AB3DBB78D3"
+ components {
+  EL_JumpTrigger "{5AC2E3A4D34D58F7}" {
+   m_vJumpVel 40 5 0
+  }
+  MeshObject "{5AC2E3AB60F30843}" {
+   Object "{861996B8C36C36C1}Assets/Vegetation/Vegetables/PumpkinCrop_01.xob"
+  }
+  RigidBody "{5AC2E3ABACB0AF56}" {
+   ModelGeometry 1
+   Static 1
+  }
+ }
+ coords 84.488 0.5 139.19
+ TriggerShapeType "Oriented Bounding Box"
+ BoxMins -1 0 -1
+ BoxMaxs 1 1 1
+ ShapeColor 0.249 0 1 0.518
+ TriggerActivationType "Every query"
+ PeriodicQueries 1
+ UpdatePeriod 0.5
+ ClassFilter "SCR_ChimeraCharacter"
+}

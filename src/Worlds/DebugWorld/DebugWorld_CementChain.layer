@@ -8,6 +8,14 @@ SCR_DestructibleBuildingEntity : "{A92A5F3B79FF56BE}Prefabs/Structures/Industria
   }
  }
  coords 127.233 0.002 115.465
+ {
+  GenericEntity Door_ConcretePlant_E_01_RIGHT_EXT_ST_B_5AC2CCE01F64E5D0 {
+   ID "571EB9F1B4EC2DA1"
+  }
+  GenericEntity Door_ConcretePlant_E_01_LEFT_EXT_ST_B_5AC2CCE01F64E454 {
+   ID "571EB9F1B4EC2D48"
+  }
+ }
 }
 GenericEntity CementBag_5A0E821DC5FD235C : "{D58674633332DC86}Prefabs/Items/Resources/CementBag.et" {
  coords 120.029 0.001 135.205

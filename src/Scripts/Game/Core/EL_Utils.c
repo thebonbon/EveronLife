@@ -1,5 +1,6 @@
 class EL_Utils
 {
+
 	//------------------------------------------------------------------------------------------------
 	//! Creates and sets new material with given color to entity
 	//! \param entity Entity to set new color material

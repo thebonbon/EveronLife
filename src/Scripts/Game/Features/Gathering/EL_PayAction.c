@@ -53,7 +53,7 @@ class EL_PayAction : ScriptedUserAction
 		EL_ShopCartManager shopCartManager = EL_ShopCartManager.Cast(pUserEntity.FindComponent(EL_ShopCartManager));
 		array<IEntity> moneyItems = new array<IEntity>();
 		inventoryManager.FindItems(moneyItems, m_pPrefabNamePredicate);
-		
+
 		for (int i=0; i < shopCartManager.GetTotalCartCost(); i++)
 		{
 			inventoryManager.TryDeleteItem(moneyItems[i]);

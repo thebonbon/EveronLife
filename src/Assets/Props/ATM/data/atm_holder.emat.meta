@@ -1,0 +1,15 @@
+MetaFileClass {
+ Name "{D9CE4EAF55958074}Assets/Props/ATM/data/atm_holder.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

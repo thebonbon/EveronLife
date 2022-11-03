@@ -1,3 +1,6 @@
 MatPBRBasic {
- Color 0.001 0.618 0.155 1
+ Color 0.112 0.723 0.114 1
+ MetalnessScale 0.417
+ AOScale 0.196
+ DielectricReflectance 0.02
 }

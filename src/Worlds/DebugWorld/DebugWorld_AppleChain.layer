@@ -65,7 +65,7 @@ GenericEntity AppleTrader {
       Enabled 1
      }
     }
-    coords 0.071 0.899 0.094
+    coords -0.752 0.899 -0.302
     angleY -14.907
     Flags 1027
    }

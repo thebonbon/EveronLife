@@ -1,0 +1,7 @@
+SCR_DestructibleBuildingEntity {
+ ID "F0DBA538AC2A0552"
+ components {
+  EL_CharacterOwnerComponent "{5ABF1E9E7057A525}" {
+  }
+ }
+}

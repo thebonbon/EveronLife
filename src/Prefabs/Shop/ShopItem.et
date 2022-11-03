@@ -1,6 +1,10 @@
 GenericEntity {
  ID "59C4F485BE70DBE7"
  components {
+  EL_ShopItemComponent "{5AC6DBF94189D860}" {
+   m_PriceConfig EL_PriceConfig "{5AC6DBF8C2E04878}" : "{18A98641909A7F52}Configs/Shops/EL_ShopPrices.conf" {
+   }
+  }
   MeshObject "{59C4F48745893DBF}" {
   }
   ActionsManagerComponent "{59C4F487641A3025}" {
@@ -13,13 +17,11 @@ GenericEntity {
     }
    }
    additionalActions {
-    EL_BuyAction "{59C4F4878D841445}" {
+    EL_BuyItemAction "{59C4F4878D841445}" {
      ParentContextList {
       "default"
      }
      Duration 1
-     m_PriceConfig EL_PriceConfig "{59C4F4849412E4CC}" : "{18A98641909A7F52}Configs/Shops/EL_ShopPrices.conf" {
-     }
     }
     EL_SellAction "{59C4F48B86953CE9}" {
      ParentContextList {
@@ -27,8 +29,6 @@ GenericEntity {
      }
      Duration 1
      "Sort Priority" 5
-     m_PriceConfig EL_PriceConfig "{59C4F48B975D9547}" : "{18A98641909A7F52}Configs/Shops/EL_ShopPrices.conf" {
-     }
     }
    }
   }

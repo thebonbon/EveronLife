@@ -1,0 +1,5 @@
+MatPBRBasic {
+ Color 1 0.879 0 1
+ Emissive 0.574 0.544 0.204 0
+ EmissiveLV 1.569
+}

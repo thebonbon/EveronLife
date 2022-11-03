@@ -1,0 +1,29 @@
+GenericEntity : "{6A40DF87E1E4E960}Prefabs/Items/Core/ItemInteractable_Base.et" {
+ ID "508AB2013EEE1E00"
+ components {
+  EL_KeyComponent "{5AC2971C77FC6F17}" {
+  }
+  InventoryItemComponent "{5222EB4D0C73006B}" {
+   Attributes SCR_ItemAttributeCollection "{5222EB4D0A2B466B}" {
+    ItemDisplayName UIInfo "{5222EB4D07D865FA}" {
+     Name "House Key"
+     Description "Can lock and unlock a house door"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes PhysicalAttributes {
+     Weight 0
+     DimensionScaler 0
+    }
+    CustomAttributes {
+     PreviewRenderAttributes "{5AC2971C84BCC363}" {
+      CameraPreset Left
+      CameraDistanceToItem 0.075
+     }
+    }
+   }
+  }
+  MeshObject "{5A4ACD10B8DA304F}" {
+   Object "{DF73CA3188E9743C}Assets/Items/VehicleKey/VehicleKey.xob"
+  }
+ }
+ coords 89.032 0.001 138.706
+}

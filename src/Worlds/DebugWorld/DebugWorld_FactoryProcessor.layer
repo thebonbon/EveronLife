@@ -1,4 +1,148 @@
 SCR_DestructibleBuildingEntity : "{B1F1B1BEB21102A7}Prefabs/Structures/Industrial/Houses/FactoryHall_E_01/FactoryHall_E_01.et" {
  coords 130.561 0.008 167.357
  angleY 179.937
+ {
+  GenericEntity {
+   ID "57132DCB367C8C2D"
+   components {
+    DoorSlotComponent "{54FB160ECA313E4B}" {
+     AttachType EntitySlotInfo "{52D87C55247FF43B}" {
+     }
+    }
+   }
+  }
+  GenericEntity {
+   ID "58C87882355526E6"
+   {
+    GenericEntity Door_Metal_A_RIGHT_EXT_COV_B_5AC2CCE01F618CBC {
+     ID "568AF712D1ABDA6B"
+    }
+   }
+  }
+  GenericEntity {
+   ID "58C87882DD2714AF"
+   {
+    GenericEntity Door_Metal_A_RIGHT_EXT_COV_B_5AC2CCE01F618F3B {
+     ID "568AF712D1ABDA6B"
+    }
+   }
+  }
+  GenericEntity Door_FactoryHall_E_01_Supervisor_Left_INT_B_5AC2CCE01F618FB9 {
+   ID "57132DCB367C87D8"
+  }
+  GenericEntity {
+   ID "57132DCB367C84C4"
+   {
+    GenericEntity Door_Village_E_A_RIGHT_INT_COV_B_5AC2CCE01F618ECC {
+     ID "55649319921183B4"
+    }
+   }
+  }
+  GenericEntity {
+   ID "57132DCB367C8717"
+   {
+    GenericEntity Door_Village_E_A_RIGHT_INT_COV_B_5AC2CCE01F618908 {
+     ID "55649319921183B4"
+    }
+   }
+  }
+  GenericEntity {
+   ID "57132DCB367C8721"
+   {
+    GenericEntity Door_Village_E_A_RIGHT_INT_COV_B_5AC2CCE01F618952 {
+     ID "55649319921183B4"
+    }
+   }
+  }
+  GenericEntity {
+   ID "57132DCB367C873A"
+   {
+    GenericEntity Door_Village_E_A_RIGHT_INT_COV_B_5AC2CCE01F618990 {
+     ID "55649319921183B4"
+    }
+   }
+  }
+  GenericEntity {
+   ID "57132DCB367C8754"
+   {
+    GenericEntity Door_Village_E_A_RIGHT_INT_COV_B_5AC2CCE01F61883A {
+     ID "55649319921183B4"
+    }
+   }
+  }
+  GenericEntity {
+   ID "57132DCB367C8775"
+   {
+    GenericEntity Door_Village_E_A_RIGHT_INT_COV_B_5AC2CCE01F618874 {
+     ID "55649319921183B4"
+    }
+   }
+  }
+  GenericEntity {
+   ID "57132DCB367C87B3"
+   {
+    GenericEntity Door_Village_E_A_RIGHT_INT_COV_B_5AC2CCE01F6188BB {
+     ID "55649319921183B4"
+    }
+   }
+  }
+  GenericEntity {
+   ID "57132DCB367C8798"
+   {
+    GenericEntity Door_Barracks_LEFT_EXT_ST_M1_5AC2CCE01F6188F5 {
+     ID "58689E19F6D84399"
+    }
+    GenericEntity Door_Barracks_RIGHT_EXT_ST_B_5AC2CCE01F618B11 {
+     ID "58689E19F6D843D7"
+    }
+   }
+  }
+  GenericEntity {
+   ID "57132DCB367C87FB"
+   {
+    GenericEntity Door_Barracks_LEFT_EXT_ST_M1_5AC2CCE01F618B41 {
+     ID "58689E19F6D84399"
+    }
+    GenericEntity Door_Barracks_RIGHT_EXT_ST_B_5AC2CCE01F618B83 {
+     ID "58689E19F6D843D7"
+    }
+   }
+  }
+  GenericEntity {
+   ID "57132DCB367C84E6"
+   {
+    GenericEntity Door_Village_E_A_RIGHT_EXT_COV_B_5AC2CCE01F619322 {
+     ID "5564931ADBF597B6"
+    }
+   }
+  }
+  GenericEntity Door_FactoryHall_E_01_Sliding_Right_INT_B_5AC2CCE01F6193AE {
+   ID "57132DCB367C8440"
+  }
+  GenericEntity Door_FactoryHall_E_01_Sliding_Right_INT_B_5AC2CCE01F6193F1 {
+   ID "57132DCB367C8463"
+  }
+  GenericEntity {
+   ID "57132DCB367C8608"
+   {
+    GenericEntity Door_FactoryHall_E_01_Elevator_Left_COV_B_5AC2CCE01F619231 {
+     ID "568C838F54E3245F"
+    }
+    GenericEntity Door_FactoryHall_E_01_Elevator_Right_COV_B_5AC2CCE01F619278 {
+     ID "568C838F54E32476"
+    }
+   }
+  }
+  GenericEntity {
+   ID "57132DCB367C866A"
+   {
+    GenericEntity Door_FactoryHall_E_01_Elevator_Right_COV_B_5AC2CCE01F6192A9 {
+     ID "568C838F54E32476"
+    }
+    GenericEntity Door_FactoryHall_E_01_Elevator_Left_COV_B_5AC2CCE01F6192F4 {
+     ID "568C838F54E3245F"
+    }
+   }
+  }
+ }
 }

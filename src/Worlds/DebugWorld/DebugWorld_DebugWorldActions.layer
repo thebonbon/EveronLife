@@ -1,3 +1,106 @@
+$grp CommentEntity {
+ {
+  coords 133.15 2.923 149.639
+  m_Comment "Smelting"
+  m_Size 0.7
+  m_Color 0 0.952 1
+  m_VisibleIngame 1
+ }
+ {
+  coords 81.862 3.148 134.805
+  angleY 180
+  m_Comment "Garage"
+  m_Size 0.7
+  m_Color 0 0.952 1
+  m_VisibleIngame 1
+ }
+ {
+  coords 95.757 0.64 135.57
+  angleY 180
+  m_Comment "Vehicle Shop"
+  m_Size 0.5
+  m_Color 0 0.952 1
+  m_VisibleIngame 1
+  m_TextBackground 1
+ }
+ {
+  coords 43.844 1.496 136.819
+  angleY -90
+  m_Comment "Housing"
+  m_Size 0.7
+  m_Color 0 0.952 1
+  m_VisibleIngame 1
+ }
+ {
+  coords 99.974 3.647 156.523
+  m_Comment "Ore spawning zone"
+  m_Size 0.7
+  m_Color 0 0.952 1
+  m_VisibleIngame 1
+ }
+ {
+  coords 86.154 4.816 126.884
+  angleY -90
+  m_Comment "TODO"
+  m_Size 0.5
+  m_Color 0 0.952 1
+  m_VisibleIngame 1
+  m_TextBackground 1
+ }
+ {
+  coords 86.154 0.829 126.884
+  angleY -90
+  m_Comment "Housing"
+  m_Size 0.5
+  m_Color 0 0.952 1
+  m_VisibleIngame 1
+  m_TextBackground 1
+ }
+ {
+  coords 86.154 2.573 126.884
+  angleY -90
+  m_Comment "Vehicle Shop with cam"
+  m_Size 0.5
+  m_Color 0 0.952 1
+  m_VisibleIngame 1
+  m_TextBackground 1
+ }
+ {
+  coords 86.154 3.423 126.884
+  angleY -90
+  m_Comment "Real Garage"
+  m_Size 0.5
+  m_Color 0 0.952 1
+  m_VisibleIngame 1
+  m_TextBackground 1
+ }
+ {
+  coords 44.596 3.701 147.776
+  angleY -90
+  m_Comment "Weapon Store"
+  m_Size 0.5
+  m_Color 0 0.952 1
+  m_VisibleIngame 1
+ }
+ {
+  coords 86.154 4.156 126.884
+  angleY -90
+  m_Comment "Shop no cart -DONE"
+  m_Size 0.5
+  m_Color 0 0.952 1
+  m_VisibleIngame 1
+  m_TextBackground 1
+ }
+ {
+  coords 111.246 0.77 135.57
+  angleY 180
+  m_Comment "Better apple shop"
+  m_Size 0.2
+  m_Color 0 0.952 1
+  m_VisibleIngame 1
+  m_TextBackground 1
+ }
+}
 EL_SpawnZone {
  components {
   SCR_CustomAreaMeshComponent "{5ABE88E8487DEBE6}" {
@@ -6,40 +109,210 @@ EL_SpawnZone {
    m_fRadius 6
   }
  }
- coords 81.14 0.001 150.597
+ coords 79.273 0.601 158.965
  m_fSpawnRadius 1
- m_PrefabToSpawn "{743CFB1C822E7895}FrogItem.et"
+ m_PrefabToSpawn "{743CFB1C822E7895}Prefabs/Misc/FrogItem.et"
  m_fRespawnTime 5
 }
-PolylineShapeEntity {
- coords 85.494 0.001 144.204
- Points {
-  ShapePoint "{5ABCC17A4D217776}" {
-   Position 0 -0.001 0
-  }
-  ShapePoint "{5ABCC17A4D2175E9}" {
-   Position -3.563 -0.001 -1.401
-  }
-  ShapePoint "{5ABCC17A59C88A43}" {
-   Position -3.554 0 4.15
-  }
-  ShapePoint "{5ABCC17A58A317BC}" {
-   Position -11.356 0 6.944
-  }
-  ShapePoint "{5ABCC17A58F2FD7B}" {
-   Position -4.833 0 8.948
-  }
-  ShapePoint "{5ABCC17A5B0568AB}" {
-   Position 2.122 0 7.997
-  }
-  ShapePoint "{5ABCC17A5B2EE0CD}" {
-   Position 5.061 0 2.674
-  }
-  ShapePoint "{5ABCC17A5A011E8E}" {
-   Position 4.878 0 -2.333
+GenericEntity WeaponShop2 {
+ components {
+  EL_MapIconComponent "{59C4F486FF627796}" {
+   m_ImagePath "{E11489AF8F68E734}UI/Icons/weapon.edds"
   }
  }
- IsClosed 1
+ coords 39.037 0.201 147.541
+ angleY 30
+ {
+  GenericEntity MoneySpawner3 : "{C260F0E07274ACA1}Prefabs/Props/Furniture/Boiler_01.et" {
+   components {
+    MeshObject "{5872F0EB7FA40561}" {
+     Object "{9E421B5449280EF3}Assets/Props/ATM/ATM_1.xob"
+    }
+    RigidBody "{5872F0EB7DFB5A9D}" {
+     Layers 688128
+     ModelGeometry 0
+    }
+    ActionsManagerComponent "{59CA6D297AAC3ABA}" {
+     ActionContexts {
+      UserActionContext "{59CA6D297D8226B4}" {
+       ContextName "default"
+       Position PointInfo "{59CA6D2986B8B69C}" {
+        Offset -0.0457 1.2027 -0.3279
+       }
+       Radius 5
+      }
+     }
+     additionalActions {
+      EL_GetMoneyAction "{5AC331193A3A7838}" {
+       ParentContextList {
+        "default"
+       }
+       UIInfo UIInfo "{5AC33119329D0966}" {
+        Name "Get $$$"
+       }
+       m_iAmount 100
+      }
+     }
+    }
+    RplComponent "{5624A88DC2D9928D}" {
+     Enabled 1
+    }
+   }
+   coords 3.183 -0.201 5.956
+   angleY -118.114
+  }
+  $grp GenericEntity : "{DD994C1FCE7AD6E0}Prefabs/Shop/ShopItem.et" {
+   {
+    components {
+     EL_ShopItemComponent "{5AC6DBF94189D860}" {
+      m_ShopItemPrefab "{41A9C55B61F375F0}Prefabs/Items/Equipment/Backpacks/Backpack_Kolobok.et"
+     }
+     MeshObject "{59C4F48745893DBF}" {
+     }
+     ActionsManagerComponent "{59C4F487641A3025}" {
+      additionalActions {
+       EL_BuyItemAction "{59C4F4878D841445}" {
+       }
+       EL_SellAction "{59C4F48B86953CE9}" {
+       }
+      }
+     }
+     RplComponent "{59C4F4898DA2E09B}" {
+     }
+    }
+    coords 2.122 0.818 0.293
+   }
+   {
+    components {
+     EL_ShopItemComponent "{5AC6DBF94189D860}" {
+      m_ShopItemPrefab "{3DE0155EC9767B98}Prefabs/Items/Equipment/Backpacks/Backpack_Veshmeshok.et"
+     }
+     MeshObject "{59C4F48745893DBF}" {
+     }
+     ActionsManagerComponent "{59C4F487641A3025}" {
+      additionalActions {
+       EL_BuyItemAction "{59C4F4878D841445}" {
+       }
+       EL_SellAction "{59C4F48B86953CE9}" {
+       }
+      }
+     }
+     RplComponent "{59C4F4898DA2E09B}" {
+     }
+    }
+    coords 1.747 0.818 0.972
+   }
+   {
+    components {
+     EL_ShopItemComponent "{5AC6DBF94189D860}" {
+      m_ShopItemPrefab "{06B68C58B72EAAC6}Prefabs/Items/Equipment/Backpacks/Backpack_ALICE_Medium.et"
+     }
+     MeshObject "{59C4F48745893DBF}" {
+      Object "{B982CAE1F85001D0}Assets/Items/Equipment/Backpacks/Backpack_ALICE_Medium/Backpack_ALICE_Medium_item.xob"
+     }
+     ActionsManagerComponent "{59C4F487641A3025}" {
+      additionalActions {
+       EL_BuyItemAction "{59C4F4878D841445}" {
+       }
+       EL_SellAction "{59C4F48B86953CE9}" {
+       }
+      }
+     }
+     RplComponent "{59C4F4898DA2E09B}" {
+     }
+    }
+    coords 1.346 0.818 1.69
+   }
+   {
+    components {
+     EL_ShopItemComponent "{5AC6DBF94189D860}" {
+      m_ShopItemPrefab "{1353C6EAD1DCFE43}Prefabs/Weapons/Handguns/M9/Handgun_M9.et"
+     }
+     MeshObject "{59C4F48745893DBF}" {
+     }
+     ActionsManagerComponent "{59C4F487641A3025}" {
+      additionalActions {
+       EL_SellAction "{59C4F48B86953CE9}" {
+        ParentContextList +{
+        }
+        Duration 1
+        "Sort Priority" 5
+       }
+       EL_BuyItemAction "{59C4F4878D841445}" {
+       }
+      }
+     }
+     RplComponent "{59C4F4898DA2E09B}" {
+     }
+    }
+    coords 0.758 0.442 1.501
+    angleZ 90
+   }
+   {
+    components {
+     EL_ShopItemComponent "{5AC6DBF94189D860}" {
+      m_ShopItemPrefab "{9C05543A503DB80E}Prefabs/Weapons/Magazines/Magazine_9x19_M9_15rnd_Ball.et"
+     }
+     MeshObject "{59C4F48745893DBF}" {
+     }
+     ActionsManagerComponent "{59C4F487641A3025}" {
+      additionalActions {
+       EL_SellAction "{59C4F48B86953CE9}" {
+        ParentContextList +{
+        }
+        Duration 1
+        "Sort Priority" 5
+       }
+       EL_BuyItemAction "{59C4F4878D841445}" {
+       }
+      }
+     }
+     RplComponent "{59C4F4898DA2E09B}" {
+     }
+    }
+    coords 0.888 0.44 1.184
+    angleZ 90.477
+   }
+   {
+    components {
+     EL_ShopItemComponent "{5AC6DBF94189D860}" {
+      m_ShopItemPrefab "{C0F7DD85A86B2900}Prefabs/Weapons/Handguns/PM/Handgun_PM.et"
+     }
+     MeshObject "{59C4F48745893DBF}" {
+     }
+     ActionsManagerComponent "{59C4F487641A3025}" {
+      additionalActions {
+       EL_BuyItemAction "{59C4F4878D841445}" {
+       }
+       EL_SellAction "{59C4F48B86953CE9}" {
+       }
+      }
+     }
+     RplComponent "{59C4F4898DA2E09B}" {
+     }
+    }
+    coords -0.479 0.442 3.72
+    angleZ 90
+   }
+   {
+    components {
+     EL_ShopItemComponent "{5AC6DBF94189D860}" {
+      m_ShopItemPrefab "{8B853CDD11BA916E}Prefabs/Weapons/Magazines/Magazine_9x18_PM_8rnd_Ball.et"
+     }
+     MeshObject "{59C4F48745893DBF}" {
+     }
+     ActionsManagerComponent "{59C4F487641A3025}" {
+      additionalActions {
+      }
+     }
+     RplComponent "{59C4F4898DA2E09B}" {
+     }
+    }
+    coords -0.141 0.432 3.221
+    angleZ 90.499
+   }
+  }
+ }
 }
 SCR_BaseTriggerEntity {
  components {
@@ -48,7 +321,7 @@ SCR_BaseTriggerEntity {
    m_vMaxs 2 2 0.5
   }
  }
- coords 95.323 0.5 145.758
+ coords 66.712 0.5 152.398
  TriggerShapeType "Oriented Bounding Box"
  BoxMins -2 -2 -0.5
  BoxMaxs 2 2 0.5
@@ -87,7 +360,7 @@ SCR_DestructibleBuildingEntity REAL_GARAGE {
   RplComponent "{5AB6CD06B55A2345}" {
   }
  }
- coords 72.166 0.001 124.289
+ coords 72.166 0.001 124.869
  Flags 524291
  SlotBoneMappings {
   SlotBoneMappingObject "{5AB6CD06B55A23B1}" {
@@ -200,10 +473,10 @@ SCR_DestructibleBuildingEntity REAL_GARAGE {
    }
    coords 0 0 0
    {
-    GenericEntity {
+    GenericEntity Door_Garage_E_02_A_RIGHT_EXT_COV_B_5AC2CCE01F64C9C2 {
      ID "58689E1BBDDF09AD"
      {
-      GenericEntity {
+      GenericEntity Door_Garage_E_02_A_SMALL_Right_EXT_COV_B_5AC2CCE01F64CB1B {
        ID "58689E1B767FC979"
        components {
         EL_RealGarageManagerComponent "{5AB6CD06F304F054}" {
@@ -223,6 +496,9 @@ SCR_DestructibleBuildingEntity REAL_GARAGE {
        }
       }
      }
+    }
+    GenericEntity Door_Garage_E_02_A_LEFT_EXT_COV_B_5AC2CCE01F64CB45 {
+     ID "58689E1BBDDF09CF"
     }
    }
   }
@@ -289,6 +565,11 @@ SCR_DestructibleBuildingEntity REAL_GARAGE {
      }
     }
     coords 0 0 0
+    {
+     GenericEntity Door_Village_E_A_RIGHT_EXT_COV_B_5AC2CCE01F64D540 {
+      ID "5564931ADBF597B6"
+     }
+    }
    }
    {
     components {
@@ -299,6 +580,11 @@ SCR_DestructibleBuildingEntity REAL_GARAGE {
      }
     }
     coords 0 0 0
+    {
+     GenericEntity Door_Village_E_A_RIGHT_EXT_COV_B_5AC2CCE01F64D41E {
+      ID "5564931ADBF597B6"
+     }
+    }
    }
   }
   $grp Building : "{E68D2802A8DB8DB2}Prefabs/Structures/BuildingParts/Windows/win_garage_e_02_1300x1400_444_B.et" {
@@ -372,7 +658,10 @@ SCR_DestructibleBuildingEntity REAL_GARAGE {
 SCR_DestructibleBuildingEntity PREVIEW_GARAGE : "{1E7AC996BD3B73A7}Prefabs/Structures/Military/Houses/GarageMilitary_E_01/GarageMilitary_E_01_base.et" {
  coords 0 50 0
  {
-  $grp StaticModelEntity : "{987B35F6140166E9}Prefabs/Structures/Infrastructure/Pavements/AsphaltPavement_01/AsphaltPavement_01_Narrow_4m_90.et" {
+  BaseGameTriggerEntity {
+   coords 6.523 0.439 2.219
+  }
+  $grp StaticModelEntity {
    {
     coords 6.481 0.312 1.116
    }
@@ -389,24 +678,7 @@ SCR_DestructibleBuildingEntity PREVIEW_GARAGE : "{1E7AC996BD3B73A7}Prefabs/Struc
     angleY -180
    }
   }
-  BaseGameTriggerEntity : "{AB5C86C286A09CDA}Prefabs/Shop/EL_VehicleSpawnPoint.et" {
-   coords 6.523 0.439 2.219
-  }
  }
-}
-Vehicle UAZ2 : "{259EE7B78C51B624}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469.et" {
- components {
-  SCR_VehicleDamageManagerComponent "{141326E9FD94FE40}" {
-   m_fVehicleDestroyDamage 11880.1
-  }
-  SlotManagerComponent "{55BCE45E438E4CFF}" {
-   Slots {
-    RegisteringComponentSlotInfo window_lr_02 {
-    }
-   }
-  }
- }
- coords 97.05 0 141.274
 }
 GenericEntity : "{33882C61BA9F0F90}Prefabs/Props/Civilian/Globe_01.et" {
  components {
@@ -464,8 +736,57 @@ GenericEntity : "{33882C61BA9F0F90}Prefabs/Props/Civilian/Globe_01.et" {
  }
  coords 100.028 0.898 135.126
 }
+$grp SCR_BaseTriggerEntity : "{3DCB1D8DBCD3B347}Prefabs/Misc/SuperJumpTrigger.et" {
+ {
+  components {
+   EL_JumpTrigger "{5AC2E3A4D34D58F7}" {
+    m_vJumpVel -50 8 0
+   }
+  }
+  coords 130.027 0.001 140.509
+  angleY 90
+ }
+ {
+  components {
+   EL_JumpTrigger "{5AC2E3A4D34D58F7}" {
+    m_vJumpVel 50 8 0
+   }
+  }
+  coords 60.517 0.001 141.727
+  angleY -90
+ }
+ {
+  components {
+   EL_JumpTrigger "{5AC2E3A4D34D58F7}" {
+    m_vJumpVel -50 8 0
+   }
+  }
+  coords 86.297 0.001 140.509
+  angleY 90
+ }
+}
+GenericEntity ItemInteractable_Base_5ABF3C1CE1EF5709 : "{4895654A61D2F41A}Prefabs/Items/HouseKeyItem.et" {
+ components {
+  InventoryItemComponent "{5222EB4D0C73006B}" {
+   Attributes SCR_ItemAttributeCollection "{5222EB4D0A2B466B}" {
+    ItemPhysAttributes ItemPhysicalAttributes PhysicalAttributes {
+     DimensionScaler 0
+    }
+   }
+  }
+ }
+ coords 88.834 0.106 139.335
+}
 GenericEntity Backpack_ALICE_Medium_assembled_5A4E9B16234DA870 : "{5C5C6EE05EE2FF1A}Prefabs/Items/Equipment/Backpacks/Backpack_ALICE_Medium_assembled.et" {
  coords 101.007 0.886 135.394
+}
+$grp SCR_DestructibleEntity : "{622F9989DDC4865B}PrefabLibrary/Props/Civilian/Recreation/TableRecreation_01/TableRecreation_01.et" {
+ {
+  coords 99.557 -0.001 135
+ }
+ {
+  coords 100.769 -0.001 135
+ }
 }
 LightEntity : "{8CAD466D49510CDF}Prefabs/Structures/Infrastructure/Lamps/LampStreet_E_03/LampStreet_E_03_light.et" {
  coords -2.885 25.144 -0.093
@@ -481,6 +802,220 @@ GenericEntity : "{9ABAFFCBC76D824B}Prefabs/Props/Civilian/NoticeBoardCork_01.et"
     RigidBody "{5872F0EB7DFB5A9D}" {
      Enabled 0
      ModelGeometry 0
+    }
+   }
+  }
+ }
+}
+$grp Tree : "{CC86FA58287C61C8}Prefabs/Vegetation/Vegetables/PumpkinCrop_01_Line.et" {
+ {
+  coords 82.366 0.001 158.932
+  angleY -4.227
+ }
+ {
+  coords 78.899 0.001 161.402
+  angleY 116.383
+ }
+ {
+  coords 78.955 0.001 156.671
+  angleY 33.057
+ }
+ {
+  coords 75.719 0.001 158.529
+  angleY -41.018
+ }
+}
+SCR_DestructibleBuildingEntity : "{CD370ECB385DE67A}Prefabs/Structures/Houses/Farm/FarmHouse_E_1L01/FarmHouse_E_1L01.et" {
+ components {
+  EL_HouseManagerComponent "{5AC2E3B3EB7921A2}" {
+  }
+ }
+ coords 45.309 0 131.612
+ angleY 90
+ {
+  GenericEntity {
+   ID "555CDCE34C25100E"
+   {
+    GenericEntity Door_Village_E_A_LEFT_INT_COV_B_5AC2CCE01F62658D {
+     ID "5668D20503330112"
+    }
+   }
+  }
+  GenericEntity {
+   ID "555CDCE34C251020"
+   {
+    GenericEntity Door_Village_E_A_LEFT_INT_COV_B_5AC2CCE01F626462 {
+     ID "5668D20503330112"
+    }
+   }
+  }
+  GenericEntity {
+   ID "58588855C157DDD7"
+   {
+    GenericEntity Door_Village_E_A_LEFT_INT_ST_B_brown_5AC2CCE01F626692 {
+     ID "56C4DE5B46FE790F"
+    }
+   }
+  }
+  GenericEntity {
+   ID "58588857D928DFEF"
+   {
+    GenericEntity Door_Village_E_A_LEFT_INT_ST_B_brown_5AC2CCE01F62601D {
+     ID "56C4DE5B46FE790F"
+    }
+   }
+  }
+  GenericEntity {
+   ID "5690E48C117926FA"
+   {
+    GenericEntity Door_Village_E_A_LEFT_EXT_ST_M1_5AC2CCE01F6260B8 {
+     ID "568279007B95913E"
+    }
+   }
+  }
+  GenericEntity {
+   ID "5690E48E37C4741B"
+   {
+    GenericEntity Door_Village_E_A_LEFT_EXT_ST_B_5AC2CCE01F6262A7 {
+     ID "5682790023B8AF6E"
+    }
+   }
+  }
+  GenericEntity {
+   ID "58588855286FDBC5"
+   {
+    GenericEntity Door_Village_E_A_LEFT_INT_ST_M1_brown_5AC2CCE01F626CAD {
+     ID "56C4DE5A30EED764"
+    }
+   }
+  }
+ }
+}
+$grp GenericEntity : "{DD994C1FCE7AD6E0}Prefabs/Shop/ShopItem.et" {
+ {
+  components {
+   MeshObject "{59C4F48745893DBF}" {
+    Object "{746CE09C894304E4}Assets/Items/Equipment/Binoculars/Binoculars_B12/Binoculars_B12.xob"
+   }
+   ActionsManagerComponent "{59C4F487641A3025}" {
+    additionalActions {
+     EL_BuyItemAction "{59C4F4878D841445}" {
+     }
+     EL_SellAction "{59C4F48B86953CE9}" {
+     }
+    }
+   }
+  }
+  coords 41.031 0.628 149.456
+ }
+ {
+  components {
+   EL_ShopItemComponent "{5AC6DBF94189D860}" {
+    m_ShopItemPrefab "{F2539FA5706E51E4}Prefabs/Items/Equipment/Binoculars/Binoculars_B12.et"
+   }
+   MeshObject "{59C4F48745893DBF}" {
+   }
+   ActionsManagerComponent "{59C4F487641A3025}" {
+    additionalActions {
+     EL_BuyItemAction "{59C4F4878D841445}" {
+     }
+     EL_SellAction "{59C4F48B86953CE9}" {
+     }
+    }
+   }
+  }
+  coords 41.031 0.668 149.456
+ }
+ {
+  components {
+   EL_ShopItemComponent "{5AC6DBF94189D860}" {
+    m_ShopItemPrefab "{C9D661E5B0714711}Prefabs/Items/Food/Apple.et"
+   }
+   MeshObject "{59C4F48745893DBF}" {
+    Object "{55991E1823C60AB3}Assets/Props/Crates/Crate_01.xob"
+   }
+  }
+  coords 111.223 0.899 135.243
+  {
+   $grp GenericEntity {
+    {
+     components {
+      MeshObject "{5AC6DBFD4D197B51}" {
+       Object "{D0566D3CAE967F4D}Assets/Items/Food/Apple/Apple.xob"
+      }
+     }
+     coords -0.181 0 0.072
+    }
+    {
+     components {
+      MeshObject "{5AC6DBFD4D197B51}" {
+       Object "{D0566D3CAE967F4D}Assets/Items/Food/Apple/Apple.xob"
+      }
+     }
+     coords -0.139 0 -0.054
+    }
+    {
+     components {
+      MeshObject "{5AC6DBFD4D197B51}" {
+       Object "{D0566D3CAE967F4D}Assets/Items/Food/Apple/Apple.xob"
+      }
+     }
+     coords 0.088 0 0.091
+    }
+    {
+     components {
+      MeshObject "{5AC6DBFD4D197B51}" {
+       Object "{D0566D3CAE967F4D}Assets/Items/Food/Apple/Apple.xob"
+      }
+     }
+     coords 0.043 0 0.002
+    }
+    {
+     components {
+      MeshObject "{5AC6DBFD4D197B51}" {
+       Object "{D0566D3CAE967F4D}Assets/Items/Food/Apple/Apple.xob"
+      }
+     }
+     coords -0.05 0 -0.069
+    }
+    {
+     components {
+      MeshObject "{5AC6DBFD4D197B51}" {
+       Object "{D0566D3CAE967F4D}Assets/Items/Food/Apple/Apple.xob"
+      }
+     }
+     coords 0.18 0 0.029
+    }
+    {
+     components {
+      MeshObject "{5AC6DBFD4D197B51}" {
+       Object "{D0566D3CAE967F4D}Assets/Items/Food/Apple/Apple.xob"
+      }
+     }
+     coords -0.038 0 0.028
+    }
+   }
+  }
+ }
+}
+SCR_DestructibleBuildingEntity : "{F51B9B9BD15BBE64}Prefabs/Structures/Commercial/Shops/ShopHouse_E_2I01t_householdwares.et" {
+ coords 36.968 0.001 150.078
+ angleY 91.729
+ {
+  GenericEntity {
+   ID "56F2E0BBB25707B9"
+   components {
+    MeshObject "{5111E74D5E891458}" {
+     Materials {
+      MaterialAssignClass "{5682D51ACA63F980}" {
+       SourceMaterial "Collor_Palette"
+       AssignedMaterial "{D88CD168EEC93147}Assets/Structures/Infrastructure/Naval/Houses/CottagePier_01/Data/empty.emat"
+      }
+      MaterialAssignClass "{5682D51ACA63F9AE}" {
+       SourceMaterial "SignCommercial_01"
+       AssignedMaterial "{D88CD168EEC93147}Assets/Structures/Infrastructure/Naval/Houses/CottagePier_01/Data/empty.emat"
+      }
+     }
     }
    }
   }

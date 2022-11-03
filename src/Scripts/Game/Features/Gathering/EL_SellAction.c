@@ -1,31 +1,11 @@
 class EL_SellAction : ScriptedUserAction
 {
-	[Attribute("", UIWidgets.ResourcePickerThumbnail, "", "et")]
-	private ResourceName m_SellablePrefab;
-	
-	[Attribute("", UIWidgets.Auto, "Item price")]
-	private ref EL_PriceConfig m_PriceConfig;
-	
+	ResourceName m_SellablePrefab;
+
 	private const ResourceName MONEY_PREFAB = "{FDEE11D818A4C675}Prefabs/Items/Money/DollarBill.et";
 	private EL_Price m_ItemPriceConfig;
-	private bool m_bIsPrefabInCofig;
 	ref SCR_PrefabNamePredicate m_pPrefabNamePredicate = new SCR_PrefabNamePredicate();
-	private IEntity m_SellableEntity;
-	//------------------------------------------------------------------------------------------------
-	private bool TryGetPrefabPriceConfig()
-	{
-		foreach (EL_Price price : m_PriceConfig.m_aPriceConfigs)
-		{
-			if (price.m_Prefab == m_SellablePrefab)
-			{
-				m_ItemPriceConfig = price;
-				return true;
-			}
-		}
-		
-		Print("No price config found for " + m_SellablePrefab, LogLevel.WARNING);
-		return false;
-	}
+
 	
 	//------------------------------------------------------------------------------------------------
 	override void PerformAction(IEntity pOwnerEntity, IEntity pUserEntity)
@@ -37,8 +17,6 @@ class EL_SellAction : ScriptedUserAction
 		{
 			inventoryManager.TrySpawnPrefabToStorage(MONEY_PREFAB);
 		}
-
-		
 	}
 	
 	//------------------------------------------------------------------------------------------------
@@ -53,7 +31,7 @@ class EL_SellAction : ScriptedUserAction
 	override bool CanBePerformedScript(IEntity user)
  	{
 		SCR_InventoryStorageManagerComponent inventoryManager = SCR_InventoryStorageManagerComponent.Cast(user.FindComponent(SCR_InventoryStorageManagerComponent));
-		return (m_SellablePrefab && m_bIsPrefabInCofig && inventoryManager.FindItem(m_pPrefabNamePredicate));
+		return (m_SellablePrefab && m_ItemPriceConfig && inventoryManager.FindItem(m_pPrefabNamePredicate));
 	}	
 	
 	//------------------------------------------------------------------------------------------------
@@ -66,9 +44,12 @@ class EL_SellAction : ScriptedUserAction
 	override void Init(IEntity pOwnerEntity, GenericComponent pManagerComponent)
 	{
 		SetCannotPerformReason("Item not found");
-		m_bIsPrefabInCofig = TryGetPrefabPriceConfig();
+				
+		EL_ShopItemComponent shopItemComponent = EL_ShopItemComponent.Cast(pOwnerEntity.FindComponent(EL_ShopItemComponent));
+		m_SellablePrefab = shopItemComponent.GetShopItemPrefab();
+		m_ItemPriceConfig = shopItemComponent.GetShopItempriceConfig();
 		m_pPrefabNamePredicate.prefabName = m_SellablePrefab;
-		m_SellableEntity = GetGame().SpawnEntityPrefab(Resource.Load(m_SellablePrefab));
+		
 	}
 
 }

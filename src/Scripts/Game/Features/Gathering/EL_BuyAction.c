@@ -136,14 +136,7 @@ class EL_BuyAction : ScriptedUserAction
 		if (!m_bIsPrefabInCofig || !m_BuyablePrefab)
 			return false;
 		
-		//Only one cart item?
-		/*m_ShopCartManager = EL_ShopCartManager.Cast(user.FindComponent(EL_ShopCartManager));
-		if (m_ShopCartManager.GetCartCount() != 0)
-		{
-			SetCannotPerformReason("Cart full");
-			return false;
-		}
-		*/
+
 		m_InventoryManager = SCR_InventoryStorageManagerComponent.Cast(user.FindComponent(SCR_InventoryStorageManagerComponent));
 
 		if (GetOwner().Type() != Vehicle && !m_InventoryManager.CanInsertItem(m_BuyableEntity))

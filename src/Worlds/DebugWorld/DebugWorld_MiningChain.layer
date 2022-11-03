@@ -77,8 +77,18 @@ GenericEntity : "{3C4F54AD0CB24525}Prefabs/Resources/Mining/GoldOre.et" {
  coords 114.594 0.001 143.487
 }
 EL_MiningArea : "{530D05E39B25A8C8}Prefabs/Resources/Mining/MiningArea.et" {
+ components {
+  SCR_CustomAreaMeshComponent "{5AC31498314FA68B}" {
+   m_fHeight 0.1
+   m_vResolution 4
+   m_Material "{8E49053767C35127}Assets/Clutter/Rocks/Data/c_stones_sharp_01.emat"
+   m_fRadius 10
+  }
+ }
  coords 98.613 0.001 157.28
- m_iAmount 0
+ angleY 45
+ m_vSize 5 1 5
+ m_iAmount 5
  m_fRespawnTime 60
  m_PrefabsToSpawn {
   EL_WeightedSpawn "{59E8E156901BB00D}" {
