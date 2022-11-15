@@ -1,0 +1,102 @@
+ProcAnimProjectClass {
+ signals {
+  SignalClass {
+   id 4100
+   name "SignalInput"
+   tl -230.571 34.047
+   res "{5577B9A4220F99BE}ProcAnims/Forklift/LiftSignal.siga"
+   inputsport {
+    1
+   }
+   outputsport {
+    3
+   }
+   inputvalues {
+    0
+   }
+   inputvaluesmin {
+    0
+   }
+   inputvaluesmax {
+    1.25
+   }
+  }
+ }
+ funcs {
+  BoneClass {
+   id 1030
+   name "Lift"
+   version 0
+   tl -226.25 -108.75
+   outs {
+    2054
+   }
+   bone "v_lift"
+  }
+  TranslateSetClass {
+   id 2054
+   name "LiftSetMovement"
+   tl 158.047 -110.619
+   funcs {
+    IOPConnectionClass iopConnection {
+     port 0
+     conn {
+      ConnectionsClass connections {
+       id 2
+       links {
+        ConnectionClass connection {
+         id 1030
+         port 0
+        }
+       }
+      }
+     }
+    }
+    IOPConnectionClass iopConnection {
+     port 1
+     conn {
+      ConnectionsClass connections {
+       id 2
+       links {
+        ConnectionClass connection {
+         id 3078
+         port 0
+        }
+       }
+      }
+     }
+    }
+   }
+   UpdateCollider 1
+  }
+  TranslateMakeClass {
+   id 3078
+   name "LiftMakeMovenet"
+   tl -35.333 -14.667
+   iops {
+    IOPConnectionClass iopConnection {
+     port 2
+     conn {
+      ConnectionsClass connections {
+       id 0
+       links {
+        ConnectionClass connection {
+         id 4100
+         port 3
+        }
+       }
+      }
+     }
+    }
+   }
+   outs {
+    2054
+   }
+  }
+ }
+ model "{9127EE155BB2A468}Assets/Vehicles/Forklift/source/ForkLiftFixed.xob"
+ version 1
+ compiled ProcAnimCompiledClass {
+  version 2
+ }
+}

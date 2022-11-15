@@ -9,33 +9,6 @@ Vehicle {
    AcceptHierarchyProperties 1
   }
   ActionsManagerComponent "{C97BE5489221AE18}" {
-   ActionContexts {
-    UserActionContext "{5AA345996A72CAD0}" {
-     ContextName "EL_default"
-     Position PointInfo "{5AA34599628199C3}" {
-     }
-     Radius 14.707
-    }
-   }
-   additionalActions {
-    EL_ParkVehicleAction "{5AA345998B57C946}" {
-     ParentContextList {
-      "EL_default"
-     }
-     UIInfo UIInfo "{5AA345998F0C58B5}" {
-      Name "Park"
-     }
-     m_fGarageSearchRadius 50
-    }
-    EL_LiveParkVehicleAction "{5AB69112394157AB}" {
-     ParentContextList {
-      "EL_default"
-     }
-     UIInfo UIInfo "{5AB691123B0DE86C}" {
-      Name "Park in Real Garage"
-     }
-    }
-   }
   }
  }
 }

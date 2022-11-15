@@ -1,0 +1,105 @@
+MetaFileClass {
+ Name "{9127EE155BB2A468}Assets/Vehicles/Forklift/source/ForkLiftFixed.xob"
+ Configurations {
+  FBXResourceClass PC {
+   ExportSkinning 1
+   ExportSceneHierarchy 1
+   MaterialAssigns {
+    MaterialAssignClass "{5ADB535F53A2C7BC}" {
+     SourceMaterial "Body"
+     AssignedMaterial "{1FEE923DD7D24D87}Assets/Vehicles/Forklift/source/data/Body.emat"
+    }
+    MaterialAssignClass "{5ADB535F53A2C7A4}" {
+     SourceMaterial "Extras"
+     AssignedMaterial "{B7980DC9E3061A4C}Assets/Vehicles/Forklift/source/data/Extras.emat"
+    }
+   }
+   MeshParams {
+    MeshParam Body {
+    }
+    MeshParam Lift {
+    }
+    MeshParam Lights {
+    }
+    MeshParam Wheels {
+    }
+   }
+   GeometryParams {
+    GeometryParam UBX_Body {
+     LayerPreset "Vehicle"
+     SurfaceProperties {
+      "{D3A4A761377F28DE}Common/Materials/Game/VehicleParts/vehicle_body.gamemat"
+     }
+     Mass 0
+     Margin 0
+    }
+    GeometryParam UBX_LiftPlatform {
+     LayerPreset "PropFireView"
+     SurfaceProperties {
+      "{962A3D033BAD4606}Common/Materials/Game/Metal/metal_3mm_min.gamemat"
+     }
+     Mass 0
+     Margin 0
+    }
+    GeometryParam UTM_Body {
+     LayerPreset "FireGeo"
+     SurfaceProperties {
+      "{962A3D033BAD4606}Common/Materials/Game/Metal/metal_3mm_min.gamemat"
+     }
+     Mass 0
+     Margin 0
+    }
+    GeometryParam UCL_FG_wheel_L01 {
+     LayerPreset "FireGeo"
+     SurfaceProperties {
+      "{8F1BCCA995D7FA4B}Common/Materials/Game/rubber_tire.gamemat"
+     }
+     Mass 0
+     Margin 0
+    }
+    GeometryParam UCL_FG_wheel_L02 {
+     LayerPreset "FireGeo"
+     SurfaceProperties {
+      "{8F1BCCA995D7FA4B}Common/Materials/Game/rubber_tire.gamemat"
+     }
+     Mass 0
+     Margin 0
+    }
+    GeometryParam UCL_FG_wheel_R01 {
+     LayerPreset "FireGeo"
+     SurfaceProperties {
+      "{8F1BCCA995D7FA4B}Common/Materials/Game/rubber_tire.gamemat"
+     }
+     Mass 0
+     Margin 0
+    }
+    GeometryParam UCL_FG_wheel_R02 {
+     LayerPreset "FireGeo"
+     SurfaceProperties {
+      "{8F1BCCA995D7FA4B}Common/Materials/Game/rubber_tire.gamemat"
+     }
+     Mass 0
+     Margin 0
+    }
+   }
+   Common TXOCommonClass "{5ADB535F538B5A83}" : "{0877E7C4BB2B2C9A}Configs/System/ResourceTypes/PC/MeshObjectCommon.conf" {
+   }
+  }
+  FBXResourceClass XBOX_ONE : PC {
+   Common TXOCommonClass "{5ADB535F538B658B}" : "{9D5B6207F7628CE2}Configs/System/ResourceTypes/XBOX_ONE/MeshObjectCommon.conf" {
+   }
+  }
+  FBXResourceClass XBOX_SERIES : PC {
+   Common TXOCommonClass "{5ADB535F538B65C1}" : "{DD9F02115C764647}Configs/System/ResourceTypes/XBOX_SERIES/MeshObjectCommon.conf" {
+   }
+  }
+  FBXResourceClass PS4 : PC {
+   Common TXOCommonClass "{5ADB535F538B6412}" : "{53EC476BC921D99A}Configs/System/ResourceTypes/PS4/MeshObjectCommon.conf" {
+   }
+  }
+  FBXResourceClass HEADLESS : PC {
+   Common TXOCommonClass "{5ADB535F538B6464}" : "{3A5B3356978039E8}Configs/System/ResourceTypes/HEADLESS/MeshObjectCommon.conf" {
+   }
+  }
+ }
+}

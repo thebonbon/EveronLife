@@ -14,7 +14,7 @@ GenericEntity : "{C95E11C60810F432}Prefabs/Items/Core/Item_Base.et" {
      Description "Used for purchasing goods and services"
     }
     ItemPhysAttributes ItemPhysicalAttributes PhysicalAttributes {
-     Weight 0.01
+     Weight 0
      SizeSetupStrategy Volume
      ItemVolume 0
     }

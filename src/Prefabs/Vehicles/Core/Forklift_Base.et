@@ -1,0 +1,236 @@
+Vehicle : "{1F9BB80C3EC3C891}Prefabs/Vehicles/Core/Wheeled_Car_Base.et" {
+ ID "BBCBA43A9778AE21"
+ components {
+  SCR_VehicleSoundComponent "{55C2E66AD4EF2CA6}" {
+   Filenames {
+    "{D89573B95647C34A}Sounds/Vehicles/Wheeled/M151A2/Vehicles_M151A2_Engine.acp"
+   }
+  }
+  BaseVehicleNodeComponent "{20FB66C5B2237133}" {
+   components {
+    SCR_CarControllerComponent "{20FB66C5BC92275B}" {
+     MaxStartupTime 0
+    }
+   }
+  }
+  MeshObject "{51DAA09FEFBFC0E7}" {
+   Object "{9127EE155BB2A468}Assets/Vehicles/Forklift/source/ForkLiftFixed.xob"
+  }
+  RigidBody "{51DAA09FECF52BBF}" {
+   Mass 2000
+   CenterOfMass 0 0.65 -0.5
+  }
+  SCR_BaseCompartmentManagerComponent "{20FB66C5DCB8DF72}" {
+   CompartmentSlots {
+    PilotCompartmentSlot PilotCompartment {
+     CompartmentAction SCR_GetInUserAction "{5086DB209BDE8253}" {
+      ParentContextList {
+       "driver_idle"
+      }
+     }
+     GetOutAction SCR_GetOutAction "{509D56667AFC4BD5}" {
+      ParentContextList {
+       "driver_idle"
+      }
+     }
+     SwitchSeatAction SCR_SwitchSeatAction "{509D56667885A8DC}" {
+      ParentContextList {
+       "driver_idle"
+      }
+     }
+     PassengerPositionInfo EntitySlotInfo "{A1CB25848A3D93A8}" {
+      PivotID "driver_idle"
+     }
+     DoorInfoList {
+      CompartmentDoorInfo "{50B8D5DDA17EB35D}" {
+       ContextName "driver_idle"
+       EntryPositionInfo PointInfo "{50B8D5DD213DC00C}" {
+        PivotID "driver_idle"
+       }
+       ExitPositionInfo PointInfo "{5ADCD131E43D8322}" {
+        PivotID "driver_getin"
+       }
+       GetInTeleport 1
+       GetOutTeleport 1
+      }
+     }
+    }
+   }
+  }
+  SCR_VehicleDamageManagerComponent "{141326E9FD94FE40}" {
+   m_fVehicleDestroyDamage 4286.43
+  }
+  VehicleWheeledSimulation "{731B26FCA2F19855}" {
+   Simulation Wheeled "{4D8B26DEA5F25978}" {
+    Engine Engine Engine {
+     MaxPower 150
+     MaxTorque 222
+     Steepness 30
+     Friction 100
+    }
+    Axles {
+     Axle "{4D8B26DF957A8E1C}" {
+      TorqueShare 1
+      HasHandbrake 1
+      Differential Differential Diff {
+       Type LSD
+       Output0 "Wheel_L01"
+       Output1 "Wheel_R01"
+      }
+      Suspension Suspension "{4D8B26DFF8859A7B}" {
+       MaxSteeringAngle 0
+       MaxTravelUp 0.1
+       MaxTravelDown 0.1
+      }
+      Wheel Wheel "{4D8B26DFFE211745}" {
+       Radius 0.33
+       Mass 50
+      }
+      Tyre Tyre "{5ADCD13D732816E3}" {
+      }
+     }
+     Axle "{4D8B26DF8CF2F3D8}" {
+      HasHandbrake 0
+      Suspension Suspension "{4D8B26DF2B10AE05}" {
+       MaxSteeringAngle 80
+       SpringRate 60
+       CompressionDamper 5000
+       MaxTravelUp 0.1
+       MaxTravelDown 0.1
+      }
+      Wheel Wheel "{4D8B26DF30A4E4D7}" {
+       Radius 0.27
+       Mass 30
+      }
+      Tyre Tyre "{5ADCD13D9B2B3DA7}" {
+       Roughness 0.1
+       LongitudinalFriction 0.65
+       LateralFriction 0.05
+      }
+     }
+    }
+    Pacejka Pacejka "{5ADD2BFAE7AD1D2D}" {
+     Longitudinal PacejkaLongitudinal "{5ADD2BFAE7AD1D07}" {
+      b0 1.65
+      b1 -110
+      b2 1800
+      b3 23.3
+      b4 410
+      b5 0.075
+      b6 0
+      b7 0.055
+      b8 -0.024
+      b9 0.014
+      b10 0.26
+     }
+     Lateral PacejkaLateral "{5ADD2BFAE7AD1D55}" {
+      a0 1.55
+      a1 -55
+      a2 1750
+      a3 1900
+      a4 7.2
+      a5 0.014
+      a6 -0.24
+      a7 1
+      a8 -0.03
+      a9 -0.001
+      a10 -0.15
+      a11 -8.5
+      a12 -0.29
+      a13 17.8
+      a14 -2.4
+     }
+     Aligning PacejkaAligning "{5ADD2BFAE7AD1DBA}" {
+      c0 2.2
+      c1 -4.3
+      c2 -4.4
+      c3 -1.9
+      c4 -9.6
+      c5 0.023
+      c6 0
+      c7 0.044
+      c8 -0.58
+      c9 0.18
+      c10 0.043
+      c11 0.048
+      c12 -0.004
+      c13 -0.18
+      c14 0.14
+      c16 -1.029
+      c17 0.27
+      c18 -1.1
+     }
+    }
+   }
+  }
+  CarProcAnimComponent "{A201E6A6F82F2CDA}" {
+   Parameters {
+    ProcAnimParams "{5ADD056C1C3D3888}" {
+     ResourceName "{21E337B6F88155D7}anims/proc/wheel.pap"
+     BoneNames {
+      "v_wheel_l01"
+     }
+    }
+    ProcAnimParams "{5ADD056C7869D897}" {
+     ResourceName "{21E337B6F88155D7}anims/proc/wheel.pap"
+     BoneNames {
+      "v_wheel_r01"
+     }
+    }
+    ProcAnimParams "{5ADD056C844B0465}" {
+     ResourceName "{21E337B6F88155D7}anims/proc/wheel.pap"
+     BoneNames {
+      "v_wheel_l02"
+     }
+    }
+    ProcAnimParams "{5ADD056C8491C1B1}" {
+     ResourceName "{21E337B6F88155D7}anims/proc/wheel.pap"
+     BoneNames {
+      "v_wheel_r02"
+     }
+    }
+    ProcAnimParams "{5ADD2BFFFCF53A6C}" {
+     ResourceName "{C5C9C6705611D90C}ProcAnims/Forklift/Forklift.pap"
+     BoneNames {
+      "v_lift"
+     }
+    }
+   }
+  }
+  ActionsManagerComponent "{C97BE5489221AE18}" {
+   ActionContexts {
+    UserActionContext "{5ADCD130E22DB8A1}" {
+     ContextName "driver_getin"
+     Position PointInfo "{5ADCD130E22E15BB}" {
+      PivotID "driver_getin"
+     }
+    }
+    UserActionContext "{5ADCD130E22E4050}" {
+     ContextName "driver_idle"
+     Position PointInfo "{5ADCD130E22E76F5}" {
+      PivotID "driver_idle"
+     }
+     Radius 1
+    }
+    UserActionContext "{5ADD2BFC089039FE}" {
+     ContextName "Lever01"
+     Position PointInfo "{5ADD2BFC026ABF1D}" {
+      Offset 0.2641 1.2392 0.5014
+      Angles 0 90 0
+     }
+     Radius 1.95
+     Omnidirectional 0
+     VisibilityAngle 180
+    }
+   }
+   additionalActions {
+    EL_ForkliftControlAction "{5ADD2BFC0F490665}" {
+     ParentContextList {
+      "Lever01"
+     }
+     Duration 0.5
+    }
+   }
+  }
+ }
+}

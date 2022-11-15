@@ -1,0 +1,9 @@
+GameEntity : "{17F335BF60DD2550}Prefabs/Characters/Core/Headgear_Base.et" {
+ ID "5112706CD4157AC7"
+ components {
+  MeshObject "{5112706CD4157AE0}" {
+   Object "{711C89CFAC4C2033}Assets/Gear/Steve/SteveHead.xob"
+  }
+ }
+ coords 98.359 0.001 144.756
+}

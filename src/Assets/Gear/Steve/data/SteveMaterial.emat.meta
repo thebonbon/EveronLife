@@ -1,0 +1,15 @@
+MetaFileClass {
+ Name "{8B6EB88165F9E1F8}Assets/Gear/Steve/data/SteveMaterial.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

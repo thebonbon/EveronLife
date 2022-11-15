@@ -19,6 +19,8 @@ Vehicle UAZ1 : "{259EE7B78C51B624}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469.et" {
   ParametricMaterialInstanceComponent "{59C68133D3FBF1B8}" {
    EmissiveMultiplier 0
   }
+  RigidBody "{51DAA09FECF52BBF}" {
+  }
   SCR_VehicleDamageManagerComponent "{141326E9FD94FE40}" {
    m_fVehicleDestroyDamage 11880.1
   }

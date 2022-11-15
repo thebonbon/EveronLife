@@ -1,0 +1,8 @@
+MatPBRBasic {
+ Color 0.497 0.497 0.497 1
+ BCRMap "{1087459931140BCC}Assets/Vehicles/Forklift/textures/T_Forklift_1_A.edds"
+ NormalPower 2.008
+ NMOMap "{29D7017C66C80563}Assets/Vehicles/Forklift/textures/T_Forklift_1_M.edds"
+ DetailNormalPower 2.589
+ DetailNormalMap "{773F283FD9458B6C}Assets/Vehicles/Forklift/textures/T_Forklift_1_N.edds"
+}

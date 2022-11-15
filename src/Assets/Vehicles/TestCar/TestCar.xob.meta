@@ -1,0 +1,253 @@
+MetaFileClass {
+ Name "{8DFA0D709F5C2E22}Assets/Vehicles/TestCar/TestCar.xob"
+ Configurations {
+  FBXResourceClass PC {
+   ExportSkinning 1
+   ExportSceneHierarchy 1
+   MaterialAssigns {
+    MaterialAssignClass "{5AD942437F9DA864}" {
+     SourceMaterial "SampleCar_01_body"
+     AssignedMaterial "{5BF79D6BD212033B}Assets/Vehicles/TestCar/data/SampleCar_01_body.emat"
+    }
+    MaterialAssignClass "{5AD942437F9DA846}" {
+     SourceMaterial "SampleCar_01_Glass2"
+     AssignedMaterial "{022E3EA736E1CAEA}Assets/Vehicles/TestCar/data/SampleCar_01_Glass2.emat"
+    }
+    MaterialAssignClass "{5AD942437F9DA843}" {
+     SourceMaterial "SampleCar_01_interior_01"
+     AssignedMaterial "{CE8AB41EE0E42039}Assets/Vehicles/TestCar/data/SampleCar_01_interior_01.emat"
+    }
+    MaterialAssignClass "{5AD942437F9DA8BE}" {
+     SourceMaterial "SampleCar_01_interior_02"
+     AssignedMaterial "{90629D5D5F69AE36}Assets/Vehicles/TestCar/data/SampleCar_01_interior_02.emat"
+    }
+    MaterialAssignClass "{5AD942437F9DA8B5}" {
+     SourceMaterial "SampleCar_01_undercarriage"
+     AssignedMaterial "{6F3E0124C33065FE}Assets/Vehicles/TestCar/data/SampleCar_01_undercarriage.emat"
+    }
+    MaterialAssignClass "{5AD942437F9DA8B1}" {
+     SourceMaterial "SampleCar_01_wheels"
+     AssignedMaterial "{C3016D3A71CD1B7A}Assets/Vehicles/TestCar/data/SampleCar_01_wheels.emat"
+    }
+   }
+   MeshParams {
+    MeshParam body {
+    }
+    MeshParam glass2 {
+    }
+    MeshParam interior {
+    }
+    MeshParam interior2 {
+    }
+    MeshParam undercarriage {
+    }
+    MeshParam wheels {
+    }
+   }
+   GeometryParams {
+    GeometryParam UBX_MainCol_01 {
+     LayerPreset "Vehicle"
+     SurfaceProperties {
+      "{4134F861FDA659E1}Metal_CE9253778DD8FBDE.gamemat"
+     }
+     Mass 0
+     Margin 0
+    }
+    GeometryParam UCX_FG_Battery {
+     LayerPreset "FireGeo"
+     SurfaceProperties {
+      "{0151F903738F82BD}Vehicle_battery_5D38201F93B9DE65.gamemat"
+     }
+     Mass 0
+     Margin 0
+    }
+    GeometryParam UCX_FG_Engine {
+     LayerPreset "FireGeo"
+     SurfaceProperties {
+      "{693C40D83FC7B509}Engine_0B9EB7B9C8DCC6A5.gamemat"
+     }
+     Mass 0
+     Margin 0
+    }
+    GeometryParam UCX_FG_FuelTank {
+     LayerPreset "FireGeo"
+     SurfaceProperties {
+      "{9A02DD04E4EF9EE6}Fuel_tank_2E934203697527B6.gamemat"
+     }
+     Mass 0
+     Margin 0
+    }
+    GeometryParam UCX_FG_Gearbox {
+     LayerPreset "FireGeo"
+     SurfaceProperties {
+      "{3D4389F8D943C786}Differential_427C6C77966E41CB.gamemat"
+     }
+     Mass 0
+     Margin 0
+    }
+    GeometryParam UCX_FG_Light_FL {
+     LayerPreset "FireGeo"
+     SurfaceProperties {
+      "{8D8243372DF8FC37}Glass_4mm_min_94B76D276C6A1DE3.gamemat"
+     }
+     Mass 0
+     Margin 0
+    }
+    GeometryParam UCX_FG_Light_FR {
+     LayerPreset "FireGeo"
+     SurfaceProperties {
+      "{8D8243372DF8FC37}Glass_4mm_min_94B76D276C6A1DE3.gamemat"
+     }
+     Mass 0
+     Margin 0
+    }
+    GeometryParam UCX_FG_Light_RL {
+     LayerPreset "FireGeo"
+     SurfaceProperties {
+      "{8D8243372DF8FC37}Glass_4mm_min_94B76D276C6A1DE3.gamemat"
+     }
+     Mass 0
+     Margin 0
+    }
+    GeometryParam UCX_FG_Light_RR {
+     LayerPreset "FireGeo"
+     SurfaceProperties {
+      "{8D8243372DF8FC37}Glass_4mm_min_94B76D276C6A1DE3.gamemat"
+     }
+     Mass 0
+     Margin 0
+    }
+    GeometryParam UCX_MainCol_02 {
+     LayerPreset "Vehicle"
+     SurfaceProperties {
+      "{4134F861FDA659E1}Metal_CE9253778DD8FBDE.gamemat"
+     }
+     Mass 0
+     Margin 0
+    }
+    GeometryParam UTM_FG_Body_01 {
+     LayerPreset "FireGeo"
+     SurfaceProperties {
+      "{560279BF75C0A5DE}Metal_3mm_EDB153DC99889624.gamemat"
+     }
+     Mass 0
+     Margin 0
+    }
+    GeometryParam UTM_FG_Body_02 {
+     LayerPreset "FireGeo"
+     SurfaceProperties {
+      "{560279BF75C0A5DE}Metal_3mm_EDB153DC99889624.gamemat" "{7AB9D5198ABE800E}Plastic_5EAA7FB0A83F90CF.gamemat"
+     }
+     Mass 0
+     Margin 0
+    }
+    GeometryParam UTM_FG_Dashboard {
+     LayerPreset "FireGeo"
+     SurfaceProperties {
+      "{2593D3CEC37B1E88}Plastic_3mm_C17486F3DA1510F6.gamemat"
+     }
+     Mass 0
+     Margin 0
+    }
+    GeometryParam UTM_FG_Doors {
+     LayerPreset "FireGeo"
+     SurfaceProperties {
+      "{560279BF75C0A5DE}Metal_3mm_EDB153DC99889624.gamemat"
+     }
+     Mass 0
+     Margin 0
+    }
+    GeometryParam UTM_FG_Hood {
+     LayerPreset "FireGeo"
+     SurfaceProperties {
+      "{560279BF75C0A5DE}Metal_3mm_EDB153DC99889624.gamemat"
+     }
+     Mass 0
+     Margin 0
+    }
+    GeometryParam UTM_FG_Interior {
+     LayerPreset "FireGeo"
+     SurfaceProperties {
+      "{53E17AD338D9C38E}Fabric_6mm_min_5EE22D6E62DCE04A.gamemat"
+     }
+     Mass 0
+     Margin 0
+    }
+    GeometryParam UTM_FG_Trunk {
+     LayerPreset "FireGeo"
+     SurfaceProperties {
+      "{560279BF75C0A5DE}Metal_3mm_EDB153DC99889624.gamemat"
+     }
+     Mass 0
+     Margin 0
+    }
+    GeometryParam UTM_FG_Trunk2 {
+     LayerPreset "FireGeo"
+     SurfaceProperties {
+      "{2593D3CEC37B1E88}Plastic_3mm_C17486F3DA1510F6.gamemat" "{7E6B5F172FB8AE3A}Fabric_3mm_min_EB67C7AAFE4FAD87.gamemat"
+     }
+     Mass 0
+     Margin 0
+    }
+    GeometryParam UTM_FG_undercarriage {
+     LayerPreset "FireGeo"
+     SurfaceProperties {
+      "{560279BF75C0A5DE}Metal_3mm_EDB153DC99889624.gamemat"
+     }
+     Mass 0
+     Margin 0
+    }
+    GeometryParam UTM_FG_Wheel_L01 {
+     LayerPreset "FireGeo"
+     SurfaceProperties {
+      "{B61E43B72430F44E}Rubber_tire_4mm_min_C2BF4F9689827271.gamemat" "{5DAC0AC71C4CECE9}Metal_5mm_1950188BB10D20EA.gamemat"
+     }
+     Mass 0
+     Margin 0
+    }
+    GeometryParam UTM_FG_Wheel_L02 {
+     LayerPreset "FireGeo"
+     SurfaceProperties {
+      "{B61E43B72430F44E}Rubber_tire_4mm_min_C2BF4F9689827271.gamemat" "{5DAC0AC71C4CECE9}Metal_5mm_1950188BB10D20EA.gamemat"
+     }
+     Mass 0
+     Margin 0
+    }
+    GeometryParam UTM_FG_Wheel_R01 {
+     LayerPreset "FireGeo"
+     SurfaceProperties {
+      "{B61E43B72430F44E}Rubber_tire_4mm_min_C2BF4F9689827271.gamemat" "{5DAC0AC71C4CECE9}Metal_5mm_1950188BB10D20EA.gamemat"
+     }
+     Mass 0
+     Margin 0
+    }
+    GeometryParam UTM_FG_Wheel_R02 {
+     LayerPreset "FireGeo"
+     SurfaceProperties {
+      "{B61E43B72430F44E}Rubber_tire_4mm_min_C2BF4F9689827271.gamemat" "{5DAC0AC71C4CECE9}Metal_5mm_1950188BB10D20EA.gamemat"
+     }
+     Mass 0
+     Margin 0
+    }
+   }
+   Common TXOCommonClass "{5AD942437F7DF1B3}" : "{0877E7C4BB2B2C9A}Configs/System/ResourceTypes/PC/MeshObjectCommon.conf" {
+   }
+  }
+  FBXResourceClass XBOX_ONE : PC {
+   Common TXOCommonClass "{5AD942437F7DF013}" : "{9D5B6207F7628CE2}Configs/System/ResourceTypes/XBOX_ONE/MeshObjectCommon.conf" {
+   }
+  }
+  FBXResourceClass XBOX_SERIES : PC {
+   Common TXOCommonClass "{5AD942437F7DF06F}" : "{DD9F02115C764647}Configs/System/ResourceTypes/XBOX_SERIES/MeshObjectCommon.conf" {
+   }
+  }
+  FBXResourceClass PS4 : PC {
+   Common TXOCommonClass "{5AD942437F7DF04E}" : "{53EC476BC921D99A}Configs/System/ResourceTypes/PS4/MeshObjectCommon.conf" {
+   }
+  }
+  FBXResourceClass HEADLESS : PC {
+   Common TXOCommonClass "{5AD942437F7DF0B2}" : "{3A5B3356978039E8}Configs/System/ResourceTypes/HEADLESS/MeshObjectCommon.conf" {
+   }
+  }
+ }
+}

@@ -1,0 +1,20 @@
+MetaFileClass {
+ Name "{C5E86AD486E7B8F4}Assets/Vehicles/Forklift/textures/T_Forklift_2_N.edds"
+ Configurations {
+  PNGResourceClass PC : "{CEA87F769FD618D2}Configs/System/ResourceTypes/PC/TextureNormalMap.conf" {
+   Conversion None
+  }
+  PNGResourceClass XBOX_ONE : "{5B84FAB5D39FB8AA}Configs/System/ResourceTypes/XBOX_ONE/TextureNormalMap.conf" {
+   Conversion None
+  }
+  PNGResourceClass XBOX_SERIES : "{1B409AA3788B720F}Configs/System/ResourceTypes/XBOX_SERIES/TextureNormalMap.conf" {
+   Conversion None
+  }
+  PNGResourceClass PS4 : "{9533DFD9EDDCEDD2}Configs/System/ResourceTypes/PS4/TextureNormalMap.conf" {
+   Conversion None
+  }
+  PNGResourceClass HEADLESS : "{FC84ABE4B37D0DA0}Configs/System/ResourceTypes/HEADLESS/TextureNormalMap.conf" {
+   Conversion None
+  }
+ }
+}

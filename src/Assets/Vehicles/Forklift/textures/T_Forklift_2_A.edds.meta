@@ -1,0 +1,20 @@
+MetaFileClass {
+ Name "{A25007726EB63854}Assets/Vehicles/Forklift/textures/T_Forklift_2_A.edds"
+ Configurations {
+  PNGResourceClass PC : "{6B149ECE3A72EF45}Configs/System/ResourceTypes/PC/TextureOneChannel.conf" {
+   Conversion None
+  }
+  PNGResourceClass XBOX_ONE : "{DC95471339A9BC2B}Configs/System/ResourceTypes/XBOX_ONE/TextureOneChannel.conf" {
+   Conversion None
+  }
+  PNGResourceClass XBOX_SERIES : "{C2F053ADC70F3804}Configs/System/ResourceTypes/XBOX_SERIES/TextureOneChannel.conf" {
+   Conversion None
+  }
+  PNGResourceClass PS4 : "{19FBA5E0ACB1C98E}Configs/System/ResourceTypes/PS4/TextureOneChannel.conf" {
+   Conversion None
+  }
+  PNGResourceClass HEADLESS : "{6866463573917E52}Configs/System/ResourceTypes/HEADLESS/TextureOneChannel.conf" {
+   Conversion None
+  }
+ }
+}

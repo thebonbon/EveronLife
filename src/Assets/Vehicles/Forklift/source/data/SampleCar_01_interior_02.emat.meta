@@ -1,0 +1,15 @@
+MetaFileClass {
+ Name "{2FCC502AD78716E2}Assets/Vehicles/Forklift/source/data/SampleCar_01_interior_02.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}
