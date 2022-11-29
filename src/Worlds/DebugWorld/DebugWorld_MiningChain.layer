@@ -88,7 +88,7 @@ EL_MiningArea : "{530D05E39B25A8C8}Prefabs/Resources/Mining/MiningArea.et" {
  coords 98.613 0.001 157.28
  angleY 45
  m_vSize 5 1 5
- m_iAmount 5
+ m_iAmount 0
  m_fRespawnTime 60
  m_PrefabsToSpawn {
   EL_WeightedSpawn "{59E8E156901BB00D}" {

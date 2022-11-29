@@ -1,13 +1,15 @@
 class EL_PriceTitle : BaseContainerCustomTitle
 {
+	//------------------------------------------------------------------------------------------------
     override bool _WB_GetCustomTitle(BaseContainer source, out string title)
     {
-        int iBuyPrice = 0;
-        int iSellPrice = 0;
+        int iBuyPrice;
+        int iSellPrice;
         string sName = "";
         source.Get("m_sName", sName);
         source.Get("m_iBuyPrice", iBuyPrice);
         source.Get("m_iSellPrice", iSellPrice);
+
         title = string.Format("%1: %2$ | %3$", sName, iBuyPrice, iSellPrice);
         return true;
     }
@@ -16,15 +18,14 @@ class EL_PriceTitle : BaseContainerCustomTitle
 [BaseContainerProps(), EL_PriceTitle()]
 class EL_Price
 {
-	[Attribute("", UIWidgets.ResourcePickerThumbnail, "", "et")]
+	[Attribute("", UIWidgets.ResourcePickerThumbnail, "Prefab for this item", "et")]
 	ResourceName m_Prefab;
-	[Attribute("", UIWidgets.EditBox)]
+	[Attribute("", UIWidgets.EditBox, "Action display name")]
 	string m_sName;
-	[Attribute("0", UIWidgets.EditBox, "")]
+	[Attribute("-1", UIWidgets.EditBox, "Buy Price. -1 to disable buying")]
 	int m_iBuyPrice;
-	[Attribute("0", UIWidgets.EditBox, "")]
+	[Attribute("-1", UIWidgets.EditBox, "Sell Price. -1 to disable selling")]
 	int m_iSellPrice;
-
 }
 
 [BaseContainerProps(configRoot: true)]
