@@ -6,7 +6,6 @@ class EL_ProcessingInput
 
 	[Attribute(defvalue: "1", uiwidget: UIWidgets.Auto, desc: "Input/s amount per process")]
 	int m_iInputAmount;
-
 }
 
 [BaseContainerProps()]
@@ -18,7 +17,6 @@ class EL_ProcessingOutput
 	[Attribute(defvalue: "1", uiwidget: UIWidgets.Auto, desc: "Output amount per process")]
 	int m_iOutputAmount;
 }
-
 
 class EL_ProcessAction : ScriptedUserAction
 {
@@ -59,34 +57,28 @@ class EL_ProcessAction : ScriptedUserAction
 	{
 		if (processParticles)
 			processParticles.Stop();
-		InventoryStorageManagerComponent inventoryManager = InventoryStorageManagerComponent.Cast(pUserEntity.FindComponent(SCR_InventoryStorageManagerComponent));
+		InventoryStorageManagerComponent inventoryManager = EL_ComponentFinder<InventoryStorageManagerComponent>.Find(pUserEntity);
+
+		SCR_PrefabNamePredicate prefabNamePredicate();
 
 		foreach (EL_ProcessingInput processingInput : m_aProcessingInputs)
 		{
 			//Set search to new input prefab
-			m_pPrefabNamePredicate.prefabName = processingInput.m_InputPrefab;
+			prefabNamePredicate.prefabName = processingInput.m_InputPrefab;
 
 			for (int i = 0; i < processingInput.m_iInputAmount; i++)
 			{
-				inventoryManager.TryDeleteItem(inventoryManager.FindItem(m_pPrefabNamePredicate));
+				ConsumeInput(inventoryManager.FindItem(prefabNamePredicate), pUserEntity, inventoryManager);
 			}
 		}
-
-		bool bCanSpawnToStorage;
 
 		foreach (EL_ProcessingOutput processingOutput : m_aProcessingOutputs)
 		{
 			for (int i = 0; i < processingOutput.m_iOutputAmount; i++)
 			{
-				if (m_bForceDropOutput) 
+				if (m_bForceDropOutput || !inventoryManager.TrySpawnPrefabToStorage(processingOutput.m_OutputPrefab))
 				{
-					EL_Utils.SpawnEntityPrefab(processingOutput.m_OutputPrefab, pOwnerEntity.CoordToParent(m_vDropOffset), m_vRotation);
-					continue;
-				}
-				bCanSpawnToStorage = inventoryManager.TrySpawnPrefabToStorage(processingOutput.m_OutputPrefab);
-				if (!bCanSpawnToStorage)
-				{
-					EL_Utils.SpawnEntityPrefab(processingOutput.m_OutputPrefab, pUserEntity.GetOrigin());
+					EL_Utils.SpawnEntityPrefab(processingOutput.m_OutputPrefab, pOwnerEntity.GetOrigin() + m_vDropOffset, m_vRotation);
 				}
 			}
 		}
@@ -101,6 +93,12 @@ class EL_ProcessAction : ScriptedUserAction
 		GetGame().GetCallqueue().CallLater(ProcessAction, m_fProcessTime * 1000, false, pOwnerEntity, pUserEntity, processParticles);
 	}
 
+	//------------------------------------------------------------------------------------------------
+	void ConsumeInput(IEntity input, IEntity pUserEntity, InventoryStorageManagerComponent inventoryManager)
+	{
+		inventoryManager.TryDeleteItem(input);
+	}
+	
 	//------------------------------------------------------------------------------------------------
 	override bool CanBePerformedScript(IEntity user)
  	{

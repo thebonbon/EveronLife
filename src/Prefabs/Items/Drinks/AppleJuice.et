@@ -1,4 +1,4 @@
-GenericEntity : "{C95E11C60810F432}Prefabs/Items/Core/Item_Base.et" {
+GenericEntity : "{693D54F74C95B3D6}Prefabs/Items/Drinks/Drink_Base.et" {
  ID "508AB2013EEE1E00"
  components {
   InventoryItemComponent "{5222EB4D0C73006B}" {
@@ -6,14 +6,10 @@ GenericEntity : "{C95E11C60810F432}Prefabs/Items/Core/Item_Base.et" {
     ItemDisplayName UIInfo "{5222EB4D07D865FA}" {
      Name "Apple Juice"
     }
-    ItemPhysAttributes ItemPhysicalAttributes PhysicalAttributes {
-     DimensionScaler 0.01
-    }
    }
   }
-  MeshObject "{598F21A81E1F41BF}" {
-   Object "{4A9E9EA511EA2B8A}Assets/Structures/BuildingsParts/Industrial/ToolRack_01/Dst/ToolRack_01_Tool_01_dst_02_10.xob"
+  MeshObject "{5A4ACD10B8DA304F}" {
+   Object "{240D853DBB045D05}Assets/Props/Civilian/BeerBottle_01/BeerBottle_01.xob"
   }
  }
- coords 110.025 0.917 134.781
 }
