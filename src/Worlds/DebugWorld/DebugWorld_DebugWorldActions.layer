@@ -326,6 +326,9 @@ SCR_BaseTriggerEntity {
 }
 GameEntity Pants_M70_5AD8E42206626F25 : "{06BC3F18B47799AE}Prefabs/Characters/Uniforms/Pants_M70.et" {
  components {
+  EL_PersistenceComponent "{5A28749C2A2B4AD2}" {
+   Enabled 0
+  }
   MeshObject "{5104869D194C6262}" {
    Object "{8F6C403B43D10CA3}Assets/Gear/Steve/StevePants.xob"
   }
@@ -422,20 +425,24 @@ $grp SCR_BaseTriggerEntity : "{3DCB1D8DBCD3B347}Prefabs/Misc/SuperJumpTrigger.et
   angleY 90
  }
 }
-GenericEntity Rifle_M16A2_5AD8E42343480EA6 : "{3E413771E1834D2F}Prefabs/Weapons/Rifles/M16/Rifle_M16A2.et" {
- coords 95.254 0.001 141.166
-}
-GenericEntity ItemInteractable_Base_5ABF3C1CE1EF5709 : "{4895654A61D2F41A}Prefabs/Items/HouseKeyItem.et" {
- components {
-  InventoryItemComponent "{5222EB4D0C73006B}" {
-   Attributes SCR_ItemAttributeCollection "{5222EB4D0A2B466B}" {
-    ItemPhysAttributes ItemPhysicalAttributes PhysicalAttributes {
-     DimensionScaler 0
+$grp GenericEntity : "{4895654A61D2F41A}Prefabs/Items/HouseKeyItem.et" {
+ ItemInteractable_Base_5ABF3C1CE1EF5709 {
+  components {
+   InventoryItemComponent "{5222EB4D0C73006B}" {
+    Attributes SCR_ItemAttributeCollection "{5222EB4D0A2B466B}" {
+     ItemPhysAttributes ItemPhysicalAttributes PhysicalAttributes {
+      DimensionScaler 0
+     }
     }
    }
   }
+  coords 88.834 0.106 139.335
  }
- coords 88.834 0.106 139.335
+ HouseKeyItem_5AE12BA73DEDA8C2 {
+  coords 95.293 0.898 135.446
+  angleZ 90
+  scale 2
+ }
 }
 GenericEntity Backpack_ALICE_Medium_assembled_5A4E9B16234DA870 : "{5C5C6EE05EE2FF1A}Prefabs/Items/Equipment/Backpacks/Backpack_ALICE_Medium_assembled.et" {
  coords 101.007 0.886 135.394
@@ -447,6 +454,12 @@ $grp SCR_DestructibleEntity : "{622F9989DDC4865B}PrefabLibrary/Props/Civilian/Re
  {
   coords 100.769 -0.001 135
  }
+}
+LightEntity : "{8CAD466D49510CDF}Prefabs/Structures/Infrastructure/Lamps/LampStreet_E_03/LampStreet_E_03_light.et" {
+ coords -2.885 25.144 -0.093
+ angleX -90
+ angleY -180
+ angleZ -180
 }
 GenericEntity : "{9ABAFFCBC76D824B}Prefabs/Props/Civilian/NoticeBoardCork_01.et" {
  coords 100.02 0.898 134.46
@@ -462,10 +475,13 @@ GenericEntity : "{9ABAFFCBC76D824B}Prefabs/Props/Civilian/NoticeBoardCork_01.et"
  }
 }
 EL_GlobalBankAccountManager EL_GlobalBankAccountManager_5AC710784B102CDC : "{A8DB88FA148A2CA2}Prefabs/Core/EL_GlobalBankAccountManager.et" {
- coords 88.904 0.001 136.514
+ coords 45.413 0.001 149.463
 }
 GameEntity Helmet_PASGT_01_5AD8C5AA7D849869 : "{B74A4FF0DD8BB116}Prefabs/Characters/HeadGear/Helmet_PASGT_01/Helmet_PASGT_01.et" {
  components {
+  EL_PersistenceComponent "{5A28749C3DBDF202}" {
+   Enabled 0
+  }
   MeshObject "{5112706CD4157AE0}" {
    Object "{711C89CFAC4C2033}Assets/Gear/Steve/SteveHead.xob"
   }
@@ -486,6 +502,9 @@ GameEntity Helmet_PASGT_01_5AD8C5AA7D849869 : "{B74A4FF0DD8BB116}Prefabs/Charact
 }
 GameEntity Jacket_M70_5AD8E42207202EB4 : "{BBA08EC4EC40FA94}Prefabs/Characters/Uniforms/Jacket_M70.et" {
  components {
+  EL_PersistenceComponent "{5A28749C2A2B4AD2}" {
+   Enabled 0
+  }
   MeshObject "{5104869D194C6262}" {
    Object "{AC0C3E2C8DF26DA9}Assets/Gear/Steve/SteveBody.xob"
   }

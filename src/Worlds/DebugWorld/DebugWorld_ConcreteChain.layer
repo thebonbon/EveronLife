@@ -1,18 +1,3 @@
-GenericEntity : "{086E85DB687EA38F}Prefabs/Props/Construction/GravelPile_01_medium.et" {
- coords 124.908 0.007 131.4
-}
-GenericEntity GravelBag_5A4E9B16234E2127 : "{344090890C63F4CA}Prefabs/Items/Resources/GravelBag.et" {
- coords 125.555 0.003 134.805
-}
 StaticModelEntity : "{81CB1B2631584427}Prefabs/Props/Construction/CementPile.et" {
- coords 130.348 0.913 127.849
-}
-GenericEntity Sandbag_5A4E9B16234E2376 : "{ADFEF306D1C22E5F}Prefabs/Items/Resources/Sandbag.et" {
- coords 123.064 0.003 134.841
-}
-GenericEntity CementBag_5A4E9B16234E2348 : "{D58674633332DC86}Prefabs/Items/Resources/CementBag.et" {
- coords 127.743 0.003 134.77
-}
-GenericEntity : "{DEB57429CD49782D}Prefabs/Props/Construction/SandPile_01.et" {
- coords 118.879 0.003 126.528
+ coords 130.378 0.913 126.507
 }

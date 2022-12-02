@@ -14,7 +14,7 @@ class EL_HouseBuyAction : ScriptedUserAction
 		InventoryStorageManagerComponent playerInv = InventoryStorageManagerComponent.Cast(pUserEntity.FindComponent(InventoryStorageManagerComponent));
 		IEntity keyItem = GetGame().SpawnEntityPrefab(Resource.Load(m_KeyPrefab));
 		EL_KeyComponent keyComp = EL_KeyComponent.Cast(keyItem.FindComponent(EL_KeyComponent));
-		keyComp.m_HouseEntity = m_ParentHouse;
+		keyComp.m_LockedEntity = m_ParentHouse;
 		
 		playerInv.TryInsertItem(keyItem);
 		EL_HouseManagerComponent houseManager = EL_HouseManagerComponent.Cast(m_ParentHouse.FindComponent(EL_HouseManagerComponent));

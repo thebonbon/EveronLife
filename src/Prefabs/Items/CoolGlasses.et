@@ -1,0 +1,11 @@
+GameEntity : "{E12126CDE731EED5}Prefabs/Characters/HeadGear/Hat_Boonie_US_01/Hat_Boonie_US_01.et" {
+ ID "5112706CD4157AC7"
+ components {
+  BaseLoadoutClothComponent "{5112706CD4157AF8}" {
+   WornModel "{D7972CAEB4BE6303}Assets/Gear/Glasses/CoolGlasses.xob"
+   ItemModel "{D7972CAEB4BE6303}Assets/Gear/Glasses/CoolGlasses.xob"
+   OffsetShoulderLeft 1 0 0
+  }
+ }
+ coords 124.661 1.001 120.741
+}

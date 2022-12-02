@@ -7,7 +7,7 @@ GenericEntity : "{19A3C48FC2665A3F}Prefabs/Props/Construction/GravelPile_01_larg
  angleY -179.853
 }
 GenericEntity GravelBag_5A0E821DC5FD2CDB : "{344090890C63F4CA}Prefabs/Items/Resources/GravelBag.et" {
- coords 125.046 0.001 135.289
+ coords 124.852 0.001 135.439
  angleY -0.058
 }
 GenericEntity Backpack_ALICE_Medium_assembled_5A12DE85DCE96C55 : "{5C5C6EE05EE2FF1A}Prefabs/Items/Equipment/Backpacks/Backpack_ALICE_Medium_assembled.et" {

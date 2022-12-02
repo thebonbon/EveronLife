@@ -1,0 +1,15 @@
+MetaFileClass {
+ Name "{B5BC4EA1A076E38B}Assets/Gear/Glasses/data/white.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

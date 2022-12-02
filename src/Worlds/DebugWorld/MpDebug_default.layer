@@ -1,3 +1,16 @@
+SCR_ChimeraCharacter Character_US_Rifleman_5ADF3A010DBD305B : "{26A9756790131354}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_Rifleman.et" {
+ components {
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+     Offset 0.075 -0.014 0.025
+     Prefab "{51F5341EC7F656EF}Prefabs/Items/CoolGlasses.et"
+    }
+   }
+  }
+ }
+ coords 126.149 1.001 122.068
+}
 $grp Vehicle : "{D94038BFC1C41AE2}Prefabs/Vehicles/Core/Forklift_Base.et" {
  Forklift_Base1 {
   components {
@@ -16,6 +29,23 @@ $grp Vehicle : "{D94038BFC1C41AE2}Prefabs/Vehicles/Core/Forklift_Base.et" {
   coords 124.692 1.001 133.143
   angleY 90
  }
+}
+GameEntity Hat_Boonie_US_01_5ADF3A007614D1AE : "{E12126CDE731EED5}Prefabs/Characters/HeadGear/Hat_Boonie_US_01/Hat_Boonie_US_01.et" {
+ components {
+  InventoryItemComponent "{5244E4431E28A759}" {
+   Attributes SCR_ItemAttributeCollection "{52C8D6017C371EA6}" {
+    ItemPhysAttributes ItemPhysicalAttributes "{52C8D6017161AECA}" {
+     SizeSetupStrategy Manual
+    }
+   }
+  }
+  BaseLoadoutClothComponent "{5112706CD4157AF8}" {
+   Area FaceCover
+   WornModel "{D7972CAEB4BE6303}Assets/Gear/Glasses/CoolGlasses.xob"
+   ItemModel "{D7972CAEB4BE6303}Assets/Gear/Glasses/CoolGlasses.xob"
+  }
+ }
+ coords 124.661 1.001 120.741
 }
 Vehicle M151A1 : "{F649585ABB3706C4}Prefabs/Vehicles/Wheeled/M151A2/M151A2.et" {
  components {

@@ -7,7 +7,7 @@ SCR_DestructibleBuildingEntity : "{A92A5F3B79FF56BE}Prefabs/Structures/Industria
    }
   }
  }
- coords 127.233 0.002 115.465
+ coords 127.378 0.002 116.277
  {
   GenericEntity Door_ConcretePlant_E_01_RIGHT_EXT_ST_B_5AC2CCE01F64E5D0 {
    ID "571EB9F1B4EC2DA1"
