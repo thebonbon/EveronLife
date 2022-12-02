@@ -22,7 +22,7 @@ Vehicle UAZ1 : "{259EE7B78C51B624}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469.et" {
   RigidBody "{51DAA09FECF52BBF}" {
   }
   SCR_VehicleDamageManagerComponent "{141326E9FD94FE40}" {
-   m_fVehicleDestroyDamage 11880.1
+   m_fVehicleDestroyDamage 8582.14
   }
   ActionsManagerComponent "{C97BE5489221AE18}" {
    ActionContexts {
@@ -49,11 +49,11 @@ Vehicle UAZ1 : "{259EE7B78C51B624}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469.et" {
    }
   }
  }
- coords 92.041 0 132.078
+ coords 84.627 0 132.078
  angleY 60
 }
 SCR_DestructibleEntity : "{622F9989DDC4865B}PrefabLibrary/Props/Civilian/Recreation/TableRecreation_01/TableRecreation_01.et" {
- coords 95.756 -0.001 135
+ coords 88.342 -0.001 135
  {
   GenericEntity : "{51D31AB07AE3C1C7}Prefabs/Props/Commercial/CashierShop_01.et" {
    components {
@@ -79,27 +79,27 @@ SCR_DestructibleEntity : "{622F9989DDC4865B}PrefabLibrary/Props/Civilian/Recreat
 }
 $grp GenericEntity : "{FDEE11D818A4C675}Prefabs/Items/Money/DollarBill.et" {
  DollarBill_5A4E9B16234DBD14 {
-  coords 96.165 0.901 135.439
+  coords 88.751 0.901 135.439
  }
  DollarBill_5A4E9B16234DBD5F {
-  coords 96.165 0.901 135.439
+  coords 88.751 0.901 135.439
  }
  DollarBill_5A4E9B16234DBDB6 {
-  coords 104.833 0.003 149.962
+  coords 97.419 0.003 149.962
  }
  DollarBill_5A4E9B16234DBD8D {
-  coords 104.833 0.003 149.962
+  coords 97.419 0.003 149.962
  }
  DollarBill_5A4E9B16234DBDE8 {
-  coords 104.833 0.003 149.962
+  coords 97.419 0.003 149.962
  }
  DollarBill_5A4E9B16234DBC17 {
-  coords 104.833 0.003 149.962
+  coords 97.419 0.003 149.962
  }
  DollarBill_5A4E9B16234DBC73 {
-  coords 104.833 0.003 149.962
+  coords 97.419 0.003 149.962
  }
  DollarBill_5A4E9B16234DBC4F {
-  coords 104.833 0.003 149.962
+  coords 97.419 0.003 149.962
  }
 }

@@ -7,7 +7,7 @@ $grp CommentEntity {
   m_VisibleIngame 1
  }
  {
-  coords 95.757 0.64 135.57
+  coords 88.343 0.64 135.57
   angleY 180
   m_Comment "Vehicle Shop"
   m_Size 0.5
@@ -30,23 +30,6 @@ $grp CommentEntity {
   m_Color 0 0.952 1
   m_VisibleIngame 1
  }
- {
-  coords 44.596 3.701 147.776
-  angleY -90
-  m_Comment "Weapon Store"
-  m_Size 0.5
-  m_Color 0 0.952 1
-  m_VisibleIngame 1
- }
- {
-  coords 111.246 0.77 135.57
-  angleY 180
-  m_Comment "Better apple shop"
-  m_Size 0.2
-  m_Color 0 0.952 1
-  m_VisibleIngame 1
-  m_TextBackground 1
- }
 }
 EL_SpawnZone {
  components {
@@ -60,241 +43,6 @@ EL_SpawnZone {
  m_fSpawnRadius 1
  m_PrefabToSpawn "{743CFB1C822E7895}Prefabs/Misc/FrogItem.et"
  m_fRespawnTime 5
-}
-GenericEntity WeaponShop2 {
- components {
-  EL_MapIconComponent "{59C4F486FF627796}" {
-   m_ImagePath "{E11489AF8F68E734}UI/Icons/weapon.edds"
-  }
- }
- coords 39.037 0.201 147.541
- angleY 30
- {
-  GenericEntity : "{C260F0E07274ACA1}Prefabs/Props/Furniture/Boiler_01.et" {
-   components {
-    MeshObject "{5872F0EB7FA40561}" {
-     Object "{9E421B5449280EF3}Assets/Props/ATM/ATM_1.xob"
-    }
-    RigidBody "{5872F0EB7DFB5A9D}" {
-     Layers 688128
-     ModelGeometry 0
-    }
-    ActionsManagerComponent "{59CA6D297AAC3ABA}" {
-     ActionContexts {
-      UserActionContext "{59CA6D297D8226B4}" {
-       ContextName "default"
-       Position PointInfo "{59CA6D2986B8B69C}" {
-        Offset -0.2826 1.2027 -0.3279
-       }
-       Radius 1
-      }
-      UserActionContext "{5AC710443A1641E7}" {
-       ContextName "RightButton"
-       Position PointInfo "{5AC71044316EB6BB}" {
-        Offset 0.2065 1.1779 -0.3266
-       }
-       Radius 1
-      }
-     }
-     additionalActions {
-      EL_GetMoneyAction "{5AC331193A3A7838}" {
-       ParentContextList {
-        "default"
-       }
-       m_iAmount 1000
-      }
-      EL_GetMoneyAction "{5AC7104669B0FF94}" {
-       ParentContextList {
-        "default"
-       }
-       m_iAmount 100
-      }
-      EL_GetMoneyAction "{5AC71077923CCD49}" {
-       ParentContextList {
-        "default"
-       }
-       m_iAmount 1
-      }
-      EL_DepositMoneyAction "{5AC710445F21368B}" {
-       ParentContextList {
-        "RightButton"
-       }
-       m_iAmount 100
-      }
-      EL_DepositMoneyAction "{5AC71044542F951D}" {
-       ParentContextList {
-        "RightButton"
-       }
-       m_iAmount 1000
-      }
-     }
-    }
-    RplComponent "{5624A88DC2D9928D}" {
-     Enabled 1
-    }
-   }
-   coords 3.183 -0.201 5.956
-   angleY -118.114
-  }
-  $grp GenericEntity : "{DD994C1FCE7AD6E0}Prefabs/Shop/ShopItem.et" {
-   {
-    components {
-     EL_ShopItemComponent "{5AC6DBF94189D860}" {
-      m_PriceConfig EL_PriceConfig "{5AC6DBF8C2E04878}" {
-       m_aPriceConfigs {
-        EL_Price "{59CA6D2F01F1AD6F}" {
-         m_iSellPrice -1
-        }
-       }
-      }
-      m_ShopItemPrefab "{41A9C55B61F375F0}Prefabs/Items/Equipment/Backpacks/Backpack_Kolobok.et"
-     }
-     MeshObject "{59C4F48745893DBF}" {
-     }
-     ActionsManagerComponent "{59C4F487641A3025}" {
-      additionalActions {
-       EL_BuyItemAction "{59C4F4878D841445}" {
-       }
-       EL_SellAction "{59C4F48B86953CE9}" {
-       }
-      }
-     }
-     RplComponent "{59C4F4898DA2E09B}" {
-     }
-    }
-    coords 2.122 0.818 0.293
-   }
-   {
-    components {
-     EL_ShopItemComponent "{5AC6DBF94189D860}" {
-      m_ShopItemPrefab "{3DE0155EC9767B98}Prefabs/Items/Equipment/Backpacks/Backpack_Veshmeshok.et"
-     }
-     MeshObject "{59C4F48745893DBF}" {
-     }
-     ActionsManagerComponent "{59C4F487641A3025}" {
-      additionalActions {
-       EL_BuyItemAction "{59C4F4878D841445}" {
-       }
-       EL_SellAction "{59C4F48B86953CE9}" {
-       }
-      }
-     }
-     RplComponent "{59C4F4898DA2E09B}" {
-     }
-    }
-    coords 1.747 0.818 0.972
-   }
-   {
-    components {
-     EL_ShopItemComponent "{5AC6DBF94189D860}" {
-      m_ShopItemPrefab "{06B68C58B72EAAC6}Prefabs/Items/Equipment/Backpacks/Backpack_ALICE_Medium.et"
-     }
-     MeshObject "{59C4F48745893DBF}" {
-      Object "{B982CAE1F85001D0}Assets/Items/Equipment/Backpacks/Backpack_ALICE_Medium/Backpack_ALICE_Medium_item.xob"
-     }
-     ActionsManagerComponent "{59C4F487641A3025}" {
-      additionalActions {
-       EL_BuyItemAction "{59C4F4878D841445}" {
-       }
-       EL_SellAction "{59C4F48B86953CE9}" {
-       }
-      }
-     }
-     RplComponent "{59C4F4898DA2E09B}" {
-     }
-    }
-    coords 1.346 0.818 1.69
-   }
-   {
-    components {
-     EL_ShopItemComponent "{5AC6DBF94189D860}" {
-      m_ShopItemPrefab "{1353C6EAD1DCFE43}Prefabs/Weapons/Handguns/M9/Handgun_M9.et"
-     }
-     MeshObject "{59C4F48745893DBF}" {
-     }
-     ActionsManagerComponent "{59C4F487641A3025}" {
-      additionalActions {
-       EL_SellAction "{59C4F48B86953CE9}" {
-        ParentContextList +{
-        }
-        Duration 1
-        "Sort Priority" 5
-       }
-       EL_BuyItemAction "{59C4F4878D841445}" {
-       }
-      }
-     }
-     RplComponent "{59C4F4898DA2E09B}" {
-     }
-    }
-    coords 0.758 0.442 1.501
-    angleZ 90
-   }
-   {
-    components {
-     EL_ShopItemComponent "{5AC6DBF94189D860}" {
-      m_ShopItemPrefab "{9C05543A503DB80E}Prefabs/Weapons/Magazines/Magazine_9x19_M9_15rnd_Ball.et"
-     }
-     MeshObject "{59C4F48745893DBF}" {
-     }
-     ActionsManagerComponent "{59C4F487641A3025}" {
-      additionalActions {
-       EL_SellAction "{59C4F48B86953CE9}" {
-        ParentContextList +{
-        }
-        Duration 1
-        "Sort Priority" 5
-       }
-       EL_BuyItemAction "{59C4F4878D841445}" {
-       }
-      }
-     }
-     RplComponent "{59C4F4898DA2E09B}" {
-     }
-    }
-    coords 0.888 0.44 1.184
-    angleZ 90.477
-   }
-   {
-    components {
-     EL_ShopItemComponent "{5AC6DBF94189D860}" {
-      m_ShopItemPrefab "{C0F7DD85A86B2900}Prefabs/Weapons/Handguns/PM/Handgun_PM.et"
-     }
-     MeshObject "{59C4F48745893DBF}" {
-     }
-     ActionsManagerComponent "{59C4F487641A3025}" {
-      additionalActions {
-       EL_BuyItemAction "{59C4F4878D841445}" {
-       }
-       EL_SellAction "{59C4F48B86953CE9}" {
-       }
-      }
-     }
-     RplComponent "{59C4F4898DA2E09B}" {
-     }
-    }
-    coords -0.479 0.442 3.72
-    angleZ 90
-   }
-   {
-    components {
-     EL_ShopItemComponent "{5AC6DBF94189D860}" {
-      m_ShopItemPrefab "{8B853CDD11BA916E}Prefabs/Weapons/Magazines/Magazine_9x18_PM_8rnd_Ball.et"
-     }
-     MeshObject "{59C4F48745893DBF}" {
-     }
-     ActionsManagerComponent "{59C4F487641A3025}" {
-      additionalActions {
-      }
-     }
-     RplComponent "{59C4F4898DA2E09B}" {
-     }
-    }
-    coords -0.141 0.432 3.221
-    angleZ 90.499
-   }
-  }
- }
 }
 SCR_BaseTriggerEntity {
  components {
@@ -455,7 +203,7 @@ $grp SCR_DestructibleEntity : "{622F9989DDC4865B}PrefabLibrary/Props/Civilian/Re
   coords 100.769 -0.001 135
  }
 }
-LightEntity : "{8CAD466D49510CDF}Prefabs/Structures/Infrastructure/Lamps/LampStreet_E_03/LampStreet_E_03_light.et" {
+LightEntity : "{8CAD466D49510CDF}Prefabs/Structures/Infrastructure/Lamps/LampStreet_E_03/LightPrefabs/LampStreet_E_03_light.et" {
  coords -2.885 25.144 -0.093
  angleX -90
  angleY -180
@@ -515,6 +263,72 @@ GameEntity Jacket_M70_5AD8E42207202EB4 : "{BBA08EC4EC40FA94}Prefabs/Characters/U
  }
  coords 96.193 0 143.919
  angleY 180
+}
+GenericEntity : "{C260F0E07274ACA1}Prefabs/Props/Furniture/Boiler_01.et" {
+ components {
+  MeshObject "{5872F0EB7FA40561}" {
+   Object "{9E421B5449280EF3}Assets/Props/ATM/ATM_1.xob"
+  }
+  RigidBody "{5872F0EB7DFB5A9D}" {
+   Layers 688128
+   ModelGeometry 0
+  }
+  ActionsManagerComponent "{59CA6D297AAC3ABA}" {
+   ActionContexts {
+    UserActionContext "{59CA6D297D8226B4}" {
+     ContextName "default"
+     Position PointInfo "{59CA6D2986B8B69C}" {
+      Offset -0.2826 1.2027 -0.3279
+     }
+     Radius 1
+    }
+    UserActionContext "{5AC710443A1641E7}" {
+     ContextName "RightButton"
+     Position PointInfo "{5AC71044316EB6BB}" {
+      Offset 0.2065 1.1779 -0.3266
+     }
+     Radius 1
+    }
+   }
+   additionalActions {
+    EL_GetMoneyAction "{5AC331193A3A7838}" {
+     ParentContextList {
+      "default"
+     }
+     m_iAmount 1000
+    }
+    EL_GetMoneyAction "{5AC7104669B0FF94}" {
+     ParentContextList {
+      "default"
+     }
+     m_iAmount 100
+    }
+    EL_GetMoneyAction "{5AC71077923CCD49}" {
+     ParentContextList {
+      "default"
+     }
+     m_iAmount 1
+    }
+    EL_DepositMoneyAction "{5AC710445F21368B}" {
+     ParentContextList {
+      "RightButton"
+     }
+     m_iAmount 100
+    }
+    EL_DepositMoneyAction "{5AC71044542F951D}" {
+     ParentContextList {
+      "RightButton"
+     }
+     m_iAmount 1000
+    }
+   }
+  }
+  RplComponent "{5624A88DC2D9928D}" {
+   Enabled 1
+  }
+ }
+ coords 44.833 0 151.303
+ angleY -88.114
 }
 $grp Tree : "{CC86FA58287C61C8}Prefabs/Vegetation/Vegetables/PumpkinCrop_01_Line.et" {
  {
@@ -600,140 +414,10 @@ SCR_DestructibleBuildingEntity : "{CD370ECB385DE67A}Prefabs/Structures/Houses/Fa
   }
  }
 }
-$grp GenericEntity : "{DD994C1FCE7AD6E0}Prefabs/Shop/ShopItem.et" {
- {
-  components {
-   MeshObject "{59C4F48745893DBF}" {
-    Object "{746CE09C894304E4}Assets/Items/Equipment/Binoculars/Binoculars_B12/Binoculars_B12.xob"
-   }
-   ActionsManagerComponent "{59C4F487641A3025}" {
-    additionalActions {
-     EL_BuyItemAction "{59C4F4878D841445}" {
-     }
-     EL_SellAction "{59C4F48B86953CE9}" {
-     }
-    }
-   }
-  }
-  coords 41.031 0.628 149.456
- }
- {
-  components {
-   EL_ShopItemComponent "{5AC6DBF94189D860}" {
-    m_ShopItemPrefab "{F2539FA5706E51E4}Prefabs/Items/Equipment/Binoculars/Binoculars_B12.et"
-   }
-   MeshObject "{59C4F48745893DBF}" {
-   }
-   ActionsManagerComponent "{59C4F487641A3025}" {
-    additionalActions {
-     EL_BuyItemAction "{59C4F4878D841445}" {
-     }
-     EL_SellAction "{59C4F48B86953CE9}" {
-     }
-    }
-   }
-  }
-  coords 41.031 0.668 149.456
- }
- {
-  components {
-   EL_ShopItemComponent "{5AC6DBF94189D860}" {
-    m_ShopItemPrefab "{C9D661E5B0714711}Prefabs/Items/Food/Apple.et"
-   }
-   MeshObject "{59C4F48745893DBF}" {
-    Object "{55991E1823C60AB3}Assets/Props/Crates/Crate_01.xob"
-   }
-  }
-  coords 111.223 0.899 135.243
-  {
-   $grp GenericEntity {
-    {
-     components {
-      MeshObject "{5AC6DBFD4D197B51}" {
-       Object "{D0566D3CAE967F4D}Assets/Items/Food/Apple/Apple.xob"
-      }
-     }
-     coords -0.181 0 0.072
-    }
-    {
-     components {
-      MeshObject "{5AC6DBFD4D197B51}" {
-       Object "{D0566D3CAE967F4D}Assets/Items/Food/Apple/Apple.xob"
-      }
-     }
-     coords -0.139 0 -0.054
-    }
-    {
-     components {
-      MeshObject "{5AC6DBFD4D197B51}" {
-       Object "{D0566D3CAE967F4D}Assets/Items/Food/Apple/Apple.xob"
-      }
-     }
-     coords 0.088 0 0.091
-    }
-    {
-     components {
-      MeshObject "{5AC6DBFD4D197B51}" {
-       Object "{D0566D3CAE967F4D}Assets/Items/Food/Apple/Apple.xob"
-      }
-     }
-     coords 0.043 0 0.002
-    }
-    {
-     components {
-      MeshObject "{5AC6DBFD4D197B51}" {
-       Object "{D0566D3CAE967F4D}Assets/Items/Food/Apple/Apple.xob"
-      }
-     }
-     coords -0.05 0 -0.069
-    }
-    {
-     components {
-      MeshObject "{5AC6DBFD4D197B51}" {
-       Object "{D0566D3CAE967F4D}Assets/Items/Food/Apple/Apple.xob"
-      }
-     }
-     coords 0.18 0 0.029
-    }
-    {
-     components {
-      MeshObject "{5AC6DBFD4D197B51}" {
-       Object "{D0566D3CAE967F4D}Assets/Items/Food/Apple/Apple.xob"
-      }
-     }
-     coords -0.038 0 0.028
-    }
-   }
-  }
- }
-}
-SCR_DestructibleBuildingEntity : "{F51B9B9BD15BBE64}Prefabs/Structures/Commercial/Shops/ShopHouse_E_2I01t_householdwares.et" {
- coords 36.968 0.001 150.078
- angleY 91.729
- {
-  GenericEntity {
-   ID "56F2E0BBB25707B9"
-   components {
-    MeshObject "{5111E74D5E891458}" {
-     Materials {
-      MaterialAssignClass "{5682D51ACA63F980}" {
-       SourceMaterial "Collor_Palette"
-       AssignedMaterial "{D88CD168EEC93147}Assets/Structures/Infrastructure/Naval/Houses/CottagePier_01/Data/empty.emat"
-      }
-      MaterialAssignClass "{5682D51ACA63F9AE}" {
-       SourceMaterial "SignCommercial_01"
-       AssignedMaterial "{D88CD168EEC93147}Assets/Structures/Infrastructure/Naval/Houses/CottagePier_01/Data/empty.emat"
-      }
-     }
-    }
-   }
-  }
- }
-}
 Vehicle M151A1 : "{F649585ABB3706C4}Prefabs/Vehicles/Wheeled/M151A2/M151A2.et" {
  components {
   SCR_VehicleDamageManagerComponent "{141326E9FD94FE40}" {
-   m_fVehicleDestroyDamage 10408.7
+   m_fVehicleDestroyDamage 8980.1
   }
   ActionsManagerComponent "{C97BE5489221AE18}" {
    additionalActions {
@@ -912,134 +596,107 @@ Vehicle M151A1 : "{F649585ABB3706C4}Prefabs/Vehicles/Wheeled/M151A2/M151A2.et" {
    }
   }
  }
- coords 97.599 0.001 131.527
+ coords 89.089 0.001 131.594
  angleY 45
 }
 $grp GenericEntity : "{FDEE11D818A4C675}Prefabs/Items/Money/DollarBill.et" {
- DollarBill_5A4E9B16234DBD2 {
-  coords 96.165 0.901 135.439
- }
- DollarBill_5A4E9B16234DBD3 {
-  coords 96.165 0.901 135.439
- }
- DollarBill_5A4E9B16234DBD4 {
-  coords 96.165 0.901 135.439
- }
- DollarBill_5A4E9B16234DBD5 {
-  coords 96.165 0.901 135.439
- }
- DollarBill_5A4E9B16234DBD6 {
-  coords 96.165 0.901 135.439
- }
- DollarBill_5A4E9B16234DBD7 {
-  coords 96.165 0.901 135.439
- }
- DollarBill_5A4E9B16234DBD8 {
-  coords 96.165 0.901 135.439
- }
- DollarBill_5A4E9B16234DBD9 {
-  coords 96.165 0.901 135.439
- }
- DollarBill_5A4E9B16234DBD10 {
-  coords 96.165 0.901 135.439
- }
  DollarBill_5AFB219236FF7356 {
-  coords 41.924 0.241 145.541
+  coords 46.103 0.004 150.731
  }
  DollarBill_5AFB219236FF2 {
-  coords 41.924 0.241 145.566
+  coords 46.103 0.004 150.756
  }
  DollarBill_5AFB219236FF3 {
-  coords 41.924 0.241 145.604
+  coords 46.103 0.004 150.794
  }
  DollarBill_5AFB219236FF4 {
-  coords 41.924 0.241 145.666
+  coords 46.103 0.004 150.856
  }
  DollarBill_5AFB219236FF5 {
-  coords 41.924 0.241 145.72
+  coords 46.103 0.004 150.91
  }
  DollarBill_5AFB219236FF6 {
-  coords 41.924 0.241 145.768
+  coords 46.103 0.004 150.958
  }
  DollarBill_5AFB219236FF7 {
-  coords 41.924 0.241 145.82
+  coords 46.103 0.004 151.01
  }
  DollarBill_5AFB219236FF8 {
-  coords 41.924 0.241 145.857
+  coords 46.103 0.004 151.047
  }
  DollarBill_5AFB219236FF9 {
-  coords 41.924 0.241 145.903
+  coords 46.103 0.004 151.093
  }
  DollarBill_5AFB219236FF10 {
-  coords 41.924 0.241 145.834
+  coords 46.103 0.004 151.024
  }
  DollarBill_5AFB219236FF11 {
-  coords 41.924 0.241 145.888
+  coords 46.103 0.004 151.078
  }
  DollarBill_5AFB219236FF12 {
-  coords 41.924 0.241 145.936
+  coords 46.103 0.004 151.126
  }
  DollarBill_5AFB219236FF13 {
-  coords 41.924 0.241 145.988
+  coords 46.103 0.004 151.178
  }
  DollarBill_5AFB219236FF14 {
-  coords 41.924 0.241 145.709
+  coords 46.103 0.004 150.899
  }
  DollarBill_5AFB219236FF15 {
-  coords 41.924 0.241 146.025
+  coords 46.103 0.004 151.215
  }
  DollarBill_5AFB219236FF16 {
-  coords 41.924 0.241 146.071
+  coords 46.103 0.004 151.261
  }
  DollarBill_5AFB219236FF17 {
-  coords 41.924 0.241 145.772
+  coords 46.103 0.004 150.962
  }
  DollarBill_5AFB219236FF18 {
-  coords 41.924 0.241 145.782
+  coords 46.103 0.004 150.972
  }
  DollarBill_5AFB219236FF19 {
-  coords 41.924 0.241 145.836
+  coords 46.103 0.004 151.026
  }
  DollarBill_5AFB219236FF20 {
-  coords 41.924 0.241 145.884
+  coords 46.103 0.004 151.074
  }
  DollarBill_5AFB219236FF21 {
-  coords 41.924 0.241 145.936
+  coords 46.103 0.004 151.126
  }
  DollarBill_5AFB219236FF22 {
-  coords 41.924 0.241 145.657
+  coords 46.103 0.004 150.847
  }
  DollarBill_5AFB219236FF23 {
-  coords 41.924 0.241 145.973
+  coords 46.103 0.004 151.163
  }
  DollarBill_5AFB219236FF24 {
-  coords 41.924 0.241 146.019
+  coords 46.103 0.004 151.209
  }
  DollarBill_5AFB219236FF25 {
-  coords 41.924 0.241 145.72
+  coords 46.103 0.004 150.91
  }
  DollarBill_5AFB219236FF26 {
-  coords 41.924 0.241 145.742
+  coords 46.103 0.004 150.932
  }
  DollarBill_5AFB219236FF27 {
-  coords 41.924 0.241 145.796
+  coords 46.103 0.004 150.986
  }
  DollarBill_5AFB219236FF28 {
-  coords 41.924 0.241 145.844
+  coords 46.103 0.004 151.034
  }
  DollarBill_5AFB219236FF29 {
-  coords 41.924 0.241 145.896
+  coords 46.103 0.004 151.086
  }
  DollarBill_5AFB219236FF30 {
-  coords 41.924 0.241 145.617
+  coords 46.103 0.004 150.807
  }
  DollarBill_5AFB219236FF31 {
-  coords 41.924 0.241 145.933
+  coords 46.103 0.004 151.123
  }
  DollarBill_5AFB219236FF32 {
-  coords 41.924 0.241 145.979
+  coords 46.103 0.004 151.169
  }
  DollarBill_5AFB219236FF33 {
-  coords 41.924 0.241 145.68
+  coords 46.103 0.004 150.87
  }
 }
