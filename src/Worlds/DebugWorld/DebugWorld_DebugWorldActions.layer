@@ -7,23 +7,6 @@ $grp CommentEntity {
   m_VisibleIngame 1
  }
  {
-  coords 88.343 0.64 135.57
-  angleY 180
-  m_Comment "Vehicle Shop"
-  m_Size 0.5
-  m_Color 0 0.952 1
-  m_VisibleIngame 1
-  m_TextBackground 1
- }
- {
-  coords 43.844 1.496 136.819
-  angleY -90
-  m_Comment "Housing"
-  m_Size 0.7
-  m_Color 0 0.952 1
-  m_VisibleIngame 1
- }
- {
   coords 99.974 3.647 156.523
   m_Comment "Ore spawning zone"
   m_Size 0.7
@@ -150,30 +133,28 @@ $grp SCR_BaseTriggerEntity : "{3DCB1D8DBCD3B347}Prefabs/Misc/SuperJumpTrigger.et
    EL_JumpTrigger "{5AC2E3A4D34D58F7}" {
     m_vJumpVel -50 8 0
    }
+   MeshObject "{5AC2E3AB60F30843}" {
+    Object "{8C4FA3B3633FDFC4}Assets/Misc/Jumppad/SM_JumpPad.xob"
+   }
+   RigidBody "{5AC2E3ABACB0AF56}" {
+    ModelGeometry 1
+    Static 1
+   }
   }
-  coords 130.027 0.001 140.509
+  coords 160.064 0.001 142.121
   angleY 90
  }
  {
-  components {
-   EL_JumpTrigger "{5AC2E3A4D34D58F7}" {
-    m_vJumpVel 50 8 0
-   }
-  }
-  coords 60.517 0.001 141.727
+  coords 81.384 0.001 141.192
   angleY -90
- }
- {
-  components {
-   EL_JumpTrigger "{5AC2E3A4D34D58F7}" {
-    m_vJumpVel -50 8 0
-   }
-  }
-  coords 86.297 0.001 140.509
-  angleY 90
  }
 }
 $grp GenericEntity : "{4895654A61D2F41A}Prefabs/Items/HouseKeyItem.et" {
+ HouseKeyItem_5AE12BA73DEDA8C2 {
+  coords 95.293 0.898 135.446
+  angleZ 90
+  scale 2
+ }
  ItemInteractable_Base_5ABF3C1CE1EF5709 {
   components {
    InventoryItemComponent "{5222EB4D0C73006B}" {
@@ -184,12 +165,7 @@ $grp GenericEntity : "{4895654A61D2F41A}Prefabs/Items/HouseKeyItem.et" {
     }
    }
   }
-  coords 88.834 0.106 139.335
- }
- HouseKeyItem_5AE12BA73DEDA8C2 {
-  coords 95.293 0.898 135.446
-  angleZ 90
-  scale 2
+  coords 99.428 0.898 135.41
  }
 }
 GenericEntity Backpack_ALICE_Medium_assembled_5A4E9B16234DA870 : "{5C5C6EE05EE2FF1A}Prefabs/Items/Equipment/Backpacks/Backpack_ALICE_Medium_assembled.et" {
@@ -202,12 +178,6 @@ $grp SCR_DestructibleEntity : "{622F9989DDC4865B}PrefabLibrary/Props/Civilian/Re
  {
   coords 100.769 -0.001 135
  }
-}
-LightEntity : "{8CAD466D49510CDF}Prefabs/Structures/Infrastructure/Lamps/LampStreet_E_03/LightPrefabs/LampStreet_E_03_light.et" {
- coords -2.885 25.144 -0.093
- angleX -90
- angleY -180
- angleZ -180
 }
 GenericEntity : "{9ABAFFCBC76D824B}Prefabs/Props/Civilian/NoticeBoardCork_01.et" {
  coords 100.02 0.898 134.46
@@ -223,7 +193,8 @@ GenericEntity : "{9ABAFFCBC76D824B}Prefabs/Props/Civilian/NoticeBoardCork_01.et"
  }
 }
 EL_GlobalBankAccountManager EL_GlobalBankAccountManager_5AC710784B102CDC : "{A8DB88FA148A2CA2}Prefabs/Core/EL_GlobalBankAccountManager.et" {
- coords 45.413 0.001 149.463
+ coords 104.137 -0.002 135.508
+ angleY -90
 }
 GameEntity Helmet_PASGT_01_5AD8C5AA7D849869 : "{B74A4FF0DD8BB116}Prefabs/Characters/HeadGear/Helmet_PASGT_01/Helmet_PASGT_01.et" {
  components {
@@ -327,8 +298,8 @@ GenericEntity : "{C260F0E07274ACA1}Prefabs/Props/Furniture/Boiler_01.et" {
    Enabled 1
   }
  }
- coords 44.833 0 151.303
- angleY -88.114
+ coords 102.297 -0.003 134.928
+ angleY -178.114
 }
 $grp Tree : "{CC86FA58287C61C8}Prefabs/Vegetation/Vegetables/PumpkinCrop_01_Line.et" {
  {
@@ -353,8 +324,8 @@ SCR_DestructibleBuildingEntity : "{CD370ECB385DE67A}Prefabs/Structures/Houses/Fa
   EL_HouseManagerComponent "{5AC2E3B3EB7921A2}" {
   }
  }
- coords 45.309 0 131.612
- angleY 90
+ coords 165.857 0.001 160.304
+ angleY -90
  {
   GenericEntity {
    ID "555CDCE34C25100E"
@@ -414,289 +385,137 @@ SCR_DestructibleBuildingEntity : "{CD370ECB385DE67A}Prefabs/Structures/Houses/Fa
   }
  }
 }
-Vehicle M151A1 : "{F649585ABB3706C4}Prefabs/Vehicles/Wheeled/M151A2/M151A2.et" {
- components {
-  SCR_VehicleDamageManagerComponent "{141326E9FD94FE40}" {
-   m_fVehicleDestroyDamage 8980.1
-  }
-  ActionsManagerComponent "{C97BE5489221AE18}" {
-   additionalActions {
-    EL_BuyAction "{5ABAF5DC2963B517}" {
-     ParentContextList {
-      "door_l01"
-     }
-     m_BuyablePrefab "{F649585ABB3706C4}Prefabs/Vehicles/Wheeled/M151A2/M151A2.et"
-     m_PriceConfig EL_PriceConfig "{5ABAF5DC45854485}" : "{18A98641909A7F52}Configs/Shops/EL_ShopPrices.conf" {
-      m_aPriceConfigs {
-       EL_Price "{59BC6D842A07660C}" {
-        m_Prefab "{9CAC68BA551417A4}Prefabs/Tools/Axe/Axe.et"
-        m_sName "Axe"
-        m_iBuyPrice 16
-        m_iSellPrice 4
-       }
-       EL_Price "{59C4F48A9A9CB9C1}" {
-        m_Prefab "{1DBD99E6347DE1AD}Prefabs/Items/Drinks/AppleJuice.et"
-        m_sName "Apple Juice"
-        m_iBuyPrice 7
-        m_iSellPrice 4
-       }
-       EL_Price "{59C9169307D01B5E}" {
-        m_Prefab "{A231A5F8D479B5DC}Prefabs/Items/Drinks/WaterBottle.et"
-        m_sName "Water"
-        m_iBuyPrice 1
-       }
-       EL_Price "{59C681325019822B}" {
-        m_Prefab "{259EE7B78C51B624}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469.et"
-        m_sName "UAZ"
-        m_iBuyPrice 1
-       }
-       EL_Price "{59C91696B5C775C8}" {
-        m_Prefab "{0815D91FDF997A0A}Prefabs/Items/Food/Tomato.et"
-        m_sName "Tomato"
-        m_iBuyPrice 4
-        m_iSellPrice 2
-       }
-       EL_Price "{59C91696C0A45256}" {
-        m_Prefab "{C9D661E5B0714711}Prefabs/Items/Food/Apple.et"
-        m_sName "Apple"
-        m_iBuyPrice 4
-        m_iSellPrice 3
-       }
-       EL_Price "{59C916932949705F}" {
-        m_Prefab "{CD44DE4529F22D17}Prefabs/Items/Food/BerryJam.et"
-        m_sName "Berry Jam"
-        m_iBuyPrice 2
-        m_iSellPrice 2
-       }
-       EL_Price "{59C916932A7F6FEB}" {
-        m_Prefab "{FD702B97C4E200EE}Prefabs/Items/Food/PlumJam.et"
-        m_sName "Plum Jam"
-        m_iBuyPrice 2
-        m_iSellPrice 2
-       }
-       EL_Price "{59CA6D2F01596FB7}" {
-        m_Prefab "{06B68C58B72EAAC6}Prefabs/Items/Equipment/Backpacks/Backpack_ALICE_Medium.et"
-        m_sName "Backpack ALICE"
-        m_iBuyPrice 20
-       }
-       EL_Price "{59CA6D2F01F1AD6F}" {
-        m_Prefab "{41A9C55B61F375F0}Prefabs/Items/Equipment/Backpacks/Backpack_Kolobok.et"
-        m_sName "Backpack Kolobok"
-        m_iBuyPrice 15
-       }
-       EL_Price "{59CA6D2F002F8259}" {
-        m_Prefab "{3DE0155EC9767B98}Prefabs/Items/Equipment/Backpacks/Backpack_Veshmeshok.et"
-        m_sName "Backpack Veshmeshok"
-        m_iBuyPrice 10
-       }
-       EL_Price "{59CC76EED9D9CA08}" {
-        m_Prefab "{3EB02CDAD5F23C82}Prefabs/Weapons/Rifles/SVD/Rifle_SVD.et"
-        m_sName "SVD"
-        m_iBuyPrice 140
-        m_iSellPrice 70
-       }
-       EL_Price "{59CC76EEA7325CD6}" {
-        m_Prefab "{9CCB46C6EE632C1A}Prefabs/Weapons/Magazines/Magazine_762x54_SVD_10rnd_Sniper.et"
-        m_sName "SVD 10rnd Magazine"
-        m_iBuyPrice 32
-        m_iSellPrice 16
-       }
-       EL_Price "{59CC76EEA5A14002}" {
-        m_Prefab "{FA5C25BF66A53DCF}Prefabs/Weapons/Rifles/AK74/Rifle_AK74.et"
-        m_sName "AK47"
-        m_iBuyPrice 100
-        m_iSellPrice 50
-       }
-       EL_Price "{59CC76EEA5BAE141}" {
-        m_Prefab "{BBB50A815A2F916B}Prefabs/Weapons/Magazines/Magazine_545x39_AK_30rnd_Ball.et"
-        m_sName "AK 30rnd Magazine"
-        m_iBuyPrice 25
-        m_iSellPrice 12
-       }
-       EL_Price "{59CC76EEA5C9AE1C}" {
-        m_Prefab "{C0F7DD85A86B2900}Prefabs/Weapons/Handguns/PM/Handgun_PM.et"
-        m_sName "PM Handgun"
-        m_iBuyPrice 30
-        m_iSellPrice 15
-       }
-       EL_Price "{59CC76EEA5DC9818}" {
-        m_Prefab "{8B853CDD11BA916E}Prefabs/Weapons/Magazines/Magazine_9x18_PM_8rnd_Ball.et"
-        m_sName "PM 8rnd Magazine"
-        m_iBuyPrice 10
-        m_iSellPrice 5
-       }
-       EL_Price "{59CC76EE088DC7E7}" {
-        m_Prefab "{B31929F65F0D0279}Prefabs/Weapons/Rifles/M14/Rifle_M21.et"
-        m_sName "M21"
-        m_iBuyPrice 140
-        m_iSellPrice 70
-       }
-       EL_Price "{59CC76EE08CF3C03}" {
-        m_Prefab "{6D18CC33708EE712}Prefabs/Weapons/Magazines/Magazine_762x51_M14_20rnd_Base.et"
-        m_sName "M21 20rnd Magazine"
-        m_iBuyPrice 50
-        m_iSellPrice 25
-       }
-       EL_Price "{59CC76EE0818808D}" {
-        m_Prefab "{3E413771E1834D2F}Prefabs/Weapons/Rifles/M16/Rifle_M16A2.et"
-        m_sName "M16A2"
-        m_iBuyPrice 125
-        m_iSellPrice 60
-       }
-       EL_Price "{59CC76EE0844DE37}" {
-        m_Prefab "{2EBF60EF24B108FC}Prefabs/Weapons/Magazines/Magazine_556x45_STANAG_30rnd_Ball.et"
-        m_sName "M16A2 30rnd Magazine"
-        m_iBuyPrice 30
-        m_iSellPrice 15
-       }
-       EL_Price "{59BC6D84DB04E452}" {
-        m_Prefab "{1353C6EAD1DCFE43}Prefabs/Weapons/Handguns/M9/Handgun_M9.et"
-        m_sName "M9 Pistol"
-        m_iBuyPrice 36
-        m_iSellPrice 18
-       }
-       EL_Price "{59CC76EE0E8CA871}" {
-        m_Prefab "{9C05543A503DB80E}Prefabs/Weapons/Magazines/Magazine_9x19_M9_15rnd_Ball.et"
-        m_sName "M9 15rnd Magazine"
-        m_iBuyPrice 15
-        m_iSellPrice 8
-       }
-       EL_Price "{59D24E59F2F15B54}" {
-        m_Prefab "{ADFEF306D1C22E5F}Prefabs/Items/Resources/Sandbag.et"
-        m_sName "Sandbag"
-        m_iBuyPrice 10
-        m_iSellPrice 2
-       }
-       EL_Price "{59D24E59F222CCA8}" {
-        m_Prefab "{344090890C63F4CA}Prefabs/Items/Resources/GravelBag.et"
-        m_sName "Gravel Bag"
-        m_iBuyPrice 10
-        m_iSellPrice 2
-       }
-       EL_Price "{59D24E59CF66D115}" {
-        m_Prefab "{0D5DA590E223A195}Prefabs/Items/Resources/Brick.et"
-        m_sName "Concrete Brick"
-        m_iBuyPrice 20
-        m_iSellPrice 10
-       }
-       EL_Price "{59D24E5980F4F55C}" {
-        m_Prefab "{5A87BE461FCE3006}Prefabs/Items/Resources/HayBale.et"
-        m_sName "Hay Bale"
-        m_iBuyPrice 20
-        m_iSellPrice 10
-       }
-       EL_Price "{5ABAF5DC464BD23E}" {
-        m_Prefab "{F649585ABB3706C4}Prefabs/Vehicles/Wheeled/M151A2/M151A2.et"
-        m_sName "M151A2"
-        m_iBuyPrice 1
-       }
-      }
-     }
-    }
-   }
-  }
- }
- coords 89.089 0.001 131.594
- angleY 45
-}
 $grp GenericEntity : "{FDEE11D818A4C675}Prefabs/Items/Money/DollarBill.et" {
- DollarBill_5AFB219236FF7356 {
-  coords 46.103 0.004 150.731
- }
- DollarBill_5AFB219236FF2 {
-  coords 46.103 0.004 150.756
- }
- DollarBill_5AFB219236FF3 {
-  coords 46.103 0.004 150.794
- }
- DollarBill_5AFB219236FF4 {
-  coords 46.103 0.004 150.856
- }
- DollarBill_5AFB219236FF5 {
-  coords 46.103 0.004 150.91
- }
- DollarBill_5AFB219236FF6 {
-  coords 46.103 0.004 150.958
- }
- DollarBill_5AFB219236FF7 {
-  coords 46.103 0.004 151.01
+ DollarBill_5AFB219236FF32 {
+  coords 99.276 0.903 134.975
+  angleY -90
  }
  DollarBill_5AFB219236FF8 {
-  coords 46.103 0.004 151.047
+  coords 99.398 0.903 134.975
+  angleY -90
  }
- DollarBill_5AFB219236FF9 {
-  coords 46.103 0.004 151.093
+ DollarBill_5AFB219236FF7356 {
+  coords 99.714 0.903 134.975
+  angleY -90
  }
- DollarBill_5AFB219236FF10 {
-  coords 46.103 0.004 151.024
- }
- DollarBill_5AFB219236FF11 {
-  coords 46.103 0.004 151.078
+ DollarBill_5AFB219236FF2 {
+  coords 99.689 0.903 134.975
+  angleY -90
  }
  DollarBill_5AFB219236FF12 {
-  coords 46.103 0.004 151.126
+  coords 99.319 0.903 134.975
+  angleY -90
  }
  DollarBill_5AFB219236FF13 {
-  coords 46.103 0.004 151.178
+  coords 99.267 0.903 134.975
+  angleY -90
  }
  DollarBill_5AFB219236FF14 {
-  coords 46.103 0.004 150.899
+  coords 99.546 0.903 134.975
+  angleY -90
  }
- DollarBill_5AFB219236FF15 {
-  coords 46.103 0.004 151.215
+ DollarBill_5AFB219236FF3 {
+  coords 99.651 0.903 134.975
+  angleY -90
  }
- DollarBill_5AFB219236FF16 {
-  coords 46.103 0.004 151.261
+ DollarBill_5AFB219236FF5 {
+  coords 99.535 0.903 134.975
+  angleY -90
  }
- DollarBill_5AFB219236FF17 {
-  coords 46.103 0.004 150.962
+ DollarBill_5AFB219236FF4 {
+  coords 99.589 0.903 134.975
+  angleY -90
  }
- DollarBill_5AFB219236FF18 {
-  coords 46.103 0.004 150.972
+ DollarBill_5AFB219236FF7 {
+  coords 99.435 0.903 134.975
+  angleY -90
  }
- DollarBill_5AFB219236FF19 {
-  coords 46.103 0.004 151.026
+ DollarBill_5AFB219236FF9 {
+  coords 99.352 0.903 134.975
+  angleY -90
  }
- DollarBill_5AFB219236FF20 {
-  coords 46.103 0.004 151.074
+ DollarBill_5AFB219236FF6 {
+  coords 99.487 0.903 134.975
+  angleY -90
  }
- DollarBill_5AFB219236FF21 {
-  coords 46.103 0.004 151.126
+ DollarBill_5AFB219236FF10 {
+  coords 99.421 0.903 134.975
+  angleY -90
  }
- DollarBill_5AFB219236FF22 {
-  coords 46.103 0.004 150.847
- }
- DollarBill_5AFB219236FF23 {
-  coords 46.103 0.004 151.163
- }
- DollarBill_5AFB219236FF24 {
-  coords 46.103 0.004 151.209
- }
- DollarBill_5AFB219236FF25 {
-  coords 46.103 0.004 150.91
- }
- DollarBill_5AFB219236FF26 {
-  coords 46.103 0.004 150.932
- }
- DollarBill_5AFB219236FF27 {
-  coords 46.103 0.004 150.986
- }
- DollarBill_5AFB219236FF28 {
-  coords 46.103 0.004 151.034
- }
- DollarBill_5AFB219236FF29 {
-  coords 46.103 0.004 151.086
- }
- DollarBill_5AFB219236FF30 {
-  coords 46.103 0.004 150.807
- }
- DollarBill_5AFB219236FF31 {
-  coords 46.103 0.004 151.123
- }
- DollarBill_5AFB219236FF32 {
-  coords 46.103 0.004 151.169
+ DollarBill_5AFB219236FF11 {
+  coords 99.367 0.903 134.975
+  angleY -90
  }
  DollarBill_5AFB219236FF33 {
-  coords 46.103 0.004 150.87
+  coords 99.575 0.903 134.975
+  angleY -90
+ }
+ DollarBill_5AFB219236FF15 {
+  coords 99.23 0.903 134.975
+  angleY -90
+ }
+ DollarBill_5AFB219236FF16 {
+  coords 99.184 0.903 134.975
+  angleY -90
+ }
+ DollarBill_5AFB219236FF17 {
+  coords 99.483 0.903 134.975
+  angleY -90
+ }
+ DollarBill_5AFB219236FF19 {
+  coords 99.419 0.903 134.975
+  angleY -90
+ }
+ DollarBill_5AFB219236FF31 {
+  coords 99.322 0.903 134.975
+  angleY -90
+ }
+ DollarBill_5AFB219236FF30 {
+  coords 99.638 0.903 134.975
+  angleY -90
+ }
+ DollarBill_5AFB219236FF18 {
+  coords 99.473 0.903 134.975
+  angleY -90
+ }
+ DollarBill_5AFB219236FF22 {
+  coords 99.598 0.903 134.975
+  angleY -90
+ }
+ DollarBill_5AFB219236FF29 {
+  coords 99.359 0.903 134.975
+  angleY -90
+ }
+ DollarBill_5AFB219236FF20 {
+  coords 99.371 0.903 134.975
+  angleY -90
+ }
+ DollarBill_5AFB219236FF24 {
+  coords 99.236 0.903 134.975
+  angleY -90
+ }
+ DollarBill_5AFB219236FF21 {
+  coords 99.319 0.903 134.975
+  angleY -90
+ }
+ DollarBill_5AFB219236FF26 {
+  coords 99.513 0.903 134.975
+  angleY -90
+ }
+ DollarBill_5AFB219236FF25 {
+  coords 99.535 0.903 134.975
+  angleY -90
+ }
+ DollarBill_5AFB219236FF28 {
+  coords 99.411 0.903 134.975
+  angleY -90
+ }
+ DollarBill_5AFB219236FF27 {
+  coords 99.459 0.903 134.975
+  angleY -90
+ }
+ DollarBill_5AFB219236FF23 {
+  coords 99.282 0.903 134.975
+  angleY -90
  }
 }

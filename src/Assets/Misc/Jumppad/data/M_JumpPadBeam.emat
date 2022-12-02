@@ -1,0 +1,10 @@
+MatPBRBasicGlass {
+ Emissive 0.617 0.481 0.048 0
+ EmissiveLV 6.987
+ ZEnable 0
+ AlphaTest 3
+ AlphaMul 2.642
+ BlendMode AlphaBlend
+ EmissiveMap "{846ADE196C47E913}Assets/Misc/Jumppad/data/T_JumpPadBeam_Emissive.tga.edds"
+ BCRMap "{9C158B309C971EC2}Assets/Misc/Jumppad/data/T_JumpPadBeam_BaseColor.tga.edds"
+}

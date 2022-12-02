@@ -28,8 +28,8 @@ Layer GravelChain {
 Layer CementChain {
  Index 9
 }
-Layer VehicleShop {
- Index 21
+Layer DebugWorldActions {
+ Index 10
 }
 Layer BerryChain {
  Index 12
@@ -57,7 +57,4 @@ Layer ConcreteChain {
 }
 Layer CocaineChain {
  Index 20
-}
-Layer DebugWorldActions {
- Index 10
 }

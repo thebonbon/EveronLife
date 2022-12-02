@@ -1,0 +1,15 @@
+MetaFileClass {
+ Name "{45F3B59FA9BB6586}Assets/Misc/Jumppad/data/T_JumpPad_Normal.tga.edds"
+ Configurations {
+  PNGResourceClass PC : "{835E083C88C3D9C3}Configs/System/ResourceTypes/PC/TextureTerrainNormal.conf" {
+  }
+  PNGResourceClass XBOX_ONE : "{6C5EFFA712A52100}Configs/System/ResourceTypes/XBOX_ONE/TextureTerrainNormal.conf" {
+  }
+  PNGResourceClass XBOX_SERIES : "{90ADE65A903F3042}Configs/System/ResourceTypes/XBOX_SERIES/TextureTerrainNormal.conf" {
+  }
+  PNGResourceClass PS4 : "{6F6E5A1432381FD2}Configs/System/ResourceTypes/PS4/TextureTerrainNormal.conf" {
+  }
+  PNGResourceClass HEADLESS : "{EAB38BDFD096C0A6}Configs/System/ResourceTypes/HEADLESS/TextureTerrainNormal.conf" {
+  }
+ }
+}

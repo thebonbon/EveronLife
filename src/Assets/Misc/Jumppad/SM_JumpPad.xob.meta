@@ -1,0 +1,42 @@
+MetaFileClass {
+ Name "{8C4FA3B3633FDFC4}Assets/Misc/Jumppad/SM_JumpPad.xob"
+ Configurations {
+  FBXResourceClass PC {
+   Scale 2 1 2
+   MaterialAssigns {
+    MaterialAssignClass "{5B052A50BB191D40}" {
+     SourceMaterial "M_JumpPad"
+     AssignedMaterial "{91CEBB6A65528F86}Assets/Misc/Jumppad/data/M_JumpPad.emat"
+    }
+    MaterialAssignClass "{5B052A50BB191DAD}" {
+     SourceMaterial "M_JumpPadBeam"
+     AssignedMaterial "{2E717A26982C823A}Assets/Misc/Jumppad/data/M_JumpPadBeam.emat"
+    }
+   }
+   MeshParams {
+    MeshParam JumpPad {
+    }
+    MeshParam JumpPadBeam {
+    }
+   }
+   Common TXOCommonClass "{5B052A50BB1115B3}" : "{0877E7C4BB2B2C9A}Configs/System/ResourceTypes/PC/MeshObjectCommon.conf" {
+   }
+  }
+  FBXResourceClass XBOX_ONE : PC {
+   Common TXOCommonClass "{5B052A50BB11C627}" : "{9D5B6207F7628CE2}Configs/System/ResourceTypes/XBOX_ONE/MeshObjectCommon.conf" {
+   }
+  }
+  FBXResourceClass XBOX_SERIES : PC {
+   Common TXOCommonClass "{5B052A50BB11C6F1}" : "{DD9F02115C764647}Configs/System/ResourceTypes/XBOX_SERIES/MeshObjectCommon.conf" {
+   }
+  }
+  FBXResourceClass PS4 : PC {
+   Common TXOCommonClass "{5B052A50BB11C112}" : "{53EC476BC921D99A}Configs/System/ResourceTypes/PS4/MeshObjectCommon.conf" {
+   }
+  }
+  FBXResourceClass HEADLESS : PC {
+   Common TXOCommonClass "{5B052A50BB11C1B3}" : "{3A5B3356978039E8}Configs/System/ResourceTypes/HEADLESS/MeshObjectCommon.conf" {
+   }
+  }
+ }
+}

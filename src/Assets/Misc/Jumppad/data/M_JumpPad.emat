@@ -1,0 +1,6 @@
+MatPBRBasic {
+ EmissiveMap "{A07239FF1D50D24E}Assets/Misc/Jumppad/data/T_JumpPad_Emissive.tga.edds"
+ BCRMap "{01BBFAFBA42DA4C3}Assets/Misc/Jumppad/data/T_JumpPad_BaseColor.tga.edds"
+ NormalPower 1.52
+ NMOMap "{45F3B59FA9BB6586}Assets/Misc/Jumppad/data/T_JumpPad_Normal.tga.edds"
+}
