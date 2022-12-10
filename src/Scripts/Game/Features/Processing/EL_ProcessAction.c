@@ -55,31 +55,30 @@ class EL_ProcessAction : ScriptedUserAction
 	//------------------------------------------------------------------------------------------------
 	private void ProcessAction(IEntity pOwnerEntity, IEntity pUserEntity, SCR_ParticleEmitter processParticles)
 	{
+		if (!EL_NetworkUtils.IsOwner(pOwnerEntity)) return;
+
 		if (processParticles)
 			processParticles.Stop();
+		
 		InventoryStorageManagerComponent inventoryManager = EL_ComponentFinder<InventoryStorageManagerComponent>.Find(pUserEntity);
-
-		SCR_PrefabNamePredicate prefabNamePredicate();
 
 		foreach (EL_ProcessingInput processingInput : m_aProcessingInputs)
 		{
-			//Set search to new input prefab
-			prefabNamePredicate.prefabName = processingInput.m_InputPrefab;
-
-			for (int i = 0; i < processingInput.m_iInputAmount; i++)
-			{
-				ConsumeInput(inventoryManager.FindItem(prefabNamePredicate), pUserEntity, inventoryManager);
-			}
+			EL_InventoryUtils.RemoveAmount(inventoryManager, processingInput.m_InputPrefab, processingInput.m_iInputAmount);
 		}
 
 		foreach (EL_ProcessingOutput processingOutput : m_aProcessingOutputs)
 		{
-			for (int i = 0; i < processingOutput.m_iOutputAmount; i++)
+			if (m_bForceDropOutput)
 			{
-				if (m_bForceDropOutput || !inventoryManager.TrySpawnPrefabToStorage(processingOutput.m_OutputPrefab))
+				for (int i = 0; i < processingOutput.m_iOutputAmount; i++)
 				{
 					EL_Utils.SpawnEntityPrefab(processingOutput.m_OutputPrefab, pOwnerEntity.GetOrigin() + m_vDropOffset, m_vRotation);
 				}
+			}
+			else
+			{
+				EL_InventoryUtils.AddAmount(inventoryManager, processingOutput.m_OutputPrefab, processingOutput.m_iOutputAmount);
 			}
 		}
 	}
@@ -94,22 +93,13 @@ class EL_ProcessAction : ScriptedUserAction
 	}
 
 	//------------------------------------------------------------------------------------------------
-	void ConsumeInput(IEntity input, IEntity pUserEntity, InventoryStorageManagerComponent inventoryManager)
-	{
-		inventoryManager.TryDeleteItem(input);
-	}
-	
-	//------------------------------------------------------------------------------------------------
 	override bool CanBePerformedScript(IEntity user)
  	{
-		//Check player inventory
-		InventoryStorageManagerComponent inventoryManager = InventoryStorageManagerComponent.Cast(user.FindComponent(SCR_InventoryStorageManagerComponent));
-
+		InventoryStorageManagerComponent inventoryManager = EL_ComponentFinder<InventoryStorageManagerComponent>.Find(user);
 		foreach (EL_ProcessingInput processingInput : m_aProcessingInputs)
 		{
-			int inputPrefabsInInv = inventoryManager.GetDepositItemCountByResource(processingInput.m_InputPrefab);
-			if (inputPrefabsInInv < processingInput.m_iInputAmount)
-				return false;
+			int inputPrefabsInInv = EL_InventoryUtils.GetAmount(inventoryManager, processingInput.m_InputPrefab);
+			if (inputPrefabsInInv < processingInput.m_iInputAmount) return false;
 		}
 
 		return true;
