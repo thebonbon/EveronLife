@@ -9,9 +9,7 @@ class EL_GlobalBankAccountManager : GenericEntity
 	protected ref map<string, int> m_mBankAccounts = new ref map<string, int>;
 	
 	protected static EL_GlobalBankAccountManager s_pInstance;
-	
-	const ResourceName MONEY_PREFAB = "{FDEE11D818A4C675}Prefabs/Items/Money/DollarBill.et";
-	
+		
 	//------------------------------------------------------------------------------------------------
 	static EL_GlobalBankAccountManager GetInstance()
 	{
@@ -23,7 +21,7 @@ class EL_GlobalBankAccountManager : GenericEntity
 	{
 		string bankAccountId = "BankAccount-" + EL_Utils.GetPlayerUID(player);
 		if (!m_mBankAccounts.Get(bankAccountId)) //SET DEFAULT VALUE
-			m_mBankAccounts.Set(bankAccountId, 5000);
+			m_mBankAccounts.Set(bankAccountId, 1000);
 		return bankAccountId;
 	}	
 		
@@ -39,11 +37,6 @@ class EL_GlobalBankAccountManager : GenericEntity
 		return m_mBankAccounts;
 	}
 	
-	//------------------------------------------------------------------------------------------------
-	ResourceName GetMoneyPrefab()
-	{
-		return MONEY_PREFAB;
-	}	
 	//------------------------------------------------------------------------------------------------
 	int GetBankAccountMoney(string bankAccountId)
 	{
