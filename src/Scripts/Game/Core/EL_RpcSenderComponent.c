@@ -5,7 +5,6 @@ class EL_RpcSenderComponentClass : ScriptComponentClass
 
 class EL_RpcSenderComponent  : ScriptComponent
 {
-	
 	//------------------------------------------------------------------------------------------------	
 	void AskBuyVehicle(ResourceName vehiclePrefab, int color, IEntity vehicleShop)
 	{
