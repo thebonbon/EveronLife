@@ -125,10 +125,22 @@ SCR_DestructibleBuildingEntity {
     EL_VehicleShopManagerComponent "{5ACAE5EDE08D8FDE}" {
      m_vCameraPoint 7 3.572 7
      m_vCameraAngels -15 221.75 0
-     m_PriceConfig EL_PriceConfig "{5ACAE5EADF20A223}" : "{8A03F3523174C432}Configs/Shop/EL_PriceList.conf" {
-      m_aPriceConfigs {
-       EL_Price "{5B2CBBA66A11952F}" {
-        m_Prefab "{DC21E543DF39D2C0}Prefabs/Vehicles/Wheeled/M923A1/M923A1_transport_covered_closed_MERDC.et"
+     m_VehiclePriceConfig EL_VehiclePriceConfig "{5C672D648F080A79}" {
+      m_aVehiclePriceConfigs {
+       EL_VehiclePrice "{5C68A5B6EF6DB12C}" {
+        m_Prefab "{F649585ABB3706C4}Prefabs/Vehicles/Wheeled/M151A2/M151A2.et"
+        m_iBuyPrice 1
+       }
+       EL_VehiclePrice "{5C68A5B70B0A7F84}" {
+        m_Prefab "{48A6D4372444B85A}Prefabs/Vehicles/Wheeled/M923A1/M923A1_transport_covered_closed.et"
+        m_iBuyPrice 7
+       }
+       EL_VehiclePrice "{5C672D64701BC0C3}" {
+        m_Prefab "{F649585ABB3706C4}Prefabs/Vehicles/Wheeled/M151A2/M151A2.et"
+        m_iBuyPrice 10
+       }
+       EL_VehiclePrice "{5C672D64A6BA517A}" {
+        m_Prefab "{259EE7B78C51B624}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469.et"
         m_iBuyPrice 1
        }
       }
