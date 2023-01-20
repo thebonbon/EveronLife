@@ -1,0 +1,21 @@
+GameProject {
+ ID "BONEveronLifeServer"
+ GUID "5C68AAC12E48EF2E"
+ TITLE "BON_EveronLife_Server"
+ Dependencies {
+  "58D0FB3206B6F859"
+ }
+ Configurations {
+  GameProjectConfig PC {
+   WorldFile "{F3AA388E8466788C}Worlds/DebugWorld/DebugWorld.ent"
+  }
+  GameProjectConfig XBOX_ONE {
+  }
+  GameProjectConfig XBOX_SERIES {
+  }
+  GameProjectConfig PS4 {
+  }
+  GameProjectConfig HEADLESS {
+  }
+ }
+}
