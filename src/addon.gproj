@@ -7,7 +7,6 @@ GameProject {
  }
  Configurations {
   GameProjectConfig PC {
-   WorldFile "{F3AA388E8466788C}Worlds/DebugWorld/DebugWorld.ent"
   }
   GameProjectConfig XBOX_ONE {
   }
