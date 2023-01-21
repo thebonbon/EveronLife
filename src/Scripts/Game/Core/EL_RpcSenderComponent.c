@@ -6,6 +6,27 @@ class EL_RpcSenderComponentClass : ScriptComponentClass
 class EL_RpcSenderComponent  : ScriptComponent
 {
 	//------------------------------------------------------------------------------------------------	
+	//! Vehicle Owner
+	void AskSetLocalVehicleOwner(RplId vehicleId)
+	{
+		Rpc(DoSetLocalVehicleOwner, vehicleId);
+	}
+	
+	//------------------------------------------------------------------------------------------------
+	//! Vehicle Owner
+	[RplRpc(RplChannel.Reliable, RplRcver.Owner)]
+	void DoSetLocalVehicleOwner(RplId vehicleId)
+	{
+		IEntity vehicle = IEntity.Cast(Replication.FindItem(vehicleId));
+		if (!vehicle)
+			Print("[EL-VehicleShop] Error finding replicated vehicle! RplId: " + vehicleId, LogLevel.ERROR);
+		EL_CharacterOwnerComponent charOwnerComp = EL_CharacterOwnerComponent.Cast(vehicle.FindComponent(EL_CharacterOwnerComponent));
+		charOwnerComp.m_IsLocalOwner = true;
+		
+	}
+	
+	//------------------------------------------------------------------------------------------------	
+	//! Buy Vehicle
 	void AskBuyVehicle(ResourceName vehiclePrefab, int color, IEntity vehicleShop)
 	{
 		RplComponent rplComp = EL_ComponentFinder<RplComponent>.Find(vehicleShop);
@@ -13,6 +34,7 @@ class EL_RpcSenderComponent  : ScriptComponent
 	}
 	
 	//------------------------------------------------------------------------------------------------
+	//! Buy Vehicle
 	[RplRpc(RplChannel.Reliable, RplRcver.Server)]
 	void Rpc_AskBuyVehicle(ResourceName vehiclePrefab, int color, RplId shopId)
 	{
@@ -23,6 +45,7 @@ class EL_RpcSenderComponent  : ScriptComponent
 	}
 	
 	//------------------------------------------------------------------------------------------------	
+	//! Load Garage
 	void AskLoadGarage(IEntity garageEnt)
 	{
 		RplComponent rplComp = EL_ComponentFinder<RplComponent>.Find(garageEnt);
@@ -30,6 +53,7 @@ class EL_RpcSenderComponent  : ScriptComponent
 	}
 	
 	//------------------------------------------------------------------------------------------------
+	//! Load Garage
 	[RplRpc(RplChannel.Reliable, RplRcver.Server)]
 	void Rpc_AskLoadGarage(RplId garageId)
 	{
@@ -39,7 +63,8 @@ class EL_RpcSenderComponent  : ScriptComponent
 		garageManager.DoLoadGarage(GetOwner());
 	}	
 	
-	//------------------------------------------------------------------------------------------------	
+	//------------------------------------------------------------------------------------------------
+	//! Withdraw Vehicle
 	void AskWithdrawVehicle(IEntity garageEnt, int index)
 	{
 		RplComponent rplComp = EL_ComponentFinder<RplComponent>.Find(garageEnt);
@@ -47,6 +72,7 @@ class EL_RpcSenderComponent  : ScriptComponent
 	}
 	
 	//------------------------------------------------------------------------------------------------
+	//! Withdraw Vehicle
 	[RplRpc(RplChannel.Reliable, RplRcver.Server)]
 	void Rpc_AskWithdrawVehicle(RplId garageId, int index)
 	{

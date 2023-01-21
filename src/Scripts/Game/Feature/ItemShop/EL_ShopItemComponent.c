@@ -46,6 +46,9 @@ class EL_ShopItemComponent : ScriptComponent
 	//! Set Mesh to shop item mesh if not already set. This allows buying/selling from other meshes (eg. Apples from apple crate)
 	override void EOnInit(IEntity owner)
 	{
+		if (!GetGame().InPlayMode())
+			return;
+		
 		if (!m_ShopItemPrefab)
 		{
 			Print(string.Format("[EL-ItemShop] Empty shop item (m_ShopItemPrefab not set).", m_ShopItemPrefab), LogLevel.WARNING);

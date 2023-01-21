@@ -116,6 +116,8 @@ class EL_Utils
 		{
 			if (RplSession.Mode() == RplMode.Dedicated)
 				Print("Error getting uid for playerId: " + playerId, LogLevel.ERROR);
+			if (!Replication.IsServer())
+				Print("Client trying to get UID. Will always return LOCAL_UID_X!", LogLevel.WARNING);
 			uid = string.Format("LOCAL_UID_%1", playerId);
 		}	
 		return uid;

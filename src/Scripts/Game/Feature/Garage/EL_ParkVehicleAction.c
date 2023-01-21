@@ -60,9 +60,9 @@ class EL_ParkVehicleAction : ScriptedUserAction
  	{
 		//Check if user is owner of this vehicle
 		EL_CharacterOwnerComponent charOwnerComp = EL_CharacterOwnerComponent.Cast(GetOwner().FindComponent(EL_CharacterOwnerComponent));
-		if (EL_Utils.GetPlayerUID(user) != charOwnerComp.GetCharacterOwner())
+		if (!charOwnerComp.m_IsLocalOwner)
 			return false;
-
+		
 		//Check if garage is nearby
 		GetGame().GetWorld().QueryEntitiesBySphere(GetOwner().GetOrigin(), m_fGarageSearchRadius, FindFirstGarage, FilterGarage);
 		return (m_GarageManager);

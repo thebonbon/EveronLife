@@ -1,5 +1,5 @@
 MetaFileClass {
- Name "{9FB5EAB365566A77}Prefabs/ItemShop/ShopItem.et"
+ Name "{9FB5EAB365566A77}Prefabs/ItemShop/ShopItem_Base.et"
  Configurations {
   EntityTemplateResourceClass PC {
   }

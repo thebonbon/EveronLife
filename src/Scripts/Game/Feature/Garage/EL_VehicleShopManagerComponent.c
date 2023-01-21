@@ -98,7 +98,7 @@ class EL_VehicleShopManagerComponent : ScriptComponent
 
 		if (!m_aPreviewVehicle)
 		{
-			Print("Error spawning preview vehicle!", LogLevel.ERROR);
+			Print("[EL-VehicleShop] Error spawning preview vehicle!", LogLevel.ERROR);
 			return;
 		}
 
@@ -149,9 +149,7 @@ class EL_VehicleShopManagerComponent : ScriptComponent
 	{
 		m_PreviewVehicleColor = color;
 		if (m_aPreviewVehicle)
-		{
 			EL_Utils.ChangeColorRecursive(m_aPreviewVehicle, color);
-		}
 	}
 
 	//------------------------------------------------------------------------------------------------
@@ -192,10 +190,16 @@ class EL_VehicleShopManagerComponent : ScriptComponent
 		}
 
 		//Remove money
+		int amountRemoved;
 		foreach (EL_VehiclePrice price: m_VehiclePriceConfig.m_aVehiclePriceConfigs)
 		{
 			if (vehiclePrefab == price.m_Prefab)
-				EL_MoneyUtils.RemoveCash(player, price.m_iBuyPrice);
+				amountRemoved = EL_MoneyUtils.RemoveCash(player, price.m_iBuyPrice);
+		}
+		if (amountRemoved == 0)
+		{
+			Print(string.Format("[EL-VehicleShop] Trying to buy vehicle but no money removed. Prefab: %1", vehiclePrefab), LogLevel.WARNING);
+			return;
 		}
 		
 		//Spawn new vehicle
@@ -206,9 +210,7 @@ class EL_VehicleShopManagerComponent : ScriptComponent
 		array<IEntity> allItems = {};
 		vehicleStorage.GetItems(allItems);
 		foreach (IEntity item : allItems)
-		{
 			vehicleStorage.TryDeleteItem(item);
-		}
 
 		//Set vehicle base color and texture
 		EL_VehicleAppearanceComponent vehicleAppearance = EL_VehicleAppearanceComponent.Cast(newVehicle.FindComponent(EL_VehicleAppearanceComponent));
@@ -217,13 +219,19 @@ class EL_VehicleShopManagerComponent : ScriptComponent
 		//Set slots color and texture
 		EL_Utils.SetSlotsColor(newVehicle, color);
 
-		//Set vehicle owner
+		//Set vehicle owner for server
 		EL_CharacterOwnerComponent charOwnerComp = EL_CharacterOwnerComponent.Cast(newVehicle.FindComponent(EL_CharacterOwnerComponent));
 		charOwnerComp.SetCharacterOwner(EL_Utils.GetPlayerUID(player));
-
+		
+		//Wait for Replication and set local owner
+		EL_RpcSenderComponent rpcSender = EL_RpcSenderComponent.Cast(player.FindComponent(EL_RpcSenderComponent));
+		GetGame().GetCallqueue().CallLater(rpcSender.AskSetLocalVehicleOwner, 100, false, Replication.FindId(newVehicle));
+		
 		//Save vehicle
 		EL_PersistenceComponent persistence = EL_PersistenceComponent.Cast(newVehicle.FindComponent(EL_PersistenceComponent));
 		persistence.Save();
+		
+		PrintFormat("[EL-VehicleShop] %1 bought vehicle %2 rpl: %3", EL_Utils.GetPlayerUID(player), vehiclePrefab, Replication.FindId(newVehicle));
 	}
 
 	//------------------------------------------------------------------------------------------------
@@ -286,7 +294,7 @@ class EL_VehicleShopManagerComponent : ScriptComponent
 		m_InputManager = GetGame().GetInputManager();
 		m_VehicleShopBuilding = owner.GetWorld().FindEntityByName(m_sShopPreviewBuildingName);
 		if (!m_VehicleShopBuilding)
-			Print("Shop Preview building not found!", LogLevel.ERROR);
+			Print("[EL-VehicleShop] Shop Preview building not found!", LogLevel.ERROR);
 	}
 
 	//------------------------------------------------------------------------------------------------
