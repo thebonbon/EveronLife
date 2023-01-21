@@ -35,6 +35,10 @@ class EL_GarageManagerComponent : ScriptComponent
 		withdrawnVehicle.SetOrigin(freeSpawnPoint.GetOrigin());
 		withdrawnVehicle.SetAngles(freeSpawnPoint.GetAngles());
 
+		//Wait for Replication and set local owner
+		EL_RpcSenderComponent rpcSender = EL_RpcSenderComponent.Cast(owner.FindComponent(EL_RpcSenderComponent));
+		GetGame().GetCallqueue().CallLater(rpcSender.AskSetLocalVehicleOwner, 100, false, Replication.FindId(withdrawnVehicle));
+
 		//Save data
 		EL_PersistenceComponent persistence = EL_PersistenceComponent.Cast(withdrawnVehicle.FindComponent(EL_PersistenceComponent));
 		persistence.Save();

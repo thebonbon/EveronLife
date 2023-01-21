@@ -22,7 +22,6 @@ class EL_RpcSenderComponent  : ScriptComponent
 			Print("[EL-VehicleShop] Error finding replicated vehicle! RplId: " + vehicleId, LogLevel.ERROR);
 		EL_CharacterOwnerComponent charOwnerComp = EL_CharacterOwnerComponent.Cast(vehicle.FindComponent(EL_CharacterOwnerComponent));
 		charOwnerComp.m_IsLocalOwner = true;
-		
 	}
 	
 	//------------------------------------------------------------------------------------------------	
