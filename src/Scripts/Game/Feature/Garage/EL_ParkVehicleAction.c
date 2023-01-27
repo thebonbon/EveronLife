@@ -60,7 +60,7 @@ class EL_ParkVehicleAction : ScriptedUserAction
  	{
 		//Check if user is owner of this vehicle
 		EL_CharacterOwnerComponent charOwnerComp = EL_CharacterOwnerComponent.Cast(GetOwner().FindComponent(EL_CharacterOwnerComponent));
-		if (!charOwnerComp.m_IsLocalOwner)
+		if (!charOwnerComp.IsLocalOwner())
 			return false;
 		
 		//Check if garage is nearby

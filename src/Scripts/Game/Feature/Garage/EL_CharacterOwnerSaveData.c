@@ -16,8 +16,9 @@ class EL_CharacterOwnerSaveData : EL_ComponentSaveDataBase
 	override bool ApplyTo(notnull GenericComponent worldEntityComponent)
 	{
 		EL_CharacterOwnerComponent charOwner = EL_CharacterOwnerComponent.Cast(worldEntityComponent);
-		charOwner.SetCharacterOwner(m_sCharacterId);
-
+		EL_GameModeRoleplay gamemode = EL_GameModeRoleplay.Cast(GetGame().GetGameMode());
+		gamemode.AddVehicleOwnerCache(m_sCharacterId, charOwner.GetOwner());
+		
 		return true;
 	}
 }

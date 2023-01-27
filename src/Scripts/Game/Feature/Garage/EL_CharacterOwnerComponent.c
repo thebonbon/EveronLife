@@ -5,8 +5,20 @@ class EL_CharacterOwnerComponentClass: ScriptComponentClass
 class EL_CharacterOwnerComponent: ScriptComponent
 {
 	protected string m_sCharacterId;
-	bool m_IsLocalOwner;
+	protected bool m_IsLocalOwner;
 	
+	//------------------------------------------------------------------------------------------------
+	bool IsLocalOwner()
+	{
+		return m_IsLocalOwner;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	void SetLocalOwner()
+	{
+		m_IsLocalOwner = true;
+	}
+
 	//------------------------------------------------------------------------------------------------
 	void SetCharacterOwner(string characterId)
 	{
