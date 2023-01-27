@@ -1,0 +1,40 @@
+FrameWidgetClass {
+ Name "rootFrame"
+ Slot FrameWidgetSlot "{59BA676DDBAFEC18}" {
+  PositionX 0
+  OffsetLeft 0
+  PositionY 0
+  OffsetTop 0
+  SizeX 64
+  OffsetRight -64
+  SizeY 64
+  OffsetBottom -64
+ }
+ Clipping False
+ {
+  ImageWidgetClass "{59B8B65867589EC8}" {
+   Name "Icon"
+   Slot FrameWidgetSlot "{59B8B65867589924}" {
+    Anchor 0 0 0 0
+    PositionX -32
+    OffsetLeft -32
+    PositionY -32
+    OffsetTop -32
+    SizeX 64
+    OffsetRight -32
+    SizeY 64
+    OffsetBottom -32
+    SizeToContent 1
+   }
+   Clipping False
+   "Left rule" Stop
+   "Right rule" Stop
+   "Up rule" Stop
+   "Down rule" Stop
+   Pivot 16 16
+   Texture "{6BFB1D962D9E8786}UI/Icons/apple-icon.edds"
+   Image ""
+   Size 64 64
+  }
+ }
+}
