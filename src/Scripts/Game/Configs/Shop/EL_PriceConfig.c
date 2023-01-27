@@ -15,7 +15,7 @@ class EL_VehiclePriceTitle : BaseContainerCustomTitle
 
 		return true;
 	}
-};
+}
 
 [BaseContainerProps(), EL_VehiclePriceTitle()]
 class EL_VehiclePrice
@@ -26,7 +26,8 @@ class EL_VehiclePrice
 	int m_iBuyPrice;
 	[Attribute("0", UIWidgets.EditBox, "")]
 	int m_iSellPrice;
-
+	[Attribute("1", UIWidgets.CheckBox, "Show color picker in UI?")]
+	bool m_bCanRecolor;
 }
 
 [BaseContainerProps(configRoot: true)]

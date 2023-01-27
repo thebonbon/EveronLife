@@ -5,6 +5,20 @@ SCR_DestructibleBuildingEntity : "{396E66B8F304B20B}Prefabs/Buildings/VehicleSho
    ID "5B2CBBA0476C0A62"
    DrawShape 0
   }
+  GenericEntity {
+   ID "5B2CBBA0476C0A58"
+   components {
+    EL_VehicleShopManagerComponent "{5ACAE5EDE08D8FDE}" {
+     m_VehiclePriceConfig EL_VehiclePriceConfig "{5C672D648F080A79}" {
+      m_aVehiclePriceConfigs {
+       EL_VehiclePrice "{5C68A5B70B0A7F84}" {
+        m_bCanRecolor 0
+       }
+      }
+     }
+    }
+   }
+  }
  }
 }
 SCR_DestructibleBuildingEntity VEHICLE_SHOP_PREVIEW : "{C59B9F5ACF4D494E}Prefabs/Buildings/VehicleShop/VEHICLE_SHOP_PREVIEW.et" {

@@ -11,6 +11,7 @@ class EL_VehicleShopUI: ChimeraMenuBase
 	protected ButtonWidget m_wBuyButton;
 	protected int m_iRed, m_iGreen, m_iBlue;
 	protected ref Color m_NewColor;
+	protected Widget m_wColorPicker;
 
 	ref ScriptInvoker<int> m_OnVehicleSelectionChanged = new ScriptInvoker();
 	ref ScriptInvoker<ref Color> m_OnColorChange = new ScriptInvoker();
@@ -45,6 +46,13 @@ class EL_VehicleShopUI: ChimeraMenuBase
 
 			column++;
 		}
+	}
+
+	//------------------------------------------------------------------------------------------------
+	void SetColorPickerVisible(bool visible)
+	{
+		m_wColorPicker.SetVisible(visible);
+		m_wColorPicker.SetEnabled(visible);
 	}
 
 	//------------------------------------------------------------------------------------------------
@@ -148,6 +156,7 @@ class EL_VehicleShopUI: ChimeraMenuBase
 		m_RedSlider = SliderWidget.Cast(m_wRoot.FindAnyWidget("RedSlider"));
 		m_GreenSlider = SliderWidget.Cast(m_wRoot.FindAnyWidget("GreenSlider"));
 		m_BlueSlider = SliderWidget.Cast(m_wRoot.FindAnyWidget("BlueSlider"));
+		m_wColorPicker = m_wRoot.FindAnyWidget("ColorVerticalLayout");
 
 		m_RedIndex = TextWidget.Cast(m_wRoot.FindAnyWidget("RedIndex"));
 		m_GreenIndex = TextWidget.Cast(m_wRoot.FindAnyWidget("GreenIndex"));
@@ -213,9 +222,7 @@ class EL_VehicleShopUI: ChimeraMenuBase
 	//------------------------------------------------------------------------------------------------
 	override void OnMenuUpdate(float tDelta)
 	{
-
-
-		if (m_RedSlider && m_GreenSlider && m_BlueSlider)
+		if (m_wColorPicker.IsVisible() && m_RedSlider && m_GreenSlider && m_BlueSlider)
 		{
 			int newR = m_RedSlider.GetCurrent();
 			int newG = m_GreenSlider.GetCurrent();
@@ -239,7 +246,8 @@ class EL_VehicleShopUI: ChimeraMenuBase
 			m_OnColorChange.Invoke(m_NewColor);
 
 		}
+		m_NewColor = null;
+		m_OnColorChange.Invoke(m_NewColor);
 		super.OnMenuUpdate(tDelta);
 	}
-
 }

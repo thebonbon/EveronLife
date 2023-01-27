@@ -5,7 +5,7 @@ class EL_VehicleShopManagerComponentClass : ScriptComponentClass
 
 class EL_VehicleShopManagerComponent : ScriptComponent
 {
-	
+
 	[Attribute("VEHICLE_SHOP_PREVIEW", UIWidgets.Auto, "Item price list", category: "Preview")]
 	protected string m_sShopPreviewBuildingName;
 	protected IEntity m_VehicleShopBuilding;
@@ -106,8 +106,12 @@ class EL_VehicleShopManagerComponent : ScriptComponent
 		float maxInvWeight = GetVehicleStorage(curVehicleConfig.m_Prefab);
 		array<float> vehicleStats = GetVehiclePrefabSimulation(curVehicleConfig.m_Prefab);
 
+		//Enable / Disable color picker
+		m_VehicleShopUI.SetColorPickerVisible(curVehicleConfig.m_bCanRecolor);
+
 		//Update vehicle color
-		OnColorChange(m_VehicleShopUI.GetCurrentSliderColor());
+		if (curVehicleConfig.m_bCanRecolor)
+			OnColorChange(m_VehicleShopUI.GetCurrentSliderColor());
 
 		//Update price
 		m_VehicleShopUI.SetVehiclePriceText(curVehicleConfig.m_iBuyPrice);
@@ -141,7 +145,6 @@ class EL_VehicleShopManagerComponent : ScriptComponent
 
 		UpdateVehicleStats();
 	}
-
 
 	//------------------------------------------------------------------------------------------------
 	//! Called from client
@@ -201,7 +204,7 @@ class EL_VehicleShopManagerComponent : ScriptComponent
 			Print(string.Format("[EL-VehicleShop] Trying to buy vehicle but no money removed. Prefab: %1", vehiclePrefab), LogLevel.WARNING);
 			return;
 		}
-		
+
 		//Spawn new vehicle
 		IEntity newVehicle = EL_Utils.SpawnEntityPrefab(vehiclePrefab, freeSpawnPoint.GetOrigin(), freeSpawnPoint.GetYawPitchRoll());
 
@@ -213,24 +216,27 @@ class EL_VehicleShopManagerComponent : ScriptComponent
 			vehicleStorage.TryDeleteItem(item);
 
 		//Set vehicle base color and texture
-		EL_VehicleAppearanceComponent vehicleAppearance = EL_VehicleAppearanceComponent.Cast(newVehicle.FindComponent(EL_VehicleAppearanceComponent));
-		vehicleAppearance.SetVehicleColor(color);
+		if (color != 0)
+		{
+			EL_VehicleAppearanceComponent vehicleAppearance = EL_VehicleAppearanceComponent.Cast(newVehicle.FindComponent(EL_VehicleAppearanceComponent));
+			vehicleAppearance.SetVehicleColor(color);
 
-		//Set slots color and texture
-		EL_Utils.SetSlotsColor(newVehicle, color);
+			//Set slots color and texture
+			EL_Utils.SetSlotsColor(newVehicle, color);
+		}
 
 		//Set vehicle owner for server
 		EL_CharacterOwnerComponent charOwnerComp = EL_CharacterOwnerComponent.Cast(newVehicle.FindComponent(EL_CharacterOwnerComponent));
 		charOwnerComp.SetCharacterOwner(EL_Utils.GetPlayerUID(player));
-		
+
 		//Wait for Replication and set local owner
 		EL_RpcSenderComponent rpcSender = EL_RpcSenderComponent.Cast(player.FindComponent(EL_RpcSenderComponent));
 		GetGame().GetCallqueue().CallLater(rpcSender.AskSetLocalVehicleOwner, 100, false, Replication.FindId(newVehicle));
-		
+
 		//Save vehicle
 		EL_PersistenceComponent persistence = EL_PersistenceComponent.Cast(newVehicle.FindComponent(EL_PersistenceComponent));
 		persistence.Save();
-		
+
 		PrintFormat("[EL-VehicleShop] %1 bought vehicle %2 rpl: %3", EL_Utils.GetPlayerUID(player), vehiclePrefab, Replication.FindId(newVehicle));
 	}
 
@@ -241,7 +247,10 @@ class EL_VehicleShopManagerComponent : ScriptComponent
 		EL_VehiclePrice curVehicleConfig = m_VehiclePriceConfig.m_aVehiclePriceConfigs[m_iCurPreviewVehicleIndex];
 
 		EL_RpcSenderComponent rpcSender = EL_RpcSenderComponent.Cast(m_UserEntity.FindComponent(EL_RpcSenderComponent));
-		rpcSender.AskBuyVehicle(curVehicleConfig.m_Prefab, color.PackToInt(), GetOwner());
+		if (color)
+			rpcSender.AskBuyVehicle(curVehicleConfig.m_Prefab, color.PackToInt(), GetOwner());
+		else
+			rpcSender.AskBuyVehicle(curVehicleConfig.m_Prefab, 0, GetOwner());
 
 		//Cleanup
 		DisableCam();
