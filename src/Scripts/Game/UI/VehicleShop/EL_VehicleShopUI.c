@@ -246,8 +246,11 @@ class EL_VehicleShopUI: ChimeraMenuBase
 			m_OnColorChange.Invoke(m_NewColor);
 
 		}
-		m_NewColor = null;
-		m_OnColorChange.Invoke(m_NewColor);
+		else
+		{
+			m_NewColor = null;
+			m_OnColorChange.Invoke(m_NewColor);
+		}
 		super.OnMenuUpdate(tDelta);
 	}
 }
