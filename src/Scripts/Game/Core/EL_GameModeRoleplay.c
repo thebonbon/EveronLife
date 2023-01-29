@@ -37,28 +37,10 @@ class EL_GameModeRoleplay: SCR_BaseGameMode
 			}
 		}
 	}
-
-	//------------------------------------------------------------------------------------------------
-	override void OnPlayerKilled(int playerId, IEntity player, IEntity killer)
-	{
-		super.OnPlayerKilled(playerId, player, killer);
-		Print(string.Format("[RP-LOG] %1 killed %2", EL_Utils.GetPlayerName(killer), EL_Utils.GetPlayerName(player)));
-	}
 	
 	//------------------------------------------------------------------------------------------------
 	void ~EL_GameModeRoleplay()
 	{
 		EL_PlayerAccountManager.Reset();
-	}
-}
-
-
-modded class SCR_CharacterHitZone
-{
-	//------------------------------------------------------------------------------------------------
-	override void OnDamage(EDamageType type, float damage, HitZone pOriginalHitzone, IEntity instigator, inout vector hitTransform[3], float speed, int colliderID, int nodeID)
-	{
-		super.OnDamage(type, damage, pOriginalHitzone, instigator, hitTransform, speed, colliderID, nodeID);
-		Print(string.Format("[RP-LOG] %1 damaged %2 for %3 %4", EL_Utils.GetPlayerName(instigator), EL_Utils.GetPlayerName(GetOwner()), damage, typename.EnumToString(EDamageType, type)));
 	}
 }
