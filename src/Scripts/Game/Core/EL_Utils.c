@@ -1,6 +1,18 @@
 class EL_Utils
 {
 	static ResourceName PLACEHOLDER_ICON = "{AC7E384FF9D8016A}Common/Textures/placeholder_BCR.edds";
+	
+	//------------------------------------------------------------------------------------------------
+	static string GetPlayerName(IEntity player)
+	{
+		return GetPlayerName(GetGame().GetPlayerManager().GetPlayerIdFromControlledEntity(player));
+	}
+	
+	//------------------------------------------------------------------------------------------------
+	static string GetPlayerName(int playerId)
+	{
+		return GetGame().GetPlayerManager().GetPlayerName(playerId);
+	}
 
 	//------------------------------------------------------------------------------------------------
 	static void ChangeColorRecursive(IEntity parent, Color color)

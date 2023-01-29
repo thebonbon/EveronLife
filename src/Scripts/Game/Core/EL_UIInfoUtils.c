@@ -3,32 +3,34 @@ class EL_UIInfoUtils
 	protected static ref map<ResourceName, ref UIInfo> s_mCache = new map<ResourceName, ref UIInfo>();
 
 	//------------------------------------------------------------------------------------------------
+	static string GetUIInfoName(ResourceName prefab)
+	{
+		return GetInfo(prefab).GetName();
+	}
+	
+	//------------------------------------------------------------------------------------------------
+	static string GetUIInfoName(IEntity entity)
+	{
+		string name;
+		if (entity)
+			name = GetInfo(entity).GetName();
+		return name;
+	}
+	
+	//------------------------------------------------------------------------------------------------
 	static UIInfo GetInfo(ResourceName prefab)
 	{
 		UIInfo resultInfo = s_mCache.Get(prefab);
-
+		
 		if (!resultInfo)
 		{
-			IEntitySource entitySource = SCR_BaseContainerTools.FindEntitySource(Resource.Load(prefab));
-			if (entitySource)
+			BaseContainer inventoryItemContainer = SCR_BaseContainerTools.FindComponentSource(Resource.Load(prefab), "InventoryItemComponent");
+			BaseContainer attributesContainer = inventoryItemContainer.GetObject("Attributes");
+			if (attributesContainer)
 			{
-			    for(int nComponent, componentCount = entitySource.GetComponentCount(); nComponent < componentCount; nComponent++)
-			    {
-			        IEntityComponentSource componentSource = entitySource.GetComponent(nComponent);
-			        if(componentSource.GetClassName().ToType().IsInherited(InventoryItemComponent))
-			        {
-			            BaseContainer attributesContainer = componentSource.GetObject("Attributes");
-			            if (attributesContainer)
-			            {
-			                BaseContainer itemDisplayNameContainer = attributesContainer.GetObject("ItemDisplayName");
-			                if (itemDisplayNameContainer)
-			                {
-			                    resultInfo = UIInfo.Cast(BaseContainerTools.CreateInstanceFromContainer(itemDisplayNameContainer));
-			                    break;
-			                }
-			            }
-			        }
-			    }
+				BaseContainer itemDisplayNameContainer = attributesContainer.GetObject("ItemDisplayName");
+			    if (itemDisplayNameContainer)
+			    	resultInfo = UIInfo.Cast(BaseContainerTools.CreateInstanceFromContainer(itemDisplayNameContainer));
 			}
 
 			s_mCache.Set(prefab, resultInfo);

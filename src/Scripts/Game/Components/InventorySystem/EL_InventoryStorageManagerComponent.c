@@ -2,6 +2,8 @@ modded class SCR_InventoryStorageManagerComponent
 {
 	override void InsertItem( IEntity pItem, BaseInventoryStorageComponent pStorageTo = null, BaseInventoryStorageComponent pStorageFrom = null, SCR_InvCallBack cb = null  )
 	{
+
+		
 		if(pStorageTo) {
 			IEntity owner = pStorageTo.GetOwner();
 			auto trader = EL_TraderManagerComponent.Cast(owner.FindComponent(EL_TraderManagerComponent));
@@ -32,7 +34,18 @@ modded class SCR_InventoryStorageManagerComponent
 				return;
 			}
 		}
+		
+		string playerNameFrom = "Vicinity";
+		if (pStorageFrom)
+			playerNameFrom = EL_Utils.GetPlayerName(EL_InventoryUtils.GetStorageHierachyRoot(pItem));
+		
 		super.InsertItem(pItem, pStorageTo, pStorageFrom, cb);
+		
+		string playerNameTo "Vicinity";
+		if (pStorageTo)
+			playerNameTo = EL_Utils.GetPlayerName(EL_InventoryUtils.GetStorageHierachyRoot(pItem));
+		
+		Print(string.Format("[RP-LOG] %1 moved item %2 from %3 to %4", EL_Utils.GetPlayerName(GetOwner()), EL_UIInfoUtils.GetUIInfoName(pItem), playerNameFrom, playerNameTo));
 	}
 }
 
