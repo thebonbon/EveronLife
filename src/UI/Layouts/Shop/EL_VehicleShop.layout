@@ -48,6 +48,7 @@ FrameWidgetClass {
       OffsetBottom -109
       Alignment 0 1
      }
+     Clipping False
     }
     ButtonWidgetClass "{5B2E969ED9AC29E6}" {
      Name "FocusVehicleGridButton"
