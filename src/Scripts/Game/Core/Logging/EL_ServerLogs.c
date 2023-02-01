@@ -1,10 +1,29 @@
+enum EL_LogLevel
+{
+	NORMAL, 	// Only important logs
+	EXTENDED, 	// More logs
+	DEBUG	 	// A lot of logs	
+}
+
+class EL_Logger
+{
+	static protected const EL_LogLevel m_eMaxLogLevel = EL_LogLevel.NORMAL;
+	
+	//------------------------------------------------------------------------------------------------
+	static void Log(string prefix, string log, EL_LogLevel logLevel = EL_LogLevel.NORMAL)
+	{
+		if (m_eMaxLogLevel <= logLevel)
+			Print(string.Format("[%1] %2", prefix, log), logLevel);
+	}
+}
+
 modded class SCR_RegeneratingHitZone
 {
 	//------------------------------------------------------------------------------------------------
 	override void OnDamage(EDamageType type, float damage, HitZone pOriginalHitzone, IEntity instigator, inout vector hitTransform[3], float speed, int colliderID, int nodeID)
 	{
 		super.OnDamage(type, damage, pOriginalHitzone, instigator, hitTransform, speed, colliderID, nodeID);
-		Print(string.Format("[RP-LOG] %1 damaged %2 for %3 %4", EL_Utils.GetPlayerName(instigator), EL_Utils.GetPlayerName(GetOwner()), damage, typename.EnumToString(EDamageType, type)));
+		EL_Logger.Log("RP-LOG", string.Format("[RP-LOG] %1 damaged %2 for %3 %4", EL_Utils.GetPlayerName(instigator), EL_Utils.GetPlayerName(GetOwner()), damage, typename.EnumToString(EDamageType, type)));
 	}
 }
 
@@ -14,7 +33,7 @@ modded class SCR_BaseGameMode
 	override void OnPlayerKilled(int playerId, IEntity player, IEntity killer)
 	{
 		super.OnPlayerKilled(playerId, player, killer);
-		Print(string.Format("[RP-LOG] %1 killed %2", EL_Utils.GetPlayerName(killer), EL_Utils.GetPlayerName(player)));
+		EL_Logger.Log("RP-LOG", string.Format("%1 killed %2", EL_Utils.GetPlayerName(killer), EL_Utils.GetPlayerName(player)), EL_LogLevel.NORMAL);
 	}
 }
 
@@ -33,6 +52,6 @@ modded class SCR_InventoryStorageManagerComponent
 		if (pStorageTo)
 			playerNameTo = EL_Utils.GetPlayerName(EL_InventoryUtils.GetStorageHierachyRoot(pItem));
 		
-		Print(string.Format("[RP-LOG] %1 moved item %2 from %3 to %4", EL_Utils.GetPlayerName(GetOwner()), EL_UIInfoUtils.GetUIInfoName(pItem), playerNameFrom, playerNameTo));
+		EL_Logger.Log("RP-LOG", string.Format("%1 moved item %2 from %3 to %4", EL_Utils.GetPlayerName(GetOwner()), EL_UIInfoUtils.GetUIInfoName(pItem), playerNameFrom, playerNameTo));
 	}
 }

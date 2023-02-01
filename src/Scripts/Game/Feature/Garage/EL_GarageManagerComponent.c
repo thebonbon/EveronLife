@@ -83,8 +83,9 @@ class EL_GarageManagerComponent : ScriptComponent
 	//! Called from Authority
 	void DoLoadGarage(IEntity pUserEntity)
 	{
+		
 		array<string> allVehiclesInGarage = GetOwnedVehicles(EL_Utils.GetPlayerUID(pUserEntity));
-
+		PrintFormat("[EL-Garage] Loading garage with %1 vehicle(s) for %2", allVehiclesInGarage.Count(), EL_Utils.GetPlayerName(pUserEntity));
 		array<ResourceName> garageVehicleList = new array<ResourceName>();
 		EL_DbRepository<EL_VehicleSaveData> vehicleRepo = EL_PersistenceEntityHelper<EL_VehicleSaveData>.GetRepository();
 
@@ -118,6 +119,8 @@ class EL_GarageManagerComponent : ScriptComponent
 	//------------------------------------------------------------------------------------------------
 	void AddVehicle(string vehicleId, string ownerId)
 	{
+		PrintFormat("[EL-Garage] Garage added vehicleId %1 for %2", vehicleId, ownerId);
+		
 		if (m_mSavedVehicles.Get(ownerId))
 		{
 			//Owner already has stuff in this garage

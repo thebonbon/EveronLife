@@ -22,12 +22,14 @@ class EL_CharacterOwnerComponent: ScriptComponent
 	//------------------------------------------------------------------------------------------------
 	void SetCharacterOwner(string characterId)
 	{
+		EL_Logger.Log("EL-CharOwner", string.Format("Set %1 for %2", characterId, GetOwner()), EL_LogLevel.DEBUG);
 		m_sCharacterId = characterId;
 	}
 
 	//------------------------------------------------------------------------------------------------
 	string GetCharacterOwner()
 	{
+		EL_Logger.Log("EL-CharOwner", string.Format("Getting OwnerId: %1 for %2", m_sCharacterId, GetOwner()), EL_LogLevel.DEBUG);
 		return m_sCharacterId;
 	}
 }
