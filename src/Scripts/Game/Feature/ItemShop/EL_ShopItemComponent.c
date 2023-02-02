@@ -11,7 +11,7 @@ class EL_ShopItemComponent : ScriptComponent
 	[Attribute("", UIWidgets.ResourcePickerThumbnail, "Item to sell / buy here", "et")]
 	protected ResourceName m_ShopItemPrefab;
 
-	protected EL_ItemPrice m_ShopItemPriceConfig;
+	protected ref EL_ItemPrice m_ShopItemPriceConfig;
 
 	//------------------------------------------------------------------------------------------------
 	EL_ItemPrice GetShopItemPriceConfig()
@@ -41,31 +41,34 @@ class EL_ShopItemComponent : ScriptComponent
 		}
 		return null;
 	}
-
+	
 	//------------------------------------------------------------------------------------------------
 	//! Set Mesh to shop item mesh if not already set. This allows buying/selling from other meshes (eg. Apples from apple crate)
 	override void EOnInit(IEntity owner)
-	{	
+	{
 		if (!m_ShopItemPrefab)
 		{
 			Print(string.Format("[EL-ItemShop] Empty shop item (m_ShopItemPrefab not set).", m_ShopItemPrefab), LogLevel.WARNING);
 			return;
 		}
-
 		//Create new mesh from m_ShopItemPrefab
 		if (!owner.GetVObject())
 		{
+			//Fix for crash. Unknown bug?
+			owner.SetObject(EL_PrefabUtils.GetPrefabVObject("{35BB3D0E9AE30670}Prefabs/Props/Editor/DebugArrow.et"), "");
+
 			VObject shopItemVObject = EL_PrefabUtils.GetPrefabVObject(m_ShopItemPrefab);
 			if (!shopItemVObject)
 			{
 				Print(string.Format("[EL-ItemShop] No VObject found in %1", m_ShopItemPrefab), LogLevel.WARNING);
 				return;
 			}
+			
 			owner.SetObject(shopItemVObject, "");
 		}
-
+		
 		//Create Hitbox
-		Physics phys = Physics.CreateStatic(owner);
+		Physics phys = Physics.CreateStatic(owner);		
 		if (!phys)
 		{
 			Print(string.Format("[EL-ItemShop] Unable to create Physics for %1 (No geometry embedded in m_ShopItemPrefab / mesh?)", owner.GetVObject()), LogLevel.WARNING);

@@ -75,13 +75,6 @@ GenericEntity {
 GenericEntity : "{60824972764FBF6D}Prefabs/ItemShop/ShopItem_GeneralStore.et" {
  components {
   EL_ShopItemComponent "{5AC6DBF94189D860}" {
-   m_ItemShopConfig EL_ItemShopConfig "{5C674A1AE276429B}" {
-    m_aItemPriceConfigs {
-     EL_ItemPrice "{5C674A1FC12E9536}" {
-      m_iSellPrice 500
-     }
-    }
-   }
    m_ShopItemPrefab "{C9D661E5B0714711}Prefabs/Items/Food/Apple.et"
   }
  }

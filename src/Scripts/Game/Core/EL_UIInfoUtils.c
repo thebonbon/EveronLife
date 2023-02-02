@@ -27,7 +27,7 @@ class EL_UIInfoUtils
 
 		UIInfo resultInfo = item.GetAttributes().GetUIInfo();
 		string prefab = EL_Utils.GetPrefabName(entity);
-		if (prefab) s_mCache.Set(prefab, resultInfo);
+		if (resultInfo && prefab) s_mCache.Set(prefab, resultInfo);
 
 		return resultInfo;
 	}
@@ -41,7 +41,10 @@ class EL_UIInfoUtils
 		{
 			BaseContainer inventoryItemContainer = SCR_BaseContainerTools.FindComponentSource(Resource.Load(prefab), InventoryItemComponent);
 			if (!inventoryItemContainer)
+			{
+				Print("Prefab " + prefab + " does not have InventoryItemComponent!");
 				return null;
+			}	
 			BaseContainer attributesContainer = inventoryItemContainer.GetObject("Attributes");
 			if (attributesContainer)
 			{

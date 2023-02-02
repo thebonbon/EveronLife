@@ -1,0 +1,9 @@
+GenericEntity {
+ ID "5C84ED7B5B34E04D"
+ components {
+  MeshObject "{5C84ED7B4AF5CBD7}" {
+   Object "{B42F9A1B6852B887}Assets/Props/Editor/DebugArrow.xob"
+  }
+ }
+ coords 100.702 0.001 135
+}

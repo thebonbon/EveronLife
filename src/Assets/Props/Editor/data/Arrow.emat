@@ -1,0 +1,7 @@
+MatPBRBasic {
+ Color 0.017 0.687 0.687 1
+ Sort translucent
+ CastShadow 0
+ ReceiveShadow 0
+ BlendMode Additive
+}

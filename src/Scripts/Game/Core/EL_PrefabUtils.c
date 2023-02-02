@@ -50,6 +50,8 @@ class EL_PrefabUtils
 			return null;
 		ResourceName resourceNameObject;
 		itemComponentSource.Get("Object", resourceNameObject);
+		if (!resourceNameObject)
+			return null;
 		return Resource.Load(resourceNameObject).GetResource().ToVObject();
 	}
 }
