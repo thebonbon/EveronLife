@@ -18,13 +18,30 @@ class EL_UIInfoUtils
 	}
 	
 	//------------------------------------------------------------------------------------------------
+	static UIInfo GetInfo(IEntity entity)
+	{
+		if (!entity) return null;
+
+		InventoryItemComponent item = EL_ComponentFinder<InventoryItemComponent>.Find(entity);
+		if (!item) return null;
+
+		UIInfo resultInfo = item.GetAttributes().GetUIInfo();
+		string prefab = EL_Utils.GetPrefabName(entity);
+		if (prefab) s_mCache.Set(prefab, resultInfo);
+
+		return resultInfo;
+	}
+	
+	//------------------------------------------------------------------------------------------------
 	static UIInfo GetInfo(ResourceName prefab)
 	{
 		UIInfo resultInfo = s_mCache.Get(prefab);
 		
 		if (!resultInfo)
 		{
-			BaseContainer inventoryItemContainer = SCR_BaseContainerTools.FindComponentSource(Resource.Load(prefab), "InventoryItemComponent");
+			BaseContainer inventoryItemContainer = SCR_BaseContainerTools.FindComponentSource(Resource.Load(prefab), InventoryItemComponent);
+			if (!inventoryItemContainer)
+				return null;
 			BaseContainer attributesContainer = inventoryItemContainer.GetObject("Attributes");
 			if (attributesContainer)
 			{
@@ -51,18 +68,4 @@ class EL_UIInfoUtils
 		return vehicleUIInfo;
 	}
 
-	//------------------------------------------------------------------------------------------------
-	static UIInfo GetInfo(IEntity entity)
-	{
-		if (!entity) return null;
-
-		InventoryItemComponent item = EL_ComponentFinder<InventoryItemComponent>.Find(entity);
-		if (!item) return null;
-
-		UIInfo resultInfo = item.GetAttributes().GetUIInfo();
-		string prefab = EL_Utils.GetPrefabName(entity);
-		if (prefab) s_mCache.Set(prefab, resultInfo);
-
-		return resultInfo;
-	}
 }
