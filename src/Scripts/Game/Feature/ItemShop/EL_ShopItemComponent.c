@@ -46,6 +46,7 @@ class EL_ShopItemComponent : ScriptComponent
 	//! Set Mesh to shop item mesh if not already set. This allows buying/selling from other meshes (eg. Apples from apple crate)
 	override void EOnInit(IEntity owner)
 	{
+		
 		if (!m_ShopItemPrefab)
 		{
 			Print(string.Format("[EL-ItemShop] Empty shop item (m_ShopItemPrefab not set).", m_ShopItemPrefab), LogLevel.WARNING);
@@ -54,9 +55,6 @@ class EL_ShopItemComponent : ScriptComponent
 		//Create new mesh from m_ShopItemPrefab
 		if (!owner.GetVObject())
 		{
-			//Fix for crash. Unknown bug?
-			owner.SetObject(EL_PrefabUtils.GetPrefabVObject("{35BB3D0E9AE30670}Prefabs/Props/Editor/DebugArrow.et"), "");
-
 			VObject shopItemVObject = EL_PrefabUtils.GetPrefabVObject(m_ShopItemPrefab);
 			if (!shopItemVObject)
 			{
@@ -64,6 +62,8 @@ class EL_ShopItemComponent : ScriptComponent
 				return;
 			}
 			
+			if (!GetGame().InPlayMode())
+				return;
 			owner.SetObject(shopItemVObject, "");
 		}
 		
