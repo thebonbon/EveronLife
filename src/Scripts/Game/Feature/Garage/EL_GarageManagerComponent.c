@@ -85,6 +85,8 @@ class EL_GarageManagerComponent : ScriptComponent
 	{
 		
 		array<string> allVehiclesInGarage = GetOwnedVehicles(EL_Utils.GetPlayerUID(pUserEntity));
+		if (!allVehiclesInGarage)
+			return;
 		PrintFormat("[EL-Garage] Loading garage with %1 vehicle(s) for %2", allVehiclesInGarage.Count(), EL_Utils.GetPlayerName(pUserEntity));
 		array<ResourceName> garageVehicleList = new array<ResourceName>();
 		EL_DbRepository<EL_VehicleSaveData> vehicleRepo = EL_PersistenceEntityHelper<EL_VehicleSaveData>.GetRepository();
