@@ -121,7 +121,7 @@ FrameWidgetClass {
             SizeMode Fill
             FillWeight 50
            }
-           Text "TheBonBon"
+           Text "-"
            "Font Size" 37
            "Horizontal Alignment" Center
            "Vertical Alignment" Center

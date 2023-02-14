@@ -37,6 +37,7 @@ class EL_BankDialogBase : DialogUI
 	protected EL_GlobalBankAccountManager m_BankManager;
 	protected EditBoxWidget m_wMoneyEditBox;
 	protected EditBoxWidget m_wCommentEditBox;
+	protected TextWidget m_wSourceAccount;
 
 	//------------------------------------------------------------------------------------------------
 	override void OnMenuOpen()
@@ -45,7 +46,9 @@ class EL_BankDialogBase : DialogUI
 
 		m_wMoneyEditBox = EditBoxWidget.Cast(GetRootWidget().FindAnyWidget("MoneyAmount"));
 		m_wCommentEditBox = EditBoxWidget.Cast(GetRootWidget().FindAnyWidget("CommentText"));
+		m_wSourceAccount = TextWidget.Cast(GetRootWidget().FindAnyWidget("SourceAccount"));
 		m_BankManager = EL_GlobalBankAccountManager.GetInstance();
+		m_wSourceAccount.SetText("Account: " + m_BankManager.GetLocalPlayerBankAccount().GetId());
 	}
 }
 
