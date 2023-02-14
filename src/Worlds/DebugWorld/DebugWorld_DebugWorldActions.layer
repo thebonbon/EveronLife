@@ -72,6 +72,9 @@ GenericEntity {
   }
  }
 }
+GenericEntity : "{03179A7595569288}Prefabs/Props/ATM.et" {
+ coords 101.696 0.898 135.286
+}
 GenericEntity : "{60824972764FBF6D}Prefabs/ItemShop/ShopItem_GeneralStore.et" {
  components {
   EL_ShopItemComponent "{5AC6DBF94189D860}" {
@@ -79,19 +82,4 @@ GenericEntity : "{60824972764FBF6D}Prefabs/ItemShop/ShopItem_GeneralStore.et" {
   }
  }
  coords 111.604 0.899 135.361
-}
-GenericEntity : "{03179A7595569288}Prefabs/Props/ATM.et" {
- components {
-  ActionsManagerComponent "{5B0B1EE358F7219F}" {
-   ActionContexts {
-    UserActionContext "{5B0B1EE35A0CB1CC}" {
-     Position PointInfo "{5B0B2385ABCCBE44}" {
-      Offset 0 0.2914 0
-     }
-     Radius 33.633
-    }
-   }
-  }
- }
- coords 101.696 0.898 135.286
 }

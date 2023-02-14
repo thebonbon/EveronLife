@@ -5,6 +5,10 @@ GenericEntity : "{51D31AB07AE3C1C7}Prefabs/Props/Commercial/CashierShop_01.et" {
    ActionContexts {
     UserActionContext "{5B0B1EE35A0CB1CC}" {
      ContextName "default"
+     Position PointInfo "{5B0B2385ABCCBE44}" {
+      Offset 0 0.2914 0
+     }
+     Radius 33.633
     }
    }
    additionalActions {
