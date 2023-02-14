@@ -23,7 +23,7 @@ class EL_FormatUtils
 
 		return result;
 	}
-
+	
 	//------------------------------------------------------------------------------------------------
 	//! Int to decimal seperated format (eg.: 9.999.999)
 	//! \param number Number to convert
