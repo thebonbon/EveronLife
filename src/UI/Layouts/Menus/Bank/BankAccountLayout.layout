@@ -59,7 +59,7 @@ ButtonWidgetClass {
          Slot LayoutSlot "{5C42E2E38B6003BB}" {
           SizeMode Fill
          }
-         Text "Account: 555"
+         Text "Account"
          "Font Size" 22
          "Min Font Size" 22
          "Vertical Alignment" Center

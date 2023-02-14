@@ -41,7 +41,7 @@ FrameWidgetClass {
         SizeMode Fill
         FillWeight 10
        }
-       Text "Account 555"
+       Text "Account"
        "Font Size" 37
        "Horizontal Alignment" Center
        "Vertical Alignment" Center

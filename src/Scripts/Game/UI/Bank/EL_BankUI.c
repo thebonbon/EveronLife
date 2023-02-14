@@ -175,6 +175,7 @@ class EL_BankMenu : ChimeraMenuBase
 	}
 
     //------------------------------------------------------------------------------------------------
+	//! Clientside
     override void OnMenuOpen()
     {
         m_wRoot = GetRootWidget();
@@ -192,12 +193,15 @@ class EL_BankMenu : ChimeraMenuBase
 
 		m_wCurrentCash = TextWidget.Cast(m_wRoot.FindAnyWidget("CurrentMoney"));
 		m_wCurrentBalance = TextWidget.Cast(m_wActiveAccount.FindAnyWidget("CurrentBalance"));
-
+		TextWidget nameTitle = TextWidget.Cast(m_wRoot.FindAnyWidget("PlayerName"));
+		nameTitle.SetText(EL_Utils.GetPlayerName(m_BankManager.GetLocalPlayerBankAccount().GetAccountOwner()));
+		
 		SCR_ButtonComponent depositButtonHandler = SCR_ButtonComponent.Cast(m_wRoot.FindAnyWidget("DepositButton").FindHandler(SCR_ButtonComponent));
 		SCR_ButtonComponent withdrawButtonHandler = SCR_ButtonComponent.Cast(m_wRoot.FindAnyWidget("WithdrawButton").FindHandler(SCR_ButtonComponent));
 		SCR_ButtonComponent transferButtonHandler = SCR_ButtonComponent.Cast(m_wRoot.FindAnyWidget("TransferButton").FindHandler(SCR_ButtonComponent));
 		SCR_ButtonComponent exitButtonHandler = SCR_ButtonComponent.Cast(m_wRoot.FindAnyWidget("ExitButton").FindHandler(SCR_ButtonComponent));
-
+		
+		
 		depositButtonHandler.m_OnClicked.Insert(OpenDepositMenu);
 		withdrawButtonHandler.m_OnClicked.Insert(OpenWithdrawMenu);
 		transferButtonHandler.m_OnClicked.Insert(OpenTransferMenu);
