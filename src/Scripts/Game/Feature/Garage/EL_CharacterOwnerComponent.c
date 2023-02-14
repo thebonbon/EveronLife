@@ -32,4 +32,12 @@ class EL_CharacterOwnerComponent: ScriptComponent
 		EL_Logger.Log("EL-CharOwner", string.Format("Getting OwnerId: %1 for %2", m_sCharacterId, GetOwner()), EL_LogLevel.DEBUG);
 		return m_sCharacterId;
 	}
+	
+	//------------------------------------------------------------------------------------------------
+	override bool RplLoad(ScriptBitReader reader)
+	{
+		//We lost LocalOwner data after streaming. Ask server if this is owned by us.
+		EL_NetworkUtils.GetLocalRpcSender().AskIsLocalOwner(GetOwner());
+		return true;
+	}	
 }
