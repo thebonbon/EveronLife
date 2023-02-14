@@ -65,12 +65,14 @@ class EL_BankMenu : ChimeraMenuBase
 	//------------------------------------------------------------------------------------------------
 	void OpenDepositMenu()
 	{
+		DisableButtonListeners();
 		EL_BankDepositDialog.Cast(GetGame().GetMenuManager().OpenDialog(ChimeraMenuPreset.EL_BankDepositDialog));
 	}
 
 	//------------------------------------------------------------------------------------------------
 	void OpenWithdrawMenu()
 	{
+		DisableButtonListeners();
 		EL_BankWithdrawDialog withdrawDialog = EL_BankWithdrawDialog.Cast(GetGame().GetMenuManager().OpenDialog(ChimeraMenuPreset.EL_BankWithdrawDialog));
 		withdrawDialog.SetConfirmText("Withdraw");
 	}
@@ -78,6 +80,7 @@ class EL_BankMenu : ChimeraMenuBase
 	//------------------------------------------------------------------------------------------------
 	void OpenTransferMenu()
 	{
+		DisableButtonListeners();
 		EL_BankTransferDialog transferDialog = EL_BankTransferDialog.Cast(GetGame().GetMenuManager().OpenDialog(ChimeraMenuPreset.EL_BankTransferDialog));
 	}
 
@@ -199,21 +202,46 @@ class EL_BankMenu : ChimeraMenuBase
 		TextWidget nameTitle = TextWidget.Cast(m_wRoot.FindAnyWidget("PlayerName"));
 		nameTitle.SetText(EL_Utils.GetPlayerName(m_BankManager.GetLocalPlayerBankAccount().GetAccountOwner()));
 		
-		SCR_ButtonComponent depositButtonHandler = SCR_ButtonComponent.Cast(m_wRoot.FindAnyWidget("DepositButton").FindHandler(SCR_ButtonComponent));
-		SCR_ButtonComponent withdrawButtonHandler = SCR_ButtonComponent.Cast(m_wRoot.FindAnyWidget("WithdrawButton").FindHandler(SCR_ButtonComponent));
-		SCR_ButtonComponent transferButtonHandler = SCR_ButtonComponent.Cast(m_wRoot.FindAnyWidget("TransferButton").FindHandler(SCR_ButtonComponent));
-		SCR_ButtonComponent exitButtonHandler = SCR_ButtonComponent.Cast(m_wRoot.FindAnyWidget("ExitButton").FindHandler(SCR_ButtonComponent));
+		SCR_NavigationButtonComponent exitButtonHandler = SCR_NavigationButtonComponent.Cast(m_wRoot.FindAnyWidget("ExitButton").FindHandler(SCR_NavigationButtonComponent));
+		SCR_NavigationButtonComponent depositButtonHandler = SCR_NavigationButtonComponent.Cast(m_wRoot.FindAnyWidget("DepositButton").FindHandler(SCR_NavigationButtonComponent));
+		SCR_NavigationButtonComponent withdrawButtonHandler = SCR_NavigationButtonComponent.Cast(m_wRoot.FindAnyWidget("WithdrawButton").FindHandler(SCR_NavigationButtonComponent));
+		//SCR_NavigationButtonComponent transferButtonHandler = SCR_NavigationButtonComponent.Cast(m_wRoot.FindAnyWidget("TransferButton").FindHandler(SCR_NavigationButtonComponent));
 		
 		
 		depositButtonHandler.m_OnClicked.Insert(OpenDepositMenu);
 		withdrawButtonHandler.m_OnClicked.Insert(OpenWithdrawMenu);
-		transferButtonHandler.m_OnClicked.Insert(OpenTransferMenu);
+		//transferButtonHandler.m_OnClicked.Insert(OpenTransferMenu);
 		exitButtonHandler.m_OnClicked.Insert(Close);
     }
 
 	//------------------------------------------------------------------------------------------------
+	void EnableButtonListeners()
+	{
+		ScriptInvoker onExitButtonPressed = ButtonActionComponent.GetOnAction(m_wRoot.FindAnyWidget("ExitButton"));
+		if (onExitButtonPressed) onExitButtonPressed.Insert(Close);
+		ScriptInvoker onDepositButtonPressed = ButtonActionComponent.GetOnAction(m_wRoot.FindAnyWidget("DepositButton"));
+		if (onDepositButtonPressed) onDepositButtonPressed.Insert(OpenDepositMenu);
+		ScriptInvoker onWithdrawButtonPressed = ButtonActionComponent.GetOnAction(m_wRoot.FindAnyWidget("WithdrawButton"));
+		if (onWithdrawButtonPressed) onWithdrawButtonPressed.Insert(OpenWithdrawMenu);
+		
+	}
+	
+	//------------------------------------------------------------------------------------------------
+	void DisableButtonListeners()
+	{
+		ScriptInvoker onExitButtonPressed = ButtonActionComponent.GetOnAction(m_wRoot.FindAnyWidget("ExitButton"));
+		if (onExitButtonPressed) onExitButtonPressed.Remove(Close);
+		ScriptInvoker onDepositButtonPressed = ButtonActionComponent.GetOnAction(m_wRoot.FindAnyWidget("DepositButton"));
+		if (onDepositButtonPressed) onDepositButtonPressed.Remove(OpenDepositMenu);
+		ScriptInvoker onWithdrawButtonPressed = ButtonActionComponent.GetOnAction(m_wRoot.FindAnyWidget("WithdrawButton"));
+		if (onWithdrawButtonPressed) onWithdrawButtonPressed.Remove(OpenWithdrawMenu);
+		
+	}
+	
+	//------------------------------------------------------------------------------------------------
 	override void OnMenuFocusGained()
 	{
+		GetGame().GetCallqueue().CallLater(EnableButtonListeners, 10);
 		UpdateCashText();
 		//TODO: Update All accounts later here:
 		UpdateBalanceText(m_wActiveAccount, m_BankManager.GetLocalPlayerBankAccount());

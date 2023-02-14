@@ -64,7 +64,12 @@ FrameWidgetClass {
            }
            Color 1 1 1 0
            components {
-            SCR_ButtonComponent "{5B3CD4599C33EC03}" {
+            SCR_NavigationButtonComponent "{5C9D57DA5FEB8D5F}" {
+             m_sLabel "Exit"
+             m_sActionName "MenuBack"
+            }
+            ButtonActionComponent "{5C9D57DA68794431}" {
+             m_bActionName "MenuBack"
             }
            }
            {
@@ -218,55 +223,101 @@ FrameWidgetClass {
              Color 0.021 0.061 0.223 1
              "Fill Origin" Center
              {
-              ButtonWidgetClass "{5B394574C0476EB5}" {
+              ButtonWidgetClass "{5C9D5014CBB20697}" : "{08CF3B69CB1ACBC4}UI/layouts/WidgetLibrary/Buttons/WLib_NavigationButton.layout" {
                Name "DepositButton"
-               Slot LayoutSlot "{5B394574C0476E9B}" {
+               Slot LayoutSlot "{5B2D1233F9564C06}" {
+                HorizontalAlign 1
+                VerticalAlign 3
                 Padding 10 0 10 0
-                SizeMode Fill
-                FillWeight 33
                }
-               "Inherit Color" 1
                components {
-                SCR_ButtonComponent "{5B3CD458768302FA}" {
+                SCR_NavigationButtonComponent "{5474BAC5DBCF129A}" {
+                 m_sSoundClicked "SOUND_FE_BUTTON_CANCEL"
+                 m_BackgroundDefault 0.019 0.063 0.223 1
+                 m_bShowBorderOnFocus 1
+                 m_sLabel "Deposit"
+                 m_sActionName "DialogConfirm"
+                }
+                ButtonActionComponent "{56EEDE01BE93EE7D}" {
+                 m_bActionName "DialogConfirm"
                 }
                }
+               "no focus" 0
                {
-                TextWidgetClass "{5B394570FF4BAC90}" {
-                 Name "DepositText"
-                 Slot ButtonWidgetSlot "{5B394570FF4BACEF}" {
+                SizeLayoutWidgetClass "{5562AD435529FB36}" {
+                 Prefab "{5562AD435529FB36}"
+                 Slot ButtonWidgetSlot "{5562AD435529FB5D}" {
                   HorizontalAlign 3
                   VerticalAlign 3
                  }
-                 Text "Deposit"
-                 "Font Size" 25
-                 "Horizontal Alignment" Center
-                 "Vertical Alignment" Center
+                 {
+                  OverlayWidgetClass "{000000005E70868E}" {
+                   Prefab "{000000005E70868E}"
+                   {
+                    HorizontalLayoutWidgetClass "{00000000E3602307}" {
+                     Prefab "{00000000E3602307}"
+                     Slot OverlayWidgetSlot "{547290FBCA5E9358}" {
+                      Padding 10 10 16 10
+                     }
+                     {
+                      RichTextWidgetClass "{00000000DB061E92}" {
+                       Prefab "{00000000DB061E92}"
+                       "Font Size" 25
+                      }
+                     }
+                    }
+                   }
+                  }
+                 }
                 }
                }
               }
-              ButtonWidgetClass "{5B394574C31F18FA}" {
+              ButtonWidgetClass "{5C9D5015A59507E3}" : "{08CF3B69CB1ACBC4}UI/layouts/WidgetLibrary/Buttons/WLib_NavigationButton.layout" {
                Name "WithdrawButton"
-               Slot LayoutSlot "{5B394574C0476E9B}" {
+               Slot LayoutSlot "{5B2D1233F9564C06}" {
+                HorizontalAlign 1
+                VerticalAlign 3
                 Padding 10 0 10 0
-                SizeMode Fill
-                FillWeight 33
                }
-               "Inherit Color" 1
                components {
-                SCR_ButtonComponent "{5B3CD458AAFDFD39}" {
+                SCR_NavigationButtonComponent "{5474BAC5DBCF129A}" {
+                 m_sSoundClicked "SOUND_FE_BUTTON_CANCEL"
+                 m_BackgroundDefault 0.019 0.063 0.223 1
+                 m_bShowBorderOnFocus 1
+                 m_sLabel "Withdraw"
+                 m_sActionName "DialogConfirm2"
+                }
+                ButtonActionComponent "{56EEDE01BE93EE7D}" {
+                 m_bActionName "DialogConfirm2"
                 }
                }
+               "no focus" 0
                {
-                TextWidgetClass "{5B394570F5F08F07}" {
-                 Name "WithdrawButton"
-                 Slot ButtonWidgetSlot "{5B394570FF4BACEF}" {
+                SizeLayoutWidgetClass "{5562AD435529FB36}" {
+                 Prefab "{5562AD435529FB36}"
+                 Slot ButtonWidgetSlot "{5562AD435529FB5D}" {
                   HorizontalAlign 3
                   VerticalAlign 3
                  }
-                 Text "Withdraw"
-                 "Font Size" 25
-                 "Horizontal Alignment" Center
-                 "Vertical Alignment" Center
+                 {
+                  OverlayWidgetClass "{000000005E70868E}" {
+                   Prefab "{000000005E70868E}"
+                   {
+                    HorizontalLayoutWidgetClass "{00000000E3602307}" {
+                     Prefab "{00000000E3602307}"
+                     Slot OverlayWidgetSlot "{547290FBCA5E9358}" {
+                      Padding 10 10 16 10
+                     }
+                     {
+                      RichTextWidgetClass "{00000000DB061E92}" {
+                       Prefab "{00000000DB061E92}"
+                       "Font Size" 25
+                      }
+                     }
+                    }
+                   }
+                  }
+                 }
                 }
                }
               }

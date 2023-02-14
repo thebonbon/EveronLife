@@ -121,12 +121,13 @@ FrameWidgetClass {
           SizeMode Fill
           FillWeight 50
          }
-         Color 0 0 0 0
+         Color 0.328 0.02 0.02 0
          components {
           SCR_NavigationButtonComponent "{5B3CF3ECD86E6626}" {
            m_BackgroundDefault 0.328 0.02 0.02 1
            m_BackgroundHovered 0.429 0.047 0.047 0.302
            m_sLabel "Cancel"
+           m_sActionName "MenuBack"
           }
          }
          {
@@ -136,7 +137,29 @@ FrameWidgetClass {
             HorizontalAlign 3
             VerticalAlign 3
            }
+           "Inherit Color" 1
            {
+            TextWidgetClass "{5B3CFB9125CC9226}" {
+             Name "Text"
+             Slot OverlayWidgetSlot "{5C9D57DA94087980}" {
+              VerticalAlign 3
+             }
+             "Z Order" 1
+             "Horizontal Alignment" Center
+             "Vertical Alignment" Center
+            }
+            RichTextWidgetClass "{5C9D57DB079B4083}" {
+             Name "Action"
+             Slot OverlayWidgetSlot "{5C9D57DA940879E2}" {
+              HorizontalAlign 0
+              VerticalAlign 3
+              Padding 15 0 15 0
+             }
+             "Z Order" 1
+             Color 0.292 0.292 0.292 1
+             "Horizontal Alignment" Center
+             "Vertical Alignment" Center
+            }
             ImageWidgetClass "{5B3CFB9125CC9225}" {
              Name "Background"
              Slot OverlayWidgetSlot "{5B3CFB9036937257}" {
@@ -155,11 +178,6 @@ FrameWidgetClass {
              }
              style outline_2px
             }
-            TextWidgetClass "{5B3CFB9125CC9226}" {
-             Name "Text"
-             Slot OverlayWidgetSlot "{5B3CFB9042C96104}" {
-             }
-            }
            }
           }
          }
@@ -177,6 +195,7 @@ FrameWidgetClass {
            m_BackgroundDefault 0.022 0.159 0.028 1
            m_BackgroundHovered 0.051 0.238 0.06 0.302
            m_sLabel "Deposit"
+           m_sActionName "MenuChange"
           }
          }
          {
@@ -210,7 +229,20 @@ FrameWidgetClass {
             TextWidgetClass "{5B3CFB9125CC89D5}" {
              Name "Text"
              Slot OverlayWidgetSlot "{5B3CFB9042C96104}" {
+              VerticalAlign 3
              }
+             "Horizontal Alignment" Center
+             "Vertical Alignment" Center
+            }
+            RichTextWidgetClass "{5C9D57DB7EA279DA}" {
+             Name "Action"
+             Slot OverlayWidgetSlot "{5C9D57DA940878AF}" {
+              HorizontalAlign 0
+              VerticalAlign 3
+              Padding 15 0 15 0
+             }
+             Color 0.292 0.292 0.292 1
+             "Vertical Alignment" Center
             }
            }
           }
