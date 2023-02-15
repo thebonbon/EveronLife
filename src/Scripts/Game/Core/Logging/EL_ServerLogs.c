@@ -22,8 +22,8 @@ modded class SCR_RegeneratingHitZone
 	//------------------------------------------------------------------------------------------------
 	override void OnDamage(EDamageType type, float damage, HitZone pOriginalHitzone, IEntity instigator, inout vector hitTransform[3], float speed, int colliderID, int nodeID)
 	{
-		super.OnDamage(type, damage, pOriginalHitzone, instigator, hitTransform, speed, colliderID, nodeID);
 		EL_Logger.Log("RP-LOG", string.Format("[RP-LOG] %1 damaged %2 for %3 %4", EL_Utils.GetPlayerName(instigator), EL_Utils.GetPlayerName(GetOwner()), damage, typename.EnumToString(EDamageType, type)));
+		super.OnDamage(type, damage, pOriginalHitzone, instigator, hitTransform, speed, colliderID, nodeID);
 	}
 }
 
@@ -32,8 +32,8 @@ modded class SCR_BaseGameMode
 	//------------------------------------------------------------------------------------------------
 	override void OnPlayerKilled(int playerId, IEntity player, IEntity killer)
 	{
-		super.OnPlayerKilled(playerId, player, killer);
 		EL_Logger.Log("RP-LOG", string.Format("%1 killed %2", EL_Utils.GetPlayerName(killer), EL_Utils.GetPlayerName(player)), EL_LogLevel.NORMAL);
+		super.OnPlayerKilled(playerId, player, killer);
 	}
 }
 
