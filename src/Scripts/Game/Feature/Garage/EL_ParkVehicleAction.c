@@ -10,6 +10,7 @@ class EL_ParkVehicleAction : ScriptedUserAction
 	{
 		if (!EL_NetworkUtils.IsOwner(pOwnerEntity)) return;
 
+		m_GarageManager = null;
 		GetGame().GetWorld().QueryEntitiesBySphere(pOwnerEntity.GetOrigin(), m_fGarageSearchRadius, FindFirstGarage, FilterGarage);
 
 		if (!m_GarageManager)
@@ -64,6 +65,7 @@ class EL_ParkVehicleAction : ScriptedUserAction
 			return false;
 		
 		//Check if garage is nearby
+		m_GarageManager = null;
 		GetGame().GetWorld().QueryEntitiesBySphere(GetOwner().GetOrigin(), m_fGarageSearchRadius, FindFirstGarage, FilterGarage);
 		return (m_GarageManager);
  	}
