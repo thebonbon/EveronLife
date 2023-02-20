@@ -16,7 +16,6 @@ class EL_VehicleShopManagerComponent : ScriptComponent
 
 	[Attribute("{FAE60B62153B7058}Prefabs/Buildings/VehicleShop/VehicleShop_Camera.et", UIWidgets.ResourceNamePicker, "Camera prefab", category: "Preview")]
 	protected ResourceName m_VehicleShopCameraPrefab;
-	protected bool m_bCameraEnabled;
 	protected SCR_ManualCamera m_VehicleShopCamera;
 
 	// Point info
@@ -40,7 +39,7 @@ class EL_VehicleShopManagerComponent : ScriptComponent
 	void OnExitMenu()
 	{
 		GetGame().GetMenuManager().CloseMenuByPreset(ChimeraMenuPreset.EL_VehicleShop);
-		DisableCam();
+		EnableVehicleShopCamera(false);
 	}
 
 	//------------------------------------------------------------------------------------------------
@@ -253,35 +252,17 @@ class EL_VehicleShopManagerComponent : ScriptComponent
 			rpcSender.AskBuyVehicle(curVehicleConfig.m_Prefab, 0, GetOwner());
 
 		//Cleanup
-		DisableCam();
-		GetGame().GetMenuManager().CloseMenuByPreset(ChimeraMenuPreset.EL_VehicleShop);
-	}
-
-	//------------------------------------------------------------------------------------------------
-	void DisableCam()
-	{
-		EnableVehicleShopCamera(false);
+		OnExitMenu()
 	}
 
 	//------------------------------------------------------------------------------------------------
 	void EnableVehicleShopCamera(bool enabled)
 	{
-		if (enabled && !m_bCameraEnabled)
-		{
-			// Create VehicleShop camera
-			if (!m_VehicleShopCamera)
-				m_VehicleShopCamera = EL_CameraUtils.CreateAndSetCamera(m_VehicleShopCameraPrefab, m_VehicleShopBuilding, m_vCameraPoint, m_vCameraAngels);
+		if (enabled && !m_VehicleShopCamera)
+			m_VehicleShopCamera = EL_CameraUtils.CreateAndSetCamera(m_VehicleShopCameraPrefab, m_VehicleShopBuilding, m_vCameraPoint, m_vCameraAngels);
 
-			m_bCameraEnabled = true;
-			return;
-		}
-
-		if (!enabled && m_bCameraEnabled)
-		{
+		if (!enabled && m_VehicleShopCamera)
 			EL_CameraUtils.DestroyCamera(m_VehicleShopCamera);
-			m_bCameraEnabled = false;
-			return;
-		}
 	}
 
 	//------------------------------------------------------------------------------------------------

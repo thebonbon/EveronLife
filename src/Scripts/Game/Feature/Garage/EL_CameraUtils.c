@@ -5,13 +5,8 @@ class EL_CameraUtils
 	{
 		if (!camera)
 			return;
-		
-		IEntity cameraParent = camera.GetParent();
-		if (cameraParent)
-			cameraParent.RemoveChild(camera);
-
+		camera.Detach();
 		delete camera;
-		
 	}
 	
 	//------------------------------------------------------------------------------------------------
