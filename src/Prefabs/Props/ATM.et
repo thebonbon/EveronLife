@@ -1,12 +1,15 @@
 GenericEntity : "{51D31AB07AE3C1C7}Prefabs/Props/Commercial/CashierShop_01.et" {
  ID "F0DBA538AC2A0552"
  components {
+  MeshObject "{5872F0EB7FA40561}" {
+   Object "{E2D99F849348580B}Assets/Props/ATM/ATM.xob"
+  }
   ActionsManagerComponent "{5B0B1EE358F7219F}" {
    ActionContexts {
     UserActionContext "{5B0B1EE35A0CB1CC}" {
      ContextName "default"
      Position PointInfo "{5B0B2385ABCCBE44}" {
-      Offset 0 0.2914 0
+      Offset 0.1715 0.2615 0.1543
      }
      Radius 33.633
     }

@@ -1,0 +1,7 @@
+MatPBRBasic {
+ Emissive 0.027 0.027 0.027 0
+ EmissiveLV 0.602
+ EmissiveMap "{54BBB881E85D32BE}Assets/Props/ATM/data/atm_emissive.edds"
+ BCRMap "{704C589ECD30EE58}Assets/Props/ATM/data/atm_bcr.edds"
+ NMOMap "{08FA1964FEAE9821}Assets/Props/ATM/data/atm_bumb.edds"
+}

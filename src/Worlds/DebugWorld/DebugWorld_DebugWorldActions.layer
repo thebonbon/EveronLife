@@ -73,7 +73,7 @@ GenericEntity {
  }
 }
 GenericEntity : "{03179A7595569288}Prefabs/Props/ATM.et" {
- coords 101.696 0.898 135.286
+ coords 101.59 1.112 135.12
 }
 GenericEntity : "{60824972764FBF6D}Prefabs/ItemShop/ShopItem_GeneralStore.et" {
  components {
