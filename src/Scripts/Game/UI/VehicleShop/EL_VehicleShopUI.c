@@ -149,7 +149,6 @@ class EL_VehicleShopUI: ChimeraMenuBase
 		GetGame().GetInputManager().AddActionListener("MenuLeft", EActionTrigger.DOWN, OnMenuLeft);
 		GetGame().GetInputManager().AddActionListener("MenuRight", EActionTrigger.DOWN, OnMenuRight);
 		GetGame().GetInputManager().AddActionListener("MenuTabLeft", EActionTrigger.DOWN, OnApplyColor);
-
 		GetGame().GetInputManager().AddActionListener("MenuBack", EActionTrigger.DOWN, InvokeOnMenuClose);
 
 		//Color picker

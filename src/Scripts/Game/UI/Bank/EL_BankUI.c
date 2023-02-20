@@ -235,7 +235,6 @@ class EL_BankMenu : ChimeraMenuBase
 		if (onDepositButtonPressed) onDepositButtonPressed.Remove(OpenDepositMenu);
 		ScriptInvoker onWithdrawButtonPressed = ButtonActionComponent.GetOnAction(m_wRoot.FindAnyWidget("WithdrawButton"));
 		if (onWithdrawButtonPressed) onWithdrawButtonPressed.Remove(OpenWithdrawMenu);
-		
 	}
 	
 	//------------------------------------------------------------------------------------------------

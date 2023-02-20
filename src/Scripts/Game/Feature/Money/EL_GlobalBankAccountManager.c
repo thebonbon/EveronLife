@@ -5,6 +5,9 @@ class EL_GlobalBankAccountManagerClass : GenericEntityClass
 
 class EL_GlobalBankAccountManager : GenericEntity
 {
+	[Attribute(defvalue:"1000", UIWidgets.EditBox, desc: "Starting account balance")]
+	protected int m_iStartAccountBalance;
+	
 	protected ref array<ref EL_BankAccount> m_aBankAccounts;
 
 	protected static EL_GlobalBankAccountManager s_pInstance;
@@ -84,7 +87,7 @@ class EL_GlobalBankAccountManager : GenericEntity
 	//------------------------------------------------------------------------------------------------
 	EL_BankAccount CreateBankAccount(int playerId)
 	{
-		EL_BankAccount newAccount = EL_BankAccount.Create(EL_Utils.GetPlayerUID(playerId), GetRandomFreeAccountId(), 1000);
+		EL_BankAccount newAccount = EL_BankAccount.Create(EL_Utils.GetPlayerUID(playerId), GetRandomFreeAccountId(), m_iStartAccountBalance);
 		m_aBankAccounts.Insert(newAccount);
 		Print("[EL-Bank] Created new account id: " + newAccount.GetAccountOwnerUid());
 		return newAccount;
