@@ -126,7 +126,7 @@ FrameWidgetClass {
             SizeMode Fill
             FillWeight 50
            }
-           Text "-"
+           Text "Welcome"
            "Font Size" 37
            "Horizontal Alignment" Center
            "Vertical Alignment" Center

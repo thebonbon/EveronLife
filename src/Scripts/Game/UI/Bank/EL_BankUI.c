@@ -200,7 +200,7 @@ class EL_BankMenu : ChimeraMenuBase
 		m_wCurrentCash = TextWidget.Cast(m_wRoot.FindAnyWidget("CurrentMoney"));
 		m_wCurrentBalance = TextWidget.Cast(m_wActiveAccount.FindAnyWidget("CurrentBalance"));
 		TextWidget nameTitle = TextWidget.Cast(m_wRoot.FindAnyWidget("PlayerName"));
-		nameTitle.SetText(EL_Utils.GetPlayerName(m_BankManager.GetLocalPlayerBankAccount().GetAccountOwner()));
+		//nameTitle.SetText(EL_Utils.GetPlayerName(m_BankManager.GetLocalPlayerBankAccount().GetAccountOwner()));
 		
 		SCR_NavigationButtonComponent exitButtonHandler = SCR_NavigationButtonComponent.Cast(m_wRoot.FindAnyWidget("ExitButton").FindHandler(SCR_NavigationButtonComponent));
 		SCR_NavigationButtonComponent depositButtonHandler = SCR_NavigationButtonComponent.Cast(m_wRoot.FindAnyWidget("DepositButton").FindHandler(SCR_NavigationButtonComponent));
