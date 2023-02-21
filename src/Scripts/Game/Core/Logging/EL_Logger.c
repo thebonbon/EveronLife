@@ -12,8 +12,8 @@ class EL_Logger
 	//------------------------------------------------------------------------------------------------
 	static void Log(string prefix, string log, EL_LogLevel logLevel = EL_LogLevel.NORMAL)
 	{
-		if (m_eMaxLogLevel <= logLevel)
-			Print(string.Format("[%1] %2", prefix, log), logLevel);
+		if (logLevel <= m_eMaxLogLevel)
+			PrintFormat("[%1] %2", prefix, log);
 	}
 }
 

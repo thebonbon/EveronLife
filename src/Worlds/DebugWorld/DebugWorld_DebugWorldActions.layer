@@ -75,6 +75,9 @@ GenericEntity {
 GenericEntity : "{03179A7595569288}Prefabs/Props/ATM.et" {
  coords 101.59 1.112 135.12
 }
+GenericEntity Brick_5CAB20C98B1059FE : "{0D5DA590E223A195}Prefabs/Items/Resources/Brick.et" {
+ coords 122.316 0.001 135.767
+}
 GenericEntity : "{60824972764FBF6D}Prefabs/ItemShop/ShopItem_GeneralStore.et" {
  components {
   EL_ShopItemComponent "{5AC6DBF94189D860}" {
