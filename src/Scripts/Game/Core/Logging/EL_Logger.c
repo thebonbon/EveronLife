@@ -12,7 +12,7 @@ class EL_Logger
 	//------------------------------------------------------------------------------------------------
 	static void Log(string prefix, string log, EL_LogLevel logLevel = EL_LogLevel.NORMAL)
 	{
-		if (logLevel <= m_eMaxLogLevel)
+		if (Replication.IsServer() && logLevel <= m_eMaxLogLevel)
 			PrintFormat("[%1] %2", prefix, log);
 	}
 }
