@@ -32,7 +32,7 @@ modded class SCR_BaseGameMode
 	//------------------------------------------------------------------------------------------------
 	override void OnPlayerKilled(int playerId, IEntity player, IEntity killer)
 	{
-		EL_Logger.Log("RP-LOG", string.Format("%1 killed %2", EL_Utils.GetPlayerName(killer), EL_Utils.GetPlayerName(player)), EL_LogLevel.NORMAL);
+		EL_Logger.Log("RP-LOG", string.Format("%1 killed %2", EL_Utils.GetPlayerName(killer), EL_Utils.GetPlayerName(player)));
 		super.OnPlayerKilled(playerId, player, killer);
 	}
 }
