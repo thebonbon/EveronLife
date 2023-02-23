@@ -54,5 +54,7 @@ Vehicle {
     }
    }
   }
+  RplComponent "{517AACDFA78F5EE7}" {
+  }
  }
 }

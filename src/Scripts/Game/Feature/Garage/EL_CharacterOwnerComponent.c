@@ -32,6 +32,7 @@ class EL_CharacterOwnerComponent: ScriptComponent
 		EL_Logger.Log("EL-CharOwner", string.Format("Getting OwnerId: %1 for %2", m_sCharacterId, GetOwner()), EL_LogLevel.DEBUG);
 		return m_sCharacterId;
 	}
+
 	
 	//------------------------------------------------------------------------------------------------
 	override bool RplLoad(ScriptBitReader reader)

@@ -12,8 +12,9 @@ class EL_RpcSenderComponent  : ScriptComponent
 	//------------------------------------------------------------------------------------------------	
 	//! Vehicle Owner
 	void AskIsLocalOwner(IEntity vehicle)
-	{
+	{		
 		RplComponent rplComp = EL_ComponentFinder<RplComponent>.Find(vehicle);
+		EL_Logger.Log("EL-CharOwner", string.Format("Asking Server if vehicle: %1 is owned by me..", rplComp.Id()), EL_LogLevel.DEBUG);
 		Rpc(DoCheckLocalVehicleOwner, rplComp.Id());
 	}
 	
@@ -22,22 +23,27 @@ class EL_RpcSenderComponent  : ScriptComponent
 	[RplRpc(RplChannel.Reliable, RplRcver.Server)]
 	void DoCheckLocalVehicleOwner(RplId vehicleId)
 	{
-		IEntity vehicle = IEntity.Cast(Replication.FindItem(vehicleId));
-		if (!vehicle)
+		RplComponent vehicleRpl = RplComponent.Cast(Replication.FindItem(vehicleId));
+		if (!vehicleRpl)
+		{
+			EL_Logger.Log("EL-CharOwner", string.Format("Server got request to check veh owner.. VehicleRPL not found! %1", vehicleId), EL_LogLevel.DEBUG);
 			return;
-		EL_CharacterOwnerComponent charOwnerComp = EL_CharacterOwnerComponent.Cast(vehicle.FindComponent(EL_CharacterOwnerComponent));
+		}	
+		EL_CharacterOwnerComponent charOwnerComp = EL_CharacterOwnerComponent.Cast(vehicleRpl.GetEntity().FindComponent(EL_CharacterOwnerComponent));
 		if (EL_Utils.GetPlayerUID(GetOwner()) == charOwnerComp.GetCharacterOwner())
 		{
-			Print("[EL-CharacterOwner] Updating local owner after streaming.");
+			EL_Logger.Log("EL-CharOwner", string.Format("Server got request to check veh owner.. TRUE %1", vehicleId), EL_LogLevel.DEBUG);
 			AskSetLocalVehicleOwner(vehicleId);
+			return;
 		}	
-			
+		EL_Logger.Log("EL-CharOwner", string.Format("Server got request to check veh owner.. FALSE %1", vehicleId), EL_LogLevel.DEBUG);	
 	}
 	
 	//------------------------------------------------------------------------------------------------	
 	//! Vehicle Owner
 	void AskSetLocalVehicleOwner(RplId vehicleId)
 	{
+		Print("Ask set");
 		Rpc(DoSetLocalVehicleOwner, vehicleId);
 	}
 	
@@ -46,10 +52,10 @@ class EL_RpcSenderComponent  : ScriptComponent
 	[RplRpc(RplChannel.Reliable, RplRcver.Owner)]
 	void DoSetLocalVehicleOwner(RplId vehicleId)
 	{
-		IEntity vehicle = IEntity.Cast(Replication.FindItem(vehicleId));
-		if (!vehicle)
-			Print("[EL-VehicleShop] Error finding replicated vehicle! RplId: " + vehicleId, LogLevel.ERROR);
-		EL_CharacterOwnerComponent charOwnerComp = EL_CharacterOwnerComponent.Cast(vehicle.FindComponent(EL_CharacterOwnerComponent));
+		RplComponent vehicleRpl = RplComponent.Cast(Replication.FindItem(vehicleId));
+		if (!vehicleRpl)
+			return;
+		EL_CharacterOwnerComponent charOwnerComp = EL_CharacterOwnerComponent.Cast(vehicleRpl.GetEntity().FindComponent(EL_CharacterOwnerComponent));
 		charOwnerComp.SetLocalOwner();
 	}
 	
