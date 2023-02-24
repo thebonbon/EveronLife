@@ -8,7 +8,7 @@ class EL_GlobalBankAccountManager : GenericEntity
 	[Attribute(defvalue:"1000", UIWidgets.EditBox, desc: "Starting account balance")]
 	protected int m_iStartAccountBalance;
 	
-	protected ref array<ref EL_BankAccount> m_aBankAccounts;
+	protected ref array<ref EL_BankAccount> m_aBankAccounts = {};
 
 	protected static EL_GlobalBankAccountManager s_pInstance;
 	ref EL_BankAccount m_LocalBankAccount;
@@ -120,9 +120,7 @@ class EL_GlobalBankAccountManager : GenericEntity
 	//------------------------------------------------------------------------------------------------
 	void EL_GlobalBankAccountManager(IEntitySource src, IEntity parent)
 	{
-		s_pInstance = this;
-		m_aBankAccounts = new array<ref EL_BankAccount>();
-
+		s_pInstance = this;		
 		SetFlags(EntityFlags.ACTIVE, false);
 	}
 }

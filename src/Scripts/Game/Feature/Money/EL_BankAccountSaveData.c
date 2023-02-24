@@ -1,7 +1,7 @@
 [EL_DbName(EL_BankAccountSaveData, "BankAccount"), BaseContainerProps()]
 class EL_BankAccountSaveData : EL_EntitySaveDataBase
 {
-	protected ref array<ref EL_BankAccount> m_aBankAccounts = new array<ref EL_BankAccount>();
+	ref array<ref EL_BankAccount> m_aBankAccounts = new array<ref EL_BankAccount>();
 
 	//------------------------------------------------------------------------------------------------
 	override bool ReadFrom(notnull IEntity worldEntity)
@@ -12,15 +12,18 @@ class EL_BankAccountSaveData : EL_EntitySaveDataBase
 		m_iLastSaved = persistenceComponent.GetLastSaved();
 
 		//Actual Data
-		m_aBankAccounts = EL_GlobalBankAccountManager.GetInstance().GetBankAccounts();
-
+		EL_GlobalBankAccountManager bankManager = EL_GlobalBankAccountManager.Cast(worldEntity);
+		m_aBankAccounts = bankManager.GetBankAccounts();
+		EL_Logger.Log("EL-Bank", string.Format("Saved %1 banks to DB.", m_aBankAccounts.Count()));
 		return true;
 	}
 
 	//------------------------------------------------------------------------------------------------
 	override bool ApplyTo(notnull IEntity worldEntity)
 	{
-		EL_GlobalBankAccountManager.GetInstance().SetBankAccounts(m_aBankAccounts);
+		EL_GlobalBankAccountManager bankManager = EL_GlobalBankAccountManager.Cast(worldEntity);
+		bankManager.SetBankAccounts(m_aBankAccounts);
+		EL_Logger.Log("EL-Bank", string.Format("Loaded %1 banks from DB.", m_aBankAccounts.Count()));
 		return true;
 	}
 
@@ -33,8 +36,7 @@ class EL_BankAccountSaveData : EL_EntitySaveDataBase
 		saveContext.WriteValue("m_iLastSaved", m_iLastSaved);
 
 		//Actual Data
-		saveContext.WriteValue("m_aBankAccounts", m_aBankAccounts);
-
+		saveContext.WriteValue("m_aBankAccounts", m_aBankAccounts);		
 		return true;
 	}
 
