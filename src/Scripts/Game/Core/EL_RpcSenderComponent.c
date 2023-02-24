@@ -43,7 +43,7 @@ class EL_RpcSenderComponent  : ScriptComponent
 	//! Vehicle Owner
 	void AskSetLocalVehicleOwner(RplId vehicleId)
 	{
-		Print("Ask set");
+		Print("[EL-CharOwner] Ask set " + vehicleId);
 		Rpc(DoSetLocalVehicleOwner, vehicleId);
 	}
 	

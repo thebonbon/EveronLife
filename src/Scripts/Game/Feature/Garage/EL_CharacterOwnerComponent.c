@@ -35,10 +35,31 @@ class EL_CharacterOwnerComponent: ScriptComponent
 
 	
 	//------------------------------------------------------------------------------------------------
+	//! We lost LocalOwner data after streaming. Ask server if this is owned by us.
 	override bool RplLoad(ScriptBitReader reader)
 	{
-		//We lost LocalOwner data after streaming. Ask server if this is owned by us.
+		
 		EL_NetworkUtils.GetLocalRpcSender().AskIsLocalOwner(GetOwner());
 		return true;
 	}	
+	
+	//------------------------------------------------------------------------------------------------
+	//! Host & play fix
+	void LateInit()
+	{
+		EL_RpcSenderComponent rpcSender = EL_NetworkUtils.GetLocalRpcSender();
+		rpcSender.AskIsLocalOwner(GetOwner());
+	}
+	
+	//------------------------------------------------------------------------------------------------
+	override void EOnInit(IEntity owner)
+	{
+		GetGame().GetCallqueue().CallLater(LateInit, 100, false);
+	}	
+		
+	//------------------------------------------------------------------------------------------------
+	override void OnPostInit(IEntity owner)
+	{
+		SetEventMask(owner, EntityEvent.INIT);
+	}
 }
