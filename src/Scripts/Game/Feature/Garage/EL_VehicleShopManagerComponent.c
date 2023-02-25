@@ -40,6 +40,8 @@ class EL_VehicleShopManagerComponent : ScriptComponent
 	{
 		GetGame().GetMenuManager().CloseMenuByPreset(ChimeraMenuPreset.EL_VehicleShop);
 		EnableVehicleShopCamera(false);
+		if (m_aPreviewVehicle)
+			SCR_EntityHelper.DeleteEntityAndChildren(m_aPreviewVehicle);
 	}
 
 	//------------------------------------------------------------------------------------------------
