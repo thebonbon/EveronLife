@@ -78,6 +78,57 @@ GenericEntity : "{03179A7595569288}Prefabs/Props/ATM.et" {
 GenericEntity Brick_5CAB20C98B1059FE : "{0D5DA590E223A195}Prefabs/Items/Resources/Brick.et" {
  coords 122.316 0.001 135.767
 }
+SCR_DestructibleBuildingEntity : "{396E66B8F304B20B}Prefabs/Buildings/VehicleShop/VehicleShop.et" {
+ coords 81.654 0 157.454
+ angleY -180
+ {
+  BaseGameTriggerEntity {
+   ID "5B2CBBA0476C0A62"
+   DrawShape 0
+  }
+  GenericEntity {
+   ID "5B2CBBA0476C0A58"
+   components {
+    EL_VehicleShopManagerComponent "{5ACAE5EDE08D8FDE}" {
+     m_VehiclePriceConfig EL_VehiclePriceConfig "{5C672D648F080A79}" {
+      m_aVehiclePriceConfigs {
+       EL_VehiclePrice "{5C68A5B70B0A7F84}" {
+        m_bCanRecolor 0
+       }
+       EL_VehiclePrice "{5C7C7C0516CEEF0A}" {
+        m_Prefab "{1C5FE7B7FF49BB8D}Prefabs/Vehicles/Wheeled/BTR70/BTR70_Base.et"
+       }
+       EL_VehiclePrice "{5C7C7C0516E5C9A9}" {
+        m_Prefab "{C012BB3488BEA0C2}Prefabs/Vehicles/Wheeled/BTR70/BTR70.et"
+       }
+       EL_VehiclePrice "{5C7C7C05291C1118}" {
+        m_Prefab "{259EE7B78C51B624}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469.et"
+       }
+       EL_VehiclePrice "{5C7C7C05290B60EA}" {
+        m_Prefab "{2BE1F8B9299B67C1}Prefabs/Vehicles/Wheeled/M923A1/M923A1_tanker.et"
+       }
+       EL_VehiclePrice "{5C7C7C052921D87F}" {
+        m_Prefab "{14FD2616BAB3157D}Prefabs/Vehicles/Wheeled/M923A1/M923A1_MERDC.et"
+       }
+       EL_VehiclePrice "{5C7C7C0529590672}" {
+        m_Prefab "{36BDCC88B17B3BFA}Prefabs/Vehicles/Wheeled/M923A1/M923A1_command.et"
+       }
+       EL_VehiclePrice "{5C7C7C0529749F1F}" {
+        m_Prefab "{38186F12F27A61C6}Prefabs/Vehicles/Wheeled/M923A1/M923A1_command_MERDC.et"
+       }
+       EL_VehiclePrice "{5C7C7C052962466F}" {
+        m_Prefab "{81FDAD5EB644CC3D}Prefabs/Vehicles/Wheeled/M923A1/M923A1_transport_covered.et"
+       }
+       EL_VehiclePrice "{5C7C7C05299F59A2}" {
+        m_Prefab "{48A6D4372444B85A}Prefabs/Vehicles/Wheeled/M923A1/M923A1_transport_covered_closed.et"
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}
 GenericEntity : "{60824972764FBF6D}Prefabs/ItemShop/ShopItem_GeneralStore.et" {
  components {
   EL_ShopItemComponent "{5AC6DBF94189D860}" {
