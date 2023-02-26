@@ -24,7 +24,7 @@ class EL_VehicleShopManagerComponent : ScriptComponent
 
 	[Attribute("0 0 0", UIWidgets.EditBox, "Camera angels", category: "Preview")]
 	protected vector m_vCameraAngels;
-
+	
 	[Attribute("", UIWidgets.Auto, "Item price list", category: "Shop")]
 	protected ref EL_VehiclePriceConfig m_VehiclePriceConfig;
 

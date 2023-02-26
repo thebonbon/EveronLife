@@ -9,6 +9,12 @@ class EL_GarageManagerComponent : ScriptComponent
 	IEntity m_UserEntity;
 	EL_GarageUI m_GarageUI;
 
+	[Attribute("Garage", UIWidgets.EditBox, "Garage Name in UI", category: "Preview")]
+	string m_sGarageName;
+	
+	[Attribute("0", UIWidgets.EditBox, "Withdraw cost", category: "Preview")]
+	int m_iWithdrawCost;
+	
 	//------------------------------------------------------------------------------------------------
 	void DoWithdrawVehicle(IEntity owner, int index)
 	{
@@ -18,6 +24,13 @@ class EL_GarageManagerComponent : ScriptComponent
 			Print("[EL-Garage] No free spawn point to withdraw!", LogLevel.WARNING);
 			return;
 		}
+		
+		if (m_iWithdrawCost > 0 && !EL_MoneyUtils.RemoveCash(owner, m_iWithdrawCost))
+		{
+			Print("[EL-Garage] No money removed", LogLevel.WARNING);
+			return;
+		}
+		
 		string ownerId = EL_Utils.GetPlayerUID(owner);
 
 		array<string> storedVehicleIds = m_mSavedVehicles.Get(ownerId);

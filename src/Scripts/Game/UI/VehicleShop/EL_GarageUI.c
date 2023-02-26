@@ -3,13 +3,39 @@ class EL_GarageUI: ChimeraMenuBase
     protected Widget m_wRoot;
 	protected ResourceName m_VehiclePreviewImage = "{28E9E144675337A3}UI/Layouts/Garage/GarageVehiclePreviewImg.layout";
 	protected VerticalLayoutWidget m_wVehiclePreviewList;
-
+	protected IEntity m_LocalPlayer;
 	protected EL_GarageManagerComponent m_GarageManager;
+	protected bool m_bCanBuy;
+
+	protected TextWidget m_wWithDrawFeeText;
 
 	//------------------------------------------------------------------------------------------------
 	void SetGarageManager(EL_GarageManagerComponent garageManager)
 	{
 		m_GarageManager = garageManager;
+
+		TextWidget garageTitleText = TextWidget.Cast(m_wRoot.FindAnyWidget("Title"));
+		garageTitleText.SetText(m_GarageManager.m_sGarageName);
+
+		m_wWithDrawFeeText = TextWidget.Cast(m_wRoot.FindAnyWidget("WithdrawFee"));
+		m_wWithDrawFeeText.SetText("$" + EL_FormatUtils.DecimalSeperator(m_GarageManager.m_iWithdrawCost));
+		ValidatePrice(m_GarageManager.m_iWithdrawCost);
+
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! Check if player can afford the vehicle and update button + text
+	void ValidatePrice(int price)
+	{
+		m_bCanBuy = (EL_MoneyUtils.GetCash(m_LocalPlayer) >= price);
+		if (m_bCanBuy)
+		{
+			m_wWithDrawFeeText.SetColor(Color.DarkGreen);
+		}
+		else
+		{
+			m_wWithDrawFeeText.SetColor(Color.DarkRed);
+		}
 	}
 
 	//------------------------------------------------------------------------------------------------
@@ -42,7 +68,10 @@ class EL_GarageUI: ChimeraMenuBase
 			garageData.m_iIndex = index;
 
 			entryButton.SetData(garageData);
-			entryButton.m_OnClicked.Insert(OnVehicleEntryClicked);
+			if (!m_bCanBuy)
+				entryButton.SetEnabled(false);
+			else
+				entryButton.m_OnClicked.Insert(OnVehicleEntryClicked);
 
 			m_wVehiclePreviewList.AddChild(vehicleListEntry);
 		}
@@ -52,7 +81,12 @@ class EL_GarageUI: ChimeraMenuBase
     override void OnMenuOpen()
     {
         m_wRoot = GetRootWidget();
+
+		//Get player using the UI
+		m_LocalPlayer = SCR_PlayerController.GetLocalControlledEntity();
+
 		m_wVehiclePreviewList = VerticalLayoutWidget.Cast(m_wRoot.FindAnyWidget("GarageVehicleList"));
+
 		ButtonWidget exitButton = ButtonWidget.Cast(m_wRoot.FindAnyWidget("ExitButton"));
 		SCR_ModularButtonComponent exitButtonComp = SCR_ModularButtonComponent.Cast(exitButton.FindHandler(SCR_ModularButtonComponent));
 		exitButtonComp.m_OnClicked.Insert(Close);

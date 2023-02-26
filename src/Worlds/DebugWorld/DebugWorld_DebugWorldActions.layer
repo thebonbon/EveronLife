@@ -145,3 +145,19 @@ $grp GenericEntity : "{9B6B61BB3FE3DFB0}Prefabs/Items/Equipment/Radios/Radio_ANP
   coords 100.371 0.001 134.926
  }
 }
+SCR_DestructibleBuildingEntity : "{EAD5EA324E4B1C1C}Prefabs/Buildings/Garage/VehicleGarage.et" {
+ coords 48.544 0.001 157.747
+ angleY -180
+ Flags 525315
+ {
+  GenericEntity Suitcase_01_5B2CBBA08E87F1C2 {
+   ID "5B2CBBA077D1402B"
+   components {
+    EL_GarageManagerComponent "{5AC91633184B77EA}" {
+     m_sGarageName "Impound Lot"
+     m_iWithdrawCost 999
+    }
+   }
+  }
+ }
+}

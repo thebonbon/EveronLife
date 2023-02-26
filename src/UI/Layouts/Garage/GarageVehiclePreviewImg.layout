@@ -7,60 +7,96 @@ ButtonWidgetClass {
  }
  Color 1 1 1 0
  components {
-  SCR_ModularButtonComponent "{5B272D9BC33D796E}" {
-   m_eEventReturnValue 2147483585
+  SCR_ModularButtonComponent "{5CB5227EBD1940C5}" {
+   m_aEffects {
+    SCR_ButtonEffectOpacity "{5CB5227CC4E4C121}" {
+     m_eEvents 104450
+     m_sWidgetName "Border"
+     m_fAnimationTime 0.05
+     m_fHovered 255
+     m_fActivated 255
+     m_fActivatedHovered 255
+     m_fFocusGained 255
+     m_fMouseEnter 255
+    }
+   }
+   m_eEventReturnValue 2147483599
+   m_bFocusOnMouseEnter 1
   }
  }
  {
-  HorizontalLayoutWidgetClass "{5B24F4F00E3D44E0}" {
-   Name "VerticalLayout0"
-   Slot ButtonWidgetSlot "{5B26A82853A53815}" {
+  OverlayWidgetClass "{5CB5227EF205C289}" {
+   Name "Overlay0"
+   Slot ButtonWidgetSlot "{5CB5227EF205C2A0}" {
     HorizontalAlign 3
-    VerticalAlign 1
    }
    {
-    ImageWidgetClass "{5B24F4F002BAC9F5}" {
-     Name "VehicleImage"
-     Slot LayoutSlot "{5B26A56B6B2A71AB}" {
+    ImageWidgetClass "{5CB5227F01DE69A0}" {
+     Name "Border"
+     Slot OverlayWidgetSlot "{5CB5227F01DE7643}" {
       HorizontalAlign 3
-      VerticalAlign 1
-      SizeMode Fill
-      FillWeight 25
+      VerticalAlign 3
      }
-     Texture "{0B03F611D52043AE}UI/Textures/placeholder.edds"
-     Size 128 128
+     Opacity 0
+     "Transition width" 0.283
+     Progress 0.817
     }
-    OverlayWidgetClass "{5B24F4F08242E0C8}" {
-     Name "TextOverlay"
-     Slot LayoutSlot "{5B24F4F08242E324}" {
-      VerticalAlign 1
-      SizeMode Fill
-      FillWeight 75
+    HorizontalLayoutWidgetClass "{5B24F4F00E3D44E0}" {
+     Name "VerticalLayout0"
+     Slot OverlayWidgetSlot {
+      HorizontalAlign 3
+      VerticalAlign 3
+      Padding 5 5 5 5
      }
      {
-      ImageWidgetClass "{5B24F4F07691FB46}" {
-       Name "VehicleTextBackground"
-       Slot OverlayWidgetSlot "{5B26A56B6B2A71DA}" {
+      ImageWidgetClass "{5B24F4F002BAC9F5}" {
+       Name "VehicleImage"
+       Slot LayoutSlot "{5B26A56B6B2A71AB}" {
         HorizontalAlign 3
-        VerticalAlign 3
+        VerticalAlign 1
+        SizeMode Fill
+        FillWeight 25
        }
-       Color 0.162 0.162 0.162 0.6
-       Size 32 128
+       Texture "{0B03F611D52043AE}UI/Textures/placeholder.edds"
+       Size 128 128
       }
-      TextWidgetClass "{5B24F4F01DB8BBEF}" {
-       Name "VehicleTitle"
-       Slot OverlayWidgetSlot "{5B26A56B6B2A7038}" {
-        HorizontalAlign 3
-        VerticalAlign 3
+      OverlayWidgetClass "{5B24F4F08242E0C8}" {
+       Name "TextOverlay"
+       Slot LayoutSlot "{5B24F4F08242E324}" {
+        VerticalAlign 1
+        SizeMode Fill
+        FillWeight 75
        }
-       "Left rule" Wrap
-       "Right rule" Wrap
-       "Up rule" Wrap
-       "Down rule" Wrap
-       Text "Vehicle Title"
-       "Horizontal Alignment" Center
-       "Vertical Alignment" Center
-       Wrap 1
+       {
+        ImageWidgetClass "{5B24F4F07691FB46}" {
+         Name "VehicleTextBackground"
+         Slot OverlayWidgetSlot "{5B26A56B6B2A71DA}" {
+          HorizontalAlign 3
+          VerticalAlign 3
+         }
+         Color 0.162 0.162 0.162 1
+         Size 32 128
+        }
+        TextWidgetClass "{5B24F4F01DB8BBEF}" {
+         Name "VehicleTitle"
+         Slot OverlayWidgetSlot "{5B26A56B6B2A7038}" {
+          HorizontalAlign 3
+          VerticalAlign 3
+         }
+         "Left rule" Wrap
+         "Right rule" Wrap
+         "Up rule" Wrap
+         "Down rule" Wrap
+         Text "Vehicle Title"
+         "Horizontal Alignment" Center
+         "Vertical Alignment" Center
+         Wrap 1
+         FontProperties FontProperties "{5CB52273D6353042}" {
+          Bold 1
+          DisabledColor 0.561 0.071 0.071 1
+         }
+        }
+       }
       }
      }
     }

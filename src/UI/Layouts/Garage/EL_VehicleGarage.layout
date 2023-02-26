@@ -3,6 +3,20 @@ FrameWidgetClass {
  Slot WidgetSlot "{59C6813091C46784}" {
  }
  {
+  OverlayWidgetClass "{5CB52274E71E35FE}" {
+   Name "Overlay0"
+   Slot FrameWidgetSlot "{5CB52274E71E35E3}" {
+    Anchor 0 0 0 0
+    PositionX 0
+    OffsetLeft 0
+    PositionY 0
+    OffsetTop 0
+    SizeX 100
+    OffsetRight -100
+    SizeY 30
+    OffsetBottom -30
+   }
+  }
   VerticalLayoutWidgetClass "{5B24A44FD0D6C98F}" {
    Prefab "{5ACF360B0FFF814C}"
    Name "VehiclePreviewGrid"
@@ -34,25 +48,71 @@ FrameWidgetClass {
        }
        Color 0.102 0.102 0.102 0.588
       }
-      SizeLayoutWidgetClass "{5B2895A97A2EA133}" {
-       Name "SizeLayout1"
-       Slot OverlayWidgetSlot "{5B289E0B0BB094F7}" {
+      VerticalLayoutWidgetClass "{5CB522779851E0A0}" {
+       Name "VerticalLayout0"
+       Slot OverlayWidgetSlot "{5CB522779851E14A}" {
+        HorizontalAlign 3
+        VerticalAlign 3
        }
-       AllowHeightOverride 1
-       HeightOverride 100
        {
-        TextWidgetClass "{5B2895A971D1EC67}" {
-         Name "Title"
-         Slot AlignableSlot "{5B2895A971D1F395}" {
+        SizeLayoutWidgetClass "{5B2895A97A2EA133}" {
+         Name "SizeLayout1"
+         Slot LayoutSlot "{5CB52274B87CB920}" {
           HorizontalAlign 3
-          VerticalAlign 3
+          VerticalAlign 1
+          SizeMode Auto
          }
-         Text "Garage"
-         "Font Size" 45
-         "Horizontal Alignment" Center
-         "Vertical Alignment" Center
-         FontProperties FontProperties "{5B289E0A15CED1F3}" {
-          Bold 1
+         AllowHeightOverride 1
+         HeightOverride 75
+         {
+          TextWidgetClass "{5B2895A971D1EC67}" {
+           Name "Title"
+           Slot AlignableSlot "{5B2895A971D1F395}" {
+            HorizontalAlign 3
+            VerticalAlign 3
+           }
+           Text "Garage"
+           "Font Size" 45
+           "Horizontal Alignment" Center
+           "Vertical Alignment" Center
+           FontProperties FontProperties "{5B289E0A15CED1F3}" {
+            Bold 1
+           }
+          }
+         }
+        }
+        HorizontalLayoutWidgetClass "{5CB52277A9EEC327}" {
+         Name "HorizontalLayout0"
+         Slot LayoutSlot "{5CB52277A9EEC3C5}" {
+          Padding 0 0 0 5
+         }
+         Clipping False
+         "Fill Origin" Center
+         {
+          TextWidgetClass "{5CB5227765C61CBC}" {
+           Name "WithdrawTitle"
+           Slot LayoutSlot "{5CB52274B87CB9AA}" {
+           }
+           Text "Withdraw Fee:"
+           "Horizontal Alignment" Center
+           "Vertical Alignment" Center
+           FontProperties FontProperties "{5B289E0A15CED1F3}" {
+            Italic 1
+           }
+          }
+          TextWidgetClass "{5CB522777747617B}" {
+           Name "WithdrawFee"
+           Slot LayoutSlot "{5CB52274B87CC64C}" {
+            Padding 10 0 0 0
+           }
+           Color 0 0.502 0.125 1
+           Text "0"
+           "Horizontal Alignment" Center
+           "Vertical Alignment" Center
+           FontProperties FontProperties "{5B289E0A15CED1F3}" {
+            Italic 1
+           }
+          }
          }
         }
        }
@@ -67,38 +127,75 @@ FrameWidgetClass {
      }
      "Fill Origin" Center
     }
-    SizeLayoutWidgetClass "{5B2895A943F9ACB6}" {
-     Name "SizeLayout0"
-     Slot LayoutSlot "{5B289E0B0BB09729}" {
-      Padding 0 0 0 0
+    ButtonWidgetClass "{5B2895A90A2788D7}" {
+     Name "ExitButton"
+     Slot LayoutSlot {
+      Padding 20 5 20 5
      }
-     AllowHeightOverride 1
-     HeightOverride 100
-     {
-      ButtonWidgetClass "{5B2895A90A2788D7}" {
-       Name "ExitButton"
-       Slot AlignableSlot "{5B2895A959250DBD}" {
-        HorizontalAlign 3
-        VerticalAlign 3
-        Padding 20 5 20 5
-       }
-       Color 0.078 0.078 0.078 0.588
-       components {
-        SCR_ModularButtonComponent "{5B289E0B88EFEA0F}" {
-         m_eEventReturnValue 2147483585
+     Color 1 1 1 0
+     components {
+      SCR_ModularButtonComponent "{5B289E0B88EFEA0F}" {
+       m_aEffects {
+        SCR_ButtonEffectOpacity "{5CB5227D97504CE6}" {
+         m_eEvents 104451
+         m_sWidgetName "Border"
+         m_fAnimationTime 0.05
+         m_fHovered 255
+         m_fActivated 255
+         m_fActivatedHovered 255
+         m_fFocusGained 255
+         m_fMouseEnter 255
         }
        }
+       m_eEventReturnValue 2147483599
+      }
+     }
+     {
+      OverlayWidgetClass "{5CB53A732488756F}" {
+       Name "Overlay0"
+       Slot ButtonWidgetSlot "{5CB53A732488754D}" {
+        HorizontalAlign 3
+        VerticalAlign 3
+       }
        {
-        TextWidgetClass "{5B2895A9053EC603}" {
-         Name "Text0"
-         Slot ButtonWidgetSlot "{5B2895A9053EC669}" {
+        ImageWidgetClass "{5CB5227D75751F22}" {
+         Name "Border"
+         Slot OverlayWidgetSlot "{5CB5227F01DE7643}" {
+          HorizontalAlign 3
+          VerticalAlign 3
          }
-         Text "Exit"
-         "Font Size" 44
-         "Horizontal Alignment" Center
-         "Vertical Alignment" Center
-         FontProperties FontProperties "{5B289E0A17B675C0}" {
-          Bold 1
+        }
+        OverlayWidgetClass "{5CB53A73A25DDBB5}" {
+         Name "Overlay0"
+         Slot OverlayWidgetSlot "{5CB53A73A25DDB8E}" {
+          HorizontalAlign 3
+          VerticalAlign 3
+          Padding 5 5 5 5
+         }
+         {
+          ImageWidgetClass "{5CB53A73BB3E865B}" {
+           Name "TextBackground"
+           Slot OverlayWidgetSlot "{5CB53A73BB3E86BE}" {
+            HorizontalAlign 3
+            VerticalAlign 3
+           }
+           Color 0.144 0.144 0.144 1
+          }
+          TextWidgetClass "{5B2895A9053EC603}" {
+           Name "Text0"
+           Slot OverlayWidgetSlot {
+            HorizontalAlign 3
+            VerticalAlign 3
+            Padding 5 5 5 5
+           }
+           Text "Exit"
+           "Font Size" 44
+           "Horizontal Alignment" Center
+           "Vertical Alignment" Center
+           FontProperties FontProperties "{5B289E0A17B675C0}" {
+            Bold 1
+           }
+          }
          }
         }
        }
