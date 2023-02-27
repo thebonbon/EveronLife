@@ -54,7 +54,7 @@ class EL_CharacterOwnerComponent: ScriptComponent
 	//------------------------------------------------------------------------------------------------
 	override void EOnInit(IEntity owner)
 	{
-		GetGame().GetCallqueue().CallLater(LateInit, 100, false);
+		GetGame().GetCallqueue().CallLater(LateInit, 1000, false);
 	}	
 		
 	//------------------------------------------------------------------------------------------------

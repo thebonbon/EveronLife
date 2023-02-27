@@ -4,6 +4,9 @@ GenericEntity : "{6BF776E22ECF67E7}Prefabs/Items/Core/HandCarryItem_Base.et" {
   EL_PersistenceComponent "{5A0D2D213B33ECD8}" {
    Enabled 1
   }
+  EL_QuantityComponent "{5AD2B81F97B9381B}" {
+   Enabled 1
+  }
   InventoryItemComponent "{5222EB4D0C73006B}" {
    Attributes SCR_ItemAttributeCollection "{5222EB4D0A2B466B}" {
     ItemDisplayName UIInfo "{5222EB4D07D865FA}" {
@@ -11,7 +14,8 @@ GenericEntity : "{6BF776E22ECF67E7}Prefabs/Items/Core/HandCarryItem_Base.et" {
      Description "A plank of wood that was cut from a log in a sawmill"
     }
     ItemPhysAttributes ItemPhysicalAttributes "{59E108D9A227B7E3}" {
-     DimensionScaler 0
+     Weight 10
+     DimensionScaler 0.1
      RestingAdditiveRotationLS 0 0 0
      RestingAdditiveOffsetLS 0 0 0
     }

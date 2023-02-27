@@ -20,5 +20,18 @@ GenericEntity : "{6105032F794BA64B}Prefabs/Props/Civilian/LogChopping_01.et" {
  }
 }
 GenericEntity : "{61418A72BA63D059}Prefabs/Processor/Sawmill.et" {
+ components {
+  ActionsManagerComponent "{598F21A8710B89C1}" {
+   additionalActions {
+    EL_ProcessAction "{598F21A877BE6DEE}" {
+     m_aProcessingOutputs {
+      EL_ProcessingOutput "{5A5EE2432BB9E04F}" {
+       m_iOutputAmount 2
+      }
+     }
+    }
+   }
+  }
+ }
  coords 92.504 0.001 135.003
 }
