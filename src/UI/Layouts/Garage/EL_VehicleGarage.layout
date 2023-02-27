@@ -46,7 +46,7 @@ FrameWidgetClass {
         HorizontalAlign 3
         VerticalAlign 3
        }
-       Color 0.102 0.102 0.102 0.588
+       Color 0.102 0.102 0.102 1
       }
       VerticalLayoutWidgetClass "{5CB522779851E0A0}" {
        Name "VerticalLayout0"
@@ -129,7 +129,7 @@ FrameWidgetClass {
     }
     ButtonWidgetClass "{5B2895A90A2788D7}" {
      Name "ExitButton"
-     Slot LayoutSlot {
+     Slot LayoutSlot "{5CB6E24D13C330C8}" {
       Padding 20 5 20 5
      }
      Color 1 1 1 0
@@ -164,6 +164,7 @@ FrameWidgetClass {
           HorizontalAlign 3
           VerticalAlign 3
          }
+         Color 0.305 0.305 0.305 1
         }
         OverlayWidgetClass "{5CB53A73A25DDBB5}" {
          Name "Overlay0"
@@ -179,11 +180,11 @@ FrameWidgetClass {
             HorizontalAlign 3
             VerticalAlign 3
            }
-           Color 0.144 0.144 0.144 1
+           Color 0.102 0.102 0.102 1
           }
           TextWidgetClass "{5B2895A9053EC603}" {
            Name "Text0"
-           Slot OverlayWidgetSlot {
+           Slot OverlayWidgetSlot "{5CB6E24D13C333F6}" {
             HorizontalAlign 3
             VerticalAlign 3
             Padding 5 5 5 5

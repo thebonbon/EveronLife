@@ -38,12 +38,13 @@ ButtonWidgetClass {
       VerticalAlign 3
      }
      Opacity 0
+     Color 0.305 0.305 0.305 1
      "Transition width" 0.283
      Progress 0.817
     }
     HorizontalLayoutWidgetClass "{5B24F4F00E3D44E0}" {
      Name "VerticalLayout0"
-     Slot OverlayWidgetSlot {
+     Slot OverlayWidgetSlot "{5CB6E24D251B08D2}" {
       HorizontalAlign 3
       VerticalAlign 3
       Padding 5 5 5 5
@@ -74,7 +75,7 @@ ButtonWidgetClass {
           HorizontalAlign 3
           VerticalAlign 3
          }
-         Color 0.162 0.162 0.162 1
+         Color 0.102 0.102 0.102 1
          Size 32 128
         }
         TextWidgetClass "{5B24F4F01DB8BBEF}" {
