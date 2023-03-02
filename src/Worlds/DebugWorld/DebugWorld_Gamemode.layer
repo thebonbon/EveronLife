@@ -1,10 +1,5 @@
 EL_GameModeRoleplay : "{03913608C59017A3}Prefabs/MP/Modes/Roleplay/GameMode_Roleplay.et" {
- {
-  SCR_GarbageManager {
-   ID "9B883A7D8EBB282A"
-   CollectorInterval 10
-  }
- }
+ coords 0 0 0
 }
 EL_SpawnPoint Gobal_Spawn {
  coords 87.322 0 129.621
