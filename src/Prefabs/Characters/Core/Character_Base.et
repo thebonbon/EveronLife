@@ -12,8 +12,6 @@ SCR_ChimeraCharacter {
   EL_CharacterBankManagerComponent "{5CC2B5008690C250}" {
   }
   EL_PersistenceComponent "{5A12D8F4DFED6D84}" {
-   m_bSelfSpawn 0
-   m_bSelfDelete 0
    m_pSaveData EL_CharacterSaveData "{5A12D8F4DA8632DC}" {
     m_aComponents {
      EL_TransformationSaveData "{5A12D8F4DBF138B7}" {
