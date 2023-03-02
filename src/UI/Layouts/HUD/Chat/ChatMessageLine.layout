@@ -1,0 +1,23 @@
+OverlayWidgetClass {
+ {
+  SizeLayoutWidgetClass "{55E8C56F4E861ECE}" {
+   Prefab "{55E8C56F4E861ECE}"
+   {
+    OverlayWidgetClass "{55D0E5888944A497}" {
+     Prefab "{55D0E5888944A497}"
+     {
+      HorizontalLayoutWidgetClass "{55D0E07920886076}" {
+       Prefab "{55D0E07920886076}"
+       {
+        ImageWidgetClass "{55D0E07920886077}" {
+         Prefab "{55D0E07920886077}"
+         Texture "{CD2631B39F433D0A}Assets/UI/Chat/el_chat_48.imageset"
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

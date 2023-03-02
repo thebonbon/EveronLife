@@ -86,6 +86,8 @@ EL_GameModeRoleplay {
   }
   SCR_GarbageManager GarbageManager : "{9B883A7D8EBB282A}Prefabs/MP/Managers/GarbageManager.et" {
    ID "5CC4AA253F69E1D7"
+   VehicleCollect 0
+   m_bOnlyDestroyed 1
   }
   SCR_MPDestructionManager MPDestructionManager : "{9BB369F2803C6F71}Prefabs/MP/MPDestructionManager.et" {
    ID "9BB369F2803C6F71"

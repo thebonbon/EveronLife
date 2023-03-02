@@ -1,5 +1,5 @@
 MetaFileClass {
- Name "{00A1717AE3F96482}Assets/UI/Twitter_logo.edds"
+ Name "{9795DEFDB1EB2F9D}Assets/UI/Chat/chat_imageset.edds"
  Configurations {
   TIFFResourceClass PC : "{DC555BD399D92412}Configs/System/ResourceTypes/PC/TextureUnspecified.conf" {
   }
