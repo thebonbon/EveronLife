@@ -1,6 +1,13 @@
 class EL_Utils
 {
 	static ResourceName PLACEHOLDER_ICON = "{AC7E384FF9D8016A}Common/Textures/placeholder_BCR.edds";
+	static ref RandomGenerator EL_RANDOM_GENERATOR = new RandomGenerator();
+	
+	//------------------------------------------------------------------------------------------------
+	static string GetPlayerName(string playerUid)
+	{
+		return GetPlayerName(GetGame().GetPlayerManager().GetPlayerIdFromControlledEntity(GetPlayerByUID(playerUid)));
+	}
 	
 	//------------------------------------------------------------------------------------------------
 	static string GetPlayerName(IEntity player)

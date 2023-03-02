@@ -1,0 +1,75 @@
+ImageSetClass {
+ RefSize 204 204
+ Textures {
+  ImageSetTextureClass {
+   mpix 1
+   path "{61FA9A88B6042448}UI/Textures/Chat/chat_atlas.edds"
+  }
+  ImageSetTextureClass {
+   mpix 2
+   path "{00A1717AE3F96482}Assets/UI/Twitter_logo.edds"
+  }
+ }
+ Images {
+  ImageSetDefClass faction {
+   Name "faction"
+   Pos 2 2
+   Size 64 64
+   Flags 0
+  }
+  ImageSetDefClass global {
+   Name "global"
+   Pos 68 2
+   Size 64 64
+   Flags 0
+  }
+  ImageSetDefClass local {
+   Name "local"
+   Pos 134 2
+   Size 64 64
+   Flags 0
+  }
+  ImageSetDefClass radio {
+   Name "radio"
+   Pos 2 68
+   Size 64 64
+   Flags 0
+  }
+  ImageSetDefClass squad {
+   Name "squad"
+   Pos 68 68
+   Size 64 64
+   Flags 0
+  }
+  ImageSetDefClass system {
+   Name "system"
+   Pos 134 68
+   Size 64 64
+   Flags 0
+  }
+  ImageSetDefClass terminal {
+   Name "terminal"
+   Pos 2 134
+   Size 64 64
+   Flags 0
+  }
+  ImageSetDefClass vehicle {
+   Name "vehicle"
+   Pos 68 134
+   Size 64 64
+   Flags 0
+  }
+  ImageSetDefClass whisper {
+   Name "whisper"
+   Pos 134 134
+   Size 64 64
+   Flags 0
+  }
+  ImageSetDefClass twitter_logo {
+   Name "twitter_logo"
+   Pos 2 2
+   Size 200 200
+   Flags 0
+  }
+ }
+}

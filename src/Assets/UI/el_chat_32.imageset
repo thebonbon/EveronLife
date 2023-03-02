@@ -1,0 +1,17 @@
+ImageSetClass {
+ RefSize 48 48
+ Textures {
+  ImageSetTextureClass {
+   mpix 1
+   path "{00A1717AE3F96482}Assets/UI/Twitter_logo.edds"
+  }
+ }
+ Images {
+  ImageSetDefClass twitter_logo {
+   Name "twitter_logo"
+   Pos 0 0
+   Size 48 48
+   Flags 0
+  }
+ }
+}

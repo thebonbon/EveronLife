@@ -83,9 +83,10 @@ EL_GameModeRoleplay {
   }
   ScriptedChatEntity ScriptedChatEntity : "{F69BC912AC8236F9}Prefabs/MP/ScriptedChatEntity.et" {
    ID "F69BC912AC8236F9"
-  }
-  SCR_GarbageManager GarbageManager {
-   ID "9B883A7D8EBB282A"
+   Channels {
+    SCR_VehicleChatChannel "{559077E68D10F660}" {
+    }
+   }
   }
   SCR_MPDestructionManager MPDestructionManager : "{9BB369F2803C6F71}Prefabs/MP/MPDestructionManager.et" {
    ID "9BB369F2803C6F71"

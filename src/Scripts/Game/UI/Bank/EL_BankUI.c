@@ -11,8 +11,10 @@ class EL_BankDepositDialog : EL_BankDialogBase
 	//------------------------------------------------------------------------------------------------
 	override protected void OnConfirm()
 	{
-		if (!m_wMoneyEditBox.GetText().IsEmpty())
-			EL_NetworkUtils.GetLocalRpcSender().AskTransactionFromBankAccount(m_wMoneyEditBox.GetText().ToInt(), m_wCommentEditBox.GetText());
+		if (m_wMoneyEditBox.GetText().IsEmpty())
+			return;
+		EL_CharacterBankManagerComponent bankManager = EL_ComponentFinder<EL_CharacterBankManagerComponent>.Find(SCR_PlayerController.GetLocalControlledEntity());
+		bankManager.Ask_NewTransaction(m_wMoneyEditBox.GetText().ToInt(), m_wCommentEditBox.GetText());
 		super.OnConfirm();
 	}
 }
@@ -22,8 +24,10 @@ class EL_BankWithdrawDialog : EL_BankDialogBase
 	//------------------------------------------------------------------------------------------------
 	override protected void OnConfirm()
 	{
-		if (!m_wMoneyEditBox.GetText().IsEmpty())
-			EL_NetworkUtils.GetLocalRpcSender().AskTransactionFromBankAccount(-m_wMoneyEditBox.GetText().ToInt(), m_wCommentEditBox.GetText());
+		if (m_wMoneyEditBox.GetText().IsEmpty())
+			return;
+		EL_CharacterBankManagerComponent bankManager = EL_ComponentFinder<EL_CharacterBankManagerComponent>.Find(SCR_PlayerController.GetLocalControlledEntity());
+		bankManager.Ask_NewTransaction(-m_wMoneyEditBox.GetText().ToInt(), m_wCommentEditBox.GetText());
 		super.OnConfirm();
 	}
 }
@@ -34,7 +38,6 @@ class EL_BankTransferDialog : EL_BankDialogBase
 
 class EL_BankDialogBase : DialogUI
 {
-	protected EL_GlobalBankAccountManager m_BankManager;
 	protected EditBoxWidget m_wMoneyEditBox;
 	protected EditBoxWidget m_wCommentEditBox;
 	protected TextWidget m_wSourceAccount;
@@ -47,8 +50,8 @@ class EL_BankDialogBase : DialogUI
 		m_wMoneyEditBox = EditBoxWidget.Cast(GetRootWidget().FindAnyWidget("MoneyAmount"));
 		m_wCommentEditBox = EditBoxWidget.Cast(GetRootWidget().FindAnyWidget("CommentText"));
 		m_wSourceAccount = TextWidget.Cast(GetRootWidget().FindAnyWidget("SourceAccount"));
-		m_BankManager = EL_GlobalBankAccountManager.GetInstance();
-		m_wSourceAccount.SetText("Account: " + m_BankManager.GetLocalPlayerBankAccount().GetId());
+		
+		//m_wSourceAccount.SetText("Account: " + m_BankManager.GetLocalPlayerBankAccount().GetId());
 	}
 }
 
@@ -56,7 +59,7 @@ class EL_BankMenu : ChimeraMenuBase
 {
     protected Widget m_wRoot;
 	protected TextWidget m_wCurrentCash, m_wCurrentBalance;
-	protected EL_GlobalBankAccountManager m_BankManager;
+	protected EL_CharacterBankManagerComponent m_BankManager;
 	protected ResourceName m_BankAccountLayout = "{1C5799C6871DC397}UI/Layouts/Menus/Bank/BankAccountLayout.layout";
 	protected ResourceName m_TransactionLayout = "{E1F963FC9CE9C768}UI/Layouts/Menus/Bank/BankTransactionLayout.layout";
 	protected Widget m_wActiveAccount;
@@ -150,7 +153,7 @@ class EL_BankMenu : ChimeraMenuBase
 		}
 
 		//Populate List
-		foreach (EL_BankTransaction transaction : m_BankManager.GetLocalPlayerBankAccount().m_aTransactions)
+		foreach (EL_BankTransaction transaction : m_BankManager.m_LocalBankAccount.m_aTransactions)
 		{
 			AddNewTransaction(transaction);
 		}
@@ -185,17 +188,16 @@ class EL_BankMenu : ChimeraMenuBase
     override void OnMenuOpen()
     {
         m_wRoot = GetRootWidget();
-		m_BankManager = EL_GlobalBankAccountManager.GetInstance();
+		IEntity player = SCR_PlayerController.GetLocalControlledEntity();
+		
+		m_BankManager = EL_ComponentFinder<EL_CharacterBankManagerComponent>.Find(player);
 
 		//Always add personal player account
-		Widget defaultAccount = AddNewAccount(m_BankManager.GetLocalPlayerBankAccount());
+		Widget defaultAccount = AddNewAccount(m_BankManager.m_LocalBankAccount);
 		m_wActiveAccount = defaultAccount;
 
 		SCR_ModularButtonComponent newAccountWidgetHandler = SCR_ModularButtonComponent.Cast(defaultAccount.FindHandler(SCR_ModularButtonComponent));
 		newAccountWidgetHandler.SetToggled(true);
-
-		//TODO: Add all other accounts that this player has access to..
-		//m_BankManager.GetBankAccountWithAccess()....
 
 		m_wCurrentCash = TextWidget.Cast(m_wRoot.FindAnyWidget("CurrentMoney"));
 		m_wCurrentBalance = TextWidget.Cast(m_wActiveAccount.FindAnyWidget("CurrentBalance"));
@@ -242,8 +244,7 @@ class EL_BankMenu : ChimeraMenuBase
 	{
 		GetGame().GetCallqueue().CallLater(EnableButtonListeners, 10);
 		UpdateCashText();
-		//TODO: Update All accounts later here:
-		UpdateBalanceText(m_wActiveAccount, m_BankManager.GetLocalPlayerBankAccount());
+		UpdateBalanceText(m_wActiveAccount, m_BankManager.m_LocalBankAccount);
 		UpdateTransactions();
 	}
 }

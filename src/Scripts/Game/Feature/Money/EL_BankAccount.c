@@ -4,16 +4,16 @@ class EL_BankAccount
 	protected int m_iAccountId;
 	protected int m_iBalance;
 	ref array<ref EL_BankTransaction> m_aTransactions = new array<ref EL_BankTransaction>();
-
+	
 	protected static const int MAX_REPLICATED_TRANSACTIONS = 10;
 
 	//------------------------------------------------------------------------------------------------
-	static EL_BankAccount Create(string ownerUid, int accountId, int startBalance)
+	static EL_BankAccount Create(string ownerUid, int startBalance)
 	{
 		EL_BankAccount bankAccount();
 		bankAccount.m_iBalance = startBalance;
 		bankAccount.m_sOwnerUid = ownerUid;
-		bankAccount.m_iAccountId = accountId;
+		bankAccount.m_iAccountId = EL_Utils.EL_RANDOM_GENERATOR.RandInt(11111111, 99999999);
 		return bankAccount;
 	}
 
@@ -65,7 +65,7 @@ class EL_BankAccount
 	//! Called from Authority
 	bool TryDeposit(int amount, string comment)
 	{
-		Print(string.Format("[EL-Bank] %1 Tried to deposit $ %2 with comment: '%3'", m_sOwnerUid, amount, comment));
+		Print(string.Format("[EL-Bank] %1 Tried to deposit $ %2 with comment: '%3'", EL_Utils.GetPlayerName(GetAccountOwner()), amount, comment));
 		if (EL_MoneyUtils.GetCash(GetAccountOwner()) < amount)
 			return false;
 		int amountRemoved = EL_MoneyUtils.RemoveCash(GetAccountOwner(), amount);
@@ -73,7 +73,7 @@ class EL_BankAccount
 			return false;
 		m_iBalance += amountRemoved;
 		NewTransaction(amount, 0, comment);
-		Print(string.Format("[EL-Bank] %1 deposited $ %2 with comment: '%3'", m_sOwnerUid, amount, comment));
+		Print(string.Format("[EL-Bank] %1 deposited $ %2 with comment: '%3'", EL_Utils.GetPlayerName(GetAccountOwner()), amount, comment));
 		return true;
 	}
 
@@ -81,13 +81,13 @@ class EL_BankAccount
 	//! Called from Authority
 	bool TryWithdraw(int amount, string comment)
 	{
-		Print(string.Format("[EL-Bank] %1 Tried to withdraw $ %2 with comment: '%3'", m_sOwnerUid, amount, comment));
+		Print(string.Format("[EL-Bank] %1 Tried to withdraw $ %2 with comment: '%3'", EL_Utils.GetPlayerName(GetAccountOwner()), amount, comment));
 		if (m_iBalance < amount)
 			return false;
 
 		m_iBalance -= EL_MoneyUtils.AddCash(GetAccountOwner(), amount);
 		NewTransaction(-amount, 0, comment);
-		Print(string.Format("[EL-Bank] %1 withdrew $ %2 with comment: '%3'", m_sOwnerUid, amount, comment));
+		Print(string.Format("[EL-Bank] %1 withdrew $ %2 with comment: '%3'", EL_Utils.GetPlayerName(GetAccountOwner()), amount, comment));
 		return true;
 	}
 

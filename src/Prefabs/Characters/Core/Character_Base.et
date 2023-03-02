@@ -9,6 +9,8 @@ SCR_ChimeraCharacter {
     }
    }
   }
+  EL_CharacterBankManagerComponent "{5CC2B5008690C250}" {
+  }
   EL_PersistenceComponent "{5A12D8F4DFED6D84}" {
    m_bSelfSpawn 0
    m_bSelfDelete 0
@@ -21,6 +23,8 @@ SCR_ChimeraCharacter {
      EL_BaseInventoryStorageComponentSaveData "{5A13263CEDD3593B}" {
      }
      EL_EquipedWeaponStorageComponentSaveData "{5A2EDE88639C8657}" {
+     }
+     EL_CharacterBankAccountComponentSaveData "{5CC2B5009A85534D}" {
      }
     }
    }
