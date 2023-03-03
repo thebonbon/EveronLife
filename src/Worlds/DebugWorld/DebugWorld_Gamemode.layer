@@ -6,6 +6,9 @@ EL_GameModeRoleplay : "{03913608C59017A3}Prefabs/MP/Modes/Roleplay/GameMode_Role
    Channels {
     LocalChatChannel "{5CC4AA25DBFF3B65}" {
     }
+    AdminChatChannel "{5CC54D7550251DE7}" {
+     "Channel name" "Admin"
+    }
    }
   }
  }

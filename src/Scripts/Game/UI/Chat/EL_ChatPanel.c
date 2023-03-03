@@ -2,6 +2,8 @@ modded class SCR_ChatPanel
 {
 	[Attribute()]
 	ref SCR_ChatMessageStyle m_OOCGlobalStyle;	
+	[Attribute()]
+	ref SCR_ChatMessageStyle m_AdminStyle;	
 	
 	//------------------------------------------------------------------------------------------------
 	override protected void VerifyChannelStyles()
@@ -23,7 +25,8 @@ modded class SCR_ChatPanel
 			m_VehicleChannelStyle,
 			m_LocalChannelStyle,
 			m_DirectChannelStyle,
-			m_OOCGlobalStyle
+			m_OOCGlobalStyle,
+			m_AdminStyle
 		};
 		
 		foreach (Managed style : styles)
@@ -73,6 +76,9 @@ modded class SCR_ChatPanel
 				break;
 			case PrivateMessageChannel:
 				style = m_DirectChannelStyle;
+				break;
+			case AdminChatChannel:
+				style = m_AdminStyle;
 				break;
 		}
 		

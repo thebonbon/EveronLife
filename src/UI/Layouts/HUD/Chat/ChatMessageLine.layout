@@ -12,6 +12,8 @@ OverlayWidgetClass {
         ImageWidgetClass "{55D0E07920886077}" {
          Prefab "{55D0E07920886077}"
          Texture "{CD2631B39F433D0A}Assets/UI/Chat/el_chat_48.imageset"
+         Image "twatter"
+         Size 20 20
         }
        }
       }

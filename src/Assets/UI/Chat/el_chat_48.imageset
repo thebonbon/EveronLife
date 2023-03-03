@@ -19,5 +19,11 @@ ImageSetClass {
    Size 48 48
    Flags 0
   }
+  ImageSetDefClass admin {
+   Name "admin"
+   Pos 98 0
+   Size 48 48
+   Flags 0
+  }
  }
 }

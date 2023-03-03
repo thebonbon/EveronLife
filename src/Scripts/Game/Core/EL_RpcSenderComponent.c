@@ -5,10 +5,31 @@ class EL_RpcSenderComponentClass : ScriptComponentClass
 
 class EL_RpcSenderComponent  : ScriptComponent
 {
+	//------------------------------------------------------------------------------------------------	
+	void AskSendGlobalHint(float time, string title, string description)
+	{
+		Rpc(Rpc_AskGlobalHint, title, description, time);
+		SCR_HintManagerComponent.ShowCustomHint(description, title, time * 60, false, EFieldManualEntryId.NONE, true);
+	}
+	
+	//------------------------------------------------------------------------------------------------
+	[RplRpc(RplChannel.Reliable, RplRcver.Server)]
+	void Rpc_AskGlobalHint(string title, string description, float time)
+	{
+		Rpc(Rpc_DoGlobalHint, title, description, time);
+	}
+	
+	//------------------------------------------------------------------------------------------------
+	[RplRpc(RplChannel.Reliable, RplRcver.Broadcast)]
+	void Rpc_DoGlobalHint(string title, string description, float time)
+	{
+		SCR_HintManagerComponent.ShowCustomHint(description, title, time * 60, false, EFieldManualEntryId.NONE, true);
+	}
+		
 	//------------------------------------------------------------------------------------------------
 	//Vehicle Shop / Garage
 	//------------------------------------------------------------------------------------------------
-	
+		
 	//------------------------------------------------------------------------------------------------	
 	//! Vehicle Owner
 	void AskIsLocalOwner(IEntity vehicle)

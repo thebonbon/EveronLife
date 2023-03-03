@@ -24,20 +24,21 @@ FrameWidgetClass {
     Anchor 1 0 1 1
     PositionX 0
     OffsetLeft 0
-    PositionY 0
-    OffsetTop 0
+    PositionY 200
+    OffsetTop 200
     SizeX 600
     OffsetRight -600
-    SizeY 0
-    OffsetBottom 0
+    SizeY -400
+    OffsetBottom 200
     Alignment 1 0
    }
    "Fill Origin" Center
    {
     OverlayWidgetClass "{5B2895A99EA975C6}" {
-     Name "Overlay0"
+     Name "GarageTopOverlay"
      Slot LayoutSlot "{5B2895A99EA9753C}" {
-      Padding 20 5 20 5
+      Padding 20 0 20 0
+      FillWeight 15
      }
      {
       ImageWidgetClass "{5B2895A999645B43}" {
@@ -46,7 +47,7 @@ FrameWidgetClass {
         HorizontalAlign 3
         VerticalAlign 3
        }
-       Color 0.102 0.102 0.102 1
+       Color 0.001 0.03 0.063 1
       }
       VerticalLayoutWidgetClass "{5CB522779851E0A0}" {
        Name "VerticalLayout0"
@@ -55,36 +56,26 @@ FrameWidgetClass {
         VerticalAlign 3
        }
        {
-        SizeLayoutWidgetClass "{5B2895A97A2EA133}" {
-         Name "SizeLayout1"
-         Slot LayoutSlot "{5CB52274B87CB920}" {
-          HorizontalAlign 3
-          VerticalAlign 1
-          SizeMode Auto
+        TextWidgetClass "{5B2895A971D1EC67}" {
+         Name "Title"
+         Slot LayoutSlot "{5CC71E6956F16D33}" {
+          SizeMode Fill
+          FillWeight 60
          }
-         AllowHeightOverride 1
-         HeightOverride 75
-         {
-          TextWidgetClass "{5B2895A971D1EC67}" {
-           Name "Title"
-           Slot AlignableSlot "{5B2895A971D1F395}" {
-            HorizontalAlign 3
-            VerticalAlign 3
-           }
-           Text "Garage"
-           "Font Size" 45
-           "Horizontal Alignment" Center
-           "Vertical Alignment" Center
-           FontProperties FontProperties "{5B289E0A15CED1F3}" {
-            Bold 1
-           }
-          }
+         Text "Garage"
+         "Font Size" 45
+         "Horizontal Alignment" Center
+         "Vertical Alignment" Center
+         FontProperties FontProperties "{5B289E0A15CED1F3}" {
+          Bold 1
          }
         }
         HorizontalLayoutWidgetClass "{5CB52277A9EEC327}" {
          Name "HorizontalLayout0"
          Slot LayoutSlot "{5CB52277A9EEC3C5}" {
           Padding 0 0 0 5
+          SizeMode Fill
+          FillWeight 40
          }
          Clipping False
          "Fill Origin" Center
@@ -119,18 +110,65 @@ FrameWidgetClass {
       }
      }
     }
-    VerticalLayoutWidgetClass "{5B2895AE2777B1A1}" {
-     Prefab "{5ACF360B0FFF814C}"
-     Name "GarageVehicleList"
-     Slot LayoutSlot "{5B2895AEACA9424D}" {
-      SizeMode Auto
+    SizeLayoutWidgetClass "{5CC71E6DD6E4C07D}" {
+     Name "SizeLayout0"
+     Slot LayoutSlot "{5CC71E6DD6E4C05E}" {
+      Padding 20 0 20 0
+      FillWeight 70
      }
-     "Fill Origin" Center
+     Clipping True
+     AllowMinDesiredHeight 1
+     MinDesiredHeight 170
+     AllowMaxDesiredHeight 1
+     MaxDesiredHeight 460
+     {
+      OverlayWidgetClass "{5CC71E6D4BD010FE}" {
+       Name "GarageContentOverlay"
+       Slot AlignableSlot "{5CC71E6DD6EEDEC1}" {
+        HorizontalAlign 3
+        VerticalAlign 3
+       }
+       {
+        ImageWidgetClass "{5CC71E6D4D72CB78}" {
+         Name "ScrollBackground"
+         Slot OverlayWidgetSlot "{5CC71E6D4D72CB5F}" {
+          HorizontalAlign 3
+          VerticalAlign 3
+         }
+         Color 0.065 0.065 0.065 1
+        }
+        ScrollLayoutWidgetClass "{5CC71E6FCE6182E6}" {
+         Name "ScrollLayout0"
+         Slot OverlayWidgetSlot "{5CC71E6956F16DE3}" {
+          HorizontalAlign 3
+          VerticalAlign 3
+          Padding 0 0 0 0
+         }
+         components {
+          SCR_GamepadScrollComponent "{5CC71E6E277EE0EC}" {
+          }
+         }
+         {
+          VerticalLayoutWidgetClass "{5B2895AE2777B1A1}" {
+           Prefab "{5ACF360B0FFF814C}"
+           Name "GarageVehicleList"
+           Slot AlignableSlot "{5CC71E6FFB19C69C}" {
+            HorizontalAlign 3
+            VerticalAlign 3
+            Padding 10 10 10 10
+           }
+          }
+         }
+        }
+       }
+      }
+     }
     }
     ButtonWidgetClass "{5B2895A90A2788D7}" {
      Name "ExitButton"
      Slot LayoutSlot "{5CB6E24D13C330C8}" {
-      Padding 20 5 20 5
+      Padding 20 0 20 5
+      FillWeight 15
      }
      Color 1 1 1 0
      components {
@@ -158,20 +196,11 @@ FrameWidgetClass {
         VerticalAlign 3
        }
        {
-        ImageWidgetClass "{5CB5227D75751F22}" {
-         Name "Border"
-         Slot OverlayWidgetSlot "{5CB5227F01DE7643}" {
-          HorizontalAlign 3
-          VerticalAlign 3
-         }
-         Color 0.305 0.305 0.305 1
-        }
         OverlayWidgetClass "{5CB53A73A25DDBB5}" {
          Name "Overlay0"
          Slot OverlayWidgetSlot "{5CB53A73A25DDB8E}" {
           HorizontalAlign 3
           VerticalAlign 3
-          Padding 5 5 5 5
          }
          {
           ImageWidgetClass "{5CB53A73BB3E865B}" {
@@ -180,7 +209,7 @@ FrameWidgetClass {
             HorizontalAlign 3
             VerticalAlign 3
            }
-           Color 0.102 0.102 0.102 1
+           Color 0.001 0.03 0.063 1
           }
           TextWidgetClass "{5B2895A9053EC603}" {
            Name "Text0"
@@ -196,6 +225,52 @@ FrameWidgetClass {
            FontProperties FontProperties "{5B289E0A17B675C0}" {
             Bold 1
            }
+          }
+         }
+        }
+        OverlayWidgetClass "{5CC71E69C8DA97D8}" {
+         Name "Border"
+         Slot OverlayWidgetSlot "{5CC71E69C8DA9633}" {
+          HorizontalAlign 3
+          VerticalAlign 3
+         }
+         Color 0.397 0.397 0.397 1
+         {
+          ImageWidgetClass "{5CB5227D75751F22}" {
+           Name "Border3"
+           Slot OverlayWidgetSlot "{5CB5227F01DE7643}" {
+            HorizontalAlign 3
+            VerticalAlign 0
+           }
+           "Inherit Color" 1
+           Size 5 5
+          }
+          ImageWidgetClass "{5CC71E69CD803019}" {
+           Name "Border0"
+           Slot OverlayWidgetSlot "{5CB5227F01DE7643}" {
+            HorizontalAlign 3
+            VerticalAlign 2
+           }
+           "Inherit Color" 1
+           Size 5 5
+          }
+          ImageWidgetClass "{5CC71E69CDE0ADA1}" {
+           Name "Border1"
+           Slot OverlayWidgetSlot "{5CB5227F01DE7643}" {
+            HorizontalAlign 0
+            VerticalAlign 3
+           }
+           "Inherit Color" 1
+           Size 5 5
+          }
+          ImageWidgetClass "{5CC71E69CC588FF0}" {
+           Name "Border2"
+           Slot OverlayWidgetSlot "{5CB5227F01DE7643}" {
+            HorizontalAlign 2
+            VerticalAlign 3
+           }
+           "Inherit Color" 1
+           Size 5 5
           }
          }
         }
