@@ -7,7 +7,7 @@ enum EL_LogLevel
 
 class EL_Logger
 {
-	static protected const EL_LogLevel m_eMaxLogLevel = EL_LogLevel.DEBUG;
+	static protected const EL_LogLevel m_eMaxLogLevel = EL_LogLevel.NORMAL;
 	
 	//------------------------------------------------------------------------------------------------
 	static void Log(string prefix, string log, EL_LogLevel logLevel = EL_LogLevel.NORMAL)
