@@ -33,7 +33,7 @@ class EL_CharacterBankManagerComponent : ScriptGameComponent
 		if (success)
 		{
 			Print("[EL-Bank] Transaction Success!");
-			Ask_UpdateProxyAccount();
+			Ask_SyncProxyAccount();
 		}
 		else
 			Print("[EL-Bank] Transaction Error!");
@@ -56,6 +56,8 @@ class EL_CharacterBankManagerComponent : ScriptGameComponent
 	[RplRpc(RplChannel.Reliable, RplRcver.Owner)]
 	void Rpc_DoSetLocalBankAccount(EL_BankAccount account, array<string> transactionComments)
 	{
+		Print("[EL-Bank] Received bank account update");
+		
 		//Update account
 		m_LocalBankAccount = account;
 		
@@ -65,7 +67,7 @@ class EL_CharacterBankManagerComponent : ScriptGameComponent
 			m_LocalBankAccount.m_aTransactions[i].m_sComment = comment;
 		}
 		
-		Print("[EL-Bank] Received bank account update");
+		
 		//Update open bank ui
 		EL_BankMenu bankMenu = EL_BankMenu.Cast(GetGame().GetMenuManager().FindMenuByPreset(ChimeraMenuPreset.EL_BankMenu));
 		if (bankMenu)
@@ -73,7 +75,7 @@ class EL_CharacterBankManagerComponent : ScriptGameComponent
 	}
 	
 	//------------------------------------------------------------------------------------------------
-	void Ask_UpdateProxyAccount()
+	void Ask_SyncProxyAccount()
 	{
 		//Workaround to send strings
 		array<string> transactionComments = {};
@@ -81,22 +83,26 @@ class EL_CharacterBankManagerComponent : ScriptGameComponent
 		{
 			transactionComments.Insert(transaction.m_sComment);
 		}
+		Print("[EL-Bank] Sending Account to " + EL_Utils.GetPlayerName(GetOwner()));
 		Rpc(Rpc_DoSetLocalBankAccount, m_LocalBankAccount, transactionComments);
+		
 	}
 	
 	//------------------------------------------------------------------------------------------------
 	//! Called from Authority
 	void LoadOrCreateAccount()
 	{
-		//If Account was already loaded by persistency update proxy
+		//Check if account was loaded by persistency
 		if (m_LocalBankAccount)
+			Print("[EL-Bank] Loaded Bank Account from DB for " + EL_Utils.GetPlayerName(GetOwner()));
+		else
 		{
-			Ask_UpdateProxyAccount();
-			return;
+			Print("[EL-Bank] Created new Bank Account for " + EL_Utils.GetPlayerName(GetOwner()));
+			EL_BankAccount newBankAccount = EL_BankAccount.Create(EL_Utils.GetPlayerUID(GetOwner()), m_iStartAccountBalance);
+			SetAccount(newBankAccount);
 		}
-		
-		Print("[EL-Bank] Server created new Bank Account for " + EL_Utils.GetPlayerName(GetOwner()));
-		SetAccount(EL_BankAccount.Create(EL_Utils.GetPlayerUID(GetOwner()), m_iStartAccountBalance));
+		//If loaded or newly created sync with character owner
+		Ask_SyncProxyAccount();
 	}
 	
 	//------------------------------------------------------------------------------------------------
