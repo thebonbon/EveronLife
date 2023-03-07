@@ -92,17 +92,15 @@ class EL_CharacterBankManagerComponent : ScriptGameComponent
 	//! Called from Authority
 	void LoadOrCreateAccount()
 	{
-		//Check if account was loaded by persistency
-		if (m_LocalBankAccount)
-			Print("[EL-Bank] Loaded Bank Account from DB for " + EL_Utils.GetPlayerName(GetOwner()));
-		else
+		EL_PlayerAccount account = EL_PlayerAccountManager.GetInstance().GetFromCache(EL_Utils.GetPlayerUID(GetOwner()));
+		if (account)
 		{
-			Print("[EL-Bank] Created new Bank Account for " + EL_Utils.GetPlayerName(GetOwner()));
-			EL_BankAccount newBankAccount = EL_BankAccount.Create(EL_Utils.GetPlayerUID(GetOwner()), m_iStartAccountBalance);
-			SetAccount(newBankAccount);
+			Print("Loading bank account.");
+			SetAccount(account.m_BankAccount);
+			Ask_SyncProxyAccount();
+			
 		}
-		//If loaded or newly created sync with character owner
-		Ask_SyncProxyAccount();
+		Print("Error loading bank acocunt");
 	}
 	
 	//------------------------------------------------------------------------------------------------

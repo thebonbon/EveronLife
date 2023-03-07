@@ -23,12 +23,17 @@ SCR_ChimeraCharacter {
      }
      EL_EquipedWeaponStorageComponentSaveData "{5A2EDE88639C8657}" {
      }
-     EL_CharacterBankAccountComponentSaveData "{5CC2B5009A85534D}" {
-     }
     }
    }
   }
   EL_RpcSenderComponent "{5C69136249B3156D}" {
+  }
+  ActionsManagerComponent "{520EA1D2F659CE02}" {
+   additionalActions {
+    SCR_LootDeadBodyAction "{529A9D939CD27B4C}" {
+     Duration 10
+    }
+   }
   }
  }
 }

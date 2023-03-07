@@ -83,6 +83,13 @@ EL_GameModeRoleplay {
   }
   ScriptedChatEntity ScriptedChatEntity : "{E67EAC45379783C0}Prefabs/MP/Modes/Roleplay/Chat_Roleplay.et" {
    ID "5CC4AA253F69E19E"
+   Channels {
+    LocalChatChannel "{5CC4AA25DBFF3B65}" {
+    }
+    AdminChatChannel "{5CC54D7550251DE7}" {
+     "Channel name" "Admin"
+    }
+   }
   }
   SCR_GarbageManager GarbageManager : "{9B883A7D8EBB282A}Prefabs/MP/Managers/GarbageManager.et" {
    ID "5CC4AA253F69E1D7"

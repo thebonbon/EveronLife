@@ -1,17 +1,5 @@
 EL_GameModeRoleplay : "{03913608C59017A3}Prefabs/MP/Modes/Roleplay/GameMode_Roleplay.et" {
  coords 0 0 0
- {
-  ScriptedChatEntity {
-   ID "5CC4AA253F69E19E"
-   Channels {
-    LocalChatChannel "{5CC4AA25DBFF3B65}" {
-    }
-    AdminChatChannel "{5CC54D7550251DE7}" {
-     "Channel name" "Admin"
-    }
-   }
-  }
- }
 }
 EL_SpawnPoint Gobal_Spawn {
  coords 87.322 0 129.621
