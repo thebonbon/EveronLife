@@ -5,9 +5,6 @@ class EL_CharacterBankManagerComponentClass: ScriptGameComponentClass
 
 class EL_CharacterBankManagerComponent : ScriptGameComponent
 {
-	[Attribute(defvalue:"1000", UIWidgets.EditBox, desc: "Starting account balance")]
-	protected int m_iStartAccountBalance;
-
 	ref EL_BankAccount m_LocalBankAccount;
 
 	//------------------------------------------------------------------------------------------------
@@ -93,14 +90,14 @@ class EL_CharacterBankManagerComponent : ScriptGameComponent
 	void LoadOrCreateAccount()
 	{
 		EL_PlayerAccount account = EL_PlayerAccountManager.GetInstance().GetFromCache(EL_Utils.GetPlayerUID(GetOwner()));
-		if (account)
+		if (account && account.m_BankAccount)
 		{
-			Print("Loading bank account.");
+			Print("[EL-Bank] Found bank account.. Sending to Owner");
 			SetAccount(account.m_BankAccount);
 			Ask_SyncProxyAccount();
-			
 		}
-		Print("Error loading bank acocunt");
+		else
+			Print("[EL-Bank] Error loading bank Account. No Bank account found in player account");
 	}
 	
 	//------------------------------------------------------------------------------------------------
