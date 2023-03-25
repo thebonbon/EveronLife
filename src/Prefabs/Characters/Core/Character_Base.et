@@ -32,7 +32,10 @@ SCR_ChimeraCharacter {
    additionalActions {
     SCR_LootDeadBodyAction "{529A9D939CD27B4C}" {
      Duration 10
+    }
+   }
   }
+
   SCR_BaseHUDComponent "{520EA1D2DB118134}" {
    InfoDisplays {
     EL_BetaHud "{5CDCF78652BDD9FF}" {
