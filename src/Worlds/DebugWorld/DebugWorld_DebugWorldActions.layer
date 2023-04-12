@@ -2,6 +2,40 @@ GenericEntity {
  coords 101.828 -0.001 135
  {
   GenericEntity : "{33882C61BA9F0F90}Prefabs/Props/Civilian/Globe_01.et" {
+   components {
+    ActionsManagerComponent "{5D1921173C51A927}" {
+     ActionContexts {
+      UserActionContext "{5D1921173CDC4C01}" {
+       ContextName "default"
+       Position PointInfo "{5D19211753890B5E}" {
+       }
+       Radius 3.438
+      }
+     }
+     additionalActions {
+      EL_WhitelistAction "{5D192117363695A7}" {
+       ParentContextList {
+        "default"
+       }
+       UIInfo UIInfo "{5D19211749D67CDF}" {
+        Name "Police Action"
+       }
+       m_eWhitelistOnlyType POLICE
+      }
+      EL_WhitelistAction "{5D192117400C7322}" {
+       ParentContextList {
+        "default"
+       }
+       UIInfo UIInfo "{5D19211742E2BDC8}" {
+        Name "Medic Action"
+       }
+       m_eWhitelistOnlyType MEDIC
+      }
+     }
+    }
+    RplComponent "{5D1921176298D576}" {
+    }
+   }
    coords 0.476 0.899 0.202
   }
   SCR_DestructibleEntity : "{622F9989DDC4865B}PrefabLibrary/Props/Civilian/Recreation/TableRecreation_01/TableRecreation_01.et" {
