@@ -4,6 +4,7 @@ EL_GameModeRoleplay {
   EL_PersistenceManagerComponent "{59D28944F1C3532E}" {
   }
   EL_RespawnHandlerComponent "{5A10698ABECAD262}" {
+   Enabled 0
   }
   EL_RespawnSytemComponent "{5A10698A884816E6}" {
    m_aDefaultCharacterPrefabs {
@@ -28,6 +29,18 @@ EL_GameModeRoleplay {
     }
     EL_DefaultLoadoutItem "{5B04BEA6507A8381}" {
      m_rPrefab "{C7923961D7235D70}Prefabs/Characters/Footwear/CombatBoots_Soviet_01.et"
+    }
+   }
+  }
+  EL_WhitelistRespawnHandlerComponent "{5D192114A457B65C}" {
+   m_aWhitelists {
+    EL_Whitelist "{5D192114B1656A41}" {
+     m_eType POLICE
+     m_sWhitelistFilePath "$profile:police_whitelist.txt"
+    }
+    EL_Whitelist "{5D192114B290D524}" {
+     m_eType MEDIC
+     m_sWhitelistFilePath "$profile:medic_whitelist.txt"
     }
    }
   }
