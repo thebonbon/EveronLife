@@ -2,7 +2,10 @@ class EL_BuyItemAction : ScriptedUserAction
 {
 	[Attribute("1", UIWidgets.EditBox, "Amount of items to buy at once")]
 	protected int m_iBuyAmount;
-
+	
+	[Attribute("0", UIWidgets.Flags, "Action can only be used with this whitelist", "", ParamEnumArray.FromEnum(EL_WhitelistType) )]
+	protected EL_WhitelistType m_eWhitelistOnlyType;
+	
 	protected EL_ItemPrice m_ItemPriceConfig;
 	protected ResourceName m_BuyablePrefab;
 
@@ -64,6 +67,20 @@ class EL_BuyItemAction : ScriptedUserAction
 			SetCannotPerformReason("Inventory full");
 			return false;
 		}
+		
+		
+		//Check if Whitelist only
+		//No Whitelist specified
+		if (m_eWhitelistOnlyType != 0)
+		{
+			//Check if user has at least one whitelist flag set
+			EL_PlayerWhitelistComponent whitelistComponent = EL_PlayerWhitelistComponent.Cast(user.FindComponent(EL_PlayerWhitelistComponent));
+			if(!whitelistComponent.HasWhitelist(m_eWhitelistOnlyType))
+			{
+				SetCannotPerformReason("Not allowed");
+				return false;
+			}
+		}	
 		
 		return true;
 	}

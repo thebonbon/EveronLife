@@ -3,6 +3,9 @@ class EL_SellItemAction : ScriptedUserAction
 	[Attribute("1", UIWidgets.EditBox, "Amount of items to sell at once (0 to hide | -1 for all in inv)")]
 	protected int m_iSellAmount;
 	protected int m_iActualSellAmount;
+	
+	[Attribute("0", UIWidgets.Flags, "Action can only be used with this whitelist", "", ParamEnumArray.FromEnum(EL_WhitelistType) )]
+	protected EL_WhitelistType m_eWhitelistOnlyType;
 
 	protected ResourceName m_SellablePrefab;
 	protected EL_ItemPrice m_ItemPriceConfig;
@@ -38,6 +41,19 @@ class EL_SellItemAction : ScriptedUserAction
 			m_iActualSellAmount = EL_InventoryUtils.GetAmount(user, m_SellablePrefab);
 
 		int amountInInv = EL_InventoryUtils.GetAmount(user, m_SellablePrefab);
+		
+		//Check if Whitelist only
+		//No Whitelist specified
+		if (m_eWhitelistOnlyType != 0)
+		{
+			//Check if user has at least one whitelist flag set
+			EL_PlayerWhitelistComponent whitelistComponent = EL_PlayerWhitelistComponent.Cast(user.FindComponent(EL_PlayerWhitelistComponent));
+			if(!whitelistComponent.HasWhitelist(m_eWhitelistOnlyType))
+			{
+				SetCannotPerformReason("Not allowed");
+				return false;
+			}
+		}
 		return (m_SellablePrefab && m_ItemPriceConfig && amountInInv != 0 && amountInInv >= m_iActualSellAmount);
 	}
 
