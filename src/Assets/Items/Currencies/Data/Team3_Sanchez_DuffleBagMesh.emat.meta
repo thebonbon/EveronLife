@@ -1,0 +1,15 @@
+MetaFileClass {
+ Name "{45F881A95F1D5CAC}Assets/Items/Currencies/Data/Team3_Sanchez_DuffleBagMesh.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

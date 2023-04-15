@@ -72,3 +72,6 @@ GenericEntity {
   }
  }
 }
+GenericEntity MoneyStack_5C76F46B070A1558 : "{5439738849229352}Prefabs/Items/Currencies/MoneyStack.et" {
+ coords 101.667 0.898 135.286
+}

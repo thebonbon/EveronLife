@@ -1,3 +1,27 @@
+//------------------------------------------------------------------------------------------------
+class EL_StackTitle : BaseContainerCustomTitle
+{
+	override bool _WB_GetCustomTitle(BaseContainer source, out string title)
+	{
+		int amount;
+		source.Get("m_iQuantityAmount", amount);
+		title = amount.ToString();
+		return true;
+	}
+};
+
+//------------------------------------------------------------------------------------------------
+[BaseContainerProps(), EL_StackTitle()]
+class EL_QuantityStack
+{
+	[Attribute("0", UIWidgets.Range, "Amount for this stack model")]
+	int m_iQuantityAmount;
+	
+	[Attribute(ResourceName.Empty, UIWidgets.ResourcePickerThumbnail, "Model to use for given amount", "xob")]
+	ResourceName m_StackModel;
+}
+
+//------------------------------------------------------------------------------------------------
 [ComponentEditorProps(category: "EveronLife/Feature/Quantity", description: "Virtual quantities for inventory items.")]
 class EL_QuantityComponentClass : ScriptComponentClass
 {
@@ -11,6 +35,7 @@ class EL_QuantityComponentClass : ScriptComponentClass
 	}
 }
 
+//------------------------------------------------------------------------------------------------
 class EL_QuantityComponent : ScriptComponent
 {
 	protected static ref map<IEntity, bool> s_mQuantityTransferIntents;
@@ -18,8 +43,16 @@ class EL_QuantityComponent : ScriptComponent
 	[RplProp(onRplName: "OnQuantityChanged")]
 	protected int m_iQuantity = 1;
 
+	[Attribute(defvalue: "1", desc: "Sets the inital Quantity", params: "0 2000000000 1")]
+	int m_iInitQuantity;
+	
+	[Attribute("", UIWidgets.Object, "List of stacks", category: "Quantity")]
+	ref array<ref EL_QuantityStack> m_aQuantityStacks;
+	
 	protected ref ScriptInvoker m_pOnQuantityChanged;
-
+	protected VObject m_InitalModel;
+	
+	
 	//------------------------------------------------------------------------------------------------
 	int GetMaxQuantity()
 	{
@@ -80,7 +113,7 @@ class EL_QuantityComponent : ScriptComponent
 		if ((quantity < 0) || (quantity > GetMaxQuantity())) return false;
 
 		m_iQuantity = quantity;
-
+		
 		if (quantity == 0)
 		{
 			SCR_EntityHelper.DeleteEntityAndChildren(GetOwner());
@@ -89,7 +122,7 @@ class EL_QuantityComponent : ScriptComponent
 		{
 			Replication.BumpMe();
 		}
-
+		
 		OnQuantityChanged(); // Call on authority
 
 		return true;
@@ -99,6 +132,7 @@ class EL_QuantityComponent : ScriptComponent
 	protected void OnQuantityChanged()
 	{
 		RefreshInventory(GetOwner());
+		UpdateStackModel();
 		if (m_pOnQuantityChanged) m_pOnQuantityChanged.Invoke(this);
 	}
 
@@ -109,6 +143,20 @@ class EL_QuantityComponent : ScriptComponent
 		return m_pOnQuantityChanged;
 	}
 
+	//------------------------------------------------------------------------------------------------
+	void UpdateStackModel()
+	{
+		VObject stackModel = m_InitalModel;
+		foreach (EL_QuantityStack stack : m_aQuantityStacks)
+		{
+			if (stack.m_StackModel && m_iQuantity >= stack.m_iQuantityAmount)
+			{
+				stackModel = Resource.Load(stack.m_StackModel).GetResource().ToVObject();
+			}	
+		}
+		GetOwner().SetObject(stackModel, "");
+	}
+	
 	//------------------------------------------------------------------------------------------------
 	bool CanCombine(notnull EL_QuantityComponent quantitySource)
 	{
@@ -311,6 +359,19 @@ class EL_QuantityComponent : ScriptComponent
 	{
 		SCR_InventoryMenuUI inventoryMenu = SCR_InventoryMenuUI.EL_GetCurrentInstance();
 		if (inventoryMenu) inventoryMenu.EL_QuantityRefresh(item);
+	}
+	
+	//------------------------------------------------------------------------------------------------
+	override void EOnInit(IEntity owner)
+	{
+		m_InitalModel = owner.GetVObject();
+		SetQuantity(m_iInitQuantity);
+	}
+	
+	//------------------------------------------------------------------------------------------------
+	override void OnPostInit(IEntity owner)
+	{
+		SetEventMask(owner, EntityEvent.INIT);
 	}
 }
 

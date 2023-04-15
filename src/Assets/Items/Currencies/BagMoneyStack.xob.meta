@@ -1,0 +1,79 @@
+MetaFileClass {
+ Name "{5D7478A3DE955EA2}Assets/Items/Currencies/BagMoneyStack.xob"
+ Configurations {
+  FBXResourceClass PC {
+   MaterialAssigns {
+    MaterialAssignClass "{5B0C938862E68FE5}" {
+     SourceMaterial "Team3_Sanchez_DuffleBagEdge"
+     AssignedMaterial "{B6FC61E9022E536B}Assets/Items/Currencies/Data/Team3_Sanchez_DuffleBagEdge.emat"
+    }
+    MaterialAssignClass "{5B0C938862E68FD3}" {
+     SourceMaterial "Team3_Sanchez_DuffleBagBody"
+     AssignedMaterial "{C7AF5D7B48E2BEB8}Assets/Items/Currencies/Data/Team3_Sanchez_DuffleBagBody.emat"
+    }
+    MaterialAssignClass "{5B0C938862E68FCF}" {
+     SourceMaterial "Team3_Sanchez_DuffleBagMesh"
+     AssignedMaterial "{45F881A95F1D5CAC}Assets/Items/Currencies/Data/Team3_Sanchez_DuffleBagMesh.emat"
+    }
+    MaterialAssignClass "{5B0C938862E68FC1}" {
+     SourceMaterial "lambert1"
+     AssignedMaterial "{0FED004A2AB57EC8}Assets/Items/Currencies/Data/lambert1.emat"
+    }
+    MaterialAssignClass "{5B0C938862E68E3D}" {
+     SourceMaterial "Team3_Sanchez_Zipper"
+     AssignedMaterial "{22D31B05EC20895F}Assets/Items/Currencies/Data/Team3_Sanchez_Zipper.emat"
+    }
+    MaterialAssignClass "{5B0C938862E68E38}" {
+     SourceMaterial "MoneyStack"
+     AssignedMaterial "{F1470E3E995AE04F}Assets/Items/Currencies/Data/MoneyStack.emat"
+    }
+   }
+   MeshParams {
+    MeshParam Duffle_Bag {
+    }
+    MeshParam MoneyStack {
+    }
+    MeshParam "MoneyStack.001" {
+    }
+    MeshParam "MoneyStack.002" {
+    }
+    MeshParam "MoneyStack.003" {
+    }
+    MeshParam "MoneyStack.004" {
+    }
+    MeshParam "MoneyStack.005" {
+    }
+    MeshParam "MoneyStack.006" {
+    }
+   }
+   GeometryParams {
+    GeometryParam UBX_box {
+     LayerPreset "ItemFireView"
+     SurfaceProperties {
+      "{13581C35484F3000}Common/Materials/Game/fabric.gamemat"
+     }
+     Mass 0
+     Margin 0
+    }
+   }
+   Common TXOCommonClass "{5B0C938862C0ADF9}" : "{0877E7C4BB2B2C9A}Configs/System/ResourceTypes/PC/MeshObjectCommon.conf" {
+   }
+  }
+  FBXResourceClass XBOX_ONE : PC {
+   Common TXOCommonClass "{5B0C938862C0AC4F}" : "{9D5B6207F7628CE2}Configs/System/ResourceTypes/XBOX_ONE/MeshObjectCommon.conf" {
+   }
+  }
+  FBXResourceClass XBOX_SERIES : PC {
+   Common TXOCommonClass "{5B0C938862C0AC99}" : "{DD9F02115C764647}Configs/System/ResourceTypes/XBOX_SERIES/MeshObjectCommon.conf" {
+   }
+  }
+  FBXResourceClass PS4 : PC {
+   Common TXOCommonClass "{5B0C938862C0ACFA}" : "{53EC476BC921D99A}Configs/System/ResourceTypes/PS4/MeshObjectCommon.conf" {
+   }
+  }
+  FBXResourceClass HEADLESS : PC {
+   Common TXOCommonClass "{5B0C938862C0AF5C}" : "{3A5B3356978039E8}Configs/System/ResourceTypes/HEADLESS/MeshObjectCommon.conf" {
+   }
+  }
+ }
+}

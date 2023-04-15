@@ -1,6 +1,31 @@
 class EL_Utils
 {
 	//------------------------------------------------------------------------------------------------
+	static ResourceName GetPrefabAttributeResourceName(ResourceName prefab, string attributeName, string componentClassname) 
+	{
+		BaseContainer container = SCR_BaseContainerTools.FindComponentSource(Resource.Load(prefab), componentClassname);
+		ResourceName resourceName;
+		container.Get(attributeName, resourceName);
+		return resourceName;
+	}
+	
+	//------------------------------------------------------------------------------------------------
+	static void SetEntityModelFromPrefab(IEntity target, ResourceName prefab) 
+	{			
+		Resource resource = Resource.Load(GetPrefabAttributeResourceName(prefab, "MeshObject", "Object"));
+		if (!resource)
+			return;
+		
+		BaseResourceObject baseResource = resource.GetResource();
+		if (baseResource)
+		{
+			VObject asset = baseResource.ToVObject();
+			if (asset)
+				target.SetObject(asset, "");
+		}
+	}
+	
+	//------------------------------------------------------------------------------------------------
 	//! Gets the Bohemia UID
 	//! \param playerId Index of the player inside player manager
 	//! \return the uid as string
