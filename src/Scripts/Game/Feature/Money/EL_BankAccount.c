@@ -97,7 +97,6 @@ class EL_BankAccount
 		if (!TryWithdraw(amount, comment))
 			return false;
 
-		//EL_GlobalBankAccountManager.GetInstance().GetPlayerBankAccount(targetAccount).AddBalance(amount);
 
 		return true;
 	}

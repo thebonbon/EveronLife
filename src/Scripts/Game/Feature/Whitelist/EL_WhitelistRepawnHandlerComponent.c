@@ -24,13 +24,15 @@ class EL_WhitelistRespawnHandlerComponent : EL_RespawnHandlerComponent
 	//------------------------------------------------------------------------------------------------
 	override void LoadPlayerData(int playerId, string playerUid)
 	{
-		if (!VerifyPlayer(EL_Utils.GetPlayerUID(playerId), EL_WhitelistType.CONNECT))
+		if (WhitelistExists(EL_WhitelistType.CONNECT))
 		{
-			GetGame().GetPlayerManager().KickPlayer(playerId, PlayerManagerKickReason.KICK, 10);
-			return;
+			if (!VerifyPlayer(EL_Utils.GetPlayerUID(playerId), EL_WhitelistType.CONNECT))
+			{
+				GetGame().GetPlayerManager().KickPlayer(playerId, PlayerManagerKickReason.KICK, 10);
+				return;
+			}
+			PrintFormat("[EL-WHITELIST] Allowed UUID: %1 to join", EL_Utils.GetPlayerUID(playerId));
 		}
-		PrintFormat("[EL-WHITELIST] Allowed UUID: %1 to join", EL_Utils.GetPlayerUID(playerId));
-		
 		super.LoadPlayerData(playerId, playerUid);
 	}
 	

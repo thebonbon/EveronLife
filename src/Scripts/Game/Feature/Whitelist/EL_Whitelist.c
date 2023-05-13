@@ -45,7 +45,7 @@ class EL_Whitelist
 		}
 
 		PrintFormat("[%1-WHITELIST] Loaded " + m_aWhitelistUuids.Count() + " UUIDs from file.", SCR_Enum.GetEnumName(EL_WhitelistType, m_eType));
-		whitelistFile.CloseFile();
+		whitelistFile.Close();
 	}
 
 	//------------------------------------------------------------------------------------------------
@@ -59,7 +59,7 @@ class EL_Whitelist
 
 		FileHandle whitelistFile = FileIO.OpenFile(m_sWhitelistFilePath, FileMode.APPEND);
 		whitelistFile.FPrintln(uuid);
-		whitelistFile.CloseFile();
+		whitelistFile.Close();
 
 		PrintFormat("[%1-WHITELIST] Added " + uuid + " to file.", SCR_Enum.GetEnumName(EL_WhitelistType, m_eType));
 
@@ -83,7 +83,7 @@ class EL_Whitelist
 		{
 			whitelistFile.FPrintln(uid);
 		}
-		whitelistFile.CloseFile();
+		whitelistFile.Close();
 		
 		PrintFormat("[%1-WHITELIST] Removed %2 from file.", SCR_Enum.GetEnumName(EL_WhitelistType, m_eType), uuid);
 	}

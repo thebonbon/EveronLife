@@ -5,6 +5,7 @@ class EL_PlayerWhitelistComponentClass : ScriptComponentClass
 
 class EL_PlayerWhitelistComponent : ScriptComponent
 {
+	bool m_bHideChat;
 	protected EL_WhitelistType m_ePlayerWhitelists;
 
 	//------------------------------------------------------------------------------------------------
