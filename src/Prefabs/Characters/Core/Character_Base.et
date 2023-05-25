@@ -35,7 +35,6 @@ SCR_ChimeraCharacter {
     }
    }
   }
-
   SCR_BaseHUDComponent "{520EA1D2DB118134}" {
    InfoDisplays {
     EL_BetaHud "{5CDCF78652BDD9FF}" {

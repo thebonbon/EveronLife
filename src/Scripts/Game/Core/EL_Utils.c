@@ -1,4 +1,4 @@
-class EL_Utils
+class EL_Utils : EPF_Utils
 {
 	static ResourceName PLACEHOLDER_ICON = "{AC7E384FF9D8016A}Common/Textures/placeholder_BCR.edds";
 	static ref RandomGenerator EL_RANDOM_GENERATOR = new RandomGenerator();
@@ -329,14 +329,14 @@ class EL_Utils
 	//------------------------------------------------------------------------------------------------
 	static int MaxInt(int a, int b)
 	{
-		if(a > b) return a;
+		if (a > b) return a;
 		return b;
 	}
 
 	//------------------------------------------------------------------------------------------------
 	static int MinInt(int a, int b)
 	{
-		if(a < b) return a;
+		if (a < b) return a;
 		return b;
 	}
 
@@ -349,17 +349,6 @@ class EL_Utils
 			if (type.IsInherited(candiate)) return true;
 		}
 		return false;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! Gets the current Unixtime UTC
-	//! \return integer representation of the time
-	static int GetUnixTime()
-	{
-		int year, month, day, hour, minute, second;
-		System.GetYearMonthDayUTC(year, month, day);
-		System.GetHourMinuteSecondUTC(hour, minute, second);
-		return (year - 1970) * 31556926 + month * 2629743 + day * 86400 + hour * 3600 + minute * 60 + second;
 	}
 
 	//------------------------------------------------------------------------------------------------
@@ -412,4 +401,4 @@ class EL_RefArrayCaster<Class TSourceType, Class TResultType>
 
 		return castedResult;
 	}
-}
+};
