@@ -22,7 +22,7 @@ class EL_WhitelistRespawnHandlerComponent : EL_RespawnHandlerComponent
 	}
 
 	//------------------------------------------------------------------------------------------------
-	override void LoadPlayerData(int playerId, string playerUid)
+	override void OnUidAvailable(int playerId)
 	{
 		if (WhitelistExists(EL_WhitelistType.CONNECT))
 		{
@@ -33,7 +33,7 @@ class EL_WhitelistRespawnHandlerComponent : EL_RespawnHandlerComponent
 			}
 			PrintFormat("[EL-WHITELIST] Allowed UUID: %1 to join", EL_Utils.GetPlayerUID(playerId));
 		}
-		super.LoadPlayerData(playerId, playerUid);
+		super.OnUidAvailable(playerId);
 	}
 	
 	//------------------------------------------------------------------------------------------------

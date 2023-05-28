@@ -57,8 +57,6 @@ class EL_PlayerAccount : EPF_PersistentScriptedState
 	static EL_PlayerAccount Create(string playerUid)
 	{
 		EL_PlayerAccount account();
-		account.m_sId = playerUid;
-		account.m_aCharacterIds = new array<string>();
 		account.m_BankAccount = EL_BankAccount.Create(playerUid, 1000);
 		account.SetPersistentId(playerUid);
 		return account;

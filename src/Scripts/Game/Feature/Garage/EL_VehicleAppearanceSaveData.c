@@ -1,13 +1,18 @@
-[EL_ComponentSaveDataType(EL_VehicleAppearanceSaveData, EL_VehicleAppearanceComponent, "VehicleAppearance"), BaseContainerProps()]
-class EL_VehicleAppearanceSaveData : EL_ComponentSaveDataBase
+[EPF_ComponentSaveDataType(EL_VehicleAppearanceComponent), BaseContainerProps()]
+class EL_VehicleAppearanceSaveDataClass : EPF_ComponentSaveDataClass
+{
+};
+
+[EDF_DbName.Automatic()]
+class EL_VehicleAppearanceSaveData : EPF_ComponentSaveData
 {
 	protected int m_iVehicleColor = -1;
 	protected ResourceName m_VehicleTexture;
 
 	//------------------------------------------------------------------------------------------------
-	override bool ReadFrom(notnull GenericComponent worldEntityComponent)
+	override EPF_EReadResult ReadFrom(IEntity owner, GenericComponent component, EPF_ComponentSaveDataClass attributes)
 	{
-		EL_VehicleAppearanceComponent vehicleAppearance = EL_VehicleAppearanceComponent.Cast(worldEntityComponent);
+		EL_VehicleAppearanceComponent vehicleAppearance = EL_VehicleAppearanceComponent.Cast(component);
 		m_iVehicleColor = vehicleAppearance.GetVehicleColor();
 		m_VehicleTexture = vehicleAppearance.GetVehicleTexture();
 
@@ -15,9 +20,9 @@ class EL_VehicleAppearanceSaveData : EL_ComponentSaveDataBase
 	}
 
 	//------------------------------------------------------------------------------------------------
-	override bool ApplyTo(notnull GenericComponent worldEntityComponent)
+	override EPF_EApplyResult ApplyTo(IEntity owner, GenericComponent component, EPF_ComponentSaveDataClass attributes)
 	{
-		EL_VehicleAppearanceComponent vehicleAppearance = EL_VehicleAppearanceComponent.Cast(worldEntityComponent);
+		EL_VehicleAppearanceComponent vehicleAppearance = EL_VehicleAppearanceComponent.Cast(component);
 		vehicleAppearance.SetVehicleColor(m_iVehicleColor);
 		vehicleAppearance.SetVehicleTexture(m_VehicleTexture);
 

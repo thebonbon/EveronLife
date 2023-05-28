@@ -39,9 +39,9 @@ class EL_ParkVehicleAction : ScriptedUserAction
 		}
 
 		//Save Vehicle
-		EL_PersistenceComponent persistence = EL_PersistenceComponent.Cast(pOwnerEntity.FindComponent(EL_PersistenceComponent));
-		EL_EntitySaveDataBase saveData = persistence.Save();
-		persistence.Detach();
+		EPF_PersistenceComponent persistence = EPF_PersistenceComponent.Cast(pOwnerEntity.FindComponent(EPF_PersistenceComponent));
+		EPF_EntitySaveData saveData = persistence.Save();
+		persistence.PauseTracking();
 
 		//Add to garage
 		EL_CharacterOwnerComponent charOwnerComp = EL_CharacterOwnerComponent.Cast(GetOwner().FindComponent(EL_CharacterOwnerComponent));

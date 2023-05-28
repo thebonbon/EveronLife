@@ -13,7 +13,7 @@ class EL_BankDepositDialog : EL_BankDialogBase
 	{
 		if (m_wMoneyEditBox.GetText().IsEmpty())
 			return;
-		EL_CharacterBankManagerComponent bankManager = EL_ComponentFinder<EL_CharacterBankManagerComponent>.Find(SCR_PlayerController.GetLocalControlledEntity());
+		EL_CharacterBankManagerComponent bankManager = EPF_Component<EL_CharacterBankManagerComponent>.Find(SCR_PlayerController.GetLocalControlledEntity());
 		bankManager.Ask_NewTransaction(m_wMoneyEditBox.GetText().ToInt(), m_wCommentEditBox.GetText());
 		super.OnConfirm();
 	}
@@ -26,7 +26,7 @@ class EL_BankWithdrawDialog : EL_BankDialogBase
 	{
 		if (m_wMoneyEditBox.GetText().IsEmpty())
 			return;
-		EL_CharacterBankManagerComponent bankManager = EL_ComponentFinder<EL_CharacterBankManagerComponent>.Find(SCR_PlayerController.GetLocalControlledEntity());
+		EL_CharacterBankManagerComponent bankManager = EPF_Component<EL_CharacterBankManagerComponent>.Find(SCR_PlayerController.GetLocalControlledEntity());
 		bankManager.Ask_NewTransaction(-m_wMoneyEditBox.GetText().ToInt(), m_wCommentEditBox.GetText());
 		super.OnConfirm();
 	}
@@ -190,7 +190,7 @@ class EL_BankMenu : ChimeraMenuBase
         m_wRoot = GetRootWidget();
 		IEntity player = SCR_PlayerController.GetLocalControlledEntity();
 		
-		m_BankManager = EL_ComponentFinder<EL_CharacterBankManagerComponent>.Find(player);
+		m_BankManager = EPF_Component<EL_CharacterBankManagerComponent>.Find(player);
 
 		//Always add personal player account
 		Widget defaultAccount = AddNewAccount(m_BankManager.m_LocalBankAccount);

@@ -30,15 +30,9 @@ class EL_Whitelist
 		
 		m_aWhitelistUuids.Clear();
 		FileHandle whitelistFile = FileIO.OpenFile(m_sWhitelistFilePath, FileMode.READ);
-		
-		if(whitelistFile == 0)
-		{
-			PrintFormat("[%1-WHITELIST] Whitelist File is empty!", SCR_Enum.GetEnumName(EL_WhitelistType, m_eType));
-			return;
-		}
 
 		string uuid;
-		while(whitelistFile.FGets(uuid) > 0)
+		while(whitelistFile.ReadLine(uuid) > 0)
 		{
 			m_aWhitelistUuids.Insert(uuid);
 			PrintFormat("[%1-WHITELIST] Loaded UUID: " + uuid, SCR_Enum.GetEnumName(EL_WhitelistType, m_eType));
@@ -58,7 +52,7 @@ class EL_Whitelist
 			return;
 
 		FileHandle whitelistFile = FileIO.OpenFile(m_sWhitelistFilePath, FileMode.APPEND);
-		whitelistFile.FPrintln(uuid);
+		whitelistFile.WriteLine(uuid);
 		whitelistFile.Close();
 
 		PrintFormat("[%1-WHITELIST] Added " + uuid + " to file.", SCR_Enum.GetEnumName(EL_WhitelistType, m_eType));
@@ -81,7 +75,7 @@ class EL_Whitelist
 		FileHandle whitelistFile = FileIO.OpenFile(m_sWhitelistFilePath, FileMode.WRITE);
 		foreach(string uid : m_aWhitelistUuids)
 		{
-			whitelistFile.FPrintln(uid);
+			whitelistFile.WriteLine(uid);
 		}
 		whitelistFile.Close();
 		

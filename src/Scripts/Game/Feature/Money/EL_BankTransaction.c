@@ -17,7 +17,7 @@ class EL_BankTransaction
 		bankTransaction.m_sComment = comment;
 
 		if (dateFormat == 0)
-			dateFormat = EL_Utils.GetUnixTime();
+			dateFormat = System.GetUnixTime();
 		bankTransaction.m_iDate = dateFormat;
 
 		return bankTransaction;

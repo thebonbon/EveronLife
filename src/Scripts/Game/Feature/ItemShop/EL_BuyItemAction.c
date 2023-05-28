@@ -55,8 +55,8 @@ class EL_BuyItemAction : ScriptedUserAction
 		{
 			LoadoutAreaType areaType;
 			clothComponentSource.Get("AreaType", areaType);
-			BaseLoadoutManagerComponent loadoutManager = EL_ComponentFinder<BaseLoadoutManagerComponent>.Find(user);
-			if (areaType && loadoutManager && loadoutManager.IsAreaAvailable(areaType.Type()))
+			EquipedLoadoutStorageComponent loadoutStorage = EPF_Component<EquipedLoadoutStorageComponent>.Find(user);
+			if (areaType && loadoutStorage && !loadoutStorage.GetClothFromArea(areaType.Type()))
 				return true;
 		}
 		
@@ -104,7 +104,7 @@ class EL_BuyItemAction : ScriptedUserAction
 		m_BuyablePrefab = shopItemComponent.GetShopItemPrefab();
 		m_ItemPriceConfig = shopItemComponent.GetShopItemPriceConfig();
 		
-		InventoryItemComponent invItem = EL_ComponentFinder<InventoryItemComponent>.Find(pOwnerEntity);
+		InventoryItemComponent invItem = EPF_Component<InventoryItemComponent>.Find(pOwnerEntity);
 		invItem.SetAdditionalVolume(EL_PrefabUtils.GetPrefabItemVolume(m_BuyablePrefab));
 		invItem.SetAdditionalWeight(EL_PrefabUtils.GetPrefabItemWeight(m_BuyablePrefab));
 	}

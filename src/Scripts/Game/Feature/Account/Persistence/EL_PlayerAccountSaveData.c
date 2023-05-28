@@ -1,7 +1,4 @@
-[
-	EPF_PersistentScriptedStateSettings(EL_PlayerAccount),
-	EDF_DbName.Automatic()
-]
+[EPF_PersistentScriptedStateSettings(EL_PlayerAccount),	EDF_DbName.Automatic()]
 class EL_PlayerAccountSaveData : EPF_ScriptedStateSaveData
 {
 	ref array<ref EL_PlayerCharacter> m_aCharacters = {};

@@ -34,7 +34,7 @@ class EL_RpcSenderComponent  : ScriptComponent
 	//! Vehicle Owner
 	void AskIsLocalOwner(IEntity vehicle)
 	{		
-		RplComponent rplComp = EL_ComponentFinder<RplComponent>.Find(vehicle);
+		RplComponent rplComp = EPF_Component<RplComponent>.Find(vehicle);
 		EL_Logger.Log("EL-CharOwner", string.Format("Asking Server if vehicle: %1 is owned by me..", rplComp.Id()), EL_LogLevel.DEBUG);
 		Rpc(DoCheckLocalVehicleOwner, rplComp.Id());
 	}
@@ -84,7 +84,7 @@ class EL_RpcSenderComponent  : ScriptComponent
 	//! Buy Vehicle
 	void AskBuyVehicle(ResourceName vehiclePrefab, int color, IEntity vehicleShop)
 	{
-		RplComponent rplComp = EL_ComponentFinder<RplComponent>.Find(vehicleShop);
+		RplComponent rplComp = EPF_Component<RplComponent>.Find(vehicleShop);
 		Rpc(Rpc_AskBuyVehicle, vehiclePrefab, color, rplComp.Id());
 	}
 	
@@ -94,7 +94,7 @@ class EL_RpcSenderComponent  : ScriptComponent
 	void Rpc_AskBuyVehicle(ResourceName vehiclePrefab, int color, RplId shopId)
 	{
 		RplComponent vehicleShopRpl = RplComponent.Cast(Replication.FindItem(shopId));
-		EL_VehicleShopManagerComponent vehicleShopManager = EL_ComponentFinder<EL_VehicleShopManagerComponent>.Find(vehicleShopRpl.GetEntity());
+		EL_VehicleShopManagerComponent vehicleShopManager = EPF_Component<EL_VehicleShopManagerComponent>.Find(vehicleShopRpl.GetEntity());
 		
 		vehicleShopManager.DoBuyVehicle(vehiclePrefab, color, GetOwner());
 	}
@@ -103,7 +103,7 @@ class EL_RpcSenderComponent  : ScriptComponent
 	//! Load Garage
 	void AskLoadGarage(IEntity garageEnt)
 	{
-		RplComponent rplComp = EL_ComponentFinder<RplComponent>.Find(garageEnt);
+		RplComponent rplComp = EPF_Component<RplComponent>.Find(garageEnt);
 		Rpc(Rpc_AskLoadGarage, rplComp.Id());
 	}
 	
@@ -113,7 +113,7 @@ class EL_RpcSenderComponent  : ScriptComponent
 	void Rpc_AskLoadGarage(RplId garageId)
 	{
 		RplComponent garageRplComp = RplComponent.Cast(Replication.FindItem(garageId));
-		EL_GarageManagerComponent garageManager = EL_ComponentFinder<EL_GarageManagerComponent>.Find(garageRplComp.GetEntity());
+		EL_GarageManagerComponent garageManager = EPF_Component<EL_GarageManagerComponent>.Find(garageRplComp.GetEntity());
 		
 		garageManager.DoLoadGarage(GetOwner());
 	}	
@@ -122,7 +122,7 @@ class EL_RpcSenderComponent  : ScriptComponent
 	//! Withdraw Vehicle
 	void AskWithdrawVehicle(IEntity garageEnt, int index)
 	{
-		RplComponent rplComp = EL_ComponentFinder<RplComponent>.Find(garageEnt);
+		RplComponent rplComp = EPF_Component<RplComponent>.Find(garageEnt);
 		Rpc(Rpc_AskWithdrawVehicle, rplComp.Id(), index);
 	}
 	
@@ -132,7 +132,7 @@ class EL_RpcSenderComponent  : ScriptComponent
 	void Rpc_AskWithdrawVehicle(RplId garageId, int index)
 	{
 		RplComponent garageRplComp = RplComponent.Cast(Replication.FindItem(garageId));
-		EL_GarageManagerComponent garageManager = EL_ComponentFinder<EL_GarageManagerComponent>.Find(garageRplComp.GetEntity());
+		EL_GarageManagerComponent garageManager = EPF_Component<EL_GarageManagerComponent>.Find(garageRplComp.GetEntity());
 		
 		garageManager.DoWithdrawVehicle(GetOwner(), index);
 	}

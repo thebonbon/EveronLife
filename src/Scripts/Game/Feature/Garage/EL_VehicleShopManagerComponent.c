@@ -210,7 +210,7 @@ class EL_VehicleShopManagerComponent : ScriptComponent
 		IEntity newVehicle = EL_Utils.SpawnEntityPrefab(vehiclePrefab, freeSpawnPoint.GetOrigin(), freeSpawnPoint.GetYawPitchRoll());
 
 		//Delete inventory items
-		SCR_VehicleInventoryStorageManagerComponent vehicleStorage = EL_ComponentFinder<SCR_VehicleInventoryStorageManagerComponent>.Find(newVehicle);
+		SCR_VehicleInventoryStorageManagerComponent vehicleStorage = EPF_Component<SCR_VehicleInventoryStorageManagerComponent>.Find(newVehicle);
 		array<IEntity> allItems = {};
 		vehicleStorage.GetItems(allItems);
 		foreach (IEntity item : allItems)
@@ -235,7 +235,7 @@ class EL_VehicleShopManagerComponent : ScriptComponent
 		GetGame().GetCallqueue().CallLater(rpcSender.AskSetLocalVehicleOwner, 100, false, Replication.FindId(newVehicle));
 
 		//Save vehicle
-		EL_PersistenceComponent persistence = EL_PersistenceComponent.Cast(newVehicle.FindComponent(EL_PersistenceComponent));
+		EPF_PersistenceComponent persistence = EPF_PersistenceComponent.Cast(newVehicle.FindComponent(EPF_PersistenceComponent));
 		persistence.Save();
 
 		PrintFormat("[EL-VehicleShop] %1 bought vehicle %2 rpl: %3", EL_Utils.GetPlayerUID(player), vehiclePrefab, Replication.FindId(newVehicle));

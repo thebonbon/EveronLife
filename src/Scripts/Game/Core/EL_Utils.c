@@ -38,7 +38,7 @@ class EL_Utils : EPF_Utils
 	//------------------------------------------------------------------------------------------------
 	static void SetSlotsColor(notnull IEntity entity, int color)
 	{
-		SlotManagerComponent slotManager = EL_ComponentFinder<SlotManagerComponent>.Find(entity);
+		SlotManagerComponent slotManager = EPF_Component<SlotManagerComponent>.Find(entity);
 		if (!slotManager)
 			return;
 		array<EntitySlotInfo> slots = new array<EntitySlotInfo>;
@@ -49,7 +49,7 @@ class EL_Utils : EPF_Utils
 			if (!slotEnt)
 				continue;
 
-			EL_VehicleAppearanceComponent slotAppearance = EL_ComponentFinder<EL_VehicleAppearanceComponent>.Find(slotEnt);
+			EL_VehicleAppearanceComponent slotAppearance = EPF_Component<EL_VehicleAppearanceComponent>.Find(slotEnt);
 			if (slotAppearance)
 				slotAppearance.SetVehicleColor(color);
 		}
@@ -98,32 +98,6 @@ class EL_Utils : EPF_Utils
 		entity.SetObject(mesh, remap);
 	}
 
-	//------------------------------------------------------------------------------------------------
-	//! Gets the Bohemia UID
-	//! \param playerId Index of the player inside player manager
-	//! \return the uid as string
-	static string GetPlayerUID(int playerId)
-	{
-		string uid = GetGame().GetBackendApi().GetPlayerUID(playerId);
-		if (!uid)
-		{
-			if (RplSession.Mode() == RplMode.Dedicated)
-				Print("Error getting uid for playerId: " + playerId, LogLevel.ERROR);
-			if (!Replication.IsServer())
-				Print("Client trying to get UID. Will always return LOCAL_UID_X!", LogLevel.WARNING);
-			uid = string.Format("LOCAL_UID_%1", playerId);
-		}	
-		return uid;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! Gets the Bohemia UID
-	//! \param player Instance of the player
-	//! \return the uid as string
-	static string GetPlayerUID(IEntity player)
-	{
-		return GetPlayerUID(GetGame().GetPlayerManager().GetPlayerIdFromControlledEntity(player));
-	}
 
 	//------------------------------------------------------------------------------------------------
 	//! Finds Player Entity with UID
@@ -146,7 +120,8 @@ class EL_Utils : EPF_Utils
 	//! \param origin Position(origin) where to spawn the entity
 	//! \param orientation Angles(yaw, pitch, rolle in degrees) to apply to the entity
 	//! \return the spawned entity or null on failure
-	static IEntity SpawnEntityPrefab(ResourceName prefab, vector origin, vector orientation = "0 0 0", IEntity parent = null, bool global = true)
+	
+	static IEntity SpawnEntityPrefabParent(ResourceName prefab, vector origin, vector orientation = "0 0 0", IEntity parent = null, bool global = true)
 	{
 		EntitySpawnParams spawnParams();
 
@@ -165,16 +140,6 @@ class EL_Utils : EPF_Utils
 		if (parent)
 			parent.AddChild(newEnt, -1);
 		return newEnt;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! Gets the prefab the entitty uses
-	//! \param entity Instance of which to get tthe prefab name
-	//! \return the resource name of the prefab or empty string if no prefab was used or entity is invalid
-	static ResourceName GetPrefabName(IEntity entity)
-	{
-		if (!entity) return string.Empty;
-		return SCR_BaseContainerTools.GetPrefabResourceName(entity.GetPrefabData().GetPrefab());
 	}
 
 	//------------------------------------------------------------------------------------------------
@@ -280,51 +245,7 @@ class EL_Utils : EPF_Utils
 		return result;
 	}
 
-	//------------------------------------------------------------------------------------------------
-	//! Sort an array of typenames by their inheritance on each other in descending order
-	//! \param typenames Input typenames
-	//! \return sorted distinct typenames
-	static array<typename> SortTypenameHierarchy(array<typename> typenames)
-	{
-		map<typename, int> hierachyCount();
-
-		foreach (typename possibleRootClass : typenames)
-		{
-			if (hierachyCount.Contains(possibleRootClass)) continue;
-
-			hierachyCount.Set(possibleRootClass, 0);
-
-			foreach (typename compareRootClass : typenames)
-			{
-				if (possibleRootClass.IsInherited(compareRootClass))
-				{
-					hierachyCount.Set(possibleRootClass, hierachyCount.Get(possibleRootClass) + 1);
-				}
-			}
-		}
-
-		array<string> sortedHierachyTuples();
-		sortedHierachyTuples.Reserve(hierachyCount.Count());
-
-		foreach (typename type, int count : hierachyCount)
-		{
-			sortedHierachyTuples.Insert(string.Format("%1:%2", count.ToString(3), type.ToString()));
-		}
-
-		sortedHierachyTuples.Sort(true);
-
-		array<typename> sortedHierachy();
-		sortedHierachy.Reserve(hierachyCount.Count());
-
-		foreach (string tuple : sortedHierachyTuples)
-		{
-			int typenameStart = tuple.IndexOf(":") + 1;
-			string typenameString = tuple.Substring(typenameStart, tuple.Length() - typenameStart);
-			sortedHierachy.Insert(typenameString.ToType());
-		}
-
-		return sortedHierachy;
-	}
+	
 
 	//------------------------------------------------------------------------------------------------
 	static int MaxInt(int a, int b)
@@ -338,17 +259,6 @@ class EL_Utils : EPF_Utils
 	{
 		if (a < b) return a;
 		return b;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	static bool IsAnyInherited(Class instance, notnull array<typename> from)
-	{
-		typename type = instance.Type();
-		foreach (typename candiate : from)
-		{
-			if (type.IsInherited(candiate)) return true;
-		}
-		return false;
 	}
 
 	//------------------------------------------------------------------------------------------------

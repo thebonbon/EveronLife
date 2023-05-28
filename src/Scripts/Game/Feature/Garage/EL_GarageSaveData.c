@@ -1,27 +1,32 @@
-[EL_DbName(EL_GarageSaveData, "Garage"), BaseContainerProps()]
-class EL_GarageSaveData : EL_EntitySaveDataBase
+[BaseContainerProps()]
+class EL_GarageSaveDataClass : EPF_EntitySaveDataClass
+{
+};
+
+[EDF_DbName.Automatic()]
+class EL_GarageSaveData : EPF_EntitySaveData
 {
 	protected ref map<string, ref array<string>> m_mSavedVehicles = new ref map<string, ref array<string>>;
 
 	//------------------------------------------------------------------------------------------------
-	override bool ReadFrom(notnull IEntity worldEntity)
+	override EPF_EReadResult ReadFrom(IEntity entity, EPF_EntitySaveDataClass attributes)
 	{
 		//Meta data
-		EL_PersistenceComponent persistenceComponent = EL_PersistenceComponent.Cast(worldEntity.FindComponent(EL_PersistenceComponent));
+		EPF_PersistenceComponent persistenceComponent = EPF_PersistenceComponent.Cast(entity.FindComponent(EPF_PersistenceComponent));
 		SetId(persistenceComponent.GetPersistentId());
 		m_iLastSaved = persistenceComponent.GetLastSaved();
 
 		//Actual Data
-		EL_GarageManagerComponent garage = EL_GarageManagerComponent.Cast(worldEntity.FindComponent(EL_GarageManagerComponent));
+		EL_GarageManagerComponent garage = EL_GarageManagerComponent.Cast(entity.FindComponent(EL_GarageManagerComponent));
 		m_mSavedVehicles = garage.GetAllVehicles();
 
 		return true;
 	}
 
 	//------------------------------------------------------------------------------------------------
-	override bool ApplyTo(notnull IEntity worldEntity)
+	override EPF_EApplyResult ApplyTo(IEntity entity, EPF_EntitySaveDataClass attributes)
 	{
-		EL_GarageManagerComponent garage = EL_GarageManagerComponent.Cast(worldEntity.FindComponent(EL_GarageManagerComponent));
+		EL_GarageManagerComponent garage = EL_GarageManagerComponent.Cast(entity.FindComponent(EL_GarageManagerComponent));
 		garage.SetVehicles(m_mSavedVehicles);
 
 		return true;

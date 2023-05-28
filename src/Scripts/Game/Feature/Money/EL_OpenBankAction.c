@@ -23,7 +23,7 @@ class EL_OpenBankMenuAction : ScriptedUserAction
 	//------------------------------------------------------------------------------------------------
 	override bool CanBePerformedScript(IEntity user)
 	{
-		EL_CharacterBankManagerComponent bankManager = EL_ComponentFinder<EL_CharacterBankManagerComponent>.Find(user);
+		EL_CharacterBankManagerComponent bankManager = EPF_Component<EL_CharacterBankManagerComponent>.Find(user);
 		return (bankManager.GetAccount());
 	}
 	

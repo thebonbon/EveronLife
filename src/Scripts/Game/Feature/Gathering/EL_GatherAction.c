@@ -46,15 +46,6 @@ class EL_GatherAction : ScriptedUserAction
 		if(m_iRemainingGathers <= 0)
 		{
 			m_fNextQuantityRestock = Replication.Time() + m_GatherTimeout;
-			m_iRemainingGathers = m_GatherAmountMax;
-		}
-		
-		if (!EL_NetworkUtils.IsOwner(pOwnerEntity)) return;
-		
-		SCR_InventoryStorageManagerComponent inventoryManager = EL_ComponentFinder<SCR_InventoryStorageManagerComponent>.Find(pUserEntity);
-		if (EL_InventoryUtils.AddAmount(inventoryManager, m_GatherItemPrefab, m_GatherAmount))
-		{
-			inventoryManager.RpcAsk_PlaySound(EL_NetworkUtils.GetRplId(pUserEntity), "SOUND_PICK_UP");
 		}
 	}
 

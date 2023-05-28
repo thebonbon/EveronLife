@@ -42,7 +42,7 @@ class EL_GarageManagerComponent : ScriptComponent
 		m_mSavedVehicles.Set(ownerId, storedVehicleIds);
 
 		//Load and spawn parked vehicle
-		IEntity withdrawnVehicle = EL_PersistentWorldEntityLoader.Load(EL_VehicleSaveData, withdrawnVehicleId);
+		IEntity withdrawnVehicle = EPF_PersistentWorldEntityLoader.Load(EPF_VehicleSaveData, withdrawnVehicleId);
 
 		//Teleport to free spawn point
 		withdrawnVehicle.SetOrigin(freeSpawnPoint.GetOrigin());
@@ -53,7 +53,8 @@ class EL_GarageManagerComponent : ScriptComponent
 		GetGame().GetCallqueue().CallLater(rpcSender.AskSetLocalVehicleOwner, 100, false, Replication.FindId(withdrawnVehicle));
 
 		//Save data
-		EL_PersistenceComponent persistence = EL_PersistenceComponent.Cast(withdrawnVehicle.FindComponent(EL_PersistenceComponent));
+		
+		EPF_PersistenceComponent persistence = EPF_PersistenceComponent.Cast(withdrawnVehicle.FindComponent(EPF_PersistenceComponent));
 		persistence.Save();
 	}
 
@@ -98,20 +99,20 @@ class EL_GarageManagerComponent : ScriptComponent
 	{
 		array<string> allVehiclesInGarage = GetOwnedVehicles(EL_Utils.GetPlayerUID(pUserEntity));
 		array<ResourceName> garageVehicleList = new array<ResourceName>();
-		EL_DbRepository<EL_VehicleSaveData> vehicleRepo = EL_PersistenceEntityHelper<EL_VehicleSaveData>.GetRepository();
-
+		EDF_DbRepository<EPF_VehicleSaveData> vehicleRepo = EPF_PersistenceEntityHelper<EPF_VehicleSaveData>.GetRepository();
+		
 		if (allVehiclesInGarage)
 		{
 			PrintFormat("[EL-Garage] Loading garage with %1 vehicle(s) for %2", allVehiclesInGarage.Count(), EL_Utils.GetPlayerName(pUserEntity));
 			foreach (string vehicleId : allVehiclesInGarage)
 			{
-				EL_VehicleSaveData vehSaveData = vehicleRepo.Find(vehicleId).GetEntity();
+				EPF_VehicleSaveData vehSaveData = vehicleRepo.Find(vehicleId).GetEntity();
 				garageVehicleList.Insert(vehSaveData.m_rPrefab);
 			}
 		}
 
 		//Host&Play check
-		RplComponent rplC = EL_ComponentFinder<RplComponent>.Find(pUserEntity);
+		RplComponent rplC = EPF_Component<RplComponent>.Find(pUserEntity);
 		if (pUserEntity == SCR_PlayerController.GetLocalControlledEntity())
 			RPC_SetVehicleSaveData(rplC.Id(), garageVehicleList);
 		else

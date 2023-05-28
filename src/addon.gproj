@@ -3,7 +3,7 @@ GameProject {
  GUID "5C68AAC12E48EF2E"
  TITLE "BON_EveronLife_Server"
  Dependencies {
-  "58D0FB3206B6F859"
+  "58D0FB3206B6F859" "5D6EBC81EB1842EF" "5D6EA74A94173EDF"
  }
  Configurations {
   GameProjectConfig PC {
