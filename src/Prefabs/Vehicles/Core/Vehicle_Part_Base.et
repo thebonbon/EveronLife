@@ -3,5 +3,13 @@ GenericEntity {
  components {
   EL_VehicleAppearanceComponent "{5ADF2525DD8C28D0}" {
   }
+  EPF_PersistenceComponent "{5D46D95D78DB15A1}" {
+   m_pSaveData EPF_VehiclePartSaveDataClass "{5D46D95C944979AB}" {
+    m_aComponents {
+     EL_VehicleAppearanceSaveDataClass "{5D8CE5830C623C21}" {
+     }
+    }
+   }
+  }
  }
 }

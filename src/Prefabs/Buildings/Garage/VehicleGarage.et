@@ -161,7 +161,7 @@ SCR_DestructibleBuildingEntity {
          m_PhaseModel "{FA5A7EAC616E8593}Assets/Props/Military/Generators/GeneratorPortable_USSR_01/dst/GeneratorPortable_USSR_01_dst_01.xob"
         }
        }
-       m_eMaterialSoundType METAL_GENERATOR
+       m_eMaterialSoundType NONE
       }
       ActionsManagerComponent "{529A99F8B5243CC2}" {
        ActionContexts {
@@ -183,10 +183,6 @@ SCR_DestructibleBuildingEntity {
    components {
     EL_GarageManagerComponent "{5AC91633184B77EA}" {
     }
-    EL_PersistenceComponent "{5ACAA3E6A5BD5C0F}" {
-     m_pSaveData EL_GarageSaveData "{5ACAA3E6A7674ABA}" {
-     }
-    }
     MeshObject "{5872F0EB7FA40561}" {
      Object "{8C8D2EF181A72B14}Assets/Props/Civilian/Suitcase_01/Suitcase_01.xob"
     }
@@ -199,7 +195,7 @@ SCR_DestructibleBuildingEntity {
      Static 1
     }
     SCR_DestructionMultiPhaseComponent "{5624A88D86EFE8BA}" {
-     m_eMaterialSoundType MATRESS
+     m_eMaterialSoundType NONE
     }
     ActionsManagerComponent "{5AC9088290FEA9FA}" {
      ActionContexts {
@@ -224,6 +220,12 @@ SCR_DestructibleBuildingEntity {
     }
     RplComponent "{5624A88DC2D9928D}" {
      Enabled 1
+    }
+    EPF_PersistenceComponent "{5D8CE589153A6979}" {
+     m_pSaveData EL_GarageSaveDataClass "{5D8CE589177071BE}" {
+      m_eTranformSaveFlags 0
+      m_bSaveRemainingLifetime 0
+     }
     }
    }
    coords 10.469 0.972 1.201

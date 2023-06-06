@@ -135,8 +135,8 @@ SCR_DestructibleBuildingEntity : "{EAD5EA324E4B1C1C}Prefabs/Buildings/Garage/Veh
    ID "5B2CBBA077D1402B"
    components {
     EL_GarageManagerComponent "{5AC91633184B77EA}" {
-     m_sGarageName "Impound Lot"
-     m_iWithdrawCost 999
+     m_sGarageName "Impound"
+     m_iWithdrawCost 10
     }
    }
   }

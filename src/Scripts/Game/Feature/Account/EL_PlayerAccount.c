@@ -1,8 +1,5 @@
 class EL_PlayerAccount : EPF_PersistentScriptedState
-{
-	ref array<string> m_aCharacterIds;
-	ref EL_BankAccount m_BankAccount;
-	
+{	
 	protected ref array<ref EL_PlayerCharacter> m_aCharacters = {};
 	protected int m_iActiveCharacterIdx;
 
@@ -57,7 +54,6 @@ class EL_PlayerAccount : EPF_PersistentScriptedState
 	static EL_PlayerAccount Create(string playerUid)
 	{
 		EL_PlayerAccount account();
-		account.m_BankAccount = EL_BankAccount.Create(playerUid, 1000);
 		account.SetPersistentId(playerUid);
 		return account;
 	}
@@ -67,6 +63,7 @@ class EL_PlayerCharacter
 {
 	protected string m_sId;
 	protected ResourceName m_rPrefab;
+	protected ref EL_BankAccount m_BankAccount;
 
 	//------------------------------------------------------------------------------------------------
 	string GetId()
@@ -79,13 +76,20 @@ class EL_PlayerCharacter
 	{
 		return m_rPrefab;
 	}
-
+	
+	//------------------------------------------------------------------------------------------------
+	EL_BankAccount GetBankAccount()
+	{
+		return m_BankAccount;
+	}
+	
 	//------------------------------------------------------------------------------------------------
 	static EL_PlayerCharacter Create(ResourceName prefab)
 	{
 		EL_PlayerCharacter character();
 		character.m_sId = EPF_PersistenceIdGenerator.Generate();
 		character.m_rPrefab = prefab;
+		character.m_BankAccount = EL_BankAccount.Create(character.m_sId, 1000);
 		return character;
 	}
 };

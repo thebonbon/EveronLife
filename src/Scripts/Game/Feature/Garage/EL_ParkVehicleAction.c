@@ -38,14 +38,18 @@ class EL_ParkVehicleAction : ScriptedUserAction
 			access.EjectOutOfVehicle();
 		}
 
-		//Save Vehicle
+		//Save vehicle
 		EPF_PersistenceComponent persistence = EPF_PersistenceComponent.Cast(pOwnerEntity.FindComponent(EPF_PersistenceComponent));
 		EPF_EntitySaveData saveData = persistence.Save();
 		persistence.PauseTracking();
 
+		//Wait for Ark to add Opt out of self spawn
+		
 		//Add to garage
 		EL_CharacterOwnerComponent charOwnerComp = EL_CharacterOwnerComponent.Cast(GetOwner().FindComponent(EL_CharacterOwnerComponent));
 		m_GarageManager.AddVehicle(saveData.GetId(), charOwnerComp.GetCharacterOwner());
+		
+		//Delete vehicle
 		SCR_EntityHelper.DeleteEntityAndChildren(pOwnerEntity);
 	}
 

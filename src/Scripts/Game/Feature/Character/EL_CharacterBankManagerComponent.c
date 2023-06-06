@@ -47,6 +47,7 @@ class EL_CharacterBankManagerComponent : ScriptGameComponent
 	void SetAccount(EL_BankAccount newAccount)
 	{
 		m_LocalBankAccount = newAccount;
+		Ask_SyncProxyAccount();
 	}
 	
 	//------------------------------------------------------------------------------------------------
@@ -63,7 +64,6 @@ class EL_CharacterBankManagerComponent : ScriptGameComponent
 		{
 			m_LocalBankAccount.m_aTransactions[i].m_sComment = comment;
 		}
-		
 		
 		//Update open bank ui
 		EL_BankMenu bankMenu = EL_BankMenu.Cast(GetGame().GetMenuManager().FindMenuByPreset(ChimeraMenuPreset.EL_BankMenu));
@@ -82,29 +82,28 @@ class EL_CharacterBankManagerComponent : ScriptGameComponent
 		}
 		Print("[EL-Bank] Sending Account to " + EL_Utils.GetPlayerName(GetOwner()));
 		Rpc(Rpc_DoSetLocalBankAccount, m_LocalBankAccount, transactionComments);
-		
 	}
 	
 	//------------------------------------------------------------------------------------------------
 	//! Called from Authority
-	void LoadOrCreateAccount()
+	void LoadOrCreateAccount(IEntity owner)
 	{
-		EL_PlayerAccount account = EL_PlayerAccountManager.GetInstance().GetFromCache(EL_Utils.GetPlayerUID(GetOwner()));
-		if (account && account.m_BankAccount)
+		if (m_LocalBankAccount)
 		{
 			Print("[EL-Bank] Found bank account.. Sending to Owner");
-			SetAccount(account.m_BankAccount);
 			Ask_SyncProxyAccount();
+			return;
 		}
-		else
-			Print("[EL-Bank] Error loading bank Account. No Bank account found in player account");
+		
+		Print("[EL-Bank] Creating new Account");
+		SetAccount(EL_BankAccount.Create(EL_Utils.GetPlayerUID(owner), 1000));
 	}
 	
 	//------------------------------------------------------------------------------------------------
 	override void EOnInit(IEntity owner)
 	{
 		if (Replication.IsServer())
-			GetGame().GetCallqueue().CallLater(LoadOrCreateAccount, 10000, false);
+			GetGame().GetCallqueue().CallLater(LoadOrCreateAccount, 10000, false, owner);
 	}
 	
 	//------------------------------------------------------------------------------------------------
@@ -113,3 +112,4 @@ class EL_CharacterBankManagerComponent : ScriptGameComponent
 		SetEventMask(owner, EntityEvent.INIT);
 	}
 }
+
