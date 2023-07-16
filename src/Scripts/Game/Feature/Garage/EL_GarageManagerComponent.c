@@ -140,23 +140,27 @@ class EL_GarageManagerComponent : ScriptComponent
 			ref array<string> storedVehicleIds = m_mSavedVehicles.Get(ownerId);
 			storedVehicleIds.Insert(vehicleId);
 			m_mSavedVehicles.Set(ownerId, storedVehicleIds);
+			PrintFormat("[EL-Garage] Garage saved vehicleId %1 for %2", vehicleId, ownerId);
 		}
 		else
 		{
 			//New owner for this garage
 			m_mSavedVehicles.Insert(ownerId, {vehicleId});
+			PrintFormat("[EL-Garage] Garage saved new vehicleId %1 for %2", vehicleId, ownerId);
 		}
 	}
 
 	//------------------------------------------------------------------------------------------------
 	void SetVehicles(map<string, ref array<string>> savedVehicles)
 	{
+		PrintFormat("[EL-Garage] Force Setting %1 vehicles", savedVehicles.Count());
 		m_mSavedVehicles = savedVehicles;
 	}
 
 	//------------------------------------------------------------------------------------------------
 	map<string, ref array<string>> GetAllVehicles()
 	{
+		PrintFormat("[EL-Garage] Getting %1 vehicles", m_mSavedVehicles.Count());
 		return m_mSavedVehicles;
 	}
 

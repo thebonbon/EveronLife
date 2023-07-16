@@ -6,49 +6,36 @@ class EL_GarageSaveDataClass : EPF_EntitySaveDataClass
 [EDF_DbName.Automatic()]
 class EL_GarageSaveData : EPF_EntitySaveData
 {
+};
+
+[EPF_ComponentSaveDataType(EL_GarageManagerComponent), BaseContainerProps()]
+class EL_GarageManagerSaveDataClass : EPF_ComponentSaveDataClass
+{
+};
+
+[EDF_DbName.Automatic()]
+class EL_GarageManagerSaveData : EPF_ComponentSaveData
+{
 	protected ref map<string, ref array<string>> m_mSavedVehicles = new ref map<string, ref array<string>>;
 
 	//------------------------------------------------------------------------------------------------
-	override EPF_EReadResult ReadFrom(IEntity entity, EPF_EntitySaveDataClass attributes)
+	override EPF_EReadResult ReadFrom(IEntity owner, GenericComponent component, EPF_ComponentSaveDataClass attributes)
 	{
-		 EPF_EReadResult readResult = super.ReadFrom(entity, attributes);
-
-		EL_GarageManagerComponent garage = EL_GarageManagerComponent.Cast(entity.FindComponent(EL_GarageManagerComponent));
+		EL_GarageManagerComponent garage = EL_GarageManagerComponent.Cast(component);
 		m_mSavedVehicles = garage.GetAllVehicles();
-
-		return readResult;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	override EPF_EApplyResult ApplyTo(IEntity entity, EPF_EntitySaveDataClass attributes)
-	{
-		EPF_EApplyResult applyResult = super.ApplyTo(entity, attributes);
 		
-		EL_GarageManagerComponent garage = EL_GarageManagerComponent.Cast(entity.FindComponent(EL_GarageManagerComponent));
+		PrintFormat("[EL-Garage] Persi saved %1 vehicles", m_mSavedVehicles.Count());
+		return EPF_EReadResult.OK;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	override EPF_EApplyResult ApplyTo(IEntity owner, GenericComponent component, EPF_ComponentSaveDataClass attributes)
+	{		
+		EL_GarageManagerComponent garage = EL_GarageManagerComponent.Cast(component);
 		garage.SetVehicles(m_mSavedVehicles);
-
-		return applyResult;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	override protected bool SerializationSave(BaseSerializationSaveContext saveContext)
-	{
-		if (!super.SerializationSave(saveContext))
-            return false;
-
-		saveContext.WriteValue("m_mSavedVehicles", m_mSavedVehicles);
-
-		return true;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	override protected bool SerializationLoad(BaseSerializationLoadContext loadContext)
-	{
-        if (!super.SerializationLoad(loadContext))
-            return false;
-
-		loadContext.ReadValue("m_mSavedVehicles", m_mSavedVehicles);
-
-		return true;
+		
+		PrintFormat("[EL-Garage] Persi loaded %1 vehicles.", m_mSavedVehicles.Count());
+		
+		return EPF_EReadResult.OK;
 	}
 }

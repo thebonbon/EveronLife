@@ -183,6 +183,16 @@ SCR_DestructibleBuildingEntity {
    components {
     EL_GarageManagerComponent "{5AC91633184B77EA}" {
     }
+    EPF_PersistenceComponent "{5D8CE589153A6979}" {
+     m_pSaveData EL_GarageSaveDataClass "{5D8CE589177071BE}" {
+      m_eTranformSaveFlags 0
+      m_bSaveRemainingLifetime 0
+      m_aComponents {
+       EL_GarageManagerSaveDataClass "{5DDF1CA1B54589F5}" {
+       }
+      }
+     }
+    }
     MeshObject "{5872F0EB7FA40561}" {
      Object "{8C8D2EF181A72B14}Assets/Props/Civilian/Suitcase_01/Suitcase_01.xob"
     }
@@ -220,12 +230,6 @@ SCR_DestructibleBuildingEntity {
     }
     RplComponent "{5624A88DC2D9928D}" {
      Enabled 1
-    }
-    EPF_PersistenceComponent "{5D8CE589153A6979}" {
-     m_pSaveData EL_GarageSaveDataClass "{5D8CE589177071BE}" {
-      m_eTranformSaveFlags 0
-      m_bSaveRemainingLifetime 0
-     }
     }
    }
    coords 10.469 0.972 1.201

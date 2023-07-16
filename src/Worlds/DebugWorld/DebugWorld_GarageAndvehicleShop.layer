@@ -57,6 +57,10 @@ SCR_DestructibleBuildingEntity : "{EAD5EA324E4B1C1C}Prefabs/Buildings/Garage/Veh
  {
   GenericEntity Suitcase_01_5B2CBBA08E87F1C8 {
    ID "5B2CBBA077D1402B"
+   components {
+    EPF_PersistenceComponent "{5D8CE589153A6979}" {
+    }
+   }
   }
  }
 }

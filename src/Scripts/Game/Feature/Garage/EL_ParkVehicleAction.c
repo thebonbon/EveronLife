@@ -41,6 +41,8 @@ class EL_ParkVehicleAction : ScriptedUserAction
 		//Save vehicle
 		EPF_PersistenceComponent persistence = EPF_PersistenceComponent.Cast(pOwnerEntity.FindComponent(EPF_PersistenceComponent));
 		EPF_EntitySaveData saveData = persistence.Save();
+		EPF_PersistenceManager.GetInstance().UpdateRootEntityCollection(persistence, persistence.GetPersistentId(), false);
+		
 		persistence.PauseTracking();
 
 		//Wait for Ark to add Opt out of self spawn
