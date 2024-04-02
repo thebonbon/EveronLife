@@ -220,11 +220,16 @@ class EL_BankMenu : ChimeraMenuBase
 	void EnableButtonListeners()
 	{
 		ScriptInvoker onExitButtonPressed = ButtonActionComponent.GetOnAction(m_wRoot.FindAnyWidget("ExitButton"));
-		if (onExitButtonPressed) onExitButtonPressed.Insert(Close);
+		if (onExitButtonPressed) 
+			onExitButtonPressed.Insert(Close);
+		
 		ScriptInvoker onDepositButtonPressed = ButtonActionComponent.GetOnAction(m_wRoot.FindAnyWidget("DepositButton"));
-		if (onDepositButtonPressed) onDepositButtonPressed.Insert(OpenDepositMenu);
+		if (onDepositButtonPressed) 
+			onDepositButtonPressed.Insert(OpenDepositMenu);
+		
 		ScriptInvoker onWithdrawButtonPressed = ButtonActionComponent.GetOnAction(m_wRoot.FindAnyWidget("WithdrawButton"));
-		if (onWithdrawButtonPressed) onWithdrawButtonPressed.Insert(OpenWithdrawMenu);
+		if (onWithdrawButtonPressed) 
+			onWithdrawButtonPressed.Insert(OpenWithdrawMenu);
 		
 	}
 	
@@ -232,11 +237,16 @@ class EL_BankMenu : ChimeraMenuBase
 	void DisableButtonListeners()
 	{
 		ScriptInvoker onExitButtonPressed = ButtonActionComponent.GetOnAction(m_wRoot.FindAnyWidget("ExitButton"));
-		if (onExitButtonPressed) onExitButtonPressed.Remove(Close);
+		if (onExitButtonPressed) 
+			onExitButtonPressed.Remove(Close);
+		
 		ScriptInvoker onDepositButtonPressed = ButtonActionComponent.GetOnAction(m_wRoot.FindAnyWidget("DepositButton"));
-		if (onDepositButtonPressed) onDepositButtonPressed.Remove(OpenDepositMenu);
+		if (onDepositButtonPressed) 
+			onDepositButtonPressed.Remove(OpenDepositMenu);
+		
 		ScriptInvoker onWithdrawButtonPressed = ButtonActionComponent.GetOnAction(m_wRoot.FindAnyWidget("WithdrawButton"));
-		if (onWithdrawButtonPressed) onWithdrawButtonPressed.Remove(OpenWithdrawMenu);
+		if (onWithdrawButtonPressed) 
+			onWithdrawButtonPressed.Remove(OpenWithdrawMenu);
 	}
 	
 	//------------------------------------------------------------------------------------------------

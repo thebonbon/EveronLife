@@ -1,4 +1,4 @@
-class AdminChatChannel : BaseChatChannel
+/*class AdminChatChannel : BaseChatChannel
 {
 	//------------------------------------------------------------------------------------------------
 	void RequestClose()

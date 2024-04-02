@@ -77,9 +77,9 @@ modded class SCR_ChatPanel
 			case PrivateMessageChannel:
 				style = m_DirectChannelStyle;
 				break;
-			case AdminChatChannel:
-				style = m_AdminStyle;
-				break;
+			//case AdminChatChannel:
+			//	style = m_AdminStyle;
+			//	break;
 		}
 		
 		if (!style)

@@ -16,7 +16,7 @@ class EL_GarageManagerSaveDataClass : EPF_ComponentSaveDataClass
 [EDF_DbName.Automatic()]
 class EL_GarageManagerSaveData : EPF_ComponentSaveData
 {
-	protected ref map<string, ref array<string>> m_mSavedVehicles = new ref map<string, ref array<string>>;
+	protected ref map<string, ref array<string>> m_mSavedVehicles = new map<string, ref array<string>>;
 
 	//------------------------------------------------------------------------------------------------
 	override EPF_EReadResult ReadFrom(IEntity owner, GenericComponent component, EPF_ComponentSaveDataClass attributes)

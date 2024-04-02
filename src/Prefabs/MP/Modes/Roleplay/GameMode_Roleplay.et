@@ -35,21 +35,7 @@ EL_GameModeRoleplay {
     EPF_PersistentDoorStateManagerComponent "{5E0896B880761681}" {
     }
    }
-  }
-  EL_WhitelistRespawnHandlerComponent "{5D192114A457B65C}" {
-   m_aWhitelists {
-    EL_Whitelist "{5D192114B1656A41}" {
-     m_eType POLICE
-     m_sWhitelistFilePath "$profile:police_whitelist.txt"
-    }
-    EL_Whitelist "{5D192114B290D524}" {
-     m_eType MEDIC
-     m_sWhitelistFilePath "$profile:medic_whitelist.txt"
-    }
-   }
-  }
-  EPF_PersistenceManagerComponent "{5D6F1C34679B4DC0}" {
-   m_pConnectionInfo EDF_JsonFileDbConnectionInfo "{5D6F1C3462E3EE02}" {
+   m_pConnectionInfo EDF_JsonFileDbConnectionInfo "{5E82B3114CD2D559}" {
     m_sDatabaseName "EveronLife"
    }
   }
@@ -79,9 +65,6 @@ EL_GameModeRoleplay {
    ID "5CC4AA253F69E19E"
    Channels {
     LocalChatChannel "{5CC4AA25DBFF3B65}" {
-    }
-    AdminChatChannel "{5CC54D7550251DE7}" {
-     "Channel name" "Admin"
     }
    }
   }

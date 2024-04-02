@@ -1,4 +1,4 @@
-[BaseContainerProps(), SCR_BaseContainerCustomTitleUIInfo("m_Info")]
+/*[BaseContainerProps(), SCR_BaseContainerCustomTitleUIInfo("m_Info")]
 class EL_EnableWhitelistContextAction : SCR_BaseContextAction
 {
 	[Attribute("", UIWidgets.ComboBox, enums: ParamEnumArray.FromEnum(EL_WhitelistType))]

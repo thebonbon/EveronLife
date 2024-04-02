@@ -164,7 +164,7 @@ class EL_Utils : EPF_Utils
 			SCR_TerrainHelper.OrientToTerrain(transform);
 		}
 
-		if (scale != -1) SCR_Math3D.ScaleMatrix(transform, scale);
+		if (scale != -1) Math3D.MatrixScale(transform, scale);
 
 		TeleportTM(entity, transform);
 	}

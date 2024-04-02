@@ -1,4 +1,4 @@
-class EL_MapIconComponentClass : ScriptComponentClass
+/*class EL_MapIconComponentClass : ScriptComponentClass
 {
 }
 
@@ -26,20 +26,24 @@ class EL_MapIconComponent : ScriptComponent
 	private vector m_vBaseIconSize;
 	
 	//------------------------------------------------------------------------------------------------
-	private void UpdateIcon()
+	private void UpdateIconZoom(float zoom)
 	{
 		if (!m_MapEntity)
 			return;
-		
 
 		vector entPos = GetOwner().GetOrigin();
 		float x, y;
 		m_MapEntity.WorldToScreen(entPos[0], entPos[2], x, y, true);
+		
+		FrameSlot.SetPos(m_wIconFrame, x, y);
+	}
+	
+	//------------------------------------------------------------------------------------------------
+	private void UpdateIcon(float x, float y, bool adjustedPan)
+	{
+		if (!m_MapEntity)
+			return;
 
-		x = GetGame().GetWorkspace().DPIUnscale(x);
-		y = GetGame().GetWorkspace().DPIUnscale(y);
-		
-		
 		FrameSlot.SetPos(m_wIconFrame, x, y);
 	}
 	
@@ -74,17 +78,17 @@ class EL_MapIconComponent : ScriptComponent
 		}
 		
 		//Update postion to match pan and zoom
-		UpdateIcon();
+		UpdateIconZoom(0);
 		OnLayerChanged();
 		SCR_MapEntity.GetOnMapPan().Insert(UpdateIcon);
-		SCR_MapEntity.GetOnMapZoom().Insert(UpdateIcon);
+		SCR_MapEntity.GetOnMapZoom().Insert(UpdateIconZoom);
 	}
 	
 	//------------------------------------------------------------------------------------------------
 	private void OnMapClose()
 	{
 		SCR_MapEntity.GetOnMapPan().Remove(UpdateIcon);
-		SCR_MapEntity.GetOnMapZoom().Remove(UpdateIcon);
+		SCR_MapEntity.GetOnMapZoom().Remove(UpdateIconZoom);
 	}	
 	
 	//------------------------------------------------------------------------------------------------
@@ -98,12 +102,13 @@ class EL_MapIconComponent : ScriptComponent
 		
 		if (curLayerIndex < m_iMinLayer || curLayerIndex > m_iMaxLayer)
 			m_wIconWidget.SetVisible(false);
-		else 
-			if (!m_wIconWidget.IsVisible())
+		else if (!m_wIconWidget.IsVisible())
 				m_wIconWidget.SetVisible(true);
+		
 		float layerFactor = (m_fMaxScale - m_fMinScale) / m_MapEntity.LayerCount();
 		float layerScale = m_fMaxScale - curLayerIndex * layerFactor;
 		layerScale = Math.Clamp(layerScale, m_fMinScale, m_fMaxScale);
+		
 		m_wIconWidget.SetSize(m_vBaseIconSize[0] * layerScale, m_vBaseIconSize[1] * layerScale);
 	}
 	

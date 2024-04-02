@@ -1,4 +1,4 @@
-[ComponentEditorProps(category: "EveronLife/Feature/Whitelist", description: "Server Whitelist Manager")]
+/*[ComponentEditorProps(category: "EveronLife/Feature/Whitelist", description: "Server Whitelist Manager")]
 class EL_WhitelistRespawnHandlerComponentClass : EL_RespawnHandlerComponentClass
 {
 }
