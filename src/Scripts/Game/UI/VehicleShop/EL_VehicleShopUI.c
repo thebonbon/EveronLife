@@ -176,22 +176,22 @@ class EL_VehicleShopUI: ChimeraMenuBase
 
 		//Buy Button
 		m_wBuyButton = ButtonWidget.Cast(m_wRoot.FindAnyWidget("BuyButton"));
-		SCR_NavigationButtonComponent buyButtonComp = SCR_NavigationButtonComponent.Cast(m_wBuyButton.FindHandler(SCR_NavigationButtonComponent));
+		SCR_InputButtonComponent buyButtonComp = SCR_InputButtonComponent.Cast(m_wBuyButton.FindHandler(SCR_InputButtonComponent));
 		buyButtonComp.m_OnClicked.Insert(OnBuyVehicle);
 
 		//Left Button
 		ButtonWidget leftButton = ButtonWidget.Cast(m_wRoot.FindAnyWidget("LeftButton"));
-		SCR_NavigationButtonComponent leftButtonComp = SCR_NavigationButtonComponent.Cast(leftButton.FindHandler(SCR_NavigationButtonComponent));
+		SCR_InputButtonComponent leftButtonComp = SCR_InputButtonComponent.Cast(leftButton.FindHandler(SCR_InputButtonComponent));
 		leftButtonComp.m_OnClicked.Insert(OnMenuLeft);
 
 		//Right Button
 		ButtonWidget rightButton = ButtonWidget.Cast(m_wRoot.FindAnyWidget("RightButton"));
-		SCR_NavigationButtonComponent rightButtonComp = SCR_NavigationButtonComponent.Cast(rightButton.FindHandler(SCR_NavigationButtonComponent));
+		SCR_InputButtonComponent rightButtonComp = SCR_InputButtonComponent.Cast(rightButton.FindHandler(SCR_InputButtonComponent));
 		rightButtonComp.m_OnClicked.Insert(OnMenuRight);
 
 		//Exit Button
 		ButtonWidget exitButton = ButtonWidget.Cast(m_wRoot.FindAnyWidget("ExitButton"));
-		SCR_NavigationButtonComponent exitButtonComp = SCR_NavigationButtonComponent.Cast(exitButton.FindHandler(SCR_NavigationButtonComponent));
+		SCR_InputButtonComponent exitButtonComp = SCR_InputButtonComponent.Cast(exitButton.FindHandler(SCR_InputButtonComponent));
 		exitButtonComp.m_OnClicked.Insert(InvokeOnMenuClose);
 
 		//Slider Focus

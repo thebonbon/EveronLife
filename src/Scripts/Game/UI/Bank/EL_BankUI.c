@@ -204,10 +204,10 @@ class EL_BankMenu : ChimeraMenuBase
 		TextWidget nameTitle = TextWidget.Cast(m_wRoot.FindAnyWidget("PlayerName"));
 		//nameTitle.SetText(EL_Utils.GetPlayerName(m_BankManager.GetLocalPlayerBankAccount().GetAccountOwner()));
 		
-		SCR_NavigationButtonComponent exitButtonHandler = SCR_NavigationButtonComponent.Cast(m_wRoot.FindAnyWidget("ExitButton").FindHandler(SCR_NavigationButtonComponent));
-		SCR_NavigationButtonComponent depositButtonHandler = SCR_NavigationButtonComponent.Cast(m_wRoot.FindAnyWidget("DepositButton").FindHandler(SCR_NavigationButtonComponent));
-		SCR_NavigationButtonComponent withdrawButtonHandler = SCR_NavigationButtonComponent.Cast(m_wRoot.FindAnyWidget("WithdrawButton").FindHandler(SCR_NavigationButtonComponent));
-		//SCR_NavigationButtonComponent transferButtonHandler = SCR_NavigationButtonComponent.Cast(m_wRoot.FindAnyWidget("TransferButton").FindHandler(SCR_NavigationButtonComponent));
+		SCR_InputButtonComponent exitButtonHandler = SCR_InputButtonComponent.Cast(m_wRoot.FindAnyWidget("ExitButton").FindHandler(SCR_InputButtonComponent));
+		SCR_InputButtonComponent depositButtonHandler = SCR_InputButtonComponent.Cast(m_wRoot.FindAnyWidget("DepositButton").FindHandler(SCR_InputButtonComponent));
+		SCR_InputButtonComponent withdrawButtonHandler = SCR_InputButtonComponent.Cast(m_wRoot.FindAnyWidget("WithdrawButton").FindHandler(SCR_InputButtonComponent));
+		//SCR_InputButtonComponent transferButtonHandler = SCR_InputButtonComponent.Cast(m_wRoot.FindAnyWidget("TransferButton").FindHandler(SCR_InputButtonComponent));
 		
 		
 		depositButtonHandler.m_OnClicked.Insert(OpenDepositMenu);
