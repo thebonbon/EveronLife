@@ -38,7 +38,7 @@ GenericEntity {
    }
    coords 0.476 0.899 0.202
   }
-  SCR_DestructibleEntity : "{622F9989DDC4865B}PrefabLibrary/Props/Civilian/Recreation/TableRecreation_01/TableRecreation_01.et" {
+  GenericEntity : "{622F9989DDC4865B}PrefabLibrary/Props/Civilian/Recreation/TableRecreation_01/TableRecreation_01.et" {
    coords 0.147 0 0
   }
   GameEntity : "{EC645B2E2123131F}Prefabs/Props/Civilian/LampKerosene_01/LampKerosene_01_blue.et" {
@@ -54,7 +54,7 @@ GenericEntity {
  }
 }
 GenericEntity : "{03179A7595569288}Prefabs/Props/ATM.et" {
- coords 101.59 1.112 135.12
+ coords 102.479 0 136.519
 }
 GenericEntity Brick_5CAB20C98B1059FE : "{0D5DA590E223A195}Prefabs/Items/Resources/Brick.et" {
  coords 122.316 0.001 135.767
