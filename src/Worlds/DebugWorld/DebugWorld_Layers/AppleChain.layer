@@ -165,7 +165,7 @@ GenericEntity AppleTrader {
     Flags 1027
    }
   }
-  $grp SCR_DestructibleEntity : "{622F9989DDC4865B}PrefabLibrary/Props/Civilian/Recreation/TableRecreation_01/TableRecreation_01.et" {
+  $grp GenericEntity : "{622F9989DDC4865B}PrefabLibrary/Props/Civilian/Recreation/TableRecreation_01/TableRecreation_01.et" {
    {
     coords 0.147 0 0
    }
@@ -187,7 +187,7 @@ GenericEntity AppleTrader {
    }
    coords 0 0 -0.957
   }
-  SCR_DestructibleEntity : "{B80655BD24D2C162}PrefabLibrary/Props/Civilian/Recreation/ChairRecreation_01/ChairRecreation_01_white.et" {
+  GenericEntity : "{B80655BD24D2C162}PrefabLibrary/Props/Civilian/Recreation/ChairRecreation_01/ChairRecreation_01_white.et" {
    coords -2.173 0 -0.978
    angleX 3.475
    angleY 14.617

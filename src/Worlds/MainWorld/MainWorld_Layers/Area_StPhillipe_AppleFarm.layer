@@ -93,7 +93,7 @@ $grp GenericEntity {
      angleZ -3.54
     }
    }
-   $grp GenericEntity : "{622F9989DDC4865B}PrefabLibrary/Props/Civilian/Recreation/TableRecreation_01.et" {
+   $grp GenericEntity : "{622F9989DDC4865B}PrefabLibrary/Props/Civilian/Recreation/TableRecreation_01/TableRecreation_01.et" {
     {
      coords 0.147 0.019 -0.144
      angleY 82.104
@@ -125,7 +125,7 @@ $grp GenericEntity {
     coords -0.023 -0.143 0.87
     angleY 171.533
    }
-   GenericEntity : "{B80655BD24D2C162}PrefabLibrary/Props/Civilian/Recreation/ChairRecreation_01_white.et" {
+   GenericEntity : "{B80655BD24D2C162}PrefabLibrary/Props/Civilian/Recreation/ChairRecreation_01/ChairRecreation_01_white.et" {
     coords -1.331 -0.243 0.668
     angleX 3.15
     angleY 151.694
@@ -183,4 +183,12 @@ $grp GenericEntity {
    }
   }
  }
+}
+GenericEntity : "{60824972764FBF6D}Prefabs/ItemShop/ShopItem_GeneralStore.et" {
+ components {
+  EL_ShopItemComponent "{5AC6DBF94189D860}" {
+   m_ShopItemPrefab "{C9D661E5B0714711}Prefabs/Items/Food/Apple.et"
+  }
+ }
+ coords 4443.661 20.336 10568.642
 }
