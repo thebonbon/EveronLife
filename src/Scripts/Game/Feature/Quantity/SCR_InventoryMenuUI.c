@@ -18,7 +18,7 @@ modded class SCR_InventoryMenuUI
 		if(m_pSelectedSlotUI)
 		{
 			itemSource = m_pSelectedSlotUI.GetInventoryItemComponent();
-			if (itemSource) quantitySource = EL_ComponentFinder<EL_QuantityComponent>.Find(itemSource.GetOwner());
+			if (itemSource) quantitySource = EL_Component<EL_QuantityComponent>.Find(itemSource.GetOwner());
 		}
 
 		if (quantitySource)
@@ -28,7 +28,7 @@ modded class SCR_InventoryMenuUI
 			if (m_pFocusedSlotUI)
 			{
 				itemDestination = m_pFocusedSlotUI.GetInventoryItemComponent();
-				if (itemDestination) quantityDestination = EL_ComponentFinder<EL_QuantityComponent>.Find(itemDestination.GetOwner());
+				if (itemDestination) quantityDestination = EL_Component<EL_QuantityComponent>.Find(itemDestination.GetOwner());
 			}
 
 			if (quantityDestination)
@@ -256,7 +256,7 @@ modded class SCR_InventoryMenuUI
 		{
 			InventoryItemComponent itemSource = m_pFocusedSlotUI.GetInventoryItemComponent();
 			EL_QuantityComponent quantitySource;
-			if (itemSource) quantitySource = EL_ComponentFinder<EL_QuantityComponent>.Find(itemSource.GetOwner());
+			if (itemSource) quantitySource = EL_Component<EL_QuantityComponent>.Find(itemSource.GetOwner());
 			EL_NavigationBarSplitControlsUpdate(itemSource, quantitySource);
 		}
 	}
@@ -268,20 +268,20 @@ modded class SCR_InventoryMenuUI
 		{
 			EL_QuantityComponent quantitySource;
 			InventoryItemComponent itemSource = m_pSelectedSlotUI.GetInventoryItemComponent();
-			if (itemSource) quantitySource = EL_ComponentFinder<EL_QuantityComponent>.Find(itemSource.GetOwner());
+			if (itemSource) quantitySource = EL_Component<EL_QuantityComponent>.Find(itemSource.GetOwner());
 			if (quantitySource)
 			{
 				m_pNavigationBar.SetAllButtonEnabled(false);
 
 				bool isFocusStorage = !m_pFocusedSlotUI || (m_pFocusedSlotUI && m_pFocusedSlotUI.Type().IsInherited(SCR_InventorySlotStorageEmbeddedUI));
-				bool isValidTargetStorage = isFocusStorage && m_pActiveStorageUI && !EL_Utils.IsAnyInherited(m_pActiveStorageUI, {SCR_InventoryStoragesListUI, SCR_InventoryStorageWeaponsUI});
+				bool isValidTargetStorage = isFocusStorage && m_pActiveStorageUI && !EL_Utils.IsInstanceAnyInherited(m_pActiveStorageUI, {SCR_InventoryStoragesListUI, SCR_InventoryStorageWeaponsUI});
 				bool canTransfer = m_pActiveStorageUI && m_pSelectedSlotUI && (m_pActiveStorageUI != m_pSelectedSlotUI.GetStorageUI());
 
 				EL_QuantityComponent quantityDestination;
 				if (m_pFocusedSlotUI)
 				{
 					InventoryItemComponent itemDestination = m_pFocusedSlotUI.GetInventoryItemComponent();
-					if (itemDestination) quantityDestination = EL_ComponentFinder<EL_QuantityComponent>.Find(itemDestination.GetOwner());
+					if (itemDestination) quantityDestination = EL_Component<EL_QuantityComponent>.Find(itemDestination.GetOwner());
 				}
 
 				if ((isValidTargetStorage && canTransfer) || quantityDestination && quantityDestination.CanCombine(quantitySource))
@@ -303,7 +303,7 @@ modded class SCR_InventoryMenuUI
 		{
 			InventoryItemComponent itemSource = m_pFocusedSlotUI.GetInventoryItemComponent();
 			EL_QuantityComponent quantitySource;
-			if (itemSource) quantitySource = EL_ComponentFinder<EL_QuantityComponent>.Find(itemSource.GetOwner());
+			if (itemSource) quantitySource = EL_Component<EL_QuantityComponent>.Find(itemSource.GetOwner());
 			if (quantitySource)
 			{
 				super.NavigationBarUpdateGamepad();
@@ -341,12 +341,9 @@ modded class SCR_InventoryMenuUI
 			if ((storage.GetOccupiedSpace() + physicalAttributes.GetVolume()) > storage.GetMaxVolumeCapacity()) return false;
 
 			// Check max weight for scripted storages
-			if (storage.Type().IsInherited(SCR_UniversalInventoryStorageComponent))
-			{
-				bool weightOk;
-				GetGame().GetScriptModule().Call(storage, "IsWeightOk", false, weightOk, physicalAttributes.GetWeight());
-				if (!weightOk) return false;
-			}
+			auto universalStorage = SCR_UniversalInventoryStorageComponent.Cast(storage);
+			if (universalStorage && !universalStorage.IsAdditionalWeightOk(physicalAttributes.GetWeight()))
+				return false;
 		}
 
 		return true;
@@ -382,7 +379,7 @@ modded class SCR_InventoryMenuUI
 	}
 
 	//------------------------------------------------------------------------------------------------
-	override void OnAction(SCR_NavigationButtonComponent comp, string action, SCR_InventoryStorageBaseUI pParentStorage = null, int traverseStorageIndex = -1)
+	override void OnAction(SCR_InputButtonComponent comp, string action, SCR_InventoryStorageBaseUI pParentStorage = null, int traverseStorageIndex = -1)
 	{
 		switch (action)
 		{
@@ -392,7 +389,7 @@ modded class SCR_InventoryMenuUI
 				InventoryItemComponent itemSource = m_pFocusedSlotUI.GetInventoryItemComponent();
 				if (itemSource && itemSource.GetOwner())
 				{
-					EL_QuantityComponent quantitySource = EL_ComponentFinder<EL_QuantityComponent>.Find(itemSource.GetOwner());
+					EL_QuantityComponent quantitySource = EL_Component<EL_QuantityComponent>.Find(itemSource.GetOwner());
 
 					if (action == "EL_Inventory_QuickSplitQuantity")
 					{
@@ -467,6 +464,7 @@ modded class SCR_InventoryMenuUI
 	}
 
 	//------------------------------------------------------------------------------------------------
+	/*
 	override bool FocusOnSlotInStorage(SCR_InventoryStorageBaseUI storage, int id = 0, bool focus = true)
 	{
 		array<SCR_InventorySlotUI> slots = storage.GetUISlots();
@@ -486,6 +484,7 @@ modded class SCR_InventoryMenuUI
 
 		return super.FocusOnSlotInStorage(storage, id, focus);
 	}
+	*/
 
 	//------------------------------------------------------------------------------------------------
 	override void OnMenuOpen()
