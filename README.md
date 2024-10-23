@@ -8,7 +8,7 @@
 
 [![Releases](https://img.shields.io/github/v/release/EveronLife/EveronLife)](https://github.com/EveronLife/EveronLife/releases)
 [![Contributors](https://img.shields.io/github/contributors/EveronLife/EveronLife)](https://github.com/EveronLife/EveronLife/graphs/contributors)
-[![Discord](https://img.shields.io/discord/976203864632086619?label=discord)](https://discord.gg/everonlife)
+[![Discord](https://img.shields.io/discord/976203864632086619?label=discord)](https://discord.gg/YJmUHe7K3S)
 [![License MIT](https://img.shields.io/badge/License-MIT-green)](https://opensource.org/licenses/MIT)
 </div>
 
@@ -48,3 +48,23 @@ Detailed information for server owners and our technical documentation can be fo
 
 ## 🛠️ Contributing
 If you want to contribute to this community effort, please check out our [contributor guide](.github/CONTRIBUTING.md) and [development setup instructions](docs/development_setup.md).
+
+## Licensing and Attribution
+When creating mods based on the EveronLife framework, please ensure to give proper credits according to the MIT license.
+
+**License and Attribution Notice in Repository:**
+Ensure your `LICENSE` file is up-to-date and clearly states the terms of the MIT license. You can see our MIT Licence as an example [Here](https://github.com/EveronLife/EveronLife?tab=MIT-1-ov-file#readme)
+
+**License and Attribution Notice in Source Code:**
+Include a notice in your source code files. For example:
+```
+This mod is based on the EveronLife framework.
+EveronLife is licensed under the MIT License. © [EveronLife/EveronLife].
+For more information, visit the official repository at https://github.com/EveronLife/EveronLife.
+```
+
+**Notice in the Mod Description on the Workshop:**
+Include a notice in your mod's description on the workshop or any distribution platform, such as:
+```
+This mod is built upon the EveronLife framework. EveronLife is licensed under the MIT License. © [EveronLife/EveronLife].
+```

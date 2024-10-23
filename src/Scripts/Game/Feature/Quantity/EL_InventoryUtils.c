@@ -9,7 +9,7 @@ modded class EL_InventoryUtils
 		// No quantity used, so default engine count function
 		if (!SCR_BaseContainerTools.FindComponentSource(Resource.Load(prefab), EL_QuantityComponent))
 		{
-			return target.GetDepositItemCountByResource(prefab);
+			return target.GetDepositItemCountByResource(target.GetOwner(), prefab);
 		}
 
 		int totalAmount;
@@ -40,7 +40,7 @@ modded class EL_InventoryUtils
 
 		int remainingAmount = amount;
 
-		bool isQuantityPrefab = SCR_BaseContainerTools.FindComponentSource(Resource.Load(prefab), EL_QuantityComponent);
+		bool isQuantityPrefab = SCR_BaseContainerTools.FindComponentSource(Resource.Load(prefab), EL_QuantityComponent) != null;
 		if (isQuantityPrefab)
 		{
 			// Try fill up existing quantity components first
